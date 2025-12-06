@@ -48,15 +48,40 @@ Output stored into: `#ColumnProfile`
 
 While reviewing the profiling results, a few findings require some extra explanation:
 
-#### ⚠️ Birth_Weight — “Business Rule Violation”
-The highest recorded birth weight in the table is **900 grams**.  
-In reality, most newborns weigh **2,500–4,000 grams** (2.5–4 kg).
+#### ⚠️ Birth_Weight — Investigation & Resolution
 
-This tells us:
-- The numbers **do not match real medical expectations**
-- The data may be **in the wrong units**, trimmed, or represent **only a small subset** of newborn patients (e.g., only very low birth-weight babies)
+The initial profiling showed a surprising result: the **maximum birth weight** in the dataset appeared to be **900 grams**. This raised a red flag because:
 
-So as it is now, this field cannot be trusted as-is for clinical insights and needs further investigation.
+- Most newborns typically weigh **2,500–4,000 grams**
+- A max of 900g would incorrectly suggest that **only the smallest and most premature babies** were included in the data
+
+Because this contradicted basic medical reality, it was temporarily classified as a **Business Rule Violation**.
+
+To investigate further:
+
+1. I validated the **original CSV source file directly in Excel**  
+   → It contains birth weights ranging from **0 to 7,500 grams**  
+   → This confirmed the dataset **does include normal birth-weight babies**
+
+2. This revealed the real issue:  
+   The column was imported into SQL Server as **text (nvarchar)** instead of a **numeric** data type.
+
+   When analyzing text values:
+   - SQL compares **alphabetically**, not numerically  
+   - This caused `900` to appear larger than `7500` (`"9"` > `"7"`)
+
+3. Resolution:  
+   The Birth_Weight column was :
+   - converted from text to a numeric type (e.g., INT)
+   - Re-profiled to reflect **real medical values**
+
+Birth_Weight is the last row:
+![Reprofiling after converting Birth_Weight](image.png)
+
+➡️ This demonstrates the importance of validating data quality findings against **source files** and using SQL **data type corrections** before relying on any insights.
+
+The SQL correction script can be found [here](./01_SQL/BirthWeight_correction.sql). 
+
 
 ---
 
