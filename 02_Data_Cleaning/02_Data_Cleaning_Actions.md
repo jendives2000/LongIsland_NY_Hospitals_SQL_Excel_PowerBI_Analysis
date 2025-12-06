@@ -10,7 +10,7 @@ This ensures the data is
 
 ## 1️⃣ Currency Formatting → Convert to DECIMAL  
 **Fields Impacted:** `Total_Charges`, `Total_Costs`  
-**SQL file:** [here](./02_SQL/2_2_Currency_Formatting.sql) 
+**SQL file:** [here](./02_SQL/2_1_Currency_Formatting.sql) 
 
 These columns included dollar signs ('$') and commas from the original CSV.  
 SQL sees those as **text**, meaning:
@@ -19,6 +19,8 @@ SQL sees those as **text**, meaning:
 - Any financial analysis would be incorrect
 
 ➡ Fixing this allows us to calculate **spending**, **profitability**, and **resource utilization**.
+
+![Currency Formatting](image.png)
 
 ---
 
