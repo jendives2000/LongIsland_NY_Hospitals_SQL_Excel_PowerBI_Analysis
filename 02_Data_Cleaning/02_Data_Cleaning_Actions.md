@@ -10,7 +10,7 @@ This ensures the data is
 
 ## 1️⃣ Currency Formatting → Convert to DECIMAL  
 **Fields Impacted:** `Total_Charges`, `Total_Costs`  
-**SQL file:** 2_2  
+**SQL file:** [here](./02_SQL/2_2_Currency_Formatting.sql) 
 
 These columns included dollar signs ('$') and commas from the original CSV.  
 SQL sees those as **text**, meaning:
