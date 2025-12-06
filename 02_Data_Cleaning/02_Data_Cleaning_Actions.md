@@ -43,6 +43,8 @@ Useful for:
 - Hospital service area planning  
 - Equity & access reporting  
 
+![Standardize ZIP information](image-1.png)
+
 ---
 
 ## 3️⃣ Demographic Placeholders → Standardize “Unknown” categories  
@@ -57,6 +59,8 @@ Without correction:
 ➡ Standardizing unknown or non-response improves:
 - Public health equity monitoring  
 - Federal demographic reporting compliance  
+
+
 
 ---
 
