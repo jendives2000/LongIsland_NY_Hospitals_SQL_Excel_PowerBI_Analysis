@@ -1,0 +1,41 @@
+# Common ignores for Windows, Excel, Power BI, and typical development files
+# System
+.DS_Store
+Thumbs.db
+
+# Windows
+ehthumbs.db
+Desktop.ini
+
+# Visual Studio / VS Code
+.vscode/
+.vs/
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Data files and Power BI / Office files (do not commit large datasets)
+*.xlsx
+*.xlsm
+*.xls
+*.csv
+*.pbix
+*.pbit
+*.accdb
+*.mdb
+
+# Temporary and environment files
+.env
+env/
+venv/
+venv.bak/
+
+# Node modules (if any)
+node_modules/
+
+# Logs
+*.log
+
+# Git-lfs placeholder (if you choose to use LFS for large files)
+# *.pbix filter=lfs diff=lfs merge=lfs -text
