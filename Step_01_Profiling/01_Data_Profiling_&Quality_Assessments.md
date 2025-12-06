@@ -1,7 +1,7 @@
 # 🧩 Step 01 — Data Profiling & Quality Assessment (SQL Server)
 
 To ensure clinical and financial insights derived from the SPARCS 2015 inpatient dataset are accurate and trustworthy, I performed a comprehensive **column-level data profiling** directly in SQL Server.  
-The SQL code is [here]().
+The SQL code is [here](./01_SQL/Columns_Profiling.sql).
 
 This step supports two primary goals:
 
@@ -43,6 +43,74 @@ Output stored into: `#ColumnProfile`
 | Performance | Text columns with `-1` max length (unbounded) | Poor indexing & storage efficiency | ⚠️ Medium |
 
 > Summary: financial, demographic, and geographic fields require targeted remediation before insights can be trusted.
+
+### 🧠 Clarifying Some Important Red Flags
+
+While reviewing the profiling results, a few findings require some extra explanation:
+
+#### ⚠️ Birth_Weight — “Business Rule Violation”
+The highest recorded birth weight in the table is **900 grams**.  
+In reality, most newborns weigh **2,500–4,000 grams** (2.5–4 kg).
+
+This tells us:
+- The numbers **do not match real medical expectations**
+- The data may be **in the wrong units**, trimmed, or represent **only a small subset** of newborn patients (e.g., only very low birth-weight babies)
+
+So as it is now, this field cannot be trusted as-is for clinical insights and needs further investigation.
+
+---
+
+#### 📈 High Number of Unique Values in Clinical Fields (Diagnosis / Procedures)
+Several columns (like diagnosis and procedure descriptions) have **hundreds of different values**.
+
+This makes charts and summaries:
+- Hard to read
+- Hard to use for real decision-making
+
+These fields usually need to be **grouped into categories** before they are analyzed (e.g., by disease groupings or major service lines).
+
+---
+
+#### 🏥 Type_of_Admission — Label Inconsistency
+Admission type is sometimes written differently:
+
+- “Elective”
+- “Urgent”
+- Possibly “Emergency”, “ER”, etc.
+
+These may mean **the same type of hospital stay**, but appear as **separate labels**.  
+This can create misleading views of:
+- Emergency department usage
+- Hospital bed planning
+- Length of stay analysis
+
+I will standardize these values into **consistent categories**.
+
+---
+
+#### 🧱 No Primary Key (No Unique Encounter Identifier)
+The dataset has:
+- No patient identifier (expected — it’s de-identified)
+- No unique encounter ID
+
+This means:
+- We cannot guarantee every row represents a **different hospital stay**
+- We cannot reliably link other related data in the future
+- BI modeling becomes harder
+
+To fix this, I will **add a new unique identifier** (a surrogate key).
+
+---
+
+### 📝 Why This Matters
+
+These issues don’t stop the analytics — but they must be handled carefully so that:
+- Insights are **accurate**
+- Charts reflect **real clinical patterns**
+- Healthcare decisions are not based on **faulty data**
+
+Addressing these red flags will improve the dataset’s trustworthiness and make downstream analysis more meaningful.
+
 
 ---
 
@@ -86,6 +154,4 @@ Deliverable from Step 02:
 | Step 04 — Power BI Insights | Planned | KPI storytelling |
 
 ---
-
-## 📁 Suggested Repository Structure
 
