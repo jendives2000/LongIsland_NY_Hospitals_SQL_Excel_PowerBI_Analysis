@@ -26,7 +26,7 @@ SQL sees those as **text**, meaning:
 
 ## 2️⃣ Geographic Anomalies → Standardize ZIP information  
 **Field Impacted:** `Zip_Code_3_digits`  
-**SQL Sub-Step:** 2.4  
+**SQL file:** [here](./02_SQL/2_2_Standardize_ZIP_data.sql)  
 
 ZIP codes were shortened to 3 digits and included special values like `OOS` (Out-Of-State).  
 Without standardization:
@@ -49,7 +49,7 @@ Useful for:
 
 ## 3️⃣ Demographic Placeholders → Standardize “Unknown” categories  
 **Fields Impacted:** `Race`, `Ethnicity`  
-**SQL Sub-Step:** *Coming later in Step 02*  
+**SQL file:** [here](./02_SQL/2_3_Standardize_Unknown_cat.sql) 
 
 Some classifications don’t reflect true demographics (e.g., “Unknown”, “Not-Spanish/Hispanic” meaning default rather than patient response).  
 Without correction:
@@ -60,7 +60,7 @@ Without correction:
 - Public health equity monitoring  
 - Federal demographic reporting compliance  
 
-
+![Standardize “Unknown” categories ](image-2.png)
 
 ---
 
