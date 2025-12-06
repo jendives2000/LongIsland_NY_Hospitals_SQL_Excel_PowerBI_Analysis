@@ -36,7 +36,7 @@ Output stored into: `#ColumnProfile`
 | Data Type | `Total_Charges`, `Total_Costs` are stored as **NVARCHAR with `$` formatting** | Prevents accurate cost/charge analytics | 🔥 Critical |
 | Missingness | `Zip_Code_3_digits`: **2,890 NULLs** + non-numeric “OOS” | Location and socio-economic stratification become unreliable | 🔥 High |
 | Category Quality | Demographics contain **“Unknown”, “Multi-ethnic”, “Not Span/Hispanic”** as mode values | Masking disparities → reduces equity insight quality | 🔥 High |
-| Business Rule Violations | `Birth_Weight` max = **900g** → unusually low upper bound | Potential unit/measurement issue | ⚠️ Medium |
+| Business Rule Violations | `Birth_Weight` initially appeared capped at 900g due to import as text (alphabetic comparison error), not a true data quality issue — original CSV confirms values up to 7,500g | ✅ Fixed in the Database | ⚠️ Medium |
 | Clinical Grouping | Many clinical fields have **very high cardinality** (Diagnosis, Procedure descriptions) | Requires modeling into separate Dim tables | ⚠️ Medium |
 | Standardization Needed | `Type_of_Admission` has varying labels e.g. “Elective”, “Urgent” | Affects ED vs Elective trends | ⚠️ Medium |
 | Structural | No primary key or encounter identifier | Hard to ensure encounter uniqueness | ⚠️ Medium |
