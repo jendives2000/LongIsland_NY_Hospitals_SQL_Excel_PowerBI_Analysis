@@ -1,5 +1,5 @@
 /* 
- STEP 02.2 – FIX MONEY FIELDS (Total_Charges, Total_Costs)
+ STEP 02.1 – FIX MONEY FIELDS (Total_Charges, Total_Costs)
  Reason:
  - Imported as nvarchar with $ signs and thousand separators
  - Cannot aggregate or compute ratios reliably in this state
