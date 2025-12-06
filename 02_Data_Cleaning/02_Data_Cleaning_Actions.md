@@ -111,6 +111,53 @@ In the dashboarding phase (Power BI), this split will be visualized as:
 
 These checks confirm that our category normalization is **clinically reasonable** and that the “Other” bucket does **not** hide a problematic amount of information.
 
+### Patient Disposition
+
+![Patient Disposition Category Normalization](image-4.png)
+
+#### Validation of Standardized Patient Disposition
+
+Grouping the raw `Patient_Disposition` field into broad patient-outcome categories produced the following:
+
+| Patient_Disposition_Grouped | Records |
+|----------------------------|--------:|
+| Home                       | 217,226 |
+| Other                      | 66,882  |
+| Skilled Nursing / Rehab    | 47,480  |
+| Death                      | 7,451   |
+
+Total records: 339,039 ✅
+
+To evaluate whether the grouping is clinically useful, we checked the share of each category:
+
+- Home: 217,226 / 339,039 ≈ **64.1%**
+- Skilled Nursing / Rehab: 47,480 / 339,039 ≈ **14.0%**
+- Death: 7,451 / 339,039 ≈ **2.2%**
+- **Other: 66,882 / 339,039 ≈ 19.7%**
+
+A common best-practice rule:
+
+> If “Other” exceeds **10–15%**, deeper refinement is needed because we may be hiding important patient pathways.
+
+Here, **~20% of discharges fall into "Other"**, which is too large to ignore.  
+It likely contains several operationally distinct and clinically important categories:
+
+- Transfers to another hospital  
+- Discharges to psychiatric/behavioral facilities  
+- Hospice care transitions  
+- Patients leaving Against Medical Advice (AMA)  
+- Custodial/law enforcement placements  
+
+📌 **Action for Step 03:**  
+Split “Other” into more meaningful sub-groups using a standardized disposition dimension.  
+This will improve analysis of:
+- Care continuity and readmission risk  
+- Post-acute care utilization  
+- Patient safety and discharge planning outcomes
+
+➡ This validation confirms the need for a more granular discharge model as part of the star schema.
+
+
 ---
 
 ## 5️⃣ Text Overflow → VARCHAR(Max) only when needed  
