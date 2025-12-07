@@ -205,14 +205,25 @@ This step turns the raw CSV import into a true relational table that can safely 
 
 ## 7️⃣ Payer Granularity → Group Payment Typology codes  
 **Fields Impacted:** `Payment_Typology_1`  
-**SQL Sub-Step:** 2.7  
+**SQL file:** [here](./02_SQL/2_8_payment_typology_grouping.sql)  
 
-There are many insurer codes with similar meaning  
-(e.g., multiple variations of commercial insurance).
+The raw dataset includes many payer descriptions that effectively refer to the same underlying payer type  
+(for example, multiple variations of commercial insurance plans such as HMO, PPO, POS, indemnity, or BCBS).  
+Left as-is, this level of detail fragments the payer mix and makes financial comparisons harder to interpret.  
 
-➡ Grouping makes financial analysis more insightful:
+By grouping these detailed codes into a small set of high-level payer categories, the analysis becomes clearer and more actionable:  
 - Medicare vs Medicaid vs Commercial vs Self-Pay  
-- Reimbursement rate & cost burden comparisons  
+- Comparison of reimbursement levels and hospital cost burden across payer types  
+- Cleaner inputs for downstream payer-mix, profitability, and utilization reporting  
+
+Distribution of payer groups:  
+![Distribution of payer groups](image-10.png)
+
+Most common raw values mapped to 'Other':  
+![Most common raw values mapped to 'Other'](image-11.png)
+
+Unknown values confirmed as blank (returning nothing):
+![Unknown values confirmed as blank](image-12.png)
 
 ---
 
