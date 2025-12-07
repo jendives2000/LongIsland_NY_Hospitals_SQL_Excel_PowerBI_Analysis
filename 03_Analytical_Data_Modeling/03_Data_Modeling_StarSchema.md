@@ -23,9 +23,11 @@ The model includes:
 |----------|------------------|----------------|------------|
 | Dim_Facility | Hospital identity & region | Facility comparison & care distribution | [Create_Dim_Facility.sql](./03_SQL/3_1_dim_facility.sql) |
 | Dim_AdmissionType | How/why the stay began | Unplanned burden & ED flow analysis | [Create_Dim_AdmissionType.sql](./03_SQL/3_2_dim_admissionType.sql) |
-| Dim_Disposition | Where the patient went after discharge | Care continuity, readmissions, population tracking | [Create_Dim_Disposition.sql](#) |
+| Dim_Disposition | Where the patient went after discharge | Care continuity, readmissions, population tracking | [Create_Dim_Disposition.sql](./03_SQL/3_3_dim_disposition.sql) |
 | Dim_Payer | Insurance category | Cost burden & reimbursement analysis | [Create_Dim_Payer.sql](#) |
 | Dim_ClinicalClass | APR-DRG clinical grouping | Risk stratification & case-mix comparison | [Create_Dim_ClinicalClass.sql](#) |
+
+#### Screenshots:  
 
 Dim_Facility:  
 ![Dim_Facility](image.png)
@@ -33,6 +35,8 @@ Dim_Facility:
 Dim_AdmissionType:  
 ![alt text](image-1.png)
 
+Dim_Disposition:  
+![Dim_Disposition](image-2.png)
 ---
 
 ## 🧠 Why a Star Schema is Critical in Healthcare
