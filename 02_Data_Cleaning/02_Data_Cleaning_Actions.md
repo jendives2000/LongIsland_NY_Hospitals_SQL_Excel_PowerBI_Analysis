@@ -180,17 +180,26 @@ After I adjusted the nvarchar length for each column, I checked and no column wi
 
 ## 6️⃣ Missing Primary Key → Generate Encounter ID  
 **Fields Impacted:** All rows  
-**SQL Sub-Step:** 2.3  
+**SQL Sub-Step:** [here](./02_SQL/2_7_add_surrogate_PrimaryKey.sql)  
 
-The dataset did not include a unique encounter identifier.  
-This makes it impossible to:
+The SPARCS inpatient file does not ship with a unique encounter identifier, which makes it difficult to:
 
-- Track a patient visit consistently  
-- Create proper relationships for BI modeling  
+- Refer to a specific hospital stay
+- Enforce relational integrity
+- Build a proper Fact/Dimension model in SQL Server or Power BI
 
-➡ A surrogate key (`Encounter_ID`) enables:
-- Fact/Dimension modeling
-- Traceability and de-duplication
+To fix this, I added a technical surrogate key `Encounter_ID` as an `INT IDENTITY` column and declared it as the primary key of the staging table. This key has no clinical meaning, but it uniquely identifies each row and becomes the backbone of the later Fact table.
+
+I then ran sanity checks to confirm:
+
+- Row counts remained unchanged  
+  ![Row counts remained unchanged](image-7.png)
+- `Encounter_ID` is contiguous (min/max values) and non-null
+  ![contiguous (min/max values)](image-8.png)
+- No duplicate keys exist  
+  ![alt text](image-9.png)
+
+This step turns the raw CSV import into a true relational table that can safely support star-schema modeling and downstream BI.
 
 ---
 
