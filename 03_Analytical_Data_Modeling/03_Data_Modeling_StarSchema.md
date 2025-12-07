@@ -26,7 +26,7 @@ The model includes:
 | Dim_Disposition | Where the patient went after discharge | Care continuity, readmissions, population tracking | [Create_Dim_Disposition.sql](./03_SQL/3_3_dim_disposition.sql) |
 | Dim_Payer | Insurance category | Cost burden & reimbursement analysis | [Create_Dim_Payer.sql](./03_SQL/3_4_dim_payers.sql) |
 | Dim_ClinicalClass | APR-DRG clinical grouping | Risk stratification & case-mix comparison | [Create_Dim_ClinicalClass.sql](./03_SQL/3_5_dim_clinical_class.sql) |
-| Dim_Date | Date table | Time series & time based analysis | [Create_Dim_Date.sql]() |
+| Dim_Date | Synthetically enhanced Date table 2015 (ranging down to 2025) | Time series & time based analysis | [Create_Dim_Date.sql]() |
 
 ---
 
@@ -46,6 +46,55 @@ A star schema enables:
 ✔ Scalable architecture for multiple years of SPARCS data
 
 ➡ This structure is **now ready for Power BI ingestion**.
+
+## Dim_Date (2015 only) and Synthetic Admission/Discharge Dates  
+**Fields impacted:** `Discharge Year`, `Admission_Date_Sim`, `Discharge_Date_Sim`, `LOS_Sim`, `Admission_Date_Key`, `Discharge_Date_Key`  
+**SQL files:** [Dim_Date](./03_SQL/3_6_dim_date.sql) + [code](./03_SQL/3_6b_2015_synthetic_dates.sql) for the synthetic data
+
+The original SPARCS extract used in this project includes only a `Discharge Year`
+field (and the sample contains 2015 encounters only). This limits time analysis
+to a single annual data point and does not allow for realistic month, weekday or
+length-of-stay analytics. 
+
+To demonstrate full calendar modelling and time-intelligence in a transparent
+way, I generated clearly-labelled synthetic dates:
+
+- `Discharge_Date_Sim`: random discharge date within the recorded discharge year  
+- `LOS_Sim`: synthetic length of stay with a skew toward short stays  
+  (0–2 days most common, 3–7 days less frequent, long stays rare)  
+- `Admission_Date_Sim = Discharge_Date_Sim – LOS_Sim`, clamped to 2015-01-01 for very early cases  
+
+On top of this, I created a `Dim_Date` table at daily grain for the 2015
+calendar only (2015-01-01 to 2015-12-31), with:
+
+- Year, quarter, month number and name  
+- Day of month  
+- Monday-first weekday number (1–7) and weekday name  
+- Weekend flag  
+
+Each encounter is then linked to `Dim_Date` via:
+
+- `Admission_Date_Key`  
+- `Discharge_Date_Key`  
+
+Several validation checks confirm realistic and usable time-based analytics:
+- **All encounters occur within 2015** (consistent with the source dataset scope)
+- **Monthly discharge counts** are evenly distributed (~27–29K)  
+  with February lower (fewer days) — indicating uniform random distribution worked correctly
+- **Admission counts vary slightly vs. discharges**  
+  due to synthetic Length of Stay shifting some discharges into later months
+- **Weekday vs weekend distribution** is balanced and continuous  
+  confirming correct Date Key linkage and no missing weekday rows
+
+This ensures the dataset is ready for:
+- Calendar-based analytics (month, quarter, weekday/weekend)
+- Seasonal trend exploration (e.g., winter admission pressure)
+- LOS insights and operational patterns
+- Proper star-schema modeling and Power BI time intelligence
+
+Overall, the synthetic time fields behave **credibly and consistently**, supporting richer
+visual storytelling without altering the original dataset’s truth.
+
 
 #### Screenshots:  
 
@@ -69,7 +118,11 @@ Dim_ClinicalClass:
 Dim_ClinicalClass Rows Check:  
 ![Dim_ClinicalClass](image-5.png)
 
+Date Range Check of Dim_Date: 
+![alt text](image-7.png)
 
+Synthetic Data: LOS Bucket Distribution:
+![LOS bucket Distribution](image-8.png)
 
 ---
 
