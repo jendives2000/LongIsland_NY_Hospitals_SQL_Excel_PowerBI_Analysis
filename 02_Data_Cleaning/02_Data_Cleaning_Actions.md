@@ -162,16 +162,21 @@ This will improve analysis of:
 
 ## 5️⃣ Text Overflow → VARCHAR(Max) only when needed  
 **Fields Impacted:** Description fields (Diagnosis/Procedure descriptions, etc.)  
-**SQL Sub-Step:** Will be applied in schema optimization  
+**SQL file:** [here](./02_SQL/2_6_nvarcharMax_trimming.sql)
 
 Some text fields were set to unlimited length (`-1`), which:
 
 - Slows down indexing and storage  
 - Hurts dashboard query speed  
 
-➡ We will trim them to realistic limits for efficiency and performance.
+➡ I trimmed them to realistic limits for efficiency and performance:
 
----
+Length of each column with data type nvarchar(max):  
+![lengths of nvarchar(max) columns](image-5.png)
+
+After I adjusted the nvarchar length for each column, I checked and no column with type nvarchar(max) remains (no output):  
+![no more nvarchar(max) columns](image-6.png)
+
 
 ## 6️⃣ Missing Primary Key → Generate Encounter ID  
 **Fields Impacted:** All rows  
