@@ -66,7 +66,7 @@ Without correction:
 
 ## 4️⃣ Category Normalization → Cleaner clinical + operational groups  
 **Fields Impacted:** `Type_of_Admission`, `Patient_Disposition`  
-**SQL Sub-Steps:** [Type of Admission], [Patient Disposition]  
+**SQL Sub-Steps:** [Type of Admission](./02_SQL/2_4_Admission_Category_Normalization.sql), [Patient Disposition](./02_SQL/2_5_PatientDisposition_Cat_Standardiz.sql)  
 
 Original categories were too detailed or inconsistent:  
 Examples: “Urgent”, “EMERGENCY”, “Elective”, “Home or Self Care”, “Skilled Nursing Home”  
