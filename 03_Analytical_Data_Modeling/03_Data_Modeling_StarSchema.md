@@ -127,6 +127,7 @@ Synthetic Data: LOS Bucket Distribution:
 ---
 
 ## 🔁 Fact ↔ Dimension Linking
+**SQL file:** [here](./03_SQL/3_7_Fact_Table_inpatient_stay.sql)
 
 Each inpatient stay (Fact) gets its context from surrounding dimensions:
 
@@ -138,73 +139,117 @@ This ensures:
 - The model remains efficient as data grows
 - Insights reflect real healthcare pathways
 
+After completing the cleaning and dimensional enrichment of the inpatient dataset,
+I connected each encounter to the surrounding business context by attaching foreign
+keys into the core dimension tables:
+
+- `Dim_Facility` → hospital identity, location & ownership
+- `Dim_AdmissionType` → clinical entry point (unplanned vs planned, ED, maternity…)
+- `Dim_Disposition` → continuity of care after discharge (home, rehab, SNF…)
+- `Dim_Payer` → reimbursement group (Medicare/Medicaid/Commercial/Self-Pay)
+- `Dim_ClinicalClass` → APR-DRG severity & clinical grouping
+- `Dim_Date` → synthetic Admission & Discharge calendar keys (daily granularity)
+
+This transformation elevates the staging table (`LI_SPARCS_2015_25_Inpatient`)
+into a clean **star-schema fact**, ready for high-performance analytics.
+
+### Fact Grain
+> One record = One inpatient encounter
+
+### Measures included
+- `LOS_Sim` (synthetic Length of Stay, days)
+- `Total_Charges` and `Total_Costs`
+- `ED_Flag` (1 if entered via Emergency Department)
+
+### Performance Features (SQL Server Analytics Best Practice)
+- **Clustered Columnstore Index (CCI)**  
+  Enables highly compressed storage and fast aggregation performance:
+  > ✔ Optimized for large scans, GROUP BY, Power BI reporting workloads  
+- **Supporting nonclustered indexes**  
+  Improve selective filtering by common dimension keys (facility, payer, dates…)
+
+These optimizations ensure fast slice-and-dice exploration of hospital-level
+KPIs such as:
+- Operational burden by admission source (ED)
+- Payer mix & reimbursement variation
+- Facility benchmarking and case-mix complexity
+- Seasonal / weekday patterns using synthetic calendar intelligence
+
+This is a production-style analytical model, demonstrating:
+- **Dimensional Data Modeling** proficiency
+- **ETL + SQL Engineering** skills
+- **Performance tuning** for BI workloads
+
+### ✔ Dim_Facility — Data Warehouse Design Choice
+
+Rather than relying on inconsistent external sources, the Facility dimension is
+constructed directly from distinct facility attributes in the SPARCS inpatient
+dataset. This guarantees:
+
+- Every facility in the fact table has a matching dimension row
+- Surrogate keys (`Facility_Key`) align cleanly with the Fact_Encounter table
+- A reliable master record for hospital identity, service area, and county
+
+### ⭐ Analytical Model Validation – First Query Success
+
+A grouped summary of encounters by Discharge Year, Payer Group, and Facility
+executed successfully against the Fact_Encounter table using all relevant
+dimension joins. The model now supports real analytical use cases such as:
+
+- Facility-level encounter volume benchmarking
+- Payer mix distribution analysis (e.g., Medicare vs Medicaid vs Commercial)
+- Revenue/charge comparisons across hospitals and counties
+- Time-based trends powered by Dim_Date calendar intelligence
+
+Query performance is excellent, thanks to the clustered columnstore index (CCI)
+and supporting key indexes on the fact table.
+
+![Analytical Model Validation](image-9.png)
+
 ---
 
-## ✔ Status After Step 03
+## ✔ Status After Step 03 — Star Schema Completed
 
-- Fact & Dimension tables created and populated
-- Surrogate keys successfully linked
+- All core **Dimension** tables built and populated  
+- **Dim_Facility** constructed directly from the inpatient dataset  
+  ensuring full facility coverage and reliable surrogate keys  
+- **Fact_Encounter** created at the correct grain  
+  (1 row = 1 inpatient encounter)
+- Surrogate keys successfully linked across the model
+- **Clustered Columnstore Index (CCI)** applied for analytics performance
 - Model follows healthcare data-warehouse best practices
-- Fully compliant with Power BI semantic modeling
+- Fully optimized for **Power BI time-series analytics**
 
 ---
 
-# ⚡ STEP 03-B — Performance Optimization with Indexing
+## 🏁 Deliverable Result — BI-Ready Analytical Model
 
-Indexing was applied **after** modeling to improve speed of joins and filtering inside Power BI.
+> A performance-optimized **star schema** capable of supporting real-world
+> hospital analytics at scale — including cost, payer-mix, facility benchmarking,
+> and seasonal or operational trends.
 
----
+Stakeholders now benefit from:
 
-## 🚀 Why Indexing Matters (Plain Language)
-
-> Without indexes → SQL must read millions of rows every time  
-> With indexes → SQL jumps straight to the right records
-
-This leads to:
-
-✔ Faster dashboard response times  
-✔ Better query performance for clinicians  
-✔ Lower compute resource usage  
-✔ Smooth scaling for multiple years of encounters
-
-In hospital settings, **slow dashboards = lost trust**.
+- Sub-second slicing of 339K+ encounters  
+- Accurate facility-level and payer-level KPIs  
+- Instant exploratory analysis with high data-quality confidence  
 
 ---
 
-## 🎯 What Was Indexed
+📌 **Next Step:**  
+➡ Step 04 — Healthcare KPI Development & Power BI Modeling
 
-| Index Type | Columns | Benefit |
-|-----------|---------|---------|
-| Foreign key lookup | Facility_Key, AdmissionType_Key, Disposition_Key, etc. | Faster Fact → Dim joins |
-| Time filtering | Discharge_Year | Fast trending visuals |
-| Numerical slicing | Length_of_Stay | Better LOS analysis performance |
-| Natural key lookup | Facility_Id, APR_DRG_Code, etc. | Better slicer behavior in Power BI |
-| Clustered index | Encounter_ID | Efficient record access & aggregations |
-
----
-
-## 🏁 Deliverable Result
-
-> A performance-optimized star schema that is BI-ready and capable of supporting real-world hospital analytics at scale.
-
-This ensures stakeholders experience:
-
-- Real-time validation of operational KPIs  
-- Sub-second filtering across 300K+ inpatient records  
-- High-confidence adoption of dashboards
-
----
-
-📌 **Next Step:**
-➡ Step 04 — Healthcare KPI Development & Power BI Modeling  
 This will include:
-- LOS metrics (mean, median, variation)
-- Mortality Rate
-- Transfer Rate
-- Cost per Case & Payer Mix
-- Facility performance benchmarking
 
-All delivered as:
-- Portfolio-grade descriptions
-- DAX measures ready to paste
-- Visual examples in Power BI
+- **Length of Stay (LOS)** metrics (mean, median, high-severity outliers)  
+- **Emergency Department** burden analysis  
+- **Transfer and Readmission** signals  
+- **Cost per Encounter** by payer and facility  
+- **Severity & case-mix** analysis (APR-DRG)
+
+Deliverables:
+
+- Portfolio-grade documentation in Markdown
+- Interactive, professional dashboards in Power BI using DAX measures
+
+---
