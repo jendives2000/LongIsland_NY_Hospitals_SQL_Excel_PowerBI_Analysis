@@ -81,7 +81,7 @@ Examples: “Urgent”, “EMERGENCY”, “Elective”, “Home or Self Care”
 
 ### Validation of Standardized Admission Categories
 
-After grouping unplanned vs elective admissions in Step 02.5, we validated the distribution:
+After grouping unplanned vs elective admissions in sub-step 02.5, we validated the distribution:
 
 | Type_of_Admission_Std | Records |
 |----------------------|--------:|
