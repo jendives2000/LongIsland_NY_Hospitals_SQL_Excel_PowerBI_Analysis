@@ -25,23 +25,8 @@ The model includes:
 | Dim_AdmissionType | How/why the stay began | Unplanned burden & ED flow analysis | [Create_Dim_AdmissionType.sql](./03_SQL/3_2_dim_admissionType.sql) |
 | Dim_Disposition | Where the patient went after discharge | Care continuity, readmissions, population tracking | [Create_Dim_Disposition.sql](./03_SQL/3_3_dim_disposition.sql) |
 | Dim_Payer | Insurance category | Cost burden & reimbursement analysis | [Create_Dim_Payer.sql](./03_SQL/3_4_dim_payers.sql) |
-| Dim_ClinicalClass | APR-DRG clinical grouping | Risk stratification & case-mix comparison | [Create_Dim_ClinicalClass.sql](#) |
-
-#### Screenshots:  
-
-Dim_Facility:  
-![Dim_Facility](image.png)
-
-Dim_AdmissionType:  
-![alt text](image-1.png)
-
-Dim_Disposition:  
-![Dim_Disposition](image-2.png)
-
-Dim_Payer:  
-![Dim_Payer](image-3.png)
-Distribution of Dim_Payer:  
-![Distribution of Dim_Payer](image-4.png)
+| Dim_ClinicalClass | APR-DRG clinical grouping | Risk stratification & case-mix comparison | [Create_Dim_ClinicalClass.sql](./03_SQL/3_5_dim_clinical_class.sql) |
+| Dim_Date | Date table | Time series & time based analysis | [Create_Dim_Date.sql]() |
 
 ---
 
@@ -61,6 +46,30 @@ A star schema enables:
 ✔ Scalable architecture for multiple years of SPARCS data
 
 ➡ This structure is **now ready for Power BI ingestion**.
+
+#### Screenshots:  
+
+Dim_Facility:  
+![Dim_Facility](image.png)
+
+Dim_AdmissionType:  
+![alt text](image-1.png)
+
+Dim_Disposition:  
+![Dim_Disposition](image-2.png)
+
+Dim_Payer:  
+![Dim_Payer](image-3.png)
+Distribution of Dim_Payer:  
+![Distribution of Dim_Payer](image-4.png)
+
+Dim_ClinicalClass:  
+![Dim_ClinicalClass Distribution](image-6.png)
+
+Dim_ClinicalClass Rows Check:  
+![Dim_ClinicalClass](image-5.png)
+
+
 
 ---
 
