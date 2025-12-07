@@ -22,7 +22,7 @@ The model includes:
 | Dimension | What it describes | Why it matters | SQL Script |
 |----------|------------------|----------------|------------|
 | Dim_Facility | Hospital identity & region | Facility comparison & care distribution | [Create_Dim_Facility.sql](./03_SQL/3_1_dim_facility.sql) |
-| Dim_AdmissionType | How/why the stay began | Unplanned burden & ED flow analysis | [Create_Dim_AdmissionType.sql](#) |
+| Dim_AdmissionType | How/why the stay began | Unplanned burden & ED flow analysis | [Create_Dim_AdmissionType.sql](./03_SQL/3_2_dim_admissionType.sql) |
 | Dim_Disposition | Where the patient went after discharge | Care continuity, readmissions, population tracking | [Create_Dim_Disposition.sql](#) |
 | Dim_Payer | Insurance category | Cost burden & reimbursement analysis | [Create_Dim_Payer.sql](#) |
 | Dim_ClinicalClass | APR-DRG clinical grouping | Risk stratification & case-mix comparison | [Create_Dim_ClinicalClass.sql](#) |
@@ -30,7 +30,8 @@ The model includes:
 Dim_Facility:  
 ![Dim_Facility](image.png)
 
-
+Dim_AdmissionType:  
+![alt text](image-1.png)
 
 ---
 
