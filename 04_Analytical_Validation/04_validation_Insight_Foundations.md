@@ -132,6 +132,60 @@ From SQL Server, generate small, curated extracts:
 
     ![Validation: APR Severity of Illness vs Length of Stay](image-4.png)
 
+3. **Outlier & Anomaly Scan**  
+SQL File: [here](./04_SQL/04_7_Outlier_Anomaly_Scan.sql)   
+
+This step identifies statistical and operational anomalies across three high-risk fields commonly used in hospital performance analysis:
+
+- **LOS** or length of stay  
+- **Total_Charges**  
+- **Total_Costs**
+
+Outliers in these fields can distort KPIs such as LOS averages, cost-of-care metrics, and facility benchmarking. Healthcare data is also naturally right-skewed, making a dual-strategy approach essential.
+
+### **1️⃣ Z-Score Outlier Scan (±3 SD)**  
+Excel Files: [here]()
+Applied statistical profiling to detect encounters with extreme values in LOS, charges, or costs.  
+This method flags unusually high or low values based on standard deviation, which is widely used in healthcare audit workflows.
+
+Using a ±3 SD Z-score rule across LOS, Charges and Costs surfaced 9,190 statistical outliers (2.7% of all encounters)—nearly 9× the rate expected under a normal distribution.
+
+This confirms the presence of the heavy right-tail typical of real inpatient utilization data, where a small proportion of encounters drive a disproportionately high share of total inpatient days and costs.
+
+LOS outliers (≈1.8%) mostly correspond to clinically complex or extended-stay cases. Charges (≈1.6%) and costs (≈1.5%) outliers track tightly together, validating the costing logic.
+
+![Z3 outliers count](image-5.png)
+
+These patterns are consistent with SPARCS data and support downstream analyses such as case-mix adjustments, high-utilization cohorts, and financial risk detection.
+
+For practical monitoring, we separated:
+- Mild outliers: |Z| > 3 (used for aggregate profiling)
+- Severe outliers: |Z| > 4 (used for targeted review and dashboards)
+
+![Z4 outliers count](image-6.png)
+
+### **2️⃣ IQR Outlier Scan (1.5 × IQR Rule)**  
+Since financial fields (charges and costs) are heavily right-skewed, we also used an Interquartile Range method.  
+This detects skewed-distribution outliers without being influenced by extreme values.
+
+### **3️⃣ LOS Simulation Quality Check**  
+Compared **LOS_Sim** against the original **Length_of_Stay** from the CSV.  
+Encounters where the simulated LOS deviated by **more than 20 days** from the raw field were flagged for review, ensuring simulation realism.
+
+### **4️⃣ Impossible or Suspicious Value Detection**  
+A final scan identified hard-rule violations, including:  
+- LOS_Sim ≤ 0  
+- Negative or zero Total_Charges / Total_Costs  
+- **Total_Costs > Total_Charges** (not possible in real hospital finance)
+
+These anomalies usually indicate data-entry issues, ETL defects, or source inconsistencies and must be resolved before building downstream LOS, mortality, and cost KPIs.
+
+---
+
+**Outcome:**  
+A validated, anomaly-aware dataset ready for clinical and financial KPI modeling, ensuring that dashboards and statistical analyses are reliable and trustworthy.
+
+
 
 The excel files with the extracts are placed in:
 
