@@ -59,19 +59,37 @@ From SQL Server, generate small, curated extracts:
    - Top 100 encounters by Total_Charges  
    - Ensure $ signs were removed, decimals preserved, no null inflation.  
   ![Top 100 encounters by Total_Charges](image.png)
-  Excel file: [here](./04_Excel/04_1_Monetary_Top100.xlsx)
+     - Excel file: [here](./04_Excel/04_1_Monetary_Top100.xlsx)
 
 1. **Category Mapping Check**  
    - Random 200 rows showing:  
      `Type_of_Admission_Std`, `Patient_Disposition_Grouped`, `Race_Std`, `Ethnicity_Std`, `Payment_Typology_Group`
 
-2. **Birth Weight Fix Check**  
-   - Random NICU cases to confirm Birth_Weight correctly cast to integer.
+     **Revealed:** Excel validation surfaced a logic bug where ‘Not Span/Hispanic’ was incorrectly standardized as ‘Hispanic’. I corrected the CASE logic so that ‘Not Span/Hispanic’ is mapped to ‘Non-Hispanic’ before generic Hispanic rules. This is a good example of why human-readable validation is critical in healthcare analytics.  
+     - SQL Code: [here](./04_SQL/ethnicity_std_mapping_fixing.sql)  
+     - Excel file after bug fix: [here](./04_Excel/04_2_Category_Mapping_Sample.xlsx)
 
-3. **ZIP Categorization Check**  
+     ![Corrected Ethnicity Distribution](image-1.png)
+
+2. **Birth Weight Fix Check**  
+   - Random NICU cases to confirm Birth_Weight correctly cast to integer.  
+  
+    **Revealed:** Birth Weight Validation  
+✔ The cast to INT preserved realistic newborn weights (typically 2500–4000g).  
+✔ No evidence of unit conversion errors (no values 3–4 digits smaller or larger than expected).  
+✔ A high volume of 0g entries were confirmed as “not recorded / not applicable” values, typical for datasets containing both maternity and non-maternity patients.
+
+    **Conclusion:**  
+    Birth weight can be safely used for newborn cohort analysis but should be excluded from adult encounters and filtered for >0g when analyzing neonatal groups.  
+    Excel file: [here](./04_Excel/04_3_BirthWeight_Sample.xlsx)
+
+    
+
+
+1. **ZIP Categorization Check**  
    - Sample showing `Zip_Code_3_digits` vs `Zip3_Category`.
 
-4. **Fact Table Integrity Check**  
+2. **Fact Table Integrity Check**  
    - 100 random rows from the `Fact_Encounter` table joined with all dimensions.
 
 The extracts will be placed in:
