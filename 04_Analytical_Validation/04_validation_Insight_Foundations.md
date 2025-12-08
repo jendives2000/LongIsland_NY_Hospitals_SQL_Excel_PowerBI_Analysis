@@ -83,9 +83,6 @@ From SQL Server, generate small, curated extracts:
     Birth weight can be safely used for newborn cohort analysis but should be excluded from adult encounters and filtered for >0g when analyzing neonatal groups.  
     Excel file: [here](./04_Excel/04_3_BirthWeight_Sample.xlsx)
 
-    
-
-
 1. **ZIP Categorization Check**  
    - Sample showing `Zip_Code_3_digits` vs `Zip3_Category`.
     
@@ -97,16 +94,15 @@ From SQL Server, generate small, curated extracts:
         ![ZIP Categorization Check](image-2.png)
 
 2. **Fact Table Integrity Check**  
-   - 100 random rows from the `Fact_Encounter` table joined with all dimensions.
+   - 100 random rows from the `Fact_Encounter` table joined with all dimensions.  
+         SQL file: [here](./04_Excel/04_5_FactDim_Integrity_Sample.xlsx)  
 
-The extracts will be placed in:
+        ✅ All rows have valid Facility_Name, Date, Payer_Group, AdmissionType_Std, Disposition_Grouped
 
-📂 `/04_Excel_Quality_Checks/`
 
-Each sheet includes a short **interpretation note** explaining:
-- What was checked  
-- Why it matters  
-- Result summary (Pass/Fail)  
+The excel files with the extracts are placed in:
+
+📂 [`/04_Excel`](./04_Excel/)
 
 ---
 
