@@ -57,19 +57,21 @@ From SQL Server, generate small, curated extracts:
 
 1. **Monetary Check**  
    - Top 100 encounters by Total_Charges  
-   - Ensure $ signs were removed, decimals preserved, no null inflation.
+   - Ensure $ signs were removed, decimals preserved, no null inflation.  
+  ![Top 100 encounters by Total_Charges](image.png)
+  Excel file: [here](./04_Excel/04_1_Monetary_Top100.xlsx)
 
-2. **Category Mapping Check**  
+1. **Category Mapping Check**  
    - Random 200 rows showing:  
      `Type_of_Admission_Std`, `Patient_Disposition_Grouped`, `Race_Std`, `Ethnicity_Std`, `Payment_Typology_Group`
 
-3. **Birth Weight Fix Check**  
+2. **Birth Weight Fix Check**  
    - Random NICU cases to confirm Birth_Weight correctly cast to integer.
 
-4. **ZIP Categorization Check**  
+3. **ZIP Categorization Check**  
    - Sample showing `Zip_Code_3_digits` vs `Zip3_Category`.
 
-5. **Fact Table Integrity Check**  
+4. **Fact Table Integrity Check**  
    - 100 random rows from the `Fact_Encounter` table joined with all dimensions.
 
 The extracts will be placed in:
