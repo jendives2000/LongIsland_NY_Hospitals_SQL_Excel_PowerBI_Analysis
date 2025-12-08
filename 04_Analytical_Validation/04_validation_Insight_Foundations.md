@@ -106,7 +106,7 @@ The excel files with the extracts are placed in:
 
 ---
 
-#### 🧠 Deliverable From Step 04.1
+#### 🧠 Deliverable From Step 04
 
 > A set of Excel files demonstrating that the cleaned data is **globally accurate**, **clinically reasonable**, and **safe** to use for operational insights.
 
@@ -115,7 +115,7 @@ These validation artifacts also:
 - Demonstrate accountability in public-health reporting  
 - Show process maturity  
 
-These files complete the data-trust layer and prepare the foundation for KPI development in Step 04.2.
+These files complete the data-trust layer and prepare the foundation for KPI development in Step 04.B — where numbers are **clinically sensible**, **financially accurate**, and **ready for BI visualization**.
 
 
 ---
@@ -126,12 +126,6 @@ These files complete the data-trust layer and prepare the foundation for KPI dev
 ✔ Extracts to Excel showing data validation samples - [excel folder](./04_Excel/)  
 ✔ Quick-interpretation notes for insights communication  
 ✔ This present updated documentation of data trustworthiness
-
----
-
-### 🚀 Deliverable From Step 04
-
-> A validated insight foundation — where numbers are **clinically sensible**, **financially accurate**, and **ready for BI visualization**.
 
 ---
 
