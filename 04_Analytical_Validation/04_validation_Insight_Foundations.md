@@ -88,6 +88,13 @@ From SQL Server, generate small, curated extracts:
 
 1. **ZIP Categorization Check**  
    - Sample showing `Zip_Code_3_digits` vs `Zip3_Category`.
+    
+        ✅ OOS only appears as `Out-of-State`  
+        ✅ Null / blank become `Unknown`  
+        ✅ Normal 3-digit codes → `In-State Zip3`  
+        Excel file: [here](./04_Excel/04_4_Zip3_Category_Sample.xlsx)
+
+        ![ZIP Categorization Check](image-2.png)
 
 2. **Fact Table Integrity Check**  
    - 100 random rows from the `Fact_Encounter` table joined with all dimensions.
