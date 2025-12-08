@@ -106,6 +106,33 @@ From SQL Server, generate small, curated extracts:
 
     This protects us from building KPIs on a severity score that doesn’t reflect actual resource use.
 
+    **Findings**:  
+    The dataset already includes official clinical severity metrics, commonly used in hospital analytics:
+    - APR Severity of Illness Code (1–4)
+    - APR Risk of Mortality (1–4)
+    - APR DRG + APR MDC codes & descriptions
+    - CCS Diagnosis + CCS Procedure groupings  
+  
+    These fields reflect real clinical complexity, not just raw length-of-stay or death counts and:
+    - Enables risk-adjusted KPIs (fair hospital comparisons)
+    - Improves accuracy of LOS and mortality analysis
+    - Supports clinical benchmarking and reimbursement logic
+  
+    We updated the Dim_ClinicalClass table to include these fields so I can:
+    - Segment outcomes by severity level
+    - Identify high-risk patient profiles
+    - Support value-based care reporting  
+    SQL file of the update [here](./04_SQL/04_Dim_ClinicClass_Update.sql)
+
+    ![Row count by severity](image-3.png)
+
+    For clinical validation, we used the original SPARCS Length_of_Stay field to confirm that LOS increases with APR severity.
+    For portfolio visuals, synthetic LOS_Sim is used to preserve anonymity while keeping realistic ranges.  
+    SQL file [here](./04_SQL/APR_Sev_Vs_LOS_original.sql)
+
+    ![Validation: APR Severity of Illness vs Length of Stay](image-4.png)
+
+
 The excel files with the extracts are placed in:
 
 📂 [`/04_Excel`](./04_Excel/)
