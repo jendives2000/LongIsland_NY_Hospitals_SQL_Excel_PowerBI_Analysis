@@ -139,3 +139,41 @@ JOIN dbo.Dim_AdmissionType    AS a     ON f.AdmissionType_Key   = a.AdmissionTyp
 JOIN dbo.Dim_Disposition      AS disp  ON f.Disposition_Key     = disp.Disposition_Key
 ORDER BY NEWID();
 -- Save as: 04_1_FactDim_Integrity_Sample.csv
+
+
+
+
+/*==========================================================
+  04.2 – CLINICAL INDEX VALIDATION
+  Purpose:
+    - Check that APR Severity of Illness is aligned with
+      realistic Length of Stay patterns.
+    - If higher severity does NOT have higher LOS on average,
+      we should not trust severity-based KPIs.
+
+  Tables used:
+    - Fact_Encounter: holds LOS_Sim (LOS proxy) and keys
+    - Dim_ClinicalClass: holds APR Severity descriptions
+==========================================================*/
+
+
+/*--------------------------------------------------------
+  04.6 – LOS by APR Severity
+  WHAT:
+    - Summarize LOS statistics per APR Severity level.
+  WHY:
+    - Verify that higher severity levels tend to have
+      higher average LOS and plausible min/max values.
+---------------------------------------------------------*/
+
+SELECT 
+    cc.APR_DRG_Description AS Severity,
+    COUNT(*)        AS Encounter_Count,
+    AVG(f.LOS_Sim)  AS Avg_LOS,
+    MIN(f.LOS_Sim)  AS Min_LOS,
+    MAX(f.LOS_Sim)  AS Max_LOS
+FROM dbo.Fact_Encounter      AS f
+JOIN dbo.Dim_ClinicalClass   AS cc 
+      ON f.ClinicalClass_Key = cc.ClinicalClass_Key
+GROUP BY cc.APR_DRG_Description
+ORDER BY Avg_LOS DESC;   -- Expect "Extreme" / "Major" at the top

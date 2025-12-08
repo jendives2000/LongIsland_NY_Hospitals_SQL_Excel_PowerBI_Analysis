@@ -99,6 +99,12 @@ From SQL Server, generate small, curated extracts:
 
         ✅ All rows have valid Facility_Name, Date, Payer_Group, AdmissionType_Std, Disposition_Grouped
 
+3. **Clinical Index Validation** (APR Severity vs Length of Stay)
+
+    We want to confirm that the **APR Severity of Illness** index behaves in a clinically logical way:
+    higher severity should generally be associated with **longer Length of Stay (LOS)**.
+
+    This protects us from building KPIs on a severity score that doesn’t reflect actual resource use.
 
 The excel files with the extracts are placed in:
 
