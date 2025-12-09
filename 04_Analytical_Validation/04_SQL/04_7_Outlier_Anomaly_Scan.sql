@@ -181,38 +181,75 @@ FROM Z;
 
 
 --------------------------------------------------------------
--- 2. IQR Outlier Scan (1.5 × IQR Rule)
---------------------------------------------------------------
-/* WHAT:
-      Identify skewed-distribution outliers using the IQR method.
-   WHY:
-      Charges and costs in healthcare are heavily right-skewed;
-      IQR is robust against extreme tails.
-*/
+-- 2. IQR Outlier Scan WITH Diagnostics
+   Returns Q1, Q3, IQR, bounds, and distance beyond the cutoff
+   ========================================================== */
+
 WITH Percentiles AS (
     SELECT
         PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY Length_of_Stay_Int) OVER() AS Q1_LOS,
         PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY Length_of_Stay_Int) OVER() AS Q3_LOS,
 
-        PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY Total_Charges) OVER()          AS Q1_Charges,
-        PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY Total_Charges) OVER()          AS Q3_Charges,
+        PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY Total_Charges) OVER() AS Q1_Charges,
+        PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY Total_Charges) OVER() AS Q3_Charges,
 
-        PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY Total_Costs) OVER()            AS Q1_Costs,
-        PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY Total_Costs) OVER()            AS Q3_Costs
+        PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY Total_Costs) OVER() AS Q1_Costs,
+        PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY Total_Costs) OVER() AS Q3_Costs
     FROM dbo.Fact_Encounter
 ),
 Bounds AS (
     SELECT DISTINCT
-        Q1_LOS, Q3_LOS, (Q3_LOS - Q1_LOS)                 AS IQR_LOS,
+        Q1_LOS, Q3_LOS, (Q3_LOS - Q1_LOS) AS IQR_LOS,
         Q1_Charges, Q3_Charges, (Q3_Charges - Q1_Charges) AS IQR_Charges,
-        Q1_Costs, Q3_Costs, (Q3_Costs - Q1_Costs)         AS IQR_Costs
+        Q1_Costs, Q3_Costs, (Q3_Costs - Q1_Costs) AS IQR_Costs
     FROM Percentiles
 )
 SELECT 
     f.Encounter_ID,
     f.Length_of_Stay_Int,
     f.Total_Charges,
-    f.Total_Costs
+    f.Total_Costs,
+
+    -- IQR parameters
+    b.Q1_LOS, b.Q3_LOS, b.IQR_LOS,
+    b.Q1_Charges, b.Q3_Charges, b.IQR_Charges,
+    b.Q1_Costs, b.Q3_Costs, b.IQR_Costs,
+
+    -- Boundaries
+    (b.Q1_LOS - 1.5 * b.IQR_LOS) AS LOS_LowerBound,
+    (b.Q3_LOS + 1.5 * b.IQR_LOS) AS LOS_UpperBound,
+
+    (b.Q1_Charges - 1.5 * b.IQR_Charges) AS Charges_LowerBound,
+    (b.Q3_Charges + 1.5 * b.IQR_Charges) AS Charges_UpperBound,
+
+    (b.Q1_Costs - 1.5 * b.IQR_Costs) AS Costs_LowerBound,
+    (b.Q3_Costs + 1.5 * b.IQR_Costs) AS Costs_UpperBound,
+
+    -- Distance from cutoff (helps quantify severity)
+    CASE 
+        WHEN f.Length_of_Stay_Int > (b.Q3_LOS + 1.5 * b.IQR_LOS)
+        THEN f.Length_of_Stay_Int - (b.Q3_LOS + 1.5 * b.IQR_LOS)
+        WHEN f.Length_of_Stay_Int < (b.Q1_LOS - 1.5 * b.IQR_LOS)
+        THEN (b.Q1_LOS - 1.5 * b.IQR_LOS) - f.Length_of_Stay_Int
+        ELSE 0
+    END AS LOS_OutlierDistance,
+
+    CASE 
+        WHEN f.Total_Charges > (b.Q3_Charges + 1.5 * b.IQR_Charges)
+        THEN f.Total_Charges - (b.Q3_Charges + 1.5 * b.IQR_Charges)
+        WHEN f.Total_Charges < (b.Q1_Charges - 1.5 * b.IQR_Charges)
+        THEN (b.Q1_Charges - 1.5 * b.IQR_Charges) - f.Total_Charges
+        ELSE 0
+    END AS Charges_OutlierDistance,
+
+    CASE 
+        WHEN f.Total_Costs > (b.Q3_Costs + 1.5 * b.IQR_Costs)
+        THEN f.Total_Costs - (b.Q3_Costs + 1.5 * b.IQR_Costs)
+        WHEN f.Total_Costs < (b.Q1_Costs - 1.5 * b.IQR_Costs)
+        THEN (b.Q1_Costs - 1.5 * b.IQR_Costs) - f.Total_Costs
+        ELSE 0
+    END AS Costs_OutlierDistance
+
 FROM dbo.Fact_Encounter f
 CROSS JOIN Bounds b
 WHERE 
@@ -223,7 +260,149 @@ WHERE
    OR f.Total_Costs        <  b.Q1_Costs    - 1.5 * b.IQR_Costs
    OR f.Total_Costs        >  b.Q3_Costs    + 1.5 * b.IQR_Costs
 ORDER BY f.Total_Charges DESC;
-GO
+
+
+/* ==========================================================
+   IQR Outlier Severity Summary by Bin (LOS, Charges, Costs)
+   - Uses Tukey 1.5 × IQR rule
+   - Returns only: Metric, Bin, Outlier_Count
+   ========================================================== */
+
+WITH Percentiles AS (
+    SELECT
+        PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY Length_of_Stay_Int) OVER() AS Q1_LOS,
+        PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY Length_of_Stay_Int) OVER() AS Q3_LOS,
+
+        PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY Total_Charges) OVER() AS Q1_Charges,
+        PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY Total_Charges) OVER() AS Q3_Charges,
+
+        PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY Total_Costs) OVER() AS Q1_Costs,
+        PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY Total_Costs) OVER() AS Q3_Costs
+    FROM dbo.Fact_Encounter
+),
+Bounds AS (
+    SELECT DISTINCT
+        Q1_LOS,
+        Q3_LOS,
+        (Q3_LOS - Q1_LOS) AS IQR_LOS,
+
+        Q1_Charges,
+        Q3_Charges,
+        (Q3_Charges - Q1_Charges) AS IQR_Charges,
+
+        Q1_Costs,
+        Q3_Costs,
+        (Q3_Costs - Q1_Costs) AS IQR_Costs
+    FROM Percentiles
+),
+Outliers AS (
+    SELECT 
+        f.Encounter_ID,
+        f.Length_of_Stay_Int,
+        f.Total_Charges,
+        f.Total_Costs,
+
+        -- LOS %Diff vs IQR bound
+        CASE 
+            WHEN f.Length_of_Stay_Int > (b.Q3_LOS + 1.5 * b.IQR_LOS)
+                THEN (f.Length_of_Stay_Int - (b.Q3_LOS + 1.5 * b.IQR_LOS))
+                     / NULLIF((b.Q3_LOS + 1.5 * b.IQR_LOS), 0)
+            WHEN f.Length_of_Stay_Int < (b.Q1_LOS - 1.5 * b.IQR_LOS)
+                THEN ((b.Q1_LOS - 1.5 * b.IQR_LOS) - f.Length_of_Stay_Int)
+                     / NULLIF((b.Q1_LOS - 1.5 * b.IQR_LOS), 0)
+            ELSE NULL
+        END AS LOS_Pct_Diff,
+
+        -- Charges %Diff vs IQR bound
+        CASE 
+            WHEN f.Total_Charges > (b.Q3_Charges + 1.5 * b.IQR_Charges)
+                THEN (f.Total_Charges - (b.Q3_Charges + 1.5 * b.IQR_Charges))
+                     / NULLIF((b.Q3_Charges + 1.5 * b.IQR_Charges), 0)
+            WHEN f.Total_Charges < (b.Q1_Charges - 1.5 * b.IQR_Charges)
+                THEN ((b.Q1_Charges - 1.5 * b.IQR_Charges) - f.Total_Charges)
+                     / NULLIF((b.Q1_Charges - 1.5 * b.IQR_Charges), 0)
+            ELSE NULL
+        END AS Charges_Pct_Diff,
+
+        -- Costs %Diff vs IQR bound
+        CASE 
+            WHEN f.Total_Costs > (b.Q3_Costs + 1.5 * b.IQR_Costs)
+                THEN (f.Total_Costs - (b.Q3_Costs + 1.5 * b.IQR_Costs))
+                     / NULLIF((b.Q3_Costs + 1.5 * b.IQR_Costs), 0)
+            WHEN f.Total_Costs < (b.Q1_Costs - 1.5 * b.IQR_Costs)
+                THEN ((b.Q1_Costs - 1.5 * b.IQR_Costs) - f.Total_Costs)
+                     / NULLIF((b.Q1_Costs - 1.5 * b.IQR_Costs), 0)
+            ELSE NULL
+        END AS Costs_Pct_Diff
+    FROM dbo.Fact_Encounter f
+    CROSS JOIN Bounds b
+    WHERE 
+          f.Length_of_Stay_Int <  (b.Q1_LOS      - 1.5 * b.IQR_LOS)
+       OR f.Length_of_Stay_Int >  (b.Q3_LOS      + 1.5 * b.IQR_LOS)
+       OR f.Total_Charges      <  (b.Q1_Charges  - 1.5 * b.IQR_Charges)
+       OR f.Total_Charges      >  (b.Q3_Charges  + 1.5 * b.IQR_Charges)
+       OR f.Total_Costs        <  (b.Q1_Costs    - 1.5 * b.IQR_Costs)
+       OR f.Total_Costs        >  (b.Q3_Costs    + 1.5 * b.IQR_Costs)
+),
+BinnedUnion AS (
+    SELECT
+        'LOS' AS Metric,
+        CASE 
+            WHEN LOS_Pct_Diff IS NULL THEN NULL
+            WHEN LOS_Pct_Diff < 0.5 THEN '< 50%'
+            WHEN LOS_Pct_Diff < 2.0 THEN '< 200%'
+            WHEN LOS_Pct_Diff < 5.0 THEN '< 500%'
+            ELSE '> 500%'
+        END AS Pct_Diff_Bin
+    FROM Outliers
+    WHERE LOS_Pct_Diff IS NOT NULL
+
+    UNION ALL
+
+    SELECT
+        'Charges' AS Metric,
+        CASE 
+            WHEN Charges_Pct_Diff IS NULL THEN NULL
+            WHEN Charges_Pct_Diff < 0.5 THEN '< 50%'
+            WHEN Charges_Pct_Diff < 2.0 THEN '< 200%'
+            WHEN Charges_Pct_Diff < 5.0 THEN '< 500%'
+            ELSE '> 500%'
+        END AS Pct_Diff_Bin
+    FROM Outliers
+    WHERE Charges_Pct_Diff IS NOT NULL
+
+    UNION ALL
+
+    SELECT
+        'Costs' AS Metric,
+        CASE 
+            WHEN Costs_Pct_Diff IS NULL THEN NULL
+            WHEN Costs_Pct_Diff < 0.5 THEN '< 50%'
+            WHEN Costs_Pct_Diff < 2.0 THEN '< 200%'
+            WHEN Costs_Pct_Diff < 5.0 THEN '< 500%'
+            ELSE '> 500%'
+        END AS Pct_Diff_Bin
+    FROM Outliers
+    WHERE Costs_Pct_Diff IS NOT NULL
+)
+
+SELECT
+    Metric,
+    Pct_Diff_Bin,
+    COUNT(*) AS Outlier_Count
+FROM BinnedUnion
+WHERE Pct_Diff_Bin IS NOT NULL
+GROUP BY Metric, Pct_Diff_Bin
+ORDER BY
+    Metric,
+    CASE Pct_Diff_Bin
+        WHEN '< 50%' THEN 1
+        WHEN '< 200%' THEN 2
+        WHEN '< 500%' THEN 3
+        WHEN '> 500%'     THEN 4
+        ELSE 5
+    END;
+
 
 
 --------------------------------------------------------------
