@@ -186,16 +186,8 @@ Although thousands of encounters qualify as IQR outliers, fewer than 2% exceed 5
 The Excel charts above summarize the distribution of severity bins for each metric. All three follow the same pattern:
 - A steep decline from mild → moderate → strong outliers
 - A long, low-probability tail of extreme (> 500%) outliers
-- A smooth, monotonic slope consistent with heavy-tailed clinical and financial distributions
-
-This validates that our anomaly detection captures:
-- Routine variability
-- Moderate deviations
-- Operationally meaningful cases
-- Small but critical extreme outliers
 
 Such a pattern is what we expect in real hospital datasets: a small number of encounters drive a disproportionate share of LOS, resource use, and cost.
-
 
 ### **3️⃣ Impossible or Suspicious Value Detection**  
 A final scan identified hard-rule violations, including:  
