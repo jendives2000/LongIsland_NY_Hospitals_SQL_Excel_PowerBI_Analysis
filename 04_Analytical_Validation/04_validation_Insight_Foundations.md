@@ -144,7 +144,8 @@ This step identifies statistical and operational anomalies across three high-ris
 Outliers in these fields can distort KPIs such as LOS averages, cost-of-care metrics, and facility benchmarking. Healthcare data is also naturally right-skewed, making a dual-strategy approach essential.
 
 ### **1️⃣ Z-Score Outlier Scan (±3 & ±4 SD)**  
-**Excel Files:** [here]()  
+**Excel Files:** [here](./04_Excel/4_7_ZScore_Outlier_Scan_Validation.xlsx)  
+SQL File: [here](./04_SQL/04_7_Outlier_Anomaly_Scan.sql)
 
 Applied statistical profiling to detect encounters with extreme values in LOS, charges, and costs.  
 This method flags unusually high or low values based on standard deviation, which is widely used in healthcare audit workflows.
@@ -168,6 +169,7 @@ Outliers count with ±4 SD:
 
 ### **2️⃣ IQR Outlier Scan (1.5 × IQR Rule)**  
 Excel file: [here](./04_Excel/4_8_Distribution_Severity_Bins.xlsx)  
+SQL File: [here](./04_SQL/04_7_Outlier_Anomaly_Scan.sql)
 
 To understand how extreme our outliers are—not just how many exist—we quantified each encounter’s distance beyond the expected range defined by Tukey’s 1.5 × IQR rule.
 
