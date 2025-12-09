@@ -199,6 +199,33 @@ A final scan identified hard-rule violations, including:
 
 These anomalies usually indicate data-entry issues, ETL defects, or source inconsistencies and must be resolved before building downstream LOS, mortality, and cost KPIs.
 
+![Impossible or Suspicious Value Detection](image-9.png)
+
+**Finding:**  
+1120 encounters (0.33%) showed Total Costs exceeding Total Charges.
+This pattern is expected in inpatient datasets and typically reflects
+high-resource, low-reimbursement cases such as extended LOS stays,
+high-acuity conditions, or encounters involving costly pharmaceuticals
+or intensive procedures.  
+The SQL code used for the below result is [here](./04_SQL/04_7_Outlier_Anomaly_Scan.sql)  
+
+![Count of Total Costs that are bigger than Total Charges](image-10.png)
+
+**Action**:  
+SQL file: [here](./04_SQL/04_7_Costs_greater_Charges_Actions.sql)  
+Excel file: [here](./04_Excel/04_7_Costs_Greater_Charges_Actions.xlsx)  
+
+This is not a data error; it reflects a realistic pattern seen in U.S. inpatient datasets, often driven by public payers, under-reimbursed clinical categories, and high-cost treatments.
+
+To understand the source of these cases, we joined the fact table with payer and clinical dimensions and identified:
+- Which payer groups contribute most to negative margins
+- Which clinical classes are associated with higher resource use
+- Typical LOS patterns for these encounters
+
+This allowed us to confirm that the cost model behaves realistically and that negative-margin cases are concentrated in clinically and financially expected areas.
+
+![Which payer groups contribute most to negative margins](image-12.png)
+
 ---
 
 **Outcome:**  

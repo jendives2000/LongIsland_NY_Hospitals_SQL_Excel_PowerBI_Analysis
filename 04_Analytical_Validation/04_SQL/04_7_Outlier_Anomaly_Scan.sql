@@ -405,22 +405,78 @@ ORDER BY
 
 
 
---------------------------------------------------------------
--- 3. Sanity Check — Impossible / Suspicious Values
---------------------------------------------------------------
-/* WHAT:
-      Hard-rule validation for impossible LOS, charges, or costs.
+/* ===============================================================
+   SANITY CHECK — NUMERIC VALIDATION (AGGREGATED)
+   WHAT:
+       - Counts how many LOS, Charges, and Costs values are:
+           • NULL
+           • Negative
+           • Zero
    WHY:
-      Catches ETL defects and data-entry errors before KPI modeling.
-*/
-SELECT *
+       - Length of stay, charges, and costs cannot logically be
+         NULL, negative, or zero in an inpatient dataset.
+       - Instead of returning thousands of rows, this summarizes
+         data quality issues at a glance.
+   =============================================================== */
+
+-- ------------------------------------------
+-- Check Length_of_Stay_Int
+-- ------------------------------------------
+SELECT
+    'Length_of_Stay_Int' AS ColumnName,                        -- What column is being checked
+    SUM(CASE WHEN Length_of_Stay_Int IS NULL THEN 1 ELSE 0 END) AS Null_Count,     -- Why: LOS cannot be NULL
+    SUM(CASE WHEN Length_of_Stay_Int < 0    THEN 1 ELSE 0 END) AS Negative_Count,  -- Why: LOS cannot be negative
+    SUM(CASE WHEN Length_of_Stay_Int = 0    THEN 1 ELSE 0 END) AS Zero_Count       -- Why: LOS of zero is impossible
 FROM dbo.Fact_Encounter
-WHERE Length_of_Stay_Int <= 0         -- LOS cannot be 0 or negative
-   OR Total_Charges <= 0              -- impossible in billing
-   OR Total_Costs <= 0
-   OR Total_Costs > Total_Charges     -- costs cannot exceed charges
-ORDER BY Total_Costs DESC;
-GO
+
+UNION ALL
+
+-- ------------------------------------------
+-- Check Total_Charges
+-- ------------------------------------------
+SELECT
+    'Total_Charges' AS ColumnName,
+    SUM(CASE WHEN Total_Charges IS NULL THEN 1 ELSE 0 END) AS Null_Count,          -- Why: charges cannot be NULL
+    SUM(CASE WHEN Total_Charges < 0    THEN 1 ELSE 0 END) AS Negative_Count,       -- Why: charges cannot be negative
+    SUM(CASE WHEN Total_Charges = 0    THEN 1 ELSE 0 END) AS Zero_Count            -- Why: a charge of zero is invalid billing
+FROM dbo.Fact_Encounter
+
+UNION ALL
+
+-- ------------------------------------------
+-- Check Total_Costs
+-- ------------------------------------------
+SELECT
+    'Total_Costs' AS ColumnName,
+    SUM(CASE WHEN Total_Costs IS NULL THEN 1 ELSE 0 END) AS Null_Count,            -- Why: costs cannot be NULL
+    SUM(CASE WHEN Total_Costs < 0    THEN 1 ELSE 0 END) AS Negative_Count,         -- Why: costs cannot be negative
+    SUM(CASE WHEN Total_Costs = 0    THEN 1 ELSE 0 END) AS Zero_Count              -- Why: a cost of zero is impossible
+FROM dbo.Fact_Encounter;
+
+
+
+/* ===============================================================
+   SANITY CHECK — COSTS GREATER THAN CHARGES
+   WHAT:
+       - Counts how many encounters have Total_Costs > Total_Charges.
+   WHY:
+       - In a hospital setting, charges are derived from cost but are
+         always equal to or higher than cost.
+       - A case where costs exceed charges indicates:
+           • A data entry error
+           • A cost-allocation problem
+           • A transformation or ETL issue
+           • A missing update to charge master logic
+       - This is a critical integrity check for financial datasets.
+   =============================================================== */
+
+SELECT 
+    COUNT(*) AS Costs_GT_Charges_Count   -- What: number of invalid cases
+FROM dbo.Fact_Encounter
+WHERE Total_Costs > Total_Charges;        -- Why: impossible in standard billing model
+
+
+
 
 
 
