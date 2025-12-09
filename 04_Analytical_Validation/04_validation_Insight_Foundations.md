@@ -167,14 +167,37 @@ Outliers count with ±4 SD:
 ![Z4 outliers count](image-6.png)
 
 ### **2️⃣ IQR Outlier Scan (1.5 × IQR Rule)**  
-Since financial fields (charges and costs) are heavily right-skewed, we also used an Interquartile Range method.  
-This detects skewed-distribution outliers without being influenced by extreme values.
+Excel file: [here](./04_Excel/4_8_Distribution_Severity_Bins.xlsx)  
 
-### **3️⃣ LOS Simulation Quality Check**  
-Compared **LOS_Sim** against the original **Length_of_Stay** from the CSV.  
-Encounters where the simulated LOS deviated by **more than 20 days** from the raw field were flagged for review, ensuring simulation realism.
+To understand how extreme our outliers are—not just how many exist—we quantified each encounter’s distance beyond the expected range defined by Tukey’s 1.5 × IQR rule.
 
-### **4️⃣ Impossible or Suspicious Value Detection**  
+For each metric (Length of Stay, Total Charges, Total Costs), we calculated:
+- The IQR Upper Bound (Q3 + 1.5 × IQR)
+- The encounter’s absolute distance beyond that bound
+- The percentage difference relative to the bound (Pct_Diff)
+- A severity bin indicating how extreme the deviation is (Pct_Diff_Bin)
+
+![Count of Percentages of Outliers Distance with binnings](image-8.png)
+
+Although thousands of encounters qualify as IQR outliers, fewer than 2% exceed 500% of the expected boundary. These extreme cases represent the most impactful utilization and financial anomalies in the dataset and are the primary focus for operational review and cost-containment strategies.
+
+📈 Visual Insight
+
+The Excel charts above summarize the distribution of severity bins for each metric. All three follow the same pattern:
+- A steep decline from mild → moderate → strong outliers
+- A long, low-probability tail of extreme (> 500%) outliers
+- A smooth, monotonic slope consistent with heavy-tailed clinical and financial distributions
+
+This validates that our anomaly detection captures:
+- Routine variability
+- Moderate deviations
+- Operationally meaningful cases
+- Small but critical extreme outliers
+
+Such a pattern is what we expect in real hospital datasets: a small number of encounters drive a disproportionate share of LOS, resource use, and cost.
+
+
+### **3️⃣ Impossible or Suspicious Value Detection**  
 A final scan identified hard-rule violations, including:  
 - LOS_Sim ≤ 0  
 - Negative or zero Total_Charges / Total_Costs  
