@@ -68,96 +68,22 @@ Key fields used:
 > produced in Step 04 (outlier handling, costs>charges analysis, etc.).
 
 ---
+## Optimized sequence for clean SQL logic, analytical coherence, and scalable KPI development
 
+Before building the full KPI catalog, it's critical to establish an order that supports:
+
+- Correct SQL dependencies (views that rely on earlier logic)
+- Analytical clarity (KPIs interpreted in the right clinical/financial context)
+- Reusable modeling patterns (severity mix, payer mix, and disposition will be reused in later KPIs)
+
+The list of the KPI Catalog below is the optimized build sequence.
+
+---
 ## 📊 KPI Catalog
 
 This step implements the *business* KPIs introduced in Step 04:
 
-### 1. Length of Stay (LOS) KPIs
-
-**Question:**  
-How long do patients stay, and how does this vary by facility and case-mix?
-
-“Length of Stay” = number of days a patient spends in the hospital from admission to discharge.
-
-“Case-mix” = the mix of patient types, especially how sick/complex they are (for example: more mild vs more severe cases).
-If a hospital treats many severe cases, its LOS will naturally be higher.
-
-- **Avg LOS** - How long patients stay on average
-- **Min / Max LOS** - How spread out LOS is (short vs long stays)
-- **LOS distribution** by facility and year
-- **LOS by APR Severity of Illness** - How LOS differs by APR Severity of Illness (a 1–4 scale where 4 = very sick)
-
-**Views:**
-
-- `dbo.vw_KPI_LOS_FacilityYear`
-- `dbo.vw_KPI_LOS_BySeverity`
-
----
-
-### 2. Unplanned Admission Rate
-
-**Question:**  
-What proportion of encounters arrive via **unplanned routes** (Emergency / Urgent),
-straining ED and inpatient capacity?
-
-**Logic (assumption for this project):**
-
-- `AdmissionType_Std` ∈ (`'Emergency'`, `'Urgent'`) → **Unplanned**
-- All other standardized admission types → **Planned**
-
-They are not scheduled elective surgeries or planned procedures.
-
-These patients:
-- Are harder to predict
-- Can overload ED and inpatient beds
-- Are often sicker or more unstable
-
-**View:**
-
-- `dbo.vw_KPI_UnplannedAdmissions_FacilityYear`
-
----
-
-### 3. Disposition Outcomes
-
-**Question:**  
-Do patients safely return to the community? How many die in hospital or move to
-institutional care?
-
-“Disposition” = where the patient goes at discharge.
-
-**Logic (example groups):**
-
-- `Disposition_Grouped` = `Home / Self Care`
-- `Disposition_Grouped` = `Skilled Nursing / Rehab`
-- `Disposition_Grouped` = `Died` / `Expired`
-- Other groupings (transfers, AMA, etc.)
-
-“AMA” = Left Against Medical Advice (patient leaves early, against doctor recommendation)
-
-**View:**
-
-- `dbo.vw_KPI_Disposition_FacilityYear`
-
----
-
-
-
-
-
-REPRENDRE ICI
-https://chatgpt.com/share/6938864b-fa00-800e-aad9-d304a3ccaebc
-
-
-
-
-
-
-
-
-
-### 4. Severity Mix Index (APR)
+### 1. Severity Mix Index (APR)
 
 **Question:**  
 Are we treating more complex, high-acuity cases?
@@ -191,10 +117,136 @@ We compute:
 
 ---
 
-### 5. Mortality Rate
+
+
+
+
+
+
+---
+
+### 2. Payer Mix & Reimbursement Risk
+
+**Question:**  
+Where is financial exposure concentrated? Are costs and volumes dominated by
+certain payer groups?
+
+“Payer mix” = how many patients belong to each payer category, such as:
+- Medicare
+- Medicaid
+- Commercial insurance
+- Self-pay / uninsured
+“Payment_Typology_Group” is your cleaned/standardized payer category.
+
+We want to know:
+- Which payer groups bring the most volume
+- Which bring the most cost
+- Which bring losses
+
+This helps:
+- Answer if this payer makes a policy change, how much risk are we exposed to?
+- Identify concentration risk (too dependent on a low-paying payer)
+- Decide which service lines to promote or adjust
+- Prioritize negotiations with key payers
+- Prepare for policy or reimbursement changes
+
+We summarize:
+
+- **Encounters and share by `Payment_Typology_Group`:** Shows volume exposure.  
+- **Avg cost and charges per payer group:** Shows whether some payers get more expensive patients or lower prices.  
+- **Negative-margin rate per payer group:** Highlights payers that are financially unsustainable.  
+
+**View:**
+
+- `dbo.vw_KPI_PayerMix_FacilityYear`
+
+---
+
+
+
+
+
+
+---
+
+### 3. Unplanned Admission Rate
+
+**Question:**  
+What proportion of encounters arrive via **unplanned routes** (Emergency / Urgent),
+straining ED and inpatient capacity?
+
+**Logic (assumption for this project):**
+
+- `AdmissionType_Std` ∈ (`'Emergency'`, `'Urgent'`) → **Unplanned**
+- All other standardized admission types → **Planned**
+
+They are not scheduled elective surgeries or planned procedures.
+
+These patients:
+- Are harder to predict
+- Can overload ED and inpatient beds
+- Are often sicker or more unstable
+
+**View:**
+
+- `dbo.vw_KPI_UnplannedAdmissions_FacilityYear`
+
+---
+
+### 4. Disposition Outcomes
+
+**Question:**  
+Do patients safely return to the community? How many die in hospital or move to
+institutional care?
+
+“Disposition” = where the patient goes at discharge.
+
+**Logic (example groups):**
+
+- `Disposition_Grouped` = `Home / Self Care`
+- `Disposition_Grouped` = `Skilled Nursing / Rehab`
+- `Disposition_Grouped` = `Died` / `Expired`
+- Other groupings (transfers, AMA, etc.)
+
+“AMA” = Left Against Medical Advice (patient leaves early, against doctor recommendation)
+
+**View:**
+
+- `dbo.vw_KPI_Disposition_FacilityYear`
+
+---
+
+### 5. Length of Stay (LOS) KPIs
+
+**Question:**  
+How long do patients stay, and how does this vary by facility and case-mix?
+
+“Length of Stay” = number of days a patient spends in the hospital from admission to discharge.
+
+“Case-mix” = the mix of patient types, especially how sick/complex they are (for example: more mild vs more severe cases).
+If a hospital treats many severe cases, its LOS will naturally be higher.
+
+- **Avg LOS** - How long patients stay on average
+- **Min / Max LOS** - How spread out LOS is (short vs long stays)
+- **LOS distribution** by facility and year
+- **LOS by APR Severity of Illness** - How LOS differs by APR Severity of Illness (a 1–4 scale where 4 = very sick)
+
+**Views:**
+
+- `dbo.vw_KPI_LOS_FacilityYear`
+- `dbo.vw_KPI_LOS_BySeverity`
+
+---
+
+### 6. Mortality Rate
 
 **Question:**  
 What is in-hospital mortality, and how does it vary by facility and case-mix?
+
+“In-hospital mortality” = patients who died during their hospital stay.  
+We want to know:
+- Overall rate per hospital and year
+- How that rate changes when we separate by severity (to be fair)
 
 Assumptions:
 
@@ -208,40 +260,37 @@ Assumptions:
 
 ---
 
-### 6. Cost per Encounter & Margin Pressure
+### 7. Cost per Encounter & Margin Pressure
 
 **Question:**  
 Which facilities / payers deliver **high-value** vs **high-cost** care?
 
+We want to see:
+- How much it costs to treat patients
+- How much the hospital charges
+- Whether some combinations of facility/payer are losing money
+
+“Margin pressure” = stress on profit margins, especially when cost > revenue.
+
 We compute:
 
-- Avg `Total_Costs` and `Total_Charges`
-- Cost-per-encounter
-- Cost-to-charge ratio
+- Avg `Total_Costs` and `Total_Charges`:
+  - `Total_Costs`: internal estimate of how much resources were used (staff, drugs, equipment).
+  - `Total_Charges`: what the hospital billed.
+- Cost-per-encounter: 
+  - Simply: Total_Costs / Encounter_Count.
+  - Shows how much the hospital spends per patient on average.
+- Cost-to-charge ratio:
+  - Total_Costs / Total_Charges.
+    - If ≈ 0.5 → charges are double the costs.
+    - If ≈ 1 → charges ≈ costs.
+  - Used to understand pricing vs cost structure.
 - Negative-margin rate (where `Total_Costs > Total_Charges`)
 
 **Views:**
 
 - `dbo.vw_KPI_CostPerCase_FacilityYear`
 - `dbo.vw_KPI_NegativeMargin_Profile`
-
----
-
-### 7. Payer Mix & Reimbursement Risk
-
-**Question:**  
-Where is financial exposure concentrated? Are costs and volumes dominated by
-certain payer groups?
-
-We summarize:
-
-- Encounters and share by `Payment_Typology_Group`
-- Avg cost and charges per payer group
-- Negative-margin rate per payer group
-
-**View:**
-
-- `dbo.vw_KPI_PayerMix_FacilityYear`
 
 ---
 
