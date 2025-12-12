@@ -50,9 +50,6 @@ Excel validation file: [here](./05_02_Excel/05_02_Payment_Mix_Reimbursement_Risk
 
 What to validate: 
 - Payer group counts and negative-margin classification
-- PivotTable correctly groups encounters by Payment_Typology_Group
+- PivotTable correctly groups encounters by Payment_Typology_Group (sampled just 1 hospital)
 - Counts per payer group match the SQL view
 - Negative-margin classification in Excel (Total_Costs > Total_Charges) matches SQL output
-- Average cost and charge values match within rounding tolerance
-
-Validation was performed on a single facility-year sample, following the same manual validation process as KPI 05.01.
