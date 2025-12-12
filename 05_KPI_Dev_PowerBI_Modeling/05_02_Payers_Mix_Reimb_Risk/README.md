@@ -49,7 +49,8 @@ Outputs:
 Excel validation file: [here](./05_02_Excel/05_02_Payment_Mix_Reimbursement_Risk)
 
 What to validate: 
-- Payer group counts and negative-margin classification
-- PivotTable correctly groups encounters by Payment_Typology_Group (sampled just 1 hospital)
-- Counts per payer group match the SQL view
-- Negative-margin classification in Excel (Total_Costs > Total_Charges) matches SQL output
+- Payer group counts and negative-margin classification (see Negative Margin Logic Validation in Excel file)
+  - Negative-margin classification in Excel (Total_Costs > Total_Charges) matches SQL output
+- PivotTable correctly groups encounters by Payment_Typology_Group (sampled just 1 hospital - see Payer Group Mapping Validation in Excel file)
+  - Counts per payer group match the SQL view
+
