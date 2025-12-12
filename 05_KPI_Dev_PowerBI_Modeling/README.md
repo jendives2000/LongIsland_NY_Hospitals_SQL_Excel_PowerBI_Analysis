@@ -116,15 +116,6 @@ We compute:
 - `dbo.vw_KPI_SeverityMix_FacilityYear`
 
 ---
-
-
-
-
-
-
-
----
-
 ### 2. Payer Mix & Reimbursement Risk
 
 **Question:**  
