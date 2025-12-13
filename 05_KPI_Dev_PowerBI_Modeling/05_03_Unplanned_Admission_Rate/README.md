@@ -1,7 +1,9 @@
 # 05.03 — Unplanned Admission Rate (ED & Urgent Intake Pressure)
 
+## What
 <details>
-<summary><strong>What</strong></summary>
+<summary>What is Unplanned Admission Rate</summary>
+
 
 This KPI measures the **rate and volume of unplanned inpatient admissions**
 (Emergency and Urgent) by facility and year, highlighting operational pressure
@@ -11,7 +13,6 @@ Planned admissions are inferred by exclusion, with remaining encounters categori
 
 **NOTE:**  
 Admission type standardization was performed upstream, collapsing raw ED/Urgent intake into a normalized ‘Unplanned’ category. Downstream KPIs consume this standardized semantic layer to ensure consistency across operational, LOS, and financial metrics.
-
 
 ```mermaid
 flowchart LR
@@ -31,8 +32,9 @@ flowchart LR
 
 </details>
 
+## Why
 <details>
-<summary><strong>Why</strong></summary>
+<summary><strong>Why use it?</strong></summary>
 
 Unplanned admissions are a major driver of:
 
@@ -51,8 +53,9 @@ mortality, and cost outcomes.
 
 </details>
 
+## Design Summary
 <details>
-<summary><strong>Design Summary</strong></summary>
+<summary><strong>Details about this KPI</strong></summary>
 
 **Primary View:**  
 `dbo.vw_KPI_UnplannedAdmissions_FacilityYear`
@@ -67,8 +70,9 @@ admission-type standardization validated in **Step 04**.
 
 </details>
 
+## Primary View
 <details>
-<summary><strong>Primary View</strong></summary>
+<summary><strong>Details about the Primary View</strong></summary>
 
 **View Name:**  
 `dbo.vw_KPI_UnplannedAdmissions_FacilityYear`
@@ -85,8 +89,9 @@ Each row represents one facility-year combination with:
 
 </details>
 
+## Why it comes third
 <details>
-<summary><strong>Why it comes third</strong></summary>
+<summary><strong>Why is this KPI the third one?</strong></summary>
 
 - Depends only on **standardized Admission Type**, already validated in Step 04  
 - Does **not** depend on LOS, disposition, mortality, or financial logic  
@@ -99,8 +104,9 @@ Each row represents one facility-year combination with:
 
 </details>
 
+## Key Columns
 <details>
-<summary><strong>Key Columns Used</strong></summary>
+<summary><strong>The Key Columns that were Used</strong></summary>
 
 **From `Fact_Encounter`:**
 
@@ -122,8 +128,9 @@ Each row represents one facility-year combination with:
 
 </details>
 
+## SQL Checks
 <details>
-<summary><strong>SQL Checks</strong></summary>
+<summary><strong>Checks made with SQL in the Server</strong></summary>
 
 SQL file: [here](./05_03_SQL/05_03_Unplanned_Admission_Rate.sql)  
 
@@ -178,8 +185,9 @@ Results must reconcile exactly per facility-year.
 
 </details>
 
+## Outputs
 <details>
-<summary><strong>Outputs</strong></summary>
+<summary><strong>The List of Outputs</strong></summary>
 
 - Total encounters per facility-year  
 - Unplanned encounter count  
@@ -194,8 +202,9 @@ These outputs support:
 
 </details>
 
+## Excel Validation
 <details>
-<summary><strong>Excel Validation</strong></summary>
+<summary><strong>Logic Validation in Excel</strong></summary>
 
 Excel validation file: [here](./05_03_Excel/05_03_Unplanned_Admission_Rate.xlsx)  
 
@@ -223,8 +232,10 @@ Excel validation file: [here](./05_03_Excel/05_03_Unplanned_Admission_Rate.xlsx)
 
     </details> 
 </details>
+
+## Downstream Usage
 <details>
-<summary><strong>Downstream Usage</strong></summary>
+<summary><strong>What to Do with this KPI later on</strong></summary>
 
 This KPI directly informs:
 
