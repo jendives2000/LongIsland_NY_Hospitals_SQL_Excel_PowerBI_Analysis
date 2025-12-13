@@ -41,6 +41,8 @@ Outputs:
 - Encounter counts per payer group
 - Share of total encounters per group
 - Avg total charges & costs per payer group
+- Cost-to-charge ratio (CTR) per payer group
+- Count of negative-margin encounters
 - Negative-margin rate (percentage of encounters where Total_Costs > Total_Charges)
 - Foundation for later Cost & Margin Pressure KPIs
 
