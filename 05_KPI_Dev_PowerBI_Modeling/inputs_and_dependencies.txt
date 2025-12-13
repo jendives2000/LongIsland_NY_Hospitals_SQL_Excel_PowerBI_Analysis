@@ -1,0 +1,40 @@
+## 🧱 Inputs & Dependencies
+
+- Fact table:
+  - `dbo.Fact_Encounter`
+- Dimensions:
+  - `dbo.Dim_Date`
+  - `dbo.Dim_Facility`
+  - `dbo.Dim_Payer`
+  - `dbo.Dim_AdmissionType`
+  - `dbo.Dim_Disposition`
+  - `dbo.Dim_ClinicalClass`
+
+Key fields used:
+
+- Fact:
+  - `Encounter_ID`
+  - `Discharge_Date_Key`
+  - `Facility_Key`
+  - `Payer_Key`
+  - `AdmissionType_Key`
+  - `Disposition_Key`
+  - `ClinicalClass_Key`
+  - `Length_of_Stay_Int`
+  - `Total_Charges`
+  - `Total_Costs`
+- Dim_Date:
+  - `Date_Key`, `Year`, `Month`, `Quarter`
+- Dim_Facility:
+  - `Facility_Key`, `Facility_Name`
+- Dim_Payer:
+  - `Payer_Key`, `Payment_Typology_1`, `Payment_Typology_Group`
+- Dim_AdmissionType:
+  - `AdmissionType_Key`, `AdmissionType_Std`
+- Dim_Disposition:
+  - `Disposition_Key`, `Disposition_Grouped`
+- Dim_ClinicalClass:
+  - `ClinicalClass_Key`
+  - `APR_Severity_Code`, `APR_Severity_Description`
+  - `APR_Risk_Of_Mortality_Desc`
+  - `APR_DRG_Code`, `APR_DRG_Description`

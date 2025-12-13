@@ -152,14 +152,6 @@ We summarize:
 - `dbo.vw_KPI_PayerMix_FacilityYear`
 
 ---
-
-
-
-
-
-
----
-
 ### 3. Unplanned Admission Rate
 
 **Question:**  
