@@ -1,6 +1,6 @@
 # 05.03 — Unplanned Admission Rate (ED & Urgent Intake Pressure)
 
-## What
+## ❓ What
 <details>
 <summary>What is Unplanned Admission Rate</summary>
 
@@ -32,7 +32,7 @@ flowchart LR
 
 </details>
 
-## Why
+## 🎯 Why
 <details>
 <summary><strong>Why use it?</strong></summary>
 
@@ -53,7 +53,7 @@ mortality, and cost outcomes.
 
 </details>
 
-## Design Summary
+## 🧩 Design Summary
 <details>
 <summary><strong>Details about this KPI</strong></summary>
 
@@ -70,7 +70,7 @@ admission-type standardization validated in **Step 04**.
 
 </details>
 
-## Primary View
+## 🖥️ Primary View
 <details>
 <summary><strong>Details about the Primary View</strong></summary>
 
@@ -89,7 +89,7 @@ Each row represents one facility-year combination with:
 
 </details>
 
-## Why it comes third
+## 🥉 Why it comes third
 <details>
 <summary><strong>Why is this KPI the third one?</strong></summary>
 
@@ -104,7 +104,7 @@ Each row represents one facility-year combination with:
 
 </details>
 
-## Key Columns
+## 🧱 Key Columns
 <details>
 <summary><strong>The Key Columns that were Used</strong></summary>
 
@@ -128,7 +128,7 @@ Each row represents one facility-year combination with:
 
 </details>
 
-## SQL Checks
+## 🗄️ SQL Checks
 <details>
 <summary><strong>Checks made with SQL in the Server</strong></summary>
 
@@ -185,7 +185,7 @@ Results must reconcile exactly per facility-year.
 
 </details>
 
-## Outputs
+## 📤 Outputs
 <details>
 <summary><strong>The List of Outputs</strong></summary>
 
@@ -202,7 +202,7 @@ These outputs support:
 
 </details>
 
-## Excel Validation
+## 📊 Excel Validation
 <details>
 <summary><strong>Logic Validation in Excel</strong></summary>
 
@@ -233,7 +233,7 @@ Excel validation file: [here](./05_03_Excel/05_03_Unplanned_Admission_Rate.xlsx)
     </details> 
 </details>
 
-## Downstream Usage
+## 🔗 Downstream Usage
 <details>
 <summary><strong>What to Do with this KPI later on</strong></summary>
 
