@@ -6,13 +6,22 @@
 
 
 This KPI measures the **rate and volume of unplanned inpatient admissions**
-(Emergency and Urgent) by facility and year, highlighting operational pressure
-on emergency services and inpatient capacity.
+(Emergency and Urgent) by facility and year - only 2015, **highlighting operational pressure
+on emergency services and inpatient capacity**.
 
-Planned admissions are inferred by exclusion, with remaining encounters categorized as Unknown (or Other) where standardization is missing.
+<details>
+<summary>In simple terms, it helps answer...</summary>
+Which hospitals are under the most pressure from emergency admissions, and how heavy that pressure is.
+Unplanned admissions typically require immediate beds, staff, and resources, so higher values point to strain on emergency departments and inpatient capacity.
+</details>
 
-**NOTE:**  
-Admission type standardization was performed upstream, collapsing raw ED/Urgent intake into a normalized ‘Unplanned’ category. Downstream KPIs consume this standardized semantic layer to ensure consistency across operational, LOS, and financial metrics.
+Admissions that are not emergency or urgent are treated as planned by elimination.
+Any records that cannot be clearly classified due to missing or inconsistent data are grouped as Unknown (Other).
+
+<details>
+<summary>Important context:</summary>
+The admission type logic is standardized before this KPI is calculated. All raw Emergency and Urgent intake values are first consolidated into a single Unplanned category. This ensures that all downstream analyses—operational, length-of-stay, and financial—are based on one consistent definition, avoiding conflicting counts or interpretations across reports.
+</details>
 
 ```mermaid
 flowchart LR
@@ -44,12 +53,11 @@ Unplanned admissions are a major driver of:
 
 Hospital leadership closely monitors unplanned admission rates to:
 
-- Evaluate access and throughput performance  
-- Anticipate capacity constraints  
-- Support ED staffing, diversion, and patient flow optimization decisions  
+- Help hospitals understand how easily patients can get care and how quickly they move through the system (**access and throughput performance**).
+- Help hospitals spot upcoming bed, staff, or resource shortages before they happen (**anticipate capacity constraints**).
+- Help hospitals staff emergency rooms properly (**support ED staffing**), avoid overcrowding (**patients diversion**), and move patients to beds faster (**patient flow optimization**).  
 
-This KPI provides essential **operational context** before analyzing LOS,
-mortality, and cost outcomes.
+This KPI helps to set the day-to-day operational picture of the hospital before examining length of stay, mortality, and cost results (**operational context**).
 
 </details>
 
@@ -95,7 +103,7 @@ Each row represents one facility-year combination with:
 
 - Depends only on **standardized Admission Type**, already validated in Step 04  
 - Does **not** depend on LOS, disposition, mortality, or financial logic  
-- Establishes **operational intake pressure** before:
+- Clarifies how much pressure hospitals face at the point of admission before deeper analysis (**operational intake pressure**).:
   - Length of stay analysis  
   - Mortality analysis  
   - Cost-per-case and margin pressure KPIs  
@@ -128,66 +136,12 @@ Each row represents one facility-year combination with:
 
 </details>
 
-## 🗄️ SQL Checks
-<details>
-<summary><strong>Checks made with SQL in the Server</strong></summary>
-
-SQL file: [here](./05_03_SQL/05_03_Unplanned_Admission_Rate.sql)  
-
-### 1️⃣ Admission Type Coverage Check
-
-**Purpose:**  
-Ensure that all encounters map to a valid standardized admission type and that
-Emergency / Urgent categories do not exist as they are grouped in the unplanned category.
-
-**What to verify:**
-
-- No unexpected `NULL` values in `AdmissionType_Std`  
-  <details>  <summary><strong>Screenshot</strong></summary>
-
-  ![No unexpected NULL values](image.png)
-
-  </details>
-- The Unplanned category (Emergency and Urgent categories) has realistic encounter volumes 
-  
-  ![Unplanned Encounter Volume](image-1.png) 
-
----
-
-### 2️⃣ Unplanned Classification Validation
-
-**Purpose:**  
-Confirm that the **unplanned logic** used in the KPI view matches raw encounter data.
-
-**What to verify:**
-
-- Encounter-level classification:
-  - Emergency / Urgent → Unplanned  
-  - All others → Planned  
-    <details>  <summary><strong>Screenshot</strong></summary>
-
-    ![Encounter-level classification](image-2.png)
-
-    </details>
-- Unplanned encounter counts match the aggregated KPI view  
-
----
-
-### 3️⃣ Encounter Count Reconciliation
-
-**Purpose:**  
-Ensure the KPI view does not drop or duplicate encounters.
-
-**Validation approach:**
-
-
-Results must reconcile exactly per facility-year.
-
-</details>
-
 ## 📤 Outputs
 <details>
 <summary><strong>The List of Outputs</strong></summary>
+
+SQL file: [here](./05_03_SQL/05_03_Unplanned_Admission_Rate.sql)    
+
 
 - Total encounters per facility-year  
 - Unplanned encounter count  
@@ -239,9 +193,9 @@ Excel validation file: [here](./05_03_Excel/05_03_Unplanned_Admission_Rate.xlsx)
 
 This KPI directly informs:
 
-- Length of Stay analysis (Step 05.04)  
-- Cost-per-case and margin pressure interpretation  
-- ED throughput and access reporting  
+- How long patients stay in the hospital (Length of Stay analysis – Step 05.04). 
+- How much each case costs and where financial pressure comes from (cost-per-case and margin pressure).  
+- How efficiently patients move through the emergency department and how easy it is to access care (ED throughput and access).  
 - Executive operational dashboards in Power BI  
 
 </details>
