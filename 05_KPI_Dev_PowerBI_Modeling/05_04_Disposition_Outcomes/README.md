@@ -72,7 +72,7 @@ Typical standardized groups include:
 * **Other / Unknown** — hospice, AMA, unmapped, or missing values
 
 <details>
-<summary>What another acute hospital mean</summary>  
+<summary>What another acute hospital means</summary>  
 The patient is transferred **from one hospital to a different hospital** for continued acute treatment.
 
 This usually happens when:
@@ -173,23 +173,20 @@ Export **one row per patient stay**, including the following fields (**encounter
 * Discharge_Year
 * Standardized_Disposition_Category
 
-### Excel Validation Steps
+    <details>
+    <summary>Counts Validation Screenshot</summary>  
 
-1. Load encounter-level export into Excel
-2. Create a Pivot Table:
+    ![Counts Validation Screenshot](image.png)
 
-   * Rows: Facility_Name
-   * Columns: Standardized_Disposition_Category
-   * Values: Count of Encounter_ID
-3. Add a calculated column for:
+    </details>
 
-   * Disposition Share = Category Count / Total Encounters
-4. Compare:
+    <details>
+    <summary>Rates Validation Screenshot</summary>  
 
-   * Counts per category
-   * Percentage shares
+    ![Rates Validation Screenshot](image-1.png)
 
-All values must reconcile exactly with the KPI output tables.
+    </details>
+
 
 <details>
 <summary>Common Excel validation pitfalls</summary>
