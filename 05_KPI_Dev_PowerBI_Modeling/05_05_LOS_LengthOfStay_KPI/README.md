@@ -284,3 +284,5 @@ When combined with:
 * Severity mix
 
 LOS provides a clear view of **how effectively hospitals convert admissions into timely, appropriate discharges**.
+
+---
