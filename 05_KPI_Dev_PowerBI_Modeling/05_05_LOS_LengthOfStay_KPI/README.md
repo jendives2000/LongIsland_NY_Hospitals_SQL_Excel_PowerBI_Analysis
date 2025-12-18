@@ -43,17 +43,32 @@ Longer stays often reflect:
 ---
 
 ## Metric Definitions
-
+  - SQL File: [Here](./05_05_SQL/05_05_Length_of_Saty.sql)  
+  
 ### Primary LOS Metrics
 
 * **Average LOS** — Average duration of each inpatient admission (mean inpatient days per encounter)
 * **Minimum LOS** — shortest observed stay
 * **Maximum LOS** — longest observed stay
 
+  <details>
+  <summary>SQL Output Screenshot</summary>
+
+  ![Primary LOS Metrics](image-3.png)
+
+  </details>
+
 ### Supporting Views
 
 * **LOS Distribution** — How hospital stays are distributed between shorter and longer durations (spread of LOS)
 * **LOS by APR Severity of Illness** — How length of stay changes as patient severity increases, from level 1 to level 4 (LOS stratified by clinical severity).
+
+  <details>
+  <summary>SQL Output Screenshot</summary>
+
+  ![LOS Distribution & APR Severity](image-4.png)
+
+  </details>
 
 ---
 
@@ -62,7 +77,14 @@ Longer stays often reflect:
 * Facility
 * Discharge Year - 2015
 
-LOS is first calculated for **each individual patient stay**, then summarized at higher levels (encounter-level aggregation).
+LOS is first calculated for **each individual patient stay** (the whole dataset: 339.039 rows), then summarized at higher levels (encounter-level aggregation).
+
+  <details>
+  <summary>SQL Output Screenshot (whole dataset: 339.039 rows)</summary>
+
+  ![Reporting Grain](image-5.png)
+
+  </details>
 
 ---
 
@@ -171,10 +193,14 @@ LOS by severity allows stakeholders to distinguish:
 ---
 
 ## Excel Validation
+  - Excel file: [here](./05_05_Excel/05_05_LOS_Bucket_APR_Sev_Validation.xlsx)  
 
 ### Objective
 
 Verify that **LOS metrics calculated in Excel** exactly match KPI results.
+
+### Data Fidelity
+The granular per-encounter data and the KPI view were **imported into Excel using the Excel SQL server import** feature. I used SQL commands that were also used to compute the original KPI views in SQL Server (code made available in the SQL file). This ensures data fidelity of the data as it is imported directly from the source. 
 
 ### Source for Validation
 
@@ -187,35 +213,44 @@ Export **one row per patient stay** with the following fields:
 * LOS_Bucket
 * APR_Severity_Code
 
-### Excel Validation Steps
+### Excel Validation
 
 #### 1) Average / Min / Max LOS
 
-* Pivot rows: Facility_Name
-* Pivot values:
+* Average of LOS_Days
+* Min of LOS_Days
+* Max of LOS_Days
 
-  * Average of LOS_Days
-  * Min of LOS_Days
-  * Max of LOS_Days
-* Compare against KPI summary output
+  <details>
+  <summary>Validation Screenshot</summary>
+
+  ![Average / Min / Max LOS Validation](image.png)
+
+  </details>
 
 #### 2) LOS Distribution
 
-* Pivot rows: Facility_Name
-* Pivot columns: LOS_Bucket
-* Pivot values: Count of Encounter_ID
-* Compute share: Bucket Count / Total Encounters
+* LOS_Bucket count
+* LOS Bucket share
+
+  <details>
+  <summary>Validation Screenshot</summary>
+
+  ![LOS Distribution Validation](image-1.png)
+
+  </details>
 
 #### 3) LOS by APR Severity
 
-* Pivot rows: Facility_Name
-* Pivot columns: APR_Severity_Code
-* Pivot values:
+* Average of LOS_Days
+* Count per APR Severity level
 
-  * Average of LOS_Days
-  * Count of Encounter_ID
+  <details>
+  <summary>Validation Screenshot</summary>
 
-All Excel-derived values must reconcile exactly with KPI outputs.
+  ![LOS by APR Severity Validation](image-2.png)
+
+  </details>
 
 <details>
 <summary>Common Excel validation pitfalls</summary>
