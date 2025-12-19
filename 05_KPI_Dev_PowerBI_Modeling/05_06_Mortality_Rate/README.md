@@ -36,7 +36,8 @@ Mortality is **not** a standalone quality score — it is an outcome that must b
 ---
 
 ## Metric Definition
-
+- SQL file: [here](./05_06_SQL/05_06_Mortality_Rate.sql)
+  
 ### Primary Measure
 
 * **Mortality Rate**
@@ -49,6 +50,13 @@ Mortality Rate = In-Hospital Deaths / Total Inpatient Encounters
 
 * **Mortality Encounter Count** — number of encounters ending in death
 * **Total Encounter Count** — denominator for rate calculation
+
+    <details>
+    <summary>Mortality Rate Encounter_Level Screenshot</summary>
+
+    ![Mortality Rate Encounter_Level](image-1.png)
+
+    </details>
 
 ---
 
@@ -66,10 +74,9 @@ The dataset covers a single calendar year (2015). Temporal analysis therefore fo
 
 An encounter is classified as a mortality case if its **standardized discharge disposition** indicates patient death.
 
-Typical standardized labels include:
+The standardized label is:
 
-* `Expired`
-* `Died`
+* `Death`
 
 <details>
 <summary>Technical note — mortality identification logic</summary>
@@ -137,7 +144,8 @@ graph TD;
 
 ---
 
-## Excel Validation (Required)
+## Excel Validation
+- Excel file: [here](./05_06_Excel/05_06_Mortality_Rate.xlsx)
 
 ### Objective
 
@@ -145,7 +153,7 @@ Verify that **mortality counts and rates calculated in Excel** match KPI outputs
 
 ### Source for Validation
 
-Export **one row per patient stay** with the following fields:
+Export at the granularity of Encounter-Level, **one row per patient stay** with the following fields:
 
 * Encounter_ID
 * Facility_Name
@@ -153,26 +161,26 @@ Export **one row per patient stay** with the following fields:
 * Standardized_Disposition_Category
 * Mortality_Flag (1 = expired, 0 = not expired)
 
-### Excel Validation Steps
+### Excel Validation
 
-1. Load encounter-level export into Excel
-2. Create a Pivot Table:
+* Count of Encounter_ID (Total Encounters)
+* Sum of Mortality_Flag (Deaths)
+* Add a calculated field:
+    ```
+    Mortality Rate = Deaths / Total Encounters
+    ```
 
-   * Rows: Facility_Name
-   * Values:
-
-     * Count of Encounter_ID (Total Encounters)
-     * Sum of Mortality_Flag (Deaths)
-3. Add a calculated field:
-
-```
-Mortality Rate = Deaths / Total Encounters
-```
-
-4. Compare:
+1. Compare:
 
    * Mortality encounter counts
    * Mortality rates
+
+    <details>
+    <summary>Mortality Rate Validation Screenshot</summary>
+
+    ![Mortality Count & Rate Validation](image.png)
+
+    </details>
 
 All values must reconcile exactly with the KPI output tables.
 
