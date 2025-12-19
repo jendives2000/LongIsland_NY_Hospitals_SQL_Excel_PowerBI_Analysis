@@ -103,6 +103,7 @@ legitimate structural cost drivers.
 ---
 
 ## Metric Definitions
+- SQL Code: [here](./05_07_SQL/05_07_MCost_and_Margin_Pressure.sql)
 
 <details>
 <summary>Primary calculations</summary>
@@ -226,7 +227,8 @@ These limitations must be acknowledged in executive use.
 ---
 
 ## Excel Validation
-
+- Excel File: [here](./05_07_Excel/05_07_MCost_Margin_Pressure.xlsx)  
+  
 <details>
 <summary>Validation approach</summary>
 
@@ -241,6 +243,13 @@ Confirm that **MCost and margin pressure values calculated in Excel** exactly ma
 * Discharge_Year
 * Total_Costs
 * Total_Charges
+
+    <details>
+    <summary>See the SQL Output Screenshot</summary>
+
+    ![Encounter Level Required Fields](image.png)
+
+    </details>
 
 ### Validation Steps
 
@@ -262,6 +271,14 @@ Margin Pressure = Sum(Total_Costs) / Sum(Total_Charges)
 * Margin Pressure Ratio
 
 All results must reconcile exactly.
+
+<details>
+
+<summary>See the Validation Screenshot</summary>
+
+![MCost & Margin Pressure Validation](image-1.png)
+
+</details>
 
 </details>
 
