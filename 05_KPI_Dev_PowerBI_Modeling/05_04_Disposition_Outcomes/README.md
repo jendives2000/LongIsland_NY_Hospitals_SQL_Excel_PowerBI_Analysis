@@ -45,6 +45,28 @@ Post-acute care includes places patients go after discharge to continue recovery
 
 ---
 
+## Peer Group Context
+
+Disposition outcomes are benchmarked using **care-complexity–aligned peer groups**
+to reflect differences in post-acute needs, transfer patterns,
+and specialty-driven discharge behavior.
+
+Peer groups applied for this KPI:
+- Academic / Tertiary Referral Centers
+- Large Community Acute-Care Hospitals
+- Mid-Size Community Hospitals
+- Rural / East-End Hospitals
+- Specialty-Dominant Hospitals
+
+This ensures that higher transfer or rehab rates are interpreted
+in clinical context rather than as performance deficiencies.
+
+➡ Peer group definitions are documented in
+[`03_03_Facility_Peer_Grouping_Framework`]().
+
+
+---
+
 ## Metric Definition
 
 ### Primary Measures

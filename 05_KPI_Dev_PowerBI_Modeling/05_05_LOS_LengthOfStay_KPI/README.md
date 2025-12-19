@@ -42,6 +42,27 @@ Longer stays often reflect:
 
 ---
 
+## Peer Group Context
+
+Length of Stay is benchmarked using **role-based facility peer groups**
+to account for differences in acuity, teaching status, and service mix.
+
+Peer groups applied for this KPI:
+- Academic / Tertiary Referral Centers
+- Large Community Acute-Care Hospitals
+- Mid-Size Community Hospitals
+- Rural / East-End Hospitals
+- Specialty-Dominant Hospitals
+
+This prevents penalizing tertiary and specialty centers for
+structurally longer stays driven by case complexity.
+
+➡ Peer group definitions are documented in
+[`03_03_Facility_Peer_Grouping_Framework`]().
+
+
+---
+
 ## Metric Definitions
   - SQL File: [Here](./05_05_SQL/05_05_Length_of_Saty.sql)  
   

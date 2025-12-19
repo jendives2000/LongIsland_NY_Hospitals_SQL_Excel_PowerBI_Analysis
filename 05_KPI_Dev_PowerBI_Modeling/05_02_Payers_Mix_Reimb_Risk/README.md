@@ -9,6 +9,29 @@ This KPI summarizes encounter volume, financial exposure, and negative-margin ri
 
 Payer mix directly affects hospital revenue stability. Understanding which payer groups drive volume, cost, and losses is essential for financial planning and contract negotiations.
 
+---
+
+### Peer Group Context
+
+Payer Mix is benchmarked using **role-based peer groups**
+with an additional safety-net interpretation layer
+to account for structurally different reimbursement environments.
+
+Peer groups applied for this KPI:
+- Academic / Tertiary Referral Centers
+- Large Community Acute-Care Hospitals
+- Mid-Size Community Hospitals
+- Rural / East-End Hospitals
+
+Public safety-net hospitals are evaluated against similar hospitals, but their margin pressure is expected to be higher because they serve more under-insured patients — not necessarily because they operate inefficiently.
+
+➡ Peer group definitions are documented in
+[`03_03_Facility_Peer_Grouping_Framework`]().
+
+
+
+---
+
 ## Design Summary
 
 **Primary View:** dbo.vw_KPI_PayerMix_FacilityYear

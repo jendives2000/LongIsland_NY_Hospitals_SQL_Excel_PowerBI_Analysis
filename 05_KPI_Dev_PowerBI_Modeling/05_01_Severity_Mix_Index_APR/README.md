@@ -8,6 +8,26 @@ It provides the core case-mix context needed to interpret all other KPIs (LOS, m
 
 ---
 
+### Peer Group Context
+
+Severity Mix is interpreted strictly relative to **hospital referral role**.
+Direct comparisons across fundamentally different hospital types
+would be misleading.
+
+Peer groups applied for this KPI:
+- Academic / Tertiary Referral Centers
+- Community Hospitals (Large + Mid-Size)
+- Rural / East-End Hospitals
+
+Higher severity is expected and appropriate for tertiary centers
+due to regional referral patterns and specialized services.
+
+➡ Peer group definitions are documented in
+[`03_03_Facility_Peer_Grouping_Framework`]().
+
+
+---
+
 ### Design Summary
 
 - Primary View: dbo.vw_KPI_SeverityMix_FacilityYear

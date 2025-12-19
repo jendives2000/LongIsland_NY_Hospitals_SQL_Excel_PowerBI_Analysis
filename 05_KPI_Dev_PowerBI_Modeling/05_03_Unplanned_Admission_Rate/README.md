@@ -61,6 +61,28 @@ This KPI helps to set the day-to-day operational picture of the hospital before 
 
 </details>
 
+---
+
+### Peer Group Context
+
+Unplanned admissions are evaluated using **community role–based peer groups**
+that reflect emergency department volume, trauma coverage,
+and safety-net responsibilities.
+
+Peer groups applied for this KPI:
+- Academic / Tertiary Referral Centers
+- Large Community Acute-Care Hospitals
+- Mid-Size Community Hospitals
+- Rural / East-End Hospitals
+
+Specialty-dominant hospitals are excluded, as their admission patterns
+are not ED-driven and would distort comparisons.
+
+➡ Peer group definitions are documented in
+[`03_03_Facility_Peer_Grouping_Framework`]().
+
+---
+
 ## 🧩 Design Summary
 <details>
 <summary><strong>Details about this KPI</strong></summary>

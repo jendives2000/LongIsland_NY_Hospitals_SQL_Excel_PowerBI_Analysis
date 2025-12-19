@@ -35,6 +35,27 @@ Mortality is **not** a standalone quality score — it is an outcome that must b
 
 ---
 
+### Peer Group Context
+
+Mortality is benchmarked using **strictly role-adjusted peer groups**
+to avoid false signals driven by acuity, referral patterns,
+and denominator size.
+
+Peer groups applied for this KPI:
+- Academic / Tertiary Referral Centers
+- Large Community Acute-Care Hospitals
+- Rural / East-End Hospitals
+- Specialty-Dominant Hospitals
+
+Mid-size community hospitals are excluded due to low event counts,
+which can introduce volatility and misinterpretation.
+
+➡ Peer group definitions are documented in
+[`03_03_Facility_Peer_Grouping_Framework`]().
+
+
+---
+
 ## Metric Definition
 - SQL file: [here](./05_06_SQL/05_06_Mortality_Rate.sql)
   

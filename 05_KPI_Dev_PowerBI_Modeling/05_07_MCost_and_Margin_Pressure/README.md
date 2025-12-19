@@ -1,14 +1,27 @@
 # KPI 05.07 — MCost per Encounter & Margin Pressure
 
+This KPI evaluates **financial strain per inpatient encounter** and aggregates results to the **facility–year level** to surface cost intensity, margin erosion, and structural financial pressure across the system.
+
+Margin pressure describes **how hard it is for a hospital to stay financially healthy while still delivering care**. It is a **system stress indicator**, not a standalone performance score.
+
+> **Executive question:** *Are we delivering care at a cost that is financially sustainable — and if not, why?*
+
+---
+
 ## Purpose
 
-This KPI evaluates the **financial efficiency of inpatient care** by measuring average medical cost per encounter (MCost) and the resulting **margin pressure**.
+<details>
+<summary>Why this KPI exists</summary>
 
-Margin Pressure describes **how hard it is for a hospital to stay financially healthy while still delivering care**.
+This KPI connects **clinical utilization** to **financial performance** by measuring medical cost and margin outcomes at the encounter level and rolling them up consistently.
 
-It connects clinical utilization to financial performance and answers a fundamental executive question:
+It helps distinguish:
 
-> *Are we delivering care at a cost that is financially sustainable?*
+* Structural cost drivers (severity, service mix, hospital role)
+* Operational drivers (LOS, throughput, discharge delays)
+* Financial exposure driven by volume
+
+</details>
 
 ---
 
@@ -16,73 +29,119 @@ It connects clinical utilization to financial performance and answers a fundamen
 
 ### Medical Cost per Encounter (MCost)
 
-MCost represents the **average cost incurred by the hospital for a single inpatient stay**.
+<details>
+<summary>What MCost represents</summary>
 
-Higher MCost can result from:
+MCost is the **average cost incurred by the hospital for a single inpatient stay**.
 
-* longer length of stay - LOS
-* higher clinical severity
-* resource-intensive services
+Higher MCost may result from:
+
+* Longer length of stay (LOS)
+* Higher clinical severity or complexity
+* Resource‑intensive services
 
 Lower MCost may indicate:
 
-* efficient care pathways
-* shorter stays
-* less complex case mix
+* Efficient care pathways
+* Shorter stays
+* Less complex case mix
+
+</details>
 
 ### Margin Pressure
 
-Margin pressure reflects the **gap between costs and charges**. It does not attempt to calculate true profitability, but instead signals **relative financial stress**.
+<details>
+<summary>How margin pressure should be read</summary>
+
+Margin pressure reflects the **gap between costs and charges**. It does **not** calculate true profitability, but signals **relative financial stress**.
 
 In plain terms:
 
-* High margin pressure = costs are consuming a large share of charges
-* Low margin pressure = more financial headroom per encounter
+* **High margin pressure** → costs consume a large share of charges
+* **Low margin pressure** → more financial headroom per encounter
+
+Margin pressure must always be interpreted alongside **severity, volume, and service mix**.
+
+</details>
 
 ---
 
 ## Executive Questions This KPI Answers
 
-* Are costs per encounter rising or falling?
-* Which facilities experience the greatest cost pressure?
-* Is margin pressure driven by cost growth or revenue limitations?
-* Do high-cost facilities also show longer LOS or higher severity?
+<details>
+<summary>Decision‑support use cases</summary>
+
+* Are costs per encounter rising or falling over time?
+* Which facilities experience the greatest financial strain?
+* Is margin pressure driven by **cost growth** or **revenue limitation**?
+* Do higher‑cost facilities also show longer LOS or higher severity?
+
+</details>
+
+---
+
+### Peer Group Context
+
+Cost and margin metrics are benchmarked using **structural cost–aligned peer groups**
+that reflect differences in teaching overhead, specialty services,
+and rural operating constraints.
+
+Peer groups applied for this KPI:
+- Academic / Tertiary Referral Centers
+- Large Community Acute-Care Hospitals
+- Mid-Size Community Hospitals
+- Rural / East-End Hospitals
+- Specialty-Dominant Hospitals
+
+System-wide averages are intentionally avoided to prevent masking
+legitimate structural cost drivers.
+
+➡ Peer group definitions are documented in
+[`03_03_Facility_Peer_Grouping_Framework`]().
+
 
 ---
 
 ## Metric Definitions
-- SQL File: [here]()
 
-### Primary Measures
+<details>
+<summary>Primary calculations</summary>
 
-* **Average MCost per Encounter**
+### Average MCost per Encounter
 
-```
+```text
 Avg MCost = Total Medical Costs / Total Encounters
 ```
 
-* **Margin Pressure Ratio**
+### Margin Pressure (Rate)
 
-```
+```text
 Margin Pressure = Total Medical Costs / Total Charges
 ```
 
-> A higher ratio indicates greater financial pressure.
+> A higher ratio indicates **greater financial pressure**.
 
 ### Supporting Measures
 
 * Total Medical Costs
-* Total Charges
+* Total Charges (revenue proxy)
 * Encounter Count
+
+</details>
 
 ---
 
 ## Reporting Grain
 
-* Facility
-* Discharge Year - 2015
+<details>
+<summary>Aggregation level</summary>
 
-All measures are aggregated from **encounter-level financial data**.
+* Facility
+* Discharge Year (2015)
+
+All measures are aggregated from **encounter‑level financial data**, ensuring auditability.
+
+</details>
 
 ---
 
@@ -101,30 +160,50 @@ graph TD;
 
 ## Interpretation Guidelines
 
-### What It "Should" Look Like
+## Peer-Group Comparison (Required Context)
+
+<details>
+<summary>Why peer grouping matters for this KPI</summary>
+
+Margin pressure is **structurally influenced** by hospital role and case mix. Best practice dictates that this KPI should be interpreted **within peer groups**, not across the entire system indiscriminately.
+
+Peer-based comparison helps:
+
+* Avoid penalizing hospitals that treat **sicker or more complex patients**
+* Separate **structural cost differences** from true operational inefficiency
+* Make margin signals **actionable and fair**, rather than misleading
+
+Typical peer group dimensions include:
+
+* Facility type (community, teaching, tertiary / referral)
+* Service scope (general acute vs specialty-heavy)
+* Typical severity and case complexity
+
+> **Rule:** Large margin differences *within* a peer group are meaningful. Differences *across* peer groups are often expected.
+
+</details>
+
+### What It *Should* Look Like
+
+<details>
+<summary>Expected patterns</summary>
 
 * MCost varies by facility size and case mix
-* Margin pressure is relatively stable within a peer group:
-  * Margin pressure does not vary widely **between hospitals of similar type and role**.
-* Higher costs are explainable by severity or LOS
+* Margin pressure is **relatively stable within a peer group**
+* Higher costs are explainable by severity, LOS, or service scope
+
+Peer‑based comparison is essential to avoid misleading conclusions.
+
+</details>
 
 ### Signals Worth Investigating
 
-* Rising MCost without severity or LOS change
-* Facilities with persistently high margin pressure
-* Large gaps between similar facilities
-
 <details>
-<summary>Technical interpretation notes</summary>
+<summary>Potential warning signs</summary>
 
-* Charges are not a proxy for revenue but provide a consistent reference point
-* Margin pressure is a *relative* indicator, not a profitability metric
-* Comparisons should be peer-based where possible
-
-Peer-based comparisons:
-* Comparing hospitals with similar size, service mix, and clinical role
-* Separating structural cost differences from true performance issues
-* Making margin signals actionable and fair, rather than misleading
+* Rising MCost without changes in severity or LOS
+* Persistently high margin pressure within a peer group
+* Large cost or margin gaps between similar facilities
 
 </details>
 
@@ -132,21 +211,30 @@ Peer-based comparisons:
 
 ## Known Limitations
 
+<details>
+<summary>Important caveats</summary>
+
+* Not risk‑adjusted for clinical complexity or DRG mix
 * Does not account for payer mix or contractual reimbursement
-* Charges may vary due to pricing strategy, not utilization
-* Not risk-adjusted for clinical complexity
+* Charges reflect pricing strategy and are a **revenue proxy**, not payments
+* Sensitive to coding accuracy and discharge timing
+
+These limitations must be acknowledged in executive use.
+
+</details>
 
 ---
 
 ## Excel Validation
 
+<details>
+<summary>Validation approach</summary>
+
 ### Objective
 
-Verify that **MCost and margin pressure calculations in Excel** match KPI outputs exactly.
+Confirm that **MCost and margin pressure values calculated in Excel** exactly match KPI outputs.
 
-### Source for Validation
-
-Export **one row per patient stay** with the following fields:
+### Required Fields (Encounter Level)
 
 * Encounter_ID
 * Facility_Name
@@ -154,45 +242,26 @@ Export **one row per patient stay** with the following fields:
 * Total_Costs
 * Total_Charges
 
-### Excel Validation
+### Validation Steps
 
-#### 1) Average MCost per Encounter
+**1) Average MCost**
 
-* Pivot rows: Facility_Name
-* Pivot values:
-
-  * Sum of Total_Costs
-  * Count of Encounter_ID
-* Calculate:
-
-```
+```text
 Avg MCost = Sum(Total_Costs) / Count(Encounter_ID)
 ```
 
-#### 2) Margin Pressure
+**2) Margin Pressure**
 
-* Using the same pivot:
-
-```
+```text
 Margin Pressure = Sum(Total_Costs) / Sum(Total_Charges)
 ```
 
-#### 3) Reconciliation
+**3) Reconciliation**
 
-* Compare Excel results to KPI outputs:
+* Avg MCost per Encounter
+* Margin Pressure Ratio
 
-  * Avg MCost per Encounter
-  * Margin Pressure Ratio
-
-All values must reconcile exactly.
-
-<details>
-<summary>Common Excel validation pitfalls</summary>
-
-* Excluding encounters with zero charges or costs
-* Mixing admission year and discharge year
-* Filtering out extreme-cost encounters
-* Comparing ratios without reconciling underlying totals
+All results must reconcile exactly.
 
 </details>
 
@@ -200,21 +269,29 @@ All values must reconcile exactly.
 
 ## KPI Contract Summary
 
-* **Input**: Encounter-level costs and charges
+<details>
+<summary>Contract at a glance</summary>
+
+* **Input**: Encounter‑level costs and charges
 * **Transformation**: Aggregation and ratio calculation
-* **Output**: Facility-Year cost efficiency and margin pressure indicators
-* **Primary Use**: Executive financial monitoring and cost control insight
+* **Output**: Facility‑Year cost efficiency and margin pressure indicators
+* **Primary Use**: Executive financial monitoring and system stress detection
+
+</details>
 
 ---
 
 ## Why This KPI Matters
 
+<details>
+<summary>Strategic context</summary>
+
 MCost and margin pressure translate clinical activity into **financial reality**.
 
-Together with LOS, Unplanned Admissions, and Mortality, this KPI helps leaders understand:
+When reviewed alongside LOS, Unplanned Admissions, Discharge Disposition, and Mortality, this KPI helps leaders understand:
 
-* where resources are being consumed
-* where financial stress is emerging
-* and how clinical and financial performance intersect
+* Where resources are being consumed
+* Where financial stress is emerging
+* How clinical and financial performance intersect
 
----
+</details>
