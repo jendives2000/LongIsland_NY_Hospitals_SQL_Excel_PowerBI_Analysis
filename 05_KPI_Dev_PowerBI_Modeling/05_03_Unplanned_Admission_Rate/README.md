@@ -21,6 +21,8 @@ This KPI measures the rate and volume of unplanned inpatient admissions (Emergen
   - [Metric Definitions](#metric-definitions)
   - [Reporting Grain](#reporting-grain)
   - [Conceptual Flow](#conceptual-flow)
+  - [Interpretation Guidelines](#interpretation-guidelines)
+  - [Known Limitations](#known-limitations)
   - [Excel Validation](#excel-validation)
   - [Downstream Usage](#downstream-usage)
 
@@ -77,7 +79,7 @@ Outputs: Total encounters, Unplanned count, Planned count, Unplanned admission r
 
 ## Primary View
 
-View name: dbo.vw_KPI_UnplannedAdmissions_FacilityYear
+View name: `dbo.vw_KPI_UnplannedAdmissions_FacilityYear`
 
 Each row represents a facility-year with:
 - Total encounters
@@ -118,6 +120,44 @@ flowchart LR
     E["Unplanned Admission Rate"]
     A --> B --> C --> D --> E
 ```
+
+---
+
+## Interpretation Guidelines
+
+This KPI serves as a **context-setting indicator**, not a standalone performance score.
+
+Key interpretation rules:
+- A higher Unplanned Admission Rate indicates **greater acute intake pressure**, not poor operational quality.
+- Facilities with trauma services, tertiary referral roles, or ED dominance will structurally exhibit higher rates.
+- Compare facilities **only within appropriate peer groups**.
+- Interpret LOS, cost, and throughput KPIs **in conjunction** with unplanned intake levels.
+
+Recommended analytical questions:
+- Are LOS or cost outliers aligned with unusually high unplanned intake?
+- Does a facility’s unplanned rate explain ED crowding or bed occupancy pressure?
+- Are year-to-year changes driven by intake mix rather than operational deterioration (**not relevant** due to only one year available: 2015)?
+
+This KPI should always be read **before** drawing conclusions from downstream operational metrics.
+
+---
+
+## Known Limitations
+
+This KPI reflects **intake mix**, not demand unmet or ED performance quality.
+
+Key limitations:
+- Does not measure ED visit volume or ED boarding time.
+- Does not capture patients diverted, transferred, or treated and released.
+- AdmissionType standardization depends on upstream mapping accuracy (Step 04).
+- Does not adjust for severity or acuity differences within unplanned admissions.
+- Single-year scope (2015) limits trend-based inference.
+
+As a result:
+- High unplanned rates should not be interpreted as failure.
+- Low unplanned rates do not imply superior operational efficiency.
+- Severity Mix Index and LOS KPIs are required for fair performance interpretation.
+
 
 ---
 
