@@ -1,191 +1,257 @@
 --------------------------------------------------------------------------------
--- STEP 05.03.01 - CHECK: Admission Type Coverage & Semantic Consistency
--- File: 05_03_01_Admission_Type_Coverage.sql
+-- STEP 05.03 - KPI: Unplanned Admission Rate
+-- File: 05_03_Unplanned_Admission_Rate.sql
 --
 -- WHAT:
---   1) Validate that all encounters map to a standardized admission type
---      (Dim_AdmissionType.AdmissionType_Std).
---   2) Report BOTH:
---        A) Raw ED/Urgent intake proxy (if AdmissionType_Std contains those values)
---        B) Executive Unplanned category (if AdmissionType_Std uses Planned/Unplanned)
---   3) Flag semantic discrepancies (e.g., zero ED/Urgent but Unplanned present).
+--   Create a KPI view that measures the proportion of encounters admitted via
+--   unplanned routes (Emergency / Urgent) by Facility and Year.
 --
 -- WHY:
---   "Unplanned" is an executive semantic category and is NOT guaranteed to be a
---   1:1 match to raw ED/Urgent intake coding.
---   Older logic: Unplanned admissions as AdmissionType_Std IN ('Emergency','Urgent')
---   Updated logic: treat ED/Urgent as an intake proxy AND separately track Unplanned
---   (if present in the standardized domain).
+--   Unplanned admissions increase operational pressure (ED load, bed capacity,
+--   staffing) and help explain downstream KPIs like LOS and cost.
 --
--- DEPENDENCIES:
---   Fact:
---     dbo.Fact_Encounter (Encounter_ID, Facility_Key, AdmissionType_Key, Discharge_Date_Key)
---   Dims:
---     dbo.Dim_AdmissionType (AdmissionType_Key, AdmissionType_Std)
---     dbo.Dim_Date          (Date_Key, Year)
---     dbo.Dim_Facility      (Facility_Key, Facility_Name)
+-- LOGIC (project assumption):
+--   AdmissionType_Std IN ('Emergency', 'Urgent')  => Unplanned
+--   Else                                         => Planned
+--
+-- DEPENDENCIES (schema-aligned):
+--   dbo.Fact_Encounter:
+--     Encounter_ID, Facility_Key, AdmissionType_Key, Admission_Date_Key
+--   dbo.Dim_AdmissionType:
+--     AdmissionType_Key, AdmissionType_Std
+--   dbo.Dim_Facility:
+--     Facility_Key, Facility_Name
+--   dbo.Dim_Date:
+--     Date_Key, Year
+--
+-- Note: Inputs & dependency field list aligns with Step 05 README inputs :contentReference[oaicite:0]{index=0}
 --------------------------------------------------------------------------------
 
-SET NOCOUNT ON;
-
---------------------------------------------------------------------------------
--- STEP 05.03.01.A - Build encounter-level admission type coverage table
---------------------------------------------------------------------------------
-IF OBJECT_ID('tempdb..#Encounter_AdmitType') IS NOT NULL
+IF OBJECT_ID('dbo.vw_KPI_UnplannedAdmissions_FacilityYear', 'V') IS NOT NULL
 BEGIN
-    DROP TABLE #Encounter_AdmitType;
+    DROP VIEW dbo.vw_KPI_UnplannedAdmissions_FacilityYear;
 END;
+GO
+
+CREATE VIEW dbo.vw_KPI_UnplannedAdmissions_FacilityYear
+AS
+WITH AdmitType_Clean AS (
+    SELECT
+        fe.Encounter_ID,               -- encounter grain for correct counting
+        fe.Facility_Key,
+        fe.Admission_Date_Key,         -- anchor for Encounter_Year
+        da.AdmissionType_Std,
+
+        -- WHAT: Flag unplanned encounters.
+        -- WHY: Makes the grouping rule explicit and reusable.
+        CASE
+            WHEN da.AdmissionType_Std IN ('Emergency', 'Urgent') THEN 1
+            ELSE 0
+        END AS Unplanned_Flag
+    FROM dbo.Fact_Encounter AS fe
+    INNER JOIN dbo.Dim_AdmissionType AS da
+        ON fe.AdmissionType_Key = da.AdmissionType_Key
+    WHERE fe.Admission_Date_Key IS NOT NULL
+          -- WHAT: Require an admission date to assign a year.
+          -- WHY: Prevents unassigned-year encounters from being silently misgrouped.
+)
+SELECT
+    f.Facility_Key,
+    f.Facility_Name,
+    d.Year AS Encounter_Year,
+
+    -- WHAT: Total encounters (with a valid admission date and admission type join).
+    -- WHY: Denominator for planned/unplanned rates.
+    COUNT(*) AS Encounter_Count_Total,
+
+    -- WHAT: Count unplanned encounters.
+    -- WHY: Numerator to quantify ED/urgent pressure on capacity.
+    SUM(Unplanned_Flag) AS Encounter_Count_Unplanned,
+
+    -- WHAT: Count planned encounters.
+    -- WHY: Complements unplanned for a quick volume breakdown.
+    SUM(CASE WHEN Unplanned_Flag = 0 THEN 1 ELSE 0 END) AS Encounter_Count_Planned,
+
+    -- WHAT: Unplanned admission rate (0–1).
+    -- WHY: Comparable metric across facilities and time.
+    CAST(SUM(Unplanned_Flag) * 1.0 / NULLIF(COUNT(*), 0) AS DECIMAL(10,4)) AS Unplanned_Admission_Rate
+
+FROM AdmitType_Clean AS atc
+INNER JOIN dbo.Dim_Facility AS f
+    ON atc.Facility_Key = f.Facility_Key
+INNER JOIN dbo.Dim_Date AS d
+    ON atc.Admission_Date_Key = d.Date_Key
+GROUP BY
+    f.Facility_Key,
+    f.Facility_Name,
+    d.Year;
+GO
+
+
+--------------------------------------------------------------------------------
+-- 05.03 (GRANULAR EXTRACT): Unplanned Admission validation dataset
+--
+-- WHAT:
+--   One row per encounter with the admission type and the derived Unplanned_Flag.
+--
+-- WHY:
+--   This is the raw dataset you export to Excel to reproduce the KPI using a PivotTable.
+--------------------------------------------------------------------------------
 
 SELECT
     fe.Encounter_ID,
-    fe.Facility_Key,
     f.Facility_Name,
-
-    -- Anchor reporting year
-    dd.Year AS Encounter_Year,
-
-    fe.AdmissionType_Key,
-    dat.AdmissionType_Std,
-
-    -- SIGNAL 1: ED/Urgent intake proxy (only meaningful if your Std domain includes these values)
-    CASE WHEN dat.AdmissionType_Std IN ('Emergency','Urgent') THEN 1 ELSE 0 END AS Is_ED_Urgent_Proxy,
-
-    -- SIGNAL 2: Executive Unplanned (only meaningful if your Std domain includes 'Unplanned')
-    CASE WHEN dat.AdmissionType_Std = 'Unplanned' THEN 1 ELSE 0 END AS Is_Unplanned_Exec,
-
-    -- Optional convenience flags for common executive domains
-    CASE WHEN dat.AdmissionType_Std = 'Planned' THEN 1 ELSE 0 END AS Is_Planned_Exec
-
-INTO #Encounter_AdmitType
+    d.Year AS Encounter_Year,
+    da.AdmissionType_Std,
+    CASE
+        WHEN da.AdmissionType_Std = 'Unplanned' THEN 1
+        ELSE 0
+    END AS Unplanned_Flag
 FROM dbo.Fact_Encounter AS fe
 INNER JOIN dbo.Dim_Facility AS f
     ON fe.Facility_Key = f.Facility_Key
-INNER JOIN dbo.Dim_Date AS dd
-    ON fe.Discharge_Date_Key = dd.Date_Key
-LEFT JOIN dbo.Dim_AdmissionType AS dat
-    ON fe.AdmissionType_Key = dat.AdmissionType_Key;
-
---------------------------------------------------------------------------------
--- STEP 05.03.01.B - KPI/Metric: NULL AdmissionType_Std coverage rate
---------------------------------------------------------------------------------
-SELECT
-    eat.Facility_Key,
-    eat.Facility_Name,
-    eat.Encounter_Year,
-
-    COUNT(*) AS Total_Encounter_Count,
-
-    SUM(CASE WHEN eat.AdmissionType_Std IS NULL THEN 1 ELSE 0 END)
-        AS Null_AdmissionTypeStd_Encounter_Count,
-
-    CAST(
-        SUM(CASE WHEN eat.AdmissionType_Std IS NULL THEN 1 ELSE 0 END) * 1.0
-        / NULLIF(COUNT(*), 0)
-        AS DECIMAL(10,4)
-    ) AS Null_AdmissionTypeStd_Rate
-FROM #Encounter_AdmitType AS eat
-GROUP BY
-    eat.Facility_Key,
-    eat.Facility_Name,
-    eat.Encounter_Year
+INNER JOIN dbo.Dim_Date AS d
+    ON fe.Admission_Date_Key = d.Date_Key
+INNER JOIN dbo.Dim_AdmissionType AS da
+    ON fe.AdmissionType_Key = da.AdmissionType_Key
+WHERE
+    d.Year = 2015
 ORDER BY
-    eat.Facility_Name,
-    eat.Encounter_Year;
+    f.Facility_Name,
+    fe.Encounter_ID;
+GO
+
+
 
 --------------------------------------------------------------------------------
--- STEP 05.03.01.C - AdmissionType_Std distribution (incl. NULL)
+-- KPI view to validate the granular view against for Excel logic and metrics validations
 --------------------------------------------------------------------------------
+-- a) Raw aggregation (facility-year)
 SELECT
-    eat.Facility_Key,
-    eat.Facility_Name,
-    eat.Encounter_Year,
+    f.Facility_Name,
+    d.Year AS Encounter_Year,
+    COUNT(*) AS Encounter_Count_Total,
 
-    ISNULL(eat.AdmissionType_Std, '<<NULL>>') AS AdmissionType_Std,
+    -- Unplanned encounters
+    SUM(
+        CASE 
+            WHEN da.AdmissionType_Std = 'Unplanned' THEN 1 
+            ELSE 0 
+        END
+    ) AS Encounter_Count_Unplanned,
 
-    COUNT(*) AS Encounter_Count,
+    -- Planned encounters (Elective + Other)
+    SUM(
+        CASE 
+            WHEN da.AdmissionType_Std <> 'Unplanned' THEN 1 
+            ELSE 0 
+        END
+    ) AS Encounter_Count_Planned,
 
+    -- Unplanned admission rate
     CAST(
-        COUNT(*) * 1.0
-        / NULLIF(
-            SUM(COUNT(*)) OVER (PARTITION BY eat.Facility_Key, eat.Encounter_Year), 0
-        )
+        SUM(
+            CASE 
+                WHEN da.AdmissionType_Std = 'Unplanned' THEN 1 
+                ELSE 0 
+            END
+        ) * 1.0 / NULLIF(COUNT(*), 0)
         AS DECIMAL(10,4)
-    ) AS Encounter_Share
-FROM #Encounter_AdmitType AS eat
+    ) AS Unplanned_Admission_Rate
+
+FROM dbo.Fact_Encounter AS fe
+INNER JOIN dbo.Dim_Facility AS f
+    ON fe.Facility_Key = f.Facility_Key
+INNER JOIN dbo.Dim_Date AS d
+    ON fe.Admission_Date_Key = d.Date_Key
+INNER JOIN dbo.Dim_AdmissionType AS da
+    ON fe.AdmissionType_Key = da.AdmissionType_Key
+WHERE
+    d.Year = 2015
 GROUP BY
-    eat.Facility_Key,
-    eat.Facility_Name,
-    eat.Encounter_Year,
-    ISNULL(eat.AdmissionType_Std, '<<NULL>>')
+    f.Facility_Name,
+    d.Year
 ORDER BY
-    eat.Facility_Name,
-    eat.Encounter_Year,
-    AdmissionType_Std;
+    f.Facility_Name;
+GO
+
 
 --------------------------------------------------------------------------------
--- STEP 05.03.01.D - Parallel presence/volume checks + discrepancy flags
--- OUTPUT:
---   - ED/Urgent proxy volume (intake signal)
---   - Executive Unplanned volume (semantic signal, if present)
---   - Planned admissions are inferred by exclusion, with remaining encounters categorized as Unknown
---   - Flags for common "missing signal" scenarios
+-- SANITY CHECK 1: AdmissionType_Std distribution (data quality)
+--
+-- WHAT:
+--   Show counts by AdmissionType_Std for a scoped facility-year.
+--
+-- WHY:
+--   Confirms standardized admission types exist as expected and highlights
+--   unexpected categories (or missing standardization).
 --------------------------------------------------------------------------------
+
 SELECT
-    eat.Facility_Key,
-    eat.Facility_Name,
-    eat.Encounter_Year,
+    fe.Encounter_ID,
+    f.Facility_Name,
+    d.Year AS Encounter_Year,
+    da.AdmissionType_Std,
+    CASE
+        WHEN da.AdmissionType_Std = 'Unplanned' THEN 1
+        ELSE 0
+    END AS Unplanned_Flag
+FROM dbo.Fact_Encounter AS fe
+INNER JOIN dbo.Dim_Facility AS f
+    ON fe.Facility_Key = f.Facility_Key
+INNER JOIN dbo.Dim_Date AS d
+    ON fe.Admission_Date_Key = d.Date_Key
+INNER JOIN dbo.Dim_AdmissionType AS da
+    ON fe.AdmissionType_Key = da.AdmissionType_Key
+WHERE
+    d.Year = 2015
+ORDER BY
+    f.Facility_Name,
+    fe.Encounter_ID;
+GO
 
-    SUM(CASE WHEN eat.AdmissionType_Std = 'Unplanned' THEN 1 ELSE 0 END)
-        AS Unplanned_Exec_Encounter_Count,
 
-    SUM(CASE
-            WHEN eat.AdmissionType_Std IS NOT NULL
-             AND eat.AdmissionType_Std <> 'Unplanned'
-            THEN 1 ELSE 0
-        END) AS Planned_Exec_Encounter_Count,
-
-    SUM(CASE WHEN eat.AdmissionType_Std IS NULL THEN 1 ELSE 0 END)
-        AS Unknown_Exec_Encounter_Count,
-
-    COUNT(*) AS Total_Encounter_Count,
-
-    CAST(
-        SUM(CASE WHEN eat.AdmissionType_Std = 'Unplanned' THEN 1 ELSE 0 END) * 1.0
-        / NULLIF(COUNT(*), 0)
-        AS DECIMAL(10,4)
-    ) AS Unplanned_Exec_Rate
-FROM #Encounter_AdmitType AS eat
+--------------------------------------------------------------------------------
+-- SANITY CHECK 2: Reconciliation check (no dropped/duplicated encounters)
+--
+-- WHAT:
+--   Compare encounter totals per facility-year between:
+--     (1) Fact_Encounter joined to Dim_Date + Dim_AdmissionType
+--     (2) KPI view
+--
+-- WHY:
+--   Ensures the KPI view includes every eligible encounter exactly once.
+--------------------------------------------------------------------------------
+-- a) KPI view totals
+SELECT
+    Facility_Name,
+    Encounter_Year,
+    SUM(Encounter_Count_Total) AS View_Encounter_Count
+FROM dbo.vw_KPI_UnplannedAdmissions_FacilityYear
 GROUP BY
-    eat.Facility_Key,
-    eat.Facility_Name,
-    eat.Encounter_Year
+    Facility_Name,
+    Encounter_Year
 ORDER BY
-    eat.Facility_Name,
-    eat.Encounter_Year;
+    Facility_Name,
+    Encounter_Year;
+GO
 
-
---------------------------------------------------------------------------------
--- STEP 05.03.01.E - Year slice quick view (kept from your original, expanded)
---------------------------------------------------------------------------------
-DECLARE @DebugYear INT = 2015;
-
+-- b) Fact table totals (same join conditions)
 SELECT
-    ISNULL(AdmissionType_Std, '<<NULL>>') AS AdmissionType_Std,
-    COUNT(*) AS Encounter_Count
-FROM #Encounter_AdmitType
-WHERE Encounter_Year = @DebugYear
-GROUP BY ISNULL(AdmissionType_Std, '<<NULL>>')
-ORDER BY Encounter_Count DESC;
-
---------------------------------------------------------------------------------
--- STEP 05.03.01.F - Optional: show whether the domain even contains key labels
--- (This tells you if ED/Urgent or Unplanned exist at all in Dim_AdmissionType.)
---------------------------------------------------------------------------------
-SELECT
-    dat.AdmissionType_Std,
-    COUNT(*) AS Dim_Row_Count
-FROM dbo.Dim_AdmissionType AS dat
-GROUP BY dat.AdmissionType_Std
-ORDER BY Dim_Row_Count DESC;
-
-
+    f.Facility_Name,
+    d.Year AS Encounter_Year,
+    COUNT(*) AS Fact_Encounter_Count
+FROM dbo.Fact_Encounter AS fe
+INNER JOIN dbo.Dim_Facility AS f
+    ON fe.Facility_Key = f.Facility_Key
+INNER JOIN dbo.Dim_Date AS d
+    ON fe.Admission_Date_Key = d.Date_Key
+INNER JOIN dbo.Dim_AdmissionType AS da
+    ON fe.AdmissionType_Key = da.AdmissionType_Key
+GROUP BY
+    f.Facility_Name,
+    d.Year
+ORDER BY
+    f.Facility_Name,
+    d.Year;
+GO
