@@ -1,5 +1,48 @@
 # KPI 05.05 — Length of Stay (LOS)
 
+This KPI measures inpatient Length of Stay (LOS) by facility and year (2015) to evaluate patient throughput efficiency and inpatient capacity utilization. LOS reflects how long patients occupy beds and directly impacts hospital congestion, staffing pressure, costs, and care flow.
+
+> **Executive question:**  
+> Are observed capacity constraints and cost pressures driven by prolonged inpatient stays, or are they explained by patient intake mix and clinical complexity?
+
+
+---
+
+<details>
+<summary><strong>📑 Table of Contents</strong></summary>
+
+- [KPI 05.05 — Length of Stay (LOS)](#kpi-0505--length-of-stay-los)
+  - [Purpose](#purpose)
+  - [Business Meaning](#business-meaning)
+  - [Executive Questions This KPI Answers](#executive-questions-this-kpi-answers)
+  - [Peer Group Context](#peer-group-context)
+  - [Metric Definitions](#metric-definitions)
+    - [Primary LOS Metrics](#primary-los-metrics)
+    - [Supporting Views](#supporting-views)
+  - [Reporting Grain](#reporting-grain)
+  - [LOS Calculation Logic](#los-calculation-logic)
+  - [LOS Bucketing (Distribution View)](#los-bucketing-distribution-view)
+  - [Conceptual Flow](#conceptual-flow)
+  - [LOS by APR Severity of Illness](#los-by-apr-severity-of-illness)
+  - [Interpretation Guidelines](#interpretation-guidelines)
+    - [What it "Should" Look Like](#what-it-should-look-like)
+    - [Signals Worth Investigating](#signals-worth-investigating)
+  - [Known Limitations](#known-limitations)
+  - [Excel Validation](#excel-validation)
+    - [Objective](#objective)
+    - [Data Fidelity](#data-fidelity)
+    - [Source for Validation](#source-for-validation)
+    - [Excel Validation](#excel-validation-1)
+      - [1) Average / Min / Max LOS](#1-average--min--max-los)
+      - [2) LOS Distribution](#2-los-distribution)
+      - [3) LOS by APR Severity](#3-los-by-apr-severity)
+  - [KPI Contract Summary](#kpi-contract-summary)
+  - [Why This KPI Matters](#why-this-kpi-matters)
+
+</details>
+
+---
+
 ## Purpose
 
 This KPI measures **how long patients remain hospitalized**, providing a core indicator of care efficiency, resource utilization, and patient complexity.
@@ -245,7 +288,7 @@ Export **one row per patient stay** with the following fields:
   <details>
   <summary>Validation Screenshot</summary>
 
-  ![Average / Min / Max LOS Validation](image.png)
+  ![Average / Min / Max LOS Validation](image-6.png)
 
   </details>
 
@@ -257,7 +300,7 @@ Export **one row per patient stay** with the following fields:
   <details>
   <summary>Validation Screenshot</summary>
 
-  ![LOS Distribution Validation](image-1.png)
+  ![LOS Distribution Validation](image-7.png)
 
   </details>
 
@@ -269,7 +312,7 @@ Export **one row per patient stay** with the following fields:
   <details>
   <summary>Validation Screenshot</summary>
 
-  ![LOS by APR Severity Validation](image-2.png)
+  ![LOS by APR Severity Validation](image-8.png)
 
   </details>
 
