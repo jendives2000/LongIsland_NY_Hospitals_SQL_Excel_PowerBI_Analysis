@@ -8,6 +8,38 @@ Margin pressure describes **how hard it is for a hospital to stay financially he
 
 ---
 
+<details>
+<summary><strong>📑 Table of Contents</strong></summary>
+
+- [KPI 05.07 — MCost per Encounter \& Margin Pressure](#kpi-0507--mcost-per-encounter--margin-pressure)
+  - [Purpose](#purpose)
+  - [Business Meaning](#business-meaning)
+    - [Medical Cost per Encounter (MCost)](#medical-cost-per-encounter-mcost)
+    - [Margin Pressure](#margin-pressure)
+  - [Executive Questions This KPI Answers](#executive-questions-this-kpi-answers)
+    - [Peer Group Context](#peer-group-context)
+  - [Metric Definitions](#metric-definitions)
+    - [Average MCost per Encounter](#average-mcost-per-encounter)
+    - [Margin Pressure (Rate)](#margin-pressure-rate)
+    - [Supporting Measures](#supporting-measures)
+  - [Reporting Grain](#reporting-grain)
+  - [Conceptual Flow](#conceptual-flow)
+  - [Interpretation Guidelines](#interpretation-guidelines)
+  - [Peer-Group Comparison (Required Context)](#peer-group-comparison-required-context)
+    - [What It *Should* Look Like](#what-it-should-look-like)
+    - [Signals Worth Investigating](#signals-worth-investigating)
+  - [Known Limitations](#known-limitations)
+  - [Excel Validation](#excel-validation)
+    - [Objective](#objective)
+    - [Required Fields (Encounter Level)](#required-fields-encounter-level)
+    - [Validation Steps](#validation-steps)
+  - [KPI Contract Summary](#kpi-contract-summary)
+  - [Why This KPI Matters](#why-this-kpi-matters)
+
+</details>
+
+---
+
 ## Purpose
 
 <details>
@@ -276,7 +308,7 @@ All results must reconcile exactly.
 
 <summary>See the Validation Screenshot</summary>
 
-![MCost & Margin Pressure Validation](image-1.png)
+![MCost & Margin Pressure Validation](image-3.png)
 
 </details>
 
