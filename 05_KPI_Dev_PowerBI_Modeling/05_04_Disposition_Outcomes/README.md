@@ -10,6 +10,33 @@ At an executive level, disposition outcomes answer a simple question:
 
 ---
 
+<details>
+<summary><strong>📑 Table of Contents</strong></summary>
+
+- [KPI 05.04 — Disposition Outcomes](#kpi-0504--disposition-outcomes)
+  - [Purpose](#purpose)
+  - [Business Meaning](#business-meaning)
+  - [Executive Questions This KPI Answers](#executive-questions-this-kpi-answers)
+  - [Peer Group Context](#peer-group-context)
+  - [Metric Definition](#metric-definition)
+    - [Primary Measures](#primary-measures)
+    - [Reporting Grain](#reporting-grain)
+  - [Disposition Categories (Standardized)](#disposition-categories-standardized)
+  - [Conceptual Flow (High-Level)](#conceptual-flow-high-level)
+  - [Interpretation Guidelines](#interpretation-guidelines)
+    - [What It "Should" Look Like](#what-it-should-look-like)
+    - [Signals Worth Investigating](#signals-worth-investigating)
+  - [Known Limitations](#known-limitations)
+  - [Excel Validation](#excel-validation)
+    - [Objective](#objective)
+    - [Source for Validation](#source-for-validation)
+  - [KPI Contract Summary](#kpi-contract-summary)
+  - [Why This KPI Matters](#why-this-kpi-matters)
+
+</details>
+
+---
+
 ## Business Meaning
 
 Disposition outcomes describe the **end state of a hospital encounter**.
@@ -41,7 +68,7 @@ Post-acute care includes places patients go after discharge to continue recovery
 * Are more patients requiring **post-acute care** after discharge?
 * Is **in-hospital mortality** stable, improving, or worsening?
 * Do certain facilities send a much higher share of patients to rehab or skilled nursing instead of home (**discharge to rehab or SNF**)?
-* Are discharge destinations shifting across the system over time (year-over-year disposition patterns)?
+* Are discharge destinations shifting across the system over time (year-over-year disposition patterns not relevant as only 2015 is available)?
 
 ---
 
@@ -180,8 +207,9 @@ graph TD;
 
 ---
 
-## Excel Validation (Required)
-
+## Excel Validation
+- Excel File: [here](./05_04_Excel/05_04_Disposition_Outcomes_Counts_Rates_Validation.xlsx)  
+  
 ### Objective
 
 Verify that discharge **counts and percentages calculated in Excel** match the KPI results exactly.
@@ -198,14 +226,14 @@ Export **one row per patient stay**, including the following fields (**encounter
     <details>
     <summary>Counts Validation Screenshot</summary>  
 
-    ![Counts Validation Screenshot](image.png)
+    ![Counts Validation Screenshot](image-2.png)
 
     </details>
 
     <details>
     <summary>Rates Validation Screenshot</summary>  
 
-    ![Rates Validation Screenshot](image-1.png)
+    ![Rates Validation Screenshot](image-3.png)
 
     </details>
 
