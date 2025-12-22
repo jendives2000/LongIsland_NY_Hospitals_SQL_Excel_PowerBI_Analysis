@@ -11,6 +11,28 @@ This is where the project transitions from *"Is the data trustworthy?"* to
 
 ---
 
+<details>
+<summary><strong>📑 Table of Contents</strong> (click to expand)</summary>
+
+- [🏥 Step 05 — Healthcare KPI Development \& Power BI Modeling](#-step-05--healthcare-kpi-development--power-bi-modeling)
+  - [🎯 Objectives](#-objectives)
+  - [🧱 Inputs \& Dependencies](#-inputs--dependencies)
+  - [Optimized sequence for clean SQL logic, analytical coherence, and scalable KPI development](#optimized-sequence-for-clean-sql-logic-analytical-coherence-and-scalable-kpi-development)
+  - [📊 KPI Catalog](#-kpi-catalog)
+    - [1. Severity Mix Index (APR)](#1-severity-mix-index-apr)
+    - [2. Payer Mix \& Reimbursement Risk](#2-payer-mix--reimbursement-risk)
+    - [3. Unplanned Admission Rate](#3-unplanned-admission-rate)
+    - [4. Disposition Outcomes](#4-disposition-outcomes)
+    - [5. Length of Stay (LOS) KPIs](#5-length-of-stay-los-kpis)
+    - [6. Mortality Rate](#6-mortality-rate)
+    - [7. Cost per Encounter \& Margin Pressure](#7-cost-per-encounter--margin-pressure)
+  - [Status](#status)
+  - [🗂 Folder Structure for Step 05](#-folder-structure-for-step-05)
+
+</details>
+
+---
+
 ## 🎯 Objectives
 
 - Build reusable **SQL KPI views** on top of the star schema.
@@ -84,7 +106,8 @@ The list of the KPI Catalog below is the optimized build sequence.
 This step implements the *business* KPIs introduced in Step 04:
 
 ### 1. Severity Mix Index (APR)
-
+- KPI Folder: [here](./05_01_Severity_Mix_Index_APR/)
+  
 **Question:**  
 Are we treating more complex, high-acuity cases?
 
@@ -117,7 +140,8 @@ We compute:
 
 ---
 ### 2. Payer Mix & Reimbursement Risk
-
+- KPI Folder: [here](./05_02_Payers_Mix_Reimb_Risk/)
+  
 **Question:**  
 Where is financial exposure concentrated? Are costs and volumes dominated by
 certain payer groups?
@@ -153,6 +177,7 @@ We summarize:
 
 ---
 ### 3. Unplanned Admission Rate
+- KPI Folder: [here](./05_03_Unplanned_Admission_Rate/)
 
 **Question:**  
 What proportion of encounters arrive via **unplanned routes** (Emergency / Urgent),
@@ -160,7 +185,7 @@ straining ED and inpatient capacity?
 
 **Logic (assumption for this project):**
 
-- `AdmissionType_Std` ∈ (`'Emergency'`, `'Urgent'`) → **Unplanned**
+- `AdmissionType_Std` = (`'Unplanned'`) → **Unplanned**
 - All other standardized admission types → **Planned**
 
 They are not scheduled elective surgeries or planned procedures.
@@ -177,6 +202,7 @@ These patients:
 ---
 
 ### 4. Disposition Outcomes
+- KPI Folder: [here](./05_04_Disposition_Outcomes/)
 
 **Question:**  
 Do patients safely return to the community? How many die in hospital or move to
@@ -200,6 +226,7 @@ institutional care?
 ---
 
 ### 5. Length of Stay (LOS) KPIs
+- KPI Folder: [here](./05_05_LOS_LengthOfStay_KPI/)
 
 **Question:**  
 How long do patients stay, and how does this vary by facility and case-mix?
@@ -222,19 +249,20 @@ If a hospital treats many severe cases, its LOS will naturally be higher.
 ---
 
 ### 6. Mortality Rate
+- KPI Folder: [here](./05_06_Mortality_Rate/)
 
 **Question:**  
 What is in-hospital mortality, and how does it vary by facility and case-mix?
 
 “In-hospital mortality” = patients who died during their hospital stay.  
 We want to know:
-- Overall rate per hospital and year
+- Overall rate per hospital and year (2015 only)
 - How that rate changes when we separate by severity (to be fair)
 
 Assumptions:
 
 - `Disposition_Grouped` includes a value such as `'Died'` or `'Expired'`
-  for in-hospital deaths.
+  for in-hospital deaths - in our case it is ``'Death'``.
 
 **Views:**
 
@@ -244,6 +272,7 @@ Assumptions:
 ---
 
 ### 7. Cost per Encounter & Margin Pressure
+- KPI Folder: [here](./05_07_MCost_and_Margin_Pressure/)
 
 **Question:**  
 Which facilities / payers deliver **high-value** vs **high-cost** care?
@@ -277,6 +306,13 @@ We compute:
 
 ---
 
+## Status
+
+The KPI layer is complete and validated.
+All metrics in this folder represent the finalized executive KPI contract used downstream in the Power BI semantic model.
+
+---
+
 ## 🗂 Folder Structure for Step 05
 
 Recommended structure in the repo:
@@ -302,3 +338,4 @@ Recommended structure in the repo:
 │
 └─ /05_PowerBI
     └─ LI_Hospitals_KPIs.pbix
+```
