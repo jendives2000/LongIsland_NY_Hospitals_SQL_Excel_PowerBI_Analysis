@@ -1,5 +1,41 @@
 # KPI 05.06 — Mortality Rate
 
+This KPI measures inpatient mortality rate by facility and year (2015) to assess clinical outcome risk within the hospitalized population. Mortality is a low-frequency but high-impact outcome that must be interpreted in the context of patient acuity, intake mix, and facility role.
+
+> **Executive question:**  
+> Are differences in observed mortality driven by clinical severity and referral patterns, or do they signal meaningful variation in inpatient outcomes?
+
+---
+
+<details>
+<summary><strong>📑 Table of Contents</strong></summary>
+
+- [KPI 05.06 — Mortality Rate](#kpi-0506--mortality-rate)
+  - [Purpose](#purpose)
+  - [Business Meaning](#business-meaning)
+  - [Questions This KPI Answers](#questions-this-kpi-answers)
+    - [Peer Group Context](#peer-group-context)
+  - [Metric Definition](#metric-definition)
+    - [Primary Measure](#primary-measure)
+    - [Supporting Measures](#supporting-measures)
+  - [Reporting Grain](#reporting-grain)
+  - [How Mortality Is Identified](#how-mortality-is-identified)
+  - [Conceptual Flow](#conceptual-flow)
+  - [Interpretation Guidelines](#interpretation-guidelines)
+    - [What it "Should" Look Like](#what-it-should-look-like)
+    - [Signals Worth Investigating](#signals-worth-investigating)
+  - [Known Limitations](#known-limitations)
+  - [Excel Validation](#excel-validation)
+    - [Objective](#objective)
+    - [Source for Validation](#source-for-validation)
+    - [Excel Validation](#excel-validation-1)
+  - [KPI Contract Summary](#kpi-contract-summary)
+  - [Why This KPI Matters](#why-this-kpi-matters)
+
+</details>
+
+---
+
 ## Purpose
 
 This KPI measures **in-hospital mortality**, defined as the proportion of inpatient encounters that end in death prior to discharge.
@@ -199,7 +235,7 @@ Export at the granularity of Encounter-Level, **one row per patient stay** with 
     <details>
     <summary>Mortality Rate Validation Screenshot</summary>
 
-    ![Mortality Count & Rate Validation](image.png)
+    ![Mortality Count & Rate Validation](image-2.png)
 
     </details>
 
