@@ -11,6 +11,41 @@ It does not measure operational efficiency directly — it explains **who is pay
 
 ---
 
+<details>
+<summary><strong>📑 Table of Contents</strong></summary>
+
+- [KPI 05.02 — Payer Mix \& Reimbursement Risk](#kpi-0502--payer-mix--reimbursement-risk)
+  - [Purpose](#purpose)
+  - [Business Meaning](#business-meaning)
+    - [Payment Typology Groups](#payment-typology-groups)
+    - [Reimbursement Risk \& Negative Margin](#reimbursement-risk--negative-margin)
+  - [Executive Questions This KPI Answers](#executive-questions-this-kpi-answers)
+  - [Peer Group Context](#peer-group-context)
+  - [Metric Definitions](#metric-definitions)
+    - [Encounter Counts by Payer Group](#encounter-counts-by-payer-group)
+    - [Share of Encounters](#share-of-encounters)
+    - [Average Financials per Payer Group](#average-financials-per-payer-group)
+    - [Cost-to-Charge Ratio (CTR)](#cost-to-charge-ratio-ctr)
+    - [Negative-Margin Encounter](#negative-margin-encounter)
+    - [Negative-Margin Rate](#negative-margin-rate)
+  - [Reporting Grain](#reporting-grain)
+  - [Conceptual Flow](#conceptual-flow)
+  - [Interpretation Guidelines](#interpretation-guidelines)
+    - [Peer-Group Comparison (Required Context)](#peer-group-comparison-required-context)
+    - [What It Should Look Like](#what-it-should-look-like)
+    - [Signals Worth Investigating](#signals-worth-investigating)
+  - [Known Limitations](#known-limitations)
+  - [Excel Validation](#excel-validation)
+    - [Objective](#objective)
+    - [Required Fields (Encounter Level)](#required-fields-encounter-level)
+    - [Validation Steps](#validation-steps)
+  - [KPI Contract Summary](#kpi-contract-summary)
+  - [Why This KPI Matters](#why-this-kpi-matters)
+
+</details>
+
+---
+
 ## Purpose
 
 <details>
