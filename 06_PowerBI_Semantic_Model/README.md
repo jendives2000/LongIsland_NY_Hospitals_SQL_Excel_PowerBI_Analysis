@@ -54,6 +54,7 @@ The semantic model is the “contract” that guarantees:
     - [Security \& Governance](#security--governance)
     - [Validation Workflow](#validation-workflow)
   - [Completion Criteria](#completion-criteria)
+  - [Folder Structure:](#folder-structure)
 
 </details>
 
@@ -138,6 +139,9 @@ Dimensions provide the **slicing vocabulary** for the entire KPI suite. The goal
 * Add only attributes that are useful for slicing.
 
   * Avoid “junk dimensions” with many sparse columns.
+
+Dimensions are owned by the Core Data Model.
+KPI Integration Layer consumes but does not redefine them.
 
 ### Role-Playing Dates
 
@@ -319,3 +323,50 @@ This step is complete when:
   * creating one KPI fact table
   * reusing existing dimensions
   * adding measures, not reworking the model
+
+---
+## Folder Structure: 
+```text
+06 — PowerBI Semantic Model
+│
+├── README.md
+│
+├── 01_Fact_KPI_SQL/
+│   ├── README.md
+│   ├── Fact_KPI_SeverityMix.sql
+│   ├── Fact_KPI_PayerMix.sql
+│   ├── Fact_KPI_Unplanned.sql
+│   ├── Fact_KPI_Disposition.sql
+│   ├── Fact_KPI_LOS_Summary.sql
+│   ├── Fact_KPI_LOS_Distribution.sql
+│   ├── Fact_KPI_Mortality.sql
+│   └── Fact_KPI_FinancialPressure.sql
+│
+├── 02_Dimensions_Reference/
+│   ├── README.md
+│   ├── Dim_Date.md
+│   ├── Dim_Facility.md
+│   ├── Dim_Payer.md
+│   ├── Dim_AdmissionType.md
+│   ├── Dim_Disposition.md
+│   └── Dim_ClinicalClass.md
+│
+├── 03_PowerBI_Model/
+│   ├── README.md
+│   ├── Relationships.md
+│   ├── Measures_DAX.md
+│   ├── RLS_Design.md
+│   └── PowerBI_Model_Checklist.md
+│
+├── 04_KPI_Data_Dictionary/
+│   ├── README.md
+│   ├── KPI_Data_Dictionary.md
+│   ├── KPI_Definitions.md
+│   └── KPI_Ownership_and_Governance.md
+│
+└── 05_Validation/
+    ├── README.md
+    ├── Reconciliation_Checklist.md
+    ├── Excel_Pivot_Validation_Guide.md
+    └── Known_Issues_and_Resolutions.md
+```
