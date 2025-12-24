@@ -292,7 +292,7 @@ If distributing beyond local analysis:
 
 Validation is performed using **Excel Pivot reconciliation** against encounter-level exports:
 
-1. Export the encounter-level dataset defined in each KPI README.
+1. Export the encounter-level dataset defined in each KPI README (see [05_KPI_Dev](../05_KPI_Dev/)).
 2. Build pivots to compute:
 
    * totals (counts, sums)
