@@ -37,6 +37,7 @@ Excel here is a **trusted analytical interface**, not a calculation engine.
   - [Why this step exists](#why-this-step-exists)
   - [Positioning of Excel in the Analytics Lifecycle](#positioning-of-excel-in-the-analytics-lifecycle)
   - [Design Principles](#design-principles)
+  - [Governance \& Trust Guarantees](#governance--trust-guarantees)
   - [What Belongs in This Folder (and What Does Not)](#what-belongs-in-this-folder-and-what-does-not)
     - [✅ Belongs here](#-belongs-here)
     - [❌ Does NOT belong here](#-does-not-belong-here)
@@ -86,6 +87,21 @@ The Excel assets in this folder follow strict principles:
    - Minimal clutter, clear labels
 
 Excel is treated as a **safe window** into the KPI layer.
+
+---
+
+## Governance & Trust Guarantees
+
+This folder guarantees that:
+* All metrics originate from validated SQL logic
+* Excel outputs reconcile to KPI facts if audited
+* No hidden business rules exist in spreadsheets
+* Metric definitions remain consistent across:
+  * SQL
+  * Power BI
+  * Excel
+
+This is essential for executive trust.
 
 ---
 
