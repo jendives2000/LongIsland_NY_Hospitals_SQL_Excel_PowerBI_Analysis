@@ -5,7 +5,7 @@ table Fact_KPI_SeverityMix
 		dataType: int64
 		formatString: 0
 		lineageTag: b84a278a-13c8-4b65-b9e1-c6da52af69b3
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: Facility_Key
 
 		annotation SummarizationSetBy = Automatic

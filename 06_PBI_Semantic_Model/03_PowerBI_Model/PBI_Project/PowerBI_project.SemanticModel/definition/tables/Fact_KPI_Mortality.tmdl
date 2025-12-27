@@ -5,7 +5,7 @@ table Fact_KPI_Mortality
 		dataType: int64
 		formatString: 0
 		lineageTag: b8ec4844-847a-4dbf-9239-5a9473f35ac0
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: Facility_Key
 
 		annotation SummarizationSetBy = Automatic

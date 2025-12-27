@@ -1,9 +1,3 @@
-relationship AutoDetected_a76d7e48-d7ae-4d6f-8b7c-4d6978148aad
-	crossFilteringBehavior: bothDirections
-	fromCardinality: one
-	fromColumn: Dim_Facility.Facility_Key
-	toColumn: Fact_KPI_FinancialPressure.Facility_Key
-
 relationship AutoDetected_bcc3938e-86e6-406f-ade1-67210cbb0a38
 	fromColumn: Fact_KPI_Disposition.Discharge_Year
 	toColumn: Dim_Year.Discharge_Year
@@ -44,4 +38,32 @@ relationship AutoDetected_17d8c856-3f0a-419b-ba4b-e75babfcfc5a
 relationship AutoDetected_39da2127-a0c7-4eba-88c9-99514b88dbfe
 	fromColumn: Fact_KPI_PayerMix.Payer_Key
 	toColumn: Dim_Payer.Payer_Key
+
+relationship 4c203eb8-6fcd-1c30-e8ce-61539187d800
+	fromColumn: Fact_KPI_Mortality.Facility_Key
+	toColumn: Dim_Facility.Facility_Key
+
+relationship de2aba5a-04dc-7c43-239d-17ba1751405c
+	fromColumn: Fact_KPI_Disposition.Facility_Key
+	toColumn: Dim_Facility.Facility_Key
+
+relationship b882595a-b7d9-190e-64cb-e5a4f33f525a
+	fromColumn: Fact_KPI_Unplanned.Facility_Key
+	toColumn: Dim_Facility.Facility_Key
+
+relationship 30f6046f-dfb2-4d2b-0cef-4f0779c4e85f
+	fromColumn: Fact_KPI_PayerMix.Facility_Key
+	toColumn: Dim_Facility.Facility_Key
+
+relationship 275986fc-c4b2-2eb5-c027-2d77ace98ae9
+	fromColumn: Fact_KPI_SeverityMix.Facility_Key
+	toColumn: Dim_Facility.Facility_Key
+
+relationship 3a9ca16d-fb12-c244-8f7d-141ccc0f91ce
+	fromColumn: Fact_KPI_LOS_Summary.Facility_Key
+	toColumn: Dim_Facility.Facility_Key
+
+relationship 4dc9ff64-e2c8-7966-9f67-e8be1b752702
+	fromColumn: Fact_KPI_FinancialPressure.Facility_Key
+	toColumn: Dim_Facility.Facility_Key
 
