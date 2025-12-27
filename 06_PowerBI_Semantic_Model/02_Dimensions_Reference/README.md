@@ -25,6 +25,7 @@ These dimensions provide the **shared slicing vocabulary** across all `Fact_KPI_
   - [Conformed Dimension Rules (Non-Negotiable)](#conformed-dimension-rules-non-negotiable)
   - [Dimensions Used by the KPI Semantic Model](#dimensions-used-by-the-kpi-semantic-model)
     - [Dimension Governance Notes](#dimension-governance-notes)
+    - [Dim\_Year](#dim_year)
     - [Dim\_Date](#dim_date)
     - [Dim\_Facility](#dim_facility)
     - [Dim\_Payer](#dim_payer)
@@ -94,7 +95,8 @@ All dimensions referenced here must satisfy the following:
 
 | Dimension | Primary Role | Surrogate Key | Anchor/Comments | Key Attributes| Used By |
 |---------------|--------------|---------------|----------------|------------------------|-------------------|
-| Dim_Date | Time slicing & aggregation | Date_Key | Anchored on Discharge Date for all KPIs | Year, Quarter, Month, Month_Number | All Fact_KPI_* |
+| Dim_Year | Year-level time slicing | Discharge_Year | Used for all Facility × Year KPI facts | Year_Label | All Fact_KPI_* |
+| Dim_Date | Date derivation & enrichment | Date_Key | Used only to derive Discharge_Year during fact construction | Year, Quarter, Month, Month_Number | Source-only (not directly related in PBI) |
 | Dim_Facility | Organizational slicing & RLS | Facility_Key | Single authoritative facility definition | Facility_Name | All Fact_KPI_* |
 | Dim_Payer | Financial & reimbursement analysis | Payer_Key | Grouped payer typology preferred | Payment_Typology_Group, Payment_Typology_1 | Fact_KPI_PayerMix |
 | Dim_AdmissionType | Admission classification | AdmissionType_Key | Standardized admission type | AdmissionType_Std | Fact_KPI_Unplanned |
@@ -109,14 +111,26 @@ All dimensions referenced here must satisfy the following:
 - Dimensions are **not rebuilt** as part of Step 06.
 - Any change to a dimension requires impact analysis across all dependent KPIs.
 
+### Dim_Year
+
+| Dimension | Primary Role | Key | Time Anchor / Notes | Attributes for BI | Used By |
+|----------|--------------|-----|---------------------|------------------|--------|
+| `Dim_Year` | Year-level time slicing | `Discharge_Year` | Tiny conformed dimension for year-grain KPIs | `Year_Label` | All Fact_KPI_* |
+
+**Notes**
+- `Dim_Year` is the **authoritative time dimension** for all KPI facts modeled at **Facility × Year grain**.
+- It intentionally replaces `Dim_Date` in the Power BI semantic model for these facts.
+- This avoids forcing artificial `Date_Key` values into non-daily facts.
+
 
 ### Dim_Date
 
-| Dimension| Primary Role | Key | Time Anchor / Notes | Attributes for BI | Used By|
-|---------------|--------------|---------------|---------------------|--------------------------|-------------------|
-| `Dim_Date` | Time slicing & aggregation | `Date_Key` | Anchored on **Discharge Date** for all KPIs | Year, Quarter, Month, Month_Number | All Fact_KPI_* |
+| Dimension | Primary Role | Key | Time Anchor / Notes | Attributes for BI | Used By |
+|----------|--------------|-----|---------------------|------------------|--------|
+| `Dim_Date` | Calendar reference & derivation | `Date_Key` | Used to derive Discharge_Year during fact construction | Year, Quarter, Month, Month_Number | Fact build (not semantic slicing) |
 
-
+> `Dim_Date` is **not directly related** to year-grain KPI facts in Power BI.
+> It is used upstream to derive `Discharge_Year` and remains available for future date-grain facts.
 
 > Role-playing dates are avoided unless explicitly required.
 
@@ -171,7 +185,8 @@ Used primarily by:
 
 | Dimension Name | Cardinality | Typical BI Usage | Recommended Exposure | Notes |
 |---------------|------------|------------------|----------------------|-------|
-| Dim_Date | Low | Primary slicer | Always exposed | Prefer Year/Month over full dates |
+| Dim_Year | Very Low | Primary time slicer | Always exposed | Canonical time dimension for KPI facts |
+| Dim_Date | Low | Source derivation only | Hidden | Not used directly in year-grain KPI slicing |
 | Dim_Facility | Low | Primary slicer, RLS | Always exposed | Central to governance and security |
 | Dim_Payer | Medium | Distribution analysis | Expose grouped fields | Avoid raw payer IDs |
 | Dim_AdmissionType | Low | Binary / categorical slice | Expose | Used only for Unplanned KPI |
@@ -185,7 +200,8 @@ Used primarily by:
 
 | Dimension | Severity Mix | Payer Mix | Unplanned | Disposition | LOS | Mortality | Financial Pressure |
 |----------|-------------|-----------|-----------|-------------|-----|-----------|--------------------|
-| Dim_Date | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Dim_Year | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Dim_Date | — | — | — | — | — | — | — |
 | Dim_Facility | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | Dim_Payer | — | ✔ | — | — | — | — | — |
 | Dim_AdmissionType | — | — | ✔ | — | — | — | — |
