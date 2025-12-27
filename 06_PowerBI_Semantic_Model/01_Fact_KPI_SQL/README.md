@@ -24,6 +24,7 @@ to
     - [FACT 05.06 — `Fact_KPI_Mortality`](#fact-0506--fact_kpi_mortality)
     - [FACT 05.07 — `Fact_KPI_FinancialPressure`](#fact-0507--fact_kpi_financialpressure)
   - [KPI Data Dictionary (Governance Contract)](#kpi-data-dictionary-governance-contract)
+    - [Additivity Notes](#additivity-notes)
   - [Relationship to Power BI Semantic Model](#relationship-to-power-bi-semantic-model)
   - [Change Management Rule](#change-management-rule)
 
@@ -236,15 +237,23 @@ Surfaces **cost intensity and margin stress** at the system level.
 
 ## KPI Data Dictionary (Governance Contract)
 
-| KPI | Fact Table | Grain | Numerator | Denominator | Primary Dimensions | Business Owner |
-|----|-----------|-------|-----------|-------------|-------------------|----------------|
-| Severity Mix Index | Fact_KPI_SeverityMix | Facility–Year | Weighted Severity | Total Encounters | Date, Facility | Clinical Analytics |
-| Payer Mix | Fact_KPI_PayerMix | Facility–Year–Payer | Encounter Count | Total Encounters | Date, Facility, Payer | Finance |
-| Unplanned Rate | Fact_KPI_Unplanned | Facility–Year | Unplanned Encounters | Total Encounters | Date, Facility | Quality |
-| Disposition | Fact_KPI_Disposition | Facility–Year–Disposition | Disposition Count | — | Date, Facility, Disposition | Operations |
-| LOS | Fact_KPI_LOS_Summary | Facility–Year | LOS Aggregates | Encounter Count | Date, Facility | Ops / Clinical |
-| Mortality | Fact_KPI_Mortality | Facility–Year | Death Count | Total Encounters | Date, Facility | Quality |
-| Financial Pressure | Fact_KPI_FinancialPressure | Facility–Year | Total Costs | Total Charges | Date, Facility | Finance |
+| KPI                           | Fact Table                 | Grain                     | Additive Numerator(s)       | Additive Denominator(s) | Primary Dimensions          | Owner              |
+| ----------------------------- | -------------------------- | ------------------------- | --------------------------- | ----------------------- | --------------------------- | ------------------ |
+| Severity Mix Index            | Fact_KPI_SeverityMix       | Facility–Year             | Weighted_Severity_Sum       | Total_Encounters        | Date, Facility              | Clinical Analytics |
+| Payer Mix                     | Fact_KPI_PayerMix          | Facility–Year–Payer       | Encounter_Count             | Total_Encounters        | Date, Facility, Payer       | Finance            |
+| Unplanned Admission Rate      | Fact_KPI_Unplanned         | Facility–Year             | Unplanned_Encounter_Count   | Total_Encounters        | Date, Facility              | Quality            |
+| Disposition Outcomes          | Fact_KPI_Disposition       | Facility–Year–Disposition | Disposition_Count           | Total_Encounters        | Date, Facility, Disposition | Operations         |
+| Length of Stay (Avg LOS)      | Fact_KPI_LOS_Summary       | Facility–Year             | **Total_LOS_Days**          | **Encounter_Count**     | Date, Facility              | Ops / Clinical     |
+| LOS Distribution              | Fact_KPI_LOS_Distribution  | Facility–Year–LOS_Bucket  | Bucket_Count                | Encounter_Count         | Date, Facility              | Ops / Clinical     |
+| Mortality Rate                | Fact_KPI_Mortality         | Facility–Year             | Death_Count                 | Total_Encounters        | Date, Facility              | Quality            |
+| Financial Pressure (Avg Cost) | Fact_KPI_FinancialPressure | Facility–Year             | **Total_Costs**             | **Encounter_Count**     | Date, Facility              | Finance            |
+| Financial Pressure (Margin)   | Fact_KPI_FinancialPressure | Facility–Year             | Total_Charges − Total_Costs | Total_Charges           | Date, Facility              | Finance            |
+
+### Additivity Notes
+- All authoritative KPIs are derived from additive components.
+- Non-additive values (averages, rates, indexes) are computed in Power BI as measures.
+- Columns suffixed with `_validation` exist only for SSMS and reconciliation and are hidden in Power BI.
+
 
 ---
 
