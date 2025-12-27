@@ -15,6 +15,8 @@ to
 - [06.01 — Fact KPI SQL (Semantic Model Layer)](#0601--fact-kpi-sql-semantic-model-layer)
   - [What This Folder Contains](#what-this-folder-contains)
   - [Design Principles (Healthcare Analytics Standards)](#design-principles-healthcare-analytics-standards)
+  - [Time Dimension Rule (Dim\_Year vs Dim\_Date)](#time-dimension-rule-dim_year-vs-dim_date)
+    - [Dim\_Year (Tiny Conformed Dimension)](#dim_year-tiny-conformed-dimension)
   - [Fact KPI Inventory](#fact-kpi-inventory)
     - [FACT 05.01 — `Fact_KPI_SeverityMix`](#fact-0501--fact_kpi_severitymix)
     - [FACT 05.02 — `Fact_KPI_PayerMix`](#fact-0502--fact_kpi_payermix)
@@ -72,6 +74,33 @@ This ensures:
 
 ---
 
+## Time Dimension Rule (Dim_Year vs Dim_Date)
+
+All KPI facts in this folder are modeled at **Facility × Discharge Year** grain (2015 scope).
+
+Therefore, time is modeled using a **tiny conformed dimension**:
+
+- `dbo.Dim_Year` (PK: `Discharge_Year`)
+
+This avoids forcing a `Date_Key` into facts that are not at daily grain.
+
+`Dim_Date` is used only when a fact table is built at **month/day grain** and contains a true `Date_Key`.
+
+### Dim_Year (Tiny Conformed Dimension)
+
+**Purpose**  
+Provides governed time slicing for **year-grain KPI facts**.
+
+**Primary Key**
+- `Discharge_Year` (INT)
+
+**Suggested Attributes**
+- `Discharge_Year` (PK)
+- `Year_Label` (optional)
+
+
+---
+
 ## Fact KPI Inventory
 
 ### FACT 05.01 — `Fact_KPI_SeverityMix`
@@ -89,7 +118,7 @@ Establishes the **clinical acuity baseline** required to interpret all downstrea
 
 **Key Dimensions**
 - Facility
-- Date (Year)
+- Year (`Dim_Year`)
 
 **Analytical Role**
 - Context KPI (not performance)
@@ -111,7 +140,7 @@ Quantifies **payer distribution and reimbursement exposure** by facility.
 
 **Key Dimensions**
 - Facility
-- Date (Year)
+- Year (`Dim_Year`)
 - Payer
 
 **Analytical Role**
@@ -134,7 +163,7 @@ Measures **acute intake pressure** driven by unplanned admissions.
 
 **Key Dimensions**
 - Facility
-- Date (Year)
+- Year (`Dim_Year`)
 
 **Analytical Role**
 - Intake pressure indicator
@@ -155,7 +184,7 @@ Describes **how inpatient encounters conclude**, connecting care to downstream s
 
 **Key Dimensions**
 - Facility
-- Date (Year)
+- Year (`Dim_Year`)
 - Disposition
 
 **Analytical Role**
@@ -180,7 +209,7 @@ Summarizes **inpatient length-of-stay behavior** at an executive level.
 
 **Key Dimensions**
 - Facility
-- Date (Year)
+- Year (`Dim_Year`)
 
 **Analytical Role**
 - Throughput and capacity signal
@@ -202,7 +231,7 @@ Measures **in-hospital mortality exposure**.
 
 **Key Dimensions**
 - Facility
-- Date (Year)
+- Year (`Dim_Year`)
 
 **Analytical Role**
 - Outcome risk KPI
@@ -227,7 +256,7 @@ Surfaces **cost intensity and margin stress** at the system level.
 
 **Key Dimensions**
 - Facility
-- Date (Year)
+- Year (`Dim_Year`)
 
 **Analytical Role**
 - Financial sustainability indicator
@@ -239,15 +268,15 @@ Surfaces **cost intensity and margin stress** at the system level.
 
 | KPI                           | Fact Table                 | Grain                     | Additive Numerator(s)       | Additive Denominator(s) | Primary Dimensions          | Owner              |
 | ----------------------------- | -------------------------- | ------------------------- | --------------------------- | ----------------------- | --------------------------- | ------------------ |
-| Severity Mix Index            | Fact_KPI_SeverityMix       | Facility–Year             | Weighted_Severity_Sum       | Total_Encounters        | Date, Facility              | Clinical Analytics |
-| Payer Mix                     | Fact_KPI_PayerMix          | Facility–Year–Payer       | Encounter_Count             | Total_Encounters        | Date, Facility, Payer       | Finance            |
-| Unplanned Admission Rate      | Fact_KPI_Unplanned         | Facility–Year             | Unplanned_Encounter_Count   | Total_Encounters        | Date, Facility              | Quality            |
-| Disposition Outcomes          | Fact_KPI_Disposition       | Facility–Year–Disposition | Disposition_Count           | Total_Encounters        | Date, Facility, Disposition | Operations         |
-| Length of Stay (Avg LOS)      | Fact_KPI_LOS_Summary       | Facility–Year             | **Total_LOS_Days**          | **Encounter_Count**     | Date, Facility              | Ops / Clinical     |
-| LOS Distribution              | Fact_KPI_LOS_Distribution  | Facility–Year–LOS_Bucket  | Bucket_Count                | Encounter_Count         | Date, Facility              | Ops / Clinical     |
-| Mortality Rate                | Fact_KPI_Mortality         | Facility–Year             | Death_Count                 | Total_Encounters        | Date, Facility              | Quality            |
-| Financial Pressure (Avg Cost) | Fact_KPI_FinancialPressure | Facility–Year             | **Total_Costs**             | **Encounter_Count**     | Date, Facility              | Finance            |
-| Financial Pressure (Margin)   | Fact_KPI_FinancialPressure | Facility–Year             | Total_Charges − Total_Costs | Total_Charges           | Date, Facility              | Finance            |
+| Severity Mix Index            | Fact_KPI_SeverityMix       | Facility–Year             | Weighted_Severity_Sum       | Total_Encounters        | Year, Facility              | Clinical Analytics |
+| Payer Mix                     | Fact_KPI_PayerMix          | Facility–Year–Payer       | Encounter_Count             | Total_Encounters        | Year, Facility, Payer       | Finance            |
+| Unplanned Admission Rate      | Fact_KPI_Unplanned         | Facility–Year             | Unplanned_Encounter_Count   | Total_Encounters        | Year, Facility              | Quality            |
+| Disposition Outcomes          | Fact_KPI_Disposition       | Facility–Year–Disposition | Disposition_Count           | Total_Encounters        | Year, Facility, Disposition | Operations         |
+| Length of Stay (Avg LOS)      | Fact_KPI_LOS_Summary       | Facility–Year             | **Total_LOS_Days**          | **Encounter_Count**     | Year, Facility              | Ops / Clinical     |
+| LOS Distribution              | Fact_KPI_LOS_Distribution  | Facility–Year–LOS_Bucket  | Bucket_Count                | Encounter_Count         | Year, Facility              | Ops / Clinical     |
+| Mortality Rate                | Fact_KPI_Mortality         | Facility–Year             | Death_Count                 | Total_Encounters        | Year, Facility              | Quality            |
+| Financial Pressure (Avg Cost) | Fact_KPI_FinancialPressure | Facility–Year             | **Total_Costs**             | **Encounter_Count**     | Year, Facility              | Finance            |
+| Financial Pressure (Margin)   | Fact_KPI_FinancialPressure | Facility–Year             | Total_Charges − Total_Costs | Total_Charges           | Year, Facility              | Finance            |
 
 ### Additivity Notes
 - All authoritative KPIs are derived from additive components.
@@ -263,7 +292,8 @@ These fact tables are:
 - **Imported as facts** in Power BI
 - Related to **conformed dimensions**:
   - `Dim_Facility`
-  - `Dim_Date`
+  - `Dim_Year` (year-grain KPI facts)
+  - `Dim_Date` (only for date-grain facts, if introduced later)
   - `Dim_Payer`
   - `Dim_Disposition`
 - Used to build:
