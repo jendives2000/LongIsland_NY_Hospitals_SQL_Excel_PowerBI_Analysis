@@ -5,7 +5,7 @@ table Fact_KPI_PayerMix
 		dataType: int64
 		formatString: 0
 		lineageTag: 0a90274a-0fea-4f06-a055-c1f74cfff737
-		summarizeBy: none
+		summarizeBy: count
 		sourceColumn: Facility_Key
 
 		annotation SummarizationSetBy = Automatic

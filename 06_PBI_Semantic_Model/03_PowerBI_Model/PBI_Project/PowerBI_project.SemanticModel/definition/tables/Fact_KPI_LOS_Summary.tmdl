@@ -5,7 +5,7 @@ table Fact_KPI_LOS_Summary
 		dataType: int64
 		formatString: 0
 		lineageTag: be162469-8ca7-4cb6-8f3a-b0a80de9d33e
-		summarizeBy: none
+		summarizeBy: count
 		sourceColumn: Facility_Key
 
 		annotation SummarizationSetBy = Automatic
