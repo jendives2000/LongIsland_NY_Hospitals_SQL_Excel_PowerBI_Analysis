@@ -1,0 +1,140 @@
+table Fact_KPI_PayerMix
+	lineageTag: 4e5bbc2f-ef0d-4989-937d-abe48d75934e
+
+	column Facility_Key
+		dataType: int64
+		formatString: 0
+		lineageTag: 0a90274a-0fea-4f06-a055-c1f74cfff737
+		summarizeBy: none
+		sourceColumn: Facility_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Discharge_Year
+		dataType: int64
+		formatString: 0
+		lineageTag: f96e40ff-156a-4274-a525-50fc6b6e0d2a
+		summarizeBy: none
+		sourceColumn: Discharge_Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Payer_Key
+		dataType: int64
+		formatString: 0
+		lineageTag: 20f1c882-351b-43c5-a220-f2402619bc5c
+		summarizeBy: none
+		sourceColumn: Payer_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Encounter_Count
+		dataType: int64
+		formatString: 0
+		lineageTag: 99f82f5c-42ec-4704-9743-ecf0020e0f4d
+		summarizeBy: sum
+		sourceColumn: Encounter_Count
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total_Costs
+		dataType: double
+		lineageTag: 8ab20105-a171-4936-b372-d671993cbd2c
+		summarizeBy: sum
+		sourceColumn: Total_Costs
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Total_Charges
+		dataType: double
+		lineageTag: 57b0d5be-1ce5-4225-89bc-39bfbaa46074
+		summarizeBy: sum
+		sourceColumn: Total_Charges
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Negative_Margin_Encounter_Count
+		dataType: int64
+		formatString: 0
+		lineageTag: 44319189-4aa3-4598-b89e-981eb707d599
+		summarizeBy: sum
+		sourceColumn: Negative_Margin_Encounter_Count
+
+		annotation SummarizationSetBy = Automatic
+
+	column Payer_Encounter_Share_validation
+		dataType: double
+		lineageTag: d156642a-7779-4c63-86f7-e364f4591382
+		summarizeBy: sum
+		sourceColumn: Payer_Encounter_Share_validation
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Payer_Cost_Share_validation
+		dataType: double
+		lineageTag: 48eab3b4-fed3-4c91-894d-1d4869561476
+		summarizeBy: sum
+		sourceColumn: Payer_Cost_Share_validation
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Payer_Charge_Share_validation
+		dataType: double
+		lineageTag: 0fb67eee-eecf-4233-a335-0d7874b2ec1b
+		summarizeBy: sum
+		sourceColumn: Payer_Charge_Share_validation
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Avg_Cost_Per_Encounter_validation
+		dataType: double
+		lineageTag: aef9ea1b-d8a2-4615-83bc-6ab40a0ff30c
+		summarizeBy: sum
+		sourceColumn: Avg_Cost_Per_Encounter_validation
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Avg_Charges_Per_Encounter_validation
+		dataType: double
+		lineageTag: 1a05dfc8-5f02-475b-8f38-f57cd8b2f06e
+		summarizeBy: sum
+		sourceColumn: Avg_Charges_Per_Encounter_validation
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Total_Margin_validation
+		dataType: double
+		lineageTag: 202a7d1a-4bbe-48b1-8823-81e67df70d08
+		summarizeBy: sum
+		sourceColumn: Total_Margin_validation
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Fact_KPI_PayerMix = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("DESKTOP-3O401KK", "LI_NYHealth", [HierarchicalNavigation=true]),
+				    dbo = Source{[Schema="dbo"]}[Data],
+				    Fact_KPI_PayerMix1 = dbo{[Name="Fact_KPI_PayerMix"]}[Data]
+				in
+				    Fact_KPI_PayerMix1
+
+	annotation PBI_ResultType = Table
+

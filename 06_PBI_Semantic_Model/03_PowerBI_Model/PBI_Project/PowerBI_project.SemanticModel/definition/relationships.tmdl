@@ -1,0 +1,93 @@
+relationship AutoDetected_11c81274-af20-4bbf-bf20-435f33fc506c
+	fromColumn: Fact_KPI_Disposition.Facility_Key
+	toColumn: Fact_KPI_FinancialPressure.Facility_Key
+
+relationship AutoDetected_11013eb4-850a-454e-9ce2-2c3269e5d25c
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Fact_KPI_LOS_Summary.Facility_Key
+	toColumn: Fact_KPI_FinancialPressure.Facility_Key
+
+relationship AutoDetected_95dbfd9a-17c4-4dc5-9ecf-217d97622e7a
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Fact_KPI_Mortality.Facility_Key
+	toColumn: Fact_KPI_FinancialPressure.Facility_Key
+
+relationship AutoDetected_076f8cbe-4647-487d-8d33-7bcc72078521
+	fromColumn: Fact_KPI_PayerMix.Facility_Key
+	toColumn: Fact_KPI_FinancialPressure.Facility_Key
+
+relationship AutoDetected_6a0ec9c6-703a-4b6a-9156-88b66f950372
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Fact_KPI_SeverityMix.Facility_Key
+	toColumn: Fact_KPI_FinancialPressure.Facility_Key
+
+relationship AutoDetected_1c726695-4d69-4cac-aea5-440529363ab8
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Fact_KPI_Unplanned.Facility_Key
+	toColumn: Fact_KPI_FinancialPressure.Facility_Key
+
+relationship AutoDetected_a76d7e48-d7ae-4d6f-8b7c-4d6978148aad
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Dim_Facility.Facility_Key
+	toColumn: Fact_KPI_FinancialPressure.Facility_Key
+
+relationship AutoDetected_bcc3938e-86e6-406f-ade1-67210cbb0a38
+	fromColumn: Fact_KPI_Disposition.Discharge_Year
+	toColumn: Dim_Year.Discharge_Year
+
+relationship AutoDetected_bb6c5317-ab3c-4ab2-8d02-e3ad39ff64f7
+	isActive: false
+	fromColumn: Fact_KPI_FinancialPressure.Discharge_Year
+	toColumn: Dim_Year.Discharge_Year
+
+relationship AutoDetected_41065d2c-204b-46b3-ba45-a32535a27125
+	isActive: false
+	fromColumn: Fact_KPI_LOS_Summary.Discharge_Year
+	toColumn: Dim_Year.Discharge_Year
+
+relationship AutoDetected_788b91fa-8cc4-4414-a0f3-74406936febd
+	isActive: false
+	fromColumn: Fact_KPI_Mortality.Discharge_Year
+	toColumn: Dim_Year.Discharge_Year
+
+relationship AutoDetected_2f75efa7-736b-4931-89cd-61aef7b544ae
+	fromColumn: Fact_KPI_PayerMix.Discharge_Year
+	toColumn: Dim_Year.Discharge_Year
+
+relationship AutoDetected_3dba9919-e58e-4a69-a043-c610437c86ee
+	isActive: false
+	fromColumn: Fact_KPI_SeverityMix.Discharge_Year
+	toColumn: Dim_Year.Discharge_Year
+
+relationship AutoDetected_fedec508-dfa7-4a76-adda-591de09990ab
+	isActive: false
+	fromColumn: Fact_KPI_Unplanned.Discharge_Year
+	toColumn: Dim_Year.Discharge_Year
+
+relationship AutoDetected_17d8c856-3f0a-419b-ba4b-e75babfcfc5a
+	fromColumn: Fact_KPI_Disposition.Disposition_Key
+	toColumn: Dim_Disposition.Disposition_Key
+
+relationship AutoDetected_3cc28f36-f7d5-45d3-9fe9-a1c5a65afb49
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Fact_KPI_SeverityMix.Total_Encounters
+	toColumn: Fact_KPI_Mortality.Total_Encounters
+
+relationship AutoDetected_20e2e5f8-966a-4ed4-9cde-41a600109588
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Fact_KPI_Unplanned.Total_Encounters
+	toColumn: Fact_KPI_Mortality.Total_Encounters
+
+relationship AutoDetected_39da2127-a0c7-4eba-88c9-99514b88dbfe
+	fromColumn: Fact_KPI_PayerMix.Payer_Key
+	toColumn: Dim_Payer.Payer_Key
+

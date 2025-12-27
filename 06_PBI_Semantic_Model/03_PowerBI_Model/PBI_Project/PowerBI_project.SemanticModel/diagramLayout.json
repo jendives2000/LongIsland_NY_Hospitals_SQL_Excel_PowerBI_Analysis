@@ -1,0 +1,204 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1575.2590088390743,
+            "y": 667.38845997987823
+          },
+          "nodeIndex": "Dim_AdmissionType",
+          "nodeLineageTag": "24a0d430-6b9a-4a1f-8ab5-92ee89c8dbca",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1859.2590088390743,
+            "y": 607.38845997987823
+          },
+          "nodeIndex": "Dim_ClinicalClass",
+          "nodeLineageTag": "d9d210df-7172-4ab6-9dc0-9f46d270c13c",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2143.2590088390743,
+            "y": 593.38845997987823
+          },
+          "nodeIndex": "Dim_Date",
+          "nodeLineageTag": "c954be0f-6932-4d25-a4aa-162cab3c3e57",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1301.2590088390743,
+            "y": 1324.7769199597565
+          },
+          "nodeIndex": "Dim_Disposition",
+          "nodeLineageTag": "10ce94cf-7176-4fbb-8a69-df0e34d6e8c1",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 724.92917128268414,
+            "y": -10
+          },
+          "nodeIndex": "Dim_Facility",
+          "nodeLineageTag": "42fcdb87-5f7a-4947-90cc-90a460c02430",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 635.71868287417135,
+            "y": 1254.5671916706267
+          },
+          "nodeIndex": "Dim_Payer",
+          "nodeLineageTag": "5b753935-5b34-47d6-a3cc-a08ce3525d6b",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 477.27977937518949,
+            "y": 1049.379240914483
+          },
+          "nodeIndex": "Dim_Year",
+          "nodeLineageTag": "a1874355-000b-4746-82b1-59aa0ecf5bd3",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1055.208896189401,
+            "y": 1097.384874037517
+          },
+          "nodeIndex": "Fact_KPI_Disposition",
+          "nodeLineageTag": "28d54733-b7f6-4bb7-8037-c796ad6b3786",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 544.29434629111483,
+            "y": 546.97378871660317
+          },
+          "nodeIndex": "Fact_KPI_FinancialPressure",
+          "nodeLineageTag": "8a5ee703-ad3e-4f40-8e91-46930e042ec1",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 988.68160115493015,
+            "y": 594.93270747564816
+          },
+          "nodeIndex": "Fact_KPI_LOS_Summary",
+          "nodeLineageTag": "4f38a133-375c-441a-a981-a1b9ff20836e",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 10,
+            "y": 260.77637165151873
+          },
+          "nodeIndex": "Fact_KPI_Mortality",
+          "nodeLineageTag": "da3c3f6e-b84e-48f8-ab27-556308e175cc",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 766.79376898782971,
+            "y": 898.51205900697585
+          },
+          "nodeIndex": "Fact_KPI_PayerMix",
+          "nodeLineageTag": "4e5bbc2f-ef0d-4989-937d-abe48d75934e",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 299.81783118906628,
+            "y": 14.242204092991415
+          },
+          "nodeIndex": "Fact_KPI_SeverityMix",
+          "nodeLineageTag": "8cd63fbf-3f19-4e29-a014-2015f1361a29",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 474.91811731650682,
+            "y": 268.77865516853
+          },
+          "nodeIndex": "Fact_KPI_Unplanned",
+          "nodeLineageTag": "ffddfc83-a994-4118-8837-d1fe22b87a62",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

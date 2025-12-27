@@ -1,0 +1,41 @@
+table Dim_Year
+	lineageTag: a1874355-000b-4746-82b1-59aa0ecf5bd3
+
+	column Discharge_Year
+		dataType: int64
+		formatString: 0
+		lineageTag: fbd0aaec-0a7a-4fab-b95e-8989222198d0
+		summarizeBy: none
+		sourceColumn: Discharge_Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year_Label
+		dataType: string
+		lineageTag: d65b2502-69f6-45e1-996d-da78e9b26389
+		summarizeBy: none
+		sourceColumn: Year_Label
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year_Sort
+		dataType: int64
+		formatString: 0
+		lineageTag: 74b6bfc2-72da-415a-9cc5-4458a7345c2b
+		summarizeBy: sum
+		sourceColumn: Year_Sort
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Year = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("DESKTOP-3O401KK", "LI_NYHealth", [HierarchicalNavigation=true]),
+				    dbo = Source{[Schema="dbo"]}[Data],
+				    Dim_Year1 = dbo{[Name="Dim_Year"]}[Data]
+				in
+				    Dim_Year1
+
+	annotation PBI_ResultType = Table
+

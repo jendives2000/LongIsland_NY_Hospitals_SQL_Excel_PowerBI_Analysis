@@ -1,0 +1,49 @@
+table Dim_Payer
+	lineageTag: 5b753935-5b34-47d6-a3cc-a08ce3525d6b
+
+	column Payer_Key
+		dataType: int64
+		formatString: 0
+		lineageTag: ea11da85-4a6e-4cea-a3fe-36b43602cfd5
+		summarizeBy: none
+		sourceColumn: Payer_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Payment_Typology_1
+		dataType: string
+		lineageTag: f02f607a-035d-407a-bf82-68197b6f61b8
+		summarizeBy: none
+		sourceColumn: Payment_Typology_1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Payment_Typology_Group
+		dataType: string
+		lineageTag: 8f1c062f-307e-451c-9dd1-7525412edb05
+		summarizeBy: none
+		sourceColumn: Payment_Typology_Group
+
+		annotation SummarizationSetBy = Automatic
+
+	column Is_Unknown
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: e05d08c4-dede-42ce-ac46-bff8452d3204
+		summarizeBy: none
+		sourceColumn: Is_Unknown
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Payer = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("DESKTOP-3O401KK", "LI_NYHealth", [HierarchicalNavigation=true]),
+				    dbo = Source{[Schema="dbo"]}[Data],
+				    Dim_Payer1 = dbo{[Name="Dim_Payer"]}[Data]
+				in
+				    Dim_Payer1
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,101 @@
+table Fact_KPI_FinancialPressure
+	lineageTag: 8a5ee703-ad3e-4f40-8e91-46930e042ec1
+
+	column Facility_Key
+		dataType: int64
+		formatString: 0
+		lineageTag: ae98e857-6eae-453b-817f-912109f31942
+		summarizeBy: none
+		sourceColumn: Facility_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Discharge_Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 2a5dc514-d26f-4bab-8ad8-628450b0723e
+		summarizeBy: sum
+		sourceColumn: Discharge_Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Encounter_Count
+		dataType: int64
+		formatString: 0
+		lineageTag: 30153f4c-8e97-4985-a57e-6eb40d470188
+		summarizeBy: sum
+		sourceColumn: Encounter_Count
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total_Costs
+		dataType: double
+		lineageTag: 14156f58-9394-4195-9da3-fd01836e48ed
+		summarizeBy: sum
+		sourceColumn: Total_Costs
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Total_Charges
+		dataType: double
+		lineageTag: 00b24584-e920-471f-9cda-f7c4590a2a43
+		summarizeBy: sum
+		sourceColumn: Total_Charges
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Negative_Margin_Encounter_Count
+		dataType: int64
+		formatString: 0
+		lineageTag: b6b4d20f-5fea-45ca-9dfa-2e8a86f4876b
+		summarizeBy: sum
+		sourceColumn: Negative_Margin_Encounter_Count
+
+		annotation SummarizationSetBy = Automatic
+
+	column Avg_MCost_validation
+		dataType: double
+		lineageTag: aeda7a9e-d1ef-4f1d-9eda-e53adc349114
+		summarizeBy: sum
+		sourceColumn: Avg_MCost_validation
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Total_Margin_validation
+		dataType: double
+		lineageTag: 76b57b38-32c6-4124-aa12-93013de3b9c5
+		summarizeBy: sum
+		sourceColumn: Total_Margin_validation
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Margin_Pressure_validation
+		dataType: double
+		lineageTag: 719259da-4c68-4af9-9dc7-987f9bb6965f
+		summarizeBy: sum
+		sourceColumn: Margin_Pressure_validation
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Fact_KPI_FinancialPressure = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("DESKTOP-3O401KK", "LI_NYHealth", [HierarchicalNavigation=true]),
+				    dbo = Source{[Schema="dbo"]}[Data],
+				    Fact_KPI_FinancialPressure1 = dbo{[Name="Fact_KPI_FinancialPressure"]}[Data]
+				in
+				    Fact_KPI_FinancialPressure1
+
+	annotation PBI_ResultType = Table
+

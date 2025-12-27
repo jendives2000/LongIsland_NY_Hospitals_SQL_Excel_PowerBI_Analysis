@@ -1,0 +1,40 @@
+table Dim_AdmissionType
+	lineageTag: 24a0d430-6b9a-4a1f-8ab5-92ee89c8dbca
+
+	column AdmissionType_Key
+		dataType: int64
+		formatString: 0
+		lineageTag: a18d2135-7bb8-4c21-8dbd-66b3135d3362
+		summarizeBy: count
+		sourceColumn: AdmissionType_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column AdmissionType_Std
+		dataType: string
+		lineageTag: cf6186f0-43ca-431d-8bc7-14c2a65f2e27
+		summarizeBy: none
+		sourceColumn: AdmissionType_Std
+
+		annotation SummarizationSetBy = Automatic
+
+	column AdmissionType_Raw
+		dataType: string
+		lineageTag: 04da0861-b345-4db3-ae9a-e5295e3c8d53
+		summarizeBy: none
+		sourceColumn: AdmissionType_Raw
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_AdmissionType = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("DESKTOP-3O401KK", "LI_NYHealth", [HierarchicalNavigation=true]),
+				    dbo = Source{[Schema="dbo"]}[Data],
+				    Dim_AdmissionType1 = dbo{[Name="Dim_AdmissionType"]}[Data]
+				in
+				    Dim_AdmissionType1
+
+	annotation PBI_ResultType = Table
+

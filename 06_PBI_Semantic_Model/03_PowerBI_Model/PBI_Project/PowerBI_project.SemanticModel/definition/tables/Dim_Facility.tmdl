@@ -1,0 +1,65 @@
+table Dim_Facility
+	lineageTag: 42fcdb87-5f7a-4947-90cc-90a460c02430
+
+	column Facility_Key
+		dataType: int64
+		formatString: 0
+		lineageTag: e39b776c-f1b2-467c-9081-acb07c7ee958
+		summarizeBy: none
+		sourceColumn: Facility_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Facility_Id_Native
+		dataType: int64
+		formatString: 0
+		lineageTag: 3bf5f3f0-7e82-41bd-a044-71d7a6a5b651
+		summarizeBy: sum
+		sourceColumn: Facility_Id_Native
+
+		annotation SummarizationSetBy = Automatic
+
+	column Operating_Certificate_Num
+		dataType: string
+		lineageTag: 25654077-8223-4590-90cc-69d7f4326f82
+		summarizeBy: none
+		sourceColumn: Operating_Certificate_Num
+
+		annotation SummarizationSetBy = Automatic
+
+	column Facility_Name
+		dataType: string
+		lineageTag: eb1c005a-ed2b-4ac1-837a-1712760ae483
+		summarizeBy: none
+		sourceColumn: Facility_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Health_Service_Area
+		dataType: string
+		lineageTag: e6c05c8f-c2c8-4cf8-be2a-5e9794e556b1
+		summarizeBy: none
+		sourceColumn: Health_Service_Area
+
+		annotation SummarizationSetBy = Automatic
+
+	column Hospital_County
+		dataType: string
+		lineageTag: a34271da-4a83-4115-83b1-85b5f301105e
+		summarizeBy: none
+		sourceColumn: Hospital_County
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Facility = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("DESKTOP-3O401KK", "LI_NYHealth", [HierarchicalNavigation=true]),
+				    dbo = Source{[Schema="dbo"]}[Data],
+				    Dim_Facility1 = dbo{[Name="Dim_Facility"]}[Data]
+				in
+				    Dim_Facility1
+
+	annotation PBI_ResultType = Table
+

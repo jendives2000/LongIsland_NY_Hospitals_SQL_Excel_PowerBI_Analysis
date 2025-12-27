@@ -1,0 +1,79 @@
+table Fact_KPI_LOS_Summary
+	lineageTag: 4f38a133-375c-441a-a981-a1b9ff20836e
+
+	column Facility_Key
+		dataType: int64
+		formatString: 0
+		lineageTag: be162469-8ca7-4cb6-8f3a-b0a80de9d33e
+		summarizeBy: none
+		sourceColumn: Facility_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Discharge_Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 9d1f5f64-043a-4e01-96bc-9125e40a82d9
+		summarizeBy: sum
+		sourceColumn: Discharge_Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Encounter_Count
+		dataType: int64
+		formatString: 0
+		lineageTag: 78487ebe-ad15-4e02-bd36-8f9b0cb666dd
+		summarizeBy: sum
+		sourceColumn: Encounter_Count
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total_LOS_Days
+		dataType: int64
+		formatString: 0
+		lineageTag: 990d9599-0a2b-4306-9e8f-b19ece585c20
+		summarizeBy: sum
+		sourceColumn: Total_LOS_Days
+
+		annotation SummarizationSetBy = Automatic
+
+	column Min_LOS_Days
+		dataType: int64
+		formatString: 0
+		lineageTag: ad416185-d350-4563-b00a-b80ae7087b6b
+		summarizeBy: sum
+		sourceColumn: Min_LOS_Days
+
+		annotation SummarizationSetBy = Automatic
+
+	column Max_LOS_Days
+		dataType: int64
+		formatString: 0
+		lineageTag: fae60c5e-0722-4e74-b5e6-cb560b1f0c43
+		summarizeBy: sum
+		sourceColumn: Max_LOS_Days
+
+		annotation SummarizationSetBy = Automatic
+
+	column Avg_LOS_validation
+		dataType: double
+		lineageTag: 4711e8fe-1709-4bd3-97df-c48493b331c2
+		summarizeBy: sum
+		sourceColumn: Avg_LOS_validation
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Fact_KPI_LOS_Summary = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("DESKTOP-3O401KK", "LI_NYHealth", [HierarchicalNavigation=true]),
+				    dbo = Source{[Schema="dbo"]}[Data],
+				    Fact_KPI_LOS_Summary1 = dbo{[Name="Fact_KPI_LOS_Summary"]}[Data]
+				in
+				    Fact_KPI_LOS_Summary1
+
+	annotation PBI_ResultType = Table
+

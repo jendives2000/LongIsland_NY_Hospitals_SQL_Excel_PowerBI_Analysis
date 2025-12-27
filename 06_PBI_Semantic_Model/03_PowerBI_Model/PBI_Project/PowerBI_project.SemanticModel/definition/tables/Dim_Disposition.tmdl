@@ -1,0 +1,40 @@
+table Dim_Disposition
+	lineageTag: 10ce94cf-7176-4fbb-8a69-df0e34d6e8c1
+
+	column Disposition_Key
+		dataType: int64
+		formatString: 0
+		lineageTag: 18c05db0-4acd-40dd-9199-16dc52d6f05e
+		summarizeBy: none
+		sourceColumn: Disposition_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Disposition_Grouped
+		dataType: string
+		lineageTag: 695c6d3d-5e1b-4455-885c-75bdee339521
+		summarizeBy: none
+		sourceColumn: Disposition_Grouped
+
+		annotation SummarizationSetBy = Automatic
+
+	column Disposition_Detailed
+		dataType: string
+		lineageTag: 5e2e04f8-1058-4ba2-b3a0-ef78529869aa
+		summarizeBy: none
+		sourceColumn: Disposition_Detailed
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Disposition = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("DESKTOP-3O401KK", "LI_NYHealth", [HierarchicalNavigation=true]),
+				    dbo = Source{[Schema="dbo"]}[Data],
+				    Dim_Disposition1 = dbo{[Name="Dim_Disposition"]}[Data]
+				in
+				    Dim_Disposition1
+
+	annotation PBI_ResultType = Table
+

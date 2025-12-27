@@ -1,0 +1,114 @@
+table Dim_Date
+	lineageTag: c954be0f-6932-4d25-a4aa-162cab3c3e57
+
+	column Date_Key
+		dataType: int64
+		formatString: 0
+		lineageTag: 8d5da0e3-c9f9-4d3b-bc8d-9243bb24c5aa
+		summarizeBy: count
+		sourceColumn: Date_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Full_Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3d802a9c-89b2-43f7-9446-b13c63df1b91
+		summarizeBy: none
+		sourceColumn: Full_Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: fe52d313-6f51-4c04-8691-54947468290b
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 775e9735-cbce-4269-bcbf-581a7be2f827
+		summarizeBy: sum
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month_Number
+		dataType: int64
+		formatString: 0
+		lineageTag: b73eb83a-a4a0-45b1-b3cf-cce9a274d4ee
+		summarizeBy: sum
+		sourceColumn: Month_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month_Name
+		dataType: string
+		lineageTag: d9aba3f3-2633-44f1-939b-59aef1790eab
+		summarizeBy: none
+		sourceColumn: Month_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day_Of_Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 186fe3f9-ff9c-4587-881d-f3ebbe84a5ad
+		summarizeBy: sum
+		sourceColumn: Day_Of_Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day_Of_Week_Number
+		dataType: int64
+		formatString: 0
+		lineageTag: 8f2d0e59-0753-40a5-b81d-c3023397a3f0
+		summarizeBy: sum
+		sourceColumn: Day_Of_Week_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day_Of_Week_Name
+		dataType: string
+		lineageTag: fe9800aa-a037-4082-b2e7-d96ce3598083
+		summarizeBy: none
+		sourceColumn: Day_Of_Week_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Is_Weekend
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 3f472aed-cdb7-4dda-8ef6-7856612865e7
+		summarizeBy: none
+		sourceColumn: Is_Weekend
+
+		annotation SummarizationSetBy = Automatic
+
+	column Is_Year_Anchor
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 9ea806c8-793d-48d9-b09c-29c7c4446bde
+		summarizeBy: none
+		sourceColumn: Is_Year_Anchor
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Date = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("DESKTOP-3O401KK", "LI_NYHealth", [HierarchicalNavigation=true]),
+				    dbo = Source{[Schema="dbo"]}[Data],
+				    Dim_Date1 = dbo{[Name="Dim_Date"]}[Data]
+				in
+				    Dim_Date1
+
+	annotation PBI_ResultType = Table
+

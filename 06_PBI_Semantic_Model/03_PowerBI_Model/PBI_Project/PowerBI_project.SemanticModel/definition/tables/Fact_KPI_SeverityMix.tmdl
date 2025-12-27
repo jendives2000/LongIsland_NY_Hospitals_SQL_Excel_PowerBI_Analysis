@@ -1,0 +1,61 @@
+table Fact_KPI_SeverityMix
+	lineageTag: 8cd63fbf-3f19-4e29-a014-2015f1361a29
+
+	column Facility_Key
+		dataType: int64
+		formatString: 0
+		lineageTag: b84a278a-13c8-4b65-b9e1-c6da52af69b3
+		summarizeBy: none
+		sourceColumn: Facility_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Discharge_Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 1363e8d6-6c87-4c57-844a-dbfb02d62894
+		summarizeBy: sum
+		sourceColumn: Discharge_Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total_Encounters
+		dataType: int64
+		formatString: 0
+		lineageTag: 3aa6d17c-b415-46cf-9fd6-b92001a22ca0
+		summarizeBy: sum
+		sourceColumn: Total_Encounters
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weighted_Severity_Sum
+		dataType: int64
+		formatString: 0
+		lineageTag: ef8b2f73-39cb-4f84-b1eb-c2c8b70d77c9
+		summarizeBy: sum
+		sourceColumn: Weighted_Severity_Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Severity_Mix_Index_validation
+		dataType: double
+		lineageTag: c1a51d08-4181-4a79-bff8-16d02a093e3c
+		summarizeBy: sum
+		sourceColumn: Severity_Mix_Index_validation
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Fact_KPI_SeverityMix = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("DESKTOP-3O401KK", "LI_NYHealth", [HierarchicalNavigation=true]),
+				    dbo = Source{[Schema="dbo"]}[Data],
+				    Fact_KPI_SeverityMix1 = dbo{[Name="Fact_KPI_SeverityMix"]}[Data]
+				in
+				    Fact_KPI_SeverityMix1
+
+	annotation PBI_ResultType = Table
+

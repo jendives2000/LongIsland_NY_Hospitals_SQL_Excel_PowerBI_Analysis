@@ -1,0 +1,70 @@
+table Fact_KPI_Unplanned
+	lineageTag: ffddfc83-a994-4118-8837-d1fe22b87a62
+
+	column Facility_Key
+		dataType: int64
+		formatString: 0
+		lineageTag: 8485ec5c-5351-449f-a19c-95ff12caab74
+		summarizeBy: none
+		sourceColumn: Facility_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Discharge_Year
+		dataType: int64
+		formatString: 0
+		lineageTag: e30a6f0b-64bd-4214-8017-a1282feb34a3
+		summarizeBy: sum
+		sourceColumn: Discharge_Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total_Encounters
+		dataType: int64
+		formatString: 0
+		lineageTag: 0c3a5a4c-5d13-4e22-b2b3-4005c45c7e5b
+		summarizeBy: sum
+		sourceColumn: Total_Encounters
+
+		annotation SummarizationSetBy = Automatic
+
+	column Unplanned_Encounter_Count
+		dataType: int64
+		formatString: 0
+		lineageTag: 166c28be-aa00-4b43-a799-6e6d5e43732f
+		summarizeBy: sum
+		sourceColumn: Unplanned_Encounter_Count
+
+		annotation SummarizationSetBy = Automatic
+
+	column Planned_Encounter_Count
+		dataType: int64
+		formatString: 0
+		lineageTag: 53389abb-3189-46b2-9525-9d6917ee2afc
+		summarizeBy: sum
+		sourceColumn: Planned_Encounter_Count
+
+		annotation SummarizationSetBy = Automatic
+
+	column Unplanned_Admission_Rate_validation
+		dataType: double
+		lineageTag: aa9b9bfd-b6a5-42b2-b8bb-a7f113ba604d
+		summarizeBy: sum
+		sourceColumn: Unplanned_Admission_Rate_validation
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Fact_KPI_Unplanned = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("DESKTOP-3O401KK", "LI_NYHealth", [HierarchicalNavigation=true]),
+				    dbo = Source{[Schema="dbo"]}[Data],
+				    Fact_KPI_Unplanned1 = dbo{[Name="Fact_KPI_Unplanned"]}[Data]
+				in
+				    Fact_KPI_Unplanned1
+
+	annotation PBI_ResultType = Table
+

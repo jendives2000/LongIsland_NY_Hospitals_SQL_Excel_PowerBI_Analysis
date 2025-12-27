@@ -1,0 +1,81 @@
+table Dim_ClinicalClass
+	lineageTag: d9d210df-7172-4ab6-9dc0-9f46d270c13c
+
+	column ClinicalClass_Key
+		dataType: int64
+		formatString: 0
+		lineageTag: d4d95719-92a6-47b6-a60c-ce25f9af9277
+		summarizeBy: count
+		sourceColumn: ClinicalClass_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column APR_DRG_Code
+		dataType: string
+		lineageTag: 432c47cf-05e1-422b-8a15-4055fc3fb9ae
+		summarizeBy: none
+		sourceColumn: APR_DRG_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column APR_DRG_Description
+		dataType: string
+		lineageTag: 75ec9d11-c4d0-43e4-a324-48e85da30d35
+		summarizeBy: none
+		sourceColumn: APR_DRG_Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column APR_Severity_Code
+		dataType: int64
+		formatString: 0
+		lineageTag: e9be9626-2f80-49df-8565-7a17effccc60
+		summarizeBy: count
+		sourceColumn: APR_Severity_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column APR_Severity_Description
+		dataType: string
+		lineageTag: 08422a04-96fa-4e02-87cd-32b3e4f07c65
+		summarizeBy: none
+		sourceColumn: APR_Severity_Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column APR_Risk_Of_Mortality_Desc
+		dataType: string
+		lineageTag: af507df1-9c72-4360-8e08-0033cdf0cb2c
+		summarizeBy: none
+		sourceColumn: APR_Risk_Of_Mortality_Desc
+
+		annotation SummarizationSetBy = Automatic
+
+	column APR_MDC_Code
+		dataType: string
+		lineageTag: 7803ead4-3258-466f-b3fb-e35ec83f8759
+		summarizeBy: none
+		sourceColumn: APR_MDC_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column APR_MDC_Description
+		dataType: string
+		lineageTag: 14c8ca7f-b252-466e-8435-709d029434af
+		summarizeBy: none
+		sourceColumn: APR_MDC_Description
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_ClinicalClass = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("DESKTOP-3O401KK", "LI_NYHealth", [HierarchicalNavigation=true]),
+				    dbo = Source{[Schema="dbo"]}[Data],
+				    Dim_ClinicalClass1 = dbo{[Name="Dim_ClinicalClass"]}[Data]
+				in
+				    Dim_ClinicalClass1
+
+	annotation PBI_ResultType = Table
+
