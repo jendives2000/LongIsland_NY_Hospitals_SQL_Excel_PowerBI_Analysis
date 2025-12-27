@@ -1,6 +1,7 @@
 # 06 — PowerBI Semantic Model
 
-This step formalizes a **Power BI–ready semantic model** on top of the validated KPI layer from `05_KPI_Dev_PowerBI_Modeling`.
+This step formalizes a **Power BI–ready semantic model** on top of the validated KPI layer from `05_KPI_Dev`.  
+>**KPIs are now locked.** 
 
 The key idea is to introduce a **KPI Integration Layer**: a stable, documented set of **KPI fact tables + shared dimensions** that makes dashboards fast to build, easy to validate, and hard to break.
 
@@ -8,7 +9,7 @@ The key idea is to introduce a **KPI Integration Layer**: a stable, documented s
 
 ## Why this step exists
 
-KPI SQL scripts prove metrics are correct, but BI tools need more than correctness:
+KPIs from SQL scripts were reconciled and confirmed. For BI tools we now need a semantic model with:
 
 * consistent **grain** (what a row means)
 * predictable **relationships**
