@@ -1,0 +1,26 @@
+/*========================================================
+  Tiny Conformed Dimension: dbo.Dim_Year
+  Source: dbo.Dim_Date
+  Purpose: Year slicing for year-grain KPI facts
+========================================================*/
+
+IF OBJECT_ID('dbo.Dim_Year', 'U') IS NOT NULL
+    DROP TABLE dbo.Dim_Year;
+GO
+
+CREATE TABLE dbo.Dim_Year (
+    Discharge_Year INT NOT NULL PRIMARY KEY,
+    Year_Label     VARCHAR(4) NOT NULL,
+    Year_Sort      INT NOT NULL
+);
+GO
+
+INSERT INTO dbo.Dim_Year (Discharge_Year, Year_Label, Year_Sort)
+SELECT DISTINCT
+    d.[Year]              AS Discharge_Year,
+    CAST(d.[Year] AS VARCHAR(4)) AS Year_Label,
+    d.[Year]              AS Year_Sort
+FROM dbo.Dim_Date d
+WHERE d.[Year] IS NOT NULL
+ORDER BY d.[Year];
+GO
