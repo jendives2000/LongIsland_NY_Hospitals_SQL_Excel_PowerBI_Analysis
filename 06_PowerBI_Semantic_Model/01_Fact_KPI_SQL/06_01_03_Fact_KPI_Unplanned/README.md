@@ -9,7 +9,7 @@ Measures **acute intake pressure** driven by unplanned admissions.
 **Primary Measures**
 - Numerator: `Unplanned_Encounter_Count`
 - Denominator: `Total_Encounters`
-- Metric: `Unplanned_Admission_Rate_validation`
+- Metric: `Unplanned_Admission_Rate_validation` (stored for validation, recomputed in DAX)
 
 <details>
 <summary>🖼 See the Output Screenshot</summary>
