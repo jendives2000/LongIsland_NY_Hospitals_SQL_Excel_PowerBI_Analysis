@@ -71,8 +71,8 @@ GO
 SELECT
     f.Facility_Name,
     k.Discharge_Year,
-    k.Total_Encounters,
     k.Weighted_Severity_Sum,
+    k.Total_Encounters,
     CAST(
         k.Weighted_Severity_Sum * 1.0
         / NULLIF(k.Total_Encounters, 0)

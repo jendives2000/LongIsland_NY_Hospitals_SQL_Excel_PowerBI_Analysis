@@ -8,14 +8,15 @@ Establishes the **clinical acuity baseline** required to interpret all downstrea
 - One row per **Facility × Discharge Year** - 2015
 
 **Primary Measures**
-- Total encounters
-- Weighted severity sum
-- Severity Mix Index (stored for validation, recomputed in DAX)
+- Numerator: `Weighted_Severity_Sum`
+- Denominator: `Total_Encounters`
+- Metric: `Severity_Mix_Index_validation` (stored for validation, recomputed in DAX)
 
 <details>
 <summary>🖼 See the Output Screenshot</summary>
 
 ![Fact_KPI_SeverityMix](./screenshots/image.png)
+
 
 </details>
 
