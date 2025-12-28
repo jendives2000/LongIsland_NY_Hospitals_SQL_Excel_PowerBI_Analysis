@@ -3,28 +3,37 @@ table Fact_KPI_PayerMix
 
 	column Facility_Key
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 0a90274a-0fea-4f06-a055-c1f74cfff737
 		summarizeBy: none
 		sourceColumn: Facility_Key
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column Discharge_Year
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: f96e40ff-156a-4274-a525-50fc6b6e0d2a
 		summarizeBy: none
 		sourceColumn: Discharge_Year
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column Payer_Key
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 20f1c882-351b-43c5-a220-f2402619bc5c
 		summarizeBy: none
 		sourceColumn: Payer_Key
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -68,9 +77,12 @@ table Fact_KPI_PayerMix
 
 	column Payer_Encounter_Share_validation
 		dataType: double
+		isHidden
 		lineageTag: d156642a-7779-4c63-86f7-e364f4591382
 		summarizeBy: sum
 		sourceColumn: Payer_Encounter_Share_validation
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -78,9 +90,12 @@ table Fact_KPI_PayerMix
 
 	column Payer_Cost_Share_validation
 		dataType: double
+		isHidden
 		lineageTag: 48eab3b4-fed3-4c91-894d-1d4869561476
 		summarizeBy: sum
 		sourceColumn: Payer_Cost_Share_validation
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -88,9 +103,12 @@ table Fact_KPI_PayerMix
 
 	column Payer_Charge_Share_validation
 		dataType: double
+		isHidden
 		lineageTag: 0fb67eee-eecf-4233-a335-0d7874b2ec1b
 		summarizeBy: sum
 		sourceColumn: Payer_Charge_Share_validation
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -98,9 +116,12 @@ table Fact_KPI_PayerMix
 
 	column Avg_Cost_Per_Encounter_validation
 		dataType: double
+		isHidden
 		lineageTag: aef9ea1b-d8a2-4615-83bc-6ab40a0ff30c
 		summarizeBy: sum
 		sourceColumn: Avg_Cost_Per_Encounter_validation
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -108,9 +129,12 @@ table Fact_KPI_PayerMix
 
 	column Avg_Charges_Per_Encounter_validation
 		dataType: double
+		isHidden
 		lineageTag: 1a05dfc8-5f02-475b-8f38-f57cd8b2f06e
 		summarizeBy: sum
 		sourceColumn: Avg_Charges_Per_Encounter_validation
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

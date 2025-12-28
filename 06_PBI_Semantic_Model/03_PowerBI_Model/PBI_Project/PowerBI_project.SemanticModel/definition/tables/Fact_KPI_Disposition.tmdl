@@ -3,28 +3,37 @@ table Fact_KPI_Disposition
 
 	column Facility_Key
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: b78fe50b-6868-4daa-a249-039e8ee0430c
 		summarizeBy: none
 		sourceColumn: Facility_Key
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column Discharge_Year
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 92ab56f9-4aa4-4aa3-868d-378d79a5e373
 		summarizeBy: none
 		sourceColumn: Discharge_Year
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column Disposition_Key
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: a5285415-3a0b-4c89-b93c-a116b0d87d88
 		summarizeBy: none
 		sourceColumn: Disposition_Key
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

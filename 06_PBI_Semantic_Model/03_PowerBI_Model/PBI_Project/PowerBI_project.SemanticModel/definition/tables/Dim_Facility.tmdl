@@ -3,27 +3,36 @@ table Dim_Facility
 
 	column Facility_Key
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: e39b776c-f1b2-467c-9081-acb07c7ee958
 		summarizeBy: none
 		sourceColumn: Facility_Key
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column Facility_Id_Native
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 3bf5f3f0-7e82-41bd-a044-71d7a6a5b651
 		summarizeBy: sum
 		sourceColumn: Facility_Id_Native
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column Operating_Certificate_Num
 		dataType: string
+		isHidden
 		lineageTag: 25654077-8223-4590-90cc-69d7f4326f82
 		summarizeBy: none
 		sourceColumn: Operating_Certificate_Num
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

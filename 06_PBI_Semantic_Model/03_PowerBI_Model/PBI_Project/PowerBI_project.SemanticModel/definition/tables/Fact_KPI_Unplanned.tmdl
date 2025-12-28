@@ -3,19 +3,25 @@ table Fact_KPI_Unplanned
 
 	column Facility_Key
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 8485ec5c-5351-449f-a19c-95ff12caab74
 		summarizeBy: none
 		sourceColumn: Facility_Key
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column Discharge_Year
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: e30a6f0b-64bd-4214-8017-a1282feb34a3
 		summarizeBy: sum
 		sourceColumn: Discharge_Year
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -48,9 +54,12 @@ table Fact_KPI_Unplanned
 
 	column Unplanned_Admission_Rate_validation
 		dataType: double
+		isHidden
 		lineageTag: aa9b9bfd-b6a5-42b2-b8bb-a7f113ba604d
 		summarizeBy: sum
 		sourceColumn: Unplanned_Admission_Rate_validation
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

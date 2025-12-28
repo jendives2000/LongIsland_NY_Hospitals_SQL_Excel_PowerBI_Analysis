@@ -3,10 +3,13 @@ table Dim_Disposition
 
 	column Disposition_Key
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 18c05db0-4acd-40dd-9199-16dc52d6f05e
 		summarizeBy: none
 		sourceColumn: Disposition_Key
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

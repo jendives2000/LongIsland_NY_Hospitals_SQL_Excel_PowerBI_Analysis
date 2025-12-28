@@ -5,7 +5,7 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 0,
-        "y": 661.1929108639946
+        "y": 301.4709559595247
       },
       "nodes": [
         {
@@ -29,7 +29,7 @@
           "nodeIndex": "Dim_ClinicalClass",
           "nodeLineageTag": "d9d210df-7172-4ab6-9dc0-9f46d270c13c",
           "size": {
-            "height": 272,
+            "height": 312.13666573425621,
             "width": 234
           },
           "zIndex": 2
@@ -55,7 +55,7 @@
           "nodeIndex": "Dim_Disposition",
           "nodeLineageTag": "10ce94cf-7176-4fbb-8a69-df0e34d6e8c1",
           "size": {
-            "height": 152,
+            "height": 171.62236991452528,
             "width": 234
           },
           "zIndex": 4
@@ -68,7 +68,7 @@
           "nodeIndex": "Dim_Facility",
           "nodeLineageTag": "42fcdb87-5f7a-4947-90cc-90a460c02430",
           "size": {
-            "height": 224,
+            "height": 269.48822116549047,
             "width": 234
           },
           "zIndex": 14
@@ -81,7 +81,7 @@
           "nodeIndex": "Dim_Payer",
           "nodeLineageTag": "5b753935-5b34-47d6-a3cc-a08ce3525d6b",
           "size": {
-            "height": 176,
+            "height": 200.97392534575943,
             "width": 234
           },
           "zIndex": 5
@@ -107,20 +107,20 @@
           "nodeIndex": "Fact_KPI_Disposition",
           "nodeLineageTag": "28d54733-b7f6-4bb7-8037-c796ad6b3786",
           "size": {
-            "height": 176,
+            "height": 211.67703620822783,
             "width": 234
           },
           "zIndex": 7
         },
         {
           "location": {
-            "x": 45.050543257109069,
-            "y": 1226.4110237688312
+            "x": 0,
+            "y": 1269.2234672187044
           },
           "nodeIndex": "Fact_KPI_FinancialPressure",
           "nodeLineageTag": "8a5ee703-ad3e-4f40-8e91-46930e042ec1",
           "size": {
-            "height": 296,
+            "height": 316.51429581973093,
             "width": 234
           },
           "zIndex": 8
@@ -153,21 +153,21 @@
         },
         {
           "location": {
-            "x": 54.983166337649664,
-            "y": 829.40936647318233
+            "x": 92.444054356288831,
+            "y": 826.73358875756526
           },
           "nodeIndex": "Fact_KPI_PayerMix",
           "nodeLineageTag": "4e5bbc2f-ef0d-4989-937d-abe48d75934e",
           "size": {
-            "height": 300,
+            "height": 432.00503397044281,
             "width": 234
           },
           "zIndex": 11
         },
         {
           "location": {
-            "x": 47.635409212794343,
-            "y": 1575.7753770512088
+            "x": 8.3906693837437842,
+            "y": 1621.2635982166994
           },
           "nodeIndex": "Fact_KPI_SeverityMix",
           "nodeLineageTag": "8cd63fbf-3f19-4e29-a014-2015f1361a29",
@@ -192,7 +192,7 @@
         }
       ],
       "name": "All tables",
-      "zoomValue": 79.553182037699827,
+      "zoomValue": 112.11693641406029,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

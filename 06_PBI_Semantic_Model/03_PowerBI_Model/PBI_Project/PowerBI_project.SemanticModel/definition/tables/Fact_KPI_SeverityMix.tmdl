@@ -3,19 +3,25 @@ table Fact_KPI_SeverityMix
 
 	column Facility_Key
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: b84a278a-13c8-4b65-b9e1-c6da52af69b3
 		summarizeBy: none
 		sourceColumn: Facility_Key
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column Discharge_Year
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 1363e8d6-6c87-4c57-844a-dbfb02d62894
 		summarizeBy: sum
 		sourceColumn: Discharge_Year
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -39,9 +45,12 @@ table Fact_KPI_SeverityMix
 
 	column Severity_Mix_Index_validation
 		dataType: double
+		isHidden
 		lineageTag: c1a51d08-4181-4a79-bff8-16d02a093e3c
 		summarizeBy: sum
 		sourceColumn: Severity_Mix_Index_validation
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

@@ -3,19 +3,25 @@ table Fact_KPI_FinancialPressure
 
 	column Facility_Key
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: ae98e857-6eae-453b-817f-912109f31942
 		summarizeBy: none
 		sourceColumn: Facility_Key
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column Discharge_Year
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 2a5dc514-d26f-4bab-8ad8-628450b0723e
 		summarizeBy: sum
 		sourceColumn: Discharge_Year
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -59,9 +65,12 @@ table Fact_KPI_FinancialPressure
 
 	column Avg_MCost_validation
 		dataType: double
+		isHidden
 		lineageTag: aeda7a9e-d1ef-4f1d-9eda-e53adc349114
 		summarizeBy: sum
 		sourceColumn: Avg_MCost_validation
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -79,9 +88,12 @@ table Fact_KPI_FinancialPressure
 
 	column Margin_Pressure_validation
 		dataType: double
+		isHidden
 		lineageTag: 719259da-4c68-4af9-9dc7-987f9bb6965f
 		summarizeBy: sum
 		sourceColumn: Margin_Pressure_validation
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

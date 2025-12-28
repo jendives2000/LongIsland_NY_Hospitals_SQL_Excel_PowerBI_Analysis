@@ -3,19 +3,25 @@ table Fact_KPI_Mortality
 
 	column Facility_Key
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: b8ec4844-847a-4dbf-9239-5a9473f35ac0
 		summarizeBy: none
 		sourceColumn: Facility_Key
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column Discharge_Year
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: da9b70a6-af1a-4888-a6b2-54f2cae60a26
 		summarizeBy: sum
 		sourceColumn: Discharge_Year
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -39,9 +45,12 @@ table Fact_KPI_Mortality
 
 	column Mortality_Rate_validation
 		dataType: double
+		isHidden
 		lineageTag: e048244f-7020-4e0a-8bf7-eaf62f0b1340
 		summarizeBy: sum
 		sourceColumn: Mortality_Rate_validation
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

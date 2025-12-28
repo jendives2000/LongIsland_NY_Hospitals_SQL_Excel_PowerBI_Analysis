@@ -3,10 +3,13 @@ table Dim_Payer
 
 	column Payer_Key
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: ea11da85-4a6e-4cea-a3fe-36b43602cfd5
 		summarizeBy: none
 		sourceColumn: Payer_Key
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
