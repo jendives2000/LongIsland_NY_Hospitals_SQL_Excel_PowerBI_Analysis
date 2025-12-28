@@ -33,6 +33,10 @@ The Power BI semantic model is implemented as a Power BI Project (.pbip) to enab
   - [Fact ↔ Dimension Wiring (Keys + Attributes)](#fact--dimension-wiring-keys--attributes)
   - [Measure Strategy](#measure-strategy)
     - [Additive vs Derived Measures](#additive-vs-derived-measures)
+    - [KPI Guardrail Measures (Data Stability \& Interpretability)](#kpi-guardrail-measures-data-stability--interpretability)
+      - [Rationale](#rationale)
+      - [Guardrail Rule](#guardrail-rule)
+      - [Implementation Pattern](#implementation-pattern)
     - [Certified KPI Measures](#certified-kpi-measures)
   - [Excel Compatibility \& Executive Access](#excel-compatibility--executive-access)
   - [Governance \& Change Control](#governance--change-control)
@@ -214,6 +218,49 @@ This guarantees:
 - correct aggregation at any slice level
 - Excel and Power BI consistency
 - auditability
+
+---
+
+### KPI Guardrail Measures (Data Stability & Interpretability)
+
+To prevent misleading KPI interpretation caused by low encounter volumes, the semantic model implements **guardrail measures** for all rate-based KPIs.
+
+#### Rationale
+Rate and ratio KPIs (e.g., Mortality Rate, Unplanned Admission Rate, Average LOS) can fluctuate dramatically when calculated on very small denominators.  
+To ensure analytical stability and executive trust, KPIs are suppressed when the underlying encounter volume is insufficient.
+
+#### Guardrail Rule
+- A **minimum denominator threshold of 30 encounters** is enforced.
+- When the denominator is below this threshold:
+  - KPI measures return `BLANK()`
+  - Visuals automatically suppress the value
+  - Totals and roll-ups remain mathematically correct
+
+#### Implementation Pattern
+Each guarded KPI follows a consistent DAX structure:
+1. Explicit denominator measure
+2. Volume sufficiency check (`>= 30`)
+3. Guarded KPI using `DIVIDE()` and conditional blanking
+
+This approach:
+- avoids divide-by-zero errors
+- prevents unstable or misleading rates
+- keeps visuals clean without manual filtering
+- preserves correct aggregation behavior across Facility and Year
+
+**How to use them in reports:**
+
+- **Guarded KPI measures** (e.g. *Mortality Rate (Guarded)*, *Average LOS (Guarded)*)  
+  Use these measures in **all executive-facing visuals** (cards, tables, trend lines).  
+  When encounter volume is below the defined threshold, the measure returns `BLANK()`, and the visual automatically suppresses the value.
+
+- **Data coverage flags** (e.g. *Mortality Has Volume*)  
+  Use these measures as **visual-level filters** with the condition `= 1`.  
+  This ensures visuals only display results based on stable and interpretable data.
+
+
+Guardrail logic is applied **at the measure level**, not in SQL, ensuring transparency and flexibility within the semantic model.
+
 
 ---
 

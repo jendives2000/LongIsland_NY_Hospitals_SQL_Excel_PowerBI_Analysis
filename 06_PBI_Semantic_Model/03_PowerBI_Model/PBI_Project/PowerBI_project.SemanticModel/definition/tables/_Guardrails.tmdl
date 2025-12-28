@@ -1,0 +1,207 @@
+table _Guardrails
+	lineageTag: 00aa30d6-32e3-4af0-88ef-d3c099beaf07
+
+	measure 'Mortality Rate (Guarded)' =
+			
+			IF(
+			    [Mortality Total Encounters] < 30,
+			    BLANK(),
+			    DIVIDE(
+			        SUM(Fact_KPI_Mortality[Death_Count]),
+			        [Mortality Total Encounters]
+			    )
+			)
+		lineageTag: bd055ef9-9393-4017-a57f-0dcea98e5f82
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Average LOS (Guarded)' =
+			
+			IF(
+			    [LOS Total Encounters] < 30,
+			    BLANK(),
+			    DIVIDE(
+			        SUM(Fact_KPI_LOS_Summary[Total_LOS_Days]),
+			        [LOS Total Encounters]
+			    )
+			)
+		lineageTag: 55c3a810-94ad-4e57-9868-d29b46a298cf
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Severity Mix Index (Guarded)' =
+			
+			IF(
+			    [SeverityMix Total Encounters] < 30,
+			    BLANK(),
+			    DIVIDE(
+			        SUM(Fact_KPI_SeverityMix[Weighted_Severity_Sum]),
+			        [SeverityMix Total Encounters]
+			    )
+			)
+		lineageTag: 608bbbc5-7b2b-4223-8f05-ebc59dcdc266
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'FP Margin (Guarded)' =
+			
+			IF(
+			    [FinPressure Total Encounters] < 30,
+			    BLANK(),
+			    SUM(Fact_KPI_FinancialPressure[Total_Costs]) - SUM(Fact_KPI_FinancialPressure[Total_Charges])
+			)
+		lineageTag: a0553eb8-8977-466d-9904-64b799cea753
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'PM Margin (Guarded)' =
+			
+			IF(
+			    [PayerMix Total Encounters] < 30,
+			    BLANK(),
+			    SUM(Fact_KPI_PayerMix[Total_Costs]) - SUM(Fact_KPI_PayerMix[Total_Charges])
+			)
+		lineageTag: 2bfb2cca-534d-4b00-b757-df7e5458dca8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Unplanned Admission Rate (Guarded)' =
+			
+			IF(
+			    [Unplanned Total Encounters] < 30,
+			    BLANK(),
+			    DIVIDE(
+			        SUM(Fact_KPI_Unplanned[Unplanned_Encounter_Count]),
+			        [Unplanned Total Encounters]
+			    )
+			)
+		lineageTag: ecb14135-f38e-4807-87b6-340829bef8e4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Disp Share (Guarded)' =
+			
+			VAR denom =
+			    CALCULATE([Disp Total Encounters], ALL(Dim_Disposition))
+			RETURN
+			IF(denom < 30, BLANK(), DIVIDE([Disp Total Encounters], denom))
+		lineageTag: 9a4417b2-49bd-42cb-b707-b7dc107f7be6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Payer Encounter Share (Guarded)' =
+			
+			VAR denom =
+			    CALCULATE([PayerMix Total Encounters], ALL(Dim_Payer))
+			RETURN
+			IF(denom < 30, BLANK(), DIVIDE([PayerMix Total Encounters], denom))
+		lineageTag: 594cc069-1f36-443a-8bfe-a0570809ecc3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Severity Mix Has Volume' =
+			
+			IF(SUM(Fact_KPI_SeverityMix[Total_Encounters]) >= 30, 1, 0)
+		formatString: 0
+		displayFolder: Has Volume
+		lineageTag: f42b169e-a47d-4652-a27c-6ece1a819820
+
+	measure 'Mortality Has Volume' =
+			
+			IF(SUM(Fact_KPI_Mortality[Total_Encounters]) >= 30, 1, 0)
+		formatString: 0
+		displayFolder: Has Volume
+		lineageTag: b966c948-0aa8-46b5-b324-8823706c0f48
+
+	measure 'LOS Has Volume' =
+			
+			IF(SUM(Fact_KPI_LOS_Summary[Encounter_Count]) >= 30, 1, 0)
+		formatString: 0
+		displayFolder: Has Volume
+		lineageTag: d8bc77e4-b18a-49bd-9020-ba386747f58c
+
+	measure 'Unplanned Has Volume' =
+			
+			IF([Unplanned Total Encounters] >= 30, 1, 0)
+		formatString: 0
+		displayFolder: Has Volume
+		lineageTag: ba500e1c-c105-4a17-a232-0c629a2e6acc
+
+	measure 'FP Has Volume' =
+			
+			IF([FinPressure Total Encounters] >= 30, 1, 0)
+		formatString: 0
+		displayFolder: Has Volume
+		lineageTag: b8388b14-23fe-4b8d-a6bb-22fc5a1fce3e
+
+	measure 'Payer Mix Has Volume (Payer)' =
+			
+			IF([PayerMix Total Encounters] >= 30, 1, 0)
+		formatString: 0
+		displayFolder: Has Volume
+		lineageTag: 8bc868f7-cc3c-4d89-8fd4-3c1b761b1d1b
+
+	measure 'Payer Mix Has Volume (Facility-Year)' =
+			
+			IF([Payer Mix Facility-Year Encounters] >= 30, 1, 0)
+		formatString: 0
+		displayFolder: Has Volume
+		lineageTag: 8b2fa325-16f8-42ce-a0a5-ea0f918bf90b
+
+	measure 'Disposition Has Volume (Disposition)' =
+			
+			IF([Disp Total Encounters] >= 30, 1, 0)
+		formatString: 0
+		displayFolder: Has Volume
+		lineageTag: af51bd91-bbcc-411f-88b4-b1e4431ece45
+
+	measure 'Disposition Has Volume (Facility-Year)' =
+			
+			IF([Disposition Facility-Year Encounters] >= 30, 1, 0)
+		formatString: 0
+		displayFolder: Has Volume
+		lineageTag: 0fdf1882-7393-4610-a0f5-d56e23aef443
+
+	measure 'Margin Pressure (Guarded)' =
+			
+			IF(
+			    [FinPressure Total Encounters] < 30,
+			    BLANK(),
+			    [Margin Pressure]
+			)
+		lineageTag: 7b7905f1-7d2c-41b1-a2a0-2414f8cb745e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'FP Avg Cost per Encounter (Guarded)' = ```
+			
+			IF(
+			    [FinPressure Total Encounters] < 30,
+			    BLANK(),
+			    DIVIDE([Total Costs], [FinPressure Total Encounters])
+			)
+			
+			```
+		lineageTag: ec924666-d977-4c2c-9f02-f862fd846330
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Column
+		dataType: int64
+		formatString: 0
+		lineageTag: 14d7575a-f63e-4097-afd7-f2912a1e4f85
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Guardrails = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 8eaa35563bd9431f8e94798d76789fec
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

@@ -78,6 +78,12 @@ table _PayerMix
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Payer Mix Facility-Year Encounters' =
+			
+			CALCULATE([PayerMix Total Encounters], ALL(Dim_Payer))
+		formatString: 0
+		lineageTag: d2e91c04-48ff-47b8-8332-acd8ad0346fb
+
 	column Column
 		dataType: int64
 		formatString: 0

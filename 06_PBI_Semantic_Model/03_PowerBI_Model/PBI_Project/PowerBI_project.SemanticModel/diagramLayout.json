@@ -4,14 +4,14 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 461.125692991344,
-        "y": 406.71821277379667
+        "x": 311.36162337211954,
+        "y": 1045.3371609010737
       },
       "nodes": [
         {
           "location": {
             "x": 2594.3765278625892,
-            "y": 1561.729449269284
+            "y": 1687.3365853322421
           },
           "nodeIndex": "Dim_AdmissionType",
           "nodeLineageTag": "24a0d430-6b9a-4a1f-8ab5-92ee89c8dbca",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 1461.3279967595925,
-            "y": 1241.7401761230547
+            "y": 1367.3473121860127
           },
           "nodeIndex": "Dim_ClinicalClass",
           "nodeLineageTag": "d9d210df-7172-4ab6-9dc0-9f46d270c13c",
@@ -37,7 +37,7 @@
         {
           "location": {
             "x": 2012.0465212452473,
-            "y": 270.1888246050504
+            "y": 395.79596066800843
           },
           "nodeIndex": "Dim_Date",
           "nodeLineageTag": "c954be0f-6932-4d25-a4aa-162cab3c3e57",
@@ -50,7 +50,7 @@
         {
           "location": {
             "x": 1574.6165075385886,
-            "y": 1658.2568610821193
+            "y": 1783.8639971450773
           },
           "nodeIndex": "Dim_Disposition",
           "nodeLineageTag": "10ce94cf-7176-4fbb-8a69-df0e34d6e8c1",
@@ -63,7 +63,7 @@
         {
           "location": {
             "x": 1585.9291712826841,
-            "y": 589.13255727805893
+            "y": 714.739693341017
           },
           "nodeIndex": "Dim_Facility",
           "nodeLineageTag": "42fcdb87-5f7a-4947-90cc-90a460c02430",
@@ -76,7 +76,7 @@
         {
           "location": {
             "x": 630.58377292610328,
-            "y": 1290.3713012643673
+            "y": 1415.9784373273253
           },
           "nodeIndex": "Dim_Payer",
           "nodeLineageTag": "5b753935-5b34-47d6-a3cc-a08ce3525d6b",
@@ -89,7 +89,7 @@
         {
           "location": {
             "x": 1194.4657215173963,
-            "y": 1032.6276676039074
+            "y": 1158.2348036668654
           },
           "nodeIndex": "Dim_Year",
           "nodeLineageTag": "a1874355-000b-4746-82b1-59aa0ecf5bd3",
@@ -102,7 +102,7 @@
         {
           "location": {
             "x": 65.596912379617123,
-            "y": 478.20546146287484
+            "y": 603.81259752583287
           },
           "nodeIndex": "Fact_KPI_Disposition",
           "nodeLineageTag": "28d54733-b7f6-4bb7-8037-c796ad6b3786",
@@ -115,7 +115,7 @@
         {
           "location": {
             "x": 0,
-            "y": 1487.3560244967632
+            "y": 1612.9631605597212
           },
           "nodeIndex": "Fact_KPI_FinancialPressure",
           "nodeLineageTag": "8a5ee703-ad3e-4f40-8e91-46930e042ec1",
@@ -127,8 +127,8 @@
         },
         {
           "location": {
-            "x": 365.22697513194765,
-            "y": 2009.0108553542311
+            "x": 97.6492035702394,
+            "y": 2213.9993969804955
           },
           "nodeIndex": "Fact_KPI_LOS_Summary",
           "nodeLineageTag": "4f38a133-375c-441a-a981-a1b9ff20836e",
@@ -141,7 +141,7 @@
         {
           "location": {
             "x": 50.735993300600228,
-            "y": 251.21427212591618
+            "y": 376.82140818887422
           },
           "nodeIndex": "Fact_KPI_Mortality",
           "nodeLineageTag": "da3c3f6e-b84e-48f8-ab27-556308e175cc",
@@ -154,7 +154,7 @@
         {
           "location": {
             "x": 92.444054356288831,
-            "y": 1044.8661460356243
+            "y": 1170.4732820985823
           },
           "nodeIndex": "Fact_KPI_PayerMix",
           "nodeLineageTag": "4e5bbc2f-ef0d-4989-937d-abe48d75934e",
@@ -167,7 +167,7 @@
         {
           "location": {
             "x": 8.3906693837437842,
-            "y": 1839.3961554947584
+            "y": 1965.0032915577165
           },
           "nodeIndex": "Fact_KPI_SeverityMix",
           "nodeLineageTag": "8cd63fbf-3f19-4e29-a014-2015f1361a29",
@@ -180,7 +180,7 @@
         {
           "location": {
             "x": 37.41415527977216,
-            "y": 776.45780839736915
+            "y": 902.06494446032718
           },
           "nodeIndex": "Fact_KPI_Unplanned",
           "nodeLineageTag": "ffddfc83-a994-4118-8837-d1fe22b87a62",
@@ -193,7 +193,7 @@
         {
           "location": {
             "x": 1872.3817162725422,
-            "y": 1070.3759963577065
+            "y": 1195.9831324206646
           },
           "nodeIndex": "_KPI_Measures",
           "nodeLineageTag": "29eefdf6-619c-4b82-acc5-33a3ef6f72d8",
@@ -206,7 +206,7 @@
         {
           "location": {
             "x": 1869.7059385569255,
-            "y": 1377.6042425234446
+            "y": 1503.2113785864026
           },
           "nodeIndex": "_Volume_&_Denominators",
           "nodeLineageTag": "49787e4b-c049-4f55-b762-95d7635c8244",
@@ -219,7 +219,7 @@
         {
           "location": {
             "x": 1870.96542660672,
-            "y": 1719.3745034270923
+            "y": 1844.9816394900504
           },
           "nodeIndex": "_Financial_Basic",
           "nodeLineageTag": "9abe8882-ef5b-477d-a3c5-eabaf7b09d85",
@@ -232,7 +232,7 @@
         {
           "location": {
             "x": 2139.4351240736341,
-            "y": 1594.7488355130949
+            "y": 1720.355971576053
           },
           "nodeIndex": "_PayerMix",
           "nodeLineageTag": "5c677962-0278-49e5-a97e-cdd8deedd191",
@@ -245,12 +245,25 @@
         {
           "location": {
             "x": 2142.4784639338404,
-            "y": 1378.3767787703105
+            "y": 1503.9839148332685
           },
           "nodeIndex": "_Disposition",
           "nodeLineageTag": "9e3e0b45-93e8-449c-8ab4-b7106ff886a6",
           "size": {
             "height": 163.43103788656663,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2138.9699524470684,
+            "y": 1045.6369439382381
+          },
+          "nodeIndex": "_Guardrails",
+          "nodeLineageTag": "00aa30d6-32e3-4af0-88ef-d3c099beaf07",
+          "size": {
+            "height": 200,
             "width": 234
           },
           "zIndex": 0

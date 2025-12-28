@@ -20,6 +20,12 @@ table _Disposition
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Disposition Facility-Year Encounters' =
+			
+			CALCULATE([Disp Total Encounters], ALL(Dim_Disposition))
+		formatString: 0
+		lineageTag: db0845f2-236d-4b49-b601-0eef2ed76b18
+
 	column Column
 		dataType: int64
 		formatString: 0
