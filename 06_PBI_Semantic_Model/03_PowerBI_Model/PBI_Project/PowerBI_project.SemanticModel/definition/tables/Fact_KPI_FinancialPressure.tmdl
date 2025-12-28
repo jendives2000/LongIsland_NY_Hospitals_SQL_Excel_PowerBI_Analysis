@@ -78,9 +78,12 @@ table Fact_KPI_FinancialPressure
 
 	column Total_Margin_validation
 		dataType: double
+		isHidden
 		lineageTag: 76b57b38-32c6-4124-aa12-93013de3b9c5
 		summarizeBy: sum
 		sourceColumn: Total_Margin_validation
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

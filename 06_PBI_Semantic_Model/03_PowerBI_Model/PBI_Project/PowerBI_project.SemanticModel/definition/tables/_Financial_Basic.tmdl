@@ -1,0 +1,81 @@
+table _Financial_Basic
+	lineageTag: 9abe8882-ef5b-477d-a3c5-eabaf7b09d85
+
+	measure 'Total Costs' = SUM(Fact_KPI_FinancialPressure[Total_Costs])
+		lineageTag: 46929712-57b8-435d-ac1f-49bc5893fb1e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Charges' = SUM(Fact_KPI_FinancialPressure[Total_Charges])
+		lineageTag: c08d873e-819b-4cef-9527-b8d9de87ff22
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Margin' = [FP Margin]
+		lineageTag: 219223b6-bf98-4a47-a2ce-38ec07807251
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'AVG Cost / Encounter' =
+			
+			DIVIDE(
+			    SUM(Fact_KPI_FinancialPressure[Total_Costs]),
+			    SUM(Fact_KPI_FinancialPressure[Encounter_Count])
+			)
+		lineageTag: a59e7ed7-5288-4dc0-809a-ceb0c24daca7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'AVG Charge / Encounter' =
+			
+			DIVIDE(
+			    SUM(Fact_KPI_FinancialPressure[Total_Charges]),
+			    SUM(Fact_KPI_FinancialPressure[Encounter_Count])
+			)
+		lineageTag: f1ef9784-bb46-46cf-9b54-7707921734bb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'AVG Margin / Encounter' =
+			
+			DIVIDE(
+			    [Total Margin],
+			    SUM(Fact_KPI_FinancialPressure[Encounter_Count])
+			)
+		lineageTag: f95deb85-1fdb-4bd9-8fdf-96163dc2eb8b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Neg Margin Total Encounters' = SUM(Fact_KPI_FinancialPressure[Negative_Margin_Encounter_Count])
+		formatString: 0
+		lineageTag: 5aa6b431-9348-41c5-8f75-add6f1f9ebba
+
+	measure 'Neg Margin Rate' =
+			
+			DIVIDE(
+			    [Neg Margin Total Encounters],
+			    SUM(Fact_KPI_FinancialPressure[Encounter_Count])
+			)
+		lineageTag: 5a3a15b3-1591-45d1-9632-c2d3e0beb332
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Column
+		dataType: int64
+		formatString: 0
+		lineageTag: 1634b4fb-d72b-41c8-929c-7587a2038b92
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Financial_Basic = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 945356379fdc4c649295c5c5aba5aa8a
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

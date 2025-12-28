@@ -1,0 +1,89 @@
+table _KPI_Measures
+	lineageTag: 29eefdf6-619c-4b82-acc5-33a3ef6f72d8
+
+	measure 'Severity Mix Index' =
+			
+			DIVIDE(
+			    SUM(Fact_KPI_SeverityMix[Weighted_Severity_Sum]),
+			    SUM(Fact_KPI_SeverityMix[Total_Encounters])
+			)
+		lineageTag: 0160202b-84e7-4ce7-a81d-477b56a0208d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Unplanned Admission Rate' =
+			
+			DIVIDE(
+			    SUM(Fact_KPI_Unplanned[Unplanned_Encounter_Count]),
+			    SUM(Fact_KPI_Unplanned[Total_Encounters])
+			)
+		lineageTag: 7dba8b71-1622-4fb1-b9e9-d5119894323d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Mortality Rate' =
+			
+			DIVIDE(
+			    SUM(Fact_KPI_Mortality[Death_Count]),
+			    SUM(Fact_KPI_Mortality[Total_Encounters])
+			)
+		lineageTag: 9a1d3dd0-abe3-4ef6-a36b-f0558cae0858
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'AVG LOS' =
+			
+			DIVIDE(
+			    SUM(Fact_KPI_LOS_Summary[Total_LOS_Days]),
+			    SUM(Fact_KPI_LOS_Summary[Encounter_Count])
+			)
+		lineageTag: a2a3eb58-cb01-4e01-8371-a3a732f09dc8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'FP Margin' = ```
+			
+			SUM(Fact_KPI_FinancialPressure[Total_Charges])
+			- SUM(Fact_KPI_FinancialPressure[Total_Costs])
+			
+			```
+		lineageTag: ec3156ca-f75f-40d6-8926-e8b3c9afc6aa
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'PM Margin' =
+			
+			SUM(Fact_KPI_PayerMix[Total_Charges]) - SUM(Fact_KPI_PayerMix[Total_Costs])
+		lineageTag: 827a4460-a88b-481b-8e35-60987fc1a988
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Margin Pressure' =
+			
+			DIVIDE(
+			    SUM(Fact_KPI_FinancialPressure[Total_Costs]),
+			    SUM(Fact_KPI_FinancialPressure[Total_Charges])
+			)
+		lineageTag: 6d6cb3b4-39d7-47ed-b0b7-9e9d3556df35
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Column
+		dataType: int64
+		formatString: 0
+		lineageTag: 2eb54252-9b45-4a0f-b8ac-54036825999e
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _KPI_Measures = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 482c3774429347538fd8323e2cb9557a
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

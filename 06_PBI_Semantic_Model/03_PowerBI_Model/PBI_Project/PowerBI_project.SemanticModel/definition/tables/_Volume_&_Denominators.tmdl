@@ -1,0 +1,54 @@
+table _Volume_&_Denominators
+	lineageTag: 49787e4b-c049-4f55-b762-95d7635c8244
+
+	measure 'Mortality Total Encounters' = SUM(Fact_KPI_Mortality[Total_Encounters])
+		formatString: 0
+		lineageTag: fbb6fa8f-3ce7-48b7-b8ae-e4e3263ea772
+
+	measure 'PayerMix Total Encounters' = SUM(Fact_KPI_PayerMix[Encounter_Count])
+		formatString: 0
+		lineageTag: 7258440a-3e89-4087-9f72-b9655ecd02f1
+
+	measure 'FinPressure Total Encounters' = SUM(Fact_KPI_FinancialPressure[Encounter_Count])
+		formatString: 0
+		lineageTag: ef1d149b-9826-4918-b948-fad709e139df
+
+	measure 'SeverityMix Total Encounters' = SUM(Fact_KPI_SeverityMix[Total_Encounters])
+		formatString: 0
+		lineageTag: 79cc1582-52c4-4138-99cd-54748e47c232
+
+	measure 'LOS Total Encounters' = SUM(Fact_KPI_LOS_Summary[Encounter_Count])
+		formatString: 0
+		lineageTag: a90d5381-9b5b-4632-978d-52d7919d4814
+
+	measure 'Unplanned Total Encounters' = SUM(Fact_KPI_Unplanned[Total_Encounters])
+		formatString: 0
+		lineageTag: ef0d0940-3739-42ab-a91d-bd04796b1d5d
+
+	measure 'Deaths Count' = SUM(Fact_KPI_Mortality[Death_Count])
+		formatString: 0
+		lineageTag: 87231f22-e9c2-42b0-9c1e-1501dc1bc318
+
+	measure 'Total LOS Days' = SUM(Fact_KPI_LOS_Summary[Total_LOS_Days])
+		formatString: 0
+		lineageTag: 943faef9-f929-4b07-95ed-75eb7b843cfd
+
+	column Column
+		dataType: int64
+		formatString: 0
+		lineageTag: 9908f6be-87f0-47d9-b003-a856d1389904
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Volume_&_Denominators = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = f1f6e2d6248b492c91e322a9c34105ab
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

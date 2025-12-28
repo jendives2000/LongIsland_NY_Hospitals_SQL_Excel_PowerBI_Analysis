@@ -1,0 +1,41 @@
+table _Disposition
+	lineageTag: 9e3e0b45-93e8-449c-8ab4-b7106ff886a6
+
+	measure 'Disp Total Encounters' = SUM(Fact_KPI_Disposition[Disposition_Count])
+		formatString: 0
+		lineageTag: 5eba2b4e-434b-46b2-89bd-a1c96631fd4b
+
+	measure 'Disposition Share' = ```
+			
+			DIVIDE(
+			    [Disp Total Encounters],
+			    CALCULATE(
+			        [Disp Total Encounters],
+			        ALL(Dim_Disposition)
+			    )
+			)
+			
+			```
+		lineageTag: 8e872918-b161-408e-a526-397cfdfb8a00
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Column
+		dataType: int64
+		formatString: 0
+		lineageTag: a3e94cdb-6a80-427c-9801-9a7487c175ce
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Disposition = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 56e449eca94b4017834973e78460ec5a
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

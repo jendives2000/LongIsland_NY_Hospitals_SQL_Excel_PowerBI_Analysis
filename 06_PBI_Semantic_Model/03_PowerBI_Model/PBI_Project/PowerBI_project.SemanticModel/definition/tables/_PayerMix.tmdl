@@ -1,0 +1,99 @@
+table _PayerMix
+	lineageTag: 5c677962-0278-49e5-a97e-cdd8deedd191
+
+	measure 'Total Payer Encounters' = [PayerMix Total Encounters]
+		formatString: 0
+		lineageTag: bd26007e-f0e1-4313-9d46-716667c72c8a
+
+	measure 'Payer Encounter Share' = ```
+			
+			DIVIDE(
+			    [Total Payer Encounters],
+			    CALCULATE(
+			        [Total Payer Encounters],
+			        ALL(Dim_Payer)
+			    )
+			)
+			
+			```
+		lineageTag: f8e6005c-1a2d-4865-ac57-e755bd4c15a4
+
+	measure 'Payer Cost Share' = ```
+			
+			DIVIDE(
+			    SUM(Fact_KPI_PayerMix[Total_Costs]),
+			    CALCULATE(
+			        SUM(Fact_KPI_PayerMix[Total_Costs]),
+			        ALL(Dim_Payer)
+			    )
+			)
+			
+			```
+		lineageTag: 95056329-25d6-42de-92e2-ff247778ee89
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Payer Charge Share' =
+			
+			DIVIDE(
+			    SUM(Fact_KPI_PayerMix[Total_Charges]),
+			    CALCULATE(
+			        SUM(Fact_KPI_PayerMix[Total_Charges]),
+			        ALL(Dim_Payer)
+			    )
+			)
+		lineageTag: 20da6a52-3e91-4fb0-8033-ca7985795e94
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Payer Total Charges' = SUM(Fact_KPI_PayerMix[Total_Charges])
+		lineageTag: 17030b95-6374-4377-9598-0c2ae584f6db
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Payer Total Costs' = SUM(Fact_KPI_PayerMix[Total_Costs])
+		lineageTag: c41ac738-73ee-4367-b92f-806f137c99dd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Payer Margin' = [Payer Total Charges] - [Payer Total Costs]
+		lineageTag: a4c1dc7b-c436-4d07-8317-8b2fc5144376
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Payer Margin Rate' =
+			
+			DIVIDE([Payer Margin], [Payer Total Charges])
+		lineageTag: b564d636-8134-4b83-8b00-09b91a10e0bf
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Avg Payer Margin per Encounter' =
+			
+			DIVIDE(
+			    [Payer Margin],
+			    [Total Payer Encounters]
+			)
+		lineageTag: c3a889d7-6d26-42f6-9752-dd870abed350
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Column
+		dataType: int64
+		formatString: 0
+		lineageTag: 9bbccbf1-da4b-4a4a-900a-417068f671b7
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _PayerMix = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = f174c66edc924379b6ff2d176b044323
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+
