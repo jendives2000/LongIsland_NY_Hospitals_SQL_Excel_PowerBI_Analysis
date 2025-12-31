@@ -4,7 +4,57 @@
 
 This document defines the **facility peer grouping framework** used across the project to ensure that hospital benchmarking, KPI interpretation, and executive reporting are **clinically fair, statistically meaningful, and industry-aligned**.
 
-Peer groups are a core part of the analytical data model and directly influence how KPIs such as Length of Stay, Mortality, Cost, and Payer Mix are interpreted.
+Peer groups are a core part of the analytical data model and directly influence how KPIs such as Length of Stay, Mortality, Cost, and Payer Mix are interpreted. Peer grouping is model configuration, not KPI logic.
+
+---
+## Table of Contents
+<details>
+<summary>TOC</summary>
+
+- [Facility Peer Grouping Framework](#facility-peer-grouping-framework)
+  - [What This Is](#what-this-is)
+  - [Table of Contents](#table-of-contents)
+  - [Scope](#scope)
+  - [Why Peer Grouping Is Required](#why-peer-grouping-is-required)
+  - [Design Principles](#design-principles)
+  - [Data Model Objects](#data-model-objects)
+    - [1. `dbo.Dim_PeerGroup`](#1-dbodim_peergroup)
+    - [Peer Group Definitions](#peer-group-definitions)
+    - [2. `dbo.Bridge_Facility_PeerGroup`](#2-dbobridge_facility_peergroup)
+  - [Seeding Logic](#seeding-logic)
+    - [1. Populate `Dim_PeerGroup`](#1-populate-dim_peergroup)
+    - [2. Populate `Bridge_Facility_PeerGroup`](#2-populate-bridge_facility_peergroup)
+  - [Canonical Facility Name Requirement (Important)](#canonical-facility-name-requirement-important)
+      - [Why strict matching is enforced](#why-strict-matching-is-enforced)
+    - [QA Expectations](#qa-expectations)
+      - [Recommended QA check](#recommended-qa-check)
+    - [PG-A — Academic / Tertiary Referral Centers](#pg-a--academic--tertiary-referral-centers)
+    - [PG-B — Large Community Acute-Care Hospitals](#pg-b--large-community-acute-care-hospitals)
+    - [PG-C — Mid-Size / Suburban Community Hospitals](#pg-c--mid-size--suburban-community-hospitals)
+    - [PG-D — Rural / Small Community / East-End Hospitals](#pg-d--rural--small-community--east-end-hospitals)
+    - [PG-E — Specialty-Dominant Hospitals](#pg-e--specialty-dominant-hospitals)
+  - [KPI-to-Peer-Group Applicability](#kpi-to-peer-group-applicability)
+  - [Downstream Usage (Power BI)](#downstream-usage-power-bi)
+  - [Known Limitations](#known-limitations)
+  - [Summary](#summary)
+
+
+</details>
+
+---
+
+## Scope
+
+This framework:
+* Defines the official peer group taxonomy (PG-A through PG-E)
+* Populates the Dim_PeerGroup dimension
+* Assigns facilities to peer groups via a factless bridge table
+* Enforces strict, deterministic matching to canonical facility names
+
+It does not:
+* Perform KPI calculations
+* Modify fact tables
+* Apply fuzzy matching or heuristic joins
 
 ---
 
@@ -51,7 +101,21 @@ The peer groups defined here follow five strict principles:
 
 ---
 
-## Peer Group Definitions
+## Data Model Objects
+- SQL file: [here](./seed_dim_peergroup_and_bridge.sql)  
+  
+### 1. `dbo.Dim_PeerGroup`
+
+**Grain**  
+One row per peer group.
+
+**Role**  
+Analytical comparison lens.
+
+**Populated by**  
+`seed_dim_peergroup_and_bridge.sql`
+
+### Peer Group Definitions
 
 <details>
 <summary> See Hospital / Peer-Group Table</summary>
@@ -84,6 +148,91 @@ The peer groups defined here follow five strict principles:
 
 
 </details>
+
+Peer groups are **mutually exclusive as definitions**, but facilities may belong to **multiple peer groups** if required by future analysis.
+
+---
+
+### 2. `dbo.Bridge_Facility_PeerGroup`
+
+**Grain**  
+One row per Facility–PeerGroup assignment.
+
+**Role**  
+Resolves the many-to-many relationship between facilities and peer groups.
+
+**Columns**
+- `Facility_Key`
+- `PeerGroup_Key`
+
+This table contains **no measures**.  
+It exists solely to propagate peer-group filter context through `Dim_Facility` to all KPI fact tables.
+
+---
+
+---
+
+## Seeding Logic  
+`seed_dim_peergroup_and_bridge.sql`
+
+The seed script performs two controlled operations:
+
+### 1. Populate `Dim_PeerGroup`
+
+- Uses `PeerGroup_Name` as the natural key
+- Uses `MERGE` for idempotent re-runs
+- Maintains sort order and active flags
+
+### 2. Populate `Bridge_Facility_PeerGroup`
+
+- Resolves `Facility_Key` exclusively via `dbo.Dim_Facility`
+- Resolves `PeerGroup_Key` exclusively via `dbo.Dim_PeerGroup`
+- Inserts only validated Facility–PeerGroup pairs
+
+---
+
+## Canonical Facility Name Requirement (Important)
+
+Facility-to-peer mappings are resolved using **exact equality** on:
+
+```sql
+Dim_Facility.Facility_Name
+```
+
+This is intentional.
+
+#### Why strict matching is enforced
+* Prevents silent misclassification
+* Forces a single source of truth for facility naming
+* Surfaces data-quality issues early
+* Avoids fragile LIKE, fuzzy, or normalized joins
+
+If a facility name in the peer-mapping list does not exist in Dim_Facility,
+no bridge row is created.
+
+This behavior is by design.
+
+---
+
+### QA Expectations
+
+After running the seed script, the following must be true:
+* All peer groups exist in Dim_PeerGroup
+* All mapped facilities exist in Dim_Facility
+* The bridge contains only valid foreign keys
+
+#### Recommended QA check
+
+```sql
+SELECT m.Facility_Name
+FROM (VALUES (...)) AS m(Facility_Name, PeerGroup_Name)
+LEFT JOIN dbo.Dim_Facility f
+    ON f.Facility_Name = m.Facility_Name
+WHERE f.Facility_Key IS NULL;
+
+```
+
+---
 
 ### PG-A — Academic / Tertiary Referral Centers
 
@@ -212,15 +361,14 @@ Not all peer groups are valid for all KPIs. The table below defines which peer g
 
 ---
 
-## Downstream Usage
+## Downstream Usage (Power BI)
 
-This peer grouping framework is used in:
+* Dim_PeerGroup is exposed as a slicer
+* Filters propagate via  
+  `Dim_PeerGroup → Bridge_Facility_PeerGroup → Dim_Facility`
+* All KPI measures automatically evaluate Facility vs Peer Group context
 
-* Step 05 KPI development
-* Power BI slicers and filters
-* Executive dashboards and benchmarking views
-* Interpretive annotations and tooltips
-
+No peer logic exists in DAX.
 Peer group logic is **never embedded ad hoc** in KPI SQL. It is treated as a **semantic modeling layer**.
 
 ---
