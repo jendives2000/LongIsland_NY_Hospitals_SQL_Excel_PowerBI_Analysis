@@ -1,0 +1,64 @@
+table Dim_PeerGroup
+	lineageTag: a1e31423-ec89-4c97-a3e5-5d384d87fa5d
+
+	column PeerGroup_Key
+		dataType: int64
+		formatString: 0
+		lineageTag: c89b6939-0c9d-494f-8819-3c2966877b60
+		summarizeBy: none
+		sourceColumn: PeerGroup_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column PeerGroup_Name
+		dataType: string
+		lineageTag: ccacffd8-a168-4279-81e1-70b0cb98c363
+		summarizeBy: none
+		sourceColumn: PeerGroup_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column PeerGroup_Description
+		dataType: string
+		lineageTag: 547b0323-ab33-44c4-8e57-2e378f48619a
+		summarizeBy: none
+		sourceColumn: PeerGroup_Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column PeerGroup_Sort
+		dataType: int64
+		formatString: 0
+		lineageTag: 5cefc664-eca0-4299-9ba0-e0f38d4f9746
+		summarizeBy: none
+		sourceColumn: PeerGroup_Sort
+
+		annotation SummarizationSetBy = Automatic
+
+	column Is_Active
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: c83895ac-c5d2-4147-ab5d-d249e18599bf
+		summarizeBy: none
+		sourceColumn: Is_Active
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created_At
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5302c7fc-00a9-447a-b2c1-49d81f17ba48
+		summarizeBy: none
+		sourceColumn: Created_At
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_PeerGroup = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("DESKTOP-3O401KK", "LI_NYHealth"),
+				    dbo_Dim_PeerGroup = Source{[Schema="dbo",Item="Dim_PeerGroup"]}[Data]
+				in
+				    dbo_Dim_PeerGroup
+

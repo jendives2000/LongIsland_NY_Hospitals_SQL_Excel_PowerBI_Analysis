@@ -160,6 +160,14 @@ ORDER BY
     pg.PeerGroup_Sort,
     f.Facility_Name;
 
+-- View the raw bridge table
+SELECT
+    Facility_Key,
+    PeerGroup_Key,
+    Created_At
+FROM dbo.Bridge_Facility_PeerGroup
+ORDER BY Facility_Key, PeerGroup_Key;
+
 
 -- Optional: count facilities per peer group
 SELECT

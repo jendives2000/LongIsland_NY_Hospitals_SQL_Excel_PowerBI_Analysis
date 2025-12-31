@@ -1,0 +1,39 @@
+table Bridge_Facility_PeerGroup
+	lineageTag: ae77ae1d-11b2-408f-acbb-826d8289bbe6
+
+	column Facility_Key
+		dataType: int64
+		formatString: 0
+		lineageTag: 9e032271-ddc1-4706-934f-e171b5e3ef86
+		summarizeBy: none
+		sourceColumn: Facility_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column PeerGroup_Key
+		dataType: int64
+		formatString: 0
+		lineageTag: 49a90961-8ed7-4ebd-8c50-ca9a6157f18f
+		summarizeBy: none
+		sourceColumn: PeerGroup_Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created_At
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a76e9b4d-0f8c-45ff-9f92-2c7c7261be3c
+		summarizeBy: none
+		sourceColumn: Created_At
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Bridge_Facility_PeerGroup = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("DESKTOP-3O401KK", "LI_NYHealth"),
+				    dbo_Bridge_Facility_PeerGroup = Source{[Schema="dbo",Item="Bridge_Facility_PeerGroup"]}[Data]
+				in
+				    dbo_Bridge_Facility_PeerGroup
+

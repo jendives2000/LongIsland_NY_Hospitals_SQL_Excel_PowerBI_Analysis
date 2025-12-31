@@ -167,6 +167,8 @@ Resolves the many-to-many relationship between facilities and peer groups.
 - `Facility_Key`
 - `PeerGroup_Key`
 
+![dbo.Bridge_Facility_PeerGroup](image-1.png)
+
 This table contains **no measures**.  
 It exists solely to propagate peer-group filter context through `Dim_Facility` to all KPI fact tables.
 
