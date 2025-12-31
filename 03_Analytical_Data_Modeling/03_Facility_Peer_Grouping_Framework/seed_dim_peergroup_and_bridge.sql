@@ -146,3 +146,31 @@ AS m(Facility_Name, PeerGroup_Name)
 LEFT JOIN dbo.Dim_Facility f ON f.Facility_Name = m.Facility_Name
 WHERE f.Facility_Key IS NULL;
 
+-- Human-readable view: This is the query you’ll actually use to verify correctness.
+SELECT
+    f.Facility_Name,
+    pg.PeerGroup_Name,
+    pg.PeerGroup_Sort
+FROM dbo.Bridge_Facility_PeerGroup b
+INNER JOIN dbo.Dim_Facility f
+    ON f.Facility_Key = b.Facility_Key
+INNER JOIN dbo.Dim_PeerGroup pg
+    ON pg.PeerGroup_Key = b.PeerGroup_Key
+ORDER BY
+    pg.PeerGroup_Sort,
+    f.Facility_Name;
+
+
+-- Optional: count facilities per peer group
+SELECT
+    pg.PeerGroup_Name,
+    COUNT(DISTINCT b.Facility_Key) AS Facility_Count
+FROM dbo.Dim_PeerGroup pg
+LEFT JOIN dbo.Bridge_Facility_PeerGroup b
+    ON b.PeerGroup_Key = pg.PeerGroup_Key
+GROUP BY
+    pg.PeerGroup_Name,
+    pg.PeerGroup_Sort
+ORDER BY
+    pg.PeerGroup_Sort;
+

@@ -153,7 +153,7 @@ Creates the `dbo.Dim_PeerGroup` dimension.
 - Purpose: define the canonical peer group taxonomy (PG-A through PG-E)
 - Role: analytical comparison lens used across all KPIs
 
-This table contains **no facility data** and no KPI logic.
+This table contains **no facility data** and no KPI logic. I populated the table with the seed SQL code in this [folder](./03_Facility_Peer_Grouping_Framework/README.md).
 
 #### `3_6d_bridge_facility_peergroup.sql`
 - SQL file: [here](./03_SQL/3_6d_bridge_facility_peergroup.sql)

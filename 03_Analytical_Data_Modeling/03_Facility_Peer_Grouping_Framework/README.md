@@ -115,6 +115,8 @@ Analytical comparison lens.
 **Populated by**  
 `seed_dim_peergroup_and_bridge.sql`
 
+![alt text](image.png)
+
 ### Peer Group Definitions
 
 <details>
