@@ -1,0 +1,156 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
+  "name": "b01f97732d7047a96af8",
+  "position": {
+    "x": 12.923076923076923,
+    "y": 266.46153846153845,
+    "z": 15000,
+    "height": 195.69230769230768,
+    "width": 324.92307692307691,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Hospital performance metrics are shaped by:",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#808080"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "who is treated",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt",
+                      "color": "#808080"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "how patients arrive",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt",
+                      "color": "#808080"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "and ",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#808080"
+                    }
+                  },
+                  {
+                    "value": "the hospital’s role",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt",
+                      "color": "#808080"
+                    }
+                  },
+                  {
+                    "value": " in the system",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#808080"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "This report is structured to surface ",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#808080"
+                    }
+                  },
+                  {
+                    "value": "pressure points",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt",
+                      "color": "#808080"
+                    }
+                  },
+                  {
+                    "value": ", not to rank hospitals.",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#808080"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Skipping context pages leads to incorrect conclusions.",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#808080"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
+  "name": "2215f16ee737a36f08cf",
+  "position": {
+    "x": 76.3076923076923,
+    "y": 620.92307692307691,
+    "z": 22000,
+    "height": 40.615384615384613,
+    "width": 371.69230769230768,
+    "tabOrder": 21000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Payer Mix ",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "18pt",
+                      "color": "#744ec2"
+                    }
+                  },
+                  {
+                    "value": "(Reimbursement Risk) ",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "14pt",
+                      "color": "#744ec2"
+                    }
+                  },
+                  {
+                    "value": "🔒",
+                    "textStyle": {
+                      "fontSize": "14pt",
+                      "color": "#744ec2"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Severity Mix (Context)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
