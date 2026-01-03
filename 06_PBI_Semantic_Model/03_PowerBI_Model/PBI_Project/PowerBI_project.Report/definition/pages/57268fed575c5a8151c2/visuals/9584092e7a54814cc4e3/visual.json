@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
-  "name": "2d1de6194f646e870a8d",
+  "name": "9584092e7a54814cc4e3",
   "position": {
-    "x": 12.923076923076923,
-    "y": 373.53846153846212,
-    "z": 11000,
-    "height": 41.230769230769234,
-    "width": 163.07692307692307,
-    "tabOrder": 9000
+    "x": 278.125,
+    "y": 519.375,
+    "z": 15000,
+    "height": 41.25,
+    "width": 181.25,
+    "tabOrder": 14004
   },
   "visual": {
     "visualType": "actionButton",
@@ -56,14 +56,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'What is Severity?'"
+                  "Value": "'Severity Distribution'"
                 }
               }
             },
             "horizontalAlignment": {
               "expr": {
                 "Literal": {
-                  "Value": "'left'"
+                  "Value": "'center'"
                 }
               }
             },
@@ -81,14 +81,21 @@
             "italic": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "14D"
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -102,7 +109,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Click to Know'"
+                  "Value": "'Click to Visualize it'"
                 }
               }
             },
@@ -121,7 +128,7 @@
             "horizontalAlignment": {
               "expr": {
                 "Literal": {
-                  "Value": "'left'"
+                  "Value": "'center'"
                 }
               }
             },
@@ -142,13 +149,104 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "13D"
+                  "Value": "11D"
                 }
               }
             }
           },
           "selector": {
             "id": "hover"
+          }
+        },
+        {
+          "properties": {
+            "italic": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Severity Distribution'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "selected"
+          }
+        }
+      ],
+      "outline": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "weight": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#744EC2'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "hover"
+          }
+        },
+        {
+          "properties": {
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#744EC2'"
+                    }
+                  }
+                }
+              }
+            },
+            "weight": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ]
@@ -194,7 +292,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'What is Severity?'"
+                  "Value": "'Select Visuals Sev Mix Ind'"
                 }
               }
             }

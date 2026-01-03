@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
-  "name": "34abbbf40454a79d25bb",
+  "name": "090ec407cce0893904ee",
   "position": {
-    "x": 12.923076923076962,
-    "y": 14.15384615384616,
-    "z": 1000,
-    "height": 40.615384615384613,
-    "width": 379.69230769230768,
-    "tabOrder": 0
+    "x": 15.294117647058897,
+    "y": 418.82352941176475,
+    "z": 2000,
+    "height": 28.823529411764707,
+    "width": 618.82352941176475,
+    "tabOrder": 14001
   },
   "visual": {
     "visualType": "textbox",
@@ -19,14 +19,14 @@
               {
                 "textRuns": [
                   {
-                    "value": "What This Report Is — and Is Not",
+                    "value": "INSIGHTS:",
                     "textStyle": {
-                      "fontFamily": "Arial",
-                      "fontSize": "18pt",
-                      "color": "#ffffff"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   }
-                ]
+                ],
+                "horizontalTextAlignment": "center"
               }
             ]
           }
@@ -53,7 +53,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Title'"
+                  "Value": "'SubTitle'"
                 }
               }
             }
@@ -63,5 +63,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "4e23827a3b9a85192c0a"
+  "parentGroupName": "89c9b513a9ae920b0617"
 }

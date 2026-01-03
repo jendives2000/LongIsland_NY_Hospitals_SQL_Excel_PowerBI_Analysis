@@ -1,0 +1,22 @@
+table _Severity
+	lineageTag: 1a92feb6-85fb-43a8-88bb-9033582841e1
+
+	column Column
+		dataType: int64
+		formatString: 0
+		lineageTag: 014dd9ee-aa0a-40e8-b20e-cf41115403d3
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Severity = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 3ab72c50885d4fbd9477cb305117e9d6
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

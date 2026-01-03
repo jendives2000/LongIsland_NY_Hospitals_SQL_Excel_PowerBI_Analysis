@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
-  "name": "edbdd94f20f065df2713",
+  "name": "e25fda04ec82ab826b91",
   "position": {
     "x": 0,
     "y": 0,
     "z": 0,
-    "height": 65.84615384615384,
-    "width": 392.61538461538464,
-    "tabOrder": 1000
+    "height": 411.1764705882353,
+    "width": 634.11764705882354,
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "shape",
@@ -18,7 +18,14 @@
             "tileShape": {
               "expr": {
                 "Literal": {
-                  "Value": "'rectangleRounded'"
+                  "Value": "'tabRoundTopCorners'"
+                }
+              }
+            },
+            "tabRoundCornerTop": {
+              "expr": {
+                "Literal": {
+                  "Value": "5L"
                 }
               }
             }
@@ -31,7 +38,7 @@
             "shapeAngle": {
               "expr": {
                 "Literal": {
-                  "Value": "0L"
+                  "Value": "270L"
                 }
               }
             }
@@ -45,11 +52,17 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 7,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#302744'"
                     }
                   }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
@@ -75,6 +88,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "4e23827a3b9a85192c0a",
+  "parentGroupName": "89c9b513a9ae920b0617",
   "howCreated": "InsertVisualButton"
 }

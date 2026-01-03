@@ -4,14 +4,14 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 89.999999999999943,
-        "y": 302.99999999999977
+        "x": 8.3906693837437842,
+        "y": 1854.9999999999989
       },
       "nodes": [
         {
           "location": {
             "x": 2594.3765278625892,
-            "y": 1880.7472894266791
+            "y": 2065.764221917098
           },
           "nodeIndex": "Dim_AdmissionType",
           "nodeLineageTag": "24a0d430-6b9a-4a1f-8ab5-92ee89c8dbca",
@@ -19,12 +19,12 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 3
+          "zIndex": 10
         },
         {
           "location": {
             "x": 1461.3279967595925,
-            "y": 1560.7580162804497
+            "y": 1745.7749487708686
           },
           "nodeIndex": "Dim_ClinicalClass",
           "nodeLineageTag": "d9d210df-7172-4ab6-9dc0-9f46d270c13c",
@@ -32,12 +32,12 @@
             "height": 312.13666573425621,
             "width": 234
           },
-          "zIndex": 4
+          "zIndex": 11
         },
         {
           "location": {
             "x": 2012.0465212452473,
-            "y": 589.20666476244548
+            "y": 774.22359725286435
           },
           "nodeIndex": "Dim_Date",
           "nodeLineageTag": "c954be0f-6932-4d25-a4aa-162cab3c3e57",
@@ -45,12 +45,12 @@
             "height": 390.97644233098083,
             "width": 234
           },
-          "zIndex": 5
+          "zIndex": 12
         },
         {
           "location": {
             "x": 1574.6165075385886,
-            "y": 1977.2747012395143
+            "y": 2162.291633729933
           },
           "nodeIndex": "Dim_Disposition",
           "nodeLineageTag": "10ce94cf-7176-4fbb-8a69-df0e34d6e8c1",
@@ -58,12 +58,12 @@
             "height": 171.62236991452528,
             "width": 234
           },
-          "zIndex": 6
+          "zIndex": 13
         },
         {
           "location": {
             "x": 1585.9291712826841,
-            "y": 908.150397435454
+            "y": 1093.1673299258728
           },
           "nodeIndex": "Dim_Facility",
           "nodeLineageTag": "42fcdb87-5f7a-4947-90cc-90a460c02430",
@@ -71,12 +71,12 @@
             "height": 269.48822116549047,
             "width": 234
           },
-          "zIndex": 15
+          "zIndex": 21
         },
         {
           "location": {
             "x": 630.58377292610328,
-            "y": 1609.3891414217624
+            "y": 1794.4060739121812
           },
           "nodeIndex": "Dim_Payer",
           "nodeLineageTag": "5b753935-5b34-47d6-a3cc-a08ce3525d6b",
@@ -84,12 +84,12 @@
             "height": 200.97392534575943,
             "width": 234
           },
-          "zIndex": 7
+          "zIndex": 14
         },
         {
           "location": {
             "x": 1194.4657215173963,
-            "y": 1351.6455077613025
+            "y": 1536.6624402517214
           },
           "nodeIndex": "Dim_Year",
           "nodeLineageTag": "a1874355-000b-4746-82b1-59aa0ecf5bd3",
@@ -97,12 +97,12 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 8
+          "zIndex": 15
         },
         {
           "location": {
             "x": 65.596912379617123,
-            "y": 797.22330162026992
+            "y": 982.24023411068879
           },
           "nodeIndex": "Fact_KPI_Disposition",
           "nodeLineageTag": "28d54733-b7f6-4bb7-8037-c796ad6b3786",
@@ -110,12 +110,12 @@
             "height": 211.67703620822783,
             "width": 234
           },
-          "zIndex": 9
+          "zIndex": 16
         },
         {
           "location": {
             "x": 0,
-            "y": 1806.3738646541583
+            "y": 1991.3907971445772
           },
           "nodeIndex": "Fact_KPI_FinancialPressure",
           "nodeLineageTag": "8a5ee703-ad3e-4f40-8e91-46930e042ec1",
@@ -123,12 +123,12 @@
             "height": 316.51429581973093,
             "width": 291.08325793316442
           },
-          "zIndex": 10
+          "zIndex": 17
         },
         {
           "location": {
             "x": 97.6492035702394,
-            "y": 2407.4101010749328
+            "y": 2592.4270335653518
           },
           "nodeIndex": "Fact_KPI_LOS_Summary",
           "nodeLineageTag": "4f38a133-375c-441a-a981-a1b9ff20836e",
@@ -136,12 +136,12 @@
             "height": 276.91147709101119,
             "width": 234
           },
-          "zIndex": 11
+          "zIndex": 18
         },
         {
           "location": {
             "x": 50.735993300600228,
-            "y": 570.23211228331127
+            "y": 755.24904477373013
           },
           "nodeIndex": "Fact_KPI_Mortality",
           "nodeLineageTag": "da3c3f6e-b84e-48f8-ab27-556308e175cc",
@@ -149,12 +149,12 @@
             "height": 212.5702074308744,
             "width": 234
           },
-          "zIndex": 16
+          "zIndex": 22
         },
         {
           "location": {
             "x": 92.444054356288831,
-            "y": 1363.8839861930194
+            "y": 1548.9009186834382
           },
           "nodeIndex": "Fact_KPI_PayerMix",
           "nodeLineageTag": "4e5bbc2f-ef0d-4989-937d-abe48d75934e",
@@ -162,12 +162,12 @@
             "height": 432.00503397044281,
             "width": 234
           },
-          "zIndex": 12
+          "zIndex": 19
         },
         {
           "location": {
             "x": 8.3906693837437842,
-            "y": 2158.4139956521535
+            "y": 2343.4309281425722
           },
           "nodeIndex": "Fact_KPI_SeverityMix",
           "nodeLineageTag": "8cd63fbf-3f19-4e29-a014-2015f1361a29",
@@ -175,12 +175,12 @@
             "height": 233.93956006336089,
             "width": 234
           },
-          "zIndex": 14
+          "zIndex": 23
         },
         {
           "location": {
             "x": 37.41415527977216,
-            "y": 1095.4756485547641
+            "y": 1280.492581045183
           },
           "nodeIndex": "Fact_KPI_Unplanned",
           "nodeLineageTag": "ffddfc83-a994-4118-8837-d1fe22b87a62",
@@ -188,12 +188,12 @@
             "height": 242.85531114631169,
             "width": 276.738705264973
           },
-          "zIndex": 13
+          "zIndex": 20
         },
         {
           "location": {
             "x": 1872.3817162725422,
-            "y": 1389.3938365151016
+            "y": 1574.4107690055205
           },
           "nodeIndex": "_KPI_Measures",
           "nodeLineageTag": "29eefdf6-619c-4b82-acc5-33a3ef6f72d8",
@@ -201,12 +201,12 @@
             "height": 287.4087387101581,
             "width": 234
           },
-          "zIndex": 1
+          "zIndex": 8
         },
         {
           "location": {
             "x": 1869.7059385569255,
-            "y": 1696.6220826808396
+            "y": 1881.6390151712585
           },
           "nodeIndex": "_Volume_&_Denominators",
           "nodeLineageTag": "49787e4b-c049-4f55-b762-95d7635c8244",
@@ -214,12 +214,12 @@
             "height": 315.95036767674037,
             "width": 234
           },
-          "zIndex": 2
+          "zIndex": 9
         },
         {
           "location": {
             "x": 1870.96542660672,
-            "y": 2038.3923435844874
+            "y": 2223.4092760749063
           },
           "nodeIndex": "_Financial_Basic",
           "nodeLineageTag": "9abe8882-ef5b-477d-a3c5-eabaf7b09d85",
@@ -227,12 +227,12 @@
             "height": 319.518071297563,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 1
         },
         {
           "location": {
             "x": 2139.4351240736341,
-            "y": 1913.76667567049
+            "y": 2098.7836081609089
           },
           "nodeIndex": "_PayerMix",
           "nodeLineageTag": "5c677962-0278-49e5-a97e-cdd8deedd191",
@@ -240,12 +240,12 @@
             "height": 346.27584845373394,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 2
         },
         {
           "location": {
             "x": 2142.4784639338404,
-            "y": 1697.3946189277056
+            "y": 1882.4115514181244
           },
           "nodeIndex": "_Disposition",
           "nodeLineageTag": "9e3e0b45-93e8-449c-8ab4-b7106ff886a6",
@@ -253,12 +253,12 @@
             "height": 163.43103788656663,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 3
         },
         {
           "location": {
             "x": 2138.9699524470684,
-            "y": 1239.0476480326752
+            "y": 1424.064580523094
           },
           "nodeIndex": "_Guardrails",
           "nodeLineageTag": "00aa30d6-32e3-4af0-88ef-d3c099beaf07",
@@ -266,12 +266,12 @@
             "height": 200,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 4
         },
         {
           "location": {
             "x": 1493.2129980671507,
-            "y": 410.79103282137891
+            "y": 595.80796531179772
           },
           "nodeIndex": "Bridge_Facility_PeerGroup",
           "nodeLineageTag": "ae77ae1d-11b2-408f-acbb-826d8289bbe6",
@@ -279,12 +279,12 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 5
         },
         {
           "location": {
             "x": 569.94824408520253,
-            "y": 370.03386498083779
+            "y": 555.0507974712566
           },
           "nodeIndex": "Dim_PeerGroup",
           "nodeLineageTag": "a1e31423-ec89-4c97-a3e5-5d384d87fa5d",
@@ -292,7 +292,19 @@
             "height": 224,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 2878.3765278625892,
+            "y": 1242.1607890829719
+          },
+          "nodeIndex": "_Severity",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 7
         }
       ],
       "name": "All tables",
