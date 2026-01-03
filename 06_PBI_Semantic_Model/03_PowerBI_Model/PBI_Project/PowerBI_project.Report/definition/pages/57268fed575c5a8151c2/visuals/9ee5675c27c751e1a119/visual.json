@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
   "name": "9ee5675c27c751e1a119",
   "position": {
-    "x": 15.294117647058897,
+    "x": 15.845588235294187,
     "y": 14.705882352941188,
     "z": 1000,
     "height": 378.8235294117647,
     "width": 603.52941176470586,
-    "tabOrder": 12000
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "lineClusteredColumnComboChart",
@@ -90,7 +90,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fact_KPI_SeverityMix"
+                      "Entity": "Dim_ClinicalClass"
                     }
                   },
                   "Property": "PeerGroup Severity Median"

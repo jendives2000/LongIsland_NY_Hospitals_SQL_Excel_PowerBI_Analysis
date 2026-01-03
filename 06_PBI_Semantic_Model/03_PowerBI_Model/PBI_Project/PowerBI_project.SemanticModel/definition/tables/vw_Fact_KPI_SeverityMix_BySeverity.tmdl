@@ -1,0 +1,103 @@
+table vw_Fact_KPI_SeverityMix_BySeverity
+	lineageTag: 2a6fc658-ebfe-4ee1-af93-a8e07538b9e1
+
+	column Facility_Key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 21367b8d-fea3-4b6d-ab60-b38894584363
+		summarizeBy: none
+		sourceColumn: Facility_Key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column Facility_Name
+		dataType: string
+		isHidden
+		lineageTag: fa9e1cba-7c04-4601-afd6-e5c6ddb81dbe
+		summarizeBy: none
+		sourceColumn: Facility_Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Encounter_Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 634ee7bb-a266-43f6-962d-6a123e7d6d3a
+		summarizeBy: none
+		sourceColumn: Encounter_Year
+
+		annotation SummarizationSetBy = User
+
+	column APR_Severity_Code
+		dataType: int64
+		formatString: 0
+		lineageTag: 690cf3f6-ba05-4070-aaaa-36980836c328
+		summarizeBy: none
+		sourceColumn: APR_Severity_Code
+
+		annotation SummarizationSetBy = User
+
+	column APR_Severity_Description
+		dataType: string
+		lineageTag: c47c4db1-6fcc-4ca6-ad65-4827ecf8023f
+		summarizeBy: none
+		sourceColumn: APR_Severity_Description
+		sortByColumn: APR_Severity_Code
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Encounter_Count
+		dataType: int64
+		formatString: 0
+		lineageTag: 6f54d62b-697e-47b4-9276-257deb0b5ffe
+		summarizeBy: sum
+		sourceColumn: Encounter_Count
+
+		annotation SummarizationSetBy = Automatic
+
+	column Encounter_Share
+		dataType: double
+		isHidden
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 9ff22fc9-8752-47ec-acec-456b6497413c
+		summarizeBy: sum
+		sourceColumn: Encounter_Share
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Discharge_Date_Key
+		dataType: int64
+		formatString: 0
+		lineageTag: f4a09516-3bd7-4956-aaf0-0733f414ab0a
+		summarizeBy: none
+		sourceColumn: Discharge_Date_Key
+
+		annotation SummarizationSetBy = User
+
+	column ClinicalClass_Key
+		dataType: int64
+		formatString: 0
+		lineageTag: 751573d1-be6d-4aa3-a2b0-5579260f5ffe
+		summarizeBy: none
+		sourceColumn: ClinicalClass_Key
+
+		annotation SummarizationSetBy = User
+
+	partition vw_Fact_KPI_SeverityMix_BySeverity = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("DESKTOP-3O401KK", "LI_NYHealth"),
+				    dbo_vw_Fact_KPI_SeverityMix_BySeverity = Source{[Schema="dbo",Item="vw_Fact_KPI_SeverityMix_BySeverity"]}[Data]
+				in
+				    dbo_vw_Fact_KPI_SeverityMix_BySeverity
+

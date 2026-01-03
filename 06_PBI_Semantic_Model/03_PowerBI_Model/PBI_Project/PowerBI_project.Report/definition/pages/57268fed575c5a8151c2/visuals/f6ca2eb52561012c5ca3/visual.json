@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
   "name": "f6ca2eb52561012c5ca3",
   "position": {
-    "x": 15.07352941176471,
-    "y": 447.5735294117647,
+    "x": 0,
+    "y": 442.5735294117647,
     "z": 3000,
     "height": 71.25,
     "width": 608.125,
-    "tabOrder": 14002
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "textbox",
@@ -28,7 +28,17 @@
                     }
                   },
                   {
-                    "value": "."
+                    "value": ". "
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "System-wide acuity is broadly high, not driven by one or two hospitals.",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
                   }
                 ]
               }

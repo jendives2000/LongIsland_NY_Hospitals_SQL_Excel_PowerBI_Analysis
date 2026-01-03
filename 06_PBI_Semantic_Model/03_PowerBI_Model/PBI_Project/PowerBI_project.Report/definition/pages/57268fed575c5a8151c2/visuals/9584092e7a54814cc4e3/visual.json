@@ -4,10 +4,10 @@
   "position": {
     "x": 278.125,
     "y": 519.375,
-    "z": 15000,
+    "z": 16000,
     "height": 41.25,
     "width": 181.25,
-    "tabOrder": 14004
+    "tabOrder": 16000
   },
   "visual": {
     "visualType": "actionButton",
@@ -279,7 +279,7 @@
             "bookmark": {
               "expr": {
                 "Literal": {
-                  "Value": "'e168be779b2031ad0b72'"
+                  "Value": "'f903b9ec5a02a08200c7'"
                 }
               }
             }
@@ -292,7 +292,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Select Visuals Sev Mix Ind'"
+                  "Value": "'Select Visuals Severity Distribution'"
                 }
               }
             }
@@ -302,5 +302,6 @@
     },
     "drillFilterOtherVisuals": true
   },
+  "isHidden": true,
   "howCreated": "InsertVisualButton"
 }

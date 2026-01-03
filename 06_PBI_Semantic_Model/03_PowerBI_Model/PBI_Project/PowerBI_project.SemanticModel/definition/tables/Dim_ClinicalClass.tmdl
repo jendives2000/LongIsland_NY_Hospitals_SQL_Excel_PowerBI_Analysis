@@ -1,18 +1,36 @@
 table Dim_ClinicalClass
-	isHidden
 	lineageTag: d9d210df-7172-4ab6-9dc0-9f46d270c13c
+
+	measure 'PeerGroup Severity Median' = ```
+			
+			VAR CurrentPeerGroup =
+			    SELECTEDVALUE ( Dim_PeerGroup[PeerGroup_Name] )
+			RETURN
+			CALCULATE (
+			    MEDIANX (
+			        VALUES ( Dim_Facility[Facility_Key] ),
+			        [Severity Mix Index]
+			    ),
+			    ALL ( Dim_Facility ),
+			    Dim_PeerGroup[PeerGroup_Name] = CurrentPeerGroup
+			)
+			
+			```
+		lineageTag: 749a10eb-083d-4033-95ae-db75a0122d08
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column ClinicalClass_Key
 		dataType: int64
 		isHidden
 		formatString: 0
 		lineageTag: d4d95719-92a6-47b6-a60c-ce25f9af9277
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: ClinicalClass_Key
 
 		changedProperty = IsHidden
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column APR_DRG_Code
 		dataType: string
@@ -38,24 +56,27 @@ table Dim_ClinicalClass
 
 	column APR_Severity_Code
 		dataType: int64
-		isHidden
 		formatString: 0
 		lineageTag: e9be9626-2f80-49df-8565-7a17effccc60
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: APR_Severity_Code
 
 		changedProperty = IsHidden
 
-		annotation SummarizationSetBy = Automatic
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = User
 
 	column APR_Severity_Description
 		dataType: string
-		isHidden
 		lineageTag: 08422a04-96fa-4e02-87cd-32b3e4f07c65
 		summarizeBy: none
 		sourceColumn: APR_Severity_Description
+		sortByColumn: APR_Severity_Code
 
 		changedProperty = IsHidden
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 

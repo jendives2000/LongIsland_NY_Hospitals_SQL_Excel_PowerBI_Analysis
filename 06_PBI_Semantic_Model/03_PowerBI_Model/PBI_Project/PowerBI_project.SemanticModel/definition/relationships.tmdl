@@ -77,3 +77,15 @@ relationship c9e51b64-5a02-071d-5b49-1144e6d0f6a6
 	fromColumn: Dim_Facility.Facility_Key
 	toColumn: Bridge_Facility_PeerGroup.Facility_Key
 
+relationship 27f947ef-65d9-1be9-bef0-7ba68cfe959c
+	fromColumn: vw_Fact_KPI_SeverityMix_BySeverity.Facility_Key
+	toColumn: Dim_Facility.Facility_Key
+
+relationship ff015bcb-80f0-db32-2f5a-4e9e31038998
+	fromColumn: vw_Fact_KPI_SeverityMix_BySeverity.Discharge_Date_Key
+	toColumn: Dim_Date.Date_Key
+
+relationship 5f1d9d1a-3175-bb50-e492-cabac5c58d9c
+	fromColumn: vw_Fact_KPI_SeverityMix_BySeverity.ClinicalClass_Key
+	toColumn: Dim_ClinicalClass.ClinicalClass_Key
+

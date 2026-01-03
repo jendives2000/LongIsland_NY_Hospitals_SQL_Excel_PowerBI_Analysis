@@ -10,11 +10,9 @@ annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBIDesktopVersion = 2.132.1053.0 (24.08)
 
-annotation PBI_QueryOrder = ["Fact_KPI_Disposition","Fact_KPI_FinancialPressure","Fact_KPI_LOS_Summary","Fact_KPI_Mortality","Fact_KPI_PayerMix","Fact_KPI_SeverityMix","Fact_KPI_Unplanned","Dim_Year","Dim_Date","Dim_Facility","Dim_Payer","Dim_AdmissionType","Dim_Disposition","Dim_ClinicalClass","Bridge_Facility_PeerGroup","Dim_PeerGroup"]
+annotation PBI_QueryOrder = ["Fact_KPI_Disposition","Fact_KPI_FinancialPressure","Fact_KPI_LOS_Summary","Fact_KPI_Mortality","Fact_KPI_PayerMix","Fact_KPI_SeverityMix","Fact_KPI_Unplanned","Dim_Year","Dim_Date","Dim_Facility","Dim_Payer","Dim_AdmissionType","Dim_Disposition","Dim_ClinicalClass","Bridge_Facility_PeerGroup","Dim_PeerGroup","vw_Fact_KPI_SeverityMix_BySeverity"]
 
 annotation PBI_ProTooling = ["DevMode"]
-
-annotation PBI_RemovedChildren = [{"remoteItemId":{"foreignKeyRelationship":{"fromTableLocalLineageTag":"ae77ae1d-11b2-408f-acbb-826d8289bbe6","fromColumnLocalLineageTag":"9e032271-ddc1-4706-934f-e171b5e3ef86","toTableLocalLineageTag":"42fcdb87-5f7a-4947-90cc-90a460c02430","toColumnLocalLineageTag":"e39b776c-f1b2-467c-9081-acb07c7ee958"}},"objectType":"Relationship"}]
 
 ref table Fact_KPI_Disposition
 ref table Fact_KPI_FinancialPressure
@@ -39,6 +37,7 @@ ref table _Guardrails
 ref table Bridge_Facility_PeerGroup
 ref table Dim_PeerGroup
 ref table _Severity
+ref table vw_Fact_KPI_SeverityMix_BySeverity
 
 ref cultureInfo en-US
 

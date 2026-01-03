@@ -1,25 +1,6 @@
 table Fact_KPI_SeverityMix
 	lineageTag: 8cd63fbf-3f19-4e29-a014-2015f1361a29
 
-	measure 'PeerGroup Severity Median' = ```
-			
-			VAR CurrentPeerGroup =
-			    SELECTEDVALUE ( Dim_PeerGroup[PeerGroup_Name] )
-			RETURN
-			CALCULATE (
-			    MEDIANX (
-			        VALUES ( Dim_Facility[Facility_Key] ),
-			        [Severity Mix Index]
-			    ),
-			    ALL ( Dim_Facility ),
-			    Dim_PeerGroup[PeerGroup_Name] = CurrentPeerGroup
-			)
-			
-			```
-		lineageTag: 749a10eb-083d-4033-95ae-db75a0122d08
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column Facility_Key
 		dataType: int64
 		isHidden
