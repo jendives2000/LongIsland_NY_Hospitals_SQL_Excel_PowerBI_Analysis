@@ -29,12 +29,13 @@ It explains **who hospitals are treating**, not **how well they are treating the
     - [Interpretation Guidelines](#interpretation-guidelines)
     - [What It Should Look Like](#what-it-should-look-like)
     - [Known Limitations](#known-limitations)
-    - [Excel Validation](#excel-validation)
-      - [Objective](#objective)
-      - [Required Fields (Encounter Level)](#required-fields-encounter-level)
-    - [Validation Steps](#validation-steps)
-    - [KPI Contract Summary](#kpi-contract-summary)
-    - [Why This KPI Matters](#why-this-kpi-matters)
+  - [Supporting Distribution Fact (Power BI)](#supporting-distribution-fact-power-bi)
+  - [Excel Validation](#excel-validation)
+  - [Objective](#objective)
+  - [Required Fields (Encounter Level)](#required-fields-encounter-level)
+  - [Validation Steps](#validation-steps)
+  - [KPI Contract Summary](#kpi-contract-summary)
+  - [Why This KPI Matters](#why-this-kpi-matters)
 
 </details>
 
@@ -242,16 +243,35 @@ These limitations must be acknowledged in executive interpretation.
 
 </details>
 
-### Excel Validation
+## Supporting Distribution Fact (Power BI)
+- SQL file: [here](./05_SQL/05_01B_Fact_KPI_SeverityMix_BySeverity.sql)
+  
+To support severity distribution visuals (APR Levels 1–4) in Power BI
+without importing encounter-level data, the project includes a
+Facility–Year–Severity KPI fact:
+
+- `vw_Fact_KPI_SeverityMix_BySeverity`
+
+Grain:
+- Facility
+- Discharge Year
+- APR Severity Level (1–4)
+
+This object provides additive encounter counts and shares and must be
+used for stacked severity distribution visuals. It is a supporting
+context structure, not a standalone KPI.
+
+
+## Excel Validation
 * Excel File: [here](./05_Excel/05_01_Severity_Mix_Index.xlsx)
 
 <details> <summary>Validation approach</summary>
 
-#### Objective
+## Objective
 
 Confirm that **APR severity counts and average severity index** calculated in Excel match the SQL view outputs.
 
-#### Required Fields (Encounter Level)
+## Required Fields (Encounter Level)
 * Encounter_ID
 * Facility_Name
 * Discharge_Year - 2015
@@ -263,7 +283,7 @@ Confirm that **APR severity counts and average severity index** calculated in Ex
 
   </details>
 
-### Validation Steps
+## Validation Steps
 
 1) Severity Counts  
     ```text
@@ -290,7 +310,7 @@ Confirm that **APR severity counts and average severity index** calculated in Ex
 
 </details>
 
-### KPI Contract Summary
+## KPI Contract Summary
 <details> 
 <summary>Contract at a glance</summary>
 
@@ -301,7 +321,7 @@ Confirm that **APR severity counts and average severity index** calculated in Ex
 
 </details>
 
-### Why This KPI Matters
+## Why This KPI Matters
 <details> 
 <summary>Strategic context</summary>
 
