@@ -127,6 +127,12 @@ Each fact:
 - contains only **additive components**
 - does **not** store final KPI rates as authoritative values
 
+Supporting Views:
+- vw_Fact_KPI_SeverityMix_BySeverity  
+  Facility-Year-Severity fact used for APR severity distribution visuals
+  (context only, no performance interpretation).
+
+
 ---
 
 ### Dimensions

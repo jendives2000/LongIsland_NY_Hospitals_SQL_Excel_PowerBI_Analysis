@@ -20,6 +20,7 @@ This is where the project transitions from *"Is the data trustworthy?"* to
   - [Optimized sequence for clean SQL logic, analytical coherence, and scalable KPI development](#optimized-sequence-for-clean-sql-logic-analytical-coherence-and-scalable-kpi-development)
   - [📊 KPI Catalog](#-kpi-catalog)
     - [1. Severity Mix Index (APR)](#1-severity-mix-index-apr)
+      - [Severity Mix (APR) Objects](#severity-mix-apr-objects)
     - [2. Payer Mix \& Reimbursement Risk](#2-payer-mix--reimbursement-risk)
     - [3. Unplanned Admission Rate](#3-unplanned-admission-rate)
     - [4. Disposition Outcomes](#4-disposition-outcomes)
@@ -133,6 +134,14 @@ We compute:
 - Average severity score per facility-year
 - Severity mix index used later for case-mix comparisons:  
   This is basically a summary score of how severe the patient population is, per hospital-year.
+
+#### Severity Mix (APR) Objects
+
+| Object | Purpose |
+|------|--------|
+| 05_01_Severity_Mix_Index_APR.sql | Facility-Year Severity Mix Index (context KPI) |
+| 05_01B_Fact_KPI_SeverityMix_BySeverity.sql | Facility-Year-Severity distribution fact used for Power BI stacked visuals |
+
 
 **View:**
 
