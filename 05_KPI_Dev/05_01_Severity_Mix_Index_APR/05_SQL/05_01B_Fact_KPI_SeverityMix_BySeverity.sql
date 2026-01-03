@@ -1,27 +1,28 @@
 --------------------------------------------------------------------------------
--- STEP 05.01B - KPI Fact: Severity Mix by Severity Level (APR)
+-- STEP 05.01B - KPI Fact: Severity Mix by Severity Level (APR) - Enterprise Strict
 -- File: 05_01B_Fact_KPI_SeverityMix_BySeverity.sql
 --
 -- WHAT:
---   Create a KPI fact view at Facility-Year-Severity grain:
---     - Encounter_Count per APR severity level (1–4)
---     - Optional Encounter_Share (within Facility-Year)
+--   Create a KPI fact view at Facility-Date-Severity grain with keys required
+--   for a strict star schema in Power BI:
+--     - Discharge_Date_Key (Dim_Date relationship)
+--     - ClinicalClass_Key (Dim_ClinicalClass relationship)
 --
 -- WHY:
---   Power BI visuals (100% stacked distributions) require a fact grain that
---   can be segmented by severity without importing encounter-level rows.
---   This keeps the semantic model fast, stable, and audit-friendly.
+--   Enables consistent date slicing (Year/Month/Quarter) and consistent use of
+--   clinical classification attributes across the semantic model.
 --
 -- GRAIN:
 --   One row per:
---     Facility_Key × Encounter_Year × APR_Severity_Code
+--     Facility_Key × Discharge_Date_Key × ClinicalClass_Key
+--   (with filters ensuring APR severity levels 1–4 only)
 --
 -- OUTPUT (to Power BI):
---   Facility_Key, Facility_Name
---   Encounter_Year
+--   Facility_Key, Discharge_Date_Key, ClinicalClass_Key
+--   Encounter_Year (derived from Dim_Date for convenience)
 --   APR_Severity_Code, APR_Severity_Description
---   Encounter_Count
---   Encounter_Share (sums to 1.0000 per Facility-Year)
+--   Encounter_Count (additive)
+--   Encounter_Share (within Facility-Year, sums to 1.0000 per Facility-Year)
 --
 -- DEPENDENCIES:
 --   dbo.Fact_Encounter: Encounter_ID, Discharge_Date_Key, Facility_Key, ClinicalClass_Key
@@ -38,78 +39,121 @@ GO
 
 CREATE VIEW dbo.vw_Fact_KPI_SeverityMix_BySeverity
 AS
-WITH Severity_Base AS (
+WITH Base AS (
     SELECT
-        fe.Encounter_ID,                  -- WHAT: Keep encounter grain for accurate counting
+        fe.Encounter_ID,                 -- keep encounter grain for accurate counting
         fe.Facility_Key,
         fe.Discharge_Date_Key,
         fe.ClinicalClass_Key,
 
-        -- WHAT: Severity code (1–4) used for distribution visuals.
-        -- WHY: Power BI needs a categorical field to segment encounter counts.
+        -- Bring the severity attributes for convenience (still keep the key)
         cc.APR_Severity_Code,
+        cc.APR_Severity_Description,
 
-        -- WHAT: Friendly label (Minor/Moderate/Major/Extreme).
-        -- WHY: Executive readability in legends and tooltips.
-        cc.APR_Severity_Description
+        -- Convenience attribute: year derived from the discharge date key
+        d.Year AS Encounter_Year
     FROM dbo.Fact_Encounter AS fe
     INNER JOIN dbo.Dim_ClinicalClass AS cc
         ON fe.ClinicalClass_Key = cc.ClinicalClass_Key
+    INNER JOIN dbo.Dim_Date AS d
+        ON fe.Discharge_Date_Key = d.Date_Key
     WHERE
-        -- WHAT: Keep only valid APR Severity buckets for the official distribution.
-        -- WHY: Prevents NULL/Unknown from producing misleading stacked shares.
+        -- Keep only valid APR Severity buckets for the official distribution
         cc.APR_Severity_Code IN (1,2,3,4)
 ),
 Agg AS (
     SELECT
-        sb.Facility_Key,
-        d.Year AS Encounter_Year,
-        sb.APR_Severity_Code,
-        sb.APR_Severity_Description,
+        b.Facility_Key,
+        b.Discharge_Date_Key,
+        b.ClinicalClass_Key,
+        b.Encounter_Year,
+        b.APR_Severity_Code,
+        b.APR_Severity_Description,
 
-        -- KPI OUTPUT METRIC: Count of encounters in this severity level.
+        -- OUTPUT METRIC: Encounter count at the strict grain
         COUNT_BIG(*) AS Encounter_Count
-    FROM Severity_Base AS sb
-    INNER JOIN dbo.Dim_Date AS d
-        ON sb.Discharge_Date_Key = d.Date_Key
+    FROM Base AS b
     GROUP BY
-        sb.Facility_Key,
-        d.Year,
-        sb.APR_Severity_Code,
-        sb.APR_Severity_Description
+        b.Facility_Key,
+        b.Discharge_Date_Key,
+        b.ClinicalClass_Key,
+        b.Encounter_Year,
+        b.APR_Severity_Code,
+        b.APR_Severity_Description
+),
+Agg_FacilityYear AS (
+    -- Denominator needed to compute shares per Facility-Year
+    SELECT
+        a.Facility_Key,
+        a.Encounter_Year,
+        SUM(a.Encounter_Count) AS FacilityYear_Encounter_Total
+    FROM Agg AS a
+    GROUP BY
+        a.Facility_Key,
+        a.Encounter_Year
 )
 SELECT
     f.Facility_Key,
     f.Facility_Name,
+
+    -- Keys for strict star schema relationships
+    a.Discharge_Date_Key,
+    a.ClinicalClass_Key,
+
+    -- Convenience time attribute (optional but helpful)
     a.Encounter_Year,
+
+    -- Severity attributes (also available via Dim_ClinicalClass)
     a.APR_Severity_Code,
     a.APR_Severity_Description,
 
-    -- OUTPUT METRIC: Encounter count (additive, safe for aggregation).
+    -- Additive fact
     a.Encounter_Count,
 
-    -- OUTPUT KPI: Share within Facility-Year (drives 100% stacked visuals).
+    -- KPI share within Facility-Year (sums to 1.0000 per Facility-Year)
     CAST(
         a.Encounter_Count * 1.0
-        / NULLIF(SUM(a.Encounter_Count) OVER (PARTITION BY a.Facility_Key, a.Encounter_Year), 0)
+        / NULLIF(afy.FacilityYear_Encounter_Total, 0)
         AS DECIMAL(10,4)
     ) AS Encounter_Share
 FROM Agg AS a
+INNER JOIN Agg_FacilityYear AS afy
+    ON a.Facility_Key = afy.Facility_Key
+   AND a.Encounter_Year = afy.Encounter_Year
 INNER JOIN dbo.Dim_Facility AS f
     ON a.Facility_Key = f.Facility_Key;
 GO
+
 
 
 -- Check with top 5. rows
 SELECT TOP (50)
     Facility_Name,
     Encounter_Year,
+    Discharge_Date_Key,
+    ClinicalClass_Key,
     APR_Severity_Code,
     APR_Severity_Description,
     Encounter_Count,
     Encounter_Share
 FROM dbo.vw_Fact_KPI_SeverityMix_BySeverity
-ORDER BY Facility_Name, Encounter_Year, APR_Severity_Code;
+ORDER BY Facility_Name, Encounter_Year, Discharge_Date_Key, APR_Severity_Code;
+
+
+-- check: uniqueness at the strict grain
+-- Expected: 0 rows
+SELECT
+    Facility_Key,
+    Discharge_Date_Key,
+    ClinicalClass_Key,
+    COUNT(*) AS Row_Count
+FROM dbo.vw_Fact_KPI_SeverityMix_BySeverity
+GROUP BY
+    Facility_Key,
+    Discharge_Date_Key,
+    ClinicalClass_Key
+HAVING COUNT(*) > 1
+ORDER BY Row_Count DESC;
 
 
 -- Pivot Output: one row per facility with columns Minor/Moderate/Major/Extreme.
@@ -156,33 +200,16 @@ PIVOT (
 ) p
 ORDER BY Facility_Name, Encounter_Year;
 
--- check: shares must sum to 1 per Facility-Year
+-- check: shares must sum to 1 per Facility-Day
 -- Expected result: 0 rows
 SELECT
-    Facility_Name,
-    Encounter_Year,
-    SUM(Encounter_Count) AS Total_Encounters_From_View,
-    CAST(SUM(Encounter_Share) AS DECIMAL(10,4)) AS Share_Sum_Should_Be_1
-FROM dbo.vw_Fact_KPI_SeverityMix_BySeverity
-GROUP BY Facility_Name, Encounter_Year
-HAVING ABS(SUM(Encounter_Share) - 1.0) > 0.0001
-ORDER BY Facility_Name, Encounter_Year;
-
-
--- Cross-check against Fact_Encounter totals (2015)
-SELECT
     f.Facility_Name,
+    fe.Discharge_Date_Key,
     d.Year AS Encounter_Year,
 
-    -- Total encounters from raw fact table
-    COUNT_BIG(*) AS Total_Inpatient_Encounters_Fact,
-
-    -- Total encounters reconstructed from the KPI severity view
-    ISNULL(v.Total_Encounters_From_View, 0) AS Total_Encounters_From_View,
-
-    -- Difference: should be 0 if nothing is lost
-    COUNT_BIG(*) - ISNULL(v.Total_Encounters_From_View, 0) AS Encounter_Difference
-
+    COUNT_BIG(*) AS Fact_Encounter_Count,
+    ISNULL(v.View_Encounter_Count, 0) AS View_Encounter_Count,
+    COUNT_BIG(*) - ISNULL(v.View_Encounter_Count, 0) AS Encounter_Difference
 FROM dbo.Fact_Encounter AS fe
 INNER JOIN dbo.Dim_Facility AS f
     ON fe.Facility_Key = f.Facility_Key
@@ -191,21 +218,24 @@ INNER JOIN dbo.Dim_Date AS d
 LEFT JOIN (
     SELECT
         Facility_Key,
-        Encounter_Year,
-        SUM(Encounter_Count) AS Total_Encounters_From_View
+        Discharge_Date_Key,
+        SUM(Encounter_Count) AS View_Encounter_Count
     FROM dbo.vw_Fact_KPI_SeverityMix_BySeverity
-    GROUP BY
+GROUP BY
         Facility_Key,
-        Encounter_Year
+        Discharge_Date_Key
 ) AS v
     ON v.Facility_Key = fe.Facility_Key
-   AND v.Encounter_Year = d.Year
+   AND v.Discharge_Date_Key = fe.Discharge_Date_Key
 WHERE
     d.Year = 2015
 GROUP BY
     f.Facility_Name,
+    fe.Discharge_Date_Key,
     d.Year,
-    v.Total_Encounters_From_View
+    v.View_Encounter_Count
+HAVING COUNT_BIG(*) - ISNULL(v.View_Encounter_Count, 0) <> 0
 ORDER BY
-    f.Facility_Name;
+    f.Facility_Name,
+    fe.Discharge_Date_Key;
 
