@@ -2,7 +2,7 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
   "name": "0906365080449c205513",
   "position": {
-    "x": 15.384615384615385,
+    "x": 648.31730769230774,
     "y": 22.153846153846153,
     "z": 1500,
     "height": 432.61538461538464,
@@ -65,6 +65,24 @@
             }
           ]
         },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Severity"
+                    }
+                  },
+                  "Property": "Extreme Severity %"
+                }
+              },
+              "queryRef": "_Severity.Extreme Severity %",
+              "nativeQueryRef": "Extreme Severity %"
+            }
+          ]
+        },
         "Y": {
           "projections": [
             {
@@ -88,6 +106,23 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Severity"
+                  }
+                },
+                "Property": "Extreme Severity %"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "objects": {
@@ -108,18 +143,95 @@
                 }
               }
             },
+            "detailContentType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Percent of total'"
+                }
+              }
+            },
+            "enableDetailDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableValueDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
             "detailColor": {
               "solid": {
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 0,
+                      "ColorId": 1,
                       "Percent": 0
                     }
                   }
                 }
               }
             }
+          }
+        },
+        {
+          "properties": {
+            "enableValueDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "detailBold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "vw_Fact_KPI_SeverityMix_BySeverity"
+                          }
+                        },
+                        "Property": "APR_Severity_Description"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Extreme'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
           }
         }
       ],
@@ -256,9 +368,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 9,
-                      "Percent": -0.5
+                    "Literal": {
+                      "Value": "'#CB0404'"
                     }
                   }
                 }
@@ -420,5 +531,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "f9f00eae4c0acbdd5301"
+  "parentGroupName": "f9f00eae4c0acbdd5301",
+  "isHidden": true
 }

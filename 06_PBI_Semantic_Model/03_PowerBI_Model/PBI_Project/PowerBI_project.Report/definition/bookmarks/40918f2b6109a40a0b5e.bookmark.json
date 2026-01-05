@@ -1,9 +1,15 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.1.0/schema.json",
-  "displayName": "Button Vis Severity Distribution",
-  "name": "f903b9ec5a02a08200c7",
+  "displayName": "Butt Extreme Severity vs Peer Median",
+  "name": "40918f2b6109a40a0b5e",
   "options": {
-    "targetVisualNames": []
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "acef1bdf8142627667ce",
+      "e3003d3562b65c28bd6a",
+      "0906365080449c205513",
+      "5cce6f5150018d481349"
+    ]
   },
   "explorationState": {
     "version": "1.3",
@@ -59,6 +65,9 @@
                     }
                   }
                 ]
+              },
+              "display": {
+                "mode": "hidden"
               }
             }
           },
@@ -83,7 +92,10 @@
           "2d1de6194f646e870a8d": {
             "singleVisual": {
               "visualType": "actionButton",
-              "objects": {}
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
             }
           },
           "34711bdb55a53546fdf0": {
@@ -103,7 +115,6 @@
               "byExpr": [
                 {
                   "name": "e498205fc2b10be80993",
-                  "type": "Categorical",
                   "filter": {
                     "Version": 2,
                     "From": [
@@ -260,7 +271,27 @@
           "8f47cb59309e20c8d927": {
             "singleVisual": {
               "visualType": "multiRowCard",
-              "objects": {}
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Dim_Facility"
+                            }
+                          },
+                          "Property": "Facility_Name"
+                        }
+                      },
+                      "Function": 2
+                    }
+                  }
+                }
+              ]
             }
           },
           "934c60b19d79f250e8ca": {
@@ -448,6 +479,21 @@
             "singleVisual": {
               "visualType": "clusteredBarChart",
               "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Severity"
+                        }
+                      },
+                      "Property": "Extreme Severity %"
+                    }
+                  }
+                }
+              ],
               "activeProjections": {
                 "Category": [
                   {
@@ -461,32 +507,26 @@
                     }
                   }
                 ]
-              },
-              "display": {
-                "mode": "hidden"
               }
             }
           },
           "5cce6f5150018d481349": {
             "singleVisual": {
               "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "e3003d3562b65c28bd6a": {
-            "singleVisual": {
-              "visualType": "shape",
               "objects": {},
               "display": {
                 "mode": "hidden"
               }
             }
+          },
+          "e3003d3562b65c28bd6a": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
           }
         },
         "visualContainerGroups": {
-          "468f4374659176811025": {
-            "isHidden": false
-          },
           "89c9b513a9ae920b0617": {
             "isHidden": true
           },

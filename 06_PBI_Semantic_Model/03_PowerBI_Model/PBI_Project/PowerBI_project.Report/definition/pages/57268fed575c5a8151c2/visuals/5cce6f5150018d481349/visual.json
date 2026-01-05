@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
-  "name": "9584092e7a54814cc4e3",
+  "name": "5cce6f5150018d481349",
   "position": {
-    "x": 278.125,
-    "y": 519.375,
-    "z": 14000,
-    "height": 41.25,
-    "width": 181.25,
-    "tabOrder": 16000
+    "x": 0,
+    "y": 88.076923076923066,
+    "z": 3500,
+    "height": 41.230769230769234,
+    "width": 251.69230769230768,
+    "tabOrder": 17003
   },
   "visual": {
     "visualType": "actionButton",
@@ -56,7 +56,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Severity Distribution'"
+                  "Value": "'Extreme Severity vs Peer Median'"
                 }
               }
             },
@@ -173,13 +173,6 @@
                   "Value": "true"
                 }
               }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Severity Distribution'"
-                }
-              }
             }
           },
           "selector": {
@@ -279,7 +272,14 @@
             "bookmark": {
               "expr": {
                 "Literal": {
-                  "Value": "'f903b9ec5a02a08200c7'"
+                  "Value": "'40918f2b6109a40a0b5e'"
+                }
+              }
+            },
+            "showDefaultTooltip": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -292,7 +292,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Select Visuals Severity Distribution'"
+                  "Value": "'Butt Extreme Vs Peer Med'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -302,6 +309,7 @@
     },
     "drillFilterOtherVisuals": true
   },
+  "parentGroupName": "f9f00eae4c0acbdd5301",
   "isHidden": true,
   "howCreated": "InsertVisualButton"
 }

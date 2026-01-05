@@ -25,9 +25,9 @@ table _Severity
 			)
 			
 			```
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: Extreme Level
 		lineageTag: dbaec5fa-2515-403e-9623-85858aa1e8eb
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Peer Group Median Extreme %' = ```
 			
@@ -46,6 +46,7 @@ table _Severity
 			
 			```
 		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Extreme Level
 		lineageTag: d3fa44b6-8a8b-4836-bcce-a65f036d0628
 
 	measure 'Extreme % vs Peer Median' = ```
@@ -55,6 +56,7 @@ table _Severity
 			
 			```
 		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: Extreme Level
 		lineageTag: 80582048-dbc5-43b6-8fd4-bdc28ed246e0
 
 	measure 'Extreme Above Peer Median Flag' = ```
@@ -66,6 +68,7 @@ table _Severity
 			)
 			
 			```
+		displayFolder: Extreme Level
 		lineageTag: 2bf14f6e-d8c2-4bcf-81f3-c1b1b8ce6320
 
 	measure 'Total Encounters' = ```
@@ -86,33 +89,35 @@ table _Severity
 			
 			```
 		formatString: 0
+		displayFolder: Extreme Level
 		lineageTag: 485287fa-08f6-403b-bd67-d60b0c325242
 
 	measure 'Median Extreme % (Selected)' = ```
 			
-			VAR SelectedFacilities =
-			    CALCULATETABLE(
-			        VALUES( Dim_Facility[Facility_Key] ),
-			        -- Apply selected peer groups to the bridge
-			        TREATAS(
-			            VALUES( Dim_PeerGroup[PeerGroup_Key] ),
-			            Bridge_Facility_PeerGroup[PeerGroup_Key]
-			        ),
-			        -- Then propagate to facilities
-			        TREATAS(
-			            VALUES( Bridge_Facility_PeerGroup[Facility_Key] ),
-			            Dim_Facility[Facility_Key]
-			        )
-			    )
-			RETURN
 			CALCULATE(
-			    MEDIANX( SelectedFacilities, [Extreme Severity %] ),
-			    REMOVEFILTERS( Dim_ClinicalClass )
+			    MEDIANX(
+			        ALL( Dim_Facility[Facility_Key] ),
+			        [Extreme Severity %]
+			    ),
+			    REMOVEFILTERS( Dim_ClinicalClass ),
+			    REMOVEFILTERS( Dim_Facility )
 			)
 			
 			```
 		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: Extreme Level
 		lineageTag: 64aead1c-c363-4697-9c75-c3866cd56851
+
+	measure 'Extreme vs Median Bar Color' = ```
+			
+			IF(
+			    [Extreme Severity %] > [Median Extreme % (Selected)],
+			    "#C00000",   -- red
+			    "#6E6E6E"    -- neutral gray
+			)
+			
+			```
+		lineageTag: 6a350604-ebc6-4f66-941d-ceb6b53edad0
 
 	column Column
 		dataType: int64

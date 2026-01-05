@@ -3,10 +3,10 @@
   "name": "8f47cb59309e20c8d927",
   "position": {
     "x": 427.69230769230768,
-    "y": 257.84615384615387,
-    "z": 17501,
-    "height": 83.07692307692308,
-    "width": 193.84615384615384,
+    "y": 155.07692307692307,
+    "z": 19000,
+    "height": 259.69230769230768,
+    "width": 196.30769230769232,
     "tabOrder": 17001
   },
   "visual": {
@@ -15,6 +15,26 @@
       "queryState": {
         "Values": {
           "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "Facility_Name"
+                    }
+                  },
+                  "Function": 2
+                }
+              },
+              "queryRef": "Dim_Facility.Facility_Name",
+              "nativeQueryRef": "Hospitals",
+              "displayName": "Hospitals"
+            },
             {
               "field": {
                 "Measure": {
@@ -34,21 +54,6 @@
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "_Severity"
-                  }
-                },
-                "Property": "Median Extreme % (Selected)"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
         "isDefaultSort": true
       }
     },
