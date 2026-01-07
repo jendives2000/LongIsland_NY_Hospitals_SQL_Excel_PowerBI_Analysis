@@ -20,6 +20,40 @@ table Dim_ClinicalClass
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'PeerGroup Severity Median (FacilitySafe)' = ```
+			
+			VAR FacilitiesInSelectedPeerGroups =
+			    CALCULATETABLE(
+			        VALUES(Dim_Facility[Facility_Key]),
+			        REMOVEFILTERS(Dim_Facility)   -- removes current facility row
+			    )
+			RETURN
+			MEDIANX(
+			    FacilitiesInSelectedPeerGroups,
+			    CALCULATE([Severity Mix Index], REMOVEFILTERS(Dim_Facility))
+			)
+			
+			```
+		lineageTag: 6a3a98ae-92a4-43be-af65-0d81efe6d655
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'PeerGroup Severity Median (RowSafe)' = ```
+			
+			VAR pg =
+			    SELECTEDVALUE(Bridge_Facility_PeerGroup[PeerGroup_Key])
+			RETURN
+			CALCULATE(
+			    MEDIANX(VALUES(Dim_Facility[Facility_Key]), [Severity Mix Index]),
+			    REMOVEFILTERS(Dim_Facility[Facility_Key]),
+			    KEEPFILTERS(Bridge_Facility_PeerGroup[PeerGroup_Key] = pg)
+			)
+			
+			```
+		lineageTag: 25648691-c9c5-4e64-a400-2cda0f095649
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column ClinicalClass_Key
 		dataType: int64
 		isHidden

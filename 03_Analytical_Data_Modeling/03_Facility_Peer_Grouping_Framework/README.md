@@ -17,10 +17,17 @@ Peer groups are a core part of the analytical data model and directly influence 
   - [Scope](#scope)
   - [Why Peer Grouping Is Required](#why-peer-grouping-is-required)
   - [Design Principles](#design-principles)
-  - [Data Model Objects](#data-model-objects)
+  - [🔧 Revision: Data Model Objects (Updated)](#-revision-data-model-objects-updated)
+    - [Why This Change Was Introdued](#why-this-change-was-introdued)
     - [1. `dbo.Dim_PeerGroup`](#1-dbodim_peergroup)
     - [Peer Group Definitions](#peer-group-definitions)
     - [2. `dbo.Bridge_Facility_PeerGroup`](#2-dbobridge_facility_peergroup)
+    - [3. Dim\_Facility (Extended for Semantic Stability)](#3-dim_facility-extended-for-semantic-stability)
+      - [Change introduced](#change-introduced)
+      - [How it is populated](#how-it-is-populated)
+      - [Why Power Query (not DAX)](#why-power-query-not-dax)
+    - [🧠 Design Rationale](#-design-rationale)
+      - [Why the bridge still exists](#why-the-bridge-still-exists)
   - [Seeding Logic](#seeding-logic)
     - [1. Populate `Dim_PeerGroup`](#1-populate-dim_peergroup)
     - [2. Populate `Bridge_Facility_PeerGroup`](#2-populate-bridge_facility_peergroup)
@@ -36,7 +43,7 @@ Peer groups are a core part of the analytical data model and directly influence 
   - [KPI-to-Peer-Group Applicability](#kpi-to-peer-group-applicability)
   - [Downstream Usage (Power BI)](#downstream-usage-power-bi)
   - [Known Limitations](#known-limitations)
-  - [Summary](#summary)
+  - [Summary (Updated)](#summary-updated)
 
 
 </details>
@@ -101,9 +108,23 @@ The peer groups defined here follow five strict principles:
 
 ---
 
-## Data Model Objects
+## 🔧 Revision: Data Model Objects (Updated)
 - SQL file: [here](./seed_dim_peergroup_and_bridge.sql)  
-  
+
+### Why This Change Was Introdued
+
+While the peer grouping framework is correctly implemented in SQL using a factless bridge table, Power BI has practical limitations when:
+* Applying **conditional formatting**
+* Comparing **row-level values to group-level statistics**
+* Rendering **per-facility color logic** against peer-group medians
+
+In particular, Power BI visuals do **not reliably evaluate group-aware DAX** when peer membership is resolved through a many-to-many bridge.
+
+To ensure correct **visual behavior and deterministic formatting, a denormalized peer-group attribute** was added directly to `Dim_Facility` in the semantic layer.
+
+This does not replace the SQL framework.
+It complements it for **Power BI-specific execution needs**.
+
 ### 1. `dbo.Dim_PeerGroup`
 
 **Grain**  
@@ -172,9 +193,50 @@ Resolves the many-to-many relationship between facilities and peer groups.
 This table contains **no measures**.  
 It exists solely to propagate peer-group filter context through `Dim_Facility` to all KPI fact tables.
 
----
+### 3. Dim_Facility (Extended for Semantic Stability)
+
+#### Change introduced
+A `PeerGroup_Name` column is added to `Dim_Facility` via Power Query.
+
+#### How it is populated
+Two controlled merges are applied:
+
+1. **Merge** `Dim_Facility` → `Bridge_Facility_PeerGroup`  
+   Using `Facility_Key`
+
+2. **Merge result** → `Dim_PeerGroup`  
+   Using `PeerGroup_Key`
+
+This produces a single, deterministic peer group per facility at the dimension level.
+
+#### Why Power Query (not DAX)
+
+* Ensures **materialized, row-level correctness**
+* Avoids ambiguous filter propagation
+* Prevents visual-level DAX inconsistencies
+* Keeps KPI measures free of peer-resolution logic
+
+**Resulting grain**
+> One facility → one peer group (authoritative)
+
+This reflects the **current business rule** that peer groups are mutually exclusive for reporting purposes.
+
+
+### 🧠 Design Rationale
+#### Why the bridge still exists
+
+The SQL-based bridge remains the **source of truth** for:
+* Peer group governance
+* Auditable assignments
+* Future extensibility (multi-group membership if ever required)
+* Non-Power-BI consumers
+
+The denormalized column exists **only to stabilize the semantic model**.
+
+This is a deliberate **layered architecture**.
 
 ---
+
 
 ## Seeding Logic  
 `seed_dim_peergroup_and_bridge.sql`
@@ -387,7 +449,17 @@ These limitations are acknowledged explicitly to prevent misuse of metrics.
 
 ---
 
-## Summary
+## Summary (Updated)
+
+The facility peer grouping framework now operates on **two coordinated layers**:
+* **Normalized SQL** model for governance and correctness
+* **Denormalized semantic** attribute for Power BI reliability
+
+This ensures that peer-adjusted insights are:
+* Correct
+* Stable
+* Explainable
+* Executive-safe
 
 This framework ensures that all hospital performance metrics in this project are:
 
@@ -397,5 +469,7 @@ This framework ensures that all hospital performance metrics in this project are
 * Executive-ready
 
 It is a foundational component of the analytical data model, not a visualization convenience.
+
+
 
 ---

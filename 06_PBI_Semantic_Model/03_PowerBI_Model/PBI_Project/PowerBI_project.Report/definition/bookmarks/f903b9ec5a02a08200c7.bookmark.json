@@ -11,6 +11,205 @@
     "sections": {
       "57268fed575c5a8151c2": {
         "visualContainers": {
+          "2d1de6194f646e870a8d": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "34711bdb55a53546fdf0": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "362248da2bbe9b0672d5": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "d2a7d2337d8a41c50bfe": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "5b811b0b122960308a15": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "8689471ec16713435ecd": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "9ee5675c27c751e1a119": {
+            "singleVisual": {
+              "visualType": "lineClusteredColumnComboChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  }
+                },
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "Facility_Name"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "Facility_Name"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "e25fda04ec82ab826b91": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "f6ca2eb52561012c5ca3": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "934c60b19d79f250e8ca": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "9584092e7a54814cc4e3": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "979acc4bc96674c7133b": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "9ccf8a01d308e4c718c0": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "a8195080488b293fa0bd": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "1ce392627e427985f217": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "6cef1840757a3aa2d66e": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "d31b9b3ba1ad765d3e6e": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "e16a9d8c98f13013ab13": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "e3ef6230d1871de10448": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "1dae4fbef13f5b6a7709": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "5a419087ccaf9775afec": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "5faef266f42f19ca7ee3": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
           "041cc4dc71e990b7eed8": {
             "singleVisual": {
               "visualType": "shape",
@@ -60,42 +259,6 @@
                   }
                 ]
               }
-            }
-          },
-          "090ec407cce0893904ee": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "1ce392627e427985f217": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "1dae4fbef13f5b6a7709": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "2d1de6194f646e870a8d": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "34711bdb55a53546fdf0": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "362248da2bbe9b0672d5": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
             }
           },
           "53cd8a1c9d2ac1d0c000": {
@@ -221,125 +384,33 @@
               }
             }
           },
-          "564ac670746be239b771": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "5a419087ccaf9775afec": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "5b811b0b122960308a15": {
+          "5cce6f5150018d481349": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {}
             }
           },
-          "5faef266f42f19ca7ee3": {
+          "acef1bdf8142627667ce": {
             "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "6cef1840757a3aa2d66e": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "8689471ec16713435ecd": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "8f47cb59309e20c8d927": {
-            "singleVisual": {
-              "visualType": "multiRowCard",
-              "objects": {}
-            }
-          },
-          "934c60b19d79f250e8ca": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "9584092e7a54814cc4e3": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "979acc4bc96674c7133b": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "9ccf8a01d308e4c718c0": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "9ee5675c27c751e1a119": {
-            "singleVisual": {
-              "visualType": "lineClusteredColumnComboChart",
+              "visualType": "clusteredBarChart",
               "objects": {},
               "orderBy": [
                 {
-                  "Direction": 1,
+                  "Direction": 2,
                   "Expression": {
-                    "Column": {
+                    "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
+                          "Entity": "_Severity"
                         }
                       },
-                      "Property": "PeerGroup_Name"
-                    }
-                  }
-                },
-                {
-                  "Direction": 1,
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "Facility_Name"
+                      "Property": "Extreme Severity %"
                     }
                   }
                 }
               ],
               "activeProjections": {
                 "Category": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  },
                   {
                     "Column": {
                       "Expression": {
@@ -351,13 +422,10 @@
                     }
                   }
                 ]
+              },
+              "display": {
+                "mode": "hidden"
               }
-            }
-          },
-          "a8195080488b293fa0bd": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
             }
           },
           "b44c62559edb6bea5002": {
@@ -366,46 +434,13 @@
               "objects": {}
             }
           },
-          "d2a7d2337d8a41c50bfe": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "d31b9b3ba1ad765d3e6e": {
+          "e3003d3562b65c28bd6a": {
             "singleVisual": {
               "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "e16a9d8c98f13013ab13": {
-            "singleVisual": {
-              "visualType": "textbox",
               "objects": {},
               "display": {
                 "mode": "hidden"
               }
-            }
-          },
-          "e25fda04ec82ab826b91": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "e3ef6230d1871de10448": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "f6ca2eb52561012c5ca3": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
             }
           },
           "fb066f6bb065b705106c": {
@@ -441,44 +476,6 @@
                     }
                   }
                 ]
-              }
-            }
-          },
-          "acef1bdf8142627667ce": {
-            "singleVisual": {
-              "visualType": "clusteredBarChart",
-              "objects": {},
-              "activeProjections": {
-                "Category": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "Facility_Name"
-                    }
-                  }
-                ]
-              },
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "5cce6f5150018d481349": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "e3003d3562b65c28bd6a": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
               }
             }
           }

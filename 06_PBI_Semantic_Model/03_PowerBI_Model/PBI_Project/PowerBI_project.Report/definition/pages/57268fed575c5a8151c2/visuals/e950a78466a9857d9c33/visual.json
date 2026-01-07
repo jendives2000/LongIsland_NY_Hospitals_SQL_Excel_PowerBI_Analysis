@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
-  "name": "934c60b19d79f250e8ca",
+  "name": "e950a78466a9857d9c33",
   "position": {
-    "x": 1107.6923076923076,
-    "y": 14.76923076923077,
-    "z": 9000,
-    "height": 40,
-    "width": 100.30769230769231,
-    "tabOrder": 13000
+    "x": 949.53846153846155,
+    "y": 19.076923076923077,
+    "z": 19001,
+    "height": 32,
+    "width": 111.38461538461539,
+    "tabOrder": 17001
   },
   "visual": {
     "visualType": "actionButton",
@@ -18,7 +18,7 @@
             "shapeType": {
               "expr": {
                 "Literal": {
-                  "Value": "'back'"
+                  "Value": "'clearAllSlicers'"
                 }
               }
             },
@@ -33,6 +33,20 @@
                   }
                 }
               }
+            },
+            "lineWeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            },
+            "lineTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
             }
           },
           "selector": {
@@ -44,7 +58,7 @@
             "shapeType": {
               "expr": {
                 "Literal": {
-                  "Value": "'back'"
+                  "Value": "'clearAllSlicers'"
                 }
               }
             },
@@ -83,7 +97,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'HOME'"
+                  "Value": "'Reset Page'"
                 }
               }
             }
@@ -97,7 +111,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'HOME'"
+                  "Value": "'Reset Page'"
                 }
               }
             },
@@ -134,7 +148,7 @@
             "type": {
               "expr": {
                 "Literal": {
-                  "Value": "'PageNavigation'"
+                  "Value": "'Bookmark'"
                 }
               }
             },
@@ -145,10 +159,24 @@
                 }
               }
             },
+            "bookmark": {
+              "expr": {
+                "Literal": {
+                  "Value": "'240f80372a7083b6c8ec'"
+                }
+              }
+            },
+            "showDefaultTooltip": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "tooltip": {
               "expr": {
                 "Literal": {
-                  "Value": "'Go back to the Executive Overview page'"
+                  "Value": "'Revert the page to its initial state'"
                 }
               }
             }

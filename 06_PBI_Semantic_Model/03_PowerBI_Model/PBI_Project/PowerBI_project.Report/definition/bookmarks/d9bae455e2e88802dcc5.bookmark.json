@@ -68,12 +68,6 @@
               }
             }
           },
-          "090ec407cce0893904ee": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
           "1ce392627e427985f217": {
             "singleVisual": {
               "visualType": "shape",
@@ -229,12 +223,6 @@
               }
             }
           },
-          "564ac670746be239b771": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
           "5a419087ccaf9775afec": {
             "singleVisual": {
               "visualType": "shape",
@@ -263,32 +251,6 @@
             "singleVisual": {
               "visualType": "textbox",
               "objects": {}
-            }
-          },
-          "8f47cb59309e20c8d927": {
-            "singleVisual": {
-              "visualType": "multiRowCard",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Dim_Facility"
-                            }
-                          },
-                          "Property": "Facility_Name"
-                        }
-                      },
-                      "Function": 2
-                    }
-                  }
-                }
-              ]
             }
           },
           "934c60b19d79f250e8ca": {

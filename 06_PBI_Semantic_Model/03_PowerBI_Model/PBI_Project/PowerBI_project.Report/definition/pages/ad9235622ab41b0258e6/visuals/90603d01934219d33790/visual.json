@@ -6,7 +6,7 @@
     "y": 0,
     "z": 0,
     "height": 511.38461538461536,
-    "width": 828.92307692307691,
+    "width": 1211.0769230769231,
     "tabOrder": 0
   },
   "visual": {
@@ -31,17 +31,59 @@
             },
             {
               "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_PeerGroup"
+                    }
+                  },
+                  "Property": "PeerGroup_Key"
+                }
+              },
+              "queryRef": "Dim_PeerGroup.PeerGroup_Key",
+              "nativeQueryRef": "PeerGroup_Key"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_PeerGroup"
+                    }
+                  },
+                  "Property": "PeerGroup_Name"
+                }
+              },
+              "queryRef": "Dim_PeerGroup.PeerGroup_Name",
+              "nativeQueryRef": "PeerGroup_Name"
+            },
+            {
+              "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Severity"
+                      "Entity": "_KPI_Measures"
                     }
                   },
-                  "Property": "Extreme Severity %"
+                  "Property": "Severity Mix Index"
                 }
               },
-              "queryRef": "_Severity.Extreme Severity %",
-              "nativeQueryRef": "Extreme Severity %"
+              "queryRef": "_KPI_Measures.Severity Mix Index",
+              "nativeQueryRef": "Severity Mix Index"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_ClinicalClass"
+                    }
+                  },
+                  "Property": "PeerGroup Severity Median (FacilitySafe)"
+                }
+              },
+              "queryRef": "Dim_ClinicalClass.PeerGroup Severity Median (FacilitySafe)",
+              "nativeQueryRef": "PeerGroup Severity Median (FacilitySafe)"
             },
             {
               "field": {
@@ -51,16 +93,96 @@
                       "Entity": "_Severity"
                     }
                   },
-                  "Property": "Median Extreme % (Selected)"
+                  "Property": "Is Above PG Severity Median"
                 }
               },
-              "queryRef": "_Severity.Median Extreme % (Selected)",
-              "nativeQueryRef": "Median Extreme % (Selected)"
+              "queryRef": "_Severity.Is Above PG Severity Median",
+              "nativeQueryRef": "Is Above PG Severity Median"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Dim_Facility"
+                  }
+                },
+                "Property": "Facility_Name"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "95b63960a22aab505b0a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_PeerGroup"
+              }
+            },
+            "Property": "PeerGroup_Name"
+          }
+        },
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "Dim_PeerGroup",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "PeerGroup_Name"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'PG-C Mid-Size Community'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "objects": {
+          "general": [
+            {
+              "properties": {}
             }
           ]
         }
       }
-    },
-    "drillFilterOtherVisuals": true
+    ]
   }
 }

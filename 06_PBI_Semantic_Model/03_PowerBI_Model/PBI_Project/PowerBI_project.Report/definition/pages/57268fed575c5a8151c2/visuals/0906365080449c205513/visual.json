@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
   "name": "0906365080449c205513",
   "position": {
-    "x": 648.31730769230774,
-    "y": 22.153846153846153,
+    "x": 658.10959740689964,
+    "y": 14.297850067117924,
     "z": 1500,
-    "height": 432.61538461538464,
+    "height": 425.23076923076923,
     "width": 608,
-    "tabOrder": 17000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "hundredPercentStackedBarChart",
@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": true
+              "active": false
             }
           ]
         },
@@ -106,23 +106,6 @@
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "_Severity"
-                  }
-                },
-                "Property": "Extreme Severity %"
-              }
-            },
-            "direction": "Descending"
-          }
-        ]
       }
     },
     "objects": {
@@ -531,6 +514,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "f9f00eae4c0acbdd5301",
-  "isHidden": true
+  "parentGroupName": "f9f00eae4c0acbdd5301"
 }

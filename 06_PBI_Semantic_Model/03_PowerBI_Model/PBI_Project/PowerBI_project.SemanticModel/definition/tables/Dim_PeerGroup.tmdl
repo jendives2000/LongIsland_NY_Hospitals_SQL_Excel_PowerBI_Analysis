@@ -1,6 +1,53 @@
 table Dim_PeerGroup
 	lineageTag: a1e31423-ec89-4c97-a3e5-5d384d87fa5d
 
+	measure 'DBG PeerGroup Name' = CONCATENATEX(VALUES(Dim_PeerGroup[PeerGroup_Name]), Dim_PeerGroup[PeerGroup_Name], ", ")
+		displayFolder: Helper
+		lineageTag: ed046001-302a-4114-b6e1-b67ed533645b
+
+	measure 'DBG Bridge Rows per Facility' = ```
+			
+			VAR fac = SELECTEDVALUE(Dim_Facility[Facility_Key])
+			RETURN
+			CALCULATE(
+			    COUNTROWS(Bridge_Facility_PeerGroup),
+			    TREATAS({ fac }, Bridge_Facility_PeerGroup[Facility_Key])
+			)
+			
+			```
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: 68e5863c-eef7-4074-b994-fb2a6c98a92f
+
+	measure 'DBG PeerGroup Count (FacilitySafe)' = ```
+			
+			VAR fk = SELECTEDVALUE(Dim_Facility[Facility_Key])
+			VAR pgs =
+			    CALCULATETABLE(
+			        VALUES(Dim_PeerGroup[PeerGroup_Key]),
+			        TREATAS( { fk }, Bridge_Facility_PeerGroup[Facility_Key] )
+			    )
+			RETURN COUNTROWS(pgs)
+			
+			```
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: 8b72bf6a-4e26-40a2-806f-5a62dae8bf02
+
+	measure 'DBG PeerGroup Name (FacilitySafe)' = ```
+			
+			VAR fk = SELECTEDVALUE(Dim_Facility[Facility_Key])
+			VAR pgs =
+			    CALCULATETABLE(
+			        VALUES(Dim_PeerGroup[PeerGroup_Name]),
+			        TREATAS( { fk }, Bridge_Facility_PeerGroup[Facility_Key] )
+			    )
+			RETURN CONCATENATEX(pgs, Dim_PeerGroup[PeerGroup_Name], ", ")
+			
+			```
+		displayFolder: Helper
+		lineageTag: 4c7afe87-af3d-4a7e-9054-b08f65627eba
+
 	column PeerGroup_Key
 		dataType: int64
 		formatString: 0

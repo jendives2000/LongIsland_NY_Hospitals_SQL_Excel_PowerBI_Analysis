@@ -117,7 +117,170 @@ table _Severity
 			)
 			
 			```
+		displayFolder: Helper
 		lineageTag: 6a350604-ebc6-4f66-941d-ceb6b53edad0
+
+	measure 'Is Above Median Extreme' = ```
+			
+			IF( [Extreme Severity %] > [Median Extreme % (Selected)], 1, 0 )
+			
+			```
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: 2a7222a2-67a0-4e23-8b46-106a2716073e
+
+	measure 'Facilities Above Median Extreme' = ```
+			
+			SUMX(
+			    VALUES( Dim_Facility[Facility_Key] ),
+			    [Is Above Median Extreme]
+			)
+			
+			```
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: 2f7a2178-e0e7-489c-99e9-5ab33dda803d
+
+	measure 'Facilities Selected' = ```
+			
+			COUNTROWS( VALUES( Dim_Facility[Facility_Key] ) )
+			
+			```
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: a70c49dd-9f5f-406e-83b6-5485b95badd4
+
+	measure 'Top Facility Extreme (Name)' = ```
+			
+			VAR T =
+			    TOPN(
+			        1,
+			        VALUES( Dim_Facility[Facility_Name] ),
+			        [Extreme Severity %],
+			        DESC
+			    )
+			RETURN
+			MAXX( T, Dim_Facility[Facility_Name] )
+			
+			```
+		displayFolder: Helper
+		lineageTag: 53d1a359-32b9-4db9-be91-cc21a257f561
+
+	measure 'Top Facility Extreme (%)' = ```
+			
+			VAR T =
+			    TOPN(
+			        1,
+			        VALUES( Dim_Facility[Facility_Name] ),
+			        [Extreme Severity %],
+			        DESC
+			    )
+			RETURN
+			MAXX( T, [Extreme Severity %] )
+			
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: Helper
+		lineageTag: f15d59d1-e9d8-4767-8473-e0bff83c176d
+
+	measure 'SMI Min' = ```
+			
+			MINX( VALUES( Dim_Facility[Facility_Key] ), [Severity Mix Index] )
+			
+			```
+		displayFolder: Helper
+		lineageTag: af9c713a-52d1-4d45-9d7b-ffbb90bf6e08
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'SMI Max' = ```
+			
+			MAXX( VALUES( Dim_Facility[Facility_Key] ), [Severity Mix Index] )
+			
+			```
+		displayFolder: Helper
+		lineageTag: 2ae0d58d-45ac-4f9b-ab09-4c3ca00b6016
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure PeerGroups_Selected = ```
+			
+			    CONCATENATEX(
+			        VALUES( Dim_PeerGroup[PeerGroup_Name] ),
+			        Dim_PeerGroup[PeerGroup_Name],
+			        ", "
+			    )
+			```
+		displayFolder: Helper
+		lineageTag: f8deb001-8bb8-42b9-8aca-289613ec05c2
+
+	measure 'Facility Count' = ```
+			
+			COUNTROWS (
+			    VALUES ( Dim_Facility[Facility_Key] )
+			)
+			
+			```
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: 16ed3103-2ae5-4f16-91b7-e9323195d7b7
+
+	measure 'SMI Peer Median' = ```
+			
+			MEDIANX (
+			    VALUES ( Dim_Facility[Facility_Key] ),
+			    [Severity Mix Index]
+			)
+			
+			```
+		displayFolder: Helper
+		lineageTag: 67bb807e-34b7-4d54-8aea-dfbdfa50a6da
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Facilities Above SMI Median' = ```
+			
+			VAR PeerMedian = [SMI Peer Median]
+			RETURN
+			COUNTROWS (
+			    FILTER (
+			        VALUES ( Dim_Facility[Facility_Key] ),
+			        [Severity Mix Index] > PeerMedian
+			    )
+			)
+			
+			```
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: 136cf811-d3c1-4c71-a585-9abc4745addc
+
+	measure 'Facilities At or Below SMI Median' = ```
+			
+			VAR PeerMedian = [SMI Peer Median]
+			RETURN
+			COUNTROWS (
+			    FILTER (
+			        VALUES ( Dim_Facility[Facility_Key] ),
+			        [Severity Mix Index] <= PeerMedian
+			    )
+			)
+			
+			```
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: 95a3bf77-ad7b-41ce-bd60-46e57bed465d
+
+	measure 'Is Above PG Severity Median' = ```
+			
+			VAR smi = [Severity Mix Index]
+			VAR med = [PeerGroup Severity Median (FacilitySafe)]
+			RETURN IF(NOT ISBLANK(smi) && smi > med, 1, 0)
+			
+			
+			```
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: bb74ddad-1a4f-465d-b8e7-8068d57df297
 
 	column Column
 		dataType: int64
