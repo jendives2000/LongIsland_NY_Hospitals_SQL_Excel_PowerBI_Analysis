@@ -60,15 +60,46 @@ table Dim_Facility
 
 		annotation SummarizationSetBy = Automatic
 
+	column PeerGroup_Key
+		dataType: int64
+		formatString: 0
+		lineageTag: e6603a30-f3b7-4822-8952-d36784779305
+		summarizeBy: none
+		sourceColumn: PeerGroup_Key
+
+		annotation SummarizationSetBy = User
+
+	column PeerGroup_Name
+		dataType: string
+		lineageTag: 1f4b8905-f570-4104-b284-26751398af2e
+		summarizeBy: none
+		sourceColumn: PeerGroup_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column PeerGroup_Sort
+		dataType: int64
+		formatString: 0
+		lineageTag: 4b206ad6-2f0f-4f78-a8f4-4bcf1ed32f79
+		summarizeBy: none
+		sourceColumn: PeerGroup_Sort
+
+		annotation SummarizationSetBy = User
+
 	partition Dim_Facility = m
 		mode: import
 		source =
 				let
 				    Source = Sql.Database("DESKTOP-3O401KK", "LI_NYHealth", [HierarchicalNavigation=true]),
 				    dbo = Source{[Schema="dbo"]}[Data],
-				    Dim_Facility1 = dbo{[Name="Dim_Facility"]}[Data]
+				    Dim_Facility1 = dbo{[Name="Dim_Facility"]}[Data],
+				    #"Expanded Bridge_Facility_PeerGroup" = Table.ExpandTableColumn(Dim_Facility1, "Bridge_Facility_PeerGroup", {"PeerGroup_Key"}, {"PeerGroup_Key"}),
+				    #"Merged Queries" = Table.NestedJoin(#"Expanded Bridge_Facility_PeerGroup", {"PeerGroup_Key"}, Dim_PeerGroup, {"PeerGroup_Key"}, "Dim_PeerGroup", JoinKind.LeftOuter),
+				    #"Expanded Dim_PeerGroup" = Table.ExpandTableColumn(#"Merged Queries", "Dim_PeerGroup", {"PeerGroup_Name", "PeerGroup_Sort"}, {"PeerGroup_Name", "PeerGroup_Sort"})
 				in
-				    Dim_Facility1
+				    #"Expanded Dim_PeerGroup"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
 

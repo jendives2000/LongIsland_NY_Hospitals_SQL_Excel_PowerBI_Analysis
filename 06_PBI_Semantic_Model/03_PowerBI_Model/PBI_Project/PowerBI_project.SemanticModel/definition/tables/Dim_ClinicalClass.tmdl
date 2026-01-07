@@ -4,7 +4,7 @@ table Dim_ClinicalClass
 	measure 'PeerGroup Severity Median' = ```
 			
 			VAR CurrentPeerGroup =
-			    SELECTEDVALUE ( Dim_PeerGroup[PeerGroup_Name] )
+			    SELECTEDVALUE ( Dim_Facility[PeerGroup_Name] )
 			RETURN
 			CALCULATE (
 			    MEDIANX (
@@ -12,7 +12,7 @@ table Dim_ClinicalClass
 			        [Severity Mix Index]
 			    ),
 			    ALL ( Dim_Facility ),
-			    Dim_PeerGroup[PeerGroup_Name] = CurrentPeerGroup
+			    Dim_Facility[PeerGroup_Name] = CurrentPeerGroup
 			)
 			
 			```

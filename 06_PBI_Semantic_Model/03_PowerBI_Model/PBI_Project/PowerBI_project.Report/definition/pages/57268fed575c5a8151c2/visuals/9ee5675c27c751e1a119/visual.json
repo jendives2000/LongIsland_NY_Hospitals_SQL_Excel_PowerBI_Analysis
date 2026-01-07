@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Dim_PeerGroup"
+                      "Entity": "Dim_Facility"
                     }
                   },
                   "Property": "PeerGroup_Name"
                 }
               },
-              "queryRef": "Dim_PeerGroup.PeerGroup_Name",
+              "queryRef": "Dim_Facility.PeerGroup_Name",
               "nativeQueryRef": "PeerGroup_Name",
               "active": true
             },
@@ -54,13 +54,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Dim_PeerGroup"
+                      "Entity": "Dim_Facility"
                     }
                   },
                   "Property": "PeerGroup_Sort"
                 }
               },
-              "queryRef": "Dim_PeerGroup.PeerGroup_Sort",
+              "queryRef": "Dim_Facility.PeerGroup_Sort",
               "nativeQueryRef": "PeerGroup_Sort"
             }
           ]
@@ -109,7 +109,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Dim_PeerGroup"
+                    "Entity": "Dim_Facility"
                   }
                 },
                 "Property": "PeerGroup_Name"

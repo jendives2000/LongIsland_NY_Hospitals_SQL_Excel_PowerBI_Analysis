@@ -273,7 +273,7 @@ table _Severity
 	measure 'Is Above PG Severity Median' = ```
 			
 			VAR smi = [Severity Mix Index]
-			VAR med = [PeerGroup Severity Median (FacilitySafe)]
+			VAR med = [PeerGroup Severity Median]
 			RETURN IF(NOT ISBLANK(smi) && smi > med, 1, 0)
 			
 			
