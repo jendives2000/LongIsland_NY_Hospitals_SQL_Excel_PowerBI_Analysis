@@ -7,9 +7,8 @@ table _KPI_Measures
 			    SUM(Fact_KPI_SeverityMix[Weighted_Severity_Sum]),
 			    SUM(Fact_KPI_SeverityMix[Total_Encounters])
 			)
+		formatString: 0.00
 		lineageTag: 0160202b-84e7-4ce7-a81d-477b56a0208d
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Unplanned Admission Rate' =
 			

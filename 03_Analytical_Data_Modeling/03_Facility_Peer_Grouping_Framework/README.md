@@ -85,6 +85,8 @@ This framework ensures that:
 * Specialty hospitals are not diluted into general peers
 * Executives can trust KPI signals
 
+Peer-group semantics in visuals are documented in the [Power BI Semantic Model](../../06_PBI_Semantic_Model/03_PowerBI_Model/README.md).
+
 ---
 
 ## Design Principles

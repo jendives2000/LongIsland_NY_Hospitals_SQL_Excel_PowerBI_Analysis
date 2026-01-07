@@ -38,6 +38,12 @@ The Power BI semantic model is implemented as a Power BI Project (.pbip) to enab
       - [Guardrail Rule](#guardrail-rule)
       - [Implementation Pattern](#implementation-pattern)
     - [Certified KPI Measures](#certified-kpi-measures)
+  - [Visual Interpretation Rules](#visual-interpretation-rules)
+    - [Severity Context — Severity Mix Index by Facility](#severity-context--severity-mix-index-by-facility)
+    - [Important Clarifications](#important-clarifications)
+    - [How to Interpret “Above Median”](#how-to-interpret-above-median)
+    - [Analytical Implication](#analytical-implication)
+    - [Executive Shortcut](#executive-shortcut)
   - [Excel Compatibility \& Executive Access](#excel-compatibility--executive-access)
   - [Governance \& Change Control](#governance--change-control)
   - [Relationship to Other Steps](#relationship-to-other-steps)
@@ -291,6 +297,73 @@ Hidden columns:
 - SQL validation fields
 - pre-computed averages
 - reconciliation helpers
+
+---
+
+## Visual Interpretation Rules
+
+### Severity Context — Severity Mix Index by Facility
+
+
+**Applies to:**
+- **Report page:** *Severity Context*
+- **Visual:** *Severity Mix Index by Facility*
+- **Helper measure:** `Is Above PG Severity Median`
+
+In the visual *Severity Mix Index by Facility*, a facility is flagged as **“above peer-group median severity”** when its **Severity Mix Index (SMI)** is *numerically greater* than the median SMI of its **own assigned peer group**.
+
+This logic is implemented via the DAX helper measure:  
+`Is Above PG Severity Median`
+
+Facilities for which this measure evaluates to `TRUE` are rendered in **white** in the *Severity Mix Index by Facility* visual.  
+
+<details>
+<summary>See the Screenshot</Summary>
+
+![alt text](image.png)
+
+</details>
+
+This designation is **directional**, not a threshold of material clinical difference.
+
+---
+
+### Important Clarifications
+
+- The **Severity Mix Index (SMI)** is calculated and evaluated at **full numeric precision**.
+- Visual labels format SMI values to **two decimals** for readability, but **comparisons and medians use the underlying full-precision values**.
+- As a result, facilities that appear visually equal to the peer median may still be classified as slightly above or below due to **decimal-level differences**.
+
+---
+
+### How to Interpret “Above Median”
+
+**Above median means:**
+- The facility’s case-mix complexity is **marginally higher** than the peer-group midpoint.
+- The facility sits on the **upper half of its peer-group severity distribution**.
+
+**Above median does *not* mean:**
+- Clinically meaningfully sicker patients
+- A materially different acuity profile
+- A risk-adjustment requirement by default
+
+---
+
+### Analytical Implication
+
+Because **Severity Mix Index values remain tightly clustered within each peer group**, small deviations above the peer median should be interpreted as **context-setting signals**, not as drivers of downstream performance variation on their own.
+
+Accordingly:
+- LOS, cost, and outcome KPIs should **not be over-attributed to acuity**
+- **Operational factors** remain the primary focus when interpreting downstream KPIs
+- **Peer-group comparisons** remain fair, proportional, and statistically honest
+
+---
+
+### Executive Shortcut
+
+> *“Above peer median indicates relative position within the peer distribution, not a clinically material difference in patient acuity.”*
+
 
 ---
 
