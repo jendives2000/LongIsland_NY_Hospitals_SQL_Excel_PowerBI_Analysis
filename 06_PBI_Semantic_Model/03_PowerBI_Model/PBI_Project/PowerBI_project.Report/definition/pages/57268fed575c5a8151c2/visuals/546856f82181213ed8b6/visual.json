@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
-  "name": "9ee5675c27c751e1a119",
+  "name": "546856f82181213ed8b6",
   "position": {
-    "x": 661.17956783249485,
-    "y": 15.999999999999996,
-    "z": 1000,
-    "height": 396.30769230769232,
-    "width": 603.07692307692309,
-    "tabOrder": 0
+    "x": 662.55444775138335,
+    "y": 14.480700642900377,
+    "z": 2000,
+    "height": 381.50649350649348,
+    "width": 602.80519480519479,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "lineClusteredColumnComboChart",
@@ -93,11 +93,11 @@
                       "Entity": "Dim_ClinicalClass"
                     }
                   },
-                  "Property": "PeerGroup Severity Median"
+                  "Property": "PeerGroup Severity Median (FacilitySafe)"
                 }
               },
-              "queryRef": "_Severity.PeerGroup Severity Median",
-              "nativeQueryRef": "PeerGroup Severity Median"
+              "queryRef": "Dim_ClinicalClass.PeerGroup Severity Median (FacilitySafe)",
+              "nativeQueryRef": "PeerGroup Severity Median (FacilitySafe)"
             }
           ]
         }
@@ -340,20 +340,6 @@
         },
         {
           "properties": {
-            "enableValueDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Severity.PeerGroup Severity Median"
-          }
-        },
-        {
-          "properties": {
             "color": {
               "solid": {
                 "color": {
@@ -371,7 +357,7 @@
                                       "Entity": "_Severity"
                                     }
                                   },
-                                  "Property": "Is Above PG Severity Median"
+                                  "Property": "Is Above PG Severity Median (facility safe)"
                                 }
                               },
                               "Right": {
@@ -398,7 +384,7 @@
                                       "Entity": "_Severity"
                                     }
                                   },
-                                  "Property": "Is Above PG Severity Median"
+                                  "Property": "Is Above PG Severity Median (facility safe)"
                                 }
                               },
                               "Right": {
@@ -429,6 +415,34 @@
                 }
               }
             ]
+          }
+        },
+        {
+          "properties": {
+            "enableValueDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableDetailDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableTitleDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Dim_ClinicalClass.PeerGroup Severity Median (FacilitySafe)"
           }
         }
       ],
@@ -607,7 +621,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Tight Severity Mix Index Accross the Network'"
+                  "Value": "'Severity Mix Index by Facility'"
                 }
               }
             },
@@ -659,7 +673,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Case-mix complexity indicator (APR-based) & Peer Group Severity Median line'"
+                  "Value": "'Case-mix complexity indicator (APR-based) & Cross Peer Group Severity Median line'"
                 }
               }
             },
@@ -720,7 +734,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "c6f5b12340837520e01c",
+        "name": "4a561ee28947883dbd41",
         "ordinal": 0,
         "field": {
           "Measure": {
@@ -729,7 +743,7 @@
                 "Entity": "_Severity"
               }
             },
-            "Property": "Is Above Own PG Sev Median"
+            "Property": "Is Above PG Severity Median (facility safe)"
           }
         },
         "type": "Advanced",
@@ -762,7 +776,8 @@
             "Property": "PeerGroup Severity Median"
           }
         },
-        "type": "Advanced"
+        "type": "Advanced",
+        "howCreated": "User"
       },
       {
         "name": "b64acc8a05ac972ded80",
@@ -804,6 +819,37 @@
               }
             },
             "Property": "Severity Mix Index"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "507f79c0c01d60d7c184",
+        "ordinal": 6,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Severity"
+              }
+            },
+            "Property": "SMI Median (All Facilities, Selected)"
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User"
+      },
+      {
+        "name": "76aaec770511091cb0a6",
+        "ordinal": 7,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_ClinicalClass"
+              }
+            },
+            "Property": "PeerGroup Severity Median (FacilitySafe)"
           }
         },
         "type": "Advanced"

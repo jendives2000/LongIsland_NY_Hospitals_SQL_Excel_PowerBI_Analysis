@@ -11281,6 +11281,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.492
 			          }
+			        },
+			        {
+			          "Severity Mix Total Encounters": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -15639,6 +15649,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "facility key": {
@@ -18494,6 +18507,1941 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "dim_facility.peer_group_key": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Facility",
+			          "ConceptualProperty": "PeerGroup_Key"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "peer group key": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PeerGroup_Key": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "key": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "group key": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "peer category key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "peer organization key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "category key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "organization key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "peer bracket key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "peer class key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "peer crew key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "peer team key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "bracket key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "crew key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "dim_facility.peer_group_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Facility",
+			          "ConceptualProperty": "PeerGroup_Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "peer group name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PeerGroup_Name": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "peer group": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "group name": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "peer category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "peer organization": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "peer group nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "peer group title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "peer group label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "peer group tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "peer bracket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "peer class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "peer crew": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "peer team": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "dim_facility.peer_group_sort": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Facility",
+			          "ConceptualProperty": "PeerGroup_Sort"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "peer group sort": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PeerGroup_Sort": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "group sort": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "peer category sort": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "peer organization sort": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "category sort": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "organization sort": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "peer bracket sort": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "peer class sort": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "peer crew sort": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "peer team sort": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "bracket sort": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "class sort": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "dim_clinical_class.PeerGroup_severity_median_FacilitySafe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_ClinicalClass",
+			          "ConceptualProperty": "PeerGroup Severity Median (FacilitySafe)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PeerGroup severity median (FacilitySafe)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PeerGroup severity median": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "dim_clinical_class.PeerGroup_severity_median_RowSafe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_ClinicalClass",
+			          "ConceptualProperty": "PeerGroup Severity Median (RowSafe)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PeerGroup severity median (RowSafe)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PeerGroup severity median": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "dim_clinical_class.PeerGroup_severity_median_PeerGroup_safe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_ClinicalClass",
+			          "ConceptualProperty": "PeerGroup Severity Median (PeerGroup safe)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PeerGroup severity median (PeerGroup safe)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PeerGroup severity median": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "SMI Median": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_peer_group.DBG_PeerGroup_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_PeerGroup",
+			          "ConceptualProperty": "DBG PeerGroup Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "DBG PeerGroup name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dbg peergroup nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "dbg peergroup title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "dbg peergroup label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "dbg peergroup tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "dim_peer_group.DBG_bridge_rows_per_facility": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_PeerGroup",
+			          "ConceptualProperty": "DBG Bridge Rows per Facility"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "DBG bridge rows per facility": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "rows": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "bridge rows": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "DBG bridge rows": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dbg bridge ruckus per facility": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "dbg bridge commotion per facility": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "dbg bridge rumpus per facility": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "dbg bridge disturbance per facility": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "dbg bridge ruckus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "dbg bridge commotion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "dbg bridge rumpus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "dbg bridge disturbance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "dbg bridge noise per facility": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "dbg bridge racket per facility": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        }
+			      ]
+			    },
+			    "dim_peer_group.DBG_PeerGroup_count_FacilitySafe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_PeerGroup",
+			          "ConceptualProperty": "DBG PeerGroup Count (FacilitySafe)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "DBG PeerGroup count (FacilitySafe)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DBG PeerGroup count": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "dim_peer_group.DBG_PeerGroup_name_FacilitySafe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_PeerGroup",
+			          "ConceptualProperty": "DBG PeerGroup Name (FacilitySafe)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "DBG PeerGroup name (FacilitySafe)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DBG PeerGroup name": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "v_Severity_severity.extreme_vs_median_bar_color": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Severity",
+			          "ConceptualProperty": "Extreme vs Median Bar Color"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "extreme vs median bar color": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "extreme vs norm bar color": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "extreme vs nucleus bar color": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "extreme vs midpoint bar color": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "extreme vs middle bar color": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "extreme vs center bar color": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "extreme vs medium bar color": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "extreme vs mean bar color": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "extreme vs average bar color": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "extreme vs par bar color": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "extreme vs standard bar color": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        }
+			      ]
+			    },
+			    "v_Severity_severity.is_above_median_extreme": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Severity",
+			          "ConceptualProperty": "Is Above Median Extreme"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "is above median extreme": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "v_Severity_severity.facilities_above_median_extreme": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Severity",
+			          "ConceptualProperty": "Facilities Above Median Extreme"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "facilities above median extreme": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "amenity above median extreme": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "convenience above median extreme": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "accommodation above median extreme": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "toilet above median extreme": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "bathroom above median extreme": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "lavatory above median extreme": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "service above median extreme": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "ability above median extreme": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "capability above median extreme": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "talent above median extreme": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        }
+			      ]
+			    },
+			    "v_Severity_severity.facilities_selected": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Severity",
+			          "ConceptualProperty": "Facilities Selected"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "facilities selected": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "amenity selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "convenience selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "accommodation selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "toilet selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "bathroom selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "lavatory selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "service selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "ability selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "capability selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "talent selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "v_Severity_severity.top_facility_extreme_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Severity",
+			          "ConceptualProperty": "Top Facility Extreme (Name)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top facility extreme (name)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "top facility extreme": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "v_Severity_severity.top_facility_extreme": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Severity",
+			          "ConceptualProperty": "Top Facility Extreme (%)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top facility extreme": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "top facility extreme (%)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "extreme": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "facility extreme": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "best facility extreme (%)": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "first facility extreme (%)": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "leading facility extreme (%)": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "maximum facility extreme (%)": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "peak facility extreme (%)": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "upper facility extreme (%)": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "best facility extreme": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "first facility extreme": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "leading facility extreme": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "maximum facility extreme": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ],
+			      "Units": [
+			        "percentage",
+			        "%"
+			      ]
+			    },
+			    "v_Severity_severity.SMI_min": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Severity",
+			          "ConceptualProperty": "SMI Min"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SMI min": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "smi minimum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "v_Severity_severity.SMI_max": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Severity",
+			          "ConceptualProperty": "SMI Max"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SMI max": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "smi maximum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "v_Severity_severity.peer_groups_selected": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Severity",
+			          "ConceptualProperty": "PeerGroups_Selected"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "peer groups selected": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PeerGroups_Selected": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "peer collection selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "peer assembly selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "peer assemblage selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "peer cluster selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "peer set selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "peer clutch selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "peer faction selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "peer unit selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "peer crowd selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peer company selected": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        }
+			      ]
+			    },
+			    "v_Severity_severity.facility_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Severity",
+			          "ConceptualProperty": "Facility Count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "facility count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "facility amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "v_Severity_severity.SMI_peer_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Severity",
+			          "ConceptualProperty": "SMI Peer Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SMI peer median": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "median": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "peer median": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "smi peer norm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "smi peer nucleus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "smi peer midpoint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "middle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "intermediate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "medium": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "middling": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "moderate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "peer norm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "peer nucleus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "v_Severity_severity.facilities_above_SMI_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Severity",
+			          "ConceptualProperty": "Facilities Above SMI Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "facilities above SMI median": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "amenity above smi median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "convenience above smi median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "accommodation above smi median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "toilet above smi median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "bathroom above smi median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "lavatory above smi median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "service above smi median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "ability above smi median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "capability above smi median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "talent above smi median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        }
+			      ]
+			    },
+			    "v_Severity_severity.facilities_at_or_below_SMI_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Severity",
+			          "ConceptualProperty": "Facilities At or Below SMI Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "facilities at or below SMI median": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "facilities at": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "facilities at below SMI median": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "below SMI median": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "amenity at below smi median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "convenience at below smi median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "accommodation at below smi median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "toilet at below smi median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "bathroom at below smi median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "lavatory at below smi median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "service at below smi median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "amenity at": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "convenience at": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "accommodation at": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "v_Severity_severity.is_above_PG_severity_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Severity",
+			          "ConceptualProperty": "Is Above PG Severity Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "is above PG severity median": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "v_Severity_severity.is_above_own_PG_sev_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Severity",
+			          "ConceptualProperty": "Is Above Own PG Sev Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "is above own PG sev median": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "v_Severity_severity.facilities_above_own_PG_sev_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Severity",
+			          "ConceptualProperty": "Facilities Above Own PG Sev Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "facilities above own PG sev median": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Fac. Above Own PG SMI Median": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "v_Severity_severity.SMI_median_all_facilities_selected": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Severity",
+			          "ConceptualProperty": "SMI Median (All Facilities, Selected)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SMI median (all facilities, selected)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "SMI median": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "v_Severity_severity.is_above_SMI_median_all_facilities": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Severity",
+			          "ConceptualProperty": "Is Above SMI Median (All Facilities)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "is above SMI median (all facilities)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "is above SMI median": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "v_Severity_severity.is_above_PG_severity_median_facility_safe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Severity",
+			          "ConceptualProperty": "Is Above PG Severity Median (facility safe)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "is above PG severity median (facility safe)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "is above PG severity median": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -18925,6 +20873,1194 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "v_Severity_severity_has_is_above_PG_severity_median_facility_safe": {
+			      "Binding": {
+			        "ConceptualEntity": "_Severity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_Severity_severity": {
+			          "Target": {
+			            "Entity": "v_Severity_severity"
+			          }
+			        },
+			        "v_Severity_severity.is_above_PG_severity_median_facility_safe": {
+			          "Target": {
+			            "Entity": "v_Severity_severity.is_above_PG_severity_median_facility_safe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_Severity_severity"
+			            },
+			            "Object": {
+			              "Role": "v_Severity_severity.is_above_PG_severity_median_facility_safe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_severities_have_is_above_PG_severity_median_facility_safe"
+			        }
+			      ]
+			    },
+			    "v_Severity_severity_has_is_above_SMI_median_all_facilities": {
+			      "Binding": {
+			        "ConceptualEntity": "_Severity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_Severity_severity": {
+			          "Target": {
+			            "Entity": "v_Severity_severity"
+			          }
+			        },
+			        "v_Severity_severity.is_above_SMI_median_all_facilities": {
+			          "Target": {
+			            "Entity": "v_Severity_severity.is_above_SMI_median_all_facilities"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_Severity_severity"
+			            },
+			            "Object": {
+			              "Role": "v_Severity_severity.is_above_SMI_median_all_facilities"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_severities_have_is_above_SMI_median_all_facilities"
+			        }
+			      ]
+			    },
+			    "fact_KPI_severity_mix_has_v_Severity_severity_SMI_median_all_facilities_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_SeverityMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_severity_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_severity_mix"
+			          }
+			        },
+			        "v_Severity_severity.SMI_median_all_facilities_selected": {
+			          "Target": {
+			            "Entity": "v_Severity_severity.SMI_median_all_facilities_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_severity_mix"
+			            },
+			            "Object": {
+			              "Role": "v_Severity_severity.SMI_median_all_facilities_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_severity_mixes_have_SMI_median_all_facilities_selected"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_v_Severity_severity_SMI_median_all_facilities_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "v_Severity_severity.SMI_median_all_facilities_selected": {
+			          "Target": {
+			            "Entity": "v_Severity_severity.SMI_median_all_facilities_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "v_Severity_severity.SMI_median_all_facilities_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_SMI_median_all_facilities_selected"
+			        }
+			      ]
+			    },
+			    "v_Severity_severity_has_facilities_above_own_PG_sev_median": {
+			      "Binding": {
+			        "ConceptualEntity": "_Severity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_Severity_severity": {
+			          "Target": {
+			            "Entity": "v_Severity_severity"
+			          }
+			        },
+			        "v_Severity_severity.facilities_above_own_PG_sev_median": {
+			          "Target": {
+			            "Entity": "v_Severity_severity.facilities_above_own_PG_sev_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_Severity_severity"
+			            },
+			            "Object": {
+			              "Role": "v_Severity_severity.facilities_above_own_PG_sev_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_severities_have_facilities_above_own_PG_sev_median"
+			        }
+			      ]
+			    },
+			    "v_Severity_severity_has_is_above_own_PG_sev_median": {
+			      "Binding": {
+			        "ConceptualEntity": "_Severity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_Severity_severity": {
+			          "Target": {
+			            "Entity": "v_Severity_severity"
+			          }
+			        },
+			        "v_Severity_severity.is_above_own_PG_sev_median": {
+			          "Target": {
+			            "Entity": "v_Severity_severity.is_above_own_PG_sev_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_Severity_severity"
+			            },
+			            "Object": {
+			              "Role": "v_Severity_severity.is_above_own_PG_sev_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_severities_have_is_above_own_PG_sev_median"
+			        }
+			      ]
+			    },
+			    "v_Severity_severity_has_is_above_PG_severity_median": {
+			      "Binding": {
+			        "ConceptualEntity": "_Severity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_Severity_severity": {
+			          "Target": {
+			            "Entity": "v_Severity_severity"
+			          }
+			        },
+			        "v_Severity_severity.is_above_PG_severity_median": {
+			          "Target": {
+			            "Entity": "v_Severity_severity.is_above_PG_severity_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_Severity_severity"
+			            },
+			            "Object": {
+			              "Role": "v_Severity_severity.is_above_PG_severity_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_severities_have_is_above_PG_severity_median"
+			        }
+			      ]
+			    },
+			    "v_Severity_severity_has_facilities_at_or_below_SMI_median": {
+			      "Binding": {
+			        "ConceptualEntity": "_Severity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_Severity_severity": {
+			          "Target": {
+			            "Entity": "v_Severity_severity"
+			          }
+			        },
+			        "v_Severity_severity.facilities_at_or_below_SMI_median": {
+			          "Target": {
+			            "Entity": "v_Severity_severity.facilities_at_or_below_SMI_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_Severity_severity"
+			            },
+			            "Object": {
+			              "Role": "v_Severity_severity.facilities_at_or_below_SMI_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_severities_have_facilities_at_or_below_SMI_median"
+			        }
+			      ]
+			    },
+			    "v_Severity_severity_has_facilities_above_SMI_median": {
+			      "Binding": {
+			        "ConceptualEntity": "_Severity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_Severity_severity": {
+			          "Target": {
+			            "Entity": "v_Severity_severity"
+			          }
+			        },
+			        "v_Severity_severity.facilities_above_SMI_median": {
+			          "Target": {
+			            "Entity": "v_Severity_severity.facilities_above_SMI_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_Severity_severity"
+			            },
+			            "Object": {
+			              "Role": "v_Severity_severity.facilities_above_SMI_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_severities_have_facilities_above_SMI_median"
+			        }
+			      ]
+			    },
+			    "fact_KPI_severity_mix_has_v_Severity_severity_SMI_peer_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_SeverityMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_severity_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_severity_mix"
+			          }
+			        },
+			        "v_Severity_severity.SMI_peer_median": {
+			          "Target": {
+			            "Entity": "v_Severity_severity.SMI_peer_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_severity_mix"
+			            },
+			            "Object": {
+			              "Role": "v_Severity_severity.SMI_peer_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_severity_mixes_have_SMI_peer_median"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_v_Severity_severity_SMI_peer_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "v_Severity_severity.SMI_peer_median": {
+			          "Target": {
+			            "Entity": "v_Severity_severity.SMI_peer_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "v_Severity_severity.SMI_peer_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_SMI_peer_median"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_v_Severity_severity_facility_count": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "v_Severity_severity.facility_count": {
+			          "Target": {
+			            "Entity": "v_Severity_severity.facility_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "v_Severity_severity.facility_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_facility_count"
+			        }
+			      ]
+			    },
+			    "dim_peer_group_has_v_Severity_severity_peer_groups_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_PeerGroup"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_peer_group": {
+			          "Target": {
+			            "Entity": "dim_peer_group"
+			          }
+			        },
+			        "v_Severity_severity.peer_groups_selected": {
+			          "Target": {
+			            "Entity": "v_Severity_severity.peer_groups_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_peer_group"
+			            },
+			            "Object": {
+			              "Role": "v_Severity_severity.peer_groups_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_peer_groups_have_peer_groups_selected"
+			        }
+			      ]
+			    },
+			    "fact_KPI_severity_mix_has_v_Severity_severity_SMI_max": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_SeverityMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_severity_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_severity_mix"
+			          }
+			        },
+			        "v_Severity_severity.SMI_max": {
+			          "Target": {
+			            "Entity": "v_Severity_severity.SMI_max"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_severity_mix"
+			            },
+			            "Object": {
+			              "Role": "v_Severity_severity.SMI_max"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_severity_mixes_have_SMI_max"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_v_Severity_severity_SMI_max": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "v_Severity_severity.SMI_max": {
+			          "Target": {
+			            "Entity": "v_Severity_severity.SMI_max"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "v_Severity_severity.SMI_max"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_SMI_max"
+			        }
+			      ]
+			    },
+			    "fact_KPI_severity_mix_has_v_Severity_severity_SMI_min": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_SeverityMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_severity_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_severity_mix"
+			          }
+			        },
+			        "v_Severity_severity.SMI_min": {
+			          "Target": {
+			            "Entity": "v_Severity_severity.SMI_min"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_severity_mix"
+			            },
+			            "Object": {
+			              "Role": "v_Severity_severity.SMI_min"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_severity_mixes_have_SMI_min"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_v_Severity_severity_SMI_min": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "v_Severity_severity.SMI_min": {
+			          "Target": {
+			            "Entity": "v_Severity_severity.SMI_min"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "v_Severity_severity.SMI_min"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_SMI_min"
+			        }
+			      ]
+			    },
+			    "v_Severity_severity_has_top_facility_extreme": {
+			      "Binding": {
+			        "ConceptualEntity": "_Severity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_Severity_severity": {
+			          "Target": {
+			            "Entity": "v_Severity_severity"
+			          }
+			        },
+			        "v_Severity_severity.top_facility_extreme": {
+			          "Target": {
+			            "Entity": "v_Severity_severity.top_facility_extreme"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_Severity_severity"
+			            },
+			            "Object": {
+			              "Role": "v_Severity_severity.top_facility_extreme"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_severities_have_top_facility_extreme"
+			        }
+			      ]
+			    },
+			    "v_Severity_severity_has_top_facility_extreme_name": {
+			      "Binding": {
+			        "ConceptualEntity": "_Severity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_Severity_severity": {
+			          "Target": {
+			            "Entity": "v_Severity_severity"
+			          }
+			        },
+			        "v_Severity_severity.top_facility_extreme_name": {
+			          "Target": {
+			            "Entity": "v_Severity_severity.top_facility_extreme_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_Severity_severity"
+			            },
+			            "Object": {
+			              "Role": "v_Severity_severity.top_facility_extreme_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_severities_have_top_facility_extreme_name"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_v_Severity_severity_facilities_selected": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "v_Severity_severity.facilities_selected": {
+			          "Target": {
+			            "Entity": "v_Severity_severity.facilities_selected"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "v_Severity_severity.facilities_selected"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_facilities_selected"
+			        }
+			      ]
+			    },
+			    "v_Severity_severity_has_facilities_above_median_extreme": {
+			      "Binding": {
+			        "ConceptualEntity": "_Severity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_Severity_severity": {
+			          "Target": {
+			            "Entity": "v_Severity_severity"
+			          }
+			        },
+			        "v_Severity_severity.facilities_above_median_extreme": {
+			          "Target": {
+			            "Entity": "v_Severity_severity.facilities_above_median_extreme"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_Severity_severity"
+			            },
+			            "Object": {
+			              "Role": "v_Severity_severity.facilities_above_median_extreme"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_severities_have_facilities_above_median_extreme"
+			        }
+			      ]
+			    },
+			    "v_Severity_severity_has_is_above_median_extreme": {
+			      "Binding": {
+			        "ConceptualEntity": "_Severity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_Severity_severity": {
+			          "Target": {
+			            "Entity": "v_Severity_severity"
+			          }
+			        },
+			        "v_Severity_severity.is_above_median_extreme": {
+			          "Target": {
+			            "Entity": "v_Severity_severity.is_above_median_extreme"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_Severity_severity"
+			            },
+			            "Object": {
+			              "Role": "v_Severity_severity.is_above_median_extreme"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_severities_have_is_above_median_extreme"
+			        }
+			      ]
+			    },
+			    "v_Severity_severity_has_extreme_vs_median_bar_color": {
+			      "Binding": {
+			        "ConceptualEntity": "_Severity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_Severity_severity": {
+			          "Target": {
+			            "Entity": "v_Severity_severity"
+			          }
+			        },
+			        "v_Severity_severity.extreme_vs_median_bar_color": {
+			          "Target": {
+			            "Entity": "v_Severity_severity.extreme_vs_median_bar_color"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_Severity_severity"
+			            },
+			            "Object": {
+			              "Role": "v_Severity_severity.extreme_vs_median_bar_color"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_severities_have_extreme_vs_median_bar_color"
+			        }
+			      ]
+			    },
+			    "dim_peer_group_has_DBG_PeerGroup_name_FacilitySafe": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_PeerGroup"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_peer_group": {
+			          "Target": {
+			            "Entity": "dim_peer_group"
+			          }
+			        },
+			        "dim_peer_group.DBG_PeerGroup_name_FacilitySafe": {
+			          "Target": {
+			            "Entity": "dim_peer_group.DBG_PeerGroup_name_FacilitySafe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_peer_group"
+			            },
+			            "Object": {
+			              "Role": "dim_peer_group.DBG_PeerGroup_name_FacilitySafe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_peer_groups_have_DBG_PeerGroup_name_FacilitySafe"
+			        }
+			      ]
+			    },
+			    "dim_peer_group_has_DBG_PeerGroup_count_FacilitySafe": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_PeerGroup"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_peer_group": {
+			          "Target": {
+			            "Entity": "dim_peer_group"
+			          }
+			        },
+			        "dim_peer_group.DBG_PeerGroup_count_FacilitySafe": {
+			          "Target": {
+			            "Entity": "dim_peer_group.DBG_PeerGroup_count_FacilitySafe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_peer_group"
+			            },
+			            "Object": {
+			              "Role": "dim_peer_group.DBG_PeerGroup_count_FacilitySafe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_peer_groups_have_DBG_PeerGroup_count_FacilitySafe"
+			        }
+			      ]
+			    },
+			    "bridge_facility_peer_group_has_dim_peer_group_DBG_bridge_rows_per_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Bridge_Facility_PeerGroup"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bridge_facility_peer_group": {
+			          "Target": {
+			            "Entity": "bridge_facility_peer_group"
+			          }
+			        },
+			        "dim_peer_group.DBG_bridge_rows_per_facility": {
+			          "Target": {
+			            "Entity": "dim_peer_group.DBG_bridge_rows_per_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bridge_facility_peer_group"
+			            },
+			            "Object": {
+			              "Role": "dim_peer_group.DBG_bridge_rows_per_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bridge_facility_peer_groups_have_DBG_bridge_rows_per_facility"
+			        }
+			      ]
+			    },
+			    "dim_peer_group_has_DBG_PeerGroup_name": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_PeerGroup"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_peer_group": {
+			          "Target": {
+			            "Entity": "dim_peer_group"
+			          }
+			        },
+			        "dim_peer_group.DBG_PeerGroup_name": {
+			          "Target": {
+			            "Entity": "dim_peer_group.DBG_PeerGroup_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_peer_group"
+			            },
+			            "Object": {
+			              "Role": "dim_peer_group.DBG_PeerGroup_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_peer_groups_have_DBG_PeerGroup_name"
+			        }
+			      ]
+			    },
+			    "fact_KPI_severity_mix_has_dim_clinical_class_PeerGroup_severity_median_PeerGroup_safe": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_SeverityMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_severity_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_severity_mix"
+			          }
+			        },
+			        "dim_clinical_class.PeerGroup_severity_median_PeerGroup_safe": {
+			          "Target": {
+			            "Entity": "dim_clinical_class.PeerGroup_severity_median_PeerGroup_safe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_severity_mix"
+			            },
+			            "Object": {
+			              "Role": "dim_clinical_class.PeerGroup_severity_median_PeerGroup_safe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_severity_mixes_have_PeerGroup_severity_median_PeerGroup_safe"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_dim_clinical_class_PeerGroup_severity_median_PeerGroup_safe": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "dim_clinical_class.PeerGroup_severity_median_PeerGroup_safe": {
+			          "Target": {
+			            "Entity": "dim_clinical_class.PeerGroup_severity_median_PeerGroup_safe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "dim_clinical_class.PeerGroup_severity_median_PeerGroup_safe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_PeerGroup_severity_median_PeerGroup_safe"
+			        }
+			      ]
+			    },
+			    "fact_KPI_severity_mix_has_dim_clinical_class_PeerGroup_severity_median_RowSafe": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_SeverityMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_severity_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_severity_mix"
+			          }
+			        },
+			        "dim_clinical_class.PeerGroup_severity_median_RowSafe": {
+			          "Target": {
+			            "Entity": "dim_clinical_class.PeerGroup_severity_median_RowSafe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_severity_mix"
+			            },
+			            "Object": {
+			              "Role": "dim_clinical_class.PeerGroup_severity_median_RowSafe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_severity_mixes_have_PeerGroup_severity_median_RowSafe"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_dim_clinical_class_PeerGroup_severity_median_RowSafe": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "dim_clinical_class.PeerGroup_severity_median_RowSafe": {
+			          "Target": {
+			            "Entity": "dim_clinical_class.PeerGroup_severity_median_RowSafe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "dim_clinical_class.PeerGroup_severity_median_RowSafe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_PeerGroup_severity_median_RowSafe"
+			        }
+			      ]
+			    },
+			    "fact_KPI_severity_mix_has_dim_clinical_class_PeerGroup_severity_median_FacilitySafe": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_SeverityMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_severity_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_severity_mix"
+			          }
+			        },
+			        "dim_clinical_class.PeerGroup_severity_median_FacilitySafe": {
+			          "Target": {
+			            "Entity": "dim_clinical_class.PeerGroup_severity_median_FacilitySafe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_severity_mix"
+			            },
+			            "Object": {
+			              "Role": "dim_clinical_class.PeerGroup_severity_median_FacilitySafe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_severity_mixes_have_PeerGroup_severity_median_FacilitySafe"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_dim_clinical_class_PeerGroup_severity_median_FacilitySafe": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "dim_clinical_class.PeerGroup_severity_median_FacilitySafe": {
+			          "Target": {
+			            "Entity": "dim_clinical_class.PeerGroup_severity_median_FacilitySafe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "dim_clinical_class.PeerGroup_severity_median_FacilitySafe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_PeerGroup_severity_median_FacilitySafe"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_peer_group_sort": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "dim_facility.peer_group_sort": {
+			          "Target": {
+			            "Entity": "dim_facility.peer_group_sort"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "dim_facility.peer_group_sort"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_peer_group_sorts"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_peer_group_name": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "dim_facility.peer_group_name": {
+			          "Target": {
+			            "Entity": "dim_facility.peer_group_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "dim_facility.peer_group_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_peer_group_names"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_peer_group_key": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "dim_facility.peer_group_key": {
+			          "Target": {
+			            "Entity": "dim_facility.peer_group_key"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "dim_facility.peer_group_key"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_peer_group_keys"
+			        }
+			      ]
+			    },
 			    "vw_fact_KPI_severity_mix_by_severity_has_discharge_date_key": {
 			      "Binding": {
 			        "ConceptualEntity": "vw_Fact_KPI_SeverityMix_BySeverity"
@@ -19120,39 +22256,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "vw_fact_KPI_severity_mix_by_severity_have_median_extreme__selected"
-			        }
-			      ]
-			    },
-			    "dim_facility_has_v_Severity_severity_median_extreme__selected": {
-			      "Binding": {
-			        "ConceptualEntity": "Dim_Facility"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        },
-			        "v_Severity_severity.median_extreme__selected": {
-			          "Target": {
-			            "Entity": "v_Severity_severity.median_extreme__selected"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "v_Severity_severity.median_extreme__selected"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_median_extreme__selected"
 			        }
 			      ]
 			    },
@@ -19727,39 +22830,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "bridge_facility_peer_groups_have_created_at"
-			        }
-			      ]
-			    },
-			    "bridge_facility_peer_group_has_facility_key": {
-			      "Binding": {
-			        "ConceptualEntity": "Bridge_Facility_PeerGroup"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "bridge_facility_peer_group": {
-			          "Target": {
-			            "Entity": "bridge_facility_peer_group"
-			          }
-			        },
-			        "bridge_facility_peer_group.facility_key": {
-			          "Target": {
-			            "Entity": "bridge_facility_peer_group.facility_key"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "bridge_facility_peer_group"
-			            },
-			            "Object": {
-			              "Role": "bridge_facility_peer_group.facility_key"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "bridge_facility_peer_groups_have_facility_keys"
 			        }
 			      ]
 			    },
@@ -23496,52 +26566,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "dim_facility_has_bridge_facility_peer_group": {
-			      "Binding": {
-			        "ConceptualEntity": "Dim_Facility"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        },
-			        "bridge_facility_peer_group": {
-			          "Target": {
-			            "Entity": "bridge_facility_peer_group"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "bridge_facility_peer_group"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_bridge_facility_peer_groups"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "bridge_facility_peer_group"
-			            },
-			            "Object": {
-			              "Role": "dim_facility"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "bridge_facility_peer_groups_have_dim_facilities"
-			        }
-			      ]
-			    },
 			    "bridge_facility_peer_group_has_dim_peer_group": {
 			      "Binding": {
 			        "ConceptualEntity": "Bridge_Facility_PeerGroup"
@@ -23585,6 +26609,52 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_peer_groups_have_bridge_facility_peer_groups"
+			        }
+			      ]
+			    },
+			    "bridge_facility_peer_group_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Bridge_Facility_PeerGroup"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bridge_facility_peer_group": {
+			          "Target": {
+			            "Entity": "bridge_facility_peer_group"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bridge_facility_peer_group"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bridge_facility_peer_groups_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "bridge_facility_peer_group"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_bridge_facility_peer_groups"
 			        }
 			      ]
 			    },

@@ -1,11 +1,9 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.1.0/schema.json",
-  "displayName": "Reset",
-  "name": "240f80372a7083b6c8ec",
+  "displayName": "SMI Abv Own PG SMI Median",
+  "name": "511d5b418d274e084d07",
   "options": {
-    "targetVisualNames": [
-      "e3ef6230d1871de10448"
-    ]
+    "targetVisualNames": []
   },
   "explorationState": {
     "version": "1.3",
@@ -16,7 +14,10 @@
           "2d1de6194f646e870a8d": {
             "singleVisual": {
               "visualType": "actionButton",
-              "objects": {}
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
             }
           },
           "34711bdb55a53546fdf0": {
@@ -49,7 +50,10 @@
           "5b811b0b122960308a15": {
             "singleVisual": {
               "visualType": "actionButton",
-              "objects": {}
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
             }
           },
           "8689471ec16713435ecd": {
@@ -130,6 +134,9 @@
                     }
                   }
                 ]
+              },
+              "display": {
+                "mode": "hidden"
               }
             }
           },
@@ -139,6 +146,40 @@
                 {
                   "name": "c6f5b12340837520e01c",
                   "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "_",
+                        "Entity": "_Severity",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 0,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "_"
+                                  }
+                                },
+                                "Property": "Is Above Own PG Sev Median"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "1L"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
                   "expression": {
                     "Measure": {
                       "Expression": {
@@ -156,6 +197,34 @@
             "singleVisual": {
               "visualType": "lineClusteredColumnComboChart",
               "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  }
+                },
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "Facility_Name"
+                    }
+                  }
+                }
+              ],
               "activeProjections": {
                 "Category": [
                   {
@@ -166,6 +235,16 @@
                         }
                       },
                       "Property": "PeerGroup_Name"
+                    }
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "Facility_Name"
                     }
                   }
                 ]
@@ -217,10 +296,7 @@
           "a025a1cc7e4e28d8adb7": {
             "singleVisual": {
               "visualType": "actionButton",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
+              "objects": {}
             }
           },
           "a8195080488b293fa0bd": {
@@ -259,7 +335,10 @@
           "e3ef6230d1871de10448": {
             "singleVisual": {
               "visualType": "textbox",
-              "objects": {}
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
             }
           },
           "e950a78466a9857d9c33": {
@@ -271,10 +350,7 @@
           "ea235680adcb6e02740d": {
             "singleVisual": {
               "visualType": "actionButton",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
+              "objects": {}
             }
           },
           "1dae4fbef13f5b6a7709": {
@@ -430,9 +506,6 @@
                     }
                   }
                 ]
-              },
-              "display": {
-                "mode": "hidden"
               }
             }
           },
@@ -440,35 +513,30 @@
             "singleVisual": {
               "visualType": "tableEx",
               "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "9023dddc725c602512c9": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "262b52f10d887ce69014": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_ClinicalClass"
+                        }
+                      },
+                      "Property": "PeerGroup Severity Median (PeerGroup safe)"
+                    }
+                  }
+                }
+              ]
             }
           }
         },
         "visualContainerGroups": {
-          "89c9b513a9ae920b0617": {
+          "468f4374659176811025": {
             "isHidden": true
           },
           "c617da6327cc700fbd92": {
-            "isHidden": false,
-            "children": {
-              "468f4374659176811025": {
-                "isHidden": false
-              }
-            }
+            "isHidden": true
           },
           "f9f00eae4c0acbdd5301": {
             "isHidden": true

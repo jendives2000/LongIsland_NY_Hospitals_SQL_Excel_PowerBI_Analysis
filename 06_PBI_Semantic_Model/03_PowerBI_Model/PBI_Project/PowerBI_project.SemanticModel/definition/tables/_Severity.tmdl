@@ -240,7 +240,7 @@ table _Severity
 
 	measure 'Facilities Above SMI Median' = ```
 			
-			VAR PeerMedian = [SMI Peer Median]
+			VAR PeerMedian = [PeerGroup Severity Median (FacilitySafe)]
 			RETURN
 			COUNTROWS (
 			    FILTER (
@@ -281,6 +281,88 @@ table _Severity
 		formatString: 0
 		displayFolder: Helper
 		lineageTag: bb74ddad-1a4f-465d-b8e7-8068d57df297
+
+	measure 'Is Above Own PG Sev Median' = ```
+			
+			IF(
+			    NOT HASONEVALUE(Dim_Facility[Facility_Key]),
+			    BLANK(),
+			    VAR smi = [Severity Mix Index]
+			    VAR med = [PeerGroup Severity Median (PeerGroup safe)]
+			    RETURN IF(NOT ISBLANK(smi) && smi > med, 1, 0)
+			)
+			
+			```
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: b348ad4e-8958-4727-8c84-d914774a926a
+
+	measure 'Facilities Above Own PG Sev Median' = ```
+			
+			-- Count of facilities above their OWN peer-group median
+			SUMX(
+			    VALUES( Dim_Facility[Facility_Key] ),
+			    [Is Above Own PG Sev Median]
+			)
+			
+			```
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: 83b72a5e-669d-47b9-aceb-5d132867ff2a
+
+	measure 'SMI Median (All Facilities, Selected)' = ```
+			
+			VAR SelectedPeerGroups =
+			    CALCULATETABLE(
+			        VALUES( Dim_Facility[PeerGroup_Name] ),
+			        ALLSELECTED( Dim_Facility[PeerGroup_Name] )
+			    )
+			VAR FacilitiesInScope =
+			    CALCULATETABLE(
+			        VALUES( Dim_Facility[Facility_Key] ),
+			        ALLSELECTED( Dim_Facility[Facility_Key] ),
+			        -- remove the visual’s hierarchy grain (PG + Facility) so median is "global"
+			        REMOVEFILTERS( Dim_Facility[PeerGroup_Name] ),
+			        REMOVEFILTERS( Dim_Facility[Facility_Key], Dim_Facility[Facility_Name] ),
+			        -- re-apply peer-group slicer selection (so median changes if you slice PGs)
+			        KEEPFILTERS( SelectedPeerGroups )
+			    )
+			RETURN
+			MEDIANX(
+			    FacilitiesInScope,
+			    CALCULATE( [Severity Mix Index] )
+			)
+			
+			```
+		formatString: 0.00
+		displayFolder: Helper
+		lineageTag: b7aa5a3a-bbab-4e66-9372-9c899477e55d
+
+	measure 'Is Above SMI Median (All Facilities)' = ```
+			
+			VAR smi = [Severity Mix Index]
+			VAR med = [SMI Median (All Facilities, Selected)]
+			RETURN
+			IF(
+			    HASONEVALUE( Dim_Facility[Facility_Key] )
+			        && NOT ISBLANK(smi)
+			        && smi > med,
+			    1,
+			    0
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 1e19f9cf-a192-42ab-a61b-c49507e1811e
+
+	measure 'Is Above PG Severity Median (facility safe)' =
+			
+			VAR smi = [Severity Mix Index]
+			VAR med = [PeerGroup Severity Median (FacilitySafe)]
+			RETURN IF(NOT ISBLANK(smi) && smi > med, 1, 0)
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: 2de1163a-3b85-4a8a-90da-b6bbe3ed9916
 
 	column Column
 		dataType: int64

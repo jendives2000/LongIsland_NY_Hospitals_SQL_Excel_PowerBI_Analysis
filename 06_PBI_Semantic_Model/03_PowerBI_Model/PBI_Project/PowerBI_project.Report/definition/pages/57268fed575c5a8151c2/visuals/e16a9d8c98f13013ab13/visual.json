@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
   "name": "e16a9d8c98f13013ab13",
   "position": {
-    "x": 11.076923076923077,
-    "y": 235.07692307692307,
-    "z": 10000,
-    "height": 84.92307692307692,
-    "width": 375.38461538461536,
+    "x": 13.09090909090909,
+    "y": 293.94605394605395,
+    "z": 4000,
+    "height": 84.779220779220779,
+    "width": 571.012987012987,
     "tabOrder": 11000
   },
   "visual": {
@@ -19,7 +19,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "Severity of Illness reflects how clinically complex and physiologically unstable patients are at admission."
+                    "value": "Severity of Illness reflects how clinically complex and physiologically unstable patients are at admission.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               },
@@ -33,7 +36,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "It is not a measure of care quality."
+                    "value": "It is not a measure of care quality.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               }
@@ -58,5 +64,7 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "c617da6327cc700fbd92",
+  "isHidden": true
 }

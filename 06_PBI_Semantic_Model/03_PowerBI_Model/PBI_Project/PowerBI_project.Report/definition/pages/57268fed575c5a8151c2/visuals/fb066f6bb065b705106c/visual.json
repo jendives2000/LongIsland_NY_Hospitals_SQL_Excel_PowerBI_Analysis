@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
   "name": "fb066f6bb065b705106c",
   "position": {
-    "x": 0,
-    "y": 408,
-    "z": 18000,
-    "height": 96.615384615384613,
-    "width": 569.23076923076928,
+    "x": 4.9870129870129869,
+    "y": 235.012987012987,
+    "z": 15000,
+    "height": 65.454545454545453,
+    "width": 574.12987012987014,
     "tabOrder": 4000
   },
   "visual": {
@@ -108,8 +108,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 9,
-                      "Percent": -0.5
+                      "ColorId": 0,
+                      "Percent": -0.1
                     }
                   }
                 }
@@ -118,7 +118,21 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "showRestatement": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -153,7 +167,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": -0.1
+                      "Percent": -0.3
                     }
                   }
                 }
@@ -163,6 +177,13 @@
               "expr": {
                 "Literal": {
                   "Value": "4D"
+                }
+              }
+            },
+            "padding": {
+              "expr": {
+                "Literal": {
+                  "Value": "6D"
                 }
               }
             }
@@ -198,5 +219,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "isHidden": true
 }

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
-  "name": "9ccf8a01d308e4c718c0",
+  "name": "262b52f10d887ce69014",
   "position": {
-    "x": 176,
-    "y": 235.07692307692292,
-    "z": 6000,
-    "height": 27.076923076923077,
-    "width": 32.615384615384613,
-    "tabOrder": 12000
+    "x": 645.81818181818176,
+    "y": 13.642357642357638,
+    "z": 0,
+    "height": 416.41558441558442,
+    "width": 633.974025974026,
+    "tabOrder": 21002
   },
   "visual": {
     "visualType": "shape",
@@ -18,7 +18,14 @@
             "tileShape": {
               "expr": {
                 "Literal": {
-                  "Value": "'arrowChevron'"
+                  "Value": "'tabRoundTopCorners'"
+                }
+              }
+            },
+            "tabRoundCornerTop": {
+              "expr": {
+                "Literal": {
+                  "Value": "5L"
                 }
               }
             }
@@ -31,7 +38,7 @@
             "shapeAngle": {
               "expr": {
                 "Literal": {
-                  "Value": "180L"
+                  "Value": "270L"
                 }
               }
             }
@@ -45,11 +52,17 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 7,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#302744'"
                     }
                   }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "80D"
                 }
               }
             }
@@ -73,51 +86,8 @@
         }
       ]
     },
-    "visualContainerObjects": {
-      "title": [
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Back What is Severity?'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "visualLink": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "type": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Bookmark'"
-                }
-              }
-            },
-            "bookmark": {
-              "expr": {
-                "Literal": {
-                  "Value": "'68cb5ff92011b360d02b'"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
     "drillFilterOtherVisuals": true
   },
   "parentGroupName": "c617da6327cc700fbd92",
-  "isHidden": true,
   "howCreated": "InsertVisualButton"
 }

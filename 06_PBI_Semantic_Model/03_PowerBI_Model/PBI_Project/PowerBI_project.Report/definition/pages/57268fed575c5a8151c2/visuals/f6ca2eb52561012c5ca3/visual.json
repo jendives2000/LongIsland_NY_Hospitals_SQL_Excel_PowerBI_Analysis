@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
   "name": "f6ca2eb52561012c5ca3",
   "position": {
-    "x": 0,
-    "y": 420.27834747918286,
-    "z": 3000,
-    "height": 159.38461538461539,
-    "width": 1271.3846153846155,
-    "tabOrder": 3000
+    "x": 14.866136063071643,
+    "y": 199.00018116238093,
+    "z": 4000,
+    "height": 349.71428571428572,
+    "width": 580.98701298701292,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "textbox",
@@ -36,7 +36,11 @@
                     "textStyle": {
                       "fontWeight": "bold"
                     }
-                  },
+                  }
+                ]
+              },
+              {
+                "textRuns": [
                   {
                     "value": "Severity Mix Index ranges from "
                   },
@@ -108,7 +112,35 @@
                     }
                   },
                   {
-                    "value": " facilities operate above that peer-group median severity, with 7 of 23 operating above their own peer-group severity median. This indicates "
+                    "value": " facilities operate above that peer-group median severity, with "
+                  },
+                  {
+                    "value": {
+                      "propertyIdentifier": {
+                        "objectName": "values",
+                        "propertyName": "expr"
+                      },
+                      "selector": {
+                        "id": "facilities_abv_own_pgSevMedian"
+                      }
+                    }
+                  },
+                  {
+                    "value": " of "
+                  },
+                  {
+                    "value": {
+                      "propertyIdentifier": {
+                        "objectName": "values",
+                        "propertyName": "expr"
+                      },
+                      "selector": {
+                        "id": "Value 2"
+                      }
+                    }
+                  },
+                  {
+                    "value": " operating above their own peer-group severity median. This indicates "
                   },
                   {
                     "value": "moderate but controlled variation",
@@ -145,7 +177,11 @@
                       "fontWeight": "bold",
                       "textDecoration": "underline"
                     }
-                  },
+                  }
+                ]
+              },
+              {
+                "textRuns": [
                   {
                     "value": "Because severity levels are "
                   },
@@ -215,7 +251,11 @@
                     "textStyle": {
                       "fontWeight": "bold"
                     }
-                  },
+                  }
+                ]
+              },
+              {
+                "textRuns": [
                   {
                     "value": "Use this severity baseline to:"
                   }
@@ -409,15 +449,183 @@
                                       "Source": "_"
                                     }
                                   },
-                                  "Property": "SMI Peer Median"
+                                  "Property": "Facility Count"
                                 },
-                                "Name": "_Severity.SMI Peer Median"
+                                "Name": "_Severity.Facility Count"
                               }
                             ]
                           }
                         }
                       },
-                      "Property": "_Severity.SMI Peer Median"
+                      "Property": "_Severity.Facility Count"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "total_cnt",
+                      "utterance": "facility count"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "total_cnt"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_Severity",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "Facilities Above Own PG Sev Median"
+                                },
+                                "Name": "_Severity.Facilities Above Own PG Sev Median"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_Severity.Facilities Above Own PG Sev Median"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "facilities_abv_own_pgSevMedian",
+                      "utterance": "Facilities Above Own PG Sev Median"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "facilities_abv_own_pgSevMedian"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_Severity",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "Facility Count"
+                                },
+                                "Name": "_Severity.Facility Count"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_Severity.Facility Count"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "Value 2",
+                      "utterance": "facility count"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Value 2"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "d",
+                                "Entity": "Dim_ClinicalClass",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "d"
+                                    }
+                                  },
+                                  "Property": "PeerGroup Severity Median (FacilitySafe)"
+                                },
+                                "Name": "Dim_ClinicalClass.PeerGroup Severity Median (FacilitySafe)"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "Dim_ClinicalClass.PeerGroup Severity Median (FacilitySafe)"
                     }
                   },
                   "IncludeAllTypes": 1
@@ -428,7 +636,7 @@
                     "kind": "NaturalLanguage",
                     "annotation": {
                       "name": "median_smi",
-                      "utterance": "SMI peer median"
+                      "utterance": "PeerGroup Severity Median (FacilitySafe)"
                     }
                   }
                 }
@@ -484,7 +692,7 @@
                     "kind": "NaturalLanguage",
                     "annotation": {
                       "name": "above_cnt",
-                      "utterance": "facilities above SMI median"
+                      "utterance": "Facilities Above SMI Median"
                     }
                   }
                 }
@@ -493,62 +701,6 @@
           },
           "selector": {
             "id": "above_cnt"
-          }
-        },
-        {
-          "properties": {
-            "expr": {
-              "expr": {
-                "Min": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "Subquery": {
-                          "Query": {
-                            "Version": 2,
-                            "From": [
-                              {
-                                "Name": "_",
-                                "Entity": "_Severity",
-                                "Type": 0
-                              }
-                            ],
-                            "Select": [
-                              {
-                                "Measure": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Source": "_"
-                                    }
-                                  },
-                                  "Property": "Facility Count"
-                                },
-                                "Name": "_Severity.Facility Count"
-                              }
-                            ]
-                          }
-                        }
-                      },
-                      "Property": "_Severity.Facility Count"
-                    }
-                  },
-                  "IncludeAllTypes": 1
-                },
-                "Annotations": {
-                  "NaturalLanguage": {
-                    "version": 1,
-                    "kind": "NaturalLanguage",
-                    "annotation": {
-                      "name": "total_cnt",
-                      "utterance": "facility count"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "total_cnt"
           }
         }
       ]
@@ -560,7 +712,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -592,7 +744,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'SubTitle'"
+                  "Value": "'Insight'"
                 }
               }
             }
