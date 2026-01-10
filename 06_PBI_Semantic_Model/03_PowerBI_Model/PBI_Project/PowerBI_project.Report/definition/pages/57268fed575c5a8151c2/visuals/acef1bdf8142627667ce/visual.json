@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
   "name": "acef1bdf8142627667ce",
   "position": {
-    "x": 658.71912478824,
-    "y": 14.297850067117924,
-    "z": 4000,
-    "height": 424,
-    "width": 608,
-    "tabOrder": 5000
+    "x": 661.09665081009007,
+    "y": 12.463807548595156,
+    "z": 5000,
+    "height": 468,
+    "width": 607.76470588235293,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -28,7 +28,7 @@
               },
               "queryRef": "Dim_PeerGroup.PeerGroup_Name",
               "nativeQueryRef": "PeerGroup_Name",
-              "active": true
+              "active": false
             },
             {
               "field": {
@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": false
+              "active": true
             }
           ]
         },
@@ -67,6 +67,21 @@
         }
       },
       "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Severity"
+                  }
+                },
+                "Property": "Extreme Severity %"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
         "isDefaultSort": true
       }
     },
@@ -292,7 +307,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Extreme Severity vs Peer Median'"
+                  "Value": "'Extreme Severity Share vs Peer Baseline'"
                 }
               }
             },
@@ -324,7 +339,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'with Median of Extreme %'"
+                  "Value": "'Context signal, not a performance indicator'"
                 }
               }
             }
@@ -334,5 +349,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "f9f00eae4c0acbdd5301"
+  "parentGroupName": "f9f00eae4c0acbdd5301",
+  "isHidden": true
 }

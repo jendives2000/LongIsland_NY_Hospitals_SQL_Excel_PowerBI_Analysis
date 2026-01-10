@@ -4,10 +4,10 @@
   "position": {
     "x": 662.55444775138335,
     "y": 14.480700642900377,
-    "z": 2000,
+    "z": 3000,
     "height": 381.50649350649348,
     "width": 602.80519480519479,
-    "tabOrder": 3000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "lineClusteredColumnComboChart",
@@ -621,7 +621,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Severity Mix Index by Facility'"
+                  "Value": "'PG-B Contains 4 Facilities Above the Network SMI Median'"
                 }
               }
             },
@@ -673,7 +673,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Case-mix complexity indicator (APR-based) & Cross Peer Group Severity Median line'"
+                  "Value": "'Comparison against cross peer group Severity Median line'"
                 }
               }
             },

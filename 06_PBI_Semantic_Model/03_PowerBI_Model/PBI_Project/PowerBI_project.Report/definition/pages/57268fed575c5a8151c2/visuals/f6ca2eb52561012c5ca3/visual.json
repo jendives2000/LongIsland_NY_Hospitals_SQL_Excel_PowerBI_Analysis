@@ -4,10 +4,10 @@
   "position": {
     "x": 14.866136063071643,
     "y": 199.00018116238093,
-    "z": 4000,
+    "z": 5000,
     "height": 349.71428571428572,
     "width": 580.98701298701292,
-    "tabOrder": 2000
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "textbox",
@@ -42,7 +42,13 @@
               {
                 "textRuns": [
                   {
-                    "value": "Severity Mix Index ranges from "
+                    "value": "Severity Mix Index (SMI) ranges from"
+                  },
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
                   },
                   {
                     "value": {
@@ -53,10 +59,16 @@
                       "selector": {
                         "id": "smi_min"
                       }
+                    },
+                    "textStyle": {
+                      "fontWeight": "bold"
                     }
                   },
                   {
-                    "value": " to "
+                    "value": " to ",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
                   },
                   {
                     "value": {
@@ -67,10 +79,19 @@
                       "selector": {
                         "id": "Value"
                       }
+                    },
+                    "textStyle": {
+                      "fontWeight": "bold"
                     }
                   },
                   {
-                    "value": " across all selected hospitals, with a peer-group median of "
+                    "value": " across all selected hospitals, with "
+                  },
+                  {
+                    "value": "network-wide median of ",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
                   },
                   {
                     "value": {
@@ -81,11 +102,21 @@
                       "selector": {
                         "id": "median_smi"
                       }
+                    },
+                    "textStyle": {
+                      "fontWeight": "bold"
                     }
                   },
                   {
-                    "value": ". And "
-                  },
+                    "value": ". ",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
                   {
                     "value": {
                       "propertyIdentifier": {
@@ -112,8 +143,19 @@
                     }
                   },
                   {
-                    "value": " facilities operate above that peer-group median severity, with "
+                    "value": " facilities operate above the "
                   },
+                  {
+                    "value": "network (cross–peer-group) SMI median",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
                   {
                     "value": {
                       "propertyIdentifier": {
@@ -140,7 +182,31 @@
                     }
                   },
                   {
-                    "value": " operating above their own peer-group severity median. This indicates "
+                    "value": " operate above "
+                  },
+                  {
+                    "value": "their own peer-group SMI median",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " "
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "This indicates "
                   },
                   {
                     "value": "moderate but controlled variation",

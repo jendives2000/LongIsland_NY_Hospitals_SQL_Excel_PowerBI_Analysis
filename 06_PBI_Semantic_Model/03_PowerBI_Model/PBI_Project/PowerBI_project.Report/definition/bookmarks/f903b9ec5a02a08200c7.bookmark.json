@@ -11,25 +11,7 @@
     "sections": {
       "57268fed575c5a8151c2": {
         "visualContainers": {
-          "2d1de6194f646e870a8d": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
           "34711bdb55a53546fdf0": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "362248da2bbe9b0672d5": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "d2a7d2337d8a41c50bfe": {
             "singleVisual": {
               "visualType": "textbox",
               "objects": {}
@@ -47,7 +29,146 @@
               "objects": {}
             }
           },
+          "135687617b09a25b6bd6": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "c6f5b12340837520e01c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Severity"
+                        }
+                      },
+                      "Property": "Is Above Own PG Sev Median"
+                    }
+                  },
+                  "howCreated": 1
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineClusteredColumnComboChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "40f2a68cc83ee6ec0c8a": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "546856f82181213ed8b6": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "4a561ee28947883dbd41",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Severity"
+                        }
+                      },
+                      "Property": "Is Above PG Severity Median (facility safe)"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "403087e2a9bb84b7ad60",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_ClinicalClass"
+                        }
+                      },
+                      "Property": "PeerGroup Severity Median"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "507f79c0c01d60d7c184",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Severity"
+                        }
+                      },
+                      "Property": "SMI Median (All Facilities, Selected)"
+                    }
+                  },
+                  "howCreated": 1
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineClusteredColumnComboChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "7c5293938ad98064b105": {
+            "singleVisual": {
+              "visualType": "tableEx",
+              "objects": {}
+            }
+          },
           "9ee5675c27c751e1a119": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "c6f5b12340837520e01c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Severity"
+                        }
+                      },
+                      "Property": "Is Above Own PG Sev Median"
+                    }
+                  },
+                  "howCreated": 1
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "lineClusteredColumnComboChart",
               "objects": {},
@@ -85,24 +206,26 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
+                          "Entity": "Dim_Facility"
                         }
                       },
                       "Property": "PeerGroup_Name"
                     }
-                  },
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "Facility_Name"
-                    }
                   }
                 ]
               }
+            }
+          },
+          "a025a1cc7e4e28d8adb7": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "d367020dc957943e2eb0": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
             }
           },
           "e25fda04ec82ab826b91": {
@@ -111,10 +234,52 @@
               "objects": {}
             }
           },
+          "ea235680adcb6e02740d": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
           "f6ca2eb52561012c5ca3": {
             "singleVisual": {
               "visualType": "textbox",
               "objects": {}
+            }
+          },
+          "fb066f6bb065b705106c": {
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Basic'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  }
+                ]
+              }
             }
           },
           "934c60b19d79f250e8ca": {
@@ -141,15 +306,6 @@
               }
             }
           },
-          "9ccf8a01d308e4c718c0": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
           "a8195080488b293fa0bd": {
             "singleVisual": {
               "visualType": "actionButton",
@@ -162,15 +318,54 @@
               "objects": {}
             }
           },
+          "262b52f10d887ce69014": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "2d1de6194f646e870a8d": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "362248da2bbe9b0672d5": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "d2a7d2337d8a41c50bfe": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
           "6cef1840757a3aa2d66e": {
             "singleVisual": {
               "visualType": "textbox",
               "objects": {}
             }
           },
-          "d31b9b3ba1ad765d3e6e": {
+          "9023dddc725c602512c9": {
             "singleVisual": {
               "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "9ccf8a01d308e4c718c0": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "cc529bc36dd10ebc2324": {
+            "singleVisual": {
+              "visualType": "cardVisual",
               "objects": {}
             }
           },
@@ -192,6 +387,18 @@
               }
             }
           },
+          "d31b9b3ba1ad765d3e6e": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "e950a78466a9857d9c33": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
           "1dae4fbef13f5b6a7709": {
             "singleVisual": {
               "visualType": "shape",
@@ -211,6 +418,12 @@
             }
           },
           "041cc4dc71e990b7eed8": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "d67126e365ab172ebe59": {
             "singleVisual": {
               "visualType": "shape",
               "objects": {}
@@ -384,6 +597,51 @@
               }
             }
           },
+          "02fb1c40c3376d514129": {
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Basic'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "354c8bf6080bd865d844": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
           "5cce6f5150018d481349": {
             "singleVisual": {
               "visualType": "actionButton",
@@ -442,50 +700,19 @@
                 "mode": "hidden"
               }
             }
-          },
-          "fb066f6bb065b705106c": {
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Basic'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  }
-                ]
-              }
-            }
           }
         },
         "visualContainerGroups": {
-          "468f4374659176811025": {
-            "isHidden": false
-          },
           "89c9b513a9ae920b0617": {
             "isHidden": true
+          },
+          "c617da6327cc700fbd92": {
+            "isHidden": true,
+            "children": {
+              "468f4374659176811025": {
+                "isHidden": false
+              }
+            }
           },
           "f9f00eae4c0acbdd5301": {
             "isHidden": false
@@ -493,6 +720,22 @@
         }
       }
     },
-    "objects": {}
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
   }
 }

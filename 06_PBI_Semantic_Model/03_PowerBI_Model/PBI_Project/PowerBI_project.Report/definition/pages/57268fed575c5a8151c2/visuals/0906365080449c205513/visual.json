@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
   "name": "0906365080449c205513",
   "position": {
-    "x": 658.10959740689964,
-    "y": 14.297850067117924,
-    "z": 2000,
-    "height": 425.23076923076923,
-    "width": 608,
-    "tabOrder": 4000
+    "x": 660.39076845714885,
+    "y": 12.463807548595156,
+    "z": 3000,
+    "height": 468,
+    "width": 607.76470588235293,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "hundredPercentStackedBarChart",
@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": false
+              "active": true
             }
           ]
         },
@@ -106,6 +106,23 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Severity"
+                  }
+                },
+                "Property": "Extreme Severity %"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "objects": {
@@ -478,7 +495,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Distribution of Patient Severity Levels'"
+                  "Value": "'Patient Acuity Mix by Facility'"
                 }
               }
             },
@@ -505,6 +522,26 @@
               "expr": {
                 "Literal": {
                   "Value": "18D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Establishes baseline acuity context before performance KPIs'"
                 }
               }
             }

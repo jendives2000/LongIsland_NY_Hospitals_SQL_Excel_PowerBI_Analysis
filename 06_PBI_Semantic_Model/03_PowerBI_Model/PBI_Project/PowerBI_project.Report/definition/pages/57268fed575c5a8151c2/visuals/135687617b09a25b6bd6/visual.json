@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
-  "name": "9ee5675c27c751e1a119",
+  "name": "135687617b09a25b6bd6",
   "position": {
-    "x": 661.17956783249485,
-    "y": 15.999999999999996,
-    "z": 2000,
-    "height": 396.30769230769232,
-    "width": 603.07692307692309,
-    "tabOrder": 2000
+    "x": 660.75762626158257,
+    "y": 16.221291867242542,
+    "z": 1500,
+    "height": 395.84415584415581,
+    "width": 602.80519480519479,
+    "tabOrder": 17001
   },
   "visual": {
     "visualType": "lineClusteredColumnComboChart",
@@ -103,34 +103,6 @@
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Dim_PeerGroup"
-                  }
-                },
-                "Property": "PeerGroup_Name"
-              }
-            },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Dim_Facility"
-                  }
-                },
-                "Property": "Facility_Name"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ],
         "isDefaultSort": true
       }
     },
@@ -635,7 +607,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Severity Mix Index Is Tightly Clustered Across Facilities'"
+                  "Value": "'PG-B and PG-C Contain the Most Facilities Above Their Own Peer Median'"
                 }
               }
             },
@@ -687,7 +659,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'APR-based case-mix complexity across peer groups & Peer Group Severity Median line'"
+                  "Value": "'Within–peer-group severity positioning'"
                 }
               }
             },

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
   "name": "b44c62559edb6bea5002",
   "position": {
-    "x": 0,
-    "y": 443.83631160557945,
-    "z": 3000,
-    "height": 137.23076923076923,
-    "width": 1273.8461538461538,
+    "x": 14.117647058823529,
+    "y": 212.22851343094811,
+    "z": 4000,
+    "height": 367.05882352941177,
+    "width": 582.35294117647061,
     "tabOrder": 2000
   },
   "visual": {
@@ -26,11 +26,22 @@
               {
                 "textRuns": [
                   {
-                    "value": "INSIGHT: ",
+                    "value": "INSIGHT:",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "textDecoration": "underline"
+                    }
+                  },
+                  {
+                    "value": " ",
                     "textStyle": {
                       "fontWeight": "bold"
                     }
-                  },
+                  }
+                ]
+              },
+              {
+                "textRuns": [
                   {
                     "value": "Severity Mix Index values remain tightly clustered across the system ("
                   },
@@ -189,8 +200,7 @@
                       "fontWeight": "bold"
                     }
                   }
-                ],
-                "listType": "bullet"
+                ]
               },
               {
                 "textRuns": [
@@ -204,11 +214,22 @@
                   {
                     "value": "IMPACT:",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "textDecoration": "underline"
                     }
                   },
                   {
-                    "value": " Facilities above the peer median for Extreme severity are expected to experience "
+                    "value": " ",
+                    "textStyle": {
+                      "textDecoration": "underline"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Facilities above the peer median for Extreme severity are expected to experience "
                   },
                   {
                     "value": "structurally higher LOS, cost, and mortality pressure",
@@ -219,8 +240,7 @@
                   {
                     "value": ", independent of operational efficiency."
                   }
-                ],
-                "listType": "bullet"
+                ]
               },
               {
                 "textRuns": [
@@ -234,11 +254,19 @@
                   {
                     "value": "ACTION:",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "textDecoration": "underline"
                     }
                   },
                   {
-                    "value": " Downstream KPIs (LOS, mortality, margin) should therefore be interpreted "
+                    "value": " "
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Downstream KPIs (LOS, mortality, margin) should therefore be interpreted "
                   },
                   {
                     "value": "relative to peer-group medians",
@@ -258,8 +286,7 @@
                   {
                     "value": ", not corrective action."
                   }
-                ],
-                "listType": "bullet"
+                ]
               }
             ]
           }
@@ -723,7 +750,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },

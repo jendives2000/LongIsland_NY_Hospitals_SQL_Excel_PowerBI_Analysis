@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
-  "name": "40f2a68cc83ee6ec0c8a",
+  "name": "354c8bf6080bd865d844",
   "position": {
-    "x": 338.34126642801721,
-    "y": 18.17309387445124,
-    "z": 6000,
-    "height": 41.766233766233768,
-    "width": 190.12987012987011,
-    "tabOrder": 5000
+    "x": 12.705882352941176,
+    "y": 37.875572254477504,
+    "z": 8000,
+    "height": 40.941176470588232,
+    "width": 251.29411764705881,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "actionButton",
@@ -56,7 +56,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Above Own PG Median'"
+                  "Value": "'Patient Acuity Mix by Facility'"
                 }
               }
             },
@@ -173,13 +173,6 @@
                   "Value": "true"
                 }
               }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Severity Distribution'"
-                }
-              }
             }
           },
           "selector": {
@@ -272,14 +265,14 @@
             "tooltip": {
               "expr": {
                 "Literal": {
-                  "Value": "'Hospitals with an SMI over their own peer groups SMI median.'"
+                  "Value": "'Severity of Illness reflects how clinically complex and physiologically unstable patients are at admission.  It is not a measure of care quality.'"
                 }
               }
             },
             "bookmark": {
               "expr": {
                 "Literal": {
-                  "Value": "'511d5b418d274e084d07'"
+                  "Value": "'f903b9ec5a02a08200c7'"
                 }
               }
             }
@@ -292,7 +285,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Select Visuals Severity Distribution'"
+                  "Value": "'Select Visuals Sev Mix Ind'"
                 }
               }
             }
@@ -302,6 +295,7 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "89c9b513a9ae920b0617",
+  "parentGroupName": "f9f00eae4c0acbdd5301",
+  "isHidden": true,
   "howCreated": "InsertVisualButton"
 }

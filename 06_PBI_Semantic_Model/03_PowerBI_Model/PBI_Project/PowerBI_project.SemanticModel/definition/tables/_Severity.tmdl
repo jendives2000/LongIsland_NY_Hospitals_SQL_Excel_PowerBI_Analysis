@@ -226,11 +226,7 @@ table _Severity
 		lineageTag: 16ed3103-2ae5-4f16-91b7-e9323195d7b7
 
 	measure 'SMI Peer Median' = ```
-			
-			MEDIANX (
-			    VALUES ( Dim_Facility[Facility_Key] ),
-			    [Severity Mix Index]
-			)
+			Dim_ClinicalClass[PeerGroup Severity Median (FacilitySafe)]
 			
 			```
 		displayFolder: Helper
