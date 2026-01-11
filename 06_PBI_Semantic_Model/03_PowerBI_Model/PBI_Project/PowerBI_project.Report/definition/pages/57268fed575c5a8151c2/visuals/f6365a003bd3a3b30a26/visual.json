@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
-  "name": "ea235680adcb6e02740d",
+  "name": "f6365a003bd3a3b30a26",
   "position": {
-    "x": 155.06853915528995,
-    "y": 18.17309387445124,
-    "z": 10000,
-    "height": 41.766233766233768,
-    "width": 164.57142857142856,
-    "tabOrder": 7000
+    "x": 949.53846153846155,
+    "y": 655.38461538461536,
+    "z": 9000,
+    "height": 41.230769230769234,
+    "width": 180.92307692307693,
+    "tabOrder": 17003
   },
   "visual": {
     "visualType": "actionButton",
@@ -56,7 +56,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Above PG Median'"
+                  "Value": "'Severity Distribution'"
                 }
               }
             },
@@ -272,21 +272,14 @@
             "tooltip": {
               "expr": {
                 "Literal": {
-                  "Value": "'Hospitals with an SMI over the cross peer groups SMI median.'"
+                  "Value": "'Severity of Illness reflects how clinically complex and physiologically unstable patients are at admission.  It is not a measure of care quality.'"
                 }
               }
             },
             "bookmark": {
               "expr": {
                 "Literal": {
-                  "Value": "'1e96dbd709c344a431d6'"
-                }
-              }
-            },
-            "showDefaultTooltip": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "'f903b9ec5a02a08200c7'"
                 }
               }
             }
@@ -309,6 +302,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "89c9b513a9ae920b0617",
+  "isHidden": true,
   "howCreated": "InsertVisualButton"
 }
