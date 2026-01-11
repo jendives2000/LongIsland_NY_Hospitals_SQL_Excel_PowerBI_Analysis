@@ -17,6 +17,7 @@ table Dim_ClinicalClass
 			
 			```
 		formatString: 0.00
+		displayFolder: Severity
 		lineageTag: 749a10eb-083d-4033-95ae-db75a0122d08
 
 	measure 'PeerGroup Severity Median (FacilitySafe)' = ```
@@ -33,6 +34,7 @@ table Dim_ClinicalClass
 			)
 			
 			```
+		displayFolder: Severity
 		lineageTag: 6a3a98ae-92a4-43be-af65-0d81efe6d655
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -49,6 +51,7 @@ table Dim_ClinicalClass
 			)
 			
 			```
+		displayFolder: Severity
 		lineageTag: 25648691-c9c5-4e64-a400-2cda0f095649
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -64,9 +67,27 @@ table Dim_ClinicalClass
 			)
 			
 			```
+		displayFolder: Severity
 		lineageTag: ee917a44-5fcd-4d89-843e-5bf5597eda24
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'PeerGroup Unplanned Rate Median' =
+			
+			VAR CurrentPeerGroup =
+			    SELECTEDVALUE ( Dim_Facility[PeerGroup_Name] )
+			RETURN
+			CALCULATE (
+			    MEDIANX (
+			        VALUES ( Dim_Facility[Facility_Key] ),
+			        [Unplanned Admission Rate]
+			    ),
+			    ALL ( Dim_Facility ),
+			    Dim_Facility[PeerGroup_Name] = CurrentPeerGroup
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Unplanned
+		lineageTag: 9f68e053-c2b3-46ba-bdca-2204372564bf
 
 	column ClinicalClass_Key
 		dataType: int64

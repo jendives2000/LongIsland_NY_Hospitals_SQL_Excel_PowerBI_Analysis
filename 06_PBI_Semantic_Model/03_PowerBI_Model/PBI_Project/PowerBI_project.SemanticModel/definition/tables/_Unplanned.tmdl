@@ -1,0 +1,44 @@
+table _Unplanned
+	lineageTag: 3a80cc42-0d16-4c93-b12a-895a9f3763a4
+
+	measure 'Median Unplanned % (Selected)' =
+			
+			CALCULATE(
+			    MEDIANX(
+			        ALL( Dim_Facility[Facility_Key] ),
+			        [Unplanned Admission Rate]
+			    ),
+			    REMOVEFILTERS( Dim_ClinicalClass ),
+			    REMOVEFILTERS( Dim_Facility )
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: fbf76dd7-d8d4-4360-9447-fdf424e34d73
+
+	measure 'Is Above PG Unplanned Rate Median' =
+			
+			VAR ur = [Unplanned Admission Rate]
+			VAR med = [PeerGroup Unplanned Rate Median]
+			RETURN IF(NOT ISBLANK(ur) && ur > med, 1, 0)
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: 4a580510-add0-4e7c-b087-33e9a1c91d83
+
+	column Column
+		dataType: int64
+		formatString: 0
+		lineageTag: f94153b9-9280-4abc-8b03-54f8daa2a12c
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Unplanned = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 2a1222d140b54c9f9282f5111f9e8309
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

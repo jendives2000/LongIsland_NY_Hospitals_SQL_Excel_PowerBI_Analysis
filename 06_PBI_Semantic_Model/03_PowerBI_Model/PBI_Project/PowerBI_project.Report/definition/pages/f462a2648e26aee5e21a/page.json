@@ -1,0 +1,88 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.1.0/schema.json",
+  "name": "f462a2648e26aee5e21a",
+  "displayName": "Unplanned Intake",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "objects": {
+    "outspace": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 1,
+                    "Percent": 0.2
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "backgroundColor": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 0,
+                    "Percent": -0.5
+                  }
+                }
+              }
+            }
+          },
+          "foregroundColor": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 0,
+                    "Percent": 0
+                  }
+                }
+              }
+            }
+          },
+          "titleSize": {
+            "expr": {
+              "Literal": {
+                "Value": "13L"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode",
+  "visualInteractions": [
+    {
+      "source": "6701c84b78b50db7e1d8",
+      "target": "8d39895367ad2c814bad",
+      "type": "DataFilter"
+    },
+    {
+      "source": "6701c84b78b50db7e1d8",
+      "target": "bcb5bc5c4503642497d2",
+      "type": "DataFilter"
+    },
+    {
+      "source": "6701c84b78b50db7e1d8",
+      "target": "89f24a48ee57b4bce0ad",
+      "type": "DataFilter"
+    },
+    {
+      "source": "6701c84b78b50db7e1d8",
+      "target": "a85cc404782acae748c6",
+      "type": "DataFilter"
+    }
+  ]
+}
