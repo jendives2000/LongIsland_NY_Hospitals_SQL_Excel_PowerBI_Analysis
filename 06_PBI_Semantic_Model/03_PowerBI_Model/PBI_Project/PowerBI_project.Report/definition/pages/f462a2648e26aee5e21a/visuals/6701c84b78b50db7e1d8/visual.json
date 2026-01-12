@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": true
+              "active": false
             }
           ]
         },
@@ -62,38 +62,6 @@
               },
               "queryRef": "Dim_Facility.PeerGroup_Sort",
               "nativeQueryRef": "PeerGroup_Sort"
-            }
-          ]
-        },
-        "Tooltips": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_KPI_Measures"
-                    }
-                  },
-                  "Property": "Unplanned Admission Rate"
-                }
-              },
-              "queryRef": "_KPI_Measures.Unplanned Admission Rate",
-              "nativeQueryRef": "Unplanned Admission Rate"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Dim_ClinicalClass"
-                    }
-                  },
-                  "Property": "PeerGroup Unplanned Rate Median"
-                }
-              },
-              "queryRef": "Dim_ClinicalClass.PeerGroup Unplanned Rate Median",
-              "nativeQueryRef": "PeerGroup Unplanned Rate Median"
             }
           ]
         },
@@ -914,6 +882,5 @@
       }
     ],
     "filterSortOrder": "Custom"
-  },
-  "isHidden": true
+  }
 }

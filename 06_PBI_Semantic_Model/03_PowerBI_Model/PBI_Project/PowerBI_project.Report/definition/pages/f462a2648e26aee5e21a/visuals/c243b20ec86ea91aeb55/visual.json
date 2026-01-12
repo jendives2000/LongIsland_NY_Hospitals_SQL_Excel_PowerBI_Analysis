@@ -20,16 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Dim_Facility"
+                      "Entity": "Dim_PeerGroup"
                     }
                   },
                   "Property": "PeerGroup_Name"
                 }
               },
-              "queryRef": "Dim_Facility.PeerGroup_Name",
-              "nativeQueryRef": "Peer Groups",
-              "active": true,
-              "displayName": "Peer Groups"
+              "queryRef": "Dim_PeerGroup.PeerGroup_Name",
+              "nativeQueryRef": "PeerGroup_Name1",
+              "active": true
             },
             {
               "field": {
@@ -44,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": true
+              "active": false
             }
           ]
         },
@@ -62,7 +61,7 @@
                 }
               },
               "queryRef": "Dim_Facility.PeerGroup_Name",
-              "nativeQueryRef": "Peer Groups",
+              "nativeQueryRef": "PeerGroup_Name",
               "displayName": "Peer Groups"
             }
           ]
@@ -71,22 +70,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Fact_KPI_Unplanned"
-                        }
-                      },
-                      "Property": "Total_Encounters"
+                    "SourceRef": {
+                      "Entity": "_Volume_&_Denominators"
                     }
                   },
-                  "Function": 0
+                  "Property": "Unplanned Total Encounters"
                 }
               },
-              "queryRef": "Sum(Fact_KPI_Unplanned.Total_Encounters)",
-              "nativeQueryRef": "Sum of Total_Encounters"
+              "queryRef": "_Volume_&_Denominators.Unplanned Total Encounters",
+              "nativeQueryRef": "Unplanned Total Encounters"
             }
           ]
         },
@@ -113,22 +107,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Fact_KPI_Unplanned"
-                        }
-                      },
-                      "Property": "Total_Encounters"
+                    "SourceRef": {
+                      "Entity": "Fact_KPI_Unplanned"
                     }
                   },
-                  "Function": 0
+                  "Property": "Total Encounters (Y)"
                 }
               },
-              "queryRef": "Sum(Fact_KPI_Unplanned.Total_Encounters)",
-              "nativeQueryRef": "Sum of Total_Encounters"
+              "queryRef": "Fact_KPI_Unplanned.Total Encounters (Y)",
+              "nativeQueryRef": "Total Encounters (Y)"
             }
           ]
         }
@@ -639,5 +628,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "e61d07d0ba2506dc604d"
+  "parentGroupName": "e61d07d0ba2506dc604d",
+  "isHidden": true
 }
