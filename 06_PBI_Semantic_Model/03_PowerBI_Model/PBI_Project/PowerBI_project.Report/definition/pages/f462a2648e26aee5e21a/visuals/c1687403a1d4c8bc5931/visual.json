@@ -36,48 +36,147 @@
               {
                 "textRuns": [
                   {
-                    "value": "Unplanned admission rates remain elevated across all peer groups, ranging from "
+                    "value": "Unplanned admission (UA) rates remain elevated across all peer groups, with facilities' UA rates ranging from "
                   },
                   {
-                    "value": "{Min Unplanned Rate}% to {Max Unplanned Rate}%",
+                    "value": {
+                      "propertyIdentifier": {
+                        "objectName": "values",
+                        "propertyName": "expr"
+                      },
+                      "selector": {
+                        "id": "UA_rate_min"
+                      }
+                    },
                     "textStyle": {
                       "fontWeight": "bold"
                     }
                   },
                   {
-                    "value": ", with a peer-group median of "
-                  },
-                  {
-                    "value": "{Median Unplanned Rate}%",
+                    "value": " to ",
                     "textStyle": {
                       "fontWeight": "bold"
                     }
                   },
                   {
-                    "value": "."
+                    "value": {
+                      "propertyIdentifier": {
+                        "objectName": "values",
+                        "propertyName": "expr"
+                      },
+                      "selector": {
+                        "id": "UA_rate_max"
+                      }
+                    },
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " and a cross–peer-group median of "
+                  },
+                  {
+                    "value": {
+                      "propertyIdentifier": {
+                        "objectName": "values",
+                        "propertyName": "expr"
+                      },
+                      "selector": {
+                        "id": "Value 3"
+                      }
+                    },
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ".",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "{Facilities Above Median} of {Total Facilities}",
+                    "value": {
+                      "propertyIdentifier": {
+                        "objectName": "values",
+                        "propertyName": "expr"
+                      },
+                      "selector": {
+                        "id": "Value 4"
+                      }
+                    },
                     "textStyle": {
                       "fontWeight": "bold"
                     }
                   },
                   {
-                    "value": " facilities operate above their peer-group unplanned intake median, indicating broad, system-wide intake pressure rather than isolated outliers."
+                    "value": " of ",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": {
+                      "propertyIdentifier": {
+                        "objectName": "values",
+                        "propertyName": "expr"
+                      },
+                      "selector": {
+                        "id": "Value 5"
+                      }
+                    }
+                  },
+                  {
+                    "value": " facilities operate above that same cross peer-group median, and "
+                  },
+                  {
+                    "value": {
+                      "propertyIdentifier": {
+                        "objectName": "values",
+                        "propertyName": "expr"
+                      },
+                      "selector": {
+                        "id": "Value 6"
+                      }
+                    }
+                  },
+                  {
+                    "value": " operate above their own peer-group median. This pattern indicates broad, system-wide intake pressure rather than isolated outliers."
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "When intake pressure is examined alongside volume, only "
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "When intake pressure is examined alongside volume, "
                   },
                   {
-                    "value": "{Facilities In Low-Pressure Zone} facilities",
+                    "value": {
+                      "propertyIdentifier": {
+                        "objectName": "values",
+                        "propertyName": "expr"
+                      },
+                      "selector": {
+                        "id": "Value 7"
+                      }
+                    },
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " facilities",
                     "textStyle": {
                       "fontWeight": "bold"
                     }
@@ -86,7 +185,21 @@
                     "value": " fall below both "
                   },
                   {
-                    "value": "{UA Threshold}% unplanned admissions",
+                    "value": {
+                      "propertyIdentifier": {
+                        "objectName": "values",
+                        "propertyName": "expr"
+                      },
+                      "selector": {
+                        "id": "Value 8"
+                      }
+                    },
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " UA rate",
                     "textStyle": {
                       "fontWeight": "bold"
                     }
@@ -95,20 +208,64 @@
                     "value": " and "
                   },
                   {
-                    "value": "{Volume Threshold} encounters",
+                    "value": {
+                      "propertyIdentifier": {
+                        "objectName": "values",
+                        "propertyName": "expr"
+                      },
+                      "selector": {
+                        "id": "Value 9"
+                      }
+                    },
                     "textStyle": {
                       "fontWeight": "bold"
                     }
                   },
                   {
-                    "value": ", while the majority operate above both thresholds."
+                    "value": " encounters",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ", while "
+                  },
+                  {
+                    "value": {
+                      "propertyIdentifier": {
+                        "objectName": "values",
+                        "propertyName": "expr"
+                      },
+                      "selector": {
+                        "id": "Value 10"
+                      }
+                    }
+                  },
+                  {
+                    "value": " facilities operate above both thresholds."
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "This confirms that high unplanned intake is the dominant operating mode across the network."
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "This confirms that high unplanned intake "
+                  },
+                  {
+                    "value": "represents the dominant operating mode",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " across the network."
                   }
                 ]
               },
@@ -142,7 +299,7 @@
                     "value": "Because elevated unplanned admission rates coincide with "
                   },
                   {
-                    "value": "material inpatient volume",
+                    "value": "sustained inpatient volume",
                     "textStyle": {
                       "fontWeight": "bold"
                     }
@@ -193,7 +350,14 @@
               {
                 "textRuns": [
                   {
-                    "value": "This reduces the likelihood that downstream LOS, cost, or quality variation can be attributed to random demand fluctuation."
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "This reduces the likelihood that downstream LOS, cost, or quality variation can be primarily attributed to random demand fluctuation."
                   }
                 ]
               },
@@ -260,16 +424,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Treat facilities within the low-pressure zone as "
-                  },
-                  {
-                    "value": "structural comparators",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": ", not performance benchmarks"
+                    "value": "Treat facilities within the low-pressure zone as structural comparators rather than performance benchmarks, as their intake conditions are not representative of the system’s dominant operating environment."
                   }
                 ],
                 "listType": "bullet"
@@ -733,6 +888,790 @@
           },
           "selector": {
             "id": "top_pct"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_Unplanned",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "UA rate Min"
+                                },
+                                "Name": "_Unplanned.UA rate Min"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_Unplanned.UA rate Min"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "UA_rate_min",
+                      "utterance": "UA rate Min"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "UA_rate_min"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_Unplanned",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "UA rate Max"
+                                },
+                                "Name": "_Unplanned.UA rate Max"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_Unplanned.UA rate Max"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "UA_rate_max",
+                      "utterance": "UA rate Max"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "UA_rate_max"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "d",
+                                "Entity": "Dim_ClinicalClass",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "d"
+                                    }
+                                  },
+                                  "Property": "PeerGroup UA Rate Median"
+                                },
+                                "Name": "Dim_ClinicalClass.PeerGroup Unplanned Rate Median"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "Dim_ClinicalClass.PeerGroup Unplanned Rate Median"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "pg_ua_median",
+                      "utterance": "PeerGroup unplanned rate median"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "pg_ua_median"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_Unplanned",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "UA rate Peer Median"
+                                },
+                                "Name": "_Unplanned.UA rate Peer Median"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_Unplanned.UA rate Peer Median"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "ua_pg_median",
+                      "utterance": "UA rate peer median"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "ua_pg_median"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_Unplanned",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "UA rate Peer Median (group safe)"
+                                },
+                                "Name": "_Unplanned.UA rate Peer Median (group safe)"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_Unplanned.UA rate Peer Median (group safe)"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "Value",
+                      "utterance": "UA rate peer median (group safe)"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Value"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_Unplanned",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "UA rate Peer Median"
+                                },
+                                "Name": "_Unplanned.UA rate Peer Median"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_Unplanned.UA rate Peer Median"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "Value 2",
+                      "utterance": "UA rate peer median"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Value 2"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_Unplanned",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "All PeerGroups UA rate Median"
+                                },
+                                "Name": "_Unplanned.All PeerGroups UA rate Median"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_Unplanned.All PeerGroups UA rate Median"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "Value 3",
+                      "utterance": "All PeerGroups UA rate Median"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Value 3"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_Unplanned",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "Facilities Above UA rate Median"
+                                },
+                                "Name": "_Unplanned.Facilities Above UA rate Median"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_Unplanned.Facilities Above UA rate Median"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "Value 4",
+                      "utterance": "Facilities Above UA rate Median"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Value 4"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_Unplanned",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "UA Total Facilities"
+                                },
+                                "Name": "_Unplanned.UA Total Facilities"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_Unplanned.UA Total Facilities"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "Value 5",
+                      "utterance": "UA Total Facilities"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Value 5"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_Severity",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "Facilities Above Own PG Sev Median"
+                                },
+                                "Name": "_Severity.Facilities Above Own PG Sev Median"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_Severity.Facilities Above Own PG Sev Median"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "Value 6",
+                      "utterance": "Facilities Above Own PG Sev Median"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Value 6"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_Unplanned",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "Facilities In Low-Pressure Zone (0 safe)"
+                                },
+                                "Name": "_Unplanned.Facilities In Low-Pressure Zone (0 safe)"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_Unplanned.Facilities In Low-Pressure Zone (0 safe)"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "Value 7",
+                      "utterance": "Facilities In Low-Pressure Zone (0 safe)"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Value 7"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_Unplanned",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "UA Threshold (%)"
+                                },
+                                "Name": "_Unplanned.UA Threshold (%)"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_Unplanned.UA Threshold (%)"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "Value 8",
+                      "utterance": "UA Threshold"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Value 8"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_Unplanned",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "Volume Threshold (Encounters)"
+                                },
+                                "Name": "_Unplanned.Volume Threshold (Encounters)"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_Unplanned.Volume Threshold (Encounters)"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "Value 9",
+                      "utterance": "Volume Threshold"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Value 9"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_Unplanned",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "Facilities Above volume threshold"
+                                },
+                                "Name": "_Unplanned.Facilities Above volume threshold"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_Unplanned.Facilities Above volume threshold"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "Value 10",
+                      "utterance": "Facilities Above volume threshold"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Value 10"
           }
         }
       ]

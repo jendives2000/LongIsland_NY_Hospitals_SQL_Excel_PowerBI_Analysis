@@ -72,22 +72,57 @@ table Dim_ClinicalClass
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'PeerGroup Unplanned Rate Median' =
+	measure 'PeerGroup UA Rate Median' = ```
 			
-			VAR CurrentPeerGroup =
-			    SELECTEDVALUE ( Dim_Facility[PeerGroup_Name] )
+			VAR pg = SELECTEDVALUE(Dim_Facility[PeerGroup_Name])
 			RETURN
-			CALCULATE (
-			    MEDIANX (
-			        VALUES ( Dim_Facility[Facility_Key] ),
-			        [Unplanned Admission Rate]
-			    ),
-			    ALL ( Dim_Facility ),
-			    Dim_Facility[PeerGroup_Name] = CurrentPeerGroup
+			IF(
+			    NOT ISBLANK(pg),
+			    CALCULATE(
+			        MEDIANX(
+			            VALUES(Dim_Facility[Facility_Key]),
+			            [Unplanned Admission Rate]
+			        ),
+			        ALL(Dim_Facility),
+			        Dim_Facility[PeerGroup_Name] = pg
+			    )
 			)
+			
+			```
 		formatString: 0.00%;-0.00%;0.00%
 		displayFolder: Unplanned
 		lineageTag: 9f68e053-c2b3-46ba-bdca-2204372564bf
+
+	measure 'PeerGroup UA rate Median (FacilitySafe)' =
+			
+			VAR FacilitiesInSelectedPeerGroups =
+			    CALCULATETABLE(
+			        VALUES(Dim_Facility[Facility_Key]),
+			        REMOVEFILTERS(Dim_Facility)   -- removes current facility row
+			    )
+			RETURN
+			MEDIANX(
+			    FacilitiesInSelectedPeerGroups,
+			    CALCULATE([Unplanned Admission Rate], REMOVEFILTERS(Dim_Facility))
+			)
+		displayFolder: Unplanned
+		lineageTag: d23bd079-9eb3-4aee-a277-d7c7025895e7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'PeerGroup UA rate Median (PeerGroup safe)' =
+			
+			CALCULATE(
+			    MEDIANX(
+			        VALUES( Dim_Facility[Facility_Key] ),
+			        [Unplanned Admission Rate]
+			    ),
+			    ALLEXCEPT( Dim_Facility, Dim_Facility[PeerGroup_Name] )
+			)
+		displayFolder: Unplanned
+		lineageTag: 8fe1e9d0-ce6f-478b-906f-bf0bce599720
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column ClinicalClass_Key
 		dataType: int64

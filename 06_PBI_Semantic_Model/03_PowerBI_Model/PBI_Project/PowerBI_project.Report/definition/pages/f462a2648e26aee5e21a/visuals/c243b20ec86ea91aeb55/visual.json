@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": false
+              "active": true
             }
           ]
         },
@@ -198,7 +198,7 @@
                       "Entity": "Dim_ClinicalClass"
                     }
                   },
-                  "Property": "PeerGroup Unplanned Rate Median"
+                  "Property": "PeerGroup UA Rate Median"
                 }
               }
             },
@@ -544,6 +544,13 @@
                   "Value": "'ValueAndName'"
                 }
               }
+            },
+            "dataLabelDecimalPoints": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
             }
           },
           "selector": {
@@ -628,6 +635,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "e61d07d0ba2506dc604d",
-  "isHidden": true
+  "parentGroupName": "e61d07d0ba2506dc604d"
 }

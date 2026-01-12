@@ -16,7 +16,7 @@ table _KPI_Measures
 			    SUM(Fact_KPI_Unplanned[Unplanned_Encounter_Count]),
 			    SUM(Fact_KPI_Unplanned[Total_Encounters])
 			)
-		formatString: 0%;-0%;0%
+		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 7dba8b71-1622-4fb1-b9e9-d5119894323d
 
 	measure 'Mortality Rate' =

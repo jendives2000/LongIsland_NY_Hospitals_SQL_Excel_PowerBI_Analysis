@@ -1,0 +1,111 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
+  "name": "3a8b153a201dd0bed1b4",
+  "position": {
+    "x": 10.24,
+    "y": 0,
+    "z": 0,
+    "height": 280.32,
+    "width": 1221.12,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Facility"
+                    }
+                  },
+                  "Property": "PeerGroup_Name"
+                }
+              },
+              "queryRef": "Dim_Facility.PeerGroup_Name",
+              "nativeQueryRef": "PeerGroup_Name"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_KPI_Measures"
+                    }
+                  },
+                  "Property": "Unplanned Admission Rate"
+                }
+              },
+              "queryRef": "_KPI_Measures.Unplanned Admission Rate",
+              "nativeQueryRef": "Unplanned Admission Rate"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_ClinicalClass"
+                    }
+                  },
+                  "Property": "PeerGroup UA Rate Median"
+                }
+              },
+              "queryRef": "Dim_ClinicalClass.PeerGroup UA Rate Median",
+              "nativeQueryRef": "PeerGroup UA Rate Median"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Unplanned"
+                    }
+                  },
+                  "Property": "All PeerGroups UA rate Median"
+                }
+              },
+              "queryRef": "_Unplanned.All PeerGroups UA rate Median",
+              "nativeQueryRef": "All PeerGroups UA rate Median"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Facility"
+                    }
+                  },
+                  "Property": "Facility_Name"
+                }
+              },
+              "queryRef": "Dim_Facility.Facility_Name",
+              "nativeQueryRef": "Facility_Name"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_KPI_Measures"
+                  }
+                },
+                "Property": "Unplanned Admission Rate"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
