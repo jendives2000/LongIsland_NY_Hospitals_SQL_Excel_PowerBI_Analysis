@@ -28,6 +28,7 @@ table _Disposition
 
 	column Column
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: a3e94cdb-6a80-427c-9801-9a7487c175ce
 		summarizeBy: sum

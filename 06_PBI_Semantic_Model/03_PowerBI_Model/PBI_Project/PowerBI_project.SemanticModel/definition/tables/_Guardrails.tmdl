@@ -188,6 +188,7 @@ table _Guardrails
 
 	column Column
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 14d7575a-f63e-4097-afd7-f2912a1e4f85
 		summarizeBy: sum

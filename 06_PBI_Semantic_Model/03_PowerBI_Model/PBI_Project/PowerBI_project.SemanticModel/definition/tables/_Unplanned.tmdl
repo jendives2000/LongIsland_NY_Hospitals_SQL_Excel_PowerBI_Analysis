@@ -264,6 +264,7 @@ table _Unplanned
 
 	column Column
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: f94153b9-9280-4abc-8b03-54f8daa2a12c
 		summarizeBy: sum

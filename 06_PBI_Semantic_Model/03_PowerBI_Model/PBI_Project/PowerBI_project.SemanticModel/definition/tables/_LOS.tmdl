@@ -1,0 +1,185 @@
+table _LOS
+	lineageTag: 874ec203-bb35-4c59-a6b4-737b1ac71b37
+
+	measure 'LOS Threshold (Days)' = ```
+			5
+			
+			```
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: 0bdd391b-29c9-44e9-bd2d-d0ed0f9ffdce
+
+	measure 'LOS Volume Threshold (Encounters)' = 3000
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: 56191e9e-399e-4b90-8eaf-6218633dc20f
+
+	measure 'LOS Total Facilities' = ```
+			DISTINCTCOUNT(Dim_Facility[Facility_Key])
+			
+			```
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: a971f21e-4c76-4e13-b053-4f46a4b297b2
+
+	measure 'LOS Min' = ```
+			MINX( VALUES(Dim_Facility[Facility_Key]), [AVG LOS] )
+			
+			```
+		displayFolder: Helper
+		lineageTag: 11ac9856-735c-4632-8360-65e36be82852
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'LOS Max' = ```
+			MAXX( VALUES(Dim_Facility[Facility_Key]), [AVG LOS] )
+			
+			```
+		displayFolder: Helper
+		lineageTag: 22910f21-65c0-4019-b236-de4d5ff0a2f3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'LOS Peer Median' = ```
+			
+			-- Cross-facility LOS median (across all facilities in current selection)
+			MEDIANX( VALUES(Dim_Facility[Facility_Key]), [AVG LOS] )
+			
+			```
+		displayFolder: Helper
+		lineageTag: 21a441e1-cf44-43fc-ae34-ca8afc0ee025
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Is Above PG LOS Median' = ```
+			
+			VAR v = [AVG LOS]
+			VAR m = [PeerGroup LOS Median]
+			RETURN IF( NOT ISBLANK(v) && v > m, 1, 0)
+			
+			```
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: 9a612987-788e-4a8a-8791-f46d7776e591
+
+	measure 'Is Above Own PG LOS Median' = ```
+			
+			VAR v = [AVG LOS]
+			VAR m = [PeerGroup LOS Median (PeerGroup safe)]
+			RETURN IF( NOT ISBLANK(v) && v > m, 1, 0)
+			
+			```
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: 2cbb311e-8f00-4e6b-baf8-fac5c65ca5c4
+
+	measure 'Is Above LOS Median' = ```
+			
+			VAR v = [AVG LOS]
+			VAR m = [LOS Peer Median]
+			RETURN IF( NOT ISBLANK(v) && v > m, 1, 0)
+			
+			```
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: e91c97a4-19d2-413d-bde9-398f8a97e6a7
+
+	measure 'Is Below LOS Threshold' = ```
+			
+			IF( NOT ISBLANK([AVG LOS]) && [AVG LOS] < [LOS Threshold (Days)], 1, 0)
+			
+			
+			```
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: e553c3cd-f12a-4ba2-b50f-ae0974a29b70
+
+	measure 'Is Below LOS Volume Threshold' =
+			
+			VAR enc = [Total Encounters]
+			RETURN IF( NOT ISBLANK(enc) && enc < [LOS Volume Threshold (Encounters)], 1, 0)
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: 005cb404-6886-4d4f-b743-205c02ff6bd3
+
+	measure 'Is Above LOS Volume Threshold' =
+			
+			VAR enc = [Total Encounters]
+			RETURN IF( NOT ISBLANK(enc) && enc >= [LOS Volume Threshold (Encounters)], 1, 0)
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: 7e4ea352-220a-4186-904c-8977bc2250f8
+
+	measure 'Facilities In LOS Low-Pressure Zone' = ```
+			
+			COUNTROWS(
+			    FILTER(
+			        VALUES(Dim_Facility[Facility_Key]),
+			        [Is Below LOS Threshold] = 1
+			            && [Is Below LOS Volume Threshold] = 1
+			    )
+			)
+			
+			```
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: 1541672e-21d4-493a-b997-8d11a9642ac1
+
+	measure 'Facilities Out of LOS Low-Pressure Zone' = ```
+			
+			[LOS Total Facilities] - [Facilities In LOS Low-Pressure Zone]
+			
+			```
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: f9f4f37e-05be-41bc-aaf9-e316a57affda
+
+	measure 'Facilities Above Both LOS Thresholds' = ```
+			
+			COUNTROWS(
+			    FILTER(
+			        VALUES(Dim_Facility[Facility_Key]),
+			        [AVG LOS] >= [LOS Threshold (Days)]
+			            && [Total Encounters] >= [LOS Volume Threshold (Encounters)]
+			    )
+			)
+			
+			```
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: b8c1a11e-d430-4802-8ae9-4cdbc995f0be
+
+	measure 'PG LOS Median Range Text' = ```
+			
+			VAR pgList = VALUES(Dim_Facility[PeerGroup_Name])
+			VAR minMed =
+			    MINX(pgList, CALCULATE([PeerGroup LOS Median (PeerGroup safe)]))
+			VAR maxMed =
+			    MAXX(pgList, CALCULATE([PeerGroup LOS Median (PeerGroup safe)]))
+			RETURN
+			FORMAT(minMed, "0.00") & "–" & FORMAT(maxMed, "0.00")
+			
+			```
+		displayFolder: Helper
+		lineageTag: cfb40435-71c9-4ef3-8808-773827458ca8
+
+	column Column
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f3a725e0-2fb4-4033-a322-9103a258afb8
+		summarizeBy: sum
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _LOS = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 044faac90cb14606b57453a38c8e5f87
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

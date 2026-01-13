@@ -362,6 +362,7 @@ table _Severity
 
 	column Column
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 014dd9ee-aa0a-40e8-b20e-cf41115403d3
 		summarizeBy: sum

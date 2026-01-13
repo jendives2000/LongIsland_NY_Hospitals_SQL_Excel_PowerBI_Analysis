@@ -123,6 +123,57 @@ table Dim_ClinicalClass
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'PeerGroup LOS Median' = ```
+			
+			-- line for “LOS vs Peer Median” type visuals
+			VAR CurrentPeerGroup = SELECTEDVALUE(Dim_Facility[PeerGroup_Name])
+			RETURN
+			CALCULATE(
+			    MEDIANX( VALUES(Dim_Facility[Facility_Key]), [AVG LOS] ),
+			    ALL(Dim_Facility),
+			    Dim_Facility[PeerGroup_Name] = CurrentPeerGroup
+			)
+			
+			```
+		displayFolder: LOS
+		lineageTag: 520587b8-54db-4d1a-98ee-e9bfc322cd55
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'PeerGroup LOS Median (FacilitySafe)' = ```
+			
+			-- in tooltips/cards to avoid “duplicate native reference name” weirdness
+			VAR FacilitiesInSelectedPeerGroups =
+			    CALCULATETABLE(
+			        VALUES(Dim_Facility[Facility_Key]),
+			        REMOVEFILTERS(Dim_Facility)   -- remove current facility row only
+			    )
+			RETURN
+			MEDIANX(
+			    FacilitiesInSelectedPeerGroups,
+			    CALCULATE([AVG LOS], REMOVEFILTERS(Dim_Facility))
+			)
+			
+			```
+		displayFolder: LOS
+		lineageTag: ab6bd11d-b7b2-4401-abe7-02282f22cce2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'PeerGroup LOS Median (PeerGroup safe)' = ```
+			
+			-- one value per peer group, safe in grouped contexts
+			CALCULATE(
+			    MEDIANX( VALUES(Dim_Facility[Facility_Key]), [AVG LOS] ),
+			    REMOVEFILTERS(Dim_Facility[Facility_Name])
+			)
+			
+			```
+		displayFolder: LOS
+		lineageTag: 1848f604-66b4-4a65-ab4a-c466b6003a17
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column ClinicalClass_Key
 		dataType: int64
 		isHidden
