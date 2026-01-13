@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": true
+              "active": false
             }
           ]
         },
@@ -103,34 +103,6 @@
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Dim_Facility"
-                  }
-                },
-                "Property": "PeerGroup_Name"
-              }
-            },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Dim_Facility"
-                  }
-                },
-                "Property": "Facility_Name"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ],
         "isDefaultSort": true
       }
     },
@@ -761,44 +733,6 @@
           }
         },
         "type": "Advanced",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "_",
-              "Entity": "_Severity",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Not": {
-                  "Expression": {
-                    "Comparison": {
-                      "ComparisonKind": 0,
-                      "Left": {
-                        "Measure": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "_"
-                            }
-                          },
-                          "Property": "Is Above Own PG Sev Median"
-                        }
-                      },
-                      "Right": {
-                        "Literal": {
-                          "Value": "null"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
         "howCreated": "User"
       },
       {

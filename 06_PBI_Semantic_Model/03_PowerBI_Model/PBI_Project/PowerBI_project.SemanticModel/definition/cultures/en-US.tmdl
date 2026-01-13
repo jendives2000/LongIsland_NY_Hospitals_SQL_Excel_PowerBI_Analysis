@@ -15528,12 +15528,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peer group": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "facility peer group": {
 			            "State": "Generated",
 			            "Weight": 0.97
@@ -15580,26 +15574,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peer category": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "peer organization": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
 			          "bridge facility peer bracket": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -15637,6 +15611,26 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "facility peer bracket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "facility peer class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
 			          }
 			        }
 			      ]
@@ -15962,12 +15956,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peer group": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "dim peer category": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -15985,26 +15973,6 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.762
-			          }
-			        },
-			        {
-			          "peer category": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "peer organization": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
 			          }
 			        },
 			        {
@@ -16045,26 +16013,6 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.739
-			          }
-			        },
-			        {
-			          "peer bracket": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "peer class": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
 			          }
 			        }
 			      ]
@@ -16219,12 +16167,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "name": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "PeerGroup_Name": {
 			            "Type": "Noun",
 			            "State": "Generated",
@@ -16232,35 +16174,9 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peer group": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "group name": {
 			            "State": "Generated",
 			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "peer category": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "peer organization": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
 			          }
 			        },
 			        {
@@ -16304,7 +16220,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peer bracket": {
+			          "group nickname": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -16314,7 +16230,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peer class": {
+			          "group title": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -16324,7 +16240,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peer crew": {
+			          "group label": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -16334,17 +16250,36 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peer team": {
+			          "group tag": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "peer collection name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.615
+			          }
+			        },
+			        {
+			          "peer consortium name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.615
 			          }
 			        }
-			      ],
-			      "NameType": "Name"
+			      ]
 			    },
 			    "dim_peer_group.peer_group_description": {
 			      "Definition": {
@@ -18665,35 +18600,9 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peer group": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "group name": {
 			            "State": "Generated",
 			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "peer category": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "peer organization": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
 			          }
 			        },
 			        {
@@ -18737,7 +18646,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peer bracket": {
+			          "group nickname": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -18747,7 +18656,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peer class": {
+			          "group title": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -18757,7 +18666,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peer crew": {
+			          "group label": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -18767,13 +18676,43 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peer team": {
+			          "group tag": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "peer collection name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.615
+			          }
+			        },
+			        {
+			          "peer consortium name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.615
+			          }
+			        },
+			        {
+			          "Peer Group": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        },
 			        {
@@ -20076,6 +20015,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.475
 			          }
+			        },
+			        {
+			          "Network-Wide SMI Median": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -20191,6 +20140,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "Facilities Above NW SMI Median": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -20463,12 +20422,12 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "PeerGroup unplanned rate median": {
+			          "PeerGroup UA rate median": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "peergroup unplanned rate norm": {
+			          "peergroup ua rate norm": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -20478,7 +20437,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peergroup unplanned rate nucleus": {
+			          "peergroup ua rate nucleus": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -20488,7 +20447,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peergroup unplanned rate midpoint": {
+			          "peergroup ua rate midpoint": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -20498,7 +20457,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peergroup unplanned rate middle": {
+			          "peergroup ua rate middle": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -20508,7 +20467,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peergroup unplanned rate center": {
+			          "peergroup ua rate center": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -20518,7 +20477,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peergroup unplanned rate medium": {
+			          "peergroup ua rate medium": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -20528,7 +20487,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peergroup unplanned rate mean": {
+			          "peergroup ua rate mean": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -20538,7 +20497,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peergroup unplanned rate average": {
+			          "peergroup ua rate average": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -20548,7 +20507,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peergroup unplanned rate par": {
+			          "peergroup ua rate par": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -20558,7 +20517,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peergroup unplanned rate standard": {
+			          "peergroup ua rate standard": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -20737,9 +20696,1701 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "fact_KPI_unplanned.total_encounters_y": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_KPI_Unplanned",
+			          "ConceptualProperty": "Total Encounters (Y)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total encounters (y)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total encounters": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "aggregate encounter (y)": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "overall encounter (y)": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "dim_clinical_class.PeerGroup_UA_rate_median_FacilitySafe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_ClinicalClass",
+			          "ConceptualProperty": "PeerGroup UA rate Median (FacilitySafe)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PeerGroup UA rate median (FacilitySafe)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PeerGroup UA rate median": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "dim_clinical_class.PeerGroup_UA_rate_median_PeerGroup_safe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_ClinicalClass",
+			          "ConceptualProperty": "PeerGroup UA rate Median (PeerGroup safe)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PeerGroup UA rate median (PeerGroup safe)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PeerGroup UA rate median": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned.UA_rate_min": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Unplanned",
+			          "ConceptualProperty": "UA rate Min"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "UA rate min": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "rate min": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ua rate minimum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "rate minimum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned.UA_rate_max": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Unplanned",
+			          "ConceptualProperty": "UA rate Max"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "UA rate max": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "rate max": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ua rate maximum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "rate maximum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned.facilities_above_UA_rate_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Unplanned",
+			          "ConceptualProperty": "Facilities Above UA rate Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "facilities above UA rate median": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "amenity above ua rate median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "convenience above ua rate median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "accommodation above ua rate median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "toilet above ua rate median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "bathroom above ua rate median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "lavatory above ua rate median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "service above ua rate median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "ability above ua rate median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "capability above ua rate median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "talent above ua rate median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned.UA_total_facilities": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Unplanned",
+			          "ConceptualProperty": "UA Total Facilities"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "UA total facilities": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "facilities": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "total facilities": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ua aggregate facility": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "ua overall facility": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "aggregate facility": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall facility": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "ua total amenity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "ua total convenience": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "ua total accommodation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "ua total toilet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "ua total bathroom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "ua total lavatory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned.UA_threshold": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Unplanned",
+			          "ConceptualProperty": "UA Threshold (%)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "UA threshold": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "UA threshold (%)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "threshold": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ua brink": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "ua onset": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "ua inception": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "brink": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "onset": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "inception": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "ua verge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "ua edge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "ua dawn": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "ua beginning": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ],
+			      "Units": [
+			        "percentage",
+			        "%"
+			      ]
+			    },
+			    "v_Unplanned_unplanned.volume_threshold_encounters": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Unplanned",
+			          "ConceptualProperty": "Volume Threshold (Encounters)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "volume threshold (encounters)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "volume threshold": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned.is_below_UA_threshold": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Unplanned",
+			          "ConceptualProperty": "Is Below UA Threshold"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "is below UA threshold": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned.is_below_volume_threshold": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Unplanned",
+			          "ConceptualProperty": "Is Below Volume Threshold"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "is below volume threshold": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned.facilities_in_lowpressure_zone": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Unplanned",
+			          "ConceptualProperty": "Facilities In Low-Pressure Zone"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "facilities in low-pressure zone": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "facilities in low pressure zone": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "zone": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "pressure zone": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "low pressure zone": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "in low pressure zone": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "amenity in low pressure zone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "convenience in low pressure zone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "accommodation in low pressure zone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "toilet in low pressure zone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "bathroom in low pressure zone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "lavatory in low pressure zone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "in low heaviness zone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "in low pressure region": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "in low compression zone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "in low gravity zone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned.facilities_above_both_thresholds": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Unplanned",
+			          "ConceptualProperty": "Facilities Above Both Thresholds"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "facilities above both thresholds": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "amenity above both threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "convenience above both threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "accommodation above both threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "toilet above both threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "bathroom above both threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "lavatory above both threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "service above both threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "ability above both threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "capability above both threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "talent above both threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned.UA_rate_peer_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Unplanned",
+			          "ConceptualProperty": "UA rate Peer Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "UA rate peer median": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "median": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "peer median": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "rate peer median": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ua rate peer norm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "ua rate peer nucleus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "ua rate peer midpoint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "rate peer norm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "rate peer nucleus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "rate peer midpoint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "middle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "intermediate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "medium": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "middling": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned.UA_rate_peer_median_group_safe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Unplanned",
+			          "ConceptualProperty": "UA rate Peer Median (group safe)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "UA rate peer median (group safe)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "UA rate peer median": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned.is_above_own_UA_rate_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Unplanned",
+			          "ConceptualProperty": "Is Above Own UA rate Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "is above own UA rate median": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned.PeerGroup_median_unplanned_rate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Unplanned",
+			          "ConceptualProperty": "PeerGroup Median Unplanned Rate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PeerGroup median unplanned rate": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "peergroup median unplanned degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "peergroup median unplanned frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "peergroup median unplanned percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "peergroup median unplanned ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "peergroup median unplanned quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "peergroup median unplanned amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "peergroup median unplanned proportion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "peergroup median unplanned speed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "peergroup median unplanned level": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "peergroup median unplanned scale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned.all_PeerGroups_UA_rate_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Unplanned",
+			          "ConceptualProperty": "All PeerGroups UA rate Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "all PeerGroups UA rate median": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "all peergroup ua rate norm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "all peergroup ua rate nucleus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "all peergroup ua rate midpoint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "all peergroup ua rate middle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "all peergroup ua rate center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "all peergroup ua rate medium": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "all peergroup ua rate mean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "all peergroup ua rate average": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "all peergroup ua rate par": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "all peergroup ua rate standard": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned.facilities_in_lowpressure_zone_0_safe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Unplanned",
+			          "ConceptualProperty": "Facilities In Low-Pressure Zone (0 safe)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "facilities in low-pressure zone (0 safe)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "facilities in low-pressure zone": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "facilities in low pressure zone (0 safe)": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned.facilities_above_volume_threshold": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Unplanned",
+			          "ConceptualProperty": "Facilities Above volume threshold"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "facilities above volume threshold": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "amenity above volume threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "convenience above volume threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "accommodation above volume threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "toilet above volume threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "bathroom above volume threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "lavatory above volume threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "service above volume threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "ability above volume threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "capability above volume threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "talent above volume threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "fact_KPI_severity_mix_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_SeverityMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_severity_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_severity_mix"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_severity_mix"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_severity_mixes_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_severity_mix"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_fact_KPI_severity_mixes"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_payer_mix"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_fact_KPI_payer_mixes"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_dim_payer": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "dim_payer": {
+			          "Target": {
+			            "Entity": "dim_payer"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "dim_payer"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_dim_payers"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_payer"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_payer_mix"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_payers_have_fact_KPI_payer_mixes"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_dim_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "dim_year": {
+			          "Target": {
+			            "Entity": "dim_year"
+			          },
+			          "Nouns": [
+			            {
+			              "discharge year": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "dim_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_dim_years"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_year"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_payer_mix"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_years_have_fact_KPI_payer_mixes"
+			        }
+			      ]
+			    },
+			    "fact_KPI_mortality_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Mortality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_mortality": {
+			          "Target": {
+			            "Entity": "fact_KPI_mortality"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_mortality"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_mortalities_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_mortality"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_fact_KPI_mortalities"
+			        }
+			      ]
+			    },
+			    "fact_KPI_LOS_summary_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_LOS_summary": {
+			          "Target": {
+			            "Entity": "fact_KPI_LOS_summary"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_LOS_summary"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_LOS_summaries_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_LOS_summary"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_fact_KPI_LOS_summaries"
+			        }
+			      ]
+			    },
 			    "fact_KPI_financial_pressure_has_dim_facility": {
 			      "Binding": {
 			        "ConceptualEntity": "Fact_KPI_FinancialPressure"
@@ -20931,6 +22582,897 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "v_Unplanned_unplanned_has_facilities_above_volume_threshold": {
+			      "Binding": {
+			        "ConceptualEntity": "_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_Unplanned_unplanned": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned"
+			          }
+			        },
+			        "v_Unplanned_unplanned.facilities_above_volume_threshold": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned.facilities_above_volume_threshold"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_Unplanned_unplanned"
+			            },
+			            "Object": {
+			              "Role": "v_Unplanned_unplanned.facilities_above_volume_threshold"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_unplanned_have_facilities_above_volume_threshold"
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned_has_facilities_in_lowpressure_zone_0_safe": {
+			      "Binding": {
+			        "ConceptualEntity": "_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_Unplanned_unplanned": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned"
+			          }
+			        },
+			        "v_Unplanned_unplanned.facilities_in_lowpressure_zone_0_safe": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned.facilities_in_lowpressure_zone_0_safe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_Unplanned_unplanned"
+			            },
+			            "Object": {
+			              "Role": "v_Unplanned_unplanned.facilities_in_lowpressure_zone_0_safe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_unplanned_have_facilities_in_lowpressure_zone_0_safe"
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned_has_all_PeerGroups_UA_rate_median": {
+			      "Binding": {
+			        "ConceptualEntity": "_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_Unplanned_unplanned": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned"
+			          }
+			        },
+			        "v_Unplanned_unplanned.all_PeerGroups_UA_rate_median": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned.all_PeerGroups_UA_rate_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_Unplanned_unplanned"
+			            },
+			            "Object": {
+			              "Role": "v_Unplanned_unplanned.all_PeerGroups_UA_rate_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_unplanned_have_all_PeerGroups_UA_rate_median"
+			        }
+			      ]
+			    },
+			    "fact_KPI_unplanned_has_v_Unplanned_unplanned_PeerGroup_median_unplanned_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_unplanned": {
+			          "Target": {
+			            "Entity": "fact_KPI_unplanned"
+			          }
+			        },
+			        "v_Unplanned_unplanned.PeerGroup_median_unplanned_rate": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned.PeerGroup_median_unplanned_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_unplanned"
+			            },
+			            "Object": {
+			              "Role": "v_Unplanned_unplanned.PeerGroup_median_unplanned_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_unplanned_have_PeerGroup_median_unplanned_rate"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_v_Unplanned_unplanned_PeerGroup_median_unplanned_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "v_Unplanned_unplanned.PeerGroup_median_unplanned_rate": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned.PeerGroup_median_unplanned_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "v_Unplanned_unplanned.PeerGroup_median_unplanned_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_PeerGroup_median_unplanned_rate"
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned_has_is_above_own_UA_rate_median": {
+			      "Binding": {
+			        "ConceptualEntity": "_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_Unplanned_unplanned": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned"
+			          }
+			        },
+			        "v_Unplanned_unplanned.is_above_own_UA_rate_median": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned.is_above_own_UA_rate_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_Unplanned_unplanned"
+			            },
+			            "Object": {
+			              "Role": "v_Unplanned_unplanned.is_above_own_UA_rate_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_unplanned_have_is_above_own_UA_rate_median"
+			        }
+			      ]
+			    },
+			    "fact_KPI_unplanned_has_v_Unplanned_unplanned_UA_rate_peer_median_group_safe": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_unplanned": {
+			          "Target": {
+			            "Entity": "fact_KPI_unplanned"
+			          }
+			        },
+			        "v_Unplanned_unplanned.UA_rate_peer_median_group_safe": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned.UA_rate_peer_median_group_safe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_unplanned"
+			            },
+			            "Object": {
+			              "Role": "v_Unplanned_unplanned.UA_rate_peer_median_group_safe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_unplanned_have_UA_rate_peer_median_group_safe"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_v_Unplanned_unplanned_UA_rate_peer_median_group_safe": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "v_Unplanned_unplanned.UA_rate_peer_median_group_safe": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned.UA_rate_peer_median_group_safe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "v_Unplanned_unplanned.UA_rate_peer_median_group_safe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_UA_rate_peer_median_group_safe"
+			        }
+			      ]
+			    },
+			    "fact_KPI_unplanned_has_v_Unplanned_unplanned_UA_rate_peer_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_unplanned": {
+			          "Target": {
+			            "Entity": "fact_KPI_unplanned"
+			          }
+			        },
+			        "v_Unplanned_unplanned.UA_rate_peer_median": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned.UA_rate_peer_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_unplanned"
+			            },
+			            "Object": {
+			              "Role": "v_Unplanned_unplanned.UA_rate_peer_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_unplanned_have_UA_rate_peer_median"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_v_Unplanned_unplanned_UA_rate_peer_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "v_Unplanned_unplanned.UA_rate_peer_median": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned.UA_rate_peer_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "v_Unplanned_unplanned.UA_rate_peer_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_UA_rate_peer_median"
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned_has_facilities_above_both_thresholds": {
+			      "Binding": {
+			        "ConceptualEntity": "_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_Unplanned_unplanned": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned"
+			          }
+			        },
+			        "v_Unplanned_unplanned.facilities_above_both_thresholds": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned.facilities_above_both_thresholds"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_Unplanned_unplanned"
+			            },
+			            "Object": {
+			              "Role": "v_Unplanned_unplanned.facilities_above_both_thresholds"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_unplanned_have_facilities_above_both_thresholds"
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned_has_facilities_in_lowpressure_zone": {
+			      "Binding": {
+			        "ConceptualEntity": "_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_Unplanned_unplanned": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned"
+			          }
+			        },
+			        "v_Unplanned_unplanned.facilities_in_lowpressure_zone": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned.facilities_in_lowpressure_zone"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_Unplanned_unplanned"
+			            },
+			            "Object": {
+			              "Role": "v_Unplanned_unplanned.facilities_in_lowpressure_zone"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_unplanned_have_facilities_in_lowpressure_zone"
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned_has_is_below_volume_threshold": {
+			      "Binding": {
+			        "ConceptualEntity": "_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_Unplanned_unplanned": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned"
+			          }
+			        },
+			        "v_Unplanned_unplanned.is_below_volume_threshold": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned.is_below_volume_threshold"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_Unplanned_unplanned"
+			            },
+			            "Object": {
+			              "Role": "v_Unplanned_unplanned.is_below_volume_threshold"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_unplanned_have_is_below_volume_threshold"
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned_has_is_below_UA_threshold": {
+			      "Binding": {
+			        "ConceptualEntity": "_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_Unplanned_unplanned": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned"
+			          }
+			        },
+			        "v_Unplanned_unplanned.is_below_UA_threshold": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned.is_below_UA_threshold"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_Unplanned_unplanned"
+			            },
+			            "Object": {
+			              "Role": "v_Unplanned_unplanned.is_below_UA_threshold"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_unplanned_have_is_below_UA_threshold"
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned_has_volume_threshold_encounters": {
+			      "Binding": {
+			        "ConceptualEntity": "_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_Unplanned_unplanned": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned"
+			          }
+			        },
+			        "v_Unplanned_unplanned.volume_threshold_encounters": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned.volume_threshold_encounters"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_Unplanned_unplanned"
+			            },
+			            "Object": {
+			              "Role": "v_Unplanned_unplanned.volume_threshold_encounters"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_unplanned_have_volume_threshold_encounters"
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned_has_UA_threshold": {
+			      "Binding": {
+			        "ConceptualEntity": "_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_Unplanned_unplanned": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned"
+			          }
+			        },
+			        "v_Unplanned_unplanned.UA_threshold": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned.UA_threshold"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_Unplanned_unplanned"
+			            },
+			            "Object": {
+			              "Role": "v_Unplanned_unplanned.UA_threshold"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_unplanned_have_UA_threshold"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_v_Unplanned_unplanned_UA_total_facilities": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "v_Unplanned_unplanned.UA_total_facilities": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned.UA_total_facilities"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "v_Unplanned_unplanned.UA_total_facilities"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_UA_total_facilities"
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned_has_facilities_above_UA_rate_median": {
+			      "Binding": {
+			        "ConceptualEntity": "_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_Unplanned_unplanned": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned"
+			          }
+			        },
+			        "v_Unplanned_unplanned.facilities_above_UA_rate_median": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned.facilities_above_UA_rate_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_Unplanned_unplanned"
+			            },
+			            "Object": {
+			              "Role": "v_Unplanned_unplanned.facilities_above_UA_rate_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_unplanned_have_facilities_above_UA_rate_median"
+			        }
+			      ]
+			    },
+			    "fact_KPI_unplanned_has_v_Unplanned_unplanned_UA_rate_max": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_unplanned": {
+			          "Target": {
+			            "Entity": "fact_KPI_unplanned"
+			          }
+			        },
+			        "v_Unplanned_unplanned.UA_rate_max": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned.UA_rate_max"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_unplanned"
+			            },
+			            "Object": {
+			              "Role": "v_Unplanned_unplanned.UA_rate_max"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_unplanned_have_UA_rate_max"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_v_Unplanned_unplanned_UA_rate_max": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "v_Unplanned_unplanned.UA_rate_max": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned.UA_rate_max"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "v_Unplanned_unplanned.UA_rate_max"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_UA_rate_max"
+			        }
+			      ]
+			    },
+			    "fact_KPI_unplanned_has_v_Unplanned_unplanned_UA_rate_min": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_unplanned": {
+			          "Target": {
+			            "Entity": "fact_KPI_unplanned"
+			          }
+			        },
+			        "v_Unplanned_unplanned.UA_rate_min": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned.UA_rate_min"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_unplanned"
+			            },
+			            "Object": {
+			              "Role": "v_Unplanned_unplanned.UA_rate_min"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_unplanned_have_UA_rate_min"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_v_Unplanned_unplanned_UA_rate_min": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "v_Unplanned_unplanned.UA_rate_min": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned.UA_rate_min"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "v_Unplanned_unplanned.UA_rate_min"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_UA_rate_min"
+			        }
+			      ]
+			    },
+			    "fact_KPI_unplanned_has_dim_clinical_class_PeerGroup_UA_rate_median_PeerGroup_safe": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_unplanned": {
+			          "Target": {
+			            "Entity": "fact_KPI_unplanned"
+			          }
+			        },
+			        "dim_clinical_class.PeerGroup_UA_rate_median_PeerGroup_safe": {
+			          "Target": {
+			            "Entity": "dim_clinical_class.PeerGroup_UA_rate_median_PeerGroup_safe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_unplanned"
+			            },
+			            "Object": {
+			              "Role": "dim_clinical_class.PeerGroup_UA_rate_median_PeerGroup_safe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_unplanned_have_PeerGroup_UA_rate_median_PeerGroup_safe"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_dim_clinical_class_PeerGroup_UA_rate_median_PeerGroup_safe": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "dim_clinical_class.PeerGroup_UA_rate_median_PeerGroup_safe": {
+			          "Target": {
+			            "Entity": "dim_clinical_class.PeerGroup_UA_rate_median_PeerGroup_safe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "dim_clinical_class.PeerGroup_UA_rate_median_PeerGroup_safe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_PeerGroup_UA_rate_median_PeerGroup_safe"
+			        }
+			      ]
+			    },
+			    "fact_KPI_unplanned_has_dim_clinical_class_PeerGroup_UA_rate_median_FacilitySafe": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_unplanned": {
+			          "Target": {
+			            "Entity": "fact_KPI_unplanned"
+			          }
+			        },
+			        "dim_clinical_class.PeerGroup_UA_rate_median_FacilitySafe": {
+			          "Target": {
+			            "Entity": "dim_clinical_class.PeerGroup_UA_rate_median_FacilitySafe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_unplanned"
+			            },
+			            "Object": {
+			              "Role": "dim_clinical_class.PeerGroup_UA_rate_median_FacilitySafe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_unplanned_have_PeerGroup_UA_rate_median_FacilitySafe"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_dim_clinical_class_PeerGroup_UA_rate_median_FacilitySafe": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "dim_clinical_class.PeerGroup_UA_rate_median_FacilitySafe": {
+			          "Target": {
+			            "Entity": "dim_clinical_class.PeerGroup_UA_rate_median_FacilitySafe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "dim_clinical_class.PeerGroup_UA_rate_median_FacilitySafe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_PeerGroup_UA_rate_median_FacilitySafe"
+			        }
+			      ]
+			    },
+			    "fact_KPI_unplanned_has_total_encounters_y": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_unplanned": {
+			          "Target": {
+			            "Entity": "fact_KPI_unplanned"
+			          }
+			        },
+			        "fact_KPI_unplanned.total_encounters_y": {
+			          "Target": {
+			            "Entity": "fact_KPI_unplanned.total_encounters_y"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_unplanned"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_unplanned.total_encounters_y"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_unplanned_have_total_encounters_y"
+			        }
+			      ]
+			    },
 			    "v_Unplanned_unplanned_has_is_above_PG_unplanned_rate_median": {
 			      "Binding": {
 			        "ConceptualEntity": "_Unplanned"
@@ -21030,15 +23572,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_KPI_unplanned_has_dim_clinical_class_PeerGroup_unplanned_rate_median": {
+			    "dim_clinical_class_has_PeerGroup_unplanned_rate_median": {
 			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_Unplanned"
+			        "ConceptualEntity": "Dim_ClinicalClass"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fact_KPI_unplanned": {
+			        "dim_clinical_class": {
 			          "Target": {
-			            "Entity": "fact_KPI_unplanned"
+			            "Entity": "dim_clinical_class"
 			          }
 			        },
 			        "dim_clinical_class.PeerGroup_unplanned_rate_median": {
@@ -21051,7 +23593,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fact_KPI_unplanned"
+			              "Role": "dim_clinical_class"
 			            },
 			            "Object": {
 			              "Role": "dim_clinical_class.PeerGroup_unplanned_rate_median"
@@ -21059,40 +23601,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_KPI_unplanned_have_PeerGroup_unplanned_rate_median"
-			        }
-			      ]
-			    },
-			    "dim_facility_has_dim_clinical_class_PeerGroup_unplanned_rate_median": {
-			      "Binding": {
-			        "ConceptualEntity": "Dim_Facility"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        },
-			        "dim_clinical_class.PeerGroup_unplanned_rate_median": {
-			          "Target": {
-			            "Entity": "dim_clinical_class.PeerGroup_unplanned_rate_median"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "dim_clinical_class.PeerGroup_unplanned_rate_median"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_PeerGroup_unplanned_rate_median"
+			          "ID": "dim_clinical_classes_have_PeerGroup_UA_rate_median"
 			        }
 			      ]
 			    },
@@ -22974,19 +25483,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_peer_groups_have_peer_group_names"
-			        },
-			        {
-			          "Name": {
-			            "Subject": {
-			              "Role": "dim_peer_group"
-			            },
-			            "Name": {
-			              "Role": "dim_peer_group.peer_group_name"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "peer_group_names_are_names_IDs_of_dim_peer_groups"
 			        }
 			      ]
 			    },
@@ -26694,289 +29190,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_dim_payers_are_unknown_dim_payers"
-			        }
-			      ]
-			    },
-			    "fact_KPI_LOS_summary_has_dim_facility": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_LOS_summary": {
-			          "Target": {
-			            "Entity": "fact_KPI_LOS_summary"
-			          }
-			        },
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_LOS_summary"
-			            },
-			            "Object": {
-			              "Role": "dim_facility"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_LOS_summaries_have_dim_facilities"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_LOS_summary"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_fact_KPI_LOS_summaries"
-			        }
-			      ]
-			    },
-			    "fact_KPI_mortality_has_dim_facility": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_Mortality"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_mortality": {
-			          "Target": {
-			            "Entity": "fact_KPI_mortality"
-			          }
-			        },
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_mortality"
-			            },
-			            "Object": {
-			              "Role": "dim_facility"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_mortalities_have_dim_facilities"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_mortality"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_fact_KPI_mortalities"
-			        }
-			      ]
-			    },
-			    "fact_KPI_payer_mix_has_dim_year": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_PayerMix"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_payer_mix": {
-			          "Target": {
-			            "Entity": "fact_KPI_payer_mix"
-			          }
-			        },
-			        "dim_year": {
-			          "Target": {
-			            "Entity": "dim_year"
-			          },
-			          "Nouns": [
-			            {
-			              "discharge year": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_payer_mix"
-			            },
-			            "Object": {
-			              "Role": "dim_year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_payer_mixes_have_dim_years"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_year"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_payer_mix"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_years_have_fact_KPI_payer_mixes"
-			        }
-			      ]
-			    },
-			    "fact_KPI_payer_mix_has_dim_payer": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_PayerMix"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_payer_mix": {
-			          "Target": {
-			            "Entity": "fact_KPI_payer_mix"
-			          }
-			        },
-			        "dim_payer": {
-			          "Target": {
-			            "Entity": "dim_payer"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_payer_mix"
-			            },
-			            "Object": {
-			              "Role": "dim_payer"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_payer_mixes_have_dim_payers"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_payer"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_payer_mix"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_payers_have_fact_KPI_payer_mixes"
-			        }
-			      ]
-			    },
-			    "fact_KPI_payer_mix_has_dim_facility": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_PayerMix"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_payer_mix": {
-			          "Target": {
-			            "Entity": "fact_KPI_payer_mix"
-			          }
-			        },
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_payer_mix"
-			            },
-			            "Object": {
-			              "Role": "dim_facility"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_payer_mixes_have_dim_facilities"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_payer_mix"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_fact_KPI_payer_mixes"
-			        }
-			      ]
-			    },
-			    "fact_KPI_severity_mix_has_dim_facility": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_SeverityMix"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_severity_mix": {
-			          "Target": {
-			            "Entity": "fact_KPI_severity_mix"
-			          }
-			        },
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_severity_mix"
-			            },
-			            "Object": {
-			              "Role": "dim_facility"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_severity_mixes_have_dim_facilities"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_severity_mix"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_fact_KPI_severity_mixes"
 			        }
 			      ]
 			    },

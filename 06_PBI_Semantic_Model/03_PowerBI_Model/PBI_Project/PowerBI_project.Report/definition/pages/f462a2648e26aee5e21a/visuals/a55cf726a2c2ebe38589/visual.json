@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
   "name": "a55cf726a2c2ebe38589",
   "position": {
-    "x": 13.09090909090909,
-    "y": 293.94605394605395,
+    "x": 12.8,
+    "y": 294.97940828402369,
     "z": 4000,
-    "height": 84.779220779220779,
-    "width": 571.012987012987,
+    "height": 271.36,
+    "width": 571.52,
     "tabOrder": 4000
   },
   "visual": {
@@ -19,10 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Severity of Illness reflects how clinically complex and physiologically unstable patients are at admission.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
+                    "value": "Intake pressure describes the operational strain created when a large share of inpatient admissions arrive unplanned, primarily through Emergency and urgent pathways. Unlike scheduled admissions, unplanned intake is unpredictable, time-compressed, and difficult to smooth, forcing facilities to absorb demand immediately."
                   }
                 ]
               },
@@ -36,10 +33,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "It is not a measure of care quality.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
+                    "value": "When unplanned admissions coincide with material encounter volume, they place sustained pressure on ED capacity, bed availability, staffing, and patient flow. As a result, variation in LOS, cost, and downstream performance is less likely to reflect random demand and more likely to reflect how effectively a facility manages intake, flow, and discharge under persistent, unplanned demand."
                   }
                 ]
               }

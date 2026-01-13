@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
   "name": "cc529bc36dd10ebc2324",
   "position": {
-    "x": 667.63636363636363,
-    "y": 32.967032967032964,
+    "x": 667.69230769230774,
+    "y": 32.946745562130182,
     "z": 9000,
-    "height": 300.46753246753246,
-    "width": 595.9480519480519,
+    "height": 374.76923076923077,
+    "width": 595.69230769230774,
     "tabOrder": 8000
   },
   "visual": {
@@ -78,11 +78,27 @@
                       "Entity": "_Severity"
                     }
                   },
+                  "Property": "SMI Peer Median"
+                }
+              },
+              "queryRef": "_Severity.SMI Peer Median",
+              "nativeQueryRef": "Network-Wide SMI Median",
+              "displayName": "Network-Wide SMI Median"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Severity"
+                    }
+                  },
                   "Property": "Facilities Above SMI Median"
                 }
               },
               "queryRef": "_Severity.Facilities Above SMI Median",
-              "nativeQueryRef": "Facilities Above SMI Median"
+              "nativeQueryRef": "Facilities Above NW SMI Median",
+              "displayName": "Facilities Above NW SMI Median"
             },
             {
               "field": {
@@ -117,6 +133,21 @@
         }
       },
       "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Volume_&_Denominators"
+                  }
+                },
+                "Property": "SeverityMix Total Encounters"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
         "isDefaultSort": true
       }
     },
@@ -200,7 +231,7 @@
             "rowCount": {
               "expr": {
                 "Literal": {
-                  "Value": "3L"
+                  "Value": "4L"
                 }
               }
             },
