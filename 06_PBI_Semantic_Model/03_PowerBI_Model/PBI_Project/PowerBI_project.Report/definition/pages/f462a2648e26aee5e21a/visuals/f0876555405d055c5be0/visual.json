@@ -3,7 +3,7 @@
   "name": "f0876555405d055c5be0",
   "position": {
     "x": 667.63636363636363,
-    "y": 34.481825866441241,
+    "y": 34.481825866441227,
     "z": 9000,
     "height": 300.46753246753246,
     "width": 595.9480519480519,
@@ -20,103 +20,109 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Volume_&_Denominators"
+                      "Entity": "_Unplanned"
                     }
                   },
-                  "Property": "SeverityMix Total Encounters"
+                  "Property": "All PeerGroups UA rate Median"
                 }
               },
-              "queryRef": "_Volume_&_Denominators.SeverityMix Total Encounters",
-              "nativeQueryRef": "Severity Mix Total Encounters",
-              "displayName": "Severity Mix Total Encounters"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "Facility_Name"
-                    }
-                  },
-                  "Function": 2
-                }
-              },
-              "queryRef": "Min(Dim_Facility.Facility_Name)",
-              "nativeQueryRef": "Facilities",
-              "displayName": "Facilities"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  },
-                  "Function": 2
-                }
-              },
-              "queryRef": "Min(Dim_Facility.PeerGroup_Name)",
-              "nativeQueryRef": "Peer Groups",
-              "displayName": "Peer Groups"
+              "queryRef": "_Unplanned.All PeerGroups UA rate Median",
+              "nativeQueryRef": "Cross-Peer-Groups UA rate Median",
+              "displayName": "Cross-Peer-Groups UA rate Median"
             },
             {
               "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Severity"
+                      "Entity": "_Unplanned"
                     }
                   },
-                  "Property": "Facilities Above SMI Median"
+                  "Property": "PG UA Median Range Text"
                 }
               },
-              "queryRef": "_Severity.Facilities Above SMI Median",
-              "nativeQueryRef": "Facilities Above SMI Median"
+              "queryRef": "_Unplanned.PG UA Median Range Text",
+              "nativeQueryRef": "Peer-Group UA Rate Median Range",
+              "displayName": "Peer-Group UA Rate Median Range"
             },
             {
               "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Severity"
+                      "Entity": "_Unplanned"
                     }
                   },
-                  "Property": "Facilities Above Own PG Sev Median"
+                  "Property": "Facilities Above UA rate Median"
                 }
               },
-              "queryRef": "_Severity.Facilities Above Own PG Sev Median",
-              "nativeQueryRef": "Fac. Above Own PG SMI Median",
-              "displayName": "Fac. Above Own PG SMI Median"
+              "queryRef": "_Unplanned.Facilities Above UA rate Median",
+              "nativeQueryRef": "Facilities Above CPG UA % Median",
+              "displayName": "Facilities Above CPG UA % Median"
             },
             {
               "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Severity"
+                      "Entity": "_Unplanned"
                     }
                   },
-                  "Property": "Facilities Above Median Extreme"
+                  "Property": "Facilities Above Own UA rate Median"
                 }
               },
-              "queryRef": "_Severity.Facilities Above Median Extreme",
-              "nativeQueryRef": "Facilities Above Median Extreme"
+              "queryRef": "_Unplanned.Facilities Above Own UA rate Median",
+              "nativeQueryRef": "Facilities Above Own UA rate Median"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Unplanned"
+                    }
+                  },
+                  "Property": "Facilities Out of Low-Pressure Zone"
+                }
+              },
+              "queryRef": "_Unplanned.Facilities Out of Low-Pressure Zone",
+              "nativeQueryRef": "Fac. Above 40% UA & 3k Volume",
+              "displayName": "Fac. Above 40% UA & 3k Volume"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Unplanned"
+                    }
+                  },
+                  "Property": "Facilities In Low-Pressure Zone (0 safe)"
+                }
+              },
+              "queryRef": "_Unplanned.Facilities In Low-Pressure Zone (0 safe)",
+              "nativeQueryRef": "Facilities In Low-Pressure Zone",
+              "displayName": "Facilities In Low-Pressure Zone"
             }
           ]
         }
       },
       "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Unplanned"
+                  }
+                },
+                "Property": "All PeerGroups UA rate Median"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
         "isDefaultSort": true
       }
     },

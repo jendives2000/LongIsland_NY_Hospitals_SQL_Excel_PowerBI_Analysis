@@ -105,10 +105,9 @@ table Dim_ClinicalClass
 			    FacilitiesInSelectedPeerGroups,
 			    CALCULATE([Unplanned Admission Rate], REMOVEFILTERS(Dim_Facility))
 			)
+		formatString: 0.00%;-0.00%;0.00%
 		displayFolder: Unplanned
 		lineageTag: d23bd079-9eb3-4aee-a277-d7c7025895e7
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'PeerGroup UA rate Median (PeerGroup safe)' =
 			

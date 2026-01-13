@@ -213,6 +213,55 @@ table _Unplanned
 		displayFolder: Helper
 		lineageTag: 48d331ac-08d6-4957-a7a9-e35abb6f0259
 
+	measure 'PG UA Median Range Text' = ```
+			
+			VAR pg_table =
+			    SUMMARIZE (
+			        ALL ( Dim_Facility[PeerGroup_Name] ),
+			        Dim_Facility[PeerGroup_Name],
+			        "PG_Median", [PeerGroup UA rate Median]
+			    )
+			
+			VAR min_pg =
+			    MINX ( pg_table, [PG_Median] )
+			
+			VAR max_pg =
+			    MAXX ( pg_table, [PG_Median] )
+			
+			RETURN
+			FORMAT ( min_pg, "0%" )
+			    & " to "
+			    & FORMAT ( max_pg, "0%" )
+			
+			```
+		displayFolder: Helper
+		lineageTag: 68d8e5f5-ccbb-46dd-b0a8-60ff04d2e9be
+
+	measure 'Facilities Above Own UA rate Median' =
+			
+			COUNTROWS (
+			    FILTER (
+			        VALUES ( Dim_Facility[Facility_Key] ),
+			        CALCULATE ( [Is Above Own UA rate Median] ) = 1
+			    )
+			)
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: bf7504f2-8f20-48eb-893b-bf1ed2e0d9ef
+
+	measure 'Facilities Out of Low-Pressure Zone' =
+			
+			COUNTROWS (
+			    FILTER (
+			        VALUES ( Dim_Facility[Facility_Key] ),
+			        CALCULATE ( [Is Below UA Threshold] ) = 0
+			            && CALCULATE ( [Is Below Volume Threshold] ) = 0
+			    )
+			)
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: d06dabca-55d0-4ea4-b52c-03abec8f73e2
+
 	column Column
 		dataType: int64
 		formatString: 0

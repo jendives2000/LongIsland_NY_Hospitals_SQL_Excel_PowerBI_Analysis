@@ -20017,7 +20017,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Network-Wide SMI Median": {
+			          "Cross-Peer-Groups SMI Median": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -20143,7 +20143,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Facilities Above NW SMI Median": {
+			          "Facilities Above CPG SMI Median": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -20979,6 +20979,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "Facilities Above CPG UA % Median": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -21959,6 +21969,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.479
 			          }
+			        },
+			        {
+			          "Cross-Peer-Groups UA rate Median": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -22102,6 +22122,204 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.489
+			          }
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned.PG_UA_median_range_text": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Unplanned",
+			          "ConceptualProperty": "PG UA Median Range Text"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PG UA median range text": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "text": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "range text": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "median range text": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "UA median range text": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "pg ua median range manuscript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "pg ua median range transcript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "pg ua median range typescript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "pg ua median range edition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "pg ua median range version": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "ua median range manuscript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "ua median range transcript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "ua median range typescript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "ua median range edition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "ua median range version": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "Peer-Group UA Rate Median Range": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned.facilities_above_own_UA_rate_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Unplanned",
+			          "ConceptualProperty": "Facilities Above Own UA rate Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "facilities above own UA rate median": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned.facilities_out_of_lowpressure_zone": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Unplanned",
+			          "ConceptualProperty": "Facilities Out of Low-Pressure Zone"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "facilities out of low-pressure zone": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "facilities out of low pressure zone": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "Fac. Above 40% UA & 3k Volume": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -22579,6 +22797,105 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_years_have_fact_KPI_dispositions"
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned_has_facilities_out_of_lowpressure_zone": {
+			      "Binding": {
+			        "ConceptualEntity": "_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_Unplanned_unplanned": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned"
+			          }
+			        },
+			        "v_Unplanned_unplanned.facilities_out_of_lowpressure_zone": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned.facilities_out_of_lowpressure_zone"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_Unplanned_unplanned"
+			            },
+			            "Object": {
+			              "Role": "v_Unplanned_unplanned.facilities_out_of_lowpressure_zone"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_unplanned_have_facilities_out_of_lowpressure_zone"
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned_has_facilities_above_own_UA_rate_median": {
+			      "Binding": {
+			        "ConceptualEntity": "_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_Unplanned_unplanned": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned"
+			          }
+			        },
+			        "v_Unplanned_unplanned.facilities_above_own_UA_rate_median": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned.facilities_above_own_UA_rate_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_Unplanned_unplanned"
+			            },
+			            "Object": {
+			              "Role": "v_Unplanned_unplanned.facilities_above_own_UA_rate_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_unplanned_have_facilities_above_own_UA_rate_median"
+			        }
+			      ]
+			    },
+			    "v_Unplanned_unplanned_has_PG_UA_median_range_text": {
+			      "Binding": {
+			        "ConceptualEntity": "_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_Unplanned_unplanned": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned"
+			          }
+			        },
+			        "v_Unplanned_unplanned.PG_UA_median_range_text": {
+			          "Target": {
+			            "Entity": "v_Unplanned_unplanned.PG_UA_median_range_text"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_Unplanned_unplanned"
+			            },
+			            "Object": {
+			              "Role": "v_Unplanned_unplanned.PG_UA_median_range_text"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_unplanned_have_PG_UA_median_range_text"
 			        }
 			      ]
 			    },

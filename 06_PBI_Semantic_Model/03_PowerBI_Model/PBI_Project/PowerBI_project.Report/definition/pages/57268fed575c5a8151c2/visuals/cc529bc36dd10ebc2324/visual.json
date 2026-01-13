@@ -82,8 +82,8 @@
                 }
               },
               "queryRef": "_Severity.SMI Peer Median",
-              "nativeQueryRef": "Network-Wide SMI Median",
-              "displayName": "Network-Wide SMI Median"
+              "nativeQueryRef": "Cross-Peer-Groups SMI Median",
+              "displayName": "Cross-Peer-Groups SMI Median"
             },
             {
               "field": {
@@ -97,8 +97,8 @@
                 }
               },
               "queryRef": "_Severity.Facilities Above SMI Median",
-              "nativeQueryRef": "Facilities Above NW SMI Median",
-              "displayName": "Facilities Above NW SMI Median"
+              "nativeQueryRef": "Facilities Above CPG SMI Median",
+              "displayName": "Facilities Above CPG SMI Median"
             },
             {
               "field": {
@@ -114,20 +114,6 @@
               "queryRef": "_Severity.Facilities Above Own PG Sev Median",
               "nativeQueryRef": "Fac. Above Own PG SMI Median",
               "displayName": "Fac. Above Own PG SMI Median"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Severity"
-                    }
-                  },
-                  "Property": "Facilities Above Median Extreme"
-                }
-              },
-              "queryRef": "_Severity.Facilities Above Median Extreme",
-              "nativeQueryRef": "Facilities Above Median Extreme"
             }
           ]
         }

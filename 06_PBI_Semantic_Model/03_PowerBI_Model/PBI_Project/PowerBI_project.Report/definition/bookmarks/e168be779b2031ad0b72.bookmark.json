@@ -3,9 +3,7 @@
   "displayName": "What is Severity?",
   "name": "e168be779b2031ad0b72",
   "options": {
-    "targetVisualNames": [
-      "e3ef6230d1871de10448"
-    ]
+    "targetVisualNames": []
   },
   "explorationState": {
     "version": "1.3",
@@ -13,34 +11,7 @@
     "sections": {
       "57268fed575c5a8151c2": {
         "visualContainers": {
-          "2d1de6194f646e870a8d": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
           "34711bdb55a53546fdf0": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "40f2a68cc83ee6ec0c8a": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "362248da2bbe9b0672d5": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "d2a7d2337d8a41c50bfe": {
             "singleVisual": {
               "visualType": "textbox",
               "objects": {}
@@ -58,10 +29,52 @@
               "objects": {}
             }
           },
-          "d367020dc957943e2eb0": {
+          "135687617b09a25b6bd6": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "c6f5b12340837520e01c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Severity"
+                        }
+                      },
+                      "Property": "Is Above Own PG Sev Median"
+                    }
+                  },
+                  "howCreated": 1
+                }
+              ]
+            },
             "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
+              "visualType": "lineClusteredColumnComboChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "40f2a68cc83ee6ec0c8a": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
             }
           },
           "546856f82181213ed8b6": {
@@ -133,6 +146,15 @@
               }
             }
           },
+          "7c5293938ad98064b105": {
+            "singleVisual": {
+              "visualType": "tableEx",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
           "9ee5675c27c751e1a119": {
             "filters": {
               "byExpr": [
@@ -172,16 +194,79 @@
               }
             }
           },
+          "a025a1cc7e4e28d8adb7": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "d367020dc957943e2eb0": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
           "e25fda04ec82ab826b91": {
             "singleVisual": {
               "visualType": "shape",
               "objects": {}
             }
           },
+          "ea235680adcb6e02740d": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
           "f6ca2eb52561012c5ca3": {
             "singleVisual": {
               "visualType": "textbox",
               "objects": {}
+            }
+          },
+          "fb066f6bb065b705106c": {
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Basic'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
             }
           },
           "934c60b19d79f250e8ca": {
@@ -193,27 +278,15 @@
           "9584092e7a54814cc4e3": {
             "singleVisual": {
               "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "979acc4bc96674c7133b": {
-            "singleVisual": {
-              "visualType": "textbox",
               "objects": {},
               "display": {
                 "mode": "hidden"
               }
             }
           },
-          "9ccf8a01d308e4c718c0": {
+          "979acc4bc96674c7133b": {
             "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "a025a1cc7e4e28d8adb7": {
-            "singleVisual": {
-              "visualType": "actionButton",
+              "visualType": "textbox",
               "objects": {},
               "display": {
                 "mode": "hidden"
@@ -232,15 +305,51 @@
               "objects": {}
             }
           },
+          "262b52f10d887ce69014": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "2d1de6194f646e870a8d": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "362248da2bbe9b0672d5": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "d2a7d2337d8a41c50bfe": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
           "6cef1840757a3aa2d66e": {
             "singleVisual": {
               "visualType": "textbox",
               "objects": {}
             }
           },
-          "d31b9b3ba1ad765d3e6e": {
+          "9023dddc725c602512c9": {
             "singleVisual": {
               "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "9ccf8a01d308e4c718c0": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "cc529bc36dd10ebc2324": {
+            "singleVisual": {
+              "visualType": "cardVisual",
               "objects": {}
             }
           },
@@ -256,19 +365,22 @@
               "objects": {}
             }
           },
+          "d31b9b3ba1ad765d3e6e": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
           "e950a78466a9857d9c33": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {}
             }
           },
-          "ea235680adcb6e02740d": {
+          "f6365a003bd3a3b30a26": {
             "singleVisual": {
               "visualType": "actionButton",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
+              "objects": {}
             }
           },
           "1dae4fbef13f5b6a7709": {
@@ -287,6 +399,42 @@
             "singleVisual": {
               "visualType": "shape",
               "objects": {}
+            }
+          },
+          "02fb1c40c3376d514129": {
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Basic'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  }
+                ]
+              }
             }
           },
           "041cc4dc71e990b7eed8": {
@@ -313,6 +461,12 @@
                   }
                 ]
               }
+            }
+          },
+          "354c8bf6080bd865d844": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
             }
           },
           "53cd8a1c9d2ac1d0c000": {
@@ -359,6 +513,12 @@
               "objects": {}
             }
           },
+          "679fb154ceb5883a3838": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
           "acef1bdf8142627667ce": {
             "singleVisual": {
               "visualType": "clusteredBarChart",
@@ -385,67 +545,13 @@
               "objects": {}
             }
           },
+          "d67126e365ab172ebe59": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
           "e3003d3562b65c28bd6a": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "fb066f6bb065b705106c": {
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Basic'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  }
-                ]
-              },
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "7c5293938ad98064b105": {
-            "singleVisual": {
-              "visualType": "tableEx",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "9023dddc725c602512c9": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "262b52f10d887ce69014": {
             "singleVisual": {
               "visualType": "shape",
               "objects": {}
@@ -470,6 +576,22 @@
         }
       }
     },
-    "objects": {}
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
   }
 }
