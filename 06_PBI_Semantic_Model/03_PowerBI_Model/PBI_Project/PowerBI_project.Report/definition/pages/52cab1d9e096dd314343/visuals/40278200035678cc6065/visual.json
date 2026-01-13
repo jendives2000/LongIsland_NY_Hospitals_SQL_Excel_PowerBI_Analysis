@@ -1,0 +1,291 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
+  "name": "40278200035678cc6065",
+  "position": {
+    "x": 667.63636363636363,
+    "y": 34.481825866441227,
+    "z": 9000,
+    "height": 300.46753246753246,
+    "width": 595.9480519480519,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Unplanned"
+                    }
+                  },
+                  "Property": "All PeerGroups UA rate Median"
+                }
+              },
+              "queryRef": "_Unplanned.All PeerGroups UA rate Median",
+              "nativeQueryRef": "Cross-Peer-Groups UA rate Median",
+              "displayName": "Cross-Peer-Groups UA rate Median"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Unplanned"
+                    }
+                  },
+                  "Property": "PG UA Median Range Text"
+                }
+              },
+              "queryRef": "_Unplanned.PG UA Median Range Text",
+              "nativeQueryRef": "Peer-Group UA Rate Median Range",
+              "displayName": "Peer-Group UA Rate Median Range"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Unplanned"
+                    }
+                  },
+                  "Property": "Facilities Above UA rate Median"
+                }
+              },
+              "queryRef": "_Unplanned.Facilities Above UA rate Median",
+              "nativeQueryRef": "Facilities Above CPG UA % Median",
+              "displayName": "Facilities Above CPG UA % Median"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Unplanned"
+                    }
+                  },
+                  "Property": "Facilities Above Own UA rate Median"
+                }
+              },
+              "queryRef": "_Unplanned.Facilities Above Own UA rate Median",
+              "nativeQueryRef": "Facilities Above Own UA rate Median"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Unplanned"
+                    }
+                  },
+                  "Property": "Facilities Out of Low-Pressure Zone"
+                }
+              },
+              "queryRef": "_Unplanned.Facilities Out of Low-Pressure Zone",
+              "nativeQueryRef": "Fac. Above 40% UA & 3k Volume",
+              "displayName": "Fac. Above 40% UA & 3k Volume"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Unplanned"
+                    }
+                  },
+                  "Property": "Facilities In Low-Pressure Zone (0 safe)"
+                }
+              },
+              "queryRef": "_Unplanned.Facilities In Low-Pressure Zone (0 safe)",
+              "nativeQueryRef": "Facilities In Low-Pressure Zone",
+              "displayName": "Facilities In Low-Pressure Zone"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Unplanned"
+                  }
+                },
+                "Property": "All PeerGroups UA rate Median"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "fillCustom": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "accentBar": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "outline": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "value": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.2
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "layout": [
+        {
+          "properties": {
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "rowCount": {
+              "expr": {
+                "Literal": {
+                  "Value": "3L"
+                }
+              }
+            },
+            "columnCount": {
+              "expr": {
+                "Literal": {
+                  "Value": "2L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "label": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "overFlow": [
+        {
+          "properties": {
+            "overFlowDirection": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Card Basic Stats'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "d2cc8308b5e7590d99b0"
+}
