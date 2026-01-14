@@ -20,89 +20,85 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Unplanned"
+                      "Entity": "_LOS"
                     }
                   },
-                  "Property": "All PeerGroups UA rate Median"
+                  "Property": "Cross–Peer-Group LOS Median"
                 }
               },
-              "queryRef": "_Unplanned.All PeerGroups UA rate Median",
-              "nativeQueryRef": "Cross-Peer-Groups UA rate Median",
-              "displayName": "Cross-Peer-Groups UA rate Median"
+              "queryRef": "_LOS.Cross–Peer-Group LOS Median",
+              "nativeQueryRef": "Cross–Peer-Group LOS Median"
             },
             {
               "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Unplanned"
+                      "Entity": "_LOS"
                     }
                   },
-                  "Property": "PG UA Median Range Text"
+                  "Property": "PG LOS Median Range Text"
                 }
               },
-              "queryRef": "_Unplanned.PG UA Median Range Text",
-              "nativeQueryRef": "Peer-Group UA Rate Median Range",
-              "displayName": "Peer-Group UA Rate Median Range"
+              "queryRef": "_LOS.PG LOS Median Range Text",
+              "nativeQueryRef": "PG LOS Median Range Text"
             },
             {
               "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Unplanned"
+                      "Entity": "_LOS"
                     }
                   },
-                  "Property": "Facilities Above UA rate Median"
+                  "Property": "Facilities Above CPG LOS Median"
                 }
               },
-              "queryRef": "_Unplanned.Facilities Above UA rate Median",
-              "nativeQueryRef": "Facilities Above CPG UA % Median",
-              "displayName": "Facilities Above CPG UA % Median"
+              "queryRef": "_LOS.Facilities Above CPG LOS Median",
+              "nativeQueryRef": "Facilities Above CPG LOS Median"
             },
             {
               "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Unplanned"
+                      "Entity": "_LOS"
                     }
                   },
-                  "Property": "Facilities Above Own UA rate Median"
+                  "Property": "Facilities Above Own Peer-Group LOS Median"
                 }
               },
-              "queryRef": "_Unplanned.Facilities Above Own UA rate Median",
-              "nativeQueryRef": "Facilities Above Own UA rate Median"
+              "queryRef": "_LOS.Facilities Above Own Peer-Group LOS Median",
+              "nativeQueryRef": "Facilities Above Own Peer-Group LOS Median"
             },
             {
               "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Unplanned"
+                      "Entity": "_LOS"
                     }
                   },
-                  "Property": "Facilities Out of Low-Pressure Zone"
+                  "Property": "Median Excess LOS (Days)"
                 }
               },
-              "queryRef": "_Unplanned.Facilities Out of Low-Pressure Zone",
-              "nativeQueryRef": "Fac. Above 40% UA & 3k Volume",
-              "displayName": "Fac. Above 40% UA & 3k Volume"
+              "queryRef": "_LOS.Median Excess LOS (Days)",
+              "nativeQueryRef": "Median Excess LOS (Days)"
             },
             {
               "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Unplanned"
+                      "Entity": "_LOS"
                     }
                   },
-                  "Property": "Facilities In Low-Pressure Zone (0 safe)"
+                  "Property": "Facilities Driving 50% of Bed-Days (Count)"
                 }
               },
-              "queryRef": "_Unplanned.Facilities In Low-Pressure Zone (0 safe)",
-              "nativeQueryRef": "Facilities In Low-Pressure Zone",
-              "displayName": "Facilities In Low-Pressure Zone"
+              "queryRef": "_LOS.Facilities Driving 50% of Bed-Days (Count)",
+              "nativeQueryRef": "Facilities Driving 50% of Bed-Days",
+              "displayName": "Facilities Driving 50% of Bed-Days"
             }
           ]
         }
@@ -114,10 +110,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "_Unplanned"
+                    "Entity": "_LOS"
                   }
                 },
-                "Property": "All PeerGroups UA rate Median"
+                "Property": "Cross–Peer-Group LOS Median"
               }
             },
             "direction": "Descending"

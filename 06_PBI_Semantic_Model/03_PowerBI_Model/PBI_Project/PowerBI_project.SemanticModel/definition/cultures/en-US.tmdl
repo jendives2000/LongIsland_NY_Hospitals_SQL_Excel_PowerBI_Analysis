@@ -12831,6 +12831,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "column": {
@@ -14280,6 +14283,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "column": {
@@ -14799,6 +14805,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "column": {
@@ -16777,6 +16786,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "column": {
@@ -20551,6 +20563,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "column": {
@@ -22323,23 +22338,2027 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "dim_clinical_class.PeerGroup_LOS_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_ClinicalClass",
+			          "ConceptualProperty": "PeerGroup LOS Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PeerGroup LOS median": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "peergroup los norm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "peergroup los nucleus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "peergroup los midpoint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "peergroup los middle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peergroup los center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peergroup los medium": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peergroup los mean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peergroup los average": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peergroup los par": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peergroup los standard": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        }
+			      ]
+			    },
+			    "dim_clinical_class.PeerGroup_LOS_median_FacilitySafe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_ClinicalClass",
+			          "ConceptualProperty": "PeerGroup LOS Median (FacilitySafe)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PeerGroup LOS median (FacilitySafe)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PeerGroup LOS median": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "dim_clinical_class.PeerGroup_LOS_median_PeerGroup_safe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_ClinicalClass",
+			          "ConceptualProperty": "PeerGroup LOS Median (PeerGroup safe)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PeerGroup LOS median (PeerGroup safe)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PeerGroup LOS median": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "_los": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.column": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "Column"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "column": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "pilaster": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pillar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "post": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "support": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "stake": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "pole": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "buttress": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "underpinning": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "contribution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.LOS_threshold": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "LOS Threshold (Days)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "LOS threshold": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "LOS threshold (Days)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "threshold": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "los brink": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "los onset": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "los inception": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "brink": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "onset": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "inception": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "los verge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "los edge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "los dawn": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "los beginning": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ],
+			      "Units": [
+			        "day"
+			      ]
+			    },
+			    "v_LOS_los.LOS_volume_threshold_encounters": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "LOS Volume Threshold (Encounters)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "LOS volume threshold (encounters)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "LOS volume threshold": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.LOS_total_facilities": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "LOS Total Facilities"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "LOS total facilities": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "facilities": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "total facilities": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "los aggregate facility": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "los overall facility": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "aggregate facility": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall facility": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "los total amenity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "los total convenience": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "los total accommodation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "los total toilet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "los total bathroom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "los total lavatory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.LOS_min_FacilitySafe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "LOS Min (FacilitySafe)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "LOS min (FacilitySafe)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "LOS min": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "los minimum (facilitysafe)": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.LOS_max_FacilitySafe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "LOS Max (FacilitySafe)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "LOS max (FacilitySafe)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "LOS max": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "los maximum (facilitysafe)": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.LOS_peer_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "LOS Peer Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "LOS peer median": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "median": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "peer median": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "los peer norm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "los peer nucleus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "los peer midpoint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "middle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "intermediate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "medium": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "middling": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "moderate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "peer norm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "peer nucleus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.is_above_PG_LOS_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "Is Above PG LOS Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "is above PG LOS median": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.is_above_own_PG_LOS_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "Is Above Own PG LOS Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "is above own PG LOS median": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.is_above_LOS_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "Is Above LOS Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "is above LOS median": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.is_below_LOS_threshold": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "Is Below LOS Threshold"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "is below LOS threshold": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.is_below_LOS_volume_threshold": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "Is Below LOS Volume Threshold"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "is below LOS volume threshold": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.is_above_LOS_volume_threshold": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "Is Above LOS Volume Threshold"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "is above LOS volume threshold": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.facilities_in_LOS_lowpressure_zone": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "Facilities In LOS Low-Pressure Zone"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "facilities in LOS low-pressure zone": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "facilities in LOS low pressure zone": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "zone": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "pressure zone": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "low pressure zone": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "LOS low pressure zone": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "in LOS low pressure zone": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "in los low heaviness zone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "in los low pressure region": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "in los low compression zone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "in los low gravity zone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "in los low pressure precinct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "in los low density zone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "los low pressure region": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "los low pressure precinct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "low pressure region": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "low pressure precinct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.facilities_out_of_LOS_lowpressure_zone": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "Facilities Out of LOS Low-Pressure Zone"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "facilities out of LOS low-pressure zone": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "facilities out of LOS low pressure zone": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.facilities_above_both_LOS_thresholds": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "Facilities Above Both LOS Thresholds"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "facilities above both LOS thresholds": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "amenity above both los threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "convenience above both los threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "accommodation above both los threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "toilet above both los threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "bathroom above both los threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "lavatory above both los threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "service above both los threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "ability above both los threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "capability above both los threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "talent above both los threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.PG_LOS_median_range_text": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "PG LOS Median Range Text"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PG LOS median range text": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "text": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "range text": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "median range text": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "LOS median range text": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "pg los median range manuscript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "pg los median range transcript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "pg los median range typescript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "pg los median range edition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "pg los median range version": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "los median range manuscript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "los median range transcript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "los median range typescript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "los median range edition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "los median range version": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.excess_LOS_days": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "Excess LOS Days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "excess LOS days": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "LOS days": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "excess los existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "los existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "excess los being": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "excess los living": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "los being": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "los living": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "excess los eras": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "excess los generation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "excess los epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "los eras": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.excess_LOS_days_PeerGroup_safe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "Excess LOS Days (PeerGroup safe)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "excess LOS days (PeerGroup safe)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "excess LOS days": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.total_beddays": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "Total Bed-Days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total bed-days": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total bed days": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "bed days": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "aggregate bed-day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "overall bed-day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "aggregate bed day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall bed day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "total bed-existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "total bed existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "bed existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "total bed-being": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "total bed-living": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "total bed being": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.share_of_beddays": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "Share of Bed-Days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "share of bed-days": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "share of bed days": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "part of bed-day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "portion of bed-day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "segment of bed-day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "cut of bed-day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "stake of bed-day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "bit of bed-day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "piece of bed-day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "part of bed day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "portion of bed day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "segment of bed day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.CrossPeerGroup_LOS_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "Cross–Peer-Group LOS Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Cross–Peer-Group LOS median": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cross–peer-group los norm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "cross–peer-group los nucleus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "cross–peer-group los midpoint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "cross–peer-group los middle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "cross–peer-group los center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "cross–peer-group los medium": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "cross–peer-group los mean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "cross–peer-group los average": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "cross–peer-group los par": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "cross–peer-group los standard": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.facilities_above_CPG_LOS_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "Facilities Above CPG LOS Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "facilities above CPG LOS median": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "amenity above cpg los median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "convenience above cpg los median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "accommodation above cpg los median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "toilet above cpg los median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "bathroom above cpg los median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "lavatory above cpg los median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "service above cpg los median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "ability above cpg los median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "capability above cpg los median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "talent above cpg los median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.facilities_above_own_peergroup_LOS_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "Facilities Above Own Peer-Group LOS Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "facilities above own peer-group LOS median": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "facilities above own peer group LOS median": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.median_excess_LOS": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "Median Excess LOS (Days)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "median excess LOS": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "median excess LOS (Days)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "LOS": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "excess LOS": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "Units": [
+			        "day"
+			      ]
+			    },
+			    "v_LOS_los.facilities_driving_50_of_beddays_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "Facilities Driving 50% of Bed-Days (Count)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "facilities driving 50% of bed-days (count)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "facilities driving 50% of bed-days": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "facilities driving 50% of bed days (count)": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "fact_KPI_severity_mix_has_dim_facility": {
+			    "v_LOS_los_has_is_above_PG_LOS_median": {
 			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_SeverityMix"
+			        "ConceptualEntity": "_LOS"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fact_KPI_severity_mix": {
+			        "v_LOS_los": {
 			          "Target": {
-			            "Entity": "fact_KPI_severity_mix"
+			            "Entity": "v_LOS_los"
 			          }
 			        },
-			        "dim_facility": {
+			        "v_LOS_los.is_above_PG_LOS_median": {
 			          "Target": {
-			            "Entity": "dim_facility"
+			            "Entity": "v_LOS_los.is_above_PG_LOS_median"
 			          }
 			        }
 			      },
@@ -22347,223 +24366,19 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fact_KPI_severity_mix"
+			              "Role": "v_LOS_los"
 			            },
 			            "Object": {
-			              "Role": "dim_facility"
+			              "Role": "v_LOS_los.is_above_PG_LOS_median"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_KPI_severity_mixes_have_dim_facilities"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_severity_mix"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_fact_KPI_severity_mixes"
+			          "ID": "Phrasing_los_have_is_above_PG_LOS_median"
 			        }
 			      ]
 			    },
-			    "fact_KPI_payer_mix_has_dim_facility": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_PayerMix"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_payer_mix": {
-			          "Target": {
-			            "Entity": "fact_KPI_payer_mix"
-			          }
-			        },
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_payer_mix"
-			            },
-			            "Object": {
-			              "Role": "dim_facility"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_payer_mixes_have_dim_facilities"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_payer_mix"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_fact_KPI_payer_mixes"
-			        }
-			      ]
-			    },
-			    "fact_KPI_payer_mix_has_dim_payer": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_PayerMix"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_payer_mix": {
-			          "Target": {
-			            "Entity": "fact_KPI_payer_mix"
-			          }
-			        },
-			        "dim_payer": {
-			          "Target": {
-			            "Entity": "dim_payer"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_payer_mix"
-			            },
-			            "Object": {
-			              "Role": "dim_payer"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_payer_mixes_have_dim_payers"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_payer"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_payer_mix"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_payers_have_fact_KPI_payer_mixes"
-			        }
-			      ]
-			    },
-			    "fact_KPI_payer_mix_has_dim_year": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_PayerMix"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_payer_mix": {
-			          "Target": {
-			            "Entity": "fact_KPI_payer_mix"
-			          }
-			        },
-			        "dim_year": {
-			          "Target": {
-			            "Entity": "dim_year"
-			          },
-			          "Nouns": [
-			            {
-			              "discharge year": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_payer_mix"
-			            },
-			            "Object": {
-			              "Role": "dim_year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_payer_mixes_have_dim_years"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_year"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_payer_mix"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_years_have_fact_KPI_payer_mixes"
-			        }
-			      ]
-			    },
-			    "fact_KPI_mortality_has_dim_facility": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_Mortality"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_mortality": {
-			          "Target": {
-			            "Entity": "fact_KPI_mortality"
-			          }
-			        },
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_mortality"
-			            },
-			            "Object": {
-			              "Role": "dim_facility"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_mortalities_have_dim_facilities"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_mortality"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_fact_KPI_mortalities"
-			        }
-			      ]
-			    },
-			    "fact_KPI_LOS_summary_has_dim_facility": {
+			    "fact_KPI_LOS_summary_has_v_LOS_los_LOS_peer_median": {
 			      "Binding": {
 			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
 			      },
@@ -22574,9 +24389,9 @@ cultureInfo en-US
 			            "Entity": "fact_KPI_LOS_summary"
 			          }
 			        },
-			        "dim_facility": {
+			        "v_LOS_los.LOS_peer_median": {
 			          "Target": {
-			            "Entity": "dim_facility"
+			            "Entity": "v_LOS_los.LOS_peer_median"
 			          }
 			        }
 			      },
@@ -22587,134 +24402,194 @@ cultureInfo en-US
 			              "Role": "fact_KPI_LOS_summary"
 			            },
 			            "Object": {
-			              "Role": "dim_facility"
+			              "Role": "v_LOS_los.LOS_peer_median"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_KPI_LOS_summaries_have_dim_facilities"
+			          "ID": "fact_KPI_LOS_summaries_have_LOS_peer_median"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_v_LOS_los_LOS_peer_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
 			        },
+			        "v_LOS_los.LOS_peer_median": {
+			          "Target": {
+			            "Entity": "v_LOS_los.LOS_peer_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
 			        {
 			          "Attribute": {
 			            "Subject": {
 			              "Role": "dim_facility"
 			            },
 			            "Object": {
+			              "Role": "v_LOS_los.LOS_peer_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_LOS_peer_median"
+			        }
+			      ]
+			    },
+			    "fact_KPI_LOS_summary_has_v_LOS_los_LOS_max_FacilitySafe": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_LOS_summary": {
+			          "Target": {
+			            "Entity": "fact_KPI_LOS_summary"
+			          }
+			        },
+			        "v_LOS_los.LOS_max_FacilitySafe": {
+			          "Target": {
+			            "Entity": "v_LOS_los.LOS_max_FacilitySafe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
 			              "Role": "fact_KPI_LOS_summary"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.LOS_max_FacilitySafe"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_fact_KPI_LOS_summaries"
+			          "ID": "fact_KPI_LOS_summaries_have_LOS_max_FacilitySafe"
 			        }
 			      ]
 			    },
-			    "fact_KPI_financial_pressure_has_dim_facility": {
+			    "dim_facility_has_v_LOS_los_LOS_max_FacilitySafe": {
 			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_FinancialPressure"
+			        "ConceptualEntity": "Dim_Facility"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fact_KPI_financial_pressure": {
-			          "Target": {
-			            "Entity": "fact_KPI_financial_pressure"
-			          }
-			        },
 			        "dim_facility": {
 			          "Target": {
 			            "Entity": "dim_facility"
 			          }
+			        },
+			        "v_LOS_los.LOS_max_FacilitySafe": {
+			          "Target": {
+			            "Entity": "v_LOS_los.LOS_max_FacilitySafe"
+			          }
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fact_KPI_financial_pressure"
+			              "Role": "dim_facility"
 			            },
 			            "Object": {
-			              "Role": "dim_facility"
+			              "Role": "v_LOS_los.LOS_max_FacilitySafe"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_KPI_financial_pressures_have_dim_facilities"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_financial_pressure"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_fact_KPI_financial_pressures"
+			          "ID": "dim_facilities_have_LOS_max_FacilitySafe"
 			        }
 			      ]
 			    },
-			    "fact_KPI_disposition_has_dim_facility": {
+			    "fact_KPI_LOS_summary_has_v_LOS_los_LOS_min_FacilitySafe": {
 			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_Disposition"
+			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fact_KPI_disposition": {
+			        "fact_KPI_LOS_summary": {
 			          "Target": {
-			            "Entity": "fact_KPI_disposition"
+			            "Entity": "fact_KPI_LOS_summary"
 			          }
 			        },
+			        "v_LOS_los.LOS_min_FacilitySafe": {
+			          "Target": {
+			            "Entity": "v_LOS_los.LOS_min_FacilitySafe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_LOS_summary"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.LOS_min_FacilitySafe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_LOS_summaries_have_LOS_min_FacilitySafe"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_v_LOS_los_LOS_min_FacilitySafe": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
 			        "dim_facility": {
 			          "Target": {
 			            "Entity": "dim_facility"
 			          }
+			        },
+			        "v_LOS_los.LOS_min_FacilitySafe": {
+			          "Target": {
+			            "Entity": "v_LOS_los.LOS_min_FacilitySafe"
+			          }
 			        }
 			      },
 			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_disposition"
-			            },
-			            "Object": {
-			              "Role": "dim_facility"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_dispositions_have_dim_facilities"
-			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
 			              "Role": "dim_facility"
 			            },
 			            "Object": {
-			              "Role": "fact_KPI_disposition"
+			              "Role": "v_LOS_los.LOS_min_FacilitySafe"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_fact_KPI_dispositions"
+			          "ID": "dim_facilities_have_LOS_min_FacilitySafe"
 			        }
 			      ]
 			    },
-			    "fact_KPI_disposition_has_dim_disposition": {
+			    "dim_facility_has_v_LOS_los_LOS_total_facilities": {
 			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_Disposition"
+			        "ConceptualEntity": "Dim_Facility"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fact_KPI_disposition": {
+			        "dim_facility": {
 			          "Target": {
-			            "Entity": "fact_KPI_disposition"
+			            "Entity": "dim_facility"
 			          }
 			        },
-			        "dim_disposition": {
+			        "v_LOS_los.LOS_total_facilities": {
 			          "Target": {
-			            "Entity": "dim_disposition"
+			            "Entity": "v_LOS_los.LOS_total_facilities"
 			          }
 			        }
 			      },
@@ -22722,81 +24597,246 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fact_KPI_disposition"
+			              "Role": "dim_facility"
 			            },
 			            "Object": {
-			              "Role": "dim_disposition"
+			              "Role": "v_LOS_los.LOS_total_facilities"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_KPI_dispositions_have_dim_dispositions"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_disposition"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_disposition"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_dispositions_have_fact_KPI_dispositions"
+			          "ID": "dim_facilities_have_LOS_total_facilities"
 			        }
 			      ]
 			    },
-			    "fact_KPI_disposition_has_dim_year": {
+			    "v_LOS_los_has_LOS_volume_threshold_encounters": {
 			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_Disposition"
+			        "ConceptualEntity": "_LOS"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fact_KPI_disposition": {
+			        "v_LOS_los": {
 			          "Target": {
-			            "Entity": "fact_KPI_disposition"
+			            "Entity": "v_LOS_los"
 			          }
 			        },
-			        "dim_year": {
+			        "v_LOS_los.LOS_volume_threshold_encounters": {
 			          "Target": {
-			            "Entity": "dim_year"
-			          },
-			          "Nouns": [
-			            {
-			              "discharge year": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
+			            "Entity": "v_LOS_los.LOS_volume_threshold_encounters"
+			          }
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fact_KPI_disposition"
+			              "Role": "v_LOS_los"
 			            },
 			            "Object": {
-			              "Role": "dim_year"
+			              "Role": "v_LOS_los.LOS_volume_threshold_encounters"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_KPI_dispositions_have_dim_years"
+			          "ID": "Phrasing_los_have_LOS_volume_threshold_encounters"
+			        }
+			      ]
+			    },
+			    "v_LOS_los_has_LOS_threshold": {
+			      "Binding": {
+			        "ConceptualEntity": "_LOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_LOS_los": {
+			          "Target": {
+			            "Entity": "v_LOS_los"
+			          }
 			        },
+			        "v_LOS_los.LOS_threshold": {
+			          "Target": {
+			            "Entity": "v_LOS_los.LOS_threshold"
+			          }
+			        }
+			      },
+			      "Phrasings": [
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "dim_year"
+			              "Role": "v_LOS_los"
 			            },
 			            "Object": {
-			              "Role": "fact_KPI_disposition"
+			              "Role": "v_LOS_los.LOS_threshold"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_years_have_fact_KPI_dispositions"
+			          "ID": "Phrasing_los_have_LOS_threshold"
+			        }
+			      ]
+			    },
+			    "fact_KPI_LOS_summary_has_dim_clinical_class_PeerGroup_LOS_median_PeerGroup_safe": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_LOS_summary": {
+			          "Target": {
+			            "Entity": "fact_KPI_LOS_summary"
+			          }
+			        },
+			        "dim_clinical_class.PeerGroup_LOS_median_PeerGroup_safe": {
+			          "Target": {
+			            "Entity": "dim_clinical_class.PeerGroup_LOS_median_PeerGroup_safe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_LOS_summary"
+			            },
+			            "Object": {
+			              "Role": "dim_clinical_class.PeerGroup_LOS_median_PeerGroup_safe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_LOS_summaries_have_PeerGroup_LOS_median_PeerGroup_safe"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_dim_clinical_class_PeerGroup_LOS_median_PeerGroup_safe": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "dim_clinical_class.PeerGroup_LOS_median_PeerGroup_safe": {
+			          "Target": {
+			            "Entity": "dim_clinical_class.PeerGroup_LOS_median_PeerGroup_safe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "dim_clinical_class.PeerGroup_LOS_median_PeerGroup_safe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_PeerGroup_LOS_median_PeerGroup_safe"
+			        }
+			      ]
+			    },
+			    "fact_KPI_LOS_summary_has_dim_clinical_class_PeerGroup_LOS_median_FacilitySafe": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_LOS_summary": {
+			          "Target": {
+			            "Entity": "fact_KPI_LOS_summary"
+			          }
+			        },
+			        "dim_clinical_class.PeerGroup_LOS_median_FacilitySafe": {
+			          "Target": {
+			            "Entity": "dim_clinical_class.PeerGroup_LOS_median_FacilitySafe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_LOS_summary"
+			            },
+			            "Object": {
+			              "Role": "dim_clinical_class.PeerGroup_LOS_median_FacilitySafe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_LOS_summaries_have_PeerGroup_LOS_median_FacilitySafe"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_dim_clinical_class_PeerGroup_LOS_median_FacilitySafe": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "dim_clinical_class.PeerGroup_LOS_median_FacilitySafe": {
+			          "Target": {
+			            "Entity": "dim_clinical_class.PeerGroup_LOS_median_FacilitySafe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "dim_clinical_class.PeerGroup_LOS_median_FacilitySafe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_PeerGroup_LOS_median_FacilitySafe"
+			        }
+			      ]
+			    },
+			    "dim_clinical_class_has_PeerGroup_LOS_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_ClinicalClass"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_clinical_class": {
+			          "Target": {
+			            "Entity": "dim_clinical_class"
+			          }
+			        },
+			        "dim_clinical_class.PeerGroup_LOS_median": {
+			          "Target": {
+			            "Entity": "dim_clinical_class.PeerGroup_LOS_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_clinical_class"
+			            },
+			            "Object": {
+			              "Role": "dim_clinical_class.PeerGroup_LOS_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_clinical_classes_have_PeerGroup_LOS_median"
 			        }
 			      ]
 			    },
@@ -23853,39 +25893,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_KPI_unplanned_have_median_unplanned__selected"
-			        }
-			      ]
-			    },
-			    "v_Unplanned_unplanned_has_column": {
-			      "Binding": {
-			        "ConceptualEntity": "_Unplanned"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "v_Unplanned_unplanned": {
-			          "Target": {
-			            "Entity": "v_Unplanned_unplanned"
-			          }
-			        },
-			        "v_Unplanned_unplanned.column": {
-			          "Target": {
-			            "Entity": "v_Unplanned_unplanned.column"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "v_Unplanned_unplanned"
-			            },
-			            "Object": {
-			              "Role": "v_Unplanned_unplanned.column"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing_unplanned_have_columns"
 			        }
 			      ]
 			    },
@@ -25605,39 +27612,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "v_Severity_severity_has_column": {
-			      "Binding": {
-			        "ConceptualEntity": "_Severity"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "v_Severity_severity": {
-			          "Target": {
-			            "Entity": "v_Severity_severity"
-			          }
-			        },
-			        "v_Severity_severity.column": {
-			          "Target": {
-			            "Entity": "v_Severity_severity.column"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "v_Severity_severity"
-			            },
-			            "Object": {
-			              "Role": "v_Severity_severity.column"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing_severities_have_columns"
-			        }
-			      ]
-			    },
 			    "dim_peer_group_has_created_at": {
 			      "Binding": {
 			        "ConceptualEntity": "Dim_PeerGroup"
@@ -26496,39 +28470,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "v_Guardrails_guardrail_has_column": {
-			      "Binding": {
-			        "ConceptualEntity": "_Guardrails"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "v_Guardrails_guardrail": {
-			          "Target": {
-			            "Entity": "v_Guardrails_guardrail"
-			          }
-			        },
-			        "v_Guardrails_guardrail.column": {
-			          "Target": {
-			            "Entity": "v_Guardrails_guardrail.column"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "v_Guardrails_guardrail"
-			            },
-			            "Object": {
-			              "Role": "v_Guardrails_guardrail.column"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing_guardrails_have_columns"
-			        }
-			      ]
-			    },
 			    "fact_KPI_disposition_has_v_Disposition_disposition_disposition_facilityyear_encounters": {
 			      "Binding": {
 			        "ConceptualEntity": "Fact_KPI_Disposition"
@@ -26625,39 +28566,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_KPI_dispositions_have_disp_total_encounters"
-			        }
-			      ]
-			    },
-			    "v_Disposition_disposition_has_column": {
-			      "Binding": {
-			        "ConceptualEntity": "_Disposition"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "v_Disposition_disposition": {
-			          "Target": {
-			            "Entity": "v_Disposition_disposition"
-			          }
-			        },
-			        "v_Disposition_disposition.column": {
-			          "Target": {
-			            "Entity": "v_Disposition_disposition.column"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "v_Disposition_disposition"
-			            },
-			            "Object": {
-			              "Role": "v_Disposition_disposition.column"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing_dispositions_have_columns"
 			        }
 			      ]
 			    },
@@ -27015,39 +28923,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_KPI_payer_mixes_have_total_payer_encounters"
-			        }
-			      ]
-			    },
-			    "v_PayerMix_PayerMix_has_column": {
-			      "Binding": {
-			        "ConceptualEntity": "_PayerMix"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "v_PayerMix_PayerMix": {
-			          "Target": {
-			            "Entity": "v_PayerMix_PayerMix"
-			          }
-			        },
-			        "v_PayerMix_PayerMix.column": {
-			          "Target": {
-			            "Entity": "v_PayerMix_PayerMix.column"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "v_PayerMix_PayerMix"
-			            },
-			            "Object": {
-			              "Role": "v_PayerMix_PayerMix.column"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing_PayerMixes_have_columns"
 			        }
 			      ]
 			    },
@@ -29507,6 +31382,1239 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_dim_payers_are_unknown_dim_payers"
+			        }
+			      ]
+			    },
+			    "v_LOS_los_has_is_above_own_PG_LOS_median": {
+			      "Binding": {
+			        "ConceptualEntity": "_LOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_LOS_los": {
+			          "Target": {
+			            "Entity": "v_LOS_los"
+			          }
+			        },
+			        "v_LOS_los.is_above_own_PG_LOS_median": {
+			          "Target": {
+			            "Entity": "v_LOS_los.is_above_own_PG_LOS_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_LOS_los"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.is_above_own_PG_LOS_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_los_have_is_above_own_PG_LOS_median"
+			        }
+			      ]
+			    },
+			    "v_LOS_los_has_is_above_LOS_median": {
+			      "Binding": {
+			        "ConceptualEntity": "_LOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_LOS_los": {
+			          "Target": {
+			            "Entity": "v_LOS_los"
+			          }
+			        },
+			        "v_LOS_los.is_above_LOS_median": {
+			          "Target": {
+			            "Entity": "v_LOS_los.is_above_LOS_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_LOS_los"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.is_above_LOS_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_los_have_is_above_LOS_median"
+			        }
+			      ]
+			    },
+			    "v_LOS_los_has_is_below_LOS_threshold": {
+			      "Binding": {
+			        "ConceptualEntity": "_LOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_LOS_los": {
+			          "Target": {
+			            "Entity": "v_LOS_los"
+			          }
+			        },
+			        "v_LOS_los.is_below_LOS_threshold": {
+			          "Target": {
+			            "Entity": "v_LOS_los.is_below_LOS_threshold"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_LOS_los"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.is_below_LOS_threshold"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_los_have_is_below_LOS_threshold"
+			        }
+			      ]
+			    },
+			    "v_LOS_los_has_is_below_LOS_volume_threshold": {
+			      "Binding": {
+			        "ConceptualEntity": "_LOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_LOS_los": {
+			          "Target": {
+			            "Entity": "v_LOS_los"
+			          }
+			        },
+			        "v_LOS_los.is_below_LOS_volume_threshold": {
+			          "Target": {
+			            "Entity": "v_LOS_los.is_below_LOS_volume_threshold"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_LOS_los"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.is_below_LOS_volume_threshold"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_los_have_is_below_LOS_volume_threshold"
+			        }
+			      ]
+			    },
+			    "v_LOS_los_has_is_above_LOS_volume_threshold": {
+			      "Binding": {
+			        "ConceptualEntity": "_LOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_LOS_los": {
+			          "Target": {
+			            "Entity": "v_LOS_los"
+			          }
+			        },
+			        "v_LOS_los.is_above_LOS_volume_threshold": {
+			          "Target": {
+			            "Entity": "v_LOS_los.is_above_LOS_volume_threshold"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_LOS_los"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.is_above_LOS_volume_threshold"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_los_have_is_above_LOS_volume_threshold"
+			        }
+			      ]
+			    },
+			    "v_LOS_los_has_facilities_in_LOS_lowpressure_zone": {
+			      "Binding": {
+			        "ConceptualEntity": "_LOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_LOS_los": {
+			          "Target": {
+			            "Entity": "v_LOS_los"
+			          }
+			        },
+			        "v_LOS_los.facilities_in_LOS_lowpressure_zone": {
+			          "Target": {
+			            "Entity": "v_LOS_los.facilities_in_LOS_lowpressure_zone"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_LOS_los"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.facilities_in_LOS_lowpressure_zone"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_los_have_facilities_in_LOS_lowpressure_zone"
+			        }
+			      ]
+			    },
+			    "v_LOS_los_has_facilities_out_of_LOS_lowpressure_zone": {
+			      "Binding": {
+			        "ConceptualEntity": "_LOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_LOS_los": {
+			          "Target": {
+			            "Entity": "v_LOS_los"
+			          }
+			        },
+			        "v_LOS_los.facilities_out_of_LOS_lowpressure_zone": {
+			          "Target": {
+			            "Entity": "v_LOS_los.facilities_out_of_LOS_lowpressure_zone"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_LOS_los"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.facilities_out_of_LOS_lowpressure_zone"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_los_have_facilities_out_of_LOS_lowpressure_zone"
+			        }
+			      ]
+			    },
+			    "v_LOS_los_has_facilities_above_both_LOS_thresholds": {
+			      "Binding": {
+			        "ConceptualEntity": "_LOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_LOS_los": {
+			          "Target": {
+			            "Entity": "v_LOS_los"
+			          }
+			        },
+			        "v_LOS_los.facilities_above_both_LOS_thresholds": {
+			          "Target": {
+			            "Entity": "v_LOS_los.facilities_above_both_LOS_thresholds"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_LOS_los"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.facilities_above_both_LOS_thresholds"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_los_have_facilities_above_both_LOS_thresholds"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_v_LOS_los_PG_LOS_median_range_text": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "v_LOS_los.PG_LOS_median_range_text": {
+			          "Target": {
+			            "Entity": "v_LOS_los.PG_LOS_median_range_text"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.PG_LOS_median_range_text"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_PG_LOS_median_range_text"
+			        }
+			      ]
+			    },
+			    "fact_KPI_LOS_summary_has_v_LOS_los_PG_LOS_median_range_text": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_LOS_summary": {
+			          "Target": {
+			            "Entity": "fact_KPI_LOS_summary"
+			          }
+			        },
+			        "v_LOS_los.PG_LOS_median_range_text": {
+			          "Target": {
+			            "Entity": "v_LOS_los.PG_LOS_median_range_text"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_LOS_summary"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.PG_LOS_median_range_text"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_LOS_summaries_have_PG_LOS_median_range_text"
+			        }
+			      ]
+			    },
+			    "v_LOS_los_has_excess_LOS_days": {
+			      "Binding": {
+			        "ConceptualEntity": "_LOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_LOS_los": {
+			          "Target": {
+			            "Entity": "v_LOS_los"
+			          }
+			        },
+			        "v_LOS_los.excess_LOS_days": {
+			          "Target": {
+			            "Entity": "v_LOS_los.excess_LOS_days"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_LOS_los"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.excess_LOS_days"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_los_have_excess_LOS_days"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_v_LOS_los_excess_LOS_days_PeerGroup_safe": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "v_LOS_los.excess_LOS_days_PeerGroup_safe": {
+			          "Target": {
+			            "Entity": "v_LOS_los.excess_LOS_days_PeerGroup_safe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.excess_LOS_days_PeerGroup_safe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_excess_LOS_days_PeerGroup_safe"
+			        }
+			      ]
+			    },
+			    "fact_KPI_LOS_summary_has_v_LOS_los_excess_LOS_days_PeerGroup_safe": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_LOS_summary": {
+			          "Target": {
+			            "Entity": "fact_KPI_LOS_summary"
+			          }
+			        },
+			        "v_LOS_los.excess_LOS_days_PeerGroup_safe": {
+			          "Target": {
+			            "Entity": "v_LOS_los.excess_LOS_days_PeerGroup_safe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_LOS_summary"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.excess_LOS_days_PeerGroup_safe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_LOS_summaries_have_excess_LOS_days_PeerGroup_safe"
+			        }
+			      ]
+			    },
+			    "fact_KPI_LOS_summary_has_v_LOS_los_total_beddays": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_LOS_summary": {
+			          "Target": {
+			            "Entity": "fact_KPI_LOS_summary"
+			          }
+			        },
+			        "v_LOS_los.total_beddays": {
+			          "Target": {
+			            "Entity": "v_LOS_los.total_beddays"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_LOS_summary"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.total_beddays"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_LOS_summaries_have_total_beddays"
+			        }
+			      ]
+			    },
+			    "vw_fact_KPI_severity_mix_by_severity_has_v_LOS_los_total_beddays": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_Fact_KPI_SeverityMix_BySeverity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fact_KPI_severity_mix_by_severity": {
+			          "Target": {
+			            "Entity": "vw_fact_KPI_severity_mix_by_severity"
+			          }
+			        },
+			        "v_LOS_los.total_beddays": {
+			          "Target": {
+			            "Entity": "v_LOS_los.total_beddays"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fact_KPI_severity_mix_by_severity"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.total_beddays"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fact_KPI_severity_mix_by_severity_have_total_beddays"
+			        }
+			      ]
+			    },
+			    "fact_KPI_LOS_summary_has_v_LOS_los_share_of_beddays": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_LOS_summary": {
+			          "Target": {
+			            "Entity": "fact_KPI_LOS_summary"
+			          }
+			        },
+			        "v_LOS_los.share_of_beddays": {
+			          "Target": {
+			            "Entity": "v_LOS_los.share_of_beddays"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_LOS_summary"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.share_of_beddays"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_LOS_summaries_have_share_of_beddays"
+			        }
+			      ]
+			    },
+			    "vw_fact_KPI_severity_mix_by_severity_has_v_LOS_los_share_of_beddays": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_Fact_KPI_SeverityMix_BySeverity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fact_KPI_severity_mix_by_severity": {
+			          "Target": {
+			            "Entity": "vw_fact_KPI_severity_mix_by_severity"
+			          }
+			        },
+			        "v_LOS_los.share_of_beddays": {
+			          "Target": {
+			            "Entity": "v_LOS_los.share_of_beddays"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fact_KPI_severity_mix_by_severity"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.share_of_beddays"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fact_KPI_severity_mix_by_severity_have_share_of_beddays"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_v_LOS_los_CrossPeerGroup_LOS_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "v_LOS_los.CrossPeerGroup_LOS_median": {
+			          "Target": {
+			            "Entity": "v_LOS_los.CrossPeerGroup_LOS_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.CrossPeerGroup_LOS_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_CrossPeerGroup_LOS_median"
+			        }
+			      ]
+			    },
+			    "fact_KPI_LOS_summary_has_v_LOS_los_CrossPeerGroup_LOS_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_LOS_summary": {
+			          "Target": {
+			            "Entity": "fact_KPI_LOS_summary"
+			          }
+			        },
+			        "v_LOS_los.CrossPeerGroup_LOS_median": {
+			          "Target": {
+			            "Entity": "v_LOS_los.CrossPeerGroup_LOS_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_LOS_summary"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.CrossPeerGroup_LOS_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_LOS_summaries_have_CrossPeerGroup_LOS_median"
+			        }
+			      ]
+			    },
+			    "v_LOS_los_has_facilities_above_CPG_LOS_median": {
+			      "Binding": {
+			        "ConceptualEntity": "_LOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_LOS_los": {
+			          "Target": {
+			            "Entity": "v_LOS_los"
+			          }
+			        },
+			        "v_LOS_los.facilities_above_CPG_LOS_median": {
+			          "Target": {
+			            "Entity": "v_LOS_los.facilities_above_CPG_LOS_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_LOS_los"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.facilities_above_CPG_LOS_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_los_have_facilities_above_CPG_LOS_median"
+			        }
+			      ]
+			    },
+			    "v_LOS_los_has_facilities_above_own_peergroup_LOS_median": {
+			      "Binding": {
+			        "ConceptualEntity": "_LOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_LOS_los": {
+			          "Target": {
+			            "Entity": "v_LOS_los"
+			          }
+			        },
+			        "v_LOS_los.facilities_above_own_peergroup_LOS_median": {
+			          "Target": {
+			            "Entity": "v_LOS_los.facilities_above_own_peergroup_LOS_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_LOS_los"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.facilities_above_own_peergroup_LOS_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_los_have_facilities_above_own_peergroup_LOS_median"
+			        }
+			      ]
+			    },
+			    "v_LOS_los_has_median_excess_LOS": {
+			      "Binding": {
+			        "ConceptualEntity": "_LOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_LOS_los": {
+			          "Target": {
+			            "Entity": "v_LOS_los"
+			          }
+			        },
+			        "v_LOS_los.median_excess_LOS": {
+			          "Target": {
+			            "Entity": "v_LOS_los.median_excess_LOS"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_LOS_los"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.median_excess_LOS"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_los_have_median_excess_LOS"
+			        }
+			      ]
+			    },
+			    "v_LOS_los_has_facilities_driving_50_of_beddays_count": {
+			      "Binding": {
+			        "ConceptualEntity": "_LOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_LOS_los": {
+			          "Target": {
+			            "Entity": "v_LOS_los"
+			          }
+			        },
+			        "v_LOS_los.facilities_driving_50_of_beddays_count": {
+			          "Target": {
+			            "Entity": "v_LOS_los.facilities_driving_50_of_beddays_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_LOS_los"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.facilities_driving_50_of_beddays_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_los_have_facilities_driving_50_of_beddays_count"
+			        }
+			      ]
+			    },
+			    "fact_KPI_disposition_has_dim_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Disposition"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_disposition": {
+			          "Target": {
+			            "Entity": "fact_KPI_disposition"
+			          }
+			        },
+			        "dim_year": {
+			          "Target": {
+			            "Entity": "dim_year"
+			          },
+			          "Nouns": [
+			            {
+			              "discharge year": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_disposition"
+			            },
+			            "Object": {
+			              "Role": "dim_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_dispositions_have_dim_years"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_year"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_disposition"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_years_have_fact_KPI_dispositions"
+			        }
+			      ]
+			    },
+			    "fact_KPI_disposition_has_dim_disposition": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Disposition"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_disposition": {
+			          "Target": {
+			            "Entity": "fact_KPI_disposition"
+			          }
+			        },
+			        "dim_disposition": {
+			          "Target": {
+			            "Entity": "dim_disposition"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_disposition"
+			            },
+			            "Object": {
+			              "Role": "dim_disposition"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_dispositions_have_dim_dispositions"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_disposition"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_disposition"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dispositions_have_fact_KPI_dispositions"
+			        }
+			      ]
+			    },
+			    "fact_KPI_disposition_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Disposition"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_disposition": {
+			          "Target": {
+			            "Entity": "fact_KPI_disposition"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_disposition"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_dispositions_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_disposition"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_fact_KPI_dispositions"
+			        }
+			      ]
+			    },
+			    "fact_KPI_financial_pressure_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_FinancialPressure"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_financial_pressure": {
+			          "Target": {
+			            "Entity": "fact_KPI_financial_pressure"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_financial_pressure"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_financial_pressures_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_financial_pressure"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_fact_KPI_financial_pressures"
+			        }
+			      ]
+			    },
+			    "fact_KPI_LOS_summary_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_LOS_summary": {
+			          "Target": {
+			            "Entity": "fact_KPI_LOS_summary"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_LOS_summary"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_LOS_summaries_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_LOS_summary"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_fact_KPI_LOS_summaries"
+			        }
+			      ]
+			    },
+			    "fact_KPI_mortality_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Mortality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_mortality": {
+			          "Target": {
+			            "Entity": "fact_KPI_mortality"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_mortality"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_mortalities_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_mortality"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_fact_KPI_mortalities"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_dim_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "dim_year": {
+			          "Target": {
+			            "Entity": "dim_year"
+			          },
+			          "Nouns": [
+			            {
+			              "discharge year": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "dim_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_dim_years"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_year"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_payer_mix"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_years_have_fact_KPI_payer_mixes"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_dim_payer": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "dim_payer": {
+			          "Target": {
+			            "Entity": "dim_payer"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "dim_payer"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_dim_payers"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_payer"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_payer_mix"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_payers_have_fact_KPI_payer_mixes"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_payer_mix"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_fact_KPI_payer_mixes"
+			        }
+			      ]
+			    },
+			    "fact_KPI_severity_mix_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_SeverityMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_severity_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_severity_mix"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_severity_mix"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_severity_mixes_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_severity_mix"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_fact_KPI_severity_mixes"
 			        }
 			      ]
 			    },

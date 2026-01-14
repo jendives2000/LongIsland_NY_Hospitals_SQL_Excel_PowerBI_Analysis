@@ -3,14 +3,14 @@
   "name": "1aea446e3b082d348deb",
   "position": {
     "x": 660.30769230769226,
-    "y": 15.663877315220047,
-    "z": 6500,
+    "y": 152.21007667798747,
+    "z": 11562,
     "height": 561.23076923076928,
     "width": 608,
-    "tabOrder": 4000
+    "tabOrder": 5000
   },
   "visual": {
-    "visualType": "clusteredBarChart",
+    "visualType": "lineClusteredColumnComboChart",
     "query": {
       "queryState": {
         "Category": {
@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": false
+              "active": true
             }
           ]
         },
@@ -51,22 +51,50 @@
           "projections": [
             {
               "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_LOS"
+                    }
+                  },
+                  "Property": "Excess LOS Days"
+                }
+              },
+              "queryRef": "_LOS.Excess LOS Days",
+              "nativeQueryRef": "Excess LOS Days"
+            },
+            {
+              "field": {
                 "Aggregation": {
                   "Expression": {
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Fact_KPI_Unplanned"
+                          "Entity": "Fact_KPI_LOS_Summary"
                         }
                       },
-                      "Property": "Unplanned_Encounter_Count"
+                      "Property": "Encounter_Count"
                     }
                   },
                   "Function": 0
                 }
               },
-              "queryRef": "Sum(Fact_KPI_Unplanned.Unplanned_Encounter_Count)",
-              "nativeQueryRef": "Sum of Unplanned_Encounter_Count"
+              "queryRef": "Sum(Fact_KPI_LOS_Summary.Encounter_Count)",
+              "nativeQueryRef": "Sum of Encounter_Count"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_LOS"
+                    }
+                  },
+                  "Property": "Total Bed-Days"
+                }
+              },
+              "queryRef": "_LOS.Total Bed-Days",
+              "nativeQueryRef": "Total Bed-Days"
             }
           ]
         },
@@ -80,11 +108,29 @@
                       "Entity": "_KPI_Measures"
                     }
                   },
-                  "Property": "Unplanned Admission Rate"
+                  "Property": "AVG LOS"
                 }
               },
-              "queryRef": "_KPI_Measures.Unplanned Admission Rate",
-              "nativeQueryRef": "Unplanned Admission Rate"
+              "queryRef": "_KPI_Measures.AVG LOS",
+              "nativeQueryRef": "AVG LOS"
+            }
+          ]
+        },
+        "Y2": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_ClinicalClass"
+                    }
+                  },
+                  "Property": "PeerGroup LOS Median"
+                }
+              },
+              "queryRef": "Dim_ClinicalClass.PeerGroup LOS Median",
+              "nativeQueryRef": "PeerGroup LOS Median"
             }
           ]
         }
@@ -93,18 +139,32 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "_KPI_Measures"
+                    "Entity": "Dim_PeerGroup"
                   }
                 },
-                "Property": "Unplanned Admission Rate"
+                "Property": "PeerGroup_Name"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
+          },
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Dim_Facility"
+                  }
+                },
+                "Property": "Facility_Name"
+              }
+            },
+            "direction": "Ascending"
           }
-        ]
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -221,6 +281,166 @@
                 }
               }
             ]
+          }
+        },
+        {
+          "properties": {
+            "backgroundColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "labelPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Under'"
+                }
+              }
+            },
+            "showSeries": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Dim_ClinicalClass.PeerGroup LOS Median"
+          }
+        },
+        {
+          "properties": {
+            "labelPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'OutsideEnd'"
+                }
+              }
+            },
+            "enableBackground": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_KPI_Measures.AVG LOS"
+          }
+        },
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Conditional": {
+                      "Cases": [
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 0,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "_LOS"
+                                    }
+                                  },
+                                  "Property": "Is Above Own PG LOS Median"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "1D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#FFFFFF'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 0,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "_LOS"
+                                    }
+                                  },
+                                  "Property": "Is Above Own PG LOS Median"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "0D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#808080'"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "_KPI_Measures.AVG LOS"
           }
         }
       ],
@@ -449,6 +669,25 @@
               }
             ]
           }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 7,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Dim_ClinicalClass.PeerGroup LOS Median"
+          }
         }
       ],
       "legend": [
@@ -465,6 +704,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Top'"
+                }
+              }
+            },
+            "legendMarkerRendering": {
+              "expr": {
+                "Literal": {
+                  "Value": "'lineAndMarker'"
                 }
               }
             }
@@ -504,33 +750,30 @@
           }
         }
       ],
-      "y1AxisReferenceLine": [
+      "lineStyles": [
         {
           "properties": {
-            "show": {
+            "strokeLineJoin": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "'round'"
                 }
               }
             },
-            "displayName": {
+            "lineChartType": {
               "expr": {
                 "Literal": {
-                  "Value": "'Constant line 1'"
+                  "Value": "'step'"
                 }
               }
             },
-            "value": {
+            "strokeWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "0.5D"
+                  "Value": "2D"
                 }
               }
             }
-          },
-          "selector": {
-            "id": "1"
           }
         }
       ]
@@ -542,7 +785,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Unplanned Admission Share by Peer Group'"
+                  "Value": "'Length of Stay by Facility'"
                 }
               }
             },
@@ -588,7 +831,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Emergency & urgent admissions as % of inpatient volume'"
+                  "Value": "'Facility LOS compared to peer-group median (case-mix adjusted context)'"
                 }
               }
             }
@@ -597,6 +840,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "parentGroupName": "ed3e78b7d54e31523a69"
+  }
 }

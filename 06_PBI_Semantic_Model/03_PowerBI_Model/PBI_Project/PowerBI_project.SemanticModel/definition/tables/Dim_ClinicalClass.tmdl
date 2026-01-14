@@ -125,14 +125,17 @@ table Dim_ClinicalClass
 
 	measure 'PeerGroup LOS Median' = ```
 			
-			-- line for “LOS vs Peer Median” type visuals
-			VAR CurrentPeerGroup = SELECTEDVALUE(Dim_Facility[PeerGroup_Name])
-			RETURN
-			CALCULATE(
-			    MEDIANX( VALUES(Dim_Facility[Facility_Key]), [AVG LOS] ),
-			    ALL(Dim_Facility),
-			    Dim_Facility[PeerGroup_Name] = CurrentPeerGroup
+			IF(
+			    HASONEVALUE(Dim_Facility[PeerGroup_Name]),
+			    VAR pg = SELECTEDVALUE(Dim_Facility[PeerGroup_Name])
+			    RETURN
+			        CALCULATE(
+			            MEDIANX(VALUES(Dim_Facility[Facility_Key]), [AVG LOS]),
+			            REMOVEFILTERS(Dim_Facility[Facility_Name]),
+			            Dim_Facility[PeerGroup_Name] = pg
+			        )
 			)
+			
 			
 			```
 		displayFolder: LOS
@@ -142,17 +145,14 @@ table Dim_ClinicalClass
 
 	measure 'PeerGroup LOS Median (FacilitySafe)' = ```
 			
-			-- in tooltips/cards to avoid “duplicate native reference name” weirdness
-			VAR FacilitiesInSelectedPeerGroups =
+			MEDIANX(
 			    CALCULATETABLE(
 			        VALUES(Dim_Facility[Facility_Key]),
-			        REMOVEFILTERS(Dim_Facility)   -- remove current facility row only
-			    )
-			RETURN
-			MEDIANX(
-			    FacilitiesInSelectedPeerGroups,
-			    CALCULATE([AVG LOS], REMOVEFILTERS(Dim_Facility))
+			        REMOVEFILTERS(Dim_Facility[Facility_Name])   -- or Facility_Key
+			    ),
+			    CALCULATE([AVG LOS], REMOVEFILTERS(Dim_Facility[Facility_Name]))
 			)
+			
 			
 			```
 		displayFolder: LOS

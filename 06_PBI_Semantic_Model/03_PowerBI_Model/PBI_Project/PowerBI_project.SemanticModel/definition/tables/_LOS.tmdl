@@ -22,17 +22,23 @@ table _LOS
 		displayFolder: Helper
 		lineageTag: a971f21e-4c76-4e13-b053-4f46a4b297b2
 
-	measure 'LOS Min' = ```
-			MINX( VALUES(Dim_Facility[Facility_Key]), [AVG LOS] )
+	measure 'LOS Min (FacilitySafe)' =
 			
-			```
+			MINX(
+			    CALCULATETABLE(VALUES(Dim_Facility[Facility_Key]), REMOVEFILTERS(Dim_Facility[Facility_Name])),
+			    [AVG LOS]
+			)
 		displayFolder: Helper
 		lineageTag: 11ac9856-735c-4632-8360-65e36be82852
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'LOS Max' = ```
-			MAXX( VALUES(Dim_Facility[Facility_Key]), [AVG LOS] )
+	measure 'LOS Max (FacilitySafe)' = ```
+			
+			MAXX(
+			    CALCULATETABLE(VALUES(Dim_Facility[Facility_Key]), REMOVEFILTERS(Dim_Facility[Facility_Name])),
+			    [AVG LOS]
+			)
 			
 			```
 		displayFolder: Helper
@@ -157,11 +163,141 @@ table _LOS
 			VAR maxMed =
 			    MAXX(pgList, CALCULATE([PeerGroup LOS Median (PeerGroup safe)]))
 			RETURN
-			FORMAT(minMed, "0.00") & "–" & FORMAT(maxMed, "0.00")
+			FORMAT(minMed, "0.00") & " to " & FORMAT(maxMed, "0.00")
 			
 			```
 		displayFolder: Helper
 		lineageTag: cfb40435-71c9-4ef3-8808-773827458ca8
+
+	measure 'Excess LOS Days' = ```
+			
+			[AVG LOS] - [PeerGroup LOS Median]
+			
+			```
+		displayFolder: Helper
+		lineageTag: 39a0ec76-172f-41e4-b9b0-f616ad1729ed
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Excess LOS Days (PeerGroup safe)' = ```
+			
+			[AVG LOS] - [PeerGroup LOS Median (PeerGroup safe)]
+			
+			```
+		displayFolder: Helper
+		lineageTag: f2240854-765f-49f5-8384-4539489493fe
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Bed-Days' =
+			
+			[AVG LOS] * [Total Encounters]
+		formatString: 0
+		lineageTag: d86d3105-1693-4626-9711-4833372cf718
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Share of Bed-Days' =
+			
+			DIVIDE(
+			    [Total Bed-Days],
+			    CALCULATE([Total Bed-Days], REMOVEFILTERS(Dim_Facility))
+			)
+		lineageTag: 5343bce0-2bad-4235-9b02-3f226ca4a482
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Cross–Peer-Group LOS Median' =
+			
+			MEDIANX(
+			    CALCULATETABLE(
+			        VALUES(Dim_Facility[Facility_Key]),
+			        REMOVEFILTERS(Dim_Facility[Facility_Name])
+			    ),
+			    [AVG LOS]
+			)
+		displayFolder: Helper
+		lineageTag: d6f42f52-5829-4d1a-8a86-c59fc07b3a54
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Facilities Above CPG LOS Median' =
+			
+			VAR m = [Cross–Peer-Group LOS Median]
+			RETURN
+			COUNTROWS(
+			    FILTER(
+			        VALUES(Dim_Facility[Facility_Key]),
+			        NOT ISBLANK([AVG LOS]) && [AVG LOS] > m
+			    )
+			)
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: 8021d41f-47d7-4f8b-9942-bb4c1f401b99
+
+	measure 'Facilities Above Own Peer-Group LOS Median' =
+			
+			COUNTROWS(
+			    FILTER(
+			        VALUES(Dim_Facility[Facility_Key]),
+			        VAR v = [AVG LOS]
+			        VAR pgm = [PeerGroup LOS Median (FacilitySafe)]
+			        RETURN NOT ISBLANK(v) && NOT ISBLANK(pgm) && v > pgm
+			    )
+			)
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: ed377f10-050a-48a4-9fe6-df222851bb98
+
+	measure 'Median Excess LOS (Days)' =
+			
+			MEDIANX(
+			    VALUES(Dim_Facility[Facility_Key]),
+			    VAR v = [AVG LOS]
+			    VAR pgm = [PeerGroup LOS Median (FacilitySafe)]
+			    RETURN IF(NOT ISBLANK(v) && NOT ISBLANK(pgm), v - pgm)
+			)
+		displayFolder: Helper
+		lineageTag: 2e608c3e-32c3-4c18-8afc-17c267045b88
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Facilities Driving 50% of Bed-Days (Count)' =
+			
+			VAR Base =
+			    ADDCOLUMNS(
+			        VALUES(Dim_Facility[Facility_Key]),
+			        "BedDays", [Total Bed-Days]
+			    )
+			VAR T =
+			    FILTER(Base, NOT ISBLANK([Total Bed-Days]) && [BedDays] > 0)
+			VAR Ranked =
+			    ADDCOLUMNS(
+			        T,
+			        "RankBD", RANKX(T, [Total Bed-Days], , DESC, Dense)
+			    )
+			VAR TotalBD =
+			    SUMX(Ranked, [Total Bed-Days])
+			VAR WithCum =
+			    ADDCOLUMNS(
+			        Ranked,
+			        "CumBD",
+			            VAR r = [RankBD]
+			            RETURN SUMX(FILTER(Ranked, [RankBD] <= r), [Total Bed-Days]),
+			        "CumShare",
+			            DIVIDE(
+			                VAR r2 = [RankBD]
+			                VAR cum2 = SUMX(FILTER(Ranked, [RankBD] <= r2), [Total Bed-Days])
+			                RETURN cum2,
+			                TotalBD
+			            )
+			    )
+			VAR CutRank =
+			    MINX(FILTER(WithCum, [CumShare] >= 0.5), [RankBD])
+			RETURN
+			CutRank
+		formatString: 0
+		lineageTag: caf85b95-9498-43dc-8fbe-48af96a42f82
 
 	column Column
 		dataType: int64
