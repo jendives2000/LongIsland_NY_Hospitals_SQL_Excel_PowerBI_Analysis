@@ -1,10 +1,10 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.1.0/schema.json",
-  "displayName": "Excess LOS vs Peer Median (Days)",
-  "name": "2807b0f04d8a0407e541",
+  "displayName": "Throughput Burden: LOS vs Volume",
+  "name": "024194a0b0838319bc79",
   "options": {
     "targetVisualNames": [
-      "998096e8791920a11830"
+      "c8d904f381950c4bd955"
     ]
   },
   "explorationState": {
@@ -249,31 +249,16 @@
             "singleVisual": {
               "visualType": "scatterChart",
               "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_KPI_Measures"
-                        }
-                      },
-                      "Property": "Unplanned Admission Rate"
-                    }
-                  }
-                }
-              ],
               "activeProjections": {
                 "Category": [
                   {
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
+                          "Entity": "Dim_Facility"
                         }
                       },
-                      "Property": "PeerGroup_Name"
+                      "Property": "Facility_Name"
                     }
                   }
                 ],
@@ -285,13 +270,10 @@
                           "Entity": "_KPI_Measures"
                         }
                       },
-                      "Property": "Unplanned Admission Rate"
+                      "Property": "AVG LOS"
                     }
                   }
                 ]
-              },
-              "display": {
-                "mode": "hidden"
               }
             }
           },
@@ -514,10 +496,7 @@
           "c8d904f381950c4bd955": {
             "singleVisual": {
               "visualType": "actionButton",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
+              "objects": {}
             }
           },
           "d116e22d14131c02028e": {
@@ -807,6 +786,9 @@
                     }
                   }
                 ]
+              },
+              "display": {
+                "mode": "hidden"
               }
             }
           },
