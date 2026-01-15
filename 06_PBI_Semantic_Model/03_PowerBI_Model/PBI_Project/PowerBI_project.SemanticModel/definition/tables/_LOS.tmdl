@@ -297,7 +297,27 @@ table _LOS
 			RETURN
 			CutRank
 		formatString: 0
+		displayFolder: Helper
 		lineageTag: caf85b95-9498-43dc-8fbe-48af96a42f82
+
+	measure 'Excess LOS Color (WhatIf)' = ```
+			
+			VAR v = [Excess LOS Days]
+			VAR t = SELECTEDVALUE('Excess LOS Materiality Threshold (Days)'[Excess LOS Materiality Threshold (Days)], 0.25)
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(v), "#D9D9D9",
+			    v >= t,     "#B22222",
+			    v > 0,      "#E9967A",
+			    v <= -t,    "#2F5597",
+			    v < 0,      "#9DC3E6",
+			               "#9E9E9E"
+			)
+			
+			```
+		displayFolder: Helper
+		lineageTag: 5387658b-e645-4fa7-ba5e-43a290516d9c
 
 	column Column
 		dataType: int64

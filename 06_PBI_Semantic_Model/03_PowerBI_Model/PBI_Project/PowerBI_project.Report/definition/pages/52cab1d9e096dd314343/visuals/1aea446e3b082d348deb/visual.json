@@ -3,8 +3,8 @@
   "name": "1aea446e3b082d348deb",
   "position": {
     "x": 660.30769230769226,
-    "y": 152.21007667798747,
-    "z": 11562,
+    "y": 15.663877315220049,
+    "z": 6875,
     "height": 561.23076923076928,
     "width": 608,
     "tabOrder": 5000
@@ -130,7 +130,8 @@
                 }
               },
               "queryRef": "Dim_ClinicalClass.PeerGroup LOS Median",
-              "nativeQueryRef": "PeerGroup LOS Median"
+              "nativeQueryRef": "Peer-Group LOS Median",
+              "displayName": "Peer-Group LOS Median"
             }
           ]
         }
@@ -626,7 +627,7 @@
                               "Entity": "_KPI_Measures"
                             }
                           },
-                          "Property": "Unplanned Admission Rate"
+                          "Property": "AVG LOS"
                         }
                       },
                       "FillRule": {
@@ -634,14 +635,14 @@
                           "min": {
                             "color": {
                               "Literal": {
-                                "Value": "'#808080'"
+                                "Value": "'#333333'"
                               }
                             }
                           },
                           "max": {
                             "color": {
                               "Literal": {
-                                "Value": "'#666666'"
+                                "Value": "'#999999'"
                               }
                             }
                           },
@@ -785,7 +786,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Length of Stay by Facility'"
+                  "Value": "'AVG Length of Stay by Facility'"
                 }
               }
             },
@@ -840,5 +841,7 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "ed3e78b7d54e31523a69",
+  "isHidden": true
 }

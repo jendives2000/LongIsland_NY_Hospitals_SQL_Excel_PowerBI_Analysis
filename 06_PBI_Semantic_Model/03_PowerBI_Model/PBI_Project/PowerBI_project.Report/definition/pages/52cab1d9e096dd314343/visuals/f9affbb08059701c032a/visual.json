@@ -3,14 +3,14 @@
   "name": "f9affbb08059701c032a",
   "position": {
     "x": 660.92307692307691,
-    "y": 35.971569622912355,
-    "z": 6250,
-    "height": 536,
+    "y": 147.07692307692307,
+    "z": 11562,
+    "height": 561.23076923076928,
     "width": 603.07692307692309,
     "tabOrder": 2000
   },
   "visual": {
-    "visualType": "lineClusteredColumnComboChart",
+    "visualType": "clusteredBarChart",
     "query": {
       "queryState": {
         "Category": {
@@ -28,7 +28,7 @@
               },
               "queryRef": "Dim_Facility.PeerGroup_Name",
               "nativeQueryRef": "PeerGroup_Name",
-              "active": true
+              "active": false
             },
             {
               "field": {
@@ -43,25 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": false
-            }
-          ]
-        },
-        "Series": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Dim_Facility"
-                    }
-                  },
-                  "Property": "PeerGroup_Sort"
-                }
-              },
-              "queryRef": "Dim_Facility.PeerGroup_Sort",
-              "nativeQueryRef": "PeerGroup_Sort"
+              "active": true
             }
           ]
         },
@@ -72,32 +54,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_KPI_Measures"
+                      "Entity": "_LOS"
                     }
                   },
-                  "Property": "Unplanned Admission Rate"
+                  "Property": "Excess LOS Days"
                 }
               },
-              "queryRef": "_KPI_Measures.Unplanned Admission Rate",
-              "nativeQueryRef": "Unplanned Admission Rate"
-            }
-          ]
-        },
-        "Y2": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Dim_ClinicalClass"
-                    }
-                  },
-                  "Property": "PeerGroup UA Rate Median"
-                }
-              },
-              "queryRef": "Dim_ClinicalClass.PeerGroup Unplanned Rate Median",
-              "nativeQueryRef": "PeerGroup UA Rate Median"
+              "queryRef": "_LOS.Excess LOS Days",
+              "nativeQueryRef": "Excess LOS Days"
             }
           ]
         }
@@ -109,10 +73,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Dim_ClinicalClass"
+                    "Entity": "_LOS"
                   }
                 },
-                "Property": "PeerGroup UA Rate Median"
+                "Property": "Excess LOS Days"
               }
             },
             "direction": "Descending"
@@ -154,7 +118,7 @@
             "preferredCategoryWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "30D"
                 }
               }
             },
@@ -175,7 +139,7 @@
             "innerPadding": {
               "expr": {
                 "Literal": {
-                  "Value": "0L"
+                  "Value": "35L"
                 }
               }
             },
@@ -235,14 +199,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "secShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -276,7 +233,7 @@
             "optimizeLabelDisplay": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -304,7 +261,7 @@
             "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -318,14 +275,14 @@
             "labelPrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "0L"
+                  "Value": "1L"
                 }
               }
             },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "9D"
+                  "Value": "11D"
                 }
               }
             },
@@ -386,63 +343,13 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Conditional": {
-                      "Cases": [
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 0,
-                              "Left": {
-                                "Measure": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "_Unplanned"
-                                    }
-                                  },
-                                  "Property": "Is Above PG Unplanned Rate Median"
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "0D"
-                                }
-                              }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#808080'"
-                            }
-                          }
-                        },
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 0,
-                              "Left": {
-                                "Measure": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "_Unplanned"
-                                    }
-                                  },
-                                  "Property": "Is Above PG Unplanned Rate Median"
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "1D"
-                                }
-                              }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#FFFFFF'"
-                            }
-                          }
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_LOS"
                         }
-                      ]
+                      },
+                      "Property": "Excess LOS Color (WhatIf)"
                     }
                   }
                 }
@@ -606,66 +513,137 @@
               }
             ]
           }
-        }
-      ],
-      "lineStyles": [
+        },
         {
           "properties": {
-            "strokeWidth": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_LOS"
+                        }
+                      },
+                      "Property": "Excess LOS Color (WhatIf)"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "y1AxisReferenceLine": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "displayName": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Peer Median'"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            },
+            "style": {
+              "expr": {
+                "Literal": {
+                  "Value": "'solid'"
+                }
+              }
+            },
+            "width": {
               "expr": {
                 "Literal": {
                   "Value": "1D"
                 }
               }
             },
-            "lineChartType": {
+            "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'step'"
+                  "Value": "'front'"
                 }
               }
             },
-            "showMarker": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "areaShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "seriesLabels": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "enableBackground": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "seriesWordWrap": {
+            "dataLabelShow": {
               "expr": {
                 "Literal": {
                   "Value": "true"
                 }
               }
+            },
+            "dataLabelText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Name'"
+                }
+              }
+            },
+            "dataLabelHorizontalPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'right'"
+                }
+              }
+            },
+            "dataLabelVerticalPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'under'"
+                }
+              }
+            },
+            "dataLabelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.6
+                    }
+                  }
+                }
+              }
             }
+          },
+          "selector": {
+            "id": "1"
           }
         }
       ]
@@ -677,7 +655,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Unplanned Intake vs Peer Median'"
+                  "Value": "'Excess LOS vs Peer Median (Days)'"
                 }
               }
             },
@@ -729,7 +707,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Directional benchmark, not a performance threshold'"
+                  "Value": "'Directional throughput gap, not a quality score (0 = peer median)'"
                 }
               }
             },
@@ -782,11 +760,30 @@
             }
           }
         }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "ed3e78b7d54e31523a69",
   "filterConfig": {
     "filters": [
       {
@@ -806,20 +803,6 @@
         "howCreated": "User"
       },
       {
-        "name": "622454b6053b5ce40290",
-        "ordinal": 1,
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Dim_Facility"
-              }
-            },
-            "Property": "Facility_Name"
-          }
-        }
-      },
-      {
         "name": "403087e2a9bb84b7ad60",
         "ordinal": 2,
         "field": {
@@ -834,35 +817,6 @@
         },
         "type": "Advanced",
         "howCreated": "User"
-      },
-      {
-        "name": "b64acc8a05ac972ded80",
-        "ordinal": 3,
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Dim_Facility"
-              }
-            },
-            "Property": "PeerGroup_Name"
-          }
-        }
-      },
-      {
-        "name": "a9989f131d468c382510",
-        "ordinal": 4,
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Dim_Facility"
-              }
-            },
-            "Property": "PeerGroup_Sort"
-          }
-        },
-        "type": "Advanced"
       },
       {
         "name": "5583e6f1377863030dba",
@@ -882,6 +836,5 @@
       }
     ],
     "filterSortOrder": "Custom"
-  },
-  "isHidden": true
+  }
 }
