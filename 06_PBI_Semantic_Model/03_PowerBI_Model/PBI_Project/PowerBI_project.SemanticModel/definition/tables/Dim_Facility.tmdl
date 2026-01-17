@@ -86,6 +86,21 @@ table Dim_Facility
 
 		annotation SummarizationSetBy = User
 
+	column Facility_Label = ```
+			
+			Dim_Facility[Facility_Name]
+			& " (" &
+			FORMAT(Dim_Facility[Facility_Key], "0")
+			& ")"
+			
+			```
+		dataType: string
+		lineageTag: ca473346-442c-49d0-aacb-30abc206079a
+		summarizeBy: none
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Dim_Facility = m
 		mode: import
 		source =

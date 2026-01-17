@@ -24286,6 +24286,16 @@ cultureInfo en-US
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
+			        },
+			        {
+			          "Facilities Abo. Own PG LOS Median": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -24352,55 +24362,302 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
-			    }
-			  },
-			  "Relationships": {
-			    "fact_KPI_severity_mix_has_dim_facility": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_SeverityMix"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_severity_mix": {
-			          "Target": {
-			            "Entity": "fact_KPI_severity_mix"
-			          }
-			        },
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
+			    },
+			    "v_LOS_los.excess_LOS_color_WhatIf": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "Excess LOS Color (WhatIf)"
 			        }
 			      },
-			      "Phrasings": [
+			      "State": "Generated",
+			      "Terms": [
 			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_severity_mix"
-			            },
-			            "Object": {
-			              "Role": "dim_facility"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_severity_mixes_have_dim_facilities"
+			          "excess LOS color (WhatIf)": {
+			            "State": "Generated"
+			          }
 			        },
 			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_severity_mix"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_fact_KPI_severity_mixes"
+			          "excess LOS color": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
 			        }
 			      ]
 			    },
+			    "v_LOS_los.median_excess_LOS_days_display": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "Median Excess LOS (Days) (Display)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "median excess LOS (days) (display)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "median excess LOS (days)": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.avg_excess_LOS_days_above_peer_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "Avg Excess LOS (Days) Above Peer Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "avg excess LOS (days) above peer median": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Avg Excess LOS Abo. PG Median": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "excess_LOS_materiality_threshold_Days": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Excess LOS Materiality Threshold (Days)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "excess LOS materiality threshold (Days)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "excess LOS materiality threshold (Day)": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "excess_LOS_materiality_threshold_Days.excess_LOS_materiality_threshold": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Excess LOS Materiality Threshold (Days)",
+			          "ConceptualProperty": "Excess LOS Materiality Threshold (Days)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "excess LOS materiality threshold": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "excess LOS materiality threshold (Days)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "excess LOS materiality threshold (Day)": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "threshold": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "materiality threshold": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "LOS materiality threshold": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "excess los materiality brink": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "excess los materiality onset": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "excess los materiality inception": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "los materiality brink": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "los materiality onset": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "los materiality inception": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "materiality brink": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "materiality onset": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "materiality inception": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "excess los materiality verge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ],
+			      "Units": [
+			        "day"
+			      ]
+			    },
+			    "excess_LOS_materiality_threshold_Days.excess_LOS_materiality_threshold_days_value": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Excess LOS Materiality Threshold (Days)",
+			          "ConceptualProperty": "Excess LOS Materiality Threshold (Days) Value"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "excess LOS materiality threshold (days) value": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.P75_excess_LOS": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "P75 Excess LOS (Days)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "P75 excess LOS": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "P75 excess LOS (Days)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "LOS": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "excess LOS": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "Units": [
+			        "day"
+			      ]
+			    }
+			  },
+			  "Relationships": {
 			    "fact_KPI_payer_mix_has_dim_facility": {
 			      "Binding": {
 			        "ConceptualEntity": "Fact_KPI_PayerMix"
@@ -24829,6 +25086,204 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "v_LOS_los_has_P75_excess_LOS": {
+			      "Binding": {
+			        "ConceptualEntity": "_LOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_LOS_los": {
+			          "Target": {
+			            "Entity": "v_LOS_los"
+			          }
+			        },
+			        "v_LOS_los.P75_excess_LOS": {
+			          "Target": {
+			            "Entity": "v_LOS_los.P75_excess_LOS"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_LOS_los"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.P75_excess_LOS"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_los_have_P75_excess_LOS"
+			        }
+			      ]
+			    },
+			    "excess_LOS_materiality_threshold_Days_has_excess_LOS_materiality_threshold_days_value": {
+			      "Binding": {
+			        "ConceptualEntity": "Excess LOS Materiality Threshold (Days)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "excess_LOS_materiality_threshold_Days": {
+			          "Target": {
+			            "Entity": "excess_LOS_materiality_threshold_Days"
+			          }
+			        },
+			        "excess_LOS_materiality_threshold_Days.excess_LOS_materiality_threshold_days_value": {
+			          "Target": {
+			            "Entity": "excess_LOS_materiality_threshold_Days.excess_LOS_materiality_threshold_days_value"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "excess_LOS_materiality_threshold_Days"
+			            },
+			            "Object": {
+			              "Role": "excess_LOS_materiality_threshold_Days.excess_LOS_materiality_threshold_days_value"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "excess_LOS_materiality_threshold_Days_have_excess_LOS_materiality_threshold_days_value"
+			        }
+			      ]
+			    },
+			    "excess_LOS_materiality_threshold_Days_has_excess_LOS_materiality_threshold": {
+			      "Binding": {
+			        "ConceptualEntity": "Excess LOS Materiality Threshold (Days)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "excess_LOS_materiality_threshold_Days": {
+			          "Target": {
+			            "Entity": "excess_LOS_materiality_threshold_Days"
+			          }
+			        },
+			        "excess_LOS_materiality_threshold_Days.excess_LOS_materiality_threshold": {
+			          "Target": {
+			            "Entity": "excess_LOS_materiality_threshold_Days.excess_LOS_materiality_threshold"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "excess_LOS_materiality_threshold_Days"
+			            },
+			            "Object": {
+			              "Role": "excess_LOS_materiality_threshold_Days.excess_LOS_materiality_threshold"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "excess_LOS_materiality_threshold_Days_have_excess_LOS_materiality_thresholds"
+			        }
+			      ]
+			    },
+			    "v_LOS_los_has_avg_excess_LOS_days_above_peer_median": {
+			      "Binding": {
+			        "ConceptualEntity": "_LOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_LOS_los": {
+			          "Target": {
+			            "Entity": "v_LOS_los"
+			          }
+			        },
+			        "v_LOS_los.avg_excess_LOS_days_above_peer_median": {
+			          "Target": {
+			            "Entity": "v_LOS_los.avg_excess_LOS_days_above_peer_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_LOS_los"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.avg_excess_LOS_days_above_peer_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_los_have_avg_excess_LOS_days_above_peer_median"
+			        }
+			      ]
+			    },
+			    "v_LOS_los_has_median_excess_LOS_days_display": {
+			      "Binding": {
+			        "ConceptualEntity": "_LOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_LOS_los": {
+			          "Target": {
+			            "Entity": "v_LOS_los"
+			          }
+			        },
+			        "v_LOS_los.median_excess_LOS_days_display": {
+			          "Target": {
+			            "Entity": "v_LOS_los.median_excess_LOS_days_display"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_LOS_los"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.median_excess_LOS_days_display"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_los_have_median_excess_LOS_days_display"
+			        }
+			      ]
+			    },
+			    "v_LOS_los_has_excess_LOS_color_WhatIf": {
+			      "Binding": {
+			        "ConceptualEntity": "_LOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_LOS_los": {
+			          "Target": {
+			            "Entity": "v_LOS_los"
+			          }
+			        },
+			        "v_LOS_los.excess_LOS_color_WhatIf": {
+			          "Target": {
+			            "Entity": "v_LOS_los.excess_LOS_color_WhatIf"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_LOS_los"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.excess_LOS_color_WhatIf"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_los_have_excess_LOS_color_WhatIf"
+			        }
+			      ]
+			    },
 			    "v_LOS_los_has_facilities_driving_50_of_beddays_count": {
 			      "Binding": {
 			        "ConceptualEntity": "_LOS"
@@ -25159,15 +25614,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_KPI_LOS_summary_has_v_LOS_los_excess_LOS_days_PeerGroup_safe": {
+			    "v_LOS_los_has_excess_LOS_days_PeerGroup_safe": {
 			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
+			        "ConceptualEntity": "_LOS"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fact_KPI_LOS_summary": {
+			        "v_LOS_los": {
 			          "Target": {
-			            "Entity": "fact_KPI_LOS_summary"
+			            "Entity": "v_LOS_los"
 			          }
 			        },
 			        "v_LOS_los.excess_LOS_days_PeerGroup_safe": {
@@ -25180,7 +25635,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fact_KPI_LOS_summary"
+			              "Role": "v_LOS_los"
 			            },
 			            "Object": {
 			              "Role": "v_LOS_los.excess_LOS_days_PeerGroup_safe"
@@ -25188,40 +25643,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_KPI_LOS_summaries_have_excess_LOS_days_PeerGroup_safe"
-			        }
-			      ]
-			    },
-			    "dim_facility_has_v_LOS_los_excess_LOS_days_PeerGroup_safe": {
-			      "Binding": {
-			        "ConceptualEntity": "Dim_Facility"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        },
-			        "v_LOS_los.excess_LOS_days_PeerGroup_safe": {
-			          "Target": {
-			            "Entity": "v_LOS_los.excess_LOS_days_PeerGroup_safe"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "v_LOS_los.excess_LOS_days_PeerGroup_safe"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_excess_LOS_days_PeerGroup_safe"
+			          "ID": "Phrasing_los_have_excess_LOS_days_PeerGroup_safe"
 			        }
 			      ]
 			    },
@@ -32625,6 +33047,52 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_dim_payers_are_unknown_dim_payers"
+			        }
+			      ]
+			    },
+			    "fact_KPI_severity_mix_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_SeverityMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_severity_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_severity_mix"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_severity_mix"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_severity_mixes_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_severity_mix"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_fact_KPI_severity_mixes"
 			        }
 			      ]
 			    },

@@ -72,7 +72,14 @@ table _LOS
 			
 			VAR v = [AVG LOS]
 			VAR m = [PeerGroup LOS Median (PeerGroup safe)]
-			RETURN IF( NOT ISBLANK(v) && v > m, 1, 0)
+			RETURN
+			IF(
+			    NOT ISBLANK(v)
+			        && NOT ISBLANK(m)
+			        && v > m,
+			    1,
+			    0
+			)
 			
 			```
 		formatString: 0
@@ -181,7 +188,10 @@ table _LOS
 
 	measure 'Excess LOS Days (PeerGroup safe)' = ```
 			
-			[AVG LOS] - [PeerGroup LOS Median (PeerGroup safe)]
+			VAR v   = CALCULATE([AVG LOS])
+			VAR pgm = CALCULATE([PeerGroup LOS Median (PeerGroup safe)])
+			RETURN
+			IF(NOT ISBLANK(v) && NOT ISBLANK(pgm), v - pgm)
 			
 			```
 		displayFolder: Helper
@@ -235,28 +245,43 @@ table _LOS
 		displayFolder: Helper
 		lineageTag: 8021d41f-47d7-4f8b-9942-bb4c1f401b99
 
-	measure 'Facilities Above Own Peer-Group LOS Median' =
+	measure 'Facilities Above Own Peer-Group LOS Median' = ```
 			
-			COUNTROWS(
-			    FILTER(
-			        VALUES(Dim_Facility[Facility_Key]),
-			        VAR v = [AVG LOS]
-			        VAR pgm = [PeerGroup LOS Median (FacilitySafe)]
-			        RETURN NOT ISBLANK(v) && NOT ISBLANK(pgm) && v > pgm
+			VAR Facilities =
+			    VALUES(Dim_Facility[Facility_Key])
+			VAR Result =
+			    SUMX(
+			        Facilities,
+			        VAR v   = CALCULATE([AVG LOS])
+			        VAR pgm = CALCULATE([PeerGroup LOS Median (PeerGroup safe)])
+			        RETURN
+			            IF(
+			                NOT ISBLANK(v) && NOT ISBLANK(pgm) && v > pgm,
+			                1,
+			                0
+			            )
 			    )
-			)
+			RETURN
+			COALESCE(Result, 0)
+			
+			
+			
+			
+			
+			```
 		formatString: 0
 		displayFolder: Helper
 		lineageTag: ed377f10-050a-48a4-9fe6-df222851bb98
 
-	measure 'Median Excess LOS (Days)' =
+	measure 'Median Excess LOS (Days)' = ```
 			
 			MEDIANX(
 			    VALUES(Dim_Facility[Facility_Key]),
-			    VAR v = [AVG LOS]
-			    VAR pgm = [PeerGroup LOS Median (FacilitySafe)]
-			    RETURN IF(NOT ISBLANK(v) && NOT ISBLANK(pgm), v - pgm)
+			    CALCULATE([Excess LOS Days (PeerGroup safe)])
 			)
+			
+			
+			```
 		displayFolder: Helper
 		lineageTag: 2e608c3e-32c3-4c18-8afc-17c267045b88
 
@@ -318,6 +343,133 @@ table _LOS
 			```
 		displayFolder: Helper
 		lineageTag: 5387658b-e645-4fa7-ba5e-43a290516d9c
+
+	measure 'Median Excess LOS (Days) (Display)' = ```
+			
+			COALESCE([Median Excess LOS (Days)], 0)
+			
+			```
+		displayFolder: Helper
+		lineageTag: eb361a38-c371-4e2e-b5b6-c4680738b933
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Avg Excess LOS (Days) Above Peer Median' =
+			
+			AVERAGEX(
+			    FILTER(
+			        VALUES(Dim_Facility[Facility_Key]),
+			        CALCULATE([Excess LOS Days (PeerGroup safe)]) > 0
+			    ),
+			    CALCULATE([Excess LOS Days (PeerGroup safe)])
+			)
+		displayFolder: Helper
+		lineageTag: 03cd7293-e706-413a-a76d-4ea8341fd985
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'P75 Excess LOS (Days)' = ```
+			
+			PERCENTILEX.INC(
+			    VALUES(Dim_Facility[Facility_Key]),
+			    CALCULATE([Excess LOS Days (PeerGroup safe)]),
+			    0.75
+			)
+			
+			```
+		displayFolder: Helper
+		lineageTag: c98a3285-1e8a-4e08-a661-6806b6977f6e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Facility Bed-Days Share %' = ```
+			
+			VAR ThisBD = [Total Bed-Days]
+			VAR TotalBD =
+			    CALCULATE(
+			        [Total Bed-Days],
+			        ALLSELECTED(Dim_Facility[Facility_Key])
+			    )
+			RETURN
+			DIVIDE(ThisBD, TotalBD)
+			
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: e31044f0-9196-4770-829e-bfe46285edca
+
+	measure 'Facility Bed-Days Rank' = ```
+			
+			VAR CurrentKey = SELECTEDVALUE(Dim_Facility[Facility_Key])
+			VAR Facilities =
+			    ADDCOLUMNS(
+			        ALLSELECTED(Dim_Facility[Facility_Key]),
+			        "@BD", CALCULATE([Total Bed-Days])
+			    )
+			VAR Ranked =
+			    ADDCOLUMNS(
+			        Facilities,
+			        "@Rank", RANKX(Facilities, [@BD], , DESC, Dense)
+			    )
+			RETURN
+			MAXX(
+			    FILTER(Ranked, Dim_Facility[Facility_Key] = CurrentKey),
+			    [@Rank]
+			)
+			
+			```
+		formatString: 0
+		lineageTag: e738bbd7-f838-4fc0-9b00-b4ab7bceaf61
+
+	measure 'Cumulative Bed-Days Share %' = ```
+			
+			VAR CurrentKey =
+			    SELECTEDVALUE(Dim_Facility[Facility_Key])
+			VAR Facilities =
+			    ADDCOLUMNS(
+			        ALLSELECTED(Dim_Facility[Facility_Key]),
+			        "@BD", CALCULATE([Total Bed-Days])
+			    )
+			VAR TotalBD =
+			    SUMX(Facilities, [@BD])
+			VAR ThisBD =
+			    CALCULATE([Total Bed-Days])
+			VAR CumBD =
+			    SUMX(
+			        FILTER(
+			            Facilities,
+			            [@BD] > ThisBD
+			                || ( [@BD] = ThisBD && Dim_Facility[Facility_Key] <= CurrentKey )
+			        ),
+			        [@BD]
+			    )
+			RETURN
+			DIVIDE(CumBD, TotalBD)
+			
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: b9131801-a5ba-4343-9aab-36d19f6d0977
+
+	measure 'DBG Total Bed-Days (All Facilities)' = ```
+			
+			CALCULATE(
+			    [Total Bed-Days],
+			    ALLSELECTED(Dim_Facility),
+			    REMOVEFILTERS(Dim_Facility[Facility_Key]),
+			    REMOVEFILTERS(Dim_Facility[Facility_Name])
+			)
+			
+			```
+		lineageTag: 03ba8bb1-0793-437d-b467-dd3da6f4c8c7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'DBG Has One Facility Key' = ```
+			
+			IF(HASONEVALUE(Dim_Facility[Facility_Key]), 1, 0)
+			
+			```
+		formatString: 0
+		lineageTag: 6941c542-6e10-453f-bf61-e792c71f0803
 
 	column Column
 		dataType: int64

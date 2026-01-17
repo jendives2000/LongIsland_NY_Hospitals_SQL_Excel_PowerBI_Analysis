@@ -164,8 +164,14 @@ table Dim_ClinicalClass
 			
 			-- one value per peer group, safe in grouped contexts
 			CALCULATE(
-			    MEDIANX( VALUES(Dim_Facility[Facility_Key]), [AVG LOS] ),
-			    REMOVEFILTERS(Dim_Facility[Facility_Name])
+			    MEDIANX(
+			        VALUES(Dim_Facility[Facility_Key]),
+			        CALCULATE([AVG LOS])
+			    ),
+			    ALLEXCEPT(
+			        Dim_Facility,
+			        Dim_Facility[PeerGroup_Name]
+			    )
 			)
 			
 			```

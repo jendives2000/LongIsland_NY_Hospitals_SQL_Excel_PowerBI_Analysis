@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
   "name": "40278200035678cc6065",
   "position": {
-    "x": 667.63636363636363,
-    "y": 34.481825866441227,
+    "x": 667.69230769230774,
+    "y": 34.050779303676613,
     "z": 9000,
-    "height": 300.46753246753246,
-    "width": 595.9480519480519,
+    "height": 380.30769230769232,
+    "width": 590.15384615384619,
     "tabOrder": 8000
   },
   "visual": {
@@ -69,21 +69,8 @@
                 }
               },
               "queryRef": "_LOS.Facilities Above Own Peer-Group LOS Median",
-              "nativeQueryRef": "Facilities Above Own Peer-Group LOS Median"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_LOS"
-                    }
-                  },
-                  "Property": "Median Excess LOS (Days)"
-                }
-              },
-              "queryRef": "_LOS.Median Excess LOS (Days)",
-              "nativeQueryRef": "Median Excess LOS (Days)"
+              "nativeQueryRef": "Facilities Abo. Own PG LOS Median",
+              "displayName": "Facilities Abo. Own PG LOS Median"
             },
             {
               "field": {
@@ -99,6 +86,35 @@
               "queryRef": "_LOS.Facilities Driving 50% of Bed-Days (Count)",
               "nativeQueryRef": "Facilities Driving 50% of Bed-Days",
               "displayName": "Facilities Driving 50% of Bed-Days"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_LOS"
+                    }
+                  },
+                  "Property": "Avg Excess LOS (Days) Above Peer Median"
+                }
+              },
+              "queryRef": "_LOS.Avg Excess LOS (Days) Above Peer Median",
+              "nativeQueryRef": "Avg Excess LOS Abo. PG Median",
+              "displayName": "Avg Excess LOS Abo. PG Median"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_LOS"
+                    }
+                  },
+                  "Property": "P75 Excess LOS (Days)"
+                }
+              },
+              "queryRef": "_LOS.P75 Excess LOS (Days)",
+              "nativeQueryRef": "P75 Excess LOS (Days)"
             }
           ]
         }
@@ -202,7 +218,7 @@
             "rowCount": {
               "expr": {
                 "Literal": {
-                  "Value": "3L"
+                  "Value": "4L"
                 }
               }
             },

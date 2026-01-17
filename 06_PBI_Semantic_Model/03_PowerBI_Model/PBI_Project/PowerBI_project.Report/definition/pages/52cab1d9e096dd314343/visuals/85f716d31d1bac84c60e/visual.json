@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
-  "name": "956d6ac790d9d7491c18",
+  "name": "85f716d31d1bac84c60e",
   "position": {
-    "x": 12.923076923076923,
-    "y": 264.64815657715064,
-    "z": 5000,
-    "height": 41.230769230769234,
-    "width": 275.69230769230768,
-    "tabOrder": 3000
+    "x": 71.467223575820867,
+    "y": 104.39668297110262,
+    "z": 2750,
+    "height": 40.615384615384613,
+    "width": 153.84615384615384,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "actionButton",
@@ -56,14 +56,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'What is Throughput Pressure?'"
+                  "Value": "'LOS by Facility'"
                 }
               }
             },
             "horizontalAlignment": {
               "expr": {
                 "Literal": {
-                  "Value": "'left'"
+                  "Value": "'center'"
                 }
               }
             },
@@ -81,14 +81,21 @@
             "italic": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "14D"
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -102,7 +109,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Click to Know'"
+                  "Value": "'Click to Visualize it'"
                 }
               }
             },
@@ -121,7 +128,7 @@
             "horizontalAlignment": {
               "expr": {
                 "Literal": {
-                  "Value": "'left'"
+                  "Value": "'center'"
                 }
               }
             },
@@ -142,13 +149,97 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "13D"
+                  "Value": "11D"
                 }
               }
             }
           },
           "selector": {
             "id": "hover"
+          }
+        },
+        {
+          "properties": {
+            "italic": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "selected"
+          }
+        }
+      ],
+      "outline": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "weight": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#744EC2'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "hover"
+          }
+        },
+        {
+          "properties": {
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#744EC2'"
+                    }
+                  }
+                }
+              }
+            },
+            "weight": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ]
@@ -174,14 +265,14 @@
             "tooltip": {
               "expr": {
                 "Literal": {
-                  "Value": "'Click to read'"
+                  "Value": "'Severity of Illness reflects how clinically complex and physiologically unstable patients are at admission.  It is not a measure of care quality.'"
                 }
               }
             },
             "bookmark": {
               "expr": {
                 "Literal": {
-                  "Value": "'388ebf8e04702d15361c'"
+                  "Value": "'0e8f4730512066b362a3'"
                 }
               }
             }
@@ -194,7 +285,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'What is Intake?'"
+                  "Value": "'Butt Viz 1'"
                 }
               }
             }
@@ -204,6 +295,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "d2cc8308b5e7590d99b0",
+  "parentGroupName": "d083c1fa679914c261ea",
   "howCreated": "InsertVisualButton"
 }

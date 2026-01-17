@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
   "name": "3a8b153a201dd0bed1b4",
   "position": {
-    "x": 10.24,
+    "x": 10.461538461538462,
     "y": 0,
     "z": 0,
-    "height": 280.32,
-    "width": 1221.12,
+    "height": 500.92307692307691,
+    "width": 1220.9230769230769,
     "tabOrder": 0
   },
   "visual": {
@@ -31,79 +31,62 @@
             },
             {
               "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_KPI_Measures"
-                    }
-                  },
-                  "Property": "Unplanned Admission Rate"
-                }
-              },
-              "queryRef": "_KPI_Measures.Unplanned Admission Rate",
-              "nativeQueryRef": "Unplanned Admission Rate"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Dim_ClinicalClass"
-                    }
-                  },
-                  "Property": "PeerGroup UA Rate Median"
-                }
-              },
-              "queryRef": "Dim_ClinicalClass.PeerGroup UA Rate Median",
-              "nativeQueryRef": "PeerGroup UA Rate Median"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Unplanned"
-                    }
-                  },
-                  "Property": "All PeerGroups UA rate Median"
-                }
-              },
-              "queryRef": "_Unplanned.All PeerGroups UA rate Median",
-              "nativeQueryRef": "All PeerGroups UA rate Median"
-            },
-            {
-              "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
                       "Entity": "Dim_Facility"
                     }
                   },
-                  "Property": "Facility_Name"
+                  "Property": "Facility_Label"
                 }
               },
-              "queryRef": "Dim_Facility.Facility_Name",
-              "nativeQueryRef": "Facility_Name"
+              "queryRef": "Dim_Facility.Facility_Label",
+              "nativeQueryRef": "Facility_Label"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_LOS"
+                    }
+                  },
+                  "Property": "Total Bed-Days"
+                }
+              },
+              "queryRef": "_LOS.Total Bed-Days",
+              "nativeQueryRef": "Total Bed-Days"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_LOS"
+                    }
+                  },
+                  "Property": "Facility Bed-Days Share %"
+                }
+              },
+              "queryRef": "_LOS.Facility Bed-Days Share %",
+              "nativeQueryRef": "Facility Bed-Days Share %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_LOS"
+                    }
+                  },
+                  "Property": "Cumulative Bed-Days Share %"
+                }
+              },
+              "queryRef": "_LOS.Cumulative Bed-Days Share %",
+              "nativeQueryRef": "Cumulative Bed-Days Share %"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "_KPI_Measures"
-                  }
-                },
-                "Property": "Unplanned Admission Rate"
-              }
-            },
-            "direction": "Descending"
-          }
-        ]
       }
     },
     "drillFilterOtherVisuals": true
