@@ -7025,16 +7025,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "facility label": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
 			          "facility tag": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -7096,6 +7086,16 @@ cultureInfo en-US
 			        },
 			        {
 			          "skill": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "aptitude": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -12352,6 +12352,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "Avg Medical Cost per Encounter": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -17692,16 +17702,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "facility label": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
 			          "facility tag": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -17763,6 +17763,16 @@ cultureInfo en-US
 			        },
 			        {
 			          "skill": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "aptitude": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -24655,9 +24665,326 @@ cultureInfo en-US
 			      "Units": [
 			        "day"
 			      ]
+			    },
+			    "dim_facility.facility_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Facility",
+			          "ConceptualProperty": "Facility_Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "facility label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Facility_Label": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "label": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "facility sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "facility tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "facility decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "facility name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.589
+			          }
+			        },
+			        {
+			          "name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.571
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.facility_beddays_share_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "Facility Bed-Days Share %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "facility bed-days share %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "facility bed days share %": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "facility bed day share percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "facility bed day share pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.facility_beddays_rank": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "Facility Bed-Days Rank"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "facility bed-days rank": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "facility bed days rank": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "days rank": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "bed days rank": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.cumulative_beddays_share_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "Cumulative Bed-Days Share %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cumulative bed-days share %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cumulative bed days share %": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "cumulative bed day share percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "cumulative bed day share pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.DBG_total_beddays_all_facilities": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "DBG Total Bed-Days (All Facilities)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "DBG total bed-days (all facilities)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DBG total bed-days": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "DBG total bed days (all facilities)": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "v_LOS_los.DBG_has_one_facility_key": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "DBG Has One Facility Key"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "DBG has one facility key": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "fact_KPI_severity_mix_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_SeverityMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_severity_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_severity_mix"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_severity_mix"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_severity_mixes_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_severity_mix"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_fact_KPI_severity_mixes"
+			        }
+			      ]
+			    },
 			    "fact_KPI_payer_mix_has_dim_facility": {
 			      "Binding": {
 			        "ConceptualEntity": "Fact_KPI_PayerMix"
@@ -25083,6 +25410,270 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_years_have_fact_KPI_dispositions"
+			        }
+			      ]
+			    },
+			    "v_LOS_los_has_DBG_has_one_facility_key": {
+			      "Binding": {
+			        "ConceptualEntity": "_LOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_LOS_los": {
+			          "Target": {
+			            "Entity": "v_LOS_los"
+			          }
+			        },
+			        "v_LOS_los.DBG_has_one_facility_key": {
+			          "Target": {
+			            "Entity": "v_LOS_los.DBG_has_one_facility_key"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_LOS_los"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.DBG_has_one_facility_key"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_los_have_DBG_has_one_facility_key"
+			        }
+			      ]
+			    },
+			    "vw_fact_KPI_severity_mix_by_severity_has_v_LOS_los_DBG_total_beddays_all_facilities": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_Fact_KPI_SeverityMix_BySeverity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fact_KPI_severity_mix_by_severity": {
+			          "Target": {
+			            "Entity": "vw_fact_KPI_severity_mix_by_severity"
+			          }
+			        },
+			        "v_LOS_los.DBG_total_beddays_all_facilities": {
+			          "Target": {
+			            "Entity": "v_LOS_los.DBG_total_beddays_all_facilities"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fact_KPI_severity_mix_by_severity"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.DBG_total_beddays_all_facilities"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fact_KPI_severity_mix_by_severity_have_DBG_total_beddays_all_facilities"
+			        }
+			      ]
+			    },
+			    "fact_KPI_LOS_summary_has_v_LOS_los_DBG_total_beddays_all_facilities": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_LOS_summary": {
+			          "Target": {
+			            "Entity": "fact_KPI_LOS_summary"
+			          }
+			        },
+			        "v_LOS_los.DBG_total_beddays_all_facilities": {
+			          "Target": {
+			            "Entity": "v_LOS_los.DBG_total_beddays_all_facilities"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_LOS_summary"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.DBG_total_beddays_all_facilities"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_LOS_summaries_have_DBG_total_beddays_all_facilities"
+			        }
+			      ]
+			    },
+			    "v_LOS_los_has_cumulative_beddays_share_": {
+			      "Binding": {
+			        "ConceptualEntity": "_LOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_LOS_los": {
+			          "Target": {
+			            "Entity": "v_LOS_los"
+			          }
+			        },
+			        "v_LOS_los.cumulative_beddays_share_": {
+			          "Target": {
+			            "Entity": "v_LOS_los.cumulative_beddays_share_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_LOS_los"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.cumulative_beddays_share_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_los_have_cumulative_beddays_share_"
+			        }
+			      ]
+			    },
+			    "v_LOS_los_has_facility_beddays_rank": {
+			      "Binding": {
+			        "ConceptualEntity": "_LOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "v_LOS_los": {
+			          "Target": {
+			            "Entity": "v_LOS_los"
+			          }
+			        },
+			        "v_LOS_los.facility_beddays_rank": {
+			          "Target": {
+			            "Entity": "v_LOS_los.facility_beddays_rank"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "v_LOS_los"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.facility_beddays_rank"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_los_have_facility_beddays_rank"
+			        }
+			      ]
+			    },
+			    "vw_fact_KPI_severity_mix_by_severity_has_v_LOS_los_facility_beddays_share_": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_Fact_KPI_SeverityMix_BySeverity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fact_KPI_severity_mix_by_severity": {
+			          "Target": {
+			            "Entity": "vw_fact_KPI_severity_mix_by_severity"
+			          }
+			        },
+			        "v_LOS_los.facility_beddays_share_": {
+			          "Target": {
+			            "Entity": "v_LOS_los.facility_beddays_share_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fact_KPI_severity_mix_by_severity"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.facility_beddays_share_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fact_KPI_severity_mix_by_severity_have_facility_beddays_share_"
+			        }
+			      ]
+			    },
+			    "fact_KPI_LOS_summary_has_v_LOS_los_facility_beddays_share_": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_LOS_summary": {
+			          "Target": {
+			            "Entity": "fact_KPI_LOS_summary"
+			          }
+			        },
+			        "v_LOS_los.facility_beddays_share_": {
+			          "Target": {
+			            "Entity": "v_LOS_los.facility_beddays_share_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_LOS_summary"
+			            },
+			            "Object": {
+			              "Role": "v_LOS_los.facility_beddays_share_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_LOS_summaries_have_facility_beddays_share_"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_facility_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "dim_facility.facility_label": {
+			          "Target": {
+			            "Entity": "dim_facility.facility_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "dim_facility.facility_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_facility_labels"
 			        }
 			      ]
 			    },
@@ -33047,52 +33638,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_dim_payers_are_unknown_dim_payers"
-			        }
-			      ]
-			    },
-			    "fact_KPI_severity_mix_has_dim_facility": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_SeverityMix"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_severity_mix": {
-			          "Target": {
-			            "Entity": "fact_KPI_severity_mix"
-			          }
-			        },
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_severity_mix"
-			            },
-			            "Object": {
-			              "Role": "dim_facility"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_severity_mixes_have_dim_facilities"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_severity_mix"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_fact_KPI_severity_mixes"
 			        }
 			      ]
 			    },

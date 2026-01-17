@@ -1,0 +1,88 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.1.0/schema.json",
+  "name": "2c9051ba588676aae740",
+  "displayName": "Cost & Margin Pressure",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "objects": {
+    "outspace": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 1,
+                    "Percent": 0.2
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "backgroundColor": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 0,
+                    "Percent": -0.5
+                  }
+                }
+              }
+            }
+          },
+          "foregroundColor": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 0,
+                    "Percent": 0
+                  }
+                }
+              }
+            }
+          },
+          "titleSize": {
+            "expr": {
+              "Literal": {
+                "Value": "13L"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode",
+  "visualInteractions": [
+    {
+      "source": "e676795e7e2c77666d2b",
+      "target": "37430ef0262655072a70",
+      "type": "DataFilter"
+    },
+    {
+      "source": "e676795e7e2c77666d2b",
+      "target": "414e93903540dc116b8d",
+      "type": "DataFilter"
+    },
+    {
+      "source": "e676795e7e2c77666d2b",
+      "target": "be059e5bbb11d87580e4",
+      "type": "DataFilter"
+    },
+    {
+      "source": "e676795e7e2c77666d2b",
+      "target": "e902f46369baa584becb",
+      "type": "DataFilter"
+    }
+  ]
+}

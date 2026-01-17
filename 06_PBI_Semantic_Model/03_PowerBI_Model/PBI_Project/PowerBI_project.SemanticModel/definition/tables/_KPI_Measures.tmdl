@@ -62,9 +62,8 @@ table _KPI_Measures
 			    SUM(Fact_KPI_FinancialPressure[Total_Costs]),
 			    SUM(Fact_KPI_FinancialPressure[Total_Charges])
 			)
+		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 6d6cb3b4-39d7-47ed-b0b7-9e9d3556df35
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Column
 		dataType: int64
