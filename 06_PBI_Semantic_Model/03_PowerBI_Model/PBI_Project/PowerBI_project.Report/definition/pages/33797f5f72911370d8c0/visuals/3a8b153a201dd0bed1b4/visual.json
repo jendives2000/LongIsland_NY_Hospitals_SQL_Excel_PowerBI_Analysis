@@ -48,42 +48,42 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_LOS"
+                      "Entity": "_Guardrails"
                     }
                   },
-                  "Property": "Total Bed-Days"
+                  "Property": "Margin Pressure (Guarded)"
                 }
               },
-              "queryRef": "_LOS.Total Bed-Days",
-              "nativeQueryRef": "Total Bed-Days"
+              "queryRef": "_Guardrails.Margin Pressure (Guarded)",
+              "nativeQueryRef": "Margin Pressure (Guarded)"
             },
             {
               "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_LOS"
+                      "Entity": "Dim_ClinicalClass"
                     }
                   },
-                  "Property": "Facility Bed-Days Share %"
+                  "Property": "PeerGroup Margin Pressure Median"
                 }
               },
-              "queryRef": "_LOS.Facility Bed-Days Share %",
-              "nativeQueryRef": "Facility Bed-Days Share %"
+              "queryRef": "Dim_ClinicalClass.PeerGroup Margin Pressure Median",
+              "nativeQueryRef": "PeerGroup Margin Pressure Median"
             },
             {
               "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_LOS"
+                      "Entity": "_Financial_Basic"
                     }
                   },
-                  "Property": "Cumulative Bed-Days Share %"
+                  "Property": "Is Above Own PG Margin Median"
                 }
               },
-              "queryRef": "_LOS.Cumulative Bed-Days Share %",
-              "nativeQueryRef": "Cumulative Bed-Days Share %"
+              "queryRef": "_Financial_Basic.Is Above Own PG Margin Median",
+              "nativeQueryRef": "Is Above Own PG Margin Median"
             }
           ]
         }

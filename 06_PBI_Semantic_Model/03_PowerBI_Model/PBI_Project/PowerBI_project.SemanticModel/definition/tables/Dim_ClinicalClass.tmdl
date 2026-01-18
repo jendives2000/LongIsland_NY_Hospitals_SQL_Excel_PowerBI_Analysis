@@ -180,6 +180,43 @@ table Dim_ClinicalClass
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'PeerGroup Margin Median (PeerGroup safe)' =
+			
+			-- one value per peer group, safe in grouped contexts
+			CALCULATE(
+			    MEDIANX(
+			        VALUES(Dim_Facility[Facility_Key]),
+			        CALCULATE([Margin Pressure])
+			    ),
+			    ALLEXCEPT(
+			        Dim_Facility,
+			        Dim_Facility[PeerGroup_Name]
+			    )
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: C&M P
+		lineageTag: f9e9adea-68f6-46da-bb31-6a69055ccc14
+
+	measure 'PeerGroup Margin Pressure Median' =
+			
+			VAR CurrentPG = SELECTEDVALUE(Dim_Facility[PeerGroup_Name])
+			RETURN
+			IF(
+			    NOT ISBLANK(CurrentPG),
+			    CALCULATE(
+			        MEDIANX(
+			            VALUES(Dim_Facility[Facility_Key]),
+			            [Margin Pressure]
+			        ),
+			        REMOVEFILTERS(Dim_Facility[Facility_Key]),
+			        REMOVEFILTERS(Dim_Facility[Facility_Name]),
+			        Dim_Facility[PeerGroup_Name] = CurrentPG
+			    )
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: C&M P
+		lineageTag: a87336ee-141e-4def-afb0-a8e98dbd6468
+
 	column ClinicalClass_Key
 		dataType: int64
 		isHidden

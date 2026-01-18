@@ -25068,7 +25068,7 @@ cultureInfo en-US
 			    "financial_basic.PeerGroup_margin_pressure_median": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_Financial_Basic",
+			          "ConceptualEntity": "Dim_ClinicalClass",
 			          "ConceptualProperty": "PeerGroup Margin Pressure Median"
 			        }
 			      },
@@ -26113,6 +26113,612 @@ cultureInfo en-US
 			    }
 			  },
 			  "Relationships": {
+			    "fact_KPI_severity_mix_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_SeverityMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_severity_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_severity_mix"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_severity_mix"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_severity_mixes_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_severity_mix"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_fact_KPI_severity_mixes"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_payer_mix"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_fact_KPI_payer_mixes"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_dim_payer": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "dim_payer": {
+			          "Target": {
+			            "Entity": "dim_payer"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "dim_payer"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_dim_payers"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_payer"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_payer_mix"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_payers_have_fact_KPI_payer_mixes"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_dim_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "dim_year": {
+			          "Target": {
+			            "Entity": "dim_year"
+			          },
+			          "Nouns": [
+			            {
+			              "discharge year": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "dim_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_dim_years"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_year"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_payer_mix"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_years_have_fact_KPI_payer_mixes"
+			        }
+			      ]
+			    },
+			    "fact_KPI_mortality_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Mortality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_mortality": {
+			          "Target": {
+			            "Entity": "fact_KPI_mortality"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_mortality"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_mortalities_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_mortality"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_fact_KPI_mortalities"
+			        }
+			      ]
+			    },
+			    "fact_KPI_LOS_summary_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_LOS_summary": {
+			          "Target": {
+			            "Entity": "fact_KPI_LOS_summary"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_LOS_summary"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_LOS_summaries_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_LOS_summary"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_fact_KPI_LOS_summaries"
+			        }
+			      ]
+			    },
+			    "fact_KPI_financial_pressure_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_FinancialPressure"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_financial_pressure": {
+			          "Target": {
+			            "Entity": "fact_KPI_financial_pressure"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_financial_pressure"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_financial_pressures_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_financial_pressure"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_fact_KPI_financial_pressures"
+			        }
+			      ]
+			    },
+			    "fact_KPI_disposition_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Disposition"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_disposition": {
+			          "Target": {
+			            "Entity": "fact_KPI_disposition"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_disposition"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_dispositions_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_disposition"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_fact_KPI_dispositions"
+			        }
+			      ]
+			    },
+			    "fact_KPI_disposition_has_dim_disposition": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Disposition"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_disposition": {
+			          "Target": {
+			            "Entity": "fact_KPI_disposition"
+			          }
+			        },
+			        "dim_disposition": {
+			          "Target": {
+			            "Entity": "dim_disposition"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_disposition"
+			            },
+			            "Object": {
+			              "Role": "dim_disposition"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_dispositions_have_dim_dispositions"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_disposition"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_disposition"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dispositions_have_fact_KPI_dispositions"
+			        }
+			      ]
+			    },
+			    "fact_KPI_disposition_has_dim_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Disposition"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_disposition": {
+			          "Target": {
+			            "Entity": "fact_KPI_disposition"
+			          }
+			        },
+			        "dim_year": {
+			          "Target": {
+			            "Entity": "dim_year"
+			          },
+			          "Nouns": [
+			            {
+			              "discharge year": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_disposition"
+			            },
+			            "Object": {
+			              "Role": "dim_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_dispositions_have_dim_years"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_year"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_disposition"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_years_have_fact_KPI_dispositions"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_financial_basic_total_fin_facilities": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "financial_basic.total_fin_facilities": {
+			          "Target": {
+			            "Entity": "financial_basic.total_fin_facilities"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "financial_basic.total_fin_facilities"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_total_fin_facilities"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_financial_basic_facilities_above_crossPG_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "financial_basic.facilities_above_crossPG_median": {
+			          "Target": {
+			            "Entity": "financial_basic.facilities_above_crossPG_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "financial_basic.facilities_above_crossPG_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_facilities_above_crossPG_median"
+			        }
+			      ]
+			    },
+			    "fact_KPI_financial_pressure_has_financial_basic_avg_charges_per_encounter": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_FinancialPressure"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_financial_pressure": {
+			          "Target": {
+			            "Entity": "fact_KPI_financial_pressure"
+			          }
+			        },
+			        "financial_basic.avg_charges_per_encounter": {
+			          "Target": {
+			            "Entity": "financial_basic.avg_charges_per_encounter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_financial_pressure"
+			            },
+			            "Object": {
+			              "Role": "financial_basic.avg_charges_per_encounter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_financial_pressures_have_avg_charges_per_encounter"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_financial_basic_facilities_above_PG_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "financial_basic.facilities_above_PG_median": {
+			          "Target": {
+			            "Entity": "financial_basic.facilities_above_PG_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "financial_basic.facilities_above_PG_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_facilities_above_PG_median"
+			        }
+			      ]
+			    },
 			    "financial_basic_has_financial_has_volume": {
 			      "Binding": {
 			        "ConceptualEntity": "_Financial_Basic"
@@ -34668,612 +35274,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_dim_payers_are_unknown_dim_payers"
-			        }
-			      ]
-			    },
-			    "dim_facility_has_financial_basic_facilities_above_PG_median": {
-			      "Binding": {
-			        "ConceptualEntity": "Dim_Facility"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        },
-			        "financial_basic.facilities_above_PG_median": {
-			          "Target": {
-			            "Entity": "financial_basic.facilities_above_PG_median"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "financial_basic.facilities_above_PG_median"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_facilities_above_PG_median"
-			        }
-			      ]
-			    },
-			    "fact_KPI_financial_pressure_has_financial_basic_avg_charges_per_encounter": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_FinancialPressure"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_financial_pressure": {
-			          "Target": {
-			            "Entity": "fact_KPI_financial_pressure"
-			          }
-			        },
-			        "financial_basic.avg_charges_per_encounter": {
-			          "Target": {
-			            "Entity": "financial_basic.avg_charges_per_encounter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_financial_pressure"
-			            },
-			            "Object": {
-			              "Role": "financial_basic.avg_charges_per_encounter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_financial_pressures_have_avg_charges_per_encounter"
-			        }
-			      ]
-			    },
-			    "dim_facility_has_financial_basic_facilities_above_crossPG_median": {
-			      "Binding": {
-			        "ConceptualEntity": "Dim_Facility"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        },
-			        "financial_basic.facilities_above_crossPG_median": {
-			          "Target": {
-			            "Entity": "financial_basic.facilities_above_crossPG_median"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "financial_basic.facilities_above_crossPG_median"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_facilities_above_crossPG_median"
-			        }
-			      ]
-			    },
-			    "dim_facility_has_financial_basic_total_fin_facilities": {
-			      "Binding": {
-			        "ConceptualEntity": "Dim_Facility"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        },
-			        "financial_basic.total_fin_facilities": {
-			          "Target": {
-			            "Entity": "financial_basic.total_fin_facilities"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "financial_basic.total_fin_facilities"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_total_fin_facilities"
-			        }
-			      ]
-			    },
-			    "fact_KPI_disposition_has_dim_year": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_Disposition"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_disposition": {
-			          "Target": {
-			            "Entity": "fact_KPI_disposition"
-			          }
-			        },
-			        "dim_year": {
-			          "Target": {
-			            "Entity": "dim_year"
-			          },
-			          "Nouns": [
-			            {
-			              "discharge year": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_disposition"
-			            },
-			            "Object": {
-			              "Role": "dim_year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_dispositions_have_dim_years"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_year"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_disposition"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_years_have_fact_KPI_dispositions"
-			        }
-			      ]
-			    },
-			    "fact_KPI_disposition_has_dim_disposition": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_Disposition"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_disposition": {
-			          "Target": {
-			            "Entity": "fact_KPI_disposition"
-			          }
-			        },
-			        "dim_disposition": {
-			          "Target": {
-			            "Entity": "dim_disposition"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_disposition"
-			            },
-			            "Object": {
-			              "Role": "dim_disposition"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_dispositions_have_dim_dispositions"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_disposition"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_disposition"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_dispositions_have_fact_KPI_dispositions"
-			        }
-			      ]
-			    },
-			    "fact_KPI_disposition_has_dim_facility": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_Disposition"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_disposition": {
-			          "Target": {
-			            "Entity": "fact_KPI_disposition"
-			          }
-			        },
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_disposition"
-			            },
-			            "Object": {
-			              "Role": "dim_facility"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_dispositions_have_dim_facilities"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_disposition"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_fact_KPI_dispositions"
-			        }
-			      ]
-			    },
-			    "fact_KPI_financial_pressure_has_dim_facility": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_FinancialPressure"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_financial_pressure": {
-			          "Target": {
-			            "Entity": "fact_KPI_financial_pressure"
-			          }
-			        },
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_financial_pressure"
-			            },
-			            "Object": {
-			              "Role": "dim_facility"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_financial_pressures_have_dim_facilities"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_financial_pressure"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_fact_KPI_financial_pressures"
-			        }
-			      ]
-			    },
-			    "fact_KPI_LOS_summary_has_dim_facility": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_LOS_summary": {
-			          "Target": {
-			            "Entity": "fact_KPI_LOS_summary"
-			          }
-			        },
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_LOS_summary"
-			            },
-			            "Object": {
-			              "Role": "dim_facility"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_LOS_summaries_have_dim_facilities"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_LOS_summary"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_fact_KPI_LOS_summaries"
-			        }
-			      ]
-			    },
-			    "fact_KPI_mortality_has_dim_facility": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_Mortality"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_mortality": {
-			          "Target": {
-			            "Entity": "fact_KPI_mortality"
-			          }
-			        },
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_mortality"
-			            },
-			            "Object": {
-			              "Role": "dim_facility"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_mortalities_have_dim_facilities"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_mortality"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_fact_KPI_mortalities"
-			        }
-			      ]
-			    },
-			    "fact_KPI_payer_mix_has_dim_year": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_PayerMix"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_payer_mix": {
-			          "Target": {
-			            "Entity": "fact_KPI_payer_mix"
-			          }
-			        },
-			        "dim_year": {
-			          "Target": {
-			            "Entity": "dim_year"
-			          },
-			          "Nouns": [
-			            {
-			              "discharge year": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_payer_mix"
-			            },
-			            "Object": {
-			              "Role": "dim_year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_payer_mixes_have_dim_years"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_year"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_payer_mix"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_years_have_fact_KPI_payer_mixes"
-			        }
-			      ]
-			    },
-			    "fact_KPI_payer_mix_has_dim_payer": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_PayerMix"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_payer_mix": {
-			          "Target": {
-			            "Entity": "fact_KPI_payer_mix"
-			          }
-			        },
-			        "dim_payer": {
-			          "Target": {
-			            "Entity": "dim_payer"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_payer_mix"
-			            },
-			            "Object": {
-			              "Role": "dim_payer"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_payer_mixes_have_dim_payers"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_payer"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_payer_mix"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_payers_have_fact_KPI_payer_mixes"
-			        }
-			      ]
-			    },
-			    "fact_KPI_payer_mix_has_dim_facility": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_PayerMix"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_payer_mix": {
-			          "Target": {
-			            "Entity": "fact_KPI_payer_mix"
-			          }
-			        },
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_payer_mix"
-			            },
-			            "Object": {
-			              "Role": "dim_facility"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_payer_mixes_have_dim_facilities"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_payer_mix"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_fact_KPI_payer_mixes"
-			        }
-			      ]
-			    },
-			    "fact_KPI_severity_mix_has_dim_facility": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_SeverityMix"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_severity_mix": {
-			          "Target": {
-			            "Entity": "fact_KPI_severity_mix"
-			          }
-			        },
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_severity_mix"
-			            },
-			            "Object": {
-			              "Role": "dim_facility"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_severity_mixes_have_dim_facilities"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_severity_mix"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_fact_KPI_severity_mixes"
 			        }
 			      ]
 			    },

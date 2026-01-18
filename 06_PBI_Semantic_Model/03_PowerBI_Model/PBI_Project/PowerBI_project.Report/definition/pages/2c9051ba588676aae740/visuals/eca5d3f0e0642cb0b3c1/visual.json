@@ -20,19 +20,34 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Financial_Basic"
+                      "Entity": "Dim_ClinicalClass"
                     }
                   },
-                  "Property": "Neg Margin Rate"
+                  "Property": "PeerGroup Margin Pressure Median"
                 }
               },
-              "queryRef": "_Financial_Basic.Neg Margin Rate",
-              "nativeQueryRef": "Neg Margin Rate"
+              "queryRef": "_Financial_Basic.PeerGroup Margin Pressure Median",
+              "nativeQueryRef": "PeerGroup Margin Pressure Median"
             }
           ]
         }
       },
       "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Dim_ClinicalClass"
+                  }
+                },
+                "Property": "PeerGroup Margin Pressure Median"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
         "isDefaultSort": true
       }
     },

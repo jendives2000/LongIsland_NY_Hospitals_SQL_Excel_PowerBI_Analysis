@@ -72,27 +72,6 @@ table _Financial_Basic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'PeerGroup Margin Pressure Median' =
-			
-			VAR CurrentPG = SELECTEDVALUE(Dim_Facility[PeerGroup_Name])
-			RETURN
-			IF(
-			    NOT ISBLANK(CurrentPG),
-			    CALCULATE(
-			        MEDIANX(
-			            VALUES(Dim_Facility[Facility_Key]),
-			            [Margin Pressure]
-			        ),
-			        REMOVEFILTERS(Dim_Facility[Facility_Key]),
-			        REMOVEFILTERS(Dim_Facility[Facility_Name]),
-			        Dim_Facility[PeerGroup_Name] = CurrentPG
-			    )
-			)
-		displayFolder: Helper
-		lineageTag: a87336ee-141e-4def-afb0-a8e98dbd6468
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	measure 'Cross-PG Margin Pressure Median' =
 			
 			CALCULATE(
@@ -119,8 +98,8 @@ table _Financial_Basic
 			
 			VAR Excess = [Excess Margin Pressure vs PG Median]
 			RETURN
-			IF(Excess > 0, TRUE(), FALSE())
-		formatString: """TRUE"";""TRUE"";""FALSE"""
+			IF(Excess > 0, 1, 0)
+		formatString: 0
 		displayFolder: Helper
 		lineageTag: 933af802-bc9b-4dad-9de6-4a0dea35cdb7
 
@@ -231,6 +210,45 @@ table _Financial_Basic
 		formatString: 0
 		displayFolder: Helper
 		lineageTag: 4abbf1d6-7b2b-4b3b-9220-6c0ede6a6b89
+
+	measure 'Is Above Own PG Margin Median' = ```
+			
+			VAR FacilityMargin =
+			    [Margin Pressure (Guarded)]
+			
+			VAR PGMedian =
+			    [PeerGroup Margin Median (PeerGroup safe)]
+			
+			RETURN
+			IF (
+			    NOT ISBLANK ( FacilityMargin )
+			        && FacilityMargin > PGMedian,
+			    1,
+			    0
+			)
+			
+			```
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: b1811f68-ad78-40b0-95ac-ba434205034a
+
+	measure 'All-Facilities Margin Pressure Median' = ```
+			
+			CALCULATE (
+			    VAR T =
+			        ADDCOLUMNS (
+			            ALL ( Dim_Facility[Facility_Key] ),
+			            "__mp", CALCULATE ( [Margin Pressure] )
+			        )
+			    RETURN
+			        MEDIANX ( FILTER ( T, NOT ISBLANK ( [__mp] ) ), [__mp] ),
+			    REMOVEFILTERS ( Dim_Facility )
+			)
+			
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Helper
+		lineageTag: f91af44f-6756-45a9-9225-501dfed5dd3f
 
 	column Column
 		dataType: int64

@@ -169,9 +169,8 @@ table _Guardrails
 			    [Margin Pressure],
 			    BLANK()
 			)
+		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 7b7905f1-7d2c-41b1-a2a0-2414f8cb745e
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'FP Avg Cost per Encounter (Guarded)' = ```
 			
