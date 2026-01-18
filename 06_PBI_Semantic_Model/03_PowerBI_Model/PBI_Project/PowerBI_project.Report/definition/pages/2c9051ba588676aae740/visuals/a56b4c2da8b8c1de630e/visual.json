@@ -37,6 +37,20 @@
                       "Entity": "_Financial_Basic"
                     }
                   },
+                  "Property": "Neg Margin Rate"
+                }
+              },
+              "queryRef": "_Financial_Basic.Neg Margin Rate",
+              "nativeQueryRef": "Neg Margin Rate"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Financial_Basic"
+                    }
+                  },
                   "Property": "AVG Cost / Encounter"
                 }
               },
@@ -52,11 +66,25 @@
                       "Entity": "_Financial_Basic"
                     }
                   },
-                  "Property": "Neg Margin Rate"
+                  "Property": "Avg Charges per Encounter"
                 }
               },
-              "queryRef": "_Financial_Basic.Neg Margin Rate",
-              "nativeQueryRef": "Neg Margin Rate"
+              "queryRef": "_Financial_Basic.Avg Charges per Encounter",
+              "nativeQueryRef": "Avg Charges per Encounter"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_LOS"
+                    }
+                  },
+                  "Property": "Total Bed-Days"
+                }
+              },
+              "queryRef": "_LOS.Total Bed-Days",
+              "nativeQueryRef": "Total Bed-Days"
             },
             {
               "field": {
@@ -77,6 +105,49 @@
               "queryRef": "Sum(Fact_KPI_FinancialPressure.Encounter_Count)",
               "nativeQueryRef": "Total Encounters (Volume)",
               "displayName": "Total Encounters (Volume)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Financial_Basic"
+                    }
+                  },
+                  "Property": "Neg Margin Total Encounters"
+                }
+              },
+              "queryRef": "_Financial_Basic.Neg Margin Total Encounters",
+              "nativeQueryRef": "Neg Margin Total Encounters"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Financial_Basic"
+                    }
+                  },
+                  "Property": "Facilities Above PG Median"
+                }
+              },
+              "queryRef": "_Financial_Basic.Facilities Above PG Median",
+              "nativeQueryRef": "Facilities Above PG Margin Median",
+              "displayName": "Facilities Above PG Margin Median"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Financial_Basic"
+                    }
+                  },
+                  "Property": "Facilities with Negative Margin"
+                }
+              },
+              "queryRef": "_Financial_Basic.Facilities with Negative Margin",
+              "nativeQueryRef": "Facilities with Negative Margin"
             }
           ]
         }
@@ -160,10 +231,31 @@
                   }
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "25D"
+                }
+              }
             }
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "25D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Financial_Basic.Neg Margin Total Encounters"
           }
         }
       ],
@@ -180,7 +272,7 @@
             "rowCount": {
               "expr": {
                 "Literal": {
-                  "Value": "4L"
+                  "Value": "5L"
                 }
               }
             },

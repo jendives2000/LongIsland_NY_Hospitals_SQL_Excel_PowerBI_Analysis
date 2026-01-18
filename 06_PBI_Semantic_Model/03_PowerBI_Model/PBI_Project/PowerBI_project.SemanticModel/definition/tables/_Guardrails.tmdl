@@ -165,9 +165,9 @@ table _Guardrails
 	measure 'Margin Pressure (Guarded)' =
 			
 			IF(
-			    [FinPressure Total Encounters] < 30,
-			    BLANK(),
-			    [Margin Pressure]
+			    [Financial Has Volume] = 1,
+			    [Margin Pressure],
+			    BLANK()
 			)
 		lineageTag: 7b7905f1-7d2c-41b1-a2a0-2414f8cb745e
 

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
+  "name": "eca5d3f0e0642cb0b3c1",
+  "position": {
+    "x": 720.61538461538464,
+    "y": 180.30769230769232,
+    "z": 17000,
+    "height": 299.69230769230768,
+    "width": 299.69230769230768,
+    "tabOrder": 17000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Financial_Basic"
+                    }
+                  },
+                  "Property": "Neg Margin Rate"
+                }
+              },
+              "queryRef": "_Financial_Basic.Neg Margin Rate",
+              "nativeQueryRef": "Neg Margin Rate"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "isHidden": true
+}

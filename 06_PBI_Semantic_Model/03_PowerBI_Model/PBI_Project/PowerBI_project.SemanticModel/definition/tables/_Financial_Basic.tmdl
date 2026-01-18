@@ -22,9 +22,10 @@ table _Financial_Basic
 			    SUM(Fact_KPI_FinancialPressure[Total_Costs]),
 			    SUM(Fact_KPI_FinancialPressure[Encounter_Count])
 			)
+		formatString: \$#,0.0;(\$#,0.0);\$#,0.0
 		lineageTag: a59e7ed7-5288-4dc0-809a-ceb0c24daca7
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
 	measure 'AVG Charge / Encounter' =
 			
@@ -56,9 +57,180 @@ table _Financial_Basic
 			    [Neg Margin Total Encounters],
 			    SUM(Fact_KPI_FinancialPressure[Encounter_Count])
 			)
+		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 5a3a15b3-1591-45d1-9632-c2d3e0beb332
 
+	measure 'Margin Pressure Burden' =
+			
+			VAR TotalCosts = SUM(Fact_KPI_FinancialPressure[Total_Costs])
+			VAR TotalCharges = SUM(Fact_KPI_FinancialPressure[Total_Charges])
+			VAR MarginGap = TotalCosts - TotalCharges  // Negative margin amount
+			RETURN
+			IF(MarginGap > 0, MarginGap, 0)  // Only count where costs exceed charges
+		displayFolder: Helper
+		lineageTag: e8e2ec27-8019-4ca9-bb1c-51a63ba22c9e
+
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'PeerGroup Margin Pressure Median' =
+			
+			VAR CurrentPG = SELECTEDVALUE(Dim_Facility[PeerGroup_Name])
+			RETURN
+			IF(
+			    NOT ISBLANK(CurrentPG),
+			    CALCULATE(
+			        MEDIANX(
+			            VALUES(Dim_Facility[Facility_Key]),
+			            [Margin Pressure]
+			        ),
+			        REMOVEFILTERS(Dim_Facility[Facility_Key]),
+			        REMOVEFILTERS(Dim_Facility[Facility_Name]),
+			        Dim_Facility[PeerGroup_Name] = CurrentPG
+			    )
+			)
+		displayFolder: Helper
+		lineageTag: a87336ee-141e-4def-afb0-a8e98dbd6468
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Cross-PG Margin Pressure Median' =
+			
+			CALCULATE(
+			    MEDIANX(
+			        VALUES(Dim_Facility[Facility_Key]),
+			        [Margin Pressure]
+			    ),
+			    REMOVEFILTERS(Dim_Facility)
+			)
+		displayFolder: Helper
+		lineageTag: 5f283d86-0e4d-4d90-80e9-bd8c21e44a0b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Excess Margin Pressure vs PG Median' =
+			
+			[Margin Pressure] - [PeerGroup Margin Pressure Median]
+		displayFolder: Helper
+		lineageTag: 96b446e1-f4a9-4003-a8d8-f6da3f0f568a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Is Above PG Margin Median' =
+			
+			VAR Excess = [Excess Margin Pressure vs PG Median]
+			RETURN
+			IF(Excess > 0, TRUE(), FALSE())
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		displayFolder: Helper
+		lineageTag: 933af802-bc9b-4dad-9de6-4a0dea35cdb7
+
+	measure 'Is Above Cross-PG Margin Median' =
+			
+			VAR CurrentMP = [Margin Pressure]
+			VAR CrossMedian = [Cross-PG Margin Pressure Median]
+			RETURN
+			IF(CurrentMP > CrossMedian, TRUE(), FALSE())
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		displayFolder: Helper
+		lineageTag: 4ca6b3d2-f9f0-489d-af10-559e5f8cf05d
+
+	measure 'Facilities with Negative Margin' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(Fact_KPI_FinancialPressure[Facility_Key]),
+			    FILTER(
+			        VALUES(Fact_KPI_FinancialPressure[Facility_Key]),
+			        [Neg Margin Rate] > 0
+			    )
+			)
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: b9f84d05-479c-4b79-b00a-f840ca92fc2e
+
+	measure 'Cumulative Margin Burden %' = ```
+			
+			VAR CurrentFacility = SELECTEDVALUE(Dim_Facility[Facility_Key])
+			VAR AllBurden = 
+			    CALCULATE(
+			        [Margin Pressure Burden],
+			        REMOVEFILTERS(Dim_Facility)
+			    )
+			VAR RankedFacilities = 
+			    ADDCOLUMNS(
+			        VALUES(Dim_Facility[Facility_Key]),
+			        "@Burden", [Margin Pressure Burden]
+			    )
+			VAR CurrentRank = 
+			    RANKX(
+			        RankedFacilities,
+			        [@Burden],
+			        ,
+			        DESC,
+			        DENSE
+			    )
+			VAR CumulativeBurden = 
+			    CALCULATE(
+			        [Margin Pressure Burden],
+			        FILTER(
+			            RankedFacilities,
+			            RANKX(RankedFacilities, [@Burden], , DESC, DENSE) <= CurrentRank
+			        )
+			    )
+			RETURN
+			DIVIDE(CumulativeBurden, AllBurden)
+			```
+		displayFolder: Helper
+		lineageTag: 2cffff85-b832-4500-8f88-6338855e0483
+
+	measure 'Financial Has Volume' =
+			
+			IF(
+			    SUM(Fact_KPI_FinancialPressure[Encounter_Count]) >= 30,
+			    1,
+			    0
+			)
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: 469913f9-2613-4e1e-bf3b-e11c17b80229
+
+	measure 'Facilities Above PG Median' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(Dim_Facility[Facility_Key]),
+			    FILTER(
+			        VALUES(Dim_Facility[Facility_Key]),
+			        [Is Above PG Margin Median] = TRUE()
+			    )
+			)
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: 5a3e057f-8324-44b9-8287-e102ffd4539d
+
+	measure 'Avg Charges per Encounter' = [AVG Charge / Encounter]
+		formatString: \$#,0.0;(\$#,0.0);\$#,0.0
+		lineageTag: 72384724-e34a-4b2e-a20b-db528c447066
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Facilities Above Cross-PG Median' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(Dim_Facility[Facility_Key]),
+			    FILTER(
+			        VALUES(Dim_Facility[Facility_Key]),
+			        [Is Above Cross-PG Margin Median] = TRUE()
+			    )
+			)
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: 5125b51d-bdf8-4234-9bd0-3be9cb64af62
+
+	measure 'Total Fin Facilities' =
+			
+			DISTINCTCOUNT(Dim_Facility[Facility_Key])
+		formatString: 0
+		displayFolder: Helper
+		lineageTag: 4abbf1d6-7b2b-4b3b-9220-6c0ede6a6b89
 
 	column Column
 		dataType: int64
