@@ -66,12 +66,10 @@ table _KPI_Measures
 		lineageTag: 6d6cb3b4-39d7-47ed-b0b7-9e9d3556df35
 
 	column Column
-		dataType: int64
 		formatString: 0
 		lineageTag: 2eb54252-9b45-4a0f-b8ac-54036825999e
 		summarizeBy: sum
 		isNameInferred
-		isDataTypeInferred
 		sourceColumn: [Column]
 
 		annotation SummarizationSetBy = Automatic

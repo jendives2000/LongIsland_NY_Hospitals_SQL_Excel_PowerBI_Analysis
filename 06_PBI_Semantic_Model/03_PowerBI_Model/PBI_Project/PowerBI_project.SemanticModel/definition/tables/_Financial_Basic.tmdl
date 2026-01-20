@@ -251,12 +251,10 @@ table _Financial_Basic
 		lineageTag: f91af44f-6756-45a9-9225-501dfed5dd3f
 
 	column Column
-		dataType: int64
 		formatString: 0
 		lineageTag: 1634b4fb-d72b-41c8-929c-7587a2038b92
 		summarizeBy: sum
 		isNameInferred
-		isDataTypeInferred
 		sourceColumn: [Column]
 
 		annotation SummarizationSetBy = Automatic

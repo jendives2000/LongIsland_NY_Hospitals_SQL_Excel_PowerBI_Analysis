@@ -8,8 +8,6 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBIDesktopVersion = 2.132.1053.0 (24.08)
-
 annotation PBI_QueryOrder = ["Fact_KPI_Disposition","Fact_KPI_FinancialPressure","Fact_KPI_LOS_Summary","Fact_KPI_Mortality","Fact_KPI_PayerMix","Fact_KPI_SeverityMix","Fact_KPI_Unplanned","Dim_Year","Dim_Date","Dim_Facility","Dim_Payer","Dim_AdmissionType","Dim_Disposition","Dim_ClinicalClass","Bridge_Facility_PeerGroup","Dim_PeerGroup","vw_Fact_KPI_SeverityMix_BySeverity"]
 
 annotation PBI_ProTooling = ["DevMode"]

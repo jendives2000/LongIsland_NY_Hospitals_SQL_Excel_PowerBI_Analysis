@@ -361,13 +361,11 @@ table _Severity
 		lineageTag: 2de1163a-3b85-4a8a-90da-b6bbe3ed9916
 
 	column Column
-		dataType: int64
 		isHidden
 		formatString: 0
 		lineageTag: 014dd9ee-aa0a-40e8-b20e-cf41115403d3
 		summarizeBy: sum
 		isNameInferred
-		isDataTypeInferred
 		sourceColumn: [Column]
 
 		annotation SummarizationSetBy = Automatic

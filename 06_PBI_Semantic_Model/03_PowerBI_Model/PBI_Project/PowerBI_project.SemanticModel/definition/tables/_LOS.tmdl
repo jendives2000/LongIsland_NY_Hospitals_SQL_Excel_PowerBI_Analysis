@@ -472,13 +472,11 @@ table _LOS
 		lineageTag: 6941c542-6e10-453f-bf61-e792c71f0803
 
 	column Column
-		dataType: int64
 		isHidden
 		formatString: 0
 		lineageTag: f3a725e0-2fb4-4033-a322-9103a258afb8
 		summarizeBy: sum
 		isNameInferred
-		isDataTypeInferred
 		sourceColumn: [Column]
 
 		annotation SummarizationSetBy = Automatic

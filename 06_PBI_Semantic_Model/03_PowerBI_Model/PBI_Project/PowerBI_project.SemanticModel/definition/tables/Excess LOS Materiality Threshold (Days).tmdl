@@ -6,11 +6,9 @@ table 'Excess LOS Materiality Threshold (Days)'
 		lineageTag: 0f7c5088-c7d2-477e-bfac-20e41fb7c5d4
 
 	column 'Excess LOS Materiality Threshold (Days)'
-		dataType: int64
 		formatString: 0
 		lineageTag: 712ea884-68fc-475f-be01-2cb07f6366b2
 		summarizeBy: none
-		isDataTypeInferred
 		sourceColumn: [Value]
 
 		extendedProperty ParameterMetadata =

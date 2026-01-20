@@ -38,12 +38,10 @@ table _Volume_&_Denominators
 		lineageTag: 943faef9-f929-4b07-95ed-75eb7b843cfd
 
 	column Column
-		dataType: int64
 		formatString: 0
 		lineageTag: 9908f6be-87f0-47d9-b003-a856d1389904
 		summarizeBy: sum
 		isNameInferred
-		isDataTypeInferred
 		sourceColumn: [Column]
 
 		annotation SummarizationSetBy = Automatic

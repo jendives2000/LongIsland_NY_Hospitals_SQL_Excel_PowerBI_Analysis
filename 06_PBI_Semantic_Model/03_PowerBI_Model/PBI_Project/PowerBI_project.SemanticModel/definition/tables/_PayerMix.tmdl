@@ -85,13 +85,11 @@ table _PayerMix
 		lineageTag: d2e91c04-48ff-47b8-8332-acd8ad0346fb
 
 	column Column
-		dataType: int64
 		isHidden
 		formatString: 0
 		lineageTag: 9bbccbf1-da4b-4a4a-900a-417068f671b7
 		summarizeBy: sum
 		isNameInferred
-		isDataTypeInferred
 		sourceColumn: [Column]
 
 		annotation SummarizationSetBy = Automatic
