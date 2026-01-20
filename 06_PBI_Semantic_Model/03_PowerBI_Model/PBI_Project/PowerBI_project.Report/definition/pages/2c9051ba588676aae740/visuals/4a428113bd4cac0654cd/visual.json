@@ -7,7 +7,7 @@
     "z": 11500,
     "height": 541.93548387096769,
     "width": 607.741935483871,
-    "tabOrder": 5000
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "scatterChart",
@@ -718,81 +718,6 @@
               }
             },
             "Property": "Total Bed-Days"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "716e70a4cbde791652e5",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_LOS"
-              }
-            },
-            "Property": "Excess LOS vs Peer Median (Days)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b3b9e2f563071320cd80",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_KPI_Measures"
-              }
-            },
-            "Property": "Margin Pressure"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "395b8ca456a00cbb0521",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Fact_KPI_FinancialPressure"
-                  }
-                },
-                "Property": "Encounter_Count"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "193a29e6ecd3ecdaa200",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_KPI_Measures"
-              }
-            },
-            "Property": "Unplanned Admission Rate"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "eedb2d8c09cda7cce084",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_KPI_Measures"
-              }
-            },
-            "Property": "Severity Mix Index"
           }
         },
         "type": "Advanced"
