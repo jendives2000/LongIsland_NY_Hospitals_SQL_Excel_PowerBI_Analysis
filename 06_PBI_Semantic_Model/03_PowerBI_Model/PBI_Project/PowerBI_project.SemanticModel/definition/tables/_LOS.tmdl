@@ -471,6 +471,17 @@ table _LOS
 		formatString: 0
 		lineageTag: 6941c542-6e10-453f-bf61-e792c71f0803
 
+	measure 'Excess LOS vs Peer Median (Days)' =
+			
+			VAR los = [Avg LOS]
+			VAR med = [PeerGroup LOS Median]
+			RETURN
+			IF ( NOT ISBLANK ( los ) && NOT ISBLANK ( med ), los - med )
+		displayFolder: Helper
+		lineageTag: 28c3ec23-a299-45a2-aac2-43eaec06d102
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Column
 		isHidden
 		formatString: 0

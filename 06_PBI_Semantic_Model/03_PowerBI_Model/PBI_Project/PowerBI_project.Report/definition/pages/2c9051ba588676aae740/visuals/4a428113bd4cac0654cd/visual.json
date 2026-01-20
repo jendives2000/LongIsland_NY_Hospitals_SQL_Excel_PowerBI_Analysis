@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "4a428113bd4cac0654cd",
   "position": {
-    "x": 660.92307692307691,
-    "y": 15.908966772872105,
-    "z": 5000,
-    "height": 488,
-    "width": 608,
+    "x": 661.16129032258061,
+    "y": 151.74193548387095,
+    "z": 11500,
+    "height": 541.93548387096769,
+    "width": 607.741935483871,
     "tabOrder": 5000
   },
   "visual": {
@@ -28,7 +28,7 @@
               },
               "queryRef": "Dim_PeerGroup.PeerGroup_Name",
               "nativeQueryRef": "PeerGroup_Name1",
-              "active": false
+              "active": true
             },
             {
               "field": {
@@ -66,8 +66,28 @@
             }
           ]
         },
-        "Size": {
+        "Tooltips": {
           "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Fact_KPI_FinancialPressure"
+                        }
+                      },
+                      "Property": "Encounter_Count"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Fact_KPI_FinancialPressure.Encounter_Count)",
+              "nativeQueryRef": "Total Encounters",
+              "displayName": "Total Encounters"
+            },
             {
               "field": {
                 "Measure": {
@@ -81,6 +101,34 @@
               },
               "queryRef": "_LOS.Total Bed-Days",
               "nativeQueryRef": "Total Bed-Days"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_KPI_Measures"
+                    }
+                  },
+                  "Property": "Unplanned Admission Rate"
+                }
+              },
+              "queryRef": "_KPI_Measures.Unplanned Admission Rate",
+              "nativeQueryRef": "Unplanned Admission Rate"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_KPI_Measures"
+                    }
+                  },
+                  "Property": "Severity Mix Index"
+                }
+              },
+              "queryRef": "_KPI_Measures.Severity Mix Index",
+              "nativeQueryRef": "Severity Mix Index"
             }
           ]
         },
@@ -91,14 +139,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_KPI_Measures"
+                      "Entity": "_LOS"
                     }
                   },
-                  "Property": "AVG LOS"
+                  "Property": "Excess LOS vs Peer Median (Days)"
                 }
               },
-              "queryRef": "_KPI_Measures.AVG LOS",
-              "nativeQueryRef": "AVG LOS",
+              "queryRef": "_LOS.Excess LOS vs Peer Median (Days)",
+              "nativeQueryRef": "Excess LOS vs Peer Median (Days)",
               "active": true
             }
           ]
@@ -107,22 +155,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Fact_KPI_LOS_Summary"
-                        }
-                      },
-                      "Property": "Encounter_Count"
+                    "SourceRef": {
+                      "Entity": "_KPI_Measures"
                     }
                   },
-                  "Function": 0
+                  "Property": "Margin Pressure"
                 }
               },
-              "queryRef": "Sum(Fact_KPI_LOS_Summary.Encounter_Count)",
-              "nativeQueryRef": "Sum of Encounter_Count"
+              "queryRef": "_KPI_Measures.Margin Pressure",
+              "nativeQueryRef": "Margin Pressure"
             }
           ]
         }
@@ -163,121 +206,6 @@
           }
         }
       ],
-      "y1AxisReferenceLine": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "displayName": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Volume'"
-                }
-              }
-            },
-            "style": {
-              "expr": {
-                "Literal": {
-                  "Value": "'dotted'"
-                }
-              }
-            },
-            "dataLabelShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "lineColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "dataLabelColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.5
-                    }
-                  }
-                }
-              }
-            },
-            "dataLabelText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'ValueAndName'"
-                }
-              }
-            },
-            "dataLabelHorizontalPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "'left'"
-                }
-              }
-            },
-            "dataLabelVerticalPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "'under'"
-                }
-              }
-            },
-            "dataLabelDecimalPoints": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "value": {
-              "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_LOS"
-                    }
-                  },
-                  "Property": "LOS Volume Threshold (Encounters)"
-                }
-              }
-            },
-            "width": {
-              "expr": {
-                "Literal": {
-                  "Value": "2D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "2"
-          }
-        }
-      ],
       "valueAxis": [
         {
           "properties": {
@@ -291,7 +219,7 @@
             "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -313,6 +241,24 @@
                   "Value": "0D"
                 }
               }
+            },
+            "end": {
+              "expr": {
+                "Literal": {
+                  "Value": "0.6D"
+                }
+              }
+            },
+            "titleColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3C3C3C'"
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -323,7 +269,7 @@
             "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -346,17 +292,21 @@
                 }
               }
             },
-            "start": {
-              "expr": {
-                "Literal": {
-                  "Value": "3D"
+            "titleColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3C3C3C'"
+                    }
+                  }
                 }
               }
             },
-            "end": {
+            "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "'Throughput Drag (Days)'"
                 }
               }
             }
@@ -393,69 +343,6 @@
                 }
               }
             }
-          }
-        }
-      ],
-      "xAxisReferenceLine": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "displayName": {
-              "expr": {
-                "Literal": {
-                  "Value": "'LOS Days'"
-                }
-              }
-            },
-            "value": {
-              "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_LOS"
-                    }
-                  },
-                  "Property": "LOS Threshold (Days)"
-                }
-              }
-            },
-            "width": {
-              "expr": {
-                "Literal": {
-                  "Value": "2D"
-                }
-              }
-            },
-            "dataLabelShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "dataLabelText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'ValueAndName'"
-                }
-              }
-            },
-            "dataLabelDecimalPoints": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "1"
           }
         }
       ],
@@ -512,6 +399,179 @@
             }
           }
         }
+      ],
+      "y1AxisReferenceLine": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "displayName": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Global MP Median'"
+                }
+              }
+            },
+            "value": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Financial_Basic"
+                    }
+                  },
+                  "Property": "All-Facilities Margin Pressure Median"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "77D"
+                }
+              }
+            },
+            "dataLabelShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "dataLabelHorizontalPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'right'"
+                }
+              }
+            },
+            "dataLabelText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ValueAndName'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "1"
+          }
+        }
+      ],
+      "xAxisReferenceLine": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "displayName": {
+              "expr": {
+                "Literal": {
+                  "Value": "'LOS Peer Median'"
+                }
+              }
+            },
+            "style": {
+              "expr": {
+                "Literal": {
+                  "Value": "'dotted'"
+                }
+              }
+            },
+            "dataLabelShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "dataLabelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
+            },
+            "dataLabelText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Name'"
+                }
+              }
+            },
+            "dataLabelHorizontalPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'left'"
+                }
+              }
+            },
+            "dataLabelVerticalPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'under'"
+                }
+              }
+            },
+            "dataLabelDecimalPoints": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "1"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -521,7 +581,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Throughput Burden: LOS vs Volume'"
+                  "Value": "'Financial Stress vs Throughput Drag'"
                 }
               }
             },
@@ -563,7 +623,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "46481fb3a6142db9409d",
   "filterConfig": {
     "filters": [
       {
@@ -579,7 +638,8 @@
             "Property": "AVG LOS"
           }
         },
-        "type": "Advanced"
+        "type": "Advanced",
+        "howCreated": "User"
       },
       {
         "name": "29fdf34050bdeeda52e2",
@@ -593,7 +653,8 @@
             },
             "Property": "Facility_Name"
           }
-        }
+        },
+        "type": "Categorical"
       },
       {
         "name": "c3ee48aa4186edce5d95",
@@ -607,7 +668,8 @@
             },
             "Property": "PeerGroup_Name"
           }
-        }
+        },
+        "type": "Categorical"
       },
       {
         "name": "66c52e2e3899dde5d128",
@@ -621,7 +683,8 @@
             },
             "Property": "PeerGroup_Name"
           }
-        }
+        },
+        "type": "Categorical"
       },
       {
         "name": "354fa8b2e7b08b6022c6",
@@ -641,7 +704,8 @@
             "Function": 0
           }
         },
-        "type": "Advanced"
+        "type": "Advanced",
+        "howCreated": "User"
       },
       {
         "name": "2dc15360c71950a066b0",
@@ -657,9 +721,83 @@
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "716e70a4cbde791652e5",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_LOS"
+              }
+            },
+            "Property": "Excess LOS vs Peer Median (Days)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b3b9e2f563071320cd80",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_KPI_Measures"
+              }
+            },
+            "Property": "Margin Pressure"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "395b8ca456a00cbb0521",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact_KPI_FinancialPressure"
+                  }
+                },
+                "Property": "Encounter_Count"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "193a29e6ecd3ecdaa200",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_KPI_Measures"
+              }
+            },
+            "Property": "Unplanned Admission Rate"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "eedb2d8c09cda7cce084",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_KPI_Measures"
+              }
+            },
+            "Property": "Severity Mix Index"
+          }
+        },
+        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"
-  },
-  "isHidden": true
+  }
 }
