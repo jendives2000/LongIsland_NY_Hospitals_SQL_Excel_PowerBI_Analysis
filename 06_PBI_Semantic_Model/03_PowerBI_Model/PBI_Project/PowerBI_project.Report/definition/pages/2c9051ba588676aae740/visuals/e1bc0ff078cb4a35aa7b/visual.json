@@ -1,0 +1,73 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "e1bc0ff078cb4a35aa7b",
+  "position": {
+    "x": 6.2337662337662332,
+    "y": 321.66233766233762,
+    "z": 19000,
+    "height": 390.23376623376623,
+    "width": 596.57142857142856,
+    "tabOrder": 19000
+  },
+  "visual": {
+    "visualType": "aiNarratives",
+    "objects": {
+      "narrativeSelection": [
+        {
+          "properties": {
+            "dismissSelectionScreen": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "userPrompt": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Summarize the data. Always provide an executive summary by first indicating important takeaways and then summarizing. \nThen based on the data, what questions are likely to be asked by leadership (title it Questions & Insights)? Always answer these questions. Always add key insights and use a bulleted list to highlight them. \n\nAdd header/text hierarchy, make h1 headers all caps, h2 not all caps, and bold. Add a break line between each main paragraph and sub-bullets, add more space between each bullet point. \n'"
+                }
+              }
+            },
+            "selectedVisualsJson": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"isEntireReportSelected\":false,\"sections\":{\"2c9051ba588676aae740\":{\"isEntireSectionSelected\":true}}}'"
+                }
+              }
+            },
+            "useAllVisuals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

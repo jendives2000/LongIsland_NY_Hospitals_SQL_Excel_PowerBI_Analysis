@@ -11243,16 +11243,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Severity Mix Total Encounters": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "severitymix aggregate encounter": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -11290,6 +11280,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "Severity Mix Total Encounters": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -12231,16 +12231,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Avg Medical Cost per Encounter": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "AVG cost": {
 			            "State": "Generated",
 			            "Weight": 0.97
@@ -12362,6 +12352,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "Avg Medical Cost per Encounter": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -18623,17 +18623,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Peer Group": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "PeerGroup_Name": {
 			            "Type": "Noun",
 			            "State": "Generated",
@@ -18744,6 +18733,26 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.615
+			          }
+			        },
+			        {
+			          "Peer Group": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Peer Groups": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -18936,6 +18945,12 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "PeerGroup severity median": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
 			          "SMI Median": {
 			            "State": "Suggested",
 			            "Source": {
@@ -18943,12 +18958,6 @@ cultureInfo en-US
 			              "Agent": "PowerBI.VisualColumnRename"
 			            },
 			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "PeerGroup severity median": {
-			            "State": "Generated",
-			            "Weight": 0.75
 			          }
 			        }
 			      ]
@@ -19926,16 +19935,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Cross-Peer-Groups SMI Median": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "median": {
 			            "State": "Generated",
 			            "Weight": 0.97
@@ -20046,6 +20045,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.475
 			          }
+			        },
+			        {
+			          "Cross-Peer-Groups SMI Median": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -20061,16 +20070,6 @@ cultureInfo en-US
 			        {
 			          "facilities above SMI median": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Facilities Above CPG SMI Median": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        },
 			        {
@@ -20171,6 +20170,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "Facilities Above CPG SMI Median": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -20906,16 +20915,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Facilities Above CPG UA % Median": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "amenity above ua rate median": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -21013,6 +21012,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "Facilities Above CPG UA % Median": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -21895,16 +21904,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Cross-Peer-Groups UA rate Median": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "all peergroup ua rate norm": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -22002,6 +22001,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "Cross-Peer-Groups UA rate Median": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -22165,16 +22174,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Peer-Group UA Rate Median Range": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "text": {
 			            "State": "Generated",
 			            "Weight": 0.97
@@ -22297,6 +22296,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.514
 			          }
+			        },
+			        {
+			          "Peer-Group UA Rate Median Range": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -22331,6 +22340,12 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "facilities out of low pressure zone": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
 			          "Fac. Above 40% UA & 3k Volume": {
 			            "State": "Suggested",
 			            "Source": {
@@ -22338,12 +22353,6 @@ cultureInfo en-US
 			              "Agent": "PowerBI.VisualColumnRename"
 			            },
 			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "facilities out of low pressure zone": {
-			            "State": "Generated",
-			            "Weight": 0.97
 			          }
 			        }
 			      ]
@@ -22360,16 +22369,6 @@ cultureInfo en-US
 			        {
 			          "PeerGroup LOS median": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Peer-Group LOS Median": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        },
 			        {
@@ -22470,6 +22469,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "Peer-Group LOS Median": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -24291,6 +24300,12 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "facilities above own peer group LOS median": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
 			          "Facilities Abo. Own PG LOS Median": {
 			            "State": "Suggested",
 			            "Source": {
@@ -24298,12 +24313,6 @@ cultureInfo en-US
 			              "Agent": "PowerBI.VisualColumnRename"
 			            },
 			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "facilities above own peer group LOS median": {
-			            "State": "Generated",
-			            "Weight": 0.97
 			          }
 			        }
 			      ]
@@ -25633,16 +25642,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Facilities Above PG Margin Median": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "amenity above pg median": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -25740,6 +25739,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "Facilities Above PG Margin Median": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]

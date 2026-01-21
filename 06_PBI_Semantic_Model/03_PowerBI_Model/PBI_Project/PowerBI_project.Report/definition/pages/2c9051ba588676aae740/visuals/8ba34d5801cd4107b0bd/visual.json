@@ -4,7 +4,7 @@
   "position": {
     "x": 12.923076923076923,
     "y": 226.46153846153845,
-    "z": 13000,
+    "z": 14000,
     "height": 65.84615384615384,
     "width": 574.15384615384619,
     "tabOrder": 9000
@@ -232,5 +232,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f2f9af881d13014865c4",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_PeerGroup"
+              }
+            },
+            "Property": "PeerGroup_Name"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

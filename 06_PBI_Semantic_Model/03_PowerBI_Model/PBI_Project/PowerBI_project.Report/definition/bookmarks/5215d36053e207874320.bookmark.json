@@ -3,7 +3,9 @@
   "displayName": "Financial Stress vs Throughput Drag",
   "name": "5215d36053e207874320",
   "options": {
-    "targetVisualNames": []
+    "targetVisualNames": [
+      "8ba34d5801cd4107b0bd"
+    ]
   },
   "explorationState": {
     "version": "1.3",
@@ -48,7 +50,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "8cd02ac5405d4c4e0ad7",
+                  "name": "0e2a98f09ec087e03a47",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -63,7 +65,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "42bcb2e0dd4b98c3402a",
+                  "name": "ffaf053bbda84c02d316",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -78,7 +80,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "3c83ca30d26a09e6d40a",
+                  "name": "b85354090d273cde20a5",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -93,7 +95,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "68aaaf7782235011cc9a",
+                  "name": "4b9159342200400116d8",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -108,7 +110,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "84afb48a34bb46b8584a",
+                  "name": "0137fb367dcae3d54290",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -123,7 +125,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "ec7e673b750b474826c7",
+                  "name": "093362577088323a119e",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -143,7 +145,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "dca147be2d9859040dd0",
+                  "name": "d00fc5f9c6de4c442900",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -158,7 +160,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "1ead0efec3bc5d29ec35",
+                  "name": "9e5eb6e8690135173b48",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -173,7 +175,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "89d7b3f65307b51d0e2a",
+                  "name": "d19f954c3d7ee64a8aae",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -333,227 +335,6 @@
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {}
-            }
-          },
-          "4a428113bd4cac0654cd": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "2d29e5874e2ada80b805",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_KPI_Measures"
-                        }
-                      },
-                      "Property": "AVG LOS"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "29fdf34050bdeeda52e2",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "Facility_Name"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "c3ee48aa4186edce5d95",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "66c52e2e3899dde5d128",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "354fa8b2e7b08b6022c6",
-                  "type": "Advanced",
-                  "expression": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Fact_KPI_LOS_Summary"
-                            }
-                          },
-                          "Property": "Encounter_Count"
-                        }
-                      },
-                      "Function": 0
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "2dc15360c71950a066b0",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_LOS"
-                        }
-                      },
-                      "Property": "Total Bed-Days"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "2542b77b578e03e6380c",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_LOS"
-                        }
-                      },
-                      "Property": "Excess LOS vs Peer Median (Days)"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "0bae9ec6180baed72a17",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_KPI_Measures"
-                        }
-                      },
-                      "Property": "Margin Pressure"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "b19a9108148e03cebd0b",
-                  "type": "Advanced",
-                  "expression": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Fact_KPI_FinancialPressure"
-                            }
-                          },
-                          "Property": "Encounter_Count"
-                        }
-                      },
-                      "Function": 0
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "d253c5acead88543284c",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_KPI_Measures"
-                        }
-                      },
-                      "Property": "Unplanned Admission Rate"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "0fff9fa21c488eda6106",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_KPI_Measures"
-                        }
-                      },
-                      "Property": "Severity Mix Index"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "scatterChart",
-              "objects": {},
-              "activeProjections": {
-                "Category": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  },
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "Facility_Name"
-                    }
-                  }
-                ],
-                "X": [
-                  {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_LOS"
-                        }
-                      },
-                      "Property": "Excess LOS vs Peer Median (Days)"
-                    }
-                  }
-                ]
-              }
             }
           },
           "0c4849e2080b86a3402e": {
@@ -729,14 +510,17 @@
           "6cf3a4c2e400cdd05d51": {
             "singleVisual": {
               "visualType": "textbox",
-              "objects": {}
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
             }
           },
           "6f174ae4ca6ba059b053": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "8697db41210dd3102239",
+                  "name": "6cca6b2b20d4884cd01e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -751,7 +535,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "36bd82516b49d06aa3e2",
+                  "name": "889d55613cb7710ad491",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -766,7 +550,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "733b892f491cd6630e3b",
+                  "name": "22b41b4b2c4134aa5101",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -781,7 +565,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "3d25bab7b69bc91020ea",
+                  "name": "9f903f6254699b789971",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -801,7 +585,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "8e9fa3aeb4c8226b409a",
+                  "name": "eb48d8c6630bb6e030c5",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -816,7 +600,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "895d9ff105a7bd59b1ea",
+                  "name": "c6d0c60837574916aa04",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -831,7 +615,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "535dcf16b608abb4b042",
+                  "name": "4714647a5e4a323a5714",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -846,7 +630,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "87c07bf29c9055502a0c",
+                  "name": "d2b002fab2ba54089090",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1012,7 +796,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "d3b2c7e88400a67c2744",
+                  "name": "26effb969d34b08da718",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1027,7 +811,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "508b645fc66046744b1c",
+                  "name": "fd3fc38093adb6964de2",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1042,7 +826,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "22721fae713a8b053924",
+                  "name": "342d026375038b683106",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1057,7 +841,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "db1ed79f304060486d1d",
+                  "name": "033d8dc78909e885b937",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1157,7 +941,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "6172d9f3527804c61324",
+                  "name": "18177620d408deb57987",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1172,7 +956,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "b606172fc3092800238c",
+                  "name": "36b452a50b10950440de",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1187,7 +971,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "1e2fea98d001d0b35051",
+                  "name": "932376cab0316c656a94",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1207,7 +991,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "c5fcf9407d71c07b0098",
+                  "name": "92c994e1093e01db6dc1",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1222,7 +1006,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "7a8e7134b239d4c3a00a",
+                  "name": "5a0051e3891e2743155b",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1237,7 +1021,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "20bdc329c63935ac5051",
+                  "name": "ffc815cf151545a800a6",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1252,7 +1036,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "61858a0bac01300b62da",
+                  "name": "ae64ba0ca031ad405d09",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1354,7 +1138,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "3a557cb2d9a16c808aab",
+                  "name": "8c111b4a72b92c000a1b",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1369,7 +1153,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "6ef5c15cdbe7c0bb08cb",
+                  "name": "c3eacf2ded47965e06de",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1384,7 +1168,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "c162b38fe4d0b10ee351",
+                  "name": "1acf54d90ad0075a2889",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1453,7 +1237,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "6132e3ec3e541618ed0d",
+                  "name": "c1ebca500c69cbaa4db6",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1498,6 +1282,227 @@
               "objects": {},
               "display": {
                 "mode": "hidden"
+              }
+            }
+          },
+          "4a428113bd4cac0654cd": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "2d29e5874e2ada80b805",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_KPI_Measures"
+                        }
+                      },
+                      "Property": "AVG LOS"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "29fdf34050bdeeda52e2",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "Facility_Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c3ee48aa4186edce5d95",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "66c52e2e3899dde5d128",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "354fa8b2e7b08b6022c6",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Fact_KPI_LOS_Summary"
+                            }
+                          },
+                          "Property": "Encounter_Count"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "2dc15360c71950a066b0",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_LOS"
+                        }
+                      },
+                      "Property": "Total Bed-Days"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9e512d30987b353e5032",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Fact_KPI_FinancialPressure"
+                            }
+                          },
+                          "Property": "Encounter_Count"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "aaf57a1bd833bc57ed38",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_KPI_Measures"
+                        }
+                      },
+                      "Property": "Unplanned Admission Rate"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "2ce0162674b250de0844",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_KPI_Measures"
+                        }
+                      },
+                      "Property": "Severity Mix Index"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "3d2ea65410547e0dca74",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_LOS"
+                        }
+                      },
+                      "Property": "Excess LOS vs Peer Median (Days)"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7a718a9cbbbdeae22e26",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_KPI_Measures"
+                        }
+                      },
+                      "Property": "Margin Pressure"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "scatterChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "Facility_Name"
+                    }
+                  }
+                ],
+                "X": [
+                  {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_LOS"
+                        }
+                      },
+                      "Property": "Excess LOS vs Peer Median (Days)"
+                    }
+                  }
+                ]
               }
             }
           },
@@ -1629,7 +1634,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "34819e6160cc9198743c",
+                  "name": "07eab772bd002b0be7db",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1684,7 +1689,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "f3098e0862decd0b02b9",
+                  "name": "07bc5ccc4b7a022007e5",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1699,7 +1704,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "ef6f872ae7d8a776eea4",
+                  "name": "1af28f9d8245e43c70b3",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1902,7 +1907,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "cb36333f880684174271",
+                  "name": "d7dd070f06500123158d",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1966,7 +1971,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "5b822f95062d89425407",
+                  "name": "be1e10b709c1b1660767",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -2009,6 +2014,21 @@
             "singleVisual": {
               "visualType": "shape",
               "objects": {}
+            }
+          },
+          "e1bc0ff078cb4a35aa7b": {
+            "singleVisual": {
+              "visualType": "aiNarratives",
+              "objects": {}
+            }
+          },
+          "6fbcc3f0ce03e3297e26": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
             }
           }
         },
