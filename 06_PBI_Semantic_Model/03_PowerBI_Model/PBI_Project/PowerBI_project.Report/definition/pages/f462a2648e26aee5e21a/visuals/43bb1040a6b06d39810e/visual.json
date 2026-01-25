@@ -1,11 +1,11 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "43bb1040a6b06d39810e",
   "position": {
     "x": 13.09090909090909,
-    "y": 89.123184507799891,
+    "y": 155.15601281835049,
     "z": 8000,
-    "height": 126.54545454545453,
+    "height": 182.02597402597402,
     "width": 600.31168831168827,
     "tabOrder": 2000
   },
@@ -19,27 +19,38 @@
               {
                 "textRuns": [
                   {
-                    "value": "This page examines how unplanned admissions shape the operating environment of inpatient facilities. ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
+                    "value": "Why unplanned intake changes how performance should be interpreted"
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": ""
+                    "value": "Intake pressure describes the operational strain created when a large share of inpatient admissions arrive unplanned, primarily through emergency and urgent pathways."
                   }
-                ]
+                ],
+                "listType": "bullet"
               },
               {
                 "textRuns": [
                   {
-                    "value": "Before reviewing peer comparisons and thresholds, it is important to understand why unplanned intake represents a structural source of pressure rather than short-term demand noise.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
+                    "value": "Unlike scheduled admissions, unplanned intake is unpredictable, time-compressed, and difficult to smooth, requiring facilities to absorb demand immediately rather than redistribute it over time."
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "When elevated unplanned admissions coincide with sustained encounter volume, pressure propagates across the system—affecting emergency department congestion, bed availability, staffing stability, and patient flow."
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Under these conditions, variation in downstream metrics such as length of stay and cost is less likely to reflect random demand fluctuation and more likely to reflect differences in intake management, flow control, and discharge effectiveness."
                   }
                 ]
               }
@@ -65,6 +76,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "135042e2a6cede93c0b1",
-  "isHidden": true
+  "parentGroupName": "135042e2a6cede93c0b1"
 }

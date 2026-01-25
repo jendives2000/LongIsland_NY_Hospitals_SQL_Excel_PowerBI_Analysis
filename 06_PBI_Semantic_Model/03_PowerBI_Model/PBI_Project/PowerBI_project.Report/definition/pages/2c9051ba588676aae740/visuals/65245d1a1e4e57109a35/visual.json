@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "65245d1a1e4e57109a35",
+  "position": {
+    "x": 12.972972972972972,
+    "y": 86.34216570129179,
+    "z": 11000,
+    "height": 192.64864864864865,
+    "width": 600.64864864864865,
+    "tabOrder": 10000
+  },
+  "visual": {
+    "visualType": "aiNarratives",
+    "objects": {
+      "narrativeSelection": [
+        {
+          "properties": {
+            "dismissSelectionScreen": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "userPrompt": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Give a quick sum up of the previous pages insights (title: Sum Up) and state the goals of this page by looking through the lens of the structural financial stress signal (title: Objective).\nAdd more space between each bullet point. Make the titles bigger. \n'"
+                }
+              }
+            },
+            "selectedVisualsJson": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"isEntireReportSelected\":false,\"sections\":{\"57268fed575c5a8151c2\":{\"isEntireSectionSelected\":true},\"f462a2648e26aee5e21a\":{\"isEntireSectionSelected\":true},\"52cab1d9e096dd314343\":{\"isEntireSectionSelected\":true},\"2c9051ba588676aae740\":{\"isEntireSectionSelected\":true}}}'"
+                }
+              }
+            },
+            "useAllVisuals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "070ab6ca13552c6378b0"
+}

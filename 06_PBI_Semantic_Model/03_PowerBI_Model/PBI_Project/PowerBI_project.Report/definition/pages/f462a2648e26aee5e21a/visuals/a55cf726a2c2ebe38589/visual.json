@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "a55cf726a2c2ebe38589",
   "position": {
-    "x": 12.8,
-    "y": 294.97940828402369,
+    "x": 13.09090909090909,
+    "y": 405.65526780911392,
     "z": 4000,
-    "height": 271.36,
-    "width": 571.52,
+    "height": 145.87012987012986,
+    "width": 571.012987012987,
     "tabOrder": 4000
   },
   "visual": {
@@ -49,42 +49,6 @@
                     "value": ""
                   }
                 ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "When unplanned admissions coincide with ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "sustained encounter "
-                  },
-                  {
-                    "value": "volume, pressure propagates across the system, affecting ED congestion, bed availability, staffing stability, and patient flow. ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Under these conditions, variation in LOS, cost, and downstream performance is less likely to reflect random demand fluctuation and more likely to reflect differences in intake management, flow control, and discharge effectiveness.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
               }
             ]
           }
@@ -108,6 +72,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "135042e2a6cede93c0b1",
-  "isHidden": true
+  "parentGroupName": "135042e2a6cede93c0b1"
 }

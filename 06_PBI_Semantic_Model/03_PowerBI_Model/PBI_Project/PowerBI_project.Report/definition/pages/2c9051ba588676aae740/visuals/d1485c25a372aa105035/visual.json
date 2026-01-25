@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "d1485c25a372aa105035",
   "position": {
     "x": 660.08275862068967,
     "y": 16.184828841837628,
-    "z": 9000,
+    "z": 11000,
     "height": 474.04137931034478,
     "width": 608.44137931034481,
-    "tabOrder": 17000
+    "tabOrder": 18000
   },
   "visual": {
     "visualType": "lineClusteredColumnComboChart",
@@ -875,113 +875,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "46481fb3a6142db9409d",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "16575e3f7cd50dbc09cc",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Dim_Facility"
-              }
-            },
-            "Property": "Facility_Name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "5ca4b9f92ca85198065b",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Financial_Basic"
-              }
-            },
-            "Property": "Excess Margin Pressure vs PG Median"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "81948a06bddcbe333ab6",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Fact_KPI_FinancialPressure"
-                  }
-                },
-                "Property": "Encounter_Count"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "89449c3d91eaeaec2528",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_KPI_Measures"
-              }
-            },
-            "Property": "AVG LOS"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "5b93b896d61a0807c401",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_KPI_Measures"
-              }
-            },
-            "Property": "Unplanned Admission Rate"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "2410727117682bac9b7e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Guardrails"
-              }
-            },
-            "Property": "Margin Pressure (Guarded)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b8cd98a05e74e029cab6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Financial_Basic"
-              }
-            },
-            "Property": "All-Facilities Margin Pressure Median"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  },
-  "isHidden": true
+  "parentGroupName": "46481fb3a6142db9409d"
 }

@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "bb6f01a5376320bc24d2",
   "position": {
-    "x": 12.666666666666666,
-    "y": 84.073892526327668,
-    "z": 8000,
-    "height": 195.33333333333334,
-    "width": 600.66666666666663,
+    "x": 12.694214876033056,
+    "y": 346.79868201480315,
+    "z": 5250,
+    "height": 222.94214876033055,
+    "width": 587.90082644628092,
     "tabOrder": 2000
   },
   "visual": {
@@ -19,7 +19,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "Earlier pages showed that:"
+                    "value": "Impacts",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "14pt"
+                    }
                   }
                 ]
               },
@@ -33,90 +37,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "Patient severity is tightly clustered within peer groups",
+                    "value": "Margin pressure is a material concern across the network, with an overall rate of 25.7% and meaningful variation by facility and peer group.",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontSize": "11pt"
                     }
-                  },
-                  {
-                    "value": ", limiting case-mix as a primary explanation for performance differences."
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Unplanned intake pressure is system-wide",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": ", affecting all facilities rather than a small subset."
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Throughput pressure (LOS)",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": " varies meaningfully within peer groups and is "
-                  },
-                  {
-                    "value": "concentrated in a limited number of high-volume facilities",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": ", driving disproportionate bed-day burden."
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "With these clinical and operational pressures established, this page shifts focus to "
-                  },
-                  {
-                    "value": "financial outcomes",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": "."
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "The goal of this page is to assess whether observed "
-                  },
-                  {
-                    "value": "cost and margin pressure",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": " reflects:"
                   }
                 ]
               },
@@ -130,13 +54,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "structural financial conditions",
+                    "value": "University Hospital shows the highest margin pressure burden (11,912.1), more than 20× higher than the lowest burden facility (Eastern Long Island Hospital, 547.2).",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontSize": "11pt"
                     }
-                  },
-                  {
-                    "value": " such as payer mix and baseline cost structure, or"
                   }
                 ],
                 "listType": "bullet"
@@ -144,13 +65,21 @@
               {
                 "textRuns": [
                   {
-                    "value": "operational effects",
+                    "value": "By peer group, PG-D Rural / East-End faces the highest margin pressure (39.5%), while PG-E Specialty-Dominant has the lowest (20.1%).",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontSize": "11pt"
                     }
-                  },
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
                   {
-                    "value": ", where throughput inefficiency and excess LOS translate into higher cost per encounter."
+                    "value": "Margin pressure burden and cumulative margin burden percentage are not aligned, indicating that facilities with the highest absolute burden do not necessarily account for the largest share of cumulative financial stress.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ],
                 "listType": "bullet"
@@ -165,27 +94,214 @@
               {
                 "textRuns": [
                   {
-                    "value": "This page also evaluates whether financial stress is "
-                  },
-                  {
-                    "value": "broadly distributed",
+                    "value": "Throughput & Length of Stay",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
                     }
-                  },
-                  {
-                    "value": " across the system or "
-                  },
-                  {
-                    "value": "concentrated in a small number of high-impact facilities",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": ", consistent with the concentration patterns observed for bed-days."
                   }
                 ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Length of stay (LOS) varies across peer groups, highlighting uneven throughput performance.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "PG-C Mid-Size Community shows the highest excess LOS versus peer median (+0.48 days), suggesting throughput inefficiencies.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "High-volume facilities such as North Shore University Hospital and University Hospital combine elevated LOS with large bed-day footprints, making them priority targets for throughput optimization.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Unplanned admission rates are highest in PG-C Mid-Size Community (85.62%) and lowest in PG-E Specialty-Dominant (65.46%), pointing to peer-group-specific opportunities to reduce intake pressure.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Severity & Cost Context",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Clinical complexity appears relatively stable across the system.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Severity Mix Index (SMI) is tightly clustered across peer groups (2.69–2.81), with only a minority of facilities above their peer-group median.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "This suggests that margin and throughput challenges are not primarily driven by case-mix severity.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Average medical cost per encounter is $14,522.9, compared with average charges per encounter of $56,528.9, indicating a substantial cost-to-charge gap that warrants review of pricing, reimbursement, and cost-containment practices.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Actionable Recommendations",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "14pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Prioritize high-burden facilities (e.g., University Hospital, North Shore University Hospital) for focused margin improvement initiatives, including cost reduction, care redesign, and revenue-cycle optimization.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "ordered"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Address throughput inefficiencies in PG-C Mid-Size Community and other high-volume facilities by improving discharge processes and reducing excess LOS.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "ordered"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Reduce unplanned admissions, particularly in peer groups with rates above 80%, through targeted intake and care-coordination interventions.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "ordered"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Review pricing, reimbursement, and cost structures to narrow the gap between costs and charges and strengthen financial sustainability.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "ordered"
               }
             ]
           }

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "8ba34d5801cd4107b0bd",
   "position": {
     "x": 12.923076923076923,
@@ -7,7 +7,7 @@
     "z": 14000,
     "height": 65.84615384615384,
     "width": 574.15384615384619,
-    "tabOrder": 9000
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "slicer",
@@ -233,22 +233,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "f2f9af881d13014865c4",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Dim_PeerGroup"
-              }
-            },
-            "Property": "PeerGroup_Name"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
-  }
+  "isHidden": true
 }

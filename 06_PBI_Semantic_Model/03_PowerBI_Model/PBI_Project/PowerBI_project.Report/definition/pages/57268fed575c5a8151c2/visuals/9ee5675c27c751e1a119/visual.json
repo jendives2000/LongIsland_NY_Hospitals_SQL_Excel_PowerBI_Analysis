@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "9ee5675c27c751e1a119",
   "position": {
     "x": 661.17956783249485,
@@ -103,6 +103,34 @@
         }
       },
       "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Dim_PeerGroup"
+                  }
+                },
+                "Property": "PeerGroup_Name"
+              }
+            },
+            "direction": "Ascending"
+          },
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Dim_Facility"
+                  }
+                },
+                "Property": "Facility_Name"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
         "isDefaultSort": true
       }
     },

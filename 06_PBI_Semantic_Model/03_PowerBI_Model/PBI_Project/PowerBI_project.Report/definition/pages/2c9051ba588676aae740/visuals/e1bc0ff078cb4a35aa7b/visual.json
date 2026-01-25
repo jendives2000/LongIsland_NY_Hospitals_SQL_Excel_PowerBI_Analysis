@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "e1bc0ff078cb4a35aa7b",
   "position": {
     "x": 6.2337662337662332,
@@ -7,7 +7,7 @@
     "z": 19000,
     "height": 390.23376623376623,
     "width": 596.57142857142856,
-    "tabOrder": 19000
+    "tabOrder": 17000
   },
   "visual": {
     "visualType": "aiNarratives",
@@ -69,5 +69,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "isHidden": true
 }

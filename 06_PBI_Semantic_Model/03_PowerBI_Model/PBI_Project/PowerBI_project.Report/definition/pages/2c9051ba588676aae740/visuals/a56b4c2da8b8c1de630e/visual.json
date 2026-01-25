@@ -1,10 +1,10 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "a56b4c2da8b8c1de630e",
   "position": {
     "x": 667.69230769230774,
-    "y": 35.829101724693615,
-    "z": 9000,
+    "y": 35.829101724693629,
+    "z": 10000,
     "height": 380.30769230769232,
     "width": 590.15384615384619,
     "tabOrder": 8000
@@ -119,35 +119,6 @@
               },
               "queryRef": "_Financial_Basic.Neg Margin Total Encounters",
               "nativeQueryRef": "Neg Margin Total Encounters"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Financial_Basic"
-                    }
-                  },
-                  "Property": "Facilities Above PG Median"
-                }
-              },
-              "queryRef": "_Financial_Basic.Facilities Above PG Median",
-              "nativeQueryRef": "Facilities Above PG Margin Median",
-              "displayName": "Facilities Above PG Margin Median"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Financial_Basic"
-                    }
-                  },
-                  "Property": "Facilities with Negative Margin"
-                }
-              },
-              "queryRef": "_Financial_Basic.Facilities with Negative Margin",
-              "nativeQueryRef": "Facilities with Negative Margin"
             }
           ]
         }

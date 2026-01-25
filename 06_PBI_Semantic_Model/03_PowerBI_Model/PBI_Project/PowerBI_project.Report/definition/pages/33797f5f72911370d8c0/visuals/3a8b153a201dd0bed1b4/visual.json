@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "3a8b153a201dd0bed1b4",
   "position": {
     "x": 10.461538461538462,
@@ -48,28 +48,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Guardrails"
+                      "Entity": "_Financial_Basic"
                     }
                   },
-                  "Property": "Margin Pressure (Guarded)"
+                  "Property": "Margin Pressure Burden"
                 }
               },
-              "queryRef": "_Guardrails.Margin Pressure (Guarded)",
-              "nativeQueryRef": "Margin Pressure (Guarded)"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Dim_ClinicalClass"
-                    }
-                  },
-                  "Property": "PeerGroup Margin Pressure Median"
-                }
-              },
-              "queryRef": "Dim_ClinicalClass.PeerGroup Margin Pressure Median",
-              "nativeQueryRef": "PeerGroup Margin Pressure Median"
+              "queryRef": "_Financial_Basic.Margin Pressure Burden",
+              "nativeQueryRef": "Margin Pressure Burden"
             },
             {
               "field": {
@@ -79,11 +65,11 @@
                       "Entity": "_Financial_Basic"
                     }
                   },
-                  "Property": "Is Above Own PG Margin Median"
+                  "Property": "Cumulative Margin Burden %"
                 }
               },
-              "queryRef": "_Financial_Basic.Is Above Own PG Margin Median",
-              "nativeQueryRef": "Is Above Own PG Margin Median"
+              "queryRef": "_Financial_Basic.Cumulative Margin Burden %",
+              "nativeQueryRef": "Cumulative Margin Burden %"
             }
           ]
         }

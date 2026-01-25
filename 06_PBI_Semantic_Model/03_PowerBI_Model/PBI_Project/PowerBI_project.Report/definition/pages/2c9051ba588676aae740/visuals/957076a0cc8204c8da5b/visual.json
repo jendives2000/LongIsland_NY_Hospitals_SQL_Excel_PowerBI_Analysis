@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "957076a0cc8204c8da5b",
   "position": {
     "x": 297.23076923076923,
     "y": 20.216659080564426,
-    "z": 12000,
+    "z": 14000,
     "height": 42.46153846153846,
     "width": 284.30769230769232,
-    "tabOrder": 14000
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "actionButton",
@@ -56,7 +56,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Excess LOS vs Peer Median (Days)'"
+                  "Value": "'Financial Stress vs Throughput Drag'"
                 }
               }
             },
@@ -272,7 +272,7 @@
             "bookmark": {
               "expr": {
                 "Literal": {
-                  "Value": "'2807b0f04d8a0407e541'"
+                  "Value": "'5215d36053e207874320'"
                 }
               }
             },
@@ -310,6 +310,5 @@
     "drillFilterOtherVisuals": true
   },
   "parentGroupName": "46481fb3a6142db9409d",
-  "isHidden": true,
   "howCreated": "InsertVisualButton"
 }

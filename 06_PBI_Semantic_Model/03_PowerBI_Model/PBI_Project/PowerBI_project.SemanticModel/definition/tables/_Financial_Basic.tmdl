@@ -62,11 +62,7 @@ table _Financial_Basic
 
 	measure 'Margin Pressure Burden' =
 			
-			VAR TotalCosts = SUM(Fact_KPI_FinancialPressure[Total_Costs])
-			VAR TotalCharges = SUM(Fact_KPI_FinancialPressure[Total_Charges])
-			VAR MarginGap = TotalCosts - TotalCharges  // Negative margin amount
-			RETURN
-			IF(MarginGap > 0, MarginGap, 0)  // Only count where costs exceed charges
+			[Margin Pressure] * SUM(Fact_KPI_FinancialPressure[Encounter_Count])
 		displayFolder: Helper
 		lineageTag: e8e2ec27-8019-4ca9-bb1c-51a63ba22c9e
 
@@ -128,36 +124,24 @@ table _Financial_Basic
 
 	measure 'Cumulative Margin Burden %' = ```
 			
-			VAR CurrentFacility = SELECTEDVALUE(Dim_Facility[Facility_Key])
-			VAR AllBurden = 
-			    CALCULATE(
-			        [Margin Pressure Burden],
-			        REMOVEFILTERS(Dim_Facility)
+			VAR Cohort =
+			    ADDCOLUMNS (
+			        ALLSELECTED ( Dim_Facility[Facility_Name]),
+			        "__B", CALCULATE ( [Margin Pressure Burden] )
 			    )
-			VAR RankedFacilities = 
-			    ADDCOLUMNS(
-			        VALUES(Dim_Facility[Facility_Key]),
-			        "@Burden", [Margin Pressure Burden]
-			    )
-			VAR CurrentRank = 
-			    RANKX(
-			        RankedFacilities,
-			        [@Burden],
-			        ,
-			        DESC,
-			        DENSE
-			    )
-			VAR CumulativeBurden = 
-			    CALCULATE(
-			        [Margin Pressure Burden],
-			        FILTER(
-			            RankedFacilities,
-			            RANKX(RankedFacilities, [@Burden], , DESC, DENSE) <= CurrentRank
-			        )
-			    )
+			VAR CohortNZ =
+			    FILTER ( Cohort, NOT ISBLANK ( [__B] ) )
+			VAR CurrentB =
+			    CALCULATE ( [Margin Pressure Burden] )
+			VAR RunningB =
+			    SUMX ( FILTER ( CohortNZ, [__B] >= CurrentB ), [__B] )
+			VAR TotalB =
+			    SUMX ( CohortNZ, [__B] )
 			RETURN
-			DIVIDE(CumulativeBurden, AllBurden)
+			    IF ( ISBLANK ( CurrentB ) || TotalB <= 0, BLANK (), DIVIDE ( RunningB, TotalB ) )
+			
 			```
+		formatString: 0.00%;-0.00%;0.00%
 		displayFolder: Helper
 		lineageTag: 2cffff85-b832-4500-8f88-6338855e0483
 

@@ -1,10 +1,10 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "4a428113bd4cac0654cd",
   "position": {
     "x": 672,
-    "y": 156.46753246753246,
-    "z": 12000,
+    "y": 20.37649924040457,
+    "z": 10000,
     "height": 542.33766233766232,
     "width": 607.79220779220782,
     "tabOrder": 6000
@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": true
+              "active": false
             }
           ]
         },
@@ -413,7 +413,7 @@
             "displayName": {
               "expr": {
                 "Literal": {
-                  "Value": "'Global MP Median'"
+                  "Value": "'All Fac. MP Median'"
                 }
               }
             },
@@ -623,6 +623,7 @@
     },
     "drillFilterOtherVisuals": true
   },
+  "parentGroupName": "46481fb3a6142db9409d",
   "filterConfig": {
     "filters": [
       {

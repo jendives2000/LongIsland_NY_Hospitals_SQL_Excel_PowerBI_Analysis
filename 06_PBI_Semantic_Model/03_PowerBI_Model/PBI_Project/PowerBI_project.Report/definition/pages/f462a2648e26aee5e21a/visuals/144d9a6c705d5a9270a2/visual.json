@@ -1,0 +1,88 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "144d9a6c705d5a9270a2",
+  "position": {
+    "x": 13.09090909090909,
+    "y": 405.19480519480521,
+    "z": 3062,
+    "height": 145.87012987012986,
+    "width": 571.012987012987,
+    "tabOrder": 13000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Use this page to establish "
+                  },
+                  {
+                    "value": "baseline operating context",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " before reviewing peer comparisons or performance indicators."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "The metrics shown here are "
+                  },
+                  {
+                    "value": "contextual indicators — not performance scores",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ". They are intended to guide interpretation and prioritization, not to rank facilities or assess care quality."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Text Interpretations'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "135042e2a6cede93c0b1",
+  "isHidden": true
+}

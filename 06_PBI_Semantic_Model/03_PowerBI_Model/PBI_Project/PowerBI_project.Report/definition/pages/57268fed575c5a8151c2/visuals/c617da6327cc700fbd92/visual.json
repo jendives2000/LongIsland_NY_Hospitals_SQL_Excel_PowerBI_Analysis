@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "c617da6327cc700fbd92",
   "position": {
     "x": 0,
@@ -12,5 +12,6 @@
   "visualGroup": {
     "displayName": "Context Drives Every Metric",
     "groupMode": "ScaleMode"
-  }
+  },
+  "isHidden": true
 }

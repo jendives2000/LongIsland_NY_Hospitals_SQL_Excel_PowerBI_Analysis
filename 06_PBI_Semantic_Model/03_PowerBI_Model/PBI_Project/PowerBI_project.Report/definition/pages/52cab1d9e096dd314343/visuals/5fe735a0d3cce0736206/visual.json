@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "5fe735a0d3cce0736206",
   "position": {
     "x": 660.92307692307691,
@@ -28,7 +28,7 @@
               },
               "queryRef": "Dim_PeerGroup.PeerGroup_Name",
               "nativeQueryRef": "PeerGroup_Name1",
-              "active": false
+              "active": true
             },
             {
               "field": {
@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": true
+              "active": false
             }
           ]
         },
@@ -128,6 +128,21 @@
         }
       },
       "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_KPI_Measures"
+                  }
+                },
+                "Property": "Unplanned Admission Rate"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
         "isDefaultSort": true
       }
     },

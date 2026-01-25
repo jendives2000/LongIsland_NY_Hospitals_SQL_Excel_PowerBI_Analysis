@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "cf50027220d15c53342b",
+  "position": {
+    "x": 814.12987012987014,
+    "y": 147.11688311688312,
+    "z": 25000,
+    "height": 314.80519480519479,
+    "width": 406.44155844155841,
+    "tabOrder": 25000
+  },
+  "visual": {
+    "visualType": "aiNarratives",
+    "objects": {
+      "narrativeSelection": [
+        {
+          "properties": {
+            "dismissSelectionScreen": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "userPrompt": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Make a table of contents for this report that contains a brief description of what each page is about.'"
+                }
+              }
+            },
+            "selectedVisualsJson": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"isEntireReportSelected\":true}'"
+                }
+              }
+            },
+            "useAllVisuals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "isHidden": true
+}
