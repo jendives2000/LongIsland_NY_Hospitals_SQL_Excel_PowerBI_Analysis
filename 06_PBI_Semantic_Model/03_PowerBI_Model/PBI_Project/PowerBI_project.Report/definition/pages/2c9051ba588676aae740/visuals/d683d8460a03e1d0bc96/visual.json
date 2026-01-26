@@ -1,0 +1,126 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "d683d8460a03e1d0bc96",
+  "position": {
+    "x": 13.09090909090909,
+    "y": 148.20172035756451,
+    "z": 8500,
+    "height": 196.98701298701297,
+    "width": 600.31168831168827,
+    "tabOrder": 10000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Financial stress reflects the degree to which inpatient operating costs and reimbursement dynamics create "
+                  },
+                  {
+                    "value": "sustained margin pressure under prevailing demand conditions",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Margin pressure is shaped by:"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "The volume and mix of inpatient encounters"
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "The balance between medical cost per encounter and realized reimbursement"
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "The interaction between sustained utilization and operational throughput constraints"
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "When cost and margin pressure are observed broadly across peer groups, financial outcomes are more likely to reflect "
+                  },
+                  {
+                    "value": "system-level operating conditions",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " rather than isolated site-level inefficiencies or short-term financial variation. "
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Observed associations describe operating conditions and do not establish causal relationships."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "070ab6ca13552c6378b0"
+}

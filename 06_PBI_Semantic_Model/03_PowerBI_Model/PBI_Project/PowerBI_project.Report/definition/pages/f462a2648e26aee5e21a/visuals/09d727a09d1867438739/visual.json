@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "09d727a09d1867438739",
   "position": {
-    "x": 667.63636363636363,
-    "y": 514.28571428571422,
+    "x": 667.012987012987,
+    "y": 691.32467532467524,
     "z": 16000,
-    "height": 46.753246753246749,
-    "width": 393.97402597402595,
+    "height": 24.935064935064933,
+    "width": 602.18181818181813,
     "tabOrder": 13000
   },
   "visual": {
@@ -19,16 +19,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "ℹ : ",
+                    "value": "ℹ : Year 2015 only. No rolling values. No seasonality adjustments. Contextual indicators — not performance scores.",
                     "textStyle": {
-                      "fontSize": "12pt",
-                      "color": "#575757"
-                    }
-                  },
-                  {
-                    "value": "Year 2015 only. No rolling values. No seasonality adjustments. Contextual indicators — not performance scores.",
-                    "textStyle": {
-                      "fontSize": "9pt",
+                      "fontStyle": "italic",
+                      "fontSize": "8pt",
                       "color": "#575757"
                     }
                   }

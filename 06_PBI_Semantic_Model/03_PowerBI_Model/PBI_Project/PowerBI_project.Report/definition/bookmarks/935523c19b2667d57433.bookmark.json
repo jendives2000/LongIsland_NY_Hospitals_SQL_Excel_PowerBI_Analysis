@@ -1,11 +1,9 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.0.0/schema.json",
   "displayName": "Unplnd viz 2",
   "name": "935523c19b2667d57433",
   "options": {
-    "targetVisualNames": [
-      "6ed3eef87570c8dd03c2"
-    ]
+    "targetVisualNames": []
   },
   "explorationState": {
     "version": "1.3",
@@ -13,187 +11,26 @@
     "sections": {
       "f462a2648e26aee5e21a": {
         "visualContainers": {
-          "4b882fbdde2490608684": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "bb7f137b8d4b300b01ee": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "e121de39e4b78ad82de6": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "ddbaa83b4a7a90a943b9": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "aa3d163d09014000d1e8": {
+          "047e39167ad483cb6333": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "c6f5b12340837520e01c",
-                  "type": "Advanced",
+                  "name": "4601c5a020d85aa0b2e0",
+                  "type": "Categorical",
                   "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Severity"
-                        }
-                      },
-                      "Property": "Is Above Own PG Sev Median"
-                    }
-                  },
-                  "howCreated": 1
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "lineClusteredColumnComboChart",
-              "objects": {},
-              "activeProjections": {
-                "Category": [
-                  {
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Dim_Facility"
+                          "Entity": "Dim_PeerGroup"
                         }
                       },
                       "Property": "PeerGroup_Name"
                     }
-                  }
-                ]
-              }
-            }
-          },
-          "f28a70d63a202d0a36da": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "d32d819113532c0d80d3": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "4a561ee28947883dbd41",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Severity"
-                        }
-                      },
-                      "Property": "Is Above PG Severity Median (facility safe)"
-                    }
                   },
-                  "howCreated": 1
-                },
-                {
-                  "name": "403087e2a9bb84b7ad60",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_ClinicalClass"
-                        }
-                      },
-                      "Property": "PeerGroup Severity Median"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "507f79c0c01d60d7c184",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Severity"
-                        }
-                      },
-                      "Property": "SMI Median (All Facilities, Selected)"
-                    }
-                  },
-                  "howCreated": 1
+                  "howCreated": 0
                 }
               ]
             },
-            "singleVisual": {
-              "visualType": "lineClusteredColumnComboChart",
-              "objects": {},
-              "activeProjections": {
-                "Category": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "8d39895367ad2c814bad": {
-            "singleVisual": {
-              "visualType": "tableEx",
-              "objects": {}
-            }
-          },
-          "b83799bdb007889ec931": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "7d6e900390dd06a8637a": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "bcb5bc5c4503642497d2": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "5d66312db5c2ab0e01e9": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "0fba9053ac200dc389bb": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "053a65d8d40a70b5c05a": {
             "singleVisual": {
               "visualType": "slicer",
               "objects": {
@@ -235,13 +72,10 @@
               "objects": {}
             }
           },
-          "3029fcf8d4c305d3a83a": {
+          "09d727a09d1867438739": {
             "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
+              "visualType": "textbox",
+              "objects": {}
             }
           },
           "0fbe828bb00daea0c892": {
@@ -253,25 +87,34 @@
               }
             }
           },
-          "9f6b17c646b292c902c4": {
+          "144d9a6c705d5a9270a2": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "43bb1040a6b06d39810e": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "66c8dced6265d9d68092": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "2570bfaf24d931198809": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {}
             }
           },
-          "f2712d8f726a85021ea5": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "eb8a68531b5868813dc6": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "7b87cb1b710e01c7eec8": {
+          "4273a3eab18b987a423e": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {}
@@ -289,30 +132,21 @@
               "objects": {}
             }
           },
-          "66c8dced6265d9d68092": {
+          "fa9fbada461b5c045206": {
             "singleVisual": {
-              "visualType": "textbox",
+              "visualType": "actionButton",
               "objects": {}
             }
           },
-          "f8a35c88cec0edaa9eeb": {
+          "788d65d40c13b6e40a75": {
             "singleVisual": {
-              "visualType": "shape",
+              "visualType": "actionButton",
               "objects": {}
             }
           },
-          "c6703c017e0647402da1": {
+          "7b87cb1b710e01c7eec8": {
             "singleVisual": {
-              "visualType": "shape",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "f0876555405d055c5be0": {
-            "singleVisual": {
-              "visualType": "cardVisual",
+              "visualType": "actionButton",
               "objects": {}
             }
           },
@@ -325,34 +159,152 @@
               }
             }
           },
-          "43bb1040a6b06d39810e": {
+          "c6703c017e0647402da1": {
             "singleVisual": {
-              "visualType": "textbox",
+              "visualType": "shape",
               "objects": {},
               "display": {
                 "mode": "hidden"
               }
             }
           },
-          "ac0ff7462bcc908ab3d5": {
+          "e8f3420a35c20ce07932": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "eb8a68531b5868813dc6": {
             "singleVisual": {
               "visualType": "shape",
               "objects": {}
             }
           },
-          "cdc678009a12dde6087c": {
+          "f0876555405d055c5be0": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "37e11c8a946bb6e1b236",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Unplanned"
+                        }
+                      },
+                      "Property": "All PeerGroups UA rate Median"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d831a280a314669a60e5",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Unplanned"
+                        }
+                      },
+                      "Property": "PG UA Median Range Text"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d9b6245016e92b87e5ce",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Unplanned"
+                        }
+                      },
+                      "Property": "Facilities Above UA rate Median"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a89883c7c9e8de08b242",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Unplanned"
+                        }
+                      },
+                      "Property": "Facilities Above Own UA rate Median"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "6ce6ea0bc006beea8300",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Unplanned"
+                        }
+                      },
+                      "Property": "Facilities Out of Low-Pressure Zone"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "5bbafb3710a80bd8dbd1",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Unplanned"
+                        }
+                      },
+                      "Property": "Facilities In Low-Pressure Zone (0 safe)"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {}
+            }
+          },
+          "f2712d8f726a85021ea5": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "f8a35c88cec0edaa9eeb": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "fbd6012b9099063767e6": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {}
             }
           },
-          "a85cc404782acae748c6": {
+          "89f24a48ee57b4bce0ad": {
             "singleVisual": {
               "visualType": "shape",
               "objects": {}
             }
           },
-          "89f24a48ee57b4bce0ad": {
+          "a85cc404782acae748c6": {
             "singleVisual": {
               "visualType": "shape",
               "objects": {}
@@ -364,7 +316,41 @@
               "objects": {}
             }
           },
-          "047e39167ad483cb6333": {
+          "3029fcf8d4c305d3a83a": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "4b882fbdde2490608684": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "053a65d8d40a70b5c05a": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "c03b93893a23cb6e8a2a",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "slicer",
               "objects": {
@@ -400,57 +386,337 @@
               }
             }
           },
-          "e3010b7fdd0b2317c828": {
+          "0fba9053ac200dc389bb": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "5d66312db5c2ab0e01e9": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "7d6e900390dd06a8637a": {
             "singleVisual": {
               "visualType": "shape",
               "objects": {}
             }
           },
-          "d47501ac73381a6c577b": {
-            "singleVisual": {
-              "visualType": "clusteredBarChart",
-              "objects": {},
-              "orderBy": [
+          "8d39895367ad2c814bad": {
+            "filters": {
+              "byExpr": [
                 {
-                  "Direction": 2,
-                  "Expression": {
+                  "name": "2d328d35d93a5d4900e1",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "2ef25918a37984699ada",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_ClinicalClass"
+                        }
+                      },
+                      "Property": "PeerGroup Severity Median (PeerGroup safe)"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "tableEx",
+              "objects": {}
+            }
+          },
+          "aa3d163d09014000d1e8": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "c6f5b12340837520e01c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Severity"
+                        }
+                      },
+                      "Property": "Is Above Own PG Sev Median"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "622454b6053b5ce40290",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "Facility_Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "403087e2a9bb84b7ad60",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_ClinicalClass"
+                        }
+                      },
+                      "Property": "PeerGroup Severity Median"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b64acc8a05ac972ded80",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a9989f131d468c382510",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "PeerGroup_Sort"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "5583e6f1377863030dba",
+                  "type": "Advanced",
+                  "expression": {
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
                           "Entity": "_KPI_Measures"
                         }
                       },
-                      "Property": "Unplanned Admission Rate"
+                      "Property": "Severity Mix Index"
                     }
-                  }
+                  },
+                  "howCreated": 0
                 }
-              ],
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineClusteredColumnComboChart",
+              "objects": {},
               "activeProjections": {
                 "Category": [
                   {
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
+                          "Entity": "Dim_Facility"
                         }
                       },
                       "Property": "PeerGroup_Name"
                     }
                   }
                 ]
-              },
-              "display": {
-                "mode": "hidden"
               }
             }
           },
-          "6df9f3c943d00d434eaa": {
+          "b83799bdb007889ec931": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {}
             }
           },
-          "38aeb331b91881c4380a": {
+          "bcb5bc5c4503642497d2": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "d32d819113532c0d80d3": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "4a561ee28947883dbd41",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Severity"
+                        }
+                      },
+                      "Property": "Is Above PG Severity Median (facility safe)"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "622454b6053b5ce40290",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "Facility_Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "403087e2a9bb84b7ad60",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_ClinicalClass"
+                        }
+                      },
+                      "Property": "PeerGroup Severity Median"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "b64acc8a05ac972ded80",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a9989f131d468c382510",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "PeerGroup_Sort"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "5583e6f1377863030dba",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_KPI_Measures"
+                        }
+                      },
+                      "Property": "Severity Mix Index"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "507f79c0c01d60d7c184",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Severity"
+                        }
+                      },
+                      "Property": "SMI Median (All Facilities, Selected)"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "76aaec770511091cb0a6",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_ClinicalClass"
+                        }
+                      },
+                      "Property": "PeerGroup Severity Median (FacilitySafe)"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineClusteredColumnComboChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "f28a70d63a202d0a36da": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "862c33306b10014914c0": {
             "singleVisual": {
               "visualType": "textbox",
               "objects": {},
@@ -459,7 +725,19 @@
               }
             }
           },
-          "6542876f5b5eb4020c12": {
+          "9f6b17c646b292c902c4": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "ac0ff7462bcc908ab3d5": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "bb7f137b8d4b300b01ee": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {},
@@ -468,12 +746,44 @@
               }
             }
           },
+          "cdc678009a12dde6087c": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "ddbaa83b4a7a90a943b9": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "e121de39e4b78ad82de6": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "09ae76ce3d61b6ac1aee": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "3654fbf6847103955070": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
           "37b14508a08d3da97e0d": {
             "filters": {
               "byExpr": [
                 {
                   "name": "e498205fc2b10be80993",
-                  "type": "Categorical",
                   "filter": {
                     "Version": 2,
                     "From": [
@@ -528,6 +838,71 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "93e6fbf4b5309221e5c4",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "200ff6b3d0b22095d46d",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "Facility_Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "5c49ed73eea9b9bdc2a5",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "vw_Fact_KPI_SeverityMix_BySeverity"
+                        }
+                      },
+                      "Property": "APR_Severity_Description"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d064de3a2471de817466",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "vw_Fact_KPI_SeverityMix_BySeverity"
+                            }
+                          },
+                          "Property": "Encounter_Count"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -591,13 +966,16 @@
               }
             }
           },
-          "6ed3eef87570c8dd03c2": {
+          "38aeb331b91881c4380a": {
             "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
+              "visualType": "textbox",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
             }
           },
-          "b50d43ecbeb75aebcc60": {
+          "6542876f5b5eb4020c12": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {},
@@ -625,6 +1003,20 @@
                   "howCreated": 1
                 },
                 {
+                  "name": "622454b6053b5ce40290",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "Facility_Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
                   "name": "403087e2a9bb84b7ad60",
                   "type": "Advanced",
                   "expression": {
@@ -640,6 +1032,35 @@
                   "howCreated": 1
                 },
                 {
+                  "name": "b64acc8a05ac972ded80",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a9989f131d468c382510",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "PeerGroup_Sort"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
                   "name": "5583e6f1377863030dba",
                   "type": "Advanced",
                   "expression": {
@@ -653,6 +1074,36 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "7472230a8a17ac5610bc",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_KPI_Measures"
+                        }
+                      },
+                      "Property": "Unplanned Admission Rate"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d7034740603dc8dd243b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_ClinicalClass"
+                        }
+                      },
+                      "Property": "PeerGroup UA Rate Median"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -690,7 +1141,143 @@
               }
             }
           },
+          "6df9f3c943d00d434eaa": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "6ed3eef87570c8dd03c2": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "83aeca2f59080ce3bd7a": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "9c9b6925d2a126d013c1": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "b50d43ecbeb75aebcc60": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "c1687403a1d4c8bc5931": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
           "c243b20ec86ea91aeb55": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "1b21ec012b52c0ab1a65",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "1e14c6a0bad6500185d2",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "Facility_Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d7cc290b44852e15ec0c",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "bb86bd5ccd5170d2dbee",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Volume_&_Denominators"
+                        }
+                      },
+                      "Property": "Unplanned Total Encounters"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "ca39886644ec47d1575a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_KPI_Measures"
+                        }
+                      },
+                      "Property": "Unplanned Admission Rate"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7a76be6b19d0988154ab",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Fact_KPI_Unplanned"
+                        }
+                      },
+                      "Property": "Total Encounters (Y)"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "scatterChart",
               "objects": {},
@@ -715,20 +1302,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Dim_Facility"
+                          "Entity": "Dim_PeerGroup"
                         }
                       },
                       "Property": "PeerGroup_Name"
-                    }
-                  },
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "Facility_Name"
                     }
                   }
                 ],
@@ -750,44 +1327,121 @@
               }
             }
           },
-          "c1687403a1d4c8bc5931": {
+          "d47501ac73381a6c577b": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "008235a344a2318c988a",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "2002a6eedbaaae351c17",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "Facility_Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "14ac4ce2e66a25c8b009",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Fact_KPI_Unplanned"
+                            }
+                          },
+                          "Property": "Unplanned_Encounter_Count"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "76fa19015d7927ee8085",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_KPI_Measures"
+                        }
+                      },
+                      "Property": "Unplanned Admission Rate"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "9c9b6925d2a126d013c1": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "3654fbf6847103955070": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "09ae76ce3d61b6ac1aee": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "83aeca2f59080ce3bd7a": {
-            "singleVisual": {
-              "visualType": "shape",
+              "visualType": "clusteredBarChart",
               "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_KPI_Measures"
+                        }
+                      },
+                      "Property": "Unplanned Admission Rate"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  }
+                ]
+              },
               "display": {
                 "mode": "hidden"
               }
             }
+          },
+          "e3010b7fdd0b2317c828": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
           }
         },
         "visualContainerGroups": {
-          "601e5e5d570e0920c80a": {
-            "isHidden": true
-          },
           "135042e2a6cede93c0b1": {
             "isHidden": true,
             "children": {
@@ -795,6 +1449,9 @@
                 "isHidden": false
               }
             }
+          },
+          "601e5e5d570e0920c80a": {
+            "isHidden": true
           },
           "e61d07d0ba2506dc604d": {
             "isHidden": false

@@ -4,10 +4,10 @@
   "position": {
     "x": 6.2337662337662332,
     "y": 321.66233766233762,
-    "z": 19000,
+    "z": 21000,
     "height": 390.23376623376623,
     "width": 596.57142857142856,
-    "tabOrder": 17000
+    "tabOrder": 16000
   },
   "visual": {
     "visualType": "aiNarratives",
@@ -31,7 +31,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Summarize the data. Always provide an executive summary by first indicating important takeaways and then summarizing. \nThen based on the data, what questions are likely to be asked by leadership (title it Questions & Insights)? Always answer these questions. Always add key insights and use a bulleted list to highlight them. \n\nAdd header/text hierarchy, make h1 headers all caps, h2 not all caps, and bold. Add a break line between each main paragraph and sub-bullets, add more space between each bullet point. \n'"
+                  "Value": "'Generate an executive-facing summary and interpretive insights based on the data shown, following the established executive narrative framework.'"
                 }
               }
             },
@@ -69,6 +69,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "isHidden": true
+  }
 }
