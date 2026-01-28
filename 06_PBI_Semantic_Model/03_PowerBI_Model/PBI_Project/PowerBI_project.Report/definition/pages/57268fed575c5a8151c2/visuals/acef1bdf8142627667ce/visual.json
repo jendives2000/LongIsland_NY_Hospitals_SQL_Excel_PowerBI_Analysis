@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "acef1bdf8142627667ce",
   "position": {
-    "x": 661.09665081009007,
-    "y": 12.463807548595156,
+    "x": 661.40259740259739,
+    "y": 11.630375497460655,
     "z": 6000,
-    "height": 468,
-    "width": 607.76470588235293,
+    "height": 439.48051948051943,
+    "width": 607.16883116883116,
     "tabOrder": 4000
   },
   "visual": {
@@ -28,7 +28,7 @@
               },
               "queryRef": "Dim_PeerGroup.PeerGroup_Name",
               "nativeQueryRef": "PeerGroup_Name",
-              "active": false
+              "active": true
             },
             {
               "field": {
@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": true
+              "active": false
             }
           ]
         },
@@ -67,21 +67,6 @@
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "_Severity"
-                  }
-                },
-                "Property": "Extreme Severity %"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
         "isDefaultSort": true
       }
     },
@@ -315,9 +300,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.5
+                    "Literal": {
+                      "Value": "'#3A3A3A'"
                     }
                   }
                 }
@@ -339,7 +323,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Context signal, not a performance indicator'"
+                  "Value": "'Context signal, not a performance indicator. '"
                 }
               }
             }
@@ -349,6 +333,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "f9f00eae4c0acbdd5301",
-  "isHidden": true
+  "parentGroupName": "f9f00eae4c0acbdd5301"
 }

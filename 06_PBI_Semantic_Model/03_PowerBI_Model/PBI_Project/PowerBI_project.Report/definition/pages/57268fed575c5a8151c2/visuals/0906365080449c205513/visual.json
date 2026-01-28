@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "0906365080449c205513",
   "position": {
-    "x": 660.39076845714885,
-    "y": 12.463807548595156,
+    "x": 660.15584415584408,
+    "y": 11.630375497460655,
     "z": 4000,
-    "height": 468,
-    "width": 607.76470588235293,
+    "height": 449.45454545454544,
+    "width": 607.79220779220782,
     "tabOrder": 3000
   },
   "visual": {
@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": true
+              "active": false
             }
           ]
         },
@@ -106,23 +106,6 @@
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "_Severity"
-                  }
-                },
-                "Property": "Extreme Severity %"
-              }
-            },
-            "direction": "Descending"
-          }
-        ]
       }
     },
     "objects": {
@@ -193,6 +176,18 @@
                   "Value": "false"
                 }
               }
+            },
+            "detailColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
             }
           },
           "selector": {
@@ -243,8 +238,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 9,
-                      "Percent": 0.4
+                      "ColorId": 0,
+                      "Percent": -0.3
                     }
                   }
                 }
@@ -285,8 +280,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 9,
-                      "Percent": 0.2
+                      "ColorId": 0,
+                      "Percent": -0.5
                     }
                   }
                 }
@@ -327,8 +322,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 9,
-                      "Percent": -0.25
+                      "ColorId": 0,
+                      "Percent": -0.6
                     }
                   }
                 }
@@ -369,7 +364,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#CB0404'"
+                      "Value": "'#3A3A3A'"
                     }
                   }
                 }

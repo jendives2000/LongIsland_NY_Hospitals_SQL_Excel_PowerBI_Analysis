@@ -112,7 +112,7 @@ table _Severity
 			
 			IF(
 			    [Extreme Severity %] > [Median Extreme % (Selected)],
-			    "#C00000",   -- red
+			    "#3A3A3A",   -- dark grey
 			    "#6E6E6E"    -- neutral gray
 			)
 			

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "8689471ec16713435ecd",
+  "name": "0e0f35ff6e4b60f830ab",
   "position": {
-    "x": 12.923076923076923,
-    "y": 89.230769230769226,
-    "z": 3000,
-    "height": 28.923076923076923,
-    "width": 991.38461538461536,
-    "tabOrder": 3000
+    "x": 777.35064935064929,
+    "y": 602.18181818181813,
+    "z": 16000,
+    "height": 24.935064935064933,
+    "width": 488.72727272727269,
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,9 +19,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "Are differences observed later in the report driven by how sick the patients are?",
+                    "value": "Variation shown reflects differences in patient acuity mix, not care quality or operational performance.",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontStyle": "italic",
+                      "fontSize": "8pt",
+                      "color": "#666666"
                     }
                   }
                 ]
@@ -60,5 +62,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "isHidden": true
 }

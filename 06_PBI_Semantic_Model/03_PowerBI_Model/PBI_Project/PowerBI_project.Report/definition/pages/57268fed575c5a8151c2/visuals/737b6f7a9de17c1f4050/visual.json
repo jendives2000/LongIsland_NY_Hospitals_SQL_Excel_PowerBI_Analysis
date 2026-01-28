@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "f6ca2eb52561012c5ca3",
+  "name": "737b6f7a9de17c1f4050",
   "position": {
-    "x": 14.866136063071643,
-    "y": 199.00018116238093,
-    "z": 6000,
+    "x": 14.939444443400834,
+    "y": 198.87064251659319,
+    "z": 3500,
     "height": 349.71428571428572,
     "width": 580.98701298701292,
-    "tabOrder": 9000
+    "tabOrder": 17002
   },
   "visual": {
     "visualType": "textbox",
@@ -45,125 +45,73 @@
               {
                 "textRuns": [
                   {
-                    "value": "Severity Mix Index (SMI) values are tightly clustered across the system, ranging from ",
+                    "value": "This view isolates facilities whose "
+                  },
+                  {
+                    "value": "Severity Mix Index (SMI) exceeds the cross-peer-group median (2.78)",
                     "textStyle": {
-                      "fontSize": "10.5pt"
+                      "fontWeight": "bold"
                     }
                   },
                   {
-                    "value": "2.35 to 2.92",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "10.5pt"
-                    }
-                  },
-                  {
-                    "value": ", with a network-wide median of ",
-                    "textStyle": {
-                      "fontSize": "10.5pt"
-                    }
-                  },
-                  {
-                    "value": "2.78",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "10.5pt"
-                    }
-                  },
-                  {
-                    "value": ".",
-                    "textStyle": {
-                      "fontSize": "10.5pt"
-                    }
+                    "value": "."
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "This indicates broadly comparable overall patient acuity across facilities.",
+                    "value": " Even within this subset, SMI values remain "
+                  },
+                  {
+                    "value": "tightly clustered",
                     "textStyle": {
-                      "fontSize": "10.5pt"
+                      "fontWeight": "bold"
                     }
+                  },
+                  {
+                    "value": ", indicating that differences above the median reflect "
+                  },
+                  {
+                    "value": "modest variation in baseline acuity",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ", not extreme divergence."
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": ""
+                    "value": "The presence of multiple facilities across different peer groups above the network median suggests that "
+                  },
+                  {
+                    "value": "elevated baseline severity is distributed",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ", rather than concentrated in a single facility type or segment."
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "While overall severity levels are similar, ",
+                    "value": " This reinforces that patient acuity differences, while present, remain "
+                  },
+                  {
+                    "value": "bounded within a relatively narrow range",
                     "textStyle": {
-                      "fontSize": "10.5pt"
+                      "fontWeight": "bold"
                     }
                   },
                   {
-                    "value": "severity composition varies",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "10.5pt"
-                    }
-                  },
-                  {
-                    "value": ": the median ",
-                    "textStyle": {
-                      "fontSize": "10.5pt"
-                    }
-                  },
-                  {
-                    "value": "Extreme Severity",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "10.5pt"
-                    }
-                  },
-                  {
-                    "value": " share is ",
-                    "textStyle": {
-                      "fontSize": "10.5pt"
-                    }
-                  },
-                  {
-                    "value": "33.3%",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "10.5pt"
-                    }
-                  },
-                  {
-                    "value": ", with a subset of facilities above this peer benchmark. This reflects differences in patient mix rather than uniform shifts in baseline acuity across the system.",
-                    "textStyle": {
-                      "fontSize": "10.5pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "These patterns describe ",
-                    "textStyle": {
-                      "fontSize": "10.5pt"
-                    }
-                  },
-                  {
-                    "value": "distribution and variation",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "10.5pt"
-                    }
-                  },
-                  {
-                    "value": ", not performance differences, and do not establish causality.",
-                    "textStyle": {
-                      "fontSize": "10.5pt"
-                    }
+                    "value": "."
                   }
                 ]
               },
@@ -196,68 +144,35 @@
               {
                 "textRuns": [
                   {
-                    "value": "Because severity levels are ",
+                    "value": "This filtered view should be read as a "
+                  },
+                  {
+                    "value": "contextual lens",
                     "textStyle": {
-                      "fontSize": "10.5pt"
+                      "fontWeight": "bold"
                     }
                   },
                   {
-                    "value": "tightly clustered within peer groups",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "10.5pt"
-                    }
-                  },
-                  {
-                    "value": ", variation observed later in metrics such as ",
-                    "textStyle": {
-                      "fontSize": "10.5pt"
-                    }
-                  },
-                  {
-                    "value": "length of stay, cost, mortality, or throughput",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "10.5pt"
-                    }
-                  },
-                  {
-                    "value": " is ",
-                    "textStyle": {
-                      "fontSize": "10.5pt"
-                    }
-                  },
-                  {
-                    "value": "unlikely to be explained by case-mix differences alone",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "10.5pt"
-                    }
-                  },
-                  {
-                    "value": ".",
-                    "textStyle": {
-                      "fontSize": "10.5pt"
-                    }
+                    "value": ", not a performance distinction."
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "This strengthens the interpretation that downstream variation more often reflects:",
-                    "textStyle": {
-                      "fontSize": "10.5pt"
-                    }
+                    "value": "Because SMI values above the network median remain closely grouped:"
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "Operational flow and throughput conditions",
+                    "value": "Differences observed in downstream metrics (e.g., length of stay, cost, mortality, throughput) "
+                  },
+                  {
+                    "value": "are unlikely to be driven by case-mix severity alone",
                     "textStyle": {
-                      "fontSize": "10.5pt"
+                      "fontWeight": "bold"
                     }
                   }
                 ],
@@ -266,9 +181,27 @@
               {
                 "textRuns": [
                   {
-                    "value": "Care pathway design and discharge dynamics",
+                    "value": "Facilities above the median should not be interpreted as operating under uniquely extreme acuity conditions"
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Use this view to:"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Confirm that "
+                  },
+                  {
+                    "value": "baseline severity has been accounted for",
                     "textStyle": {
-                      "fontSize": "10.5pt"
+                      "fontWeight": "bold"
                     }
                   }
                 ],
@@ -277,34 +210,33 @@
               {
                 "textRuns": [
                   {
-                    "value": "System-level context rather than unavoidable acuity differences",
-                    "textStyle": {
-                      "fontSize": "10.5pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
+                    "value": "Establish a "
+                  },
                   {
-                    "value": "Severity context should therefore be used as a ",
+                    "value": "severity-adjusted comparison frame",
                     "textStyle": {
-                      "fontSize": "10.5pt"
+                      "fontWeight": "bold"
                     }
                   },
                   {
-                    "value": "baseline lens",
+                    "value": " for subsequent pages"
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Severity context provides "
+                  },
+                  {
+                    "value": "orientation",
                     "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "10.5pt"
+                      "fontWeight": "bold"
                     }
                   },
                   {
-                    "value": " when reviewing subsequent pages, not as an explanatory endpoint.",
-                    "textStyle": {
-                      "fontSize": "10.5pt"
-                    }
+                    "value": ", not explanation, and should inform interpretation of later metrics rather than serve as an endpoint."
                   }
                 ],
                 "listType": "bullet"
@@ -757,5 +689,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "89c9b513a9ae920b0617"
+  "parentGroupName": "89c9b513a9ae920b0617",
+  "isHidden": true
 }
