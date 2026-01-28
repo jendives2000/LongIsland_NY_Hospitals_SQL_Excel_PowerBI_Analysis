@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "bc63df37a6cc17a3164c",
+  "name": "d074b6674e6f62a0882a",
   "position": {
-    "x": 84.92307692307692,
-    "y": 587.99999999999966,
-    "z": 2000,
-    "height": 40.615384615384613,
-    "width": 464.61538461538464,
-    "tabOrder": 19000
+    "x": 0,
+    "y": 489.97402597402595,
+    "z": 25001,
+    "height": 24.935064935064933,
+    "width": 814.75324675324669,
+    "tabOrder": 25001
   },
   "visual": {
     "visualType": "textbox",
@@ -19,26 +19,16 @@
               {
                 "textRuns": [
                   {
-                    "value": "Cost & Margin Pressure ",
+                    "value": "Pages are reviewed sequentially to ensure ",
                     "textStyle": {
-                      "fontStyle": "italic",
-                      "fontSize": "18pt",
-                      "color": "#744ec2"
+                      "color": "#666666"
                     }
                   },
                   {
-                    "value": "(Financial Stress) ",
+                    "value": "contextual interpretation before outcome review",
                     "textStyle": {
-                      "fontStyle": "italic",
-                      "fontSize": "14pt",
-                      "color": "#744ec2"
-                    }
-                  },
-                  {
-                    "value": "🔒",
-                    "textStyle": {
-                      "fontSize": "14pt",
-                      "color": "#744ec2"
+                      "fontWeight": "bold",
+                      "color": "#666666"
                     }
                   }
                 ]
@@ -68,7 +58,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Cost & Margin Pressure (Financial Stress)'"
+                  "Value": "'SubTitle'"
                 }
               }
             }

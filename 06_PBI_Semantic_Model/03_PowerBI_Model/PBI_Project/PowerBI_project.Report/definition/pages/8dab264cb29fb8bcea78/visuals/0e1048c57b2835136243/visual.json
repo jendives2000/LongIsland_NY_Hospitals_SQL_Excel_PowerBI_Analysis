@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "0e1048c57b2835136243",
   "position": {
-    "x": 416.61538461538464,
-    "y": 266.46153846153845,
+    "x": 403.94805194805195,
+    "y": 233.76623376623377,
     "z": 14000,
-    "height": 195.69230769230768,
-    "width": 324.92307692307691,
+    "height": 281.14285714285711,
+    "width": 756.77922077922074,
     "tabOrder": 4000
   },
   "visual": {
@@ -16,6 +16,86 @@
         {
           "properties": {
             "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "This report is designed for",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " executive and system-level review",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " to support interpretation of operating context, not for facility-level performance management.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "All metrics reflect a ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "defined historical period (year 2015)",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " and should be interpreted as ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "contextual signals, not ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " real-time performance indicators.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
               {
                 "textRuns": [
                   {
@@ -31,11 +111,17 @@
               {
                 "textRuns": [
                   {
-                    "value": "Decision-support tool",
+                    "value": "Decision-support ",
                     "textStyle": {
                       "fontFamily": "Arial",
                       "fontSize": "11pt",
                       "color": "#808080"
+                    }
+                  },
+                  {
+                    "value": "resource",
+                    "textStyle": {
+                      "fontSize": "11pt"
                     }
                   }
                 ],
@@ -44,11 +130,9 @@
               {
                 "textRuns": [
                   {
-                    "value": "Pressure and risk signal",
+                    "value": "A signal of operational pressure and risk context",
                     "textStyle": {
-                      "fontFamily": "Arial",
-                      "fontSize": "11pt",
-                      "color": "#808080"
+                      "fontSize": "11pt"
                     }
                   }
                 ],
@@ -60,57 +144,6 @@
                     "value": ""
                   }
                 ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "This report is not:",
-                    "textStyle": {
-                      "fontFamily": "Arial",
-                      "fontSize": "11pt",
-                      "color": "#808080"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Ranking",
-                    "textStyle": {
-                      "fontFamily": "Arial",
-                      "fontSize": "11pt",
-                      "color": "#808080"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Scorecard",
-                    "textStyle": {
-                      "fontFamily": "Arial",
-                      "fontSize": "11pt",
-                      "color": "#808080"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Quality judgment",
-                    "textStyle": {
-                      "fontFamily": "Arial",
-                      "fontSize": "11pt",
-                      "color": "#808080"
-                    }
-                  }
-                ],
-                "listType": "bullet"
               },
               {
                 "textRuns": [

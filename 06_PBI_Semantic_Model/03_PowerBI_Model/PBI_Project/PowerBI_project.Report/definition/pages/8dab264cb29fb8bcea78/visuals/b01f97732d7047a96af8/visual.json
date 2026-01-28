@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "b01f97732d7047a96af8",
   "position": {
-    "x": 12.923076923076923,
-    "y": 266.46153846153845,
+    "x": 12.666666666666666,
+    "y": 234,
     "z": 16000,
-    "height": 195.69230769230768,
-    "width": 324.92307692307691,
+    "height": 261.33333333333331,
+    "width": 325.33333333333331,
     "tabOrder": 3000
   },
   "visual": {
@@ -19,7 +19,20 @@
               {
                 "textRuns": [
                   {
-                    "value": "Hospital performance metrics are shaped by:",
+                    "value": "Hospital ",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#808080"
+                    }
+                  },
+                  {
+                    "value": "operating ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "metrics are shaped by:",
                     "textStyle": {
                       "fontSize": "11pt",
                       "color": "#808080"
@@ -97,18 +110,16 @@
                     }
                   },
                   {
-                    "value": "pressure points",
+                    "value": "areas of structural pressure and risk exposure",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "11pt",
-                      "color": "#808080"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not to rank hospitals.",
+                    "value": ", not to rank hospitals or assess individual performance.",
                     "textStyle": {
-                      "fontSize": "11pt",
-                      "color": "#808080"
+                      "fontSize": "11pt"
                     }
                   }
                 ]
@@ -123,7 +134,20 @@
               {
                 "textRuns": [
                   {
-                    "value": "Skipping context pages leads to incorrect conclusions.",
+                    "value": "Skipping context pages ",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#808080"
+                    }
+                  },
+                  {
+                    "value": "increases the risk of incorrect interpretation",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ".",
                     "textStyle": {
                       "fontSize": "11pt",
                       "color": "#808080"
