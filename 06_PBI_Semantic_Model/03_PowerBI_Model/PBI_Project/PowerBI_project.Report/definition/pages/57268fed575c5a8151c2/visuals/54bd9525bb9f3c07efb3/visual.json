@@ -1,0 +1,87 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "54bd9525bb9f3c07efb3",
+  "position": {
+    "x": 13.09090909090909,
+    "y": 0,
+    "z": 15000,
+    "height": 76.675324675324674,
+    "width": 600.31168831168827,
+    "tabOrder": 17002
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "This page provides "
+                  },
+                  {
+                    "value": "clinical context",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ", not performance assessment."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "It describes how differences in patient acuity and case-mix composition vary across the system and peer groups, and establishes a baseline that should be understood "
+                  },
+                  {
+                    "value": "before interpreting operational, financial, or outcome metrics",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " later in the report."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Page Purpose'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "7cab7952255c4d5eb560"
+}

@@ -1,0 +1,136 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "d25a19f1a40b8d308105",
+  "position": {
+    "x": 13.09090909090909,
+    "y": 160.14302580536346,
+    "z": 12000,
+    "height": 182.02597402597402,
+    "width": 600.31168831168827,
+    "tabOrder": 17007
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Why patient severity changes how downstream metrics should be interpreted",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Patient severity reflects the "
+                  },
+                  {
+                    "value": "clinical complexity and acuity profile",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " of patients treated at each facility, independent of operational efficiency."
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Differences in severity are driven by "
+                  },
+                  {
+                    "value": "who is treated, how patients arrive, and the facility’s role within the broader care system",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " (e.g., referral patterns, specialty services, regional coverage)."
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Unlike operational processes, severity is "
+                  },
+                  {
+                    "value": "largely exogenous",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " to short-term management decisions and cannot be smoothed or redistributed without system-level changes."
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "When severity composition differs meaningfully across facilities or peer groups, "
+                  },
+                  {
+                    "value": "variation in length of stay, cost, mortality, and resource utilization may reflect baseline clinical demand rather than operational performance",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "."
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Under these conditions, downstream metrics should be interpreted "
+                  },
+                  {
+                    "value": "relative to peer-group severity baselines",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ", not system-wide averages."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "7cab7952255c4d5eb560"
+}
