@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "c1687403a1d4c8bc5931",
   "position": {
     "x": 14.153846153846153,
@@ -22,13 +22,15 @@
                     "value": "INSIGHT:",
                     "textStyle": {
                       "fontWeight": "bold",
+                      "fontSize": "11pt",
                       "textDecoration": "underline"
                     }
                   },
                   {
                     "value": " ",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   }
                 ]
@@ -36,116 +38,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "Unplanned admission (UA) rates remain elevated across all peer groups, with facilities' UA rates ranging from "
-                  },
-                  {
-                    "value": {
-                      "propertyIdentifier": {
-                        "objectName": "values",
-                        "propertyName": "expr"
-                      },
-                      "selector": {
-                        "id": "UA_rate_min"
-                      }
-                    },
+                    "value": "This view establishes intake context that should be carried forward when interpreting throughput, cost, and outcome variation in subsequent pages.",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontSize": "11pt"
                     }
-                  },
-                  {
-                    "value": " to ",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": {
-                      "propertyIdentifier": {
-                        "objectName": "values",
-                        "propertyName": "expr"
-                      },
-                      "selector": {
-                        "id": "UA_rate_max"
-                      }
-                    },
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": " and a cross–peer-group median of "
-                  },
-                  {
-                    "value": {
-                      "propertyIdentifier": {
-                        "objectName": "values",
-                        "propertyName": "expr"
-                      },
-                      "selector": {
-                        "id": "Value 3"
-                      }
-                    },
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": ".",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": {
-                      "propertyIdentifier": {
-                        "objectName": "values",
-                        "propertyName": "expr"
-                      },
-                      "selector": {
-                        "id": "Value 4"
-                      }
-                    },
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": " of ",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": {
-                      "propertyIdentifier": {
-                        "objectName": "values",
-                        "propertyName": "expr"
-                      },
-                      "selector": {
-                        "id": "Value 5"
-                      }
-                    }
-                  },
-                  {
-                    "value": " facilities operate above that same cross peer-group median, and "
-                  },
-                  {
-                    "value": {
-                      "propertyIdentifier": {
-                        "objectName": "values",
-                        "propertyName": "expr"
-                      },
-                      "selector": {
-                        "id": "Value 6"
-                      }
-                    }
-                  },
-                  {
-                    "value": " operate above their own peer-group median. This pattern indicates broad, system-wide intake pressure rather than isolated outliers."
                   }
                 ]
               },
@@ -159,256 +55,108 @@
               {
                 "textRuns": [
                   {
-                    "value": "When intake pressure is examined alongside volume, "
-                  },
-                  {
-                    "value": {
-                      "propertyIdentifier": {
-                        "objectName": "values",
-                        "propertyName": "expr"
-                      },
-                      "selector": {
-                        "id": "Value 7"
-                      }
-                    },
+                    "value": "Unplanned admission share is elevated across all peer groups, with peer-group values ranging from approximately ",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " facilities",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": " fall below both "
-                  },
-                  {
-                    "value": {
-                      "propertyIdentifier": {
-                        "objectName": "values",
-                        "propertyName": "expr"
-                      },
-                      "selector": {
-                        "id": "Value 8"
-                      }
-                    },
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": " UA rate",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": " and "
-                  },
-                  {
-                    "value": {
-                      "propertyIdentifier": {
-                        "objectName": "values",
-                        "propertyName": "expr"
-                      },
-                      "selector": {
-                        "id": "Value 9"
-                      }
-                    },
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": " encounters",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": ", while "
-                  },
-                  {
-                    "value": {
-                      "propertyIdentifier": {
-                        "objectName": "values",
-                        "propertyName": "expr"
-                      },
-                      "selector": {
-                        "id": "Value 10"
-                      }
-                    }
-                  },
-                  {
-                    "value": " facilities operate above both thresholds."
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "This confirms that high unplanned intake "
-                  },
-                  {
-                    "value": "represents the dominant operating mode",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": " across the network."
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "IMPACT:",
+                    "value": "65% to 86%",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "textDecoration": "underline"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " ",
+                    "value": ". This indicates that unplanned intake is a ",
                     "textStyle": {
-                      "textDecoration": "underline"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Because elevated unplanned admission rates coincide with "
-                  },
-                  {
-                    "value": "sustained inpatient volume",
-                    "textStyle": {
-                      "fontWeight": "bold"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", intake pressure is not a marginal effect."
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "For most facilities, this combination amplifies:"
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "ED congestion"
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Bed turnover stress"
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Staffing and throughput volatility"
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "This reduces the likelihood that downstream LOS, cost, or quality variation can be primarily attributed to random demand fluctuation."
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Instead, observed performance differences are more likely driven by "
-                  },
-                  {
-                    "value": "intake management, flow control, and discharge effectiveness",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": "."
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "ACTION:",
+                    "value": "system-wide operating condition",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "textDecoration": "underline"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " "
+                    "value": ", not a pattern limited to a single peer group.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "Use this intake pressure baseline to:"
+                    "value": ""
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "Normalize LOS and cost comparisons in the context of sustained unplanned demand"
+                    "value": "The spread across peer groups suggests that differences in unplanned intake are present by segment, but the overall level remains high across the network—consistent with emergency and urgent pathways representing a primary route of inpatient entry in multiple operating contexts.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "INTERPRETATION GUIDANCE: ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt",
+                      "textDecoration": "underline"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Read this view as ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "context",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not performance evaluation: it describes ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "how admissions arrive",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " across peer groups, not how well sites are run.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ],
                 "listType": "bullet"
@@ -416,7 +164,30 @@
               {
                 "textRuns": [
                   {
-                    "value": "Prioritize flow and bed-management deep dives at facilities operating above both rate and volume thresholds"
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Because unplanned intake is high across all peer groups, downstream metrics (e.g., LOS, throughput friction, cost) should be interpreted ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "with intake pressure as a common baseline condition",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", rather than assuming a low-intake “normal” state.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ],
                 "listType": "bullet"
@@ -424,7 +195,30 @@
               {
                 "textRuns": [
                   {
-                    "value": "Treat facilities within the low-pressure zone as structural comparators rather than performance benchmarks, as their intake conditions are not representative of the system’s dominant operating environment."
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Differences between peer groups should be treated as ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "contextual segmentation",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " (case mix, referral patterns, access dynamics), not causal explanations and not evidence of operational effectiveness.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ],
                 "listType": "bullet"
@@ -432,10 +226,40 @@
               {
                 "textRuns": [
                   {
-                    "value": "Focus operational interventions on intake smoothing, ED diversion, and discharge velocity rather than acuity adjustment"
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "This view supports ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "peer-relative interpretation",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " in later pages; it should not be used to rank facilities or infer cause-and-effect relationships.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ],
                 "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
               }
             ]
           }

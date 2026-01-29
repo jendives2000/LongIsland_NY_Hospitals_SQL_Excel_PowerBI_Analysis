@@ -19,9 +19,35 @@
               {
                 "textRuns": [
                   {
-                    "value": "When elevated unplanned admissions coincide with sustained inpatient volume, pressure propagates across the system—affecting emergency department congestion, bed availability, staffing stability, and patient flow.",
+                    "value": "Higher Unplanned Admission rates typically coincides with ",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "10.5pt"
+                    }
+                  },
+                  {
+                    "value": "less controllable arrival timing",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "10.5pt"
+                    }
+                  },
+                  {
+                    "value": " and ",
+                    "textStyle": {
+                      "fontSize": "10.5pt"
+                    }
+                  },
+                  {
+                    "value": "shorter planning horizons",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "10.5pt"
+                    }
+                  },
+                  {
+                    "value": ", which can limit a facility’s ability to smooth demand across beds, staffing, and downstream services.",
+                    "textStyle": {
+                      "fontSize": "10.5pt"
                     }
                   }
                 ]
@@ -36,22 +62,22 @@
               {
                 "textRuns": [
                   {
-                    "value": "Under these conditions, variation in downstream metrics such as LOS and cost is ",
+                    "value": "As UA rates rises (especially when encounter volume is also high), observed capacity and flow constraints are more often interpreted as reflecting ",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "10.5pt"
                     }
                   },
                   {
-                    "value": "less likely to reflect random demand fluctuation",
+                    "value": "operating context",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "11pt"
+                      "fontSize": "10.5pt"
                     }
                   },
                   {
-                    "value": " and more likely to reflect structural flow constraints.",
+                    "value": " rather than short-term variability.",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "10.5pt"
                     }
                   }
                 ]

@@ -26,7 +26,25 @@
               {
                 "textRuns": [
                   {
-                    "value": "Intake pressure describes the operational strain created when a large share of inpatient admissions arrive unplanned, primarily through emergency and urgent pathways."
+                    "value": "Intake pressure describes the "
+                  },
+                  {
+                    "value": "operational strain",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " created when a "
+                  },
+                  {
+                    "value": "large share of inpatient admissions arrive unplanned",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ", primarily through emergency and urgent pathways."
                   }
                 ],
                 "listType": "bullet"
@@ -34,7 +52,25 @@
               {
                 "textRuns": [
                   {
-                    "value": "Unlike scheduled admissions, unplanned intake is unpredictable, time-compressed, and difficult to smooth, requiring facilities to absorb demand immediately rather than redistribute it over time."
+                    "value": "Unlike scheduled admissions, unplanned intake is "
+                  },
+                  {
+                    "value": "unpredictable, time-compressed, and difficult to smooth",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ", requiring facilities to "
+                  },
+                  {
+                    "value": "absorb demand immediately",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " rather than redistribute it over time."
                   }
                 ],
                 "listType": "bullet"
@@ -42,7 +78,13 @@
               {
                 "textRuns": [
                   {
-                    "value": "When elevated unplanned admissions coincide with sustained encounter volume, pressure propagates across the system—affecting emergency department congestion, bed availability, staffing stability, and patient flow."
+                    "value": "When elevated unplanned admissions coincide with sustained encounter volume, pressure propagates across the system",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "—affecting emergency department congestion, bed availability, staffing stability, and patient flow."
                   }
                 ],
                 "listType": "bullet"
@@ -50,7 +92,13 @@
               {
                 "textRuns": [
                   {
-                    "value": "Under these conditions, variation in downstream metrics such as length of stay and cost is less likely to reflect random demand fluctuation and more likely to reflect differences in intake management, flow control, and discharge effectiveness."
+                    "value": "Under these conditions, variation in downstream metrics such as length of stay and cost is less likely to reflect random demand fluctuation and "
+                  },
+                  {
+                    "value": "more likely to reflect differences in intake management, flow control, and discharge effectiveness.",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
                   }
                 ]
               }
@@ -76,5 +124,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "135042e2a6cede93c0b1"
+  "parentGroupName": "135042e2a6cede93c0b1",
+  "isHidden": true
 }

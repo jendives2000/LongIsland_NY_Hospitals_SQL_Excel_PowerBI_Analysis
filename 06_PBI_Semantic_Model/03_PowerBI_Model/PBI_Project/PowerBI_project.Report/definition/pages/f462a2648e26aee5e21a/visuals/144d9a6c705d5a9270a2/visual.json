@@ -19,25 +19,69 @@
               {
                 "textRuns": [
                   {
-                    "value": "Use this page to establish ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
+                    "value": "Use UA to set "
                   },
                   {
                     "value": "baseline operating context",
                     "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
+                      "fontWeight": "bold"
                     }
                   },
                   {
-                    "value": " before reviewing peer comparisons or performance indicators.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
+                    "value": " before interpreting throughput and outcome pages."
                   }
                 ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Peer-relative read:",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " Compare UA to the peer median to understand whether intake is more or less “unplanned” than typical for similar sites."
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Volume interaction:",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " Review UA alongside encounter volume to distinguish broad system pressure from isolated outliers."
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Threshold flags (if used):",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " Treat the 40% UA and 3,000 volume markers as "
+                  },
+                  {
+                    "value": "context flags",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " (historical inflection points), not performance targets."
+                  }
+                ],
+                "listType": "bullet"
               },
               {
                 "textRuns": [
@@ -49,23 +93,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "The metrics shown here are ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "contextual indicators — not performance scores",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ". They are intended to guide interpretation and prioritization, not to rank facilities or assess care quality.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
+                    "value": "These indicators are descriptive; they support interpretation and prioritization of review, not ranking or performance attribution."
                   }
                 ]
               }
@@ -104,6 +132,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "135042e2a6cede93c0b1",
-  "isHidden": true
+  "parentGroupName": "135042e2a6cede93c0b1"
 }
