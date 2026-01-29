@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "c1687403a1d4c8bc5931",
+  "name": "af7855341fb01e4ac09b",
   "position": {
-    "x": 14.153846153846153,
-    "y": 192.89464654598927,
-    "z": 6375,
-    "height": 389.53846153846155,
-    "width": 582.15384615384619,
-    "tabOrder": 3000
+    "x": 14.337662337662337,
+    "y": 192.59665778008969,
+    "z": 4500,
+    "height": 389.61038961038957,
+    "width": 582.23376623376623,
+    "tabOrder": 17002
   },
   "visual": {
     "visualType": "textbox",
@@ -38,7 +38,20 @@
               {
                 "textRuns": [
                   {
-                    "value": "This view establishes intake context that should be carried forward when interpreting throughput, cost, and outcome variation in subsequent pages.",
+                    "value": "Unplanned intake pressure reflects the ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "interaction between admission rate and inpatient volume",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", rather than rate alone.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -55,33 +68,46 @@
               {
                 "textRuns": [
                   {
-                    "value": "Unplanned admission share is elevated across all peer groups, with peer-group values ranging from approximately ",
+                    "value": "Across the system, most facilities are positioned ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "65% to 86%",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ". This indicates that unplanned intake is a ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "system-wide operating condition",
+                    "value": "to the right of the 40% unplanned admission rate threshold",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not a pattern limited to a single peer group.",
+                    "value": ", and a substantial subset also operates at ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "moderate to high encounter volumes",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ". This places many facilities in a zone where ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "rate and scale compound",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", indicating sustained exposure to unplanned intake pressure rather than isolated spikes.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -98,7 +124,50 @@
               {
                 "textRuns": [
                   {
-                    "value": "The spread across peer groups suggests that differences in unplanned intake are present by segment, but the overall level remains high across the network—consistent with emergency and urgent pathways representing a primary route of inpatient entry in multiple operating contexts.",
+                    "value": "Facilities with lower encounter volumes but high unplanned admission rates are also present, indicating that ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "intake pressure is distributed across multiple operating contexts",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not limited to large hospitals.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Overall, the visual shows ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "dispersion across both dimensions",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", with no single cluster dominating the pattern.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -127,33 +196,60 @@
               {
                 "textRuns": [
                   {
-                    "value": "Read this view as ",
+                    "value": "This view should be read as a ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "context",
+                    "value": "context signal",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not performance evaluation: it describes ",
+                    "value": ", not a performance comparison.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Key interpretation principles:",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Unplanned intake pressure should be understood as a ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "how admissions arrive",
+                    "value": "rate × volume interaction",
                     "textStyle": {
-                      "fontStyle": "italic",
+                      "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " across peer groups, not how well sites are run.",
+                    "value": ", not inferred from either dimension independently.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -171,20 +267,33 @@
               {
                 "textRuns": [
                   {
-                    "value": "Because unplanned intake is high across all peer groups, downstream metrics (e.g., LOS, throughput friction, cost) should be interpreted ",
+                    "value": "Facilities in the upper-right region reflect ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "with intake pressure as a common baseline condition",
+                    "value": "sustained structural exposure",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", rather than assuming a low-intake “normal” state.",
+                    "value": " to unplanned demand, while facilities high on rate but lower on volume represent ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "different operational contexts",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not lower pressure.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -202,20 +311,20 @@
               {
                 "textRuns": [
                   {
-                    "value": "Differences between peer groups should be treated as ",
+                    "value": "Proximity to thresholds (e.g., 40% rate, ~3k encounters) indicates ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "contextual segmentation",
+                    "value": "relative positioning",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " (case mix, referral patterns, access dynamics), not causal explanations and not evidence of operational effectiveness.",
+                    "value": ", not categorical classification.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -233,26 +342,131 @@
               {
                 "textRuns": [
                   {
-                    "value": "This view supports ",
+                    "value": "When interpreting downstream metrics (LOS, cost, throughput, outcomes):",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Variation observed later in the report is ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "peer-relative interpretation",
+                    "value": "less likely to reflect random demand fluctuation",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " in later pages; it should not be used to rank facilities or infer cause-and-effect relationships.",
+                    "value": " and more likely to align with ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "intake and flow conditions",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ".",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   }
                 ],
                 "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "This visual establishes ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "baseline operating context",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " and should be used to ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "frame interpretation",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not to rank facilities or infer effectiveness.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Observed patterns describe ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "distribution and structural exposure",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", and do not establish causality or performance attribution.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
               },
               {
                 "textRuns": [

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "6701c84b78b50db7e1d8",
   "position": {
-    "x": 660.92307692307691,
-    "y": 35.971569622912355,
+    "x": 660.77922077922074,
+    "y": 18.36081078684628,
     "z": 6250,
-    "height": 536,
-    "width": 603.07692307692309,
+    "height": 534.85714285714278,
+    "width": 603.42857142857144,
     "tabOrder": 2000
   },
   "visual": {
@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": false
+              "active": true
             }
           ]
         },
@@ -882,6 +882,5 @@
       }
     ],
     "filterSortOrder": "Custom"
-  },
-  "isHidden": true
+  }
 }
