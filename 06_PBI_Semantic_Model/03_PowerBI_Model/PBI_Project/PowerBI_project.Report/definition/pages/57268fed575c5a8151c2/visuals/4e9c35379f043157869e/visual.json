@@ -1,0 +1,717 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "4e9c35379f043157869e",
+  "position": {
+    "x": 14.961038961038961,
+    "y": 211.24147627825872,
+    "z": 7500,
+    "height": 349.71428571428572,
+    "width": 580.98701298701292,
+    "tabOrder": 17005
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "I",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "textDecoration": "underline"
+                    }
+                  },
+                  {
+                    "value": "NSIGHT:",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "10.5pt",
+                      "textDecoration": "underline"
+                    }
+                  },
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "10.5pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "This view isolates the "
+                  },
+                  {
+                    "value": "share of Extreme-severity cases by facility",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " and compares each facility against a "
+                  },
+                  {
+                    "value": "peer-group baseline",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ", highlighting how the most complex cases are distributed across the system."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Facilities span a "
+                  },
+                  {
+                    "value": "range of Extreme severity shares around the peer median (33.3%)",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ", indicating meaningful "
+                  },
+                  {
+                    "value": "variation in acuity concentration",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ", even where overall severity levels are otherwise comparable. Some facilities operate above this baseline, while others fall below it, reflecting "
+                  },
+                  {
+                    "value": "differences in case-mix composition rather than uniform shifts in patient complexity",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "The pattern shown represents "
+                  },
+                  {
+                    "value": "distribution relative to a contextual reference point",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ", not absolute severity ranking across the system."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "INTERPRETATION GUIDANCE:",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "10.5pt",
+                      "textDecoration": "underline"
+                    }
+                  },
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "10.5pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "The Extreme severity share captures "
+                  },
+                  {
+                    "value": "concentration of the highest-acuity cases",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ", not overall patient complexity or performance."
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Being above the peer median indicates "
+                  },
+                  {
+                    "value": "relative concentration within a comparable context",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ", not exceptional severity across all facilities."
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Differences observed here should be interpreted as "
+                  },
+                  {
+                    "value": "acuity-mix context",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " when reviewing downstream metrics such as LOS, cost, or mortality."
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "This view complements the broader Severity Mix Index by "
+                  },
+                  {
+                    "value": "disaggregating where severity resides within the case mix",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ", rather than summarizing it into a single score."
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Observed variation is "
+                  },
+                  {
+                    "value": "descriptive and contextual",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " and does not establish causality, efficiency, or quality differences."
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "This visual provides "
+                  },
+                  {
+                    "value": "context for interpretation",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ", not evaluation, and should be used as an input to downstream analysis rather than as a standalone conclusion."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_Severity",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "SMI Min"
+                                },
+                                "Name": "_Severity.SMI Min"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_Severity.SMI Min"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "smi_min",
+                      "utterance": "smi min"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "smi_min"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_Severity",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "SMI Max"
+                                },
+                                "Name": "_Severity.SMI Max"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_Severity.SMI Max"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "Value",
+                      "utterance": "smi max"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Value"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_Severity",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "Facility Count"
+                                },
+                                "Name": "_Severity.Facility Count"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_Severity.Facility Count"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "total_cnt",
+                      "utterance": "facility count"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "total_cnt"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_Severity",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "Facilities Above Own PG Sev Median"
+                                },
+                                "Name": "_Severity.Facilities Above Own PG Sev Median"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_Severity.Facilities Above Own PG Sev Median"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "facilities_abv_own_pgSevMedian",
+                      "utterance": "Facilities Above Own PG Sev Median"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "facilities_abv_own_pgSevMedian"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_Severity",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "Facility Count"
+                                },
+                                "Name": "_Severity.Facility Count"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_Severity.Facility Count"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "Value 2",
+                      "utterance": "facility count"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Value 2"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "d",
+                                "Entity": "Dim_ClinicalClass",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "d"
+                                    }
+                                  },
+                                  "Property": "PeerGroup Severity Median (FacilitySafe)"
+                                },
+                                "Name": "Dim_ClinicalClass.PeerGroup Severity Median (FacilitySafe)"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "Dim_ClinicalClass.PeerGroup Severity Median (FacilitySafe)"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "median_smi",
+                      "utterance": "PeerGroup Severity Median (FacilitySafe)"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "median_smi"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_Severity",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "Facilities Above SMI Median"
+                                },
+                                "Name": "_Severity.Facilities Above SMI Median"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_Severity.Facilities Above SMI Median"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "above_cnt",
+                      "utterance": "Facilities Above SMI Median"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "above_cnt"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "28D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Insight'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "f9f00eae4c0acbdd5301"
+}

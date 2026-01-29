@@ -106,29 +106,16 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Dim_Facility"
+                    "Entity": "Dim_ClinicalClass"
                   }
                 },
-                "Property": "PeerGroup_Name"
+                "Property": "PeerGroup Severity Median"
               }
             },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Dim_Facility"
-                  }
-                },
-                "Property": "Facility_Name"
-              }
-            },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }

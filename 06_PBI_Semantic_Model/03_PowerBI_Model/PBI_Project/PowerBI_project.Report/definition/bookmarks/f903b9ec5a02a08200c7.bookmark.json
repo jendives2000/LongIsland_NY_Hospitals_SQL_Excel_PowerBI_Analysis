@@ -3,9 +3,7 @@
   "displayName": "Button Vis Severity Distribution",
   "name": "f903b9ec5a02a08200c7",
   "options": {
-    "targetVisualNames": [
-      "0906365080449c205513"
-    ]
+    "targetVisualNames": []
   },
   "explorationState": {
     "version": "1.3",
@@ -13,22 +11,197 @@
     "sections": {
       "57268fed575c5a8151c2": {
         "visualContainers": {
-          "34711bdb55a53546fdf0": {
+          "02fb1c40c3376d514129": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "5ecb0cdb83770127eb70",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "5b811b0b122960308a15": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Basic'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  }
+                ]
               }
             }
           },
-          "8689471ec16713435ecd": {
+          "041cc4dc71e990b7eed8": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "0906365080449c205513": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "b7048e3e8e14677b7e8c",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "933c6006f1158b33db81",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "Facility_Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "5f9690c23b9d1ff299bf",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "vw_Fact_KPI_SeverityMix_BySeverity"
+                        }
+                      },
+                      "Property": "APR_Severity_Description"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "8822234f8e4cb0241f3e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Severity"
+                        }
+                      },
+                      "Property": "Extreme Severity %"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d3f73fa8469e6da0a9e5",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "vw_Fact_KPI_SeverityMix_BySeverity"
+                            }
+                          },
+                          "Property": "Encounter_Count"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "hundredPercentStackedBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Severity"
+                        }
+                      },
+                      "Property": "Extreme Severity %"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "Facility_Name"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "0e0f35ff6e4b60f830ab": {
             "singleVisual": {
               "visualType": "textbox",
               "objects": {}
@@ -146,10 +319,258 @@
               }
             }
           },
+          "1ce392627e427985f217": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "1dae4fbef13f5b6a7709": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "262b52f10d887ce69014": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "2d1de6194f646e870a8d": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "34711bdb55a53546fdf0": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "354c8bf6080bd865d844": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "362248da2bbe9b0672d5": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
           "40f2a68cc83ee6ec0c8a": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {}
+            }
+          },
+          "4b29bc1bb46db93c0a18": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "4fbc5e3f1c3b1e6920cd": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "53cd8a1c9d2ac1d0c000": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "e498205fc2b10be80993",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "d",
+                        "Entity": "Dim_ClinicalClass",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "d"
+                                        }
+                                      },
+                                      "Property": "APR_Severity_Description"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "null"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_ClinicalClass"
+                        }
+                      },
+                      "Property": "APR_Severity_Description"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "4a79f028aee1b9c54de3",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "27be3622907b496df7d5",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "Facility_Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "27136977945b2c3085d9",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "vw_Fact_KPI_SeverityMix_BySeverity"
+                        }
+                      },
+                      "Property": "APR_Severity_Description"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "adb839ebbff28dbfe749",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "vw_Fact_KPI_SeverityMix_BySeverity"
+                            }
+                          },
+                          "Property": "Encounter_Count"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "hundredPercentStackedBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  }
+                },
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "Facility_Name"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "Facility_Name"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
             }
           },
           "546856f82181213ed8b6": {
@@ -294,11 +715,74 @@
               }
             }
           },
+          "54bd9525bb9f3c07efb3": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "5a419087ccaf9775afec": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "5abdf32016fe8f14681f": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "5b811b0b122960308a15": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "5cce6f5150018d481349": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "5faef266f42f19ca7ee3": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "679fb154ceb5883a3838": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "6cef1840757a3aa2d66e": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "737b6f7a9de17c1f4050": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "7b516787f78e8337c75c": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
           "7c5293938ad98064b105": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "3e2ad4048b5897429cb5",
+                  "name": "a619b58f309dfe55c574",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -313,7 +797,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e2bf429a868c31a43dbf",
+                  "name": "5926720ae9672737f65d",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -331,6 +815,81 @@
             },
             "singleVisual": {
               "visualType": "tableEx",
+              "objects": {}
+            }
+          },
+          "7e4c37e39d7340a3e022": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "8689471ec16713435ecd": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "875ad89b3a7b3fab63a9": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "88f354c944028cd17502": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "9023dddc725c602512c9": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "9074371959fadfb63461": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "934c60b19d79f250e8ca": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "9584092e7a54814cc4e3": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "979acc4bc96674c7133b": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "9ccf8a01d308e4c718c0": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "9e9ecd7922d56a5507ea": {
+            "singleVisual": {
+              "visualType": "actionButton",
               "objects": {}
             }
           },
@@ -480,727 +1039,13 @@
               "objects": {}
             }
           },
-          "d367020dc957943e2eb0": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "e25fda04ec82ab826b91": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "ea235680adcb6e02740d": {
+          "a21c24dbd90993ffb4f8": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {}
-            }
-          },
-          "f6ca2eb52561012c5ca3": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "fb066f6bb065b705106c": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "675f08d5e4e5d1842c04",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Basic'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "934c60b19d79f250e8ca": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "9584092e7a54814cc4e3": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "979acc4bc96674c7133b": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
             }
           },
           "a8195080488b293fa0bd": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "1ce392627e427985f217": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "262b52f10d887ce69014": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "2d1de6194f646e870a8d": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "362248da2bbe9b0672d5": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "d2a7d2337d8a41c50bfe": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "6cef1840757a3aa2d66e": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "9023dddc725c602512c9": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "9ccf8a01d308e4c718c0": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "cc529bc36dd10ebc2324": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "6be5721bc4e24395060b",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Volume_&_Denominators"
-                        }
-                      },
-                      "Property": "SeverityMix Total Encounters"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "b97755226bcd3adc9fb4",
-                  "type": "Advanced",
-                  "expression": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Dim_Facility"
-                            }
-                          },
-                          "Property": "Facility_Name"
-                        }
-                      },
-                      "Function": 2
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "998e982a042721a1143f",
-                  "type": "Advanced",
-                  "expression": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Dim_Facility"
-                            }
-                          },
-                          "Property": "PeerGroup_Name"
-                        }
-                      },
-                      "Function": 2
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "bcf3492161cf09a5a5b0",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Severity"
-                        }
-                      },
-                      "Property": "SMI Peer Median"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "7769f6aa975066c6c2ad",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Severity"
-                        }
-                      },
-                      "Property": "Facilities Above SMI Median"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "17afaf76998845a006b9",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Severity"
-                        }
-                      },
-                      "Property": "Facilities Above Own PG Sev Median"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "cardVisual",
-              "objects": {}
-            }
-          },
-          "e16a9d8c98f13013ab13": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "e3ef6230d1871de10448": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "d31b9b3ba1ad765d3e6e": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "e950a78466a9857d9c33": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "f6365a003bd3a3b30a26": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "1dae4fbef13f5b6a7709": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "5a419087ccaf9775afec": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "5faef266f42f19ca7ee3": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "02fb1c40c3376d514129": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "ecb21fdcd8dd1a48bf3f",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Basic'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "041cc4dc71e990b7eed8": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "0906365080449c205513": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "7bb2f9f8eaa499f301c3",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "005504b616afc746a8ae",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "Facility_Name"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "5048fed40d49a36cdf64",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "vw_Fact_KPI_SeverityMix_BySeverity"
-                        }
-                      },
-                      "Property": "APR_Severity_Description"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "9e95827c512a5a7358b6",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Severity"
-                        }
-                      },
-                      "Property": "Extreme Severity %"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "423cd10503d99c310880",
-                  "type": "Advanced",
-                  "expression": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "vw_Fact_KPI_SeverityMix_BySeverity"
-                            }
-                          },
-                          "Property": "Encounter_Count"
-                        }
-                      },
-                      "Function": 0
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "hundredPercentStackedBarChart",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Severity"
-                        }
-                      },
-                      "Property": "Extreme Severity %"
-                    }
-                  }
-                }
-              ],
-              "activeProjections": {
-                "Category": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  },
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "Facility_Name"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "354c8bf6080bd865d844": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "53cd8a1c9d2ac1d0c000": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "e498205fc2b10be80993",
-                  "type": "Categorical",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "d",
-                        "Entity": "Dim_ClinicalClass",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "Not": {
-                            "Expression": {
-                              "In": {
-                                "Expressions": [
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "d"
-                                        }
-                                      },
-                                      "Property": "APR_Severity_Description"
-                                    }
-                                  }
-                                ],
-                                "Values": [
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "null"
-                                      }
-                                    }
-                                  ]
-                                ]
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_ClinicalClass"
-                        }
-                      },
-                      "Property": "APR_Severity_Description"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "1704c88a8f234b00bc6e",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "0a7432abb7c4421bdb2e",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "Facility_Name"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "b6839e50224d72ae1325",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "vw_Fact_KPI_SeverityMix_BySeverity"
-                        }
-                      },
-                      "Property": "APR_Severity_Description"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "78498c1a06c7b8c16980",
-                  "type": "Advanced",
-                  "expression": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "vw_Fact_KPI_SeverityMix_BySeverity"
-                            }
-                          },
-                          "Property": "Encounter_Count"
-                        }
-                      },
-                      "Function": 0
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "hundredPercentStackedBarChart",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 1,
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  }
-                },
-                {
-                  "Direction": 1,
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "Facility_Name"
-                    }
-                  }
-                }
-              ],
-              "activeProjections": {
-                "Category": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  },
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "Facility_Name"
-                    }
-                  }
-                ]
-              },
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "5cce6f5150018d481349": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "679fb154ceb5883a3838": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {}
@@ -1210,7 +1055,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "f4b7600b525edfd85734",
+                  "name": "cc7c97fd0f1d13f84c04",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1225,7 +1070,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "10940d521a19cf70f439",
+                  "name": "0f5d1f3b6ffee05ffe5f",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1240,7 +1085,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "f474e3822ab50c6b765f",
+                  "name": "5df6323aea4d502df775",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1293,13 +1138,189 @@
               }
             }
           },
+          "af668535d7ae62c55c2e": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
           "b44c62559edb6bea5002": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "b64c79f817f23e128443": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "cc529bc36dd10ebc2324": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "bb11f5023348a790a6d1",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Volume_&_Denominators"
+                        }
+                      },
+                      "Property": "SeverityMix Total Encounters"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "1a965567932ac2ee4faf",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Dim_Facility"
+                            }
+                          },
+                          "Property": "Facility_Name"
+                        }
+                      },
+                      "Function": 2
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "1d95091b299a140e9ab4",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Dim_Facility"
+                            }
+                          },
+                          "Property": "PeerGroup_Name"
+                        }
+                      },
+                      "Function": 2
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a58b956502ef50bfa375",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Severity"
+                        }
+                      },
+                      "Property": "SMI Peer Median"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "55a70f550ceef4445f86",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Severity"
+                        }
+                      },
+                      "Property": "Facilities Above SMI Median"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a3cd4bccd0ab201186f7",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Severity"
+                        }
+                      },
+                      "Property": "Facilities Above Own PG Sev Median"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {}
+            }
+          },
+          "ce546d93440a187e5169": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "d25a19f1a40b8d308105": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "d2a7d2337d8a41c50bfe": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "d31b9b3ba1ad765d3e6e": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "d367020dc957943e2eb0": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "d63c448b7cf3119b9a6a": {
             "singleVisual": {
               "visualType": "textbox",
               "objects": {}
             }
           },
           "d67126e365ab172ebe59": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "e16a9d8c98f13013ab13": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "e25fda04ec82ab826b91": {
             "singleVisual": {
               "visualType": "shape",
               "objects": {}
@@ -1314,9 +1335,112 @@
               }
             }
           },
-          "54bd9525bb9f3c07efb3": {
+          "e3823d7855d6fdd0da06": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "e3ef6230d1871de10448": {
             "singleVisual": {
               "visualType": "textbox",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "e551808e5cf5085c7b80": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "e950a78466a9857d9c33": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "ea235680adcb6e02740d": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "f6365a003bd3a3b30a26": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "f6ca2eb52561012c5ca3": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "fb066f6bb065b705106c": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "3ee3c483dcde7736199e",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Basic'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "fb76e8d046cf5e77d586": {
+            "singleVisual": {
+              "visualType": "actionButton",
               "objects": {}
             }
           },
@@ -1326,109 +1450,19 @@
               "objects": {}
             }
           },
-          "d25a19f1a40b8d308105": {
+          "b97f46abfeb65bc12274": {
             "singleVisual": {
               "visualType": "textbox",
               "objects": {}
             }
           },
-          "d63c448b7cf3119b9a6a": {
+          "0ef63fd81114b42d5d3d": {
             "singleVisual": {
               "visualType": "textbox",
               "objects": {}
             }
           },
-          "5abdf32016fe8f14681f": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "9e9ecd7922d56a5507ea": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "af668535d7ae62c55c2e": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "7e4c37e39d7340a3e022": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "a21c24dbd90993ffb4f8": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "4fbc5e3f1c3b1e6920cd": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "9074371959fadfb63461": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "875ad89b3a7b3fab63a9": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "b64c79f817f23e128443": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "ce546d93440a187e5169": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "e551808e5cf5085c7b80": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "88f354c944028cd17502": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "e3823d7855d6fdd0da06": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "fb76e8d046cf5e77d586": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "7b516787f78e8337c75c": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "4b29bc1bb46db93c0a18": {
+          "4e9c35379f043157869e": {
             "singleVisual": {
               "visualType": "textbox",
               "objects": {},
@@ -1436,15 +1470,17 @@
                 "mode": "hidden"
               }
             }
-          },
-          "0e0f35ff6e4b60f830ab": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
           }
         },
         "visualContainerGroups": {
+          "7cab7952255c4d5eb560": {
+            "isHidden": true,
+            "children": {
+              "efaf92289454a20acec8": {
+                "isHidden": false
+              }
+            }
+          },
           "89c9b513a9ae920b0617": {
             "isHidden": true
           },
@@ -1458,14 +1494,6 @@
           },
           "f9f00eae4c0acbdd5301": {
             "isHidden": false
-          },
-          "7cab7952255c4d5eb560": {
-            "isHidden": true,
-            "children": {
-              "efaf92289454a20acec8": {
-                "isHidden": false
-              }
-            }
           }
         }
       }
