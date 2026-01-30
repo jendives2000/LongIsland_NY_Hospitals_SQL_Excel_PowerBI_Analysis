@@ -202,10 +202,8 @@ table _LOS
 	measure 'Total Bed-Days' =
 			
 			[AVG LOS] * [Total Encounters]
-		formatString: 0
+		formatString: #,0
 		lineageTag: d86d3105-1693-4626-9711-4833372cf718
-
-		annotation PBI_FormatHint = {"isDecimal":true}
 
 	measure 'Share of Bed-Days' =
 			
@@ -213,9 +211,8 @@ table _LOS
 			    [Total Bed-Days],
 			    CALCULATE([Total Bed-Days], REMOVEFILTERS(Dim_Facility))
 			)
+		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 5343bce0-2bad-4235-9b02-3f226ca4a482
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Cross–Peer-Group LOS Median' =
 			

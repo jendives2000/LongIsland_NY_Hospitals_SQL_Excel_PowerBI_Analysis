@@ -2,10 +2,10 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "b987d826369e10a2b995",
   "position": {
-    "x": 660.66666666666663,
-    "y": 15.908966772872105,
-    "z": 6000,
-    "height": 488,
+    "x": 660.89795918367349,
+    "y": 14.36734693877551,
+    "z": 4875,
+    "height": 404.24489795918367,
     "width": 608,
     "tabOrder": 17000
   },
@@ -28,7 +28,7 @@
               },
               "queryRef": "Dim_PeerGroup.PeerGroup_Name",
               "nativeQueryRef": "PeerGroup_Name1",
-              "active": true
+              "active": false
             },
             {
               "field": {
@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": false
+              "active": true
             }
           ]
         },
@@ -619,7 +619,8 @@
             },
             "Property": "Facility_Name"
           }
-        }
+        },
+        "type": "Categorical"
       },
       {
         "name": "c3ee48aa4186edce5d95",
@@ -633,7 +634,8 @@
             },
             "Property": "PeerGroup_Name"
           }
-        }
+        },
+        "type": "Categorical"
       },
       {
         "name": "66c52e2e3899dde5d128",
@@ -647,7 +649,8 @@
             },
             "Property": "PeerGroup_Name"
           }
-        }
+        },
+        "type": "Categorical"
       },
       {
         "name": "354fa8b2e7b08b6022c6",
@@ -698,10 +701,96 @@
           }
         },
         "type": "TopN",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "subquery",
+              "Expression": {
+                "Subquery": {
+                  "Query": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "d",
+                        "Entity": "Dim_Facility",
+                        "Type": 0
+                      },
+                      {
+                        "Name": "_",
+                        "Entity": "_LOS",
+                        "Type": 0
+                      }
+                    ],
+                    "Select": [
+                      {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "d"
+                            }
+                          },
+                          "Property": "Facility_Name"
+                        },
+                        "Name": "field"
+                      }
+                    ],
+                    "OrderBy": [
+                      {
+                        "Direction": 2,
+                        "Expression": {
+                          "Measure": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "_"
+                              }
+                            },
+                            "Property": "Total Bed-Days"
+                          }
+                        }
+                      }
+                    ],
+                    "Top": 6
+                  }
+                }
+              },
+              "Type": 2
+            },
+            {
+              "Name": "d",
+              "Entity": "Dim_Facility",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "Facility_Name"
+                      }
+                    }
+                  ],
+                  "Table": {
+                    "SourceRef": {
+                      "Source": "subquery"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
         "howCreated": "User"
       }
     ],
     "filterSortOrder": "Custom"
-  },
-  "isHidden": true
+  }
 }

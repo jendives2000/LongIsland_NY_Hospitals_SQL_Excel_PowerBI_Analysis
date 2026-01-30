@@ -3,7 +3,7 @@
   "name": "1aea446e3b082d348deb",
   "position": {
     "x": 660.30769230769226,
-    "y": 16.188228703476767,
+    "y": 15.42854523825395,
     "z": 10000,
     "height": 561.23076923076928,
     "width": 608,
@@ -140,16 +140,29 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Dim_ClinicalClass"
+                    "Entity": "Dim_PeerGroup"
                   }
                 },
-                "Property": "PeerGroup LOS Median"
+                "Property": "PeerGroup_Name"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
+          },
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Dim_Facility"
+                  }
+                },
+                "Property": "Facility_Name"
+              }
+            },
+            "direction": "Ascending"
           }
         ]
       }
@@ -828,5 +841,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "ed3e78b7d54e31523a69"
+  "parentGroupName": "ed3e78b7d54e31523a69",
+  "isHidden": true
 }

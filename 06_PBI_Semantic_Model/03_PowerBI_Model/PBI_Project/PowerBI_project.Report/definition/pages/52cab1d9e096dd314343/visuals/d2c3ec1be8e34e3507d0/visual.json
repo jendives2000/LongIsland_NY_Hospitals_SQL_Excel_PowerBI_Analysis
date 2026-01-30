@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "90e97d6593e6be9d99bf",
+  "name": "d2c3ec1be8e34e3507d0",
   "position": {
     "x": 14.337662337662337,
-    "y": 192.59665778008969,
-    "z": 6125,
+    "y": 191.66876382712979,
+    "z": 8000,
     "height": 389.61038961038957,
     "width": 582.23376623376623,
-    "tabOrder": 16000
+    "tabOrder": 19000
   },
   "visual": {
     "visualType": "textbox",
@@ -21,15 +21,38 @@
                   {
                     "value": "INSIGHT:",
                     "textStyle": {
-                      "fontWeight": "bold",
                       "fontSize": "11pt",
-                      "textDecoration": "underline"
+                      "textDecoration": "underline",
+                      "color": "#ffffff"
                     }
                   },
                   {
                     "value": " ",
                     "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#ffffff"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Excess length of stay relative to peer-group medians is ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "unevenly distributed across facilities",
+                    "textStyle": {
                       "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", with values spanning from modest positive deviations to more pronounced gaps above the peer median (0 line).",
+                    "textStyle": {
                       "fontSize": "11pt"
                     }
                   }
@@ -38,39 +61,63 @@
               {
                 "textRuns": [
                   {
-                    "value": "Unplanned admission rates show ",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "A subset of facilities exhibits ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "substantial dispersion across facilities",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", with values spanning a wide range relative to their ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "own peer-group median benchmarks",
+                    "value": "material excess LOS",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ". Facilities appear on both sides of their peer medians across all peer groups, indicating that elevated unplanned intake is ",
+                    "value": ", while many cluster close to the peer baseline, indicating that extended stays are ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "not confined to a single facility type or segment",
+                    "value": "not system-wide",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", but concentrated among a limited number of sites.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Facilities at or near the peer median demonstrate LOS that aligns with expected throughput for their peer context, whereas those further above the median reflect ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "greater divergence from typical peer-group stay patterns",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
@@ -94,63 +141,20 @@
               {
                 "textRuns": [
                   {
-                    "value": "The distribution highlights ",
+                    "value": "These observed differences describe ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "within–peer-group variability",
+                    "value": "relative positioning within peer groups",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", where some facilities operate materially above their peer median while others fall below, even under similar structural classifications. This pattern reflects ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "heterogeneous intake exposure within shared peer contexts",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", rather than uniform pressure across all facilities in a group.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Importantly, the peer median line functions as a ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "directional reference",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", not a threshold. Positions above or below this line indicate relative intake alignment within peer context, not performance standing.",
+                    "value": ", not absolute performance, and do not imply quality variation or causal drivers.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -169,9 +173,9 @@
                   {
                     "value": "INTERPRETATION GUIDANCE: ",
                     "textStyle": {
-                      "fontWeight": "bold",
                       "fontSize": "11pt",
-                      "textDecoration": "underline"
+                      "textDecoration": "underline",
+                      "color": "#ffffff"
                     }
                   }
                 ]
@@ -179,33 +183,20 @@
               {
                 "textRuns": [
                   {
-                    "value": "Interpret this visual as a ",
+                    "value": "Read excess LOS as a ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "within–peer-group positioning view",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", showing how facilities’ unplanned intake rates align relative to their ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "own peer medians",
+                    "value": "directional throughput signal",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not as a cross-facility comparison.",
+                    "value": ", not a performance score or efficiency rating.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -216,27 +207,20 @@
               {
                 "textRuns": [
                   {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Variation above or below the peer median should be read as ",
+                    "value": "Positive values indicate ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "differences in intake exposure and demand patterns",
+                    "value": "longer stays relative to peer expectations",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not evidence of better or worse operational performance.",
+                    "value": ", while values near zero reflect alignment with typical peer throughput.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -247,27 +231,20 @@
               {
                 "textRuns": [
                   {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Facilities above their peer median may be operating under ",
+                    "value": "The magnitude of excess LOS should be interpreted ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "greater structural intake pressure",
+                    "value": "in conjunction with volume",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", while those below may experience comparatively lower unplanned demand — both conditions can exist simultaneously within the same peer group.",
+                    "value": ", as facilities with limited encounter counts may contribute minimally to system-level throughput burden despite appearing elevated in isolation.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -278,27 +255,20 @@
               {
                 "textRuns": [
                   {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "This view should be used to ",
+                    "value": "Concentration of excess LOS among a small number of facilities suggests that ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "contextualize downstream metrics",
+                    "value": "throughput pressure is localized rather than systemic",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " (e.g., LOS, cost, throughput) by highlighting differences in intake conditions that persist even among structurally similar facilities.",
+                    "value": ".",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -309,40 +279,26 @@
               {
                 "textRuns": [
                   {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Avoid using this visual to infer causality, effectiveness of intake management, or quality of care. The chart provides ",
+                    "value": "Differences shown here are ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "contextual alignment",
+                    "value": "descriptive and contextual",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not evaluative judgment.",
+                    "value": " and should not be attributed to care quality, case mix inadequacy, or operational effectiveness without additional analysis.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   }
                 ],
                 "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
               }
             ]
           }
@@ -1580,6 +1536,342 @@
           "selector": {
             "id": "Value 10"
           }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_LOS",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "PG LOS Median Range Text"
+                                },
+                                "Name": "_LOS.PG LOS Median Range Text"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_LOS.PG LOS Median Range Text"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "Value 11",
+                      "utterance": "PG LOS Median Range Text"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Value 11"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_LOS",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "LOS Total Facilities"
+                                },
+                                "Name": "_LOS.LOS Total Facilities"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_LOS.LOS Total Facilities"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "Value 12",
+                      "utterance": "LOS Total Facilities"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Value 12"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_LOS",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "LOS Min (FacilitySafe)"
+                                },
+                                "Name": "_LOS.LOS Min (FacilitySafe)"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_LOS.LOS Min (FacilitySafe)"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "Value 13",
+                      "utterance": "LOS Min"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Value 13"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_LOS",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "LOS Max (FacilitySafe)"
+                                },
+                                "Name": "_LOS.LOS Max (FacilitySafe)"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_LOS.LOS Max (FacilitySafe)"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "Value 14",
+                      "utterance": "LOS Max"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Value 14"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_LOS",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "Facilities Above Own Peer-Group LOS Median"
+                                },
+                                "Name": "_LOS.Facilities Above Own Peer-Group LOS Median"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_LOS.Facilities Above Own Peer-Group LOS Median"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "Value 15",
+                      "utterance": "Facilities Above Own Peer-Group LOS Median"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Value 15"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_LOS",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "_"
+                                    }
+                                  },
+                                  "Property": "Facilities Driving 50% of Bed-Days (Count)"
+                                },
+                                "Name": "_LOS.Facilities Driving 50% of Bed-Days (Count)"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "_LOS.Facilities Driving 50% of Bed-Days (Count)"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "Value 16",
+                      "utterance": "Facilities Driving 50% of Bed-Days"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Value 16"
+          }
         }
       ]
     },
@@ -1652,6 +1944,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "e61d07d0ba2506dc604d",
+  "parentGroupName": "ed3e78b7d54e31523a69",
   "isHidden": true
 }

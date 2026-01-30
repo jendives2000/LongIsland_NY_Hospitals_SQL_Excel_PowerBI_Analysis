@@ -3,7 +3,7 @@
   "name": "f9affbb08059701c032a",
   "position": {
     "x": 660.92307692307691,
-    "y": 11.05507510241236,
+    "y": 10.295391637189542,
     "z": 9000,
     "height": 561.23076923076928,
     "width": 603.07692307692309,
@@ -28,7 +28,7 @@
               },
               "queryRef": "Dim_Facility.PeerGroup_Name",
               "nativeQueryRef": "PeerGroup_Name",
-              "active": true
+              "active": false
             },
             {
               "field": {
@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": false
+              "active": true
             }
           ]
         },
@@ -73,10 +73,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Dim_ClinicalClass"
+                    "Entity": "_LOS"
                   }
                 },
-                "Property": "PeerGroup UA Rate Median"
+                "Property": "Excess LOS Days"
               }
             },
             "direction": "Descending"

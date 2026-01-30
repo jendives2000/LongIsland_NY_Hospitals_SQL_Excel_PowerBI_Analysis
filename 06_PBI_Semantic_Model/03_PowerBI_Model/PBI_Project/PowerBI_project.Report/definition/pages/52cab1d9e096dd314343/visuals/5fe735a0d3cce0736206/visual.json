@@ -3,8 +3,8 @@
   "name": "5fe735a0d3cce0736206",
   "position": {
     "x": 660.92307692307691,
-    "y": 15.908966772872105,
-    "z": 5000,
+    "y": 15.149283307649288,
+    "z": 6250,
     "height": 488,
     "width": 608,
     "tabOrder": 5000
@@ -28,7 +28,7 @@
               },
               "queryRef": "Dim_PeerGroup.PeerGroup_Name",
               "nativeQueryRef": "PeerGroup_Name1",
-              "active": true
+              "active": false
             },
             {
               "field": {
@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": false
+              "active": true
             }
           ]
         },
@@ -128,21 +128,6 @@
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "_KPI_Measures"
-                  }
-                },
-                "Property": "Unplanned Admission Rate"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
         "isDefaultSort": true
       }
     },
@@ -608,7 +593,8 @@
             },
             "Property": "Facility_Name"
           }
-        }
+        },
+        "type": "Categorical"
       },
       {
         "name": "c3ee48aa4186edce5d95",
@@ -622,7 +608,8 @@
             },
             "Property": "PeerGroup_Name"
           }
-        }
+        },
+        "type": "Categorical"
       },
       {
         "name": "66c52e2e3899dde5d128",
@@ -636,7 +623,8 @@
             },
             "Property": "PeerGroup_Name"
           }
-        }
+        },
+        "type": "Categorical"
       },
       {
         "name": "354fa8b2e7b08b6022c6",
