@@ -1,0 +1,68 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "2fb5d5d65effe3eb0201",
+  "position": {
+    "x": 666.38961038961031,
+    "y": 560.70755892783222,
+    "z": 18500,
+    "height": 24.935064935064933,
+    "width": 602.18181818181813,
+    "tabOrder": 22003
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "ℹ : Year 2015 only. No rolling values. No seasonality adjustments. Contextual indicators — not performance scores.",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "8pt",
+                      "color": "#575757"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'SubTitle'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "ed3e78b7d54e31523a69",
+  "isHidden": true
+}
