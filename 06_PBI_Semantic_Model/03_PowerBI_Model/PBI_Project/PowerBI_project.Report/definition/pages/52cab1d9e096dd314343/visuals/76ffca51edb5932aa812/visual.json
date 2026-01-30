@@ -3,10 +3,10 @@
   "name": "76ffca51edb5932aa812",
   "position": {
     "x": 13.09090909090909,
-    "y": 414.33811794547154,
+    "y": 414.18142754705065,
     "z": 6000,
-    "height": 145.87012987012986,
-    "width": 571.012987012987,
+    "height": 146.49350649350649,
+    "width": 600.31168831168827,
     "tabOrder": 10000
   },
   "visual": {
@@ -19,16 +19,23 @@
               {
                 "textRuns": [
                   {
-                    "value": "Throughput determines how inpatient capacity is "
+                    "value": "Throughput determines how inpatient capacity is ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   },
                   {
                     "value": "absorbed, constrained, or released",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " across the system."
+                    "value": " across the system.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               },
@@ -42,30 +49,20 @@
               {
                 "textRuns": [
                   {
-                    "value": "When patient severity is tightly clustered and unplanned intake is sustained, variation in LOS:"
+                    "value": "When patient severity is tightly clustered and unplanned intake is sustained, variation in LOS:",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "Has a direct impact on bed availability and congestion"
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Influences cost accumulation and margin pressure"
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Shapes exposure to downstream operational and outcome risk"
+                    "value": "Has a direct impact on bed availability and congestion",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ],
                 "listType": "bullet"
@@ -80,7 +77,46 @@
               {
                 "textRuns": [
                   {
-                    "value": "Understanding throughput context is therefore essential before interpreting differences in cost, utilization, or outcomes across facilities or peer groups."
+                    "value": "Influences cost accumulation and margin pressure",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Shapes exposure to downstream operational and outcome risk",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Understanding throughput context is therefore essential before interpreting differences in cost, utilization, or outcomes across facilities or peer groups.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               },
@@ -126,5 +162,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "4f14d3d11f820eddb2ba"
+  "parentGroupName": "4f14d3d11f820eddb2ba",
+  "isHidden": true
 }

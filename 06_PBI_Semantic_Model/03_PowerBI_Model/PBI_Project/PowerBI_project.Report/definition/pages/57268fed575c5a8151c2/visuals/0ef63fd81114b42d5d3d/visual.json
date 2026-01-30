@@ -21,7 +21,7 @@
                   {
                     "value": "I",
                     "textStyle": {
-                      "fontSize": "10.5pt",
+                      "fontSize": "11pt",
                       "textDecoration": "underline"
                     }
                   },
@@ -29,7 +29,7 @@
                     "value": "NSIGHT:",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "10.5pt",
+                      "fontSize": "11pt",
                       "textDecoration": "underline"
                     }
                   },
@@ -37,7 +37,7 @@
                     "value": " ",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "10.5pt"
+                      "fontSize": "11pt"
                     }
                   }
                 ]
@@ -45,84 +45,135 @@
               {
                 "textRuns": [
                   {
-                    "value": "This view shows the "
+                    "value": "This view shows the ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   },
                   {
                     "value": "distribution of patient acuity categories (Minor, Moderate, Major, Extreme)",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " across facilities, establishing "
+                    "value": " across facilities, establishing ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   },
                   {
                     "value": "baseline severity composition",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " rather than overall acuity level."
+                    "value": " rather than overall acuity level.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "Across the system, facilities display "
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Across the system, facilities display ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   },
                   {
                     "value": "similar overall Severity Mix Index (SMI) ranges",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", but "
+                    "value": ", but ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   },
                   {
                     "value": "acuity composition varies meaningfully",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", particularly in the share of "
+                    "value": ", particularly in the share of ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   },
                   {
                     "value": "Extreme severity cases",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ". This indicates that while baseline complexity is broadly comparable, "
+                    "value": ". This indicates that while baseline complexity is broadly comparable, ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   },
                   {
                     "value": "case-mix structure differs across facilities and peer contexts",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "."
+                    "value": ".",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "The variation observed reflects "
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "The variation observed reflects ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   },
                   {
                     "value": "distributional differences in patient acuity mix",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not uniform shifts in severity across the system."
+                    "value": ", not uniform shifts in severity across the system.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               },
@@ -139,7 +190,7 @@
                     "value": "INTERPRETATION GUIDANCE:",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "10.5pt",
+                      "fontSize": "11pt",
                       "textDecoration": "underline"
                     }
                   },
@@ -147,7 +198,7 @@
                     "value": " ",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "10.5pt"
+                      "fontSize": "11pt"
                     }
                   }
                 ]
@@ -155,102 +206,23 @@
               {
                 "textRuns": [
                   {
-                    "value": "This visual is intended to "
+                    "value": "This visual is intended to ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   },
                   {
                     "value": "establish acuity context before interpreting downstream performance metrics",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", such as length of stay, cost, or mortality."
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Differences in the "
-                  },
-                  {
-                    "value": "share of Extreme, Major, Moderate, or Minor cases",
+                    "value": ", such as length of stay, cost, or mortality.",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontSize": "11pt"
                     }
-                  },
-                  {
-                    "value": " describe "
-                  },
-                  {
-                    "value": "case-mix composition",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": ", not overall severity dominance or operational effectiveness."
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Facilities with a higher Extreme share are operating within a "
-                  },
-                  {
-                    "value": "different acuity profile",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": ", even if their total SMI remains near peer norms."
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Observed variation should be interpreted as "
-                  },
-                  {
-                    "value": "contextual input",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": " for subsequent analyses, not as evidence of efficiency, quality, or performance differences."
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Use this view to "
-                  },
-                  {
-                    "value": "anchor interpretation",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": " of later pages by distinguishing "
-                  },
-                  {
-                    "value": "case-mix structure effects",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": " from operational or throughput drivers."
                   }
                 ],
                 "listType": "bullet"
@@ -265,7 +237,167 @@
               {
                 "textRuns": [
                   {
-                    "value": "Patterns shown are descriptive, reflect acuity mix distribution, and do not establish causality or performance attribution."
+                    "value": "Differences in the ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "share of Extreme, Major, Moderate, or Minor cases",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " describe ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "case-mix composition",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not overall severity dominance or operational effectiveness.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Facilities with a higher Extreme share are operating within a ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "different acuity profile",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", even if their total SMI remains near peer norms.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Observed variation should be interpreted as ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "contextual input",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " for subsequent analyses, not as evidence of efficiency, quality, or performance differences.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Use this view to ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "anchor interpretation",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " of later pages by distinguishing ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "case-mix structure effects",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " from operational or throughput drivers.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Patterns shown are descriptive, reflect acuity mix distribution, and do not establish causality or performance attribution.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
                   }
                 ]
               }

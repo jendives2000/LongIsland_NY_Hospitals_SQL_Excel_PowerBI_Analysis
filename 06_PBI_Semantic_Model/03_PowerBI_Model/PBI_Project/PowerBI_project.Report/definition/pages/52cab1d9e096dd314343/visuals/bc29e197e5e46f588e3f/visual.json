@@ -3,10 +3,10 @@
   "name": "bc29e197e5e46f588e3f",
   "position": {
     "x": 13.09090909090909,
-    "y": 414.1752039364037,
+    "y": 414.18142754705065,
     "z": 8000,
     "height": 145.87012987012986,
-    "width": 571.012987012987,
+    "width": 600.31168831168827,
     "tabOrder": 5000
   },
   "visual": {
@@ -19,16 +19,23 @@
               {
                 "textRuns": [
                   {
-                    "value": "Throughput reflects how efficiently patients move through inpatient care "
+                    "value": "Throughput reflects how efficiently patients move through inpatient care ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   },
                   {
                     "value": "once admitted",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", measured by the time between admission and discharge."
+                    "value": ", measured by the time between admission and discharge.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               },
@@ -42,30 +49,20 @@
               {
                 "textRuns": [
                   {
-                    "value": "Length of stay (LOS) captures the combined effect of:"
+                    "value": "Length of stay (LOS) captures the combined effect of:",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "Care sequencing and clinical coordination"
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Bed availability and unit-level capacity alignment"
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Discharge planning and downstream exit constraints"
+                    "value": "Care sequencing and clinical coordination",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ],
                 "listType": "bullet"
@@ -80,16 +77,66 @@
               {
                 "textRuns": [
                   {
-                    "value": "In this report, LOS is used as a "
+                    "value": "Bed availability and unit-level capacity alignment",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Discharge planning and downstream exit constraints",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "In this report, LOS is used as a ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   },
                   {
                     "value": "contextual signal",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " that describes how care flow functions under prevailing patient mix and intake conditions, rather than as a standalone indicator of efficiency or performance."
+                    "value": " that describes how care flow functions under prevailing patient mix and intake conditions, rather than as a standalone indicator of efficiency or performance.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
                   }
                 ]
               }
