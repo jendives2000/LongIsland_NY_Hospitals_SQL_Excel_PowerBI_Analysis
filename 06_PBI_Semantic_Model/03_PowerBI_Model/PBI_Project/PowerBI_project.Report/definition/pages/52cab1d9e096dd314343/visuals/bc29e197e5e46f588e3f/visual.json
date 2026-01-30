@@ -1,0 +1,119 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "bc29e197e5e46f588e3f",
+  "position": {
+    "x": 13.09090909090909,
+    "y": 414.1752039364037,
+    "z": 8000,
+    "height": 145.87012987012986,
+    "width": 571.012987012987,
+    "tabOrder": 18010
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Throughput reflects how efficiently patients move through inpatient care "
+                  },
+                  {
+                    "value": "once admitted",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ", measured by the time between admission and discharge."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Length of stay (LOS) captures the combined effect of:"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Care sequencing and clinical coordination"
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Bed availability and unit-level capacity alignment"
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Discharge planning and downstream exit constraints"
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "In this report, LOS is used as a "
+                  },
+                  {
+                    "value": "contextual signal",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " that describes how care flow functions under prevailing patient mix and intake conditions, rather than as a standalone indicator of efficiency or performance."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "4f14d3d11f820eddb2ba"
+}

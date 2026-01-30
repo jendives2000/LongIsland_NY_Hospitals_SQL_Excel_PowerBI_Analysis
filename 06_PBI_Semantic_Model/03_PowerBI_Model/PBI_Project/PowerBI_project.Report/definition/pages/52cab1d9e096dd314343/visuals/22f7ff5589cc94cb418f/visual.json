@@ -1,0 +1,151 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "22f7ff5589cc94cb418f",
+  "position": {
+    "x": 13.09090909090909,
+    "y": 0,
+    "z": 13000,
+    "height": 98.493506493506487,
+    "width": 600.31168831168827,
+    "tabOrder": 18020
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "This page provides "
+                  },
+                  {
+                    "value": "throughput context",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": ", not performance evaluation."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " It examines whether observed differences in "
+                  },
+                  {
+                    "value": "length of stay (LOS)",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " reflect baseline patient complexity, intake-driven congestion, or "
+                  },
+                  {
+                    "value": "internal throughput constraints within peer groups",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Prior context pages establish that:"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Patient severity is "
+                  },
+                  {
+                    "value": "tightly clustered",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " across facilities"
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Unplanned intake represents a "
+                  },
+                  {
+                    "value": "dominant, system-wide operating condition",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Under these conditions, "
+                  },
+                  {
+                    "value": "persistent LOS variation is unlikely to be explained by case mix or random demand alone",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "4f14d3d11f820eddb2ba"
+}

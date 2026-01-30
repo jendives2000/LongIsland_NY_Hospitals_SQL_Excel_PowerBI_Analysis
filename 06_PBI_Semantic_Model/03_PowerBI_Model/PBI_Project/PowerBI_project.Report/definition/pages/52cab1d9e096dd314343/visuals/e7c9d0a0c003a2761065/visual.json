@@ -1,10 +1,10 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "e7c9d0a0c003a2761065",
   "position": {
     "x": 14.153846153846153,
     "y": 193.418997934246,
-    "z": 7000,
+    "z": 8000,
     "height": 389.53846153846155,
     "width": 582.15384615384619,
     "tabOrder": 3000
@@ -21,6 +21,7 @@
                   {
                     "value": "INSIGHT:",
                     "textStyle": {
+                      "fontSize": "11pt",
                       "textDecoration": "underline",
                       "color": "#ffffff"
                     }
@@ -28,6 +29,7 @@
                   {
                     "value": " ",
                     "textStyle": {
+                      "fontSize": "11pt",
                       "color": "#ffffff"
                     }
                   }
@@ -36,30 +38,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "Average length of stay varies meaningfully across peer groups, with peer-group medians ranging from "
-                  },
-                  {
-                    "value": {
-                      "propertyIdentifier": {
-                        "objectName": "values",
-                        "propertyName": "expr"
-                      },
-                      "selector": {
-                        "id": "Value 11"
-                      }
-                    },
+                    "value": "Average length of stay (LOS) shows clear variation across peer groups, with peer-group medians distributed across a defined range rather than concentrated at a single system value. This indicates that baseline throughput expectations differ by peer context.",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontSize": "11pt"
                     }
-                  },
-                  {
-                    "value": " days",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": "."
                   }
                 ]
               },
@@ -73,57 +55,52 @@
               {
                 "textRuns": [
                   {
-                    "value": "Within peer groups, "
-                  },
-                  {
-                    "value": {
-                      "propertyIdentifier": {
-                        "objectName": "values",
-                        "propertyName": "expr"
-                      },
-                      "selector": {
-                        "id": "Value 15"
-                      }
-                    },
+                    "value": "Within peer groups, LOS values are dispersed around the peer-group median, with a subset of facilities positioned above their own peer benchmark. This pattern reflects uneven throughput conditions under otherwise comparable peer-group contexts, rather than uniform system behavior.",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontSize": "11pt"
                     }
-                  },
+                  }
+                ]
+              },
+              {
+                "textRuns": [
                   {
-                    "value": " of ",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "INTERPRETATION GUIDANCE: ",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontSize": "11pt",
+                      "textDecoration": "underline",
+                      "color": "#ffffff"
                     }
-                  },
+                  }
+                ]
+              },
+              {
+                "textRuns": [
                   {
-                    "value": {
-                      "propertyIdentifier": {
-                        "objectName": "values",
-                        "propertyName": "expr"
-                      },
-                      "selector": {
-                        "id": "Value 12"
-                      }
-                    }
-                  },
-                  {
-                    "value": " facilities operate above their own peer-group LOS median with "
-                  },
-                  {
-                    "value": "average LOS spanning ",
+                    "value": "Because patient severity is tightly clustered within peer groups and unplanned intake pressure is broadly distributed across the system, observed LOS variation should be interpreted as a ",
                     "textStyle": {
-                      "fontSize": "13.3333px"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "﻿3.50﻿ to ﻿7.07﻿ days",
+                    "value": "throughput signal",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "13.3333px"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", indicating uneven throughput performance under comparable operating conditions."
+                    "value": ", not as a proxy for case-mix complexity or random demand fluctuation.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               },
@@ -137,25 +114,23 @@
               {
                 "textRuns": [
                   {
-                    "value": "In the "
-                  },
-                  {
-                    "value": "Excess LOS vs Peer Median (Days)",
+                    "value": "LOS values above the peer median indicate relative positioning within a shared operating context, not inefficiency or performance deviation. Facilities operating at or below their peer-group LOS median represent ",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " view, excess LOS is not evenly distributed: several peer groups cluster "
-                  },
-                  {
-                    "value": "above the Peer Median (0 line)",
+                    "value": "throughput-stable reference points",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", while others remain near expected throughput."
+                    "value": " for interpretation, not benchmarks for ranking or evaluation.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               },
@@ -169,277 +144,23 @@
               {
                 "textRuns": [
                   {
-                    "value": "The "
-                  },
-                  {
-                    "value": "Throughput Burden: LOS vs Volume ",
+                    "value": "Findings on this page establish ",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "view shows that this variation is highly concentrated: "
-                  },
-                  {
-                    "value": {
-                      "propertyIdentifier": {
-                        "objectName": "values",
-                        "propertyName": "expr"
-                      },
-                      "selector": {
-                        "id": "Value 16"
-                      }
-                    },
+                    "value": "context for subsequent metrics",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " facilities account for roughly half of total inpatient bed-days (",
+                    "value": " and should not be used in isolation to infer operational causes, assign accountability, or recommend actions.",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontSize": "11pt"
                     }
-                  },
-                  {
-                    "value": "Top Bed-Day Drivers"
-                  },
-                  {
-                    "value": ")",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": ", indicating that throughput pressure is driven by a limited number of high-impact facilities rather than system-wide inefficiency."
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "IMPACT: ",
-                    "textStyle": {
-                      "textDecoration": "underline",
-                      "color": "#ffffff"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Because patient severity is tightly clustered within peer groups and unplanned intake pressure is system-wide, observed LOS variation is unlikely to be driven by case mix or random demand alone."
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Where excess LOS coincides with "
-                  },
-                  {
-                    "value": "high encounter volume",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": ", prolonged stays translate into "
-                  },
-                  {
-                    "value": "concentrated bed-day burden",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": ", reducing effective capacity and amplifying congestion. Facilities with elevated LOS but limited volume contribute less to system-level pressure despite appearing inefficient in isolation."
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "This confirms that throughput risk is driven by "
-                  },
-                  {
-                    "value": "the interaction between excess LOS and volume",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": ", rather than LOS differences in isolation."
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "ACTION:",
-                    "textStyle": {
-                      "textDecoration": "underline",
-                      "color": "#ffffff"
-                    }
-                  },
-                  {
-                    "value": " ",
-                    "textStyle": {
-                      "color": "#ffffff"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Prioritize throughput-focused review at facilities that combine:"
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "positive excess LOS relative to peer median",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": ", and"
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "high bed-day burden driven by volume",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": "."
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Focus operational deep-dives on:"
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "discharge timing and weekend discharge patterns,"
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "diagnostic and consult turnaround,"
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "post-acute placement and transfer friction,"
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "unit-level bed turnover and boarding time."
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Facilities operating at or below their peer-group LOS median should be treated as "
-                  },
-                  {
-                    "value": "throughput-stable comparators",
-                    "textStyle": {
-                      "fontWeight": "bold"
-                    }
-                  },
-                  {
-                    "value": ", not intervention targets."
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
                   }
                 ]
               }
