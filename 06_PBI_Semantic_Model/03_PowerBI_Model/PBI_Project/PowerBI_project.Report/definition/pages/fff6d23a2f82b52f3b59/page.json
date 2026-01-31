@@ -1,0 +1,95 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "fff6d23a2f82b52f3b59",
+  "displayName": "Mortality",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "objects": {
+    "outspace": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 1,
+                    "Percent": 0.2
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "backgroundColor": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 0,
+                    "Percent": -0.5
+                  }
+                }
+              }
+            }
+          },
+          "foregroundColor": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 0,
+                    "Percent": 0
+                  }
+                }
+              }
+            }
+          },
+          "titleSize": {
+            "expr": {
+              "Literal": {
+                "Value": "13L"
+              }
+            }
+          },
+          "width": {
+            "expr": {
+              "Literal": {
+                "Value": "197L"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode",
+  "visualInteractions": [
+    {
+      "source": "87cdc1e418f1a5042737",
+      "target": "33498d9f9a32301dd0e6",
+      "type": "DataFilter"
+    },
+    {
+      "source": "87cdc1e418f1a5042737",
+      "target": "54bab10a5871a0af4912",
+      "type": "DataFilter"
+    },
+    {
+      "source": "87cdc1e418f1a5042737",
+      "target": "093a4774a236ab5ed932",
+      "type": "DataFilter"
+    },
+    {
+      "source": "87cdc1e418f1a5042737",
+      "target": "5d5facec26bdb0edb99a",
+      "type": "DataFilter"
+    }
+  ]
+}

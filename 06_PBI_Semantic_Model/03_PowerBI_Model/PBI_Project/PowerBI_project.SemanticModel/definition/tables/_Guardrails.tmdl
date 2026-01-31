@@ -11,9 +11,8 @@ table _Guardrails
 			        [Mortality Total Encounters]
 			    )
 			)
+		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: bd055ef9-9393-4017-a57f-0dcea98e5f82
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Average LOS (Guarded)' =
 			

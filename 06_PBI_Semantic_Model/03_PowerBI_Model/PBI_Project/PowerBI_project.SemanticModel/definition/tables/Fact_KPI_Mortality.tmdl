@@ -36,7 +36,7 @@ table Fact_KPI_Mortality
 
 	column Death_Count
 		dataType: int64
-		formatString: 0
+		formatString: 0.0
 		lineageTag: 54030186-40fa-413e-b53e-b084ac2c6fb8
 		summarizeBy: sum
 		sourceColumn: Death_Count
