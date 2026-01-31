@@ -2,15 +2,15 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "ec422d3a6d7417ea560e",
   "position": {
-    "x": 660.08275862068967,
-    "y": 16.184828841837628,
+    "x": 660.15584415584408,
+    "y": 16.822453112946903,
     "z": 12000,
-    "height": 467.4206896551724,
-    "width": 608.44137931034481,
-    "tabOrder": 4000
+    "height": 530.49350649350652,
+    "width": 608.41558441558436,
+    "tabOrder": 1000
   },
   "visual": {
-    "visualType": "lineClusteredColumnComboChart",
+    "visualType": "clusteredColumnChart",
     "query": {
       "queryState": {
         "Category": {
@@ -51,20 +51,6 @@
           "projections": [
             {
               "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Financial_Basic"
-                    }
-                  },
-                  "Property": "Excess Margin Pressure vs PG Median"
-                }
-              },
-              "queryRef": "_Financial_Basic.Excess Margin Pressure vs PG Median",
-              "nativeQueryRef": "Excess Margin Pressure vs PG Median"
-            },
-            {
-              "field": {
                 "Aggregation": {
                   "Expression": {
                     "Column": {
@@ -88,28 +74,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_KPI_Measures"
+                      "Entity": "_Volume_&_Denominators"
                     }
                   },
-                  "Property": "AVG LOS"
+                  "Property": "Deaths Count"
                 }
               },
-              "queryRef": "_KPI_Measures.AVG LOS",
-              "nativeQueryRef": "AVG LOS"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_KPI_Measures"
-                    }
-                  },
-                  "Property": "Unplanned Admission Rate"
-                }
-              },
-              "queryRef": "_KPI_Measures.Unplanned Admission Rate",
-              "nativeQueryRef": "Unplanned Admission Rate"
+              "queryRef": "_Volume_&_Denominators.Deaths Count",
+              "nativeQueryRef": "Deaths Count"
             }
           ]
         },
@@ -123,29 +95,11 @@
                       "Entity": "_Guardrails"
                     }
                   },
-                  "Property": "Margin Pressure (Guarded)"
+                  "Property": "Mortality Rate (Guarded)"
                 }
               },
-              "queryRef": "_Guardrails.Margin Pressure (Guarded)",
-              "nativeQueryRef": "Margin Pressure (Guarded)"
-            }
-          ]
-        },
-        "Y2": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Dim_ClinicalClass"
-                    }
-                  },
-                  "Property": "PeerGroup Margin Pressure Median"
-                }
-              },
-              "queryRef": "_Financial_Basic.PeerGroup Margin Pressure Median",
-              "nativeQueryRef": "PeerGroup Margin Pressure Median"
+              "queryRef": "_Guardrails.Mortality Rate (Guarded)",
+              "nativeQueryRef": "Mortality Rate (Guarded)"
             }
           ]
         }
@@ -154,29 +108,16 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Dim_PeerGroup"
+                    "Entity": "_Guardrails"
                   }
                 },
-                "Property": "PeerGroup_Name"
+                "Property": "Mortality Rate (Guarded)"
               }
             },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Dim_Facility"
-                  }
-                },
-                "Property": "Facility_Name"
-              }
-            },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }
@@ -235,7 +176,7 @@
             "labelPosition": {
               "expr": {
                 "Literal": {
-                  "Value": "'InsideEnd'"
+                  "Value": "'OutsideEnd'"
                 }
               }
             },
@@ -243,6 +184,13 @@
               "expr": {
                 "Literal": {
                   "Value": "1L"
+                }
+              }
+            },
+            "optimizeLabelDisplay": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -306,62 +254,6 @@
         },
         {
           "properties": {
-            "labelPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "'OutsideEnd'"
-                }
-              }
-            },
-            "enableDetailDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "showSeries": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "enableTitleDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "1L"
-                }
-              }
-            },
-            "enableBackground": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Guardrails.Margin Pressure (Guarded)"
-          }
-        },
-        {
-          "properties": {
             "showSeries": {
               "expr": {
                 "Literal": {
@@ -385,86 +277,6 @@
               }
             ],
             "metadata": "_Financial_Basic.PeerGroup Margin Pressure Median"
-          }
-        },
-        {
-          "properties": {
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Conditional": {
-                      "Cases": [
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 0,
-                              "Left": {
-                                "Measure": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "_Financial_Basic"
-                                    }
-                                  },
-                                  "Property": "Is Above Own PG Margin Median"
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "1D"
-                                }
-                              }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#FFFFFF'"
-                            }
-                          }
-                        },
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 0,
-                              "Left": {
-                                "Measure": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "_Financial_Basic"
-                                    }
-                                  },
-                                  "Property": "Is Above Own PG Margin Median"
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "0D"
-                                }
-                              }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#808080'"
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 1
-                }
-              }
-            ],
-            "metadata": "_Guardrails.Margin Pressure (Guarded)"
           }
         }
       ],
@@ -650,7 +462,7 @@
                               "Entity": "_Guardrails"
                             }
                           },
-                          "Property": "Margin Pressure (Guarded)"
+                          "Property": "Mortality Rate (Guarded)"
                         }
                       },
                       "FillRule": {
@@ -730,13 +542,6 @@
                   "Value": "'Top'"
                 }
               }
-            },
-            "legendMarkerRendering": {
-              "expr": {
-                "Literal": {
-                  "Value": "'lineAndMarker'"
-                }
-              }
             }
           }
         }
@@ -754,26 +559,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "secShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "secLabelColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 7,
-                      "Percent": 0
-                    }
-                  }
+                  "Value": "false"
                 }
               }
             },
@@ -781,27 +567,6 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
-                }
-              }
-            },
-            "secStart": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "end": {
-              "expr": {
-                "Literal": {
-                  "Value": "0.5D"
-                }
-              }
-            },
-            "secEnd": {
-              "expr": {
-                "Literal": {
-                  "Value": "0.5D"
                 }
               }
             },
@@ -814,6 +579,13 @@
                       "Percent": -0.6
                     }
                   }
+                }
+              }
+            },
+            "end": {
+              "expr": {
+                "Literal": {
+                  "Value": "0.05D"
                 }
               }
             }
@@ -839,26 +611,6 @@
             }
           }
         }
-      ],
-      "lineStyles": [
-        {
-          "properties": {
-            "lineChartType": {
-              "expr": {
-                "Literal": {
-                  "Value": "'step'"
-                }
-              }
-            },
-            "strokeWidth": {
-              "expr": {
-                "Literal": {
-                  "Value": "2D"
-                }
-              }
-            }
-          }
-        }
       ]
     },
     "visualContainerObjects": {
@@ -868,7 +620,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Margin Pressure by Facility'"
+                  "Value": "'Mortality Rate across Peer Groups'"
                 }
               }
             },
@@ -914,7 +666,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Cost-to-charge ratio within peer groups (higher = greater financial stress)'"
+                  "Value": "'System-level distribution of observed mortality rates (contextual signal)'"
                 }
               }
             }
@@ -924,5 +676,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "6642d732ffbedce18e9f"
+  "parentGroupName": "c7ebd38028686a49054b"
 }

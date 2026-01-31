@@ -3,11 +3,11 @@
   "name": "0992089c403a635f05ae",
   "position": {
     "x": 14.153846153846153,
-    "y": 193.418997934246,
+    "y": 196.0340971770722,
     "z": 11500,
     "height": 389.53846153846155,
     "width": 582.15384615384619,
-    "tabOrder": 3000
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "textbox",
@@ -38,7 +38,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Cost and margin pressure (financial stress) is unevenly distributed across facilities within peer groups rather than uniformly elevated across the system.",
+                    "value": "Mortality rates exhibit a wide but continuous distribution across facilities and peer groups, reflecting variation in outcome exposure rather than discrete performance categories.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -55,7 +55,7 @@
               {
                 "textRuns": [
                   {
-                    "value": " Observed variation in the cost-to-charge ratio is clustered, with a limited subset of facilities positioned materially above their peer-group medians, while many others remain closer to or below those contextual reference points.",
+                    "value": "Given that patient severity is tightly clustered, unplanned intake pressure is system-wide, and throughput burden is unevenly concentrated, observed mortality variation should be interpreted as occurring within shared structural operating conditions rather than as a standalone signal.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -72,24 +72,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "This pattern indicates a structural exposure profile in which financial stress is concentrated within specific sites and peer segments, rather than reflecting broad, system-wide margin compression. Proximity to the peer-group median reflects relative positioning within a similar operating context, not categorical classification or performance status.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Overall, the visual reflects distribution and concentration of financial stress exposure, not financial performance ranking or causal drivers.",
+                    "value": "Overall, this pattern reflects system-level outcome distribution, not performance ranking or causal attribution.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -118,7 +101,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "How to read this visual",
+                    "value": "How to read this visual:",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
@@ -129,7 +112,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Bars represent facility-level cost-to-charge ratios, used here as a directional indicator of margin pressure.",
+                    "value": "Bars show mortality rate distribution across facilities and peer groups under comparable structural context.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -140,7 +123,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "The peer-group median line is a contextual benchmark, not a target or threshold.",
+                    "value": "Ordering reflects relative position within the distribution, not quality tiers or performance bands.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -151,18 +134,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Vertical distance from the median reflects magnitude of relative financial exposure within a peer group, not effectiveness or efficiency.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Grouping by peer category frames facilities within comparable structural and market contexts.",
+                    "value": "The range displayed represents system-level spread, not expected or acceptable limits.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -180,7 +152,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "What this does not imply",
+                    "value": "What this does not imply:",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
@@ -191,7 +163,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "This view does not establish causes of higher or lower margin pressure.",
+                    "value": "This view does not establish causation between mortality and severity, intake pressure, length of stay, or cost.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -202,7 +174,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "It does not assess financial performance, operational quality, or managerial effectiveness.",
+                    "value": "This view does not assign performance scores, quality judgments, or accountability.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -213,7 +185,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "It does not suggest that facilities above the median are underperforming or those below are optimal.",
+                    "value": "This view does not isolate operational drivers of mortality differences.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -231,7 +203,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "How to use this insight",
+                    "value": "How to use this insight:",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
@@ -242,7 +214,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Use this view to understand where financial stress is structurally concentrated versus broadly distributed.",
+                    "value": "Interpret mortality patterns only in conjunction with upstream context (severity mix, intake pressure, throughput burden).",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -253,7 +225,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Interpret downstream financial or operational outcomes with this baseline context in mind.",
+                    "value": "Use this view to understand where outcome exposure varies within shared operating constraints, not to infer effectiveness.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -264,7 +236,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Treat facilities near peer medians as contextual comparators, not corrective benchmarks.",
+                    "value": "Treat proximity within the distribution as contextual comparison, not corrective signal.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -282,7 +254,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "This visual should be used as a baseline lens for financial context, not an explanatory endpoint.",
+                    "value": "This visual should be used as an outcome context lens, not an explanatory endpoint.",
                     "textStyle": {
                       "fontStyle": "italic",
                       "fontSize": "11pt"
@@ -1941,6 +1913,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "6642d732ffbedce18e9f",
-  "isHidden": true
+  "parentGroupName": "c7ebd38028686a49054b"
 }

@@ -154,29 +154,16 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Dim_PeerGroup"
+                    "Entity": "Dim_ClinicalClass"
                   }
                 },
-                "Property": "PeerGroup_Name"
+                "Property": "PeerGroup Margin Pressure Median"
               }
             },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Dim_Facility"
-                  }
-                },
-                "Property": "Facility_Name"
-              }
-            },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }
@@ -925,125 +912,5 @@
     "drillFilterOtherVisuals": true
   },
   "parentGroupName": "46481fb3a6142db9409d",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "83c7d565088087be6434",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Dim_PeerGroup"
-              }
-            },
-            "Property": "PeerGroup_Name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ad68f9f2ff2358da74d7",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Dim_Facility"
-              }
-            },
-            "Property": "Facility_Name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "5e988d90dbddfee3cfe9",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Financial_Basic"
-              }
-            },
-            "Property": "Excess Margin Pressure vs PG Median"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "5535e8f3274f2d58c00a",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Fact_KPI_FinancialPressure"
-                  }
-                },
-                "Property": "Encounter_Count"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "f599750e1e0b93d3b050",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_KPI_Measures"
-              }
-            },
-            "Property": "AVG LOS"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "200d2d43bb0a7e92e44e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_KPI_Measures"
-              }
-            },
-            "Property": "Unplanned Admission Rate"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "512b7c49fe38187a25e8",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Guardrails"
-              }
-            },
-            "Property": "Margin Pressure (Guarded)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "7261f71e6ad3fee569c9",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Dim_ClinicalClass"
-              }
-            },
-            "Property": "PeerGroup Margin Pressure Median"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "isHidden": true
 }

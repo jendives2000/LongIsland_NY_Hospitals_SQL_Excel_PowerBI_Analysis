@@ -134,6 +134,14 @@ table _Mortality
 		displayFolder: Helper
 		lineageTag: e6caab55-9425-4cef-8a72-c03f50b7366a
 
+	/// Conditional formatting: White if above PG median, gray otherwise
+	measure 'Mortality Label Color' =
+			VAR r = [Mortality Rate]
+			VAR m = [PeerGroup Mortality Rate Median]
+			RETURN
+			IF(NOT ISBLANK(r) && r > m, "#FFFFFF", "#808080")
+		displayFolder: Helper
+
 	column Column
 		formatString: 0
 		lineageTag: 013ddd82-004a-4a95-abb1-0a803d6ffff1

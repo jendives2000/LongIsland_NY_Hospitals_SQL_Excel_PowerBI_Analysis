@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "25461dbda49854be5e26",
+  "name": "ce5250f775225d047672",
   "position": {
-    "x": 14.362204724409448,
-    "y": 20.340636300753715,
-    "z": 17000,
-    "height": 43.086614173228341,
-    "width": 222.23622047244092,
-    "tabOrder": 8000
+    "x": 20.571428571428569,
+    "y": 0,
+    "z": 12500,
+    "height": 44.259740259740255,
+    "width": 279.27272727272725,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "actionButton",
@@ -56,7 +56,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Margin Pressure by Facility'"
+                  "Value": "'Mortality Rate across Peer Groups'"
                 }
               }
             },
@@ -272,7 +272,14 @@
             "bookmark": {
               "expr": {
                 "Literal": {
-                  "Value": "'c081a509d5ca008a009e'"
+                  "Value": "'6d7b7bc3d3ae652ad1a3'"
+                }
+              }
+            },
+            "showDefaultTooltip": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -285,7 +292,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Butt Viz 1'"
+                  "Value": "'Butt Viz 2 Mortality vs Peer Median'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -295,6 +309,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "6642d732ffbedce18e9f",
+  "parentGroupName": "bfd7a7f17bb7c1b5328f",
   "howCreated": "InsertVisualButton"
 }
