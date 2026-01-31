@@ -27932,101 +27932,137 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "entity__mortality.mortality_label_color": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Mortality",
+			          "ConceptualProperty": "Mortality Label Color"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mortality label color": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "label color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "mortality sticker color": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "sticker color": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "mortality tag color": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "mortality decal color": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "tag color": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "decal color": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "mortality label hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "label hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "mortality label tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "mortality label shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "fact_KPI_severity_mix_has_dim_facility": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_SeverityMix"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_severity_mix": {
-			          "Target": {
-			            "Entity": "fact_KPI_severity_mix"
-			          }
-			        },
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_severity_mix"
-			            },
-			            "Object": {
-			              "Role": "dim_facility"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_severity_mixes_have_dim_facilities"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_severity_mix"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_fact_KPI_severity_mixes"
-			        }
-			      ]
-			    },
-			    "fact_KPI_payer_mix_has_dim_facility": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_PayerMix"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_payer_mix": {
-			          "Target": {
-			            "Entity": "fact_KPI_payer_mix"
-			          }
-			        },
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_payer_mix"
-			            },
-			            "Object": {
-			              "Role": "dim_facility"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_payer_mixes_have_dim_facilities"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_payer_mix"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_fact_KPI_payer_mixes"
-			        }
-			      ]
-			    },
 			    "fact_KPI_payer_mix_has_dim_payer": {
 			      "Binding": {
 			        "ConceptualEntity": "Fact_KPI_PayerMix"
@@ -28406,6 +28442,72 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_years_have_fact_KPI_dispositions"
+			        }
+			      ]
+			    },
+			    "fact_KPI_mortality_has_entity__mortality_mortality_label_color": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Mortality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_mortality": {
+			          "Target": {
+			            "Entity": "fact_KPI_mortality"
+			          }
+			        },
+			        "entity__mortality.mortality_label_color": {
+			          "Target": {
+			            "Entity": "entity__mortality.mortality_label_color"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_mortality"
+			            },
+			            "Object": {
+			              "Role": "entity__mortality.mortality_label_color"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_mortalities_have_mortality_label_color"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_entity__mortality_mortality_label_color": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "entity__mortality.mortality_label_color": {
+			          "Target": {
+			            "Entity": "entity__mortality.mortality_label_color"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "entity__mortality.mortality_label_color"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_mortality_label_color"
 			        }
 			      ]
 			    },
@@ -39248,6 +39350,98 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_dim_payers_are_unknown_dim_payers"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_payer_mix"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_fact_KPI_payer_mixes"
+			        }
+			      ]
+			    },
+			    "fact_KPI_severity_mix_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_SeverityMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_severity_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_severity_mix"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_severity_mix"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_severity_mixes_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_severity_mix"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_fact_KPI_severity_mixes"
 			        }
 			      ]
 			    },

@@ -141,6 +141,7 @@ table _Mortality
 			RETURN
 			IF(NOT ISBLANK(r) && r > m, "#FFFFFF", "#808080")
 		displayFolder: Helper
+		lineageTag: 1a4bfe68-67df-4b2a-a915-0adc8e36d2ef
 
 	column Column
 		formatString: 0
