@@ -844,5 +844,111 @@
     "drillFilterOtherVisuals": true
   },
   "parentGroupName": "46481fb3a6142db9409d",
-  "isHidden": true
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a418bae76167f4db3d5f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Facility"
+              }
+            },
+            "Property": "Facility_Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "453e55656a662e297406",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Financial_Basic"
+              }
+            },
+            "Property": "Excess Margin Pressure vs PG Median"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b5c4897db7b063f90ed9",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact_KPI_FinancialPressure"
+                  }
+                },
+                "Property": "Encounter_Count"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0cd9ed0f9398d3717007",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_KPI_Measures"
+              }
+            },
+            "Property": "AVG LOS"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "7299a03592908167d175",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_KPI_Measures"
+              }
+            },
+            "Property": "Unplanned Admission Rate"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6a7d2fa1ddf3fd9b0f6d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Financial_Basic"
+              }
+            },
+            "Property": "Margin Pressure Burden"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ffe56aa24a27b9d7bfc1",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Financial_Basic"
+              }
+            },
+            "Property": "Cumulative Margin Burden %"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
 }

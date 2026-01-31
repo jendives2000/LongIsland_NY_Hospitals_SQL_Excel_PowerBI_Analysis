@@ -3,9 +3,7 @@
   "displayName": "Financial Stress vs Throughput Drag",
   "name": "5215d36053e207874320",
   "options": {
-    "targetVisualNames": [
-      "980c7582c2a885e73b59"
-    ]
+    "targetVisualNames": []
   },
   "explorationState": {
     "version": "1.3",
@@ -188,6 +186,12 @@
               "objects": {}
             }
           },
+          "258e38f23c30c3b33492": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
           "2aede2ea50aa0409dcd0": {
             "singleVisual": {
               "visualType": "shape",
@@ -204,7 +208,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "858615bf5b6ab1649456",
+                  "name": "ddc7286a7ad5e69e973d",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -265,7 +269,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "d82606302372d75d2ce0",
+                  "name": "4de05d32ae66fc28660a",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -280,7 +284,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "08a0af6db133a72e5206",
+                  "name": "75d36a7f973884ba5bc2",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -307,6 +311,12 @@
               "objects": {}
             }
           },
+          "44529f136b8801141e30": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
           "4665cc7d11873000d66c": {
             "singleVisual": {
               "visualType": "textbox",
@@ -323,7 +333,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "39307911a40b05b4269d",
+                  "name": "6d2fe1c11b2d646c2675",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -622,7 +632,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "84dac39d3347abaaa27e",
+                  "name": "34c0abfed98d3c1074ef",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -642,7 +652,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "705ed5e33b64224e60e3",
+                  "name": "2775949f716c7e477d61",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -657,7 +667,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "403408ac90b1eb2e58a8",
+                  "name": "8b863b84a221587dc98b",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -672,7 +682,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "d8081ed58988d9982645",
+                  "name": "48ece5155edd1b3f2ad6",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -687,7 +697,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "4234b769243605e8340c",
+                  "name": "8fb198012b44ab5668ab",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -744,6 +754,12 @@
               }
             }
           },
+          "4eebf27b1eae39007785": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
           "51c2a63892ddea9c4e81": {
             "singleVisual": {
               "visualType": "actionButton",
@@ -763,6 +779,12 @@
               "display": {
                 "mode": "hidden"
               }
+            }
+          },
+          "59b4b200314105253e01": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
             }
           },
           "6cf3a4c2e400cdd05d51": {
@@ -926,7 +948,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "a1a35ee023ec5496c716",
+                  "name": "83c7d565088087be6434",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -941,7 +963,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "04ef39b00826d4b900e7",
+                  "name": "ad68f9f2ff2358da74d7",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -956,7 +978,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "242a2e0c13d392b0e09a",
+                  "name": "5e988d90dbddfee3cfe9",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -971,7 +993,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "b0d8642bd00de1e97305",
+                  "name": "5535e8f3274f2d58c00a",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -991,7 +1013,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "8e168930207416c1cbc4",
+                  "name": "f599750e1e0b93d3b050",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1006,7 +1028,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "45b0989b1145228bdca1",
+                  "name": "200d2d43bb0a7e92e44e",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1021,7 +1043,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e586e2a00a0b6283cdd8",
+                  "name": "512b7c49fe38187a25e8",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1036,7 +1058,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "08100bc06ad604e8200d",
+                  "name": "7261f71e6ad3fee569c9",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1166,7 +1188,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "f2f9af881d13014865c4",
+                  "name": "24b9cdbbb48b5d17847e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1221,6 +1243,143 @@
             "singleVisual": {
               "visualType": "textbox",
               "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "93c52e70aa500811e100": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "2cf6e950c6ee6a1df4ee",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "Facility_Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "aed84738331d74401dab",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Financial_Basic"
+                        }
+                      },
+                      "Property": "Excess Margin Pressure vs PG Median"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "bb28824814358b879e81",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Fact_KPI_FinancialPressure"
+                            }
+                          },
+                          "Property": "Encounter_Count"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "cf57b0f755be40b963b5",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_KPI_Measures"
+                        }
+                      },
+                      "Property": "AVG LOS"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c1b287ae2ff9957da10d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_KPI_Measures"
+                        }
+                      },
+                      "Property": "Unplanned Admission Rate"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "648f1dfd214011187a4a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Financial_Basic"
+                        }
+                      },
+                      "Property": "Margin Pressure Burden"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9722048907b84437e674",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Financial_Basic"
+                        }
+                      },
+                      "Property": "Cumulative Margin Burden %"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineClusteredColumnComboChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "Facility_Name"
+                    }
+                  }
+                ]
+              },
               "display": {
                 "mode": "hidden"
               }
@@ -1317,7 +1476,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "674b56e7ac6681980132",
+                  "name": "82cffd4681aa33e50521",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1332,7 +1491,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "858a307c68ea6edc9a67",
+                  "name": "30be30788afa17097f2f",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1347,7 +1506,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "12ed6aa939b791117d56",
+                  "name": "536e787dd42ba87e1184",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1362,7 +1521,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "be3488c2e8e76a747bb2",
+                  "name": "61054882946eaa34b948",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1456,7 +1615,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "db5903b1b8dd36500888",
+                  "name": "e17abb0ca78ba3e9e823",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1471,7 +1630,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "a6384297d801ac9386d8",
+                  "name": "5c97fdc97122bcc5ba8d",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1486,7 +1645,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "975f0be15d9d134d022a",
+                  "name": "b26bddf6d130bcbd71e1",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1501,7 +1660,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "32a9d5bf5a68aa840e56",
+                  "name": "0fde1a55275fb010d2a6",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1516,7 +1675,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "7ac8c1b09013cc662a50",
+                  "name": "32e430f0367c0b92a708",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1531,7 +1690,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "81577d4943a12a0928ba",
+                  "name": "f1a3a9e958ca46054416",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1551,7 +1710,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "fd2837fbb79bd8607446",
+                  "name": "be2f997dde3012b7ab20",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1561,36 +1720,6 @@
                         }
                       },
                       "Property": "Neg Margin Total Encounters"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "a03c89a1dc42893307d2",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Financial_Basic"
-                        }
-                      },
-                      "Property": "Facilities Above PG Median"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "eaff76f325aad2ac8539",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Financial_Basic"
-                        }
-                      },
-                      "Property": "Facilities with Negative Margin"
                     }
                   },
                   "howCreated": 0
@@ -1638,6 +1767,12 @@
               }
             }
           },
+          "b5c0b2eb530a3343b00a": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
           "b5f93f6ee444170b6032": {
             "singleVisual": {
               "visualType": "textbox",
@@ -1645,6 +1780,12 @@
               "display": {
                 "mode": "hidden"
               }
+            }
+          },
+          "ba04a05941ddbd838469": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
             }
           },
           "bb6f01a5376320bc24d2": {
@@ -1659,11 +1800,23 @@
               "objects": {}
             }
           },
+          "c0e76a531a2247290b40": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "caa4135600d185115426": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
           "d1485c25a372aa105035": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "16575e3f7cd50dbc09cc",
+                  "name": "eebc50ffc7196bf7728a",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1678,7 +1831,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "5ca4b9f92ca85198065b",
+                  "name": "f7c9f0b0c18f4ec51be9",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1693,7 +1846,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "81948a06bddcbe333ab6",
+                  "name": "3bce53e44de7d5966e80",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1713,7 +1866,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "89449c3d91eaeaec2528",
+                  "name": "4687355df180af4668b7",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1728,7 +1881,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "5b93b896d61a0807c401",
+                  "name": "ac74a5a1920ecbd69a68",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1743,7 +1896,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "2410727117682bac9b7e",
+                  "name": "9951399578c9640c7e98",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1758,7 +1911,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "b8cd98a05e74e029cab6",
+                  "name": "31ef4b42efade11c0531",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1796,9 +1949,15 @@
               }
             }
           },
-          "e1bc0ff078cb4a35aa7b": {
+          "d683d8460a03e1d0bc96": {
             "singleVisual": {
-              "visualType": "aiNarratives",
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "d8df214aa4376298876c": {
+            "singleVisual": {
+              "visualType": "textbox",
               "objects": {}
             }
           },
@@ -1866,7 +2025,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "1e3e6409071edc0bab89",
+                  "name": "c13c69fc4716ee79107e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1881,7 +2040,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "bfa385db000532b904a0",
+                  "name": "81e7b5fd7811f63ab534",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1896,7 +2055,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "733dddb168d028109ae0",
+                  "name": "c3df0abb6b84d3aedc1b",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1961,11 +2120,17 @@
               "objects": {}
             }
           },
+          "eba9fd43e99d9223d7a0": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
           "eca5d3f0e0642cb0b3c1": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "2e5c3ffabda00b6d769b",
+                  "name": "6ab21ab5e4dd313f5d5c",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -2004,6 +2169,12 @@
               }
             }
           },
+          "f576f85c0e746b0899b6": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
           "f7a9221e66e765a086ca": {
             "singleVisual": {
               "visualType": "shape",
@@ -2016,153 +2187,25 @@
               "objects": {}
             }
           },
-          "93c52e70aa500811e100": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "b1a9689bb9a5e12101bc",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "Facility_Name"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "54d86420a7e4941bd38b",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Financial_Basic"
-                        }
-                      },
-                      "Property": "Excess Margin Pressure vs PG Median"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "be98d891007e9e732c52",
-                  "type": "Advanced",
-                  "expression": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Fact_KPI_FinancialPressure"
-                            }
-                          },
-                          "Property": "Encounter_Count"
-                        }
-                      },
-                      "Function": 0
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "d1abf842e64c05d30689",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_KPI_Measures"
-                        }
-                      },
-                      "Property": "AVG LOS"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "40b30db92806179a743a",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_KPI_Measures"
-                        }
-                      },
-                      "Property": "Unplanned Admission Rate"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "cd6c97e999507b465951",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Financial_Basic"
-                        }
-                      },
-                      "Property": "Margin Pressure Burden"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "ea33cebb01c831e231b7",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Financial_Basic"
-                        }
-                      },
-                      "Property": "Cumulative Margin Burden %"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "cccf737105290ada523d",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
+          "20fc127b49f731940624": {
             "singleVisual": {
-              "visualType": "lineClusteredColumnComboChart",
+              "visualType": "textbox",
               "objects": {},
-              "activeProjections": {
-                "Category": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  }
-                ]
-              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "b512917a40103f121086": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "86d6ad09f4356bb32144": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {},
               "display": {
                 "mode": "hidden"
               }

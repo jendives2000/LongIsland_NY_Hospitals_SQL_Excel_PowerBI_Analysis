@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "6cf3a4c2e400cdd05d51",
+  "name": "86d6ad09f4356bb32144",
   "position": {
-    "x": 14.153846153846153,
-    "y": 193.418997934246,
-    "z": 11500,
-    "height": 389.53846153846155,
-    "width": 582.15384615384619,
-    "tabOrder": 3000
+    "x": 14.337662337662337,
+    "y": 193.87012987012986,
+    "z": 8500,
+    "height": 389.61038961038957,
+    "width": 582.23376623376623,
+    "tabOrder": 22003
   },
   "visual": {
     "visualType": "textbox",
@@ -38,7 +38,20 @@
               {
                 "textRuns": [
                   {
-                    "value": "Cost and margin pressure (financial stress) is unevenly distributed across facilities within peer groups rather than uniformly elevated across the system.",
+                    "value": "Margin pressure burden is ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "highly concentrated across a limited subset of facilities",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", rather than evenly distributed across the system.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -55,7 +68,7 @@
               {
                 "textRuns": [
                   {
-                    "value": " Observed variation in the cost-to-charge ratio is clustered, with a limited subset of facilities positioned materially above their peer-group medians, while many others remain closer to or below those contextual reference points.",
+                    "value": "The cumulative distribution shows that a relatively small number of facilities account for a disproportionate share of total margin pressure burden, with the cumulative curve rising steeply early and flattening as additional facilities are added.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -72,7 +85,20 @@
               {
                 "textRuns": [
                   {
-                    "value": "This pattern indicates a structural exposure profile in which financial stress is concentrated within specific sites and peer segments, rather than reflecting broad, system-wide margin compression. Proximity to the peer-group median reflects relative positioning within a similar operating context, not categorical classification or performance status.",
+                    "value": "This pattern indicates ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "concentration rather than broad-based financial stress",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", where incremental facilities beyond the initial group contribute progressively smaller additions to total system burden. The long tail reflects diffuse, lower-magnitude exposure across many sites rather than widespread high pressure.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -89,7 +115,20 @@
               {
                 "textRuns": [
                   {
-                    "value": "Overall, the visual reflects distribution and concentration of financial stress exposure, not financial performance ranking or causal drivers.",
+                    "value": "Overall, this visual reflects ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "how financial stress exposure is structurally allocated across facilities",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not performance ranking, prioritization, or causal explanation.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -129,7 +168,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Bars represent facility-level cost-to-charge ratios, used here as a directional indicator of margin pressure.",
+                    "value": "Bars represent facility-level margin pressure burden, ordered from highest to lowest contribution.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -140,7 +179,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "The peer-group median line is a contextual benchmark, not a target or threshold.",
+                    "value": "The cumulative line shows the running share of total margin pressure burden accounted for as facilities are added.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -151,7 +190,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Vertical distance from the median reflects magnitude of relative financial exposure within a peer group, not effectiveness or efficiency.",
+                    "value": "Early steep increases in the cumulative curve indicate concentration of burden among fewer facilities.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -162,7 +201,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Grouping by peer category frames facilities within comparable structural and market contexts.",
+                    "value": "Later flattening indicates diminishing marginal contribution from additional facilities.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -191,7 +230,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "This view does not establish causes of higher or lower margin pressure.",
+                    "value": "This view does not assess financial performance, efficiency, or management effectiveness.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -202,7 +241,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "It does not assess financial performance, operational quality, or managerial effectiveness.",
+                    "value": "It does not establish why certain facilities contribute more to total burden.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -213,7 +252,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "It does not suggest that facilities above the median are underperforming or those below are optimal.",
+                    "value": "It does not imply that facilities contributing less are financially stable or optimized.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -242,7 +281,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Use this view to understand where financial stress is structurally concentrated versus broadly distributed.",
+                    "value": "Use this visual to understand whether margin pressure is system-wide or concentrated in a limited number of facilities.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -253,7 +292,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Interpret downstream financial or operational outcomes with this baseline context in mind.",
+                    "value": "Interpret peer comparisons, financial ratios, or operational metrics with this concentration context in mind.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -264,7 +303,20 @@
               {
                 "textRuns": [
                   {
-                    "value": "Treat facilities near peer medians as contextual comparators, not corrective benchmarks.",
+                    "value": "Treat facilities contributing to early cumulative share as ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "structural drivers of system exposure",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not as ranked or prioritized targets.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -282,18 +334,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "This visual should be used as a baseline lens for financial context, not an explanatory endpoint.",
+                    "value": "This visual should be used as a concentration lens for financial stress exposure, not as a performance or causal explanation.",
                     "textStyle": {
                       "fontStyle": "italic",
                       "fontSize": "11pt"
                     }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
                   }
                 ]
               }
@@ -1941,6 +1986,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "46481fb3a6142db9409d",
-  "isHidden": true
+  "parentGroupName": "46481fb3a6142db9409d"
 }
