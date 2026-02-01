@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "b01f97732d7047a96af8",
   "position": {
-    "x": 12.666666666666666,
-    "y": 234,
-    "z": 15000,
-    "height": 261.33333333333331,
-    "width": 325.33333333333331,
+    "x": 0,
+    "y": 49.579457817450134,
+    "z": 1500,
+    "height": 318.5454545454545,
+    "width": 536.10389610389609,
     "tabOrder": 3000
   },
   "visual": {
@@ -134,23 +134,80 @@
               {
                 "textRuns": [
                   {
-                    "value": "Skipping context pages ",
+                    "value": "Three pages establish the operating context before outcomes are reviewed:",
                     "textStyle": {
-                      "fontSize": "11pt",
-                      "color": "#808080"
+                      "fontSize": "11pt"
                     }
-                  },
+                  }
+                ]
+              },
+              {
+                "textRuns": [
                   {
-                    "value": "increases the risk of incorrect interpretation",
+                    "value": "Severity Mix",
                     "textStyle": {
+                      "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ".",
+                    "value": " describes patient acuity and clinical complexity",
                     "textStyle": {
-                      "fontSize": "11pt",
-                      "color": "#808080"
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Unplanned Intake",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " describes how patients arrive (emergency vs. scheduled)",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Payer Mix",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " describes reimbursement exposure and population served",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "When reviewing outcome pages, refer back to context pages to distinguish population characteristics from operational variation.",
+                    "textStyle": {
+                      "fontSize": "11pt"
                     }
                   }
                 ]
@@ -176,5 +233,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "39220441494d6ea136c7"
 }

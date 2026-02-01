@@ -93,6 +93,20 @@
                       "Entity": "_Severity"
                     }
                   },
+                  "Property": "SMI Range"
+                }
+              },
+              "queryRef": "_Severity.SMI Range",
+              "nativeQueryRef": "SMI Range"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Severity"
+                    }
+                  },
                   "Property": "Facilities Above SMI Median"
                 }
               },

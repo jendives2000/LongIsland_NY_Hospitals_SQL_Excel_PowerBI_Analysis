@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "0e1048c57b2835136243",
   "position": {
-    "x": 403.94805194805195,
-    "y": 233.76623376623377,
-    "z": 14000,
-    "height": 281.14285714285711,
-    "width": 756.77922077922074,
+    "x": 547.9480519480519,
+    "y": 49.579457817450134,
+    "z": 2000,
+    "height": 216.3116883116883,
+    "width": 599.68831168831161,
     "tabOrder": 4000
   },
   "visual": {
@@ -92,13 +92,6 @@
               {
                 "textRuns": [
                   {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
                     "value": "This report is :",
                     "textStyle": {
                       "fontFamily": "Arial",
@@ -155,6 +148,16 @@
               {
                 "textRuns": [
                   {
+                    "value": "Facilities appearing as outliers require root-cause investigation before conclusions.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
                     "value": ""
                   }
                 ]
@@ -180,5 +183,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "39220441494d6ea136c7"
 }

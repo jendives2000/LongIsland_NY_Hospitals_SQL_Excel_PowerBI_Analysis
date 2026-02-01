@@ -360,6 +360,18 @@ table _Severity
 		displayFolder: Helper
 		lineageTag: 2de1163a-3b85-4a8a-90da-b6bbe3ed9916
 
+	/// Displays the severity mix index range across facilities as Min – Max for card visuals
+	measure 'SMI Range' =
+			VAR _Min = [SMI Min]
+			VAR _Max = [SMI Max]
+			RETURN
+			    IF(
+			        NOT ISBLANK(_Min) && NOT ISBLANK(_Max),
+			        FORMAT(_Min, "0.00") & " – " & FORMAT(_Max, "0.00"),
+			        BLANK()
+			    )
+		displayFolder: Helper
+
 	column Column
 		isHidden
 		formatString: 0

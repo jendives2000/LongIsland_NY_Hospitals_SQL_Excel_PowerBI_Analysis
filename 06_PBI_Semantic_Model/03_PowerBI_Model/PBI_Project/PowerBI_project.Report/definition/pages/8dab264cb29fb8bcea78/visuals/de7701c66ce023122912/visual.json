@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "d074b6674e6f62a0882a",
+  "name": "de7701c66ce023122912",
   "position": {
-    "x": 0,
+    "x": 230.02597402597402,
     "y": 489.97402597402595,
-    "z": 26000,
-    "height": 24.935064935064933,
-    "width": 814.75324675324669,
-    "tabOrder": 26000
+    "z": 24000,
+    "height": 26.805194805194805,
+    "width": 233.14285714285714,
+    "tabOrder": 24000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,19 +19,15 @@
               {
                 "textRuns": [
                   {
-                    "value": "Pages are reviewed sequentially to ensure ",
+                    "value": "start here",
                     "textStyle": {
-                      "color": "#666666"
-                    }
-                  },
-                  {
-                    "value": "contextual interpretation before outcome review",
-                    "textStyle": {
-                      "fontWeight": "bold",
+                      "fontFamily": "Arial",
+                      "fontSize": "11pt",
                       "color": "#666666"
                     }
                   }
-                ]
+                ],
+                "horizontalTextAlignment": "center"
               }
             ]
           }

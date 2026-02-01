@@ -7,7 +7,7 @@
     "z": 12000,
     "height": 530.49350649350652,
     "width": 608.41558441558436,
-    "tabOrder": 23003
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "scatterChart",
@@ -28,7 +28,7 @@
               },
               "queryRef": "Dim_Facility.PeerGroup_Name",
               "nativeQueryRef": "PeerGroup_Name",
-              "active": false
+              "active": true
             },
             {
               "field": {
@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": true
+              "active": false
             }
           ]
         },

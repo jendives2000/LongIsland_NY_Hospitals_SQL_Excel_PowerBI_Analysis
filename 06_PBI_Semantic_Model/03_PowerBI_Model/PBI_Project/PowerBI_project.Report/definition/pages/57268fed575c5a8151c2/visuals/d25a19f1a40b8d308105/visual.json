@@ -19,117 +19,33 @@
               {
                 "textRuns": [
                   {
-                    "value": "Why patient severity changes how downstream metrics should be interpreted",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Patient severity reflects the ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "clinical complexity and acuity profile",
+                    "value": "Severity reflects underlying clinical complexity",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " of patients treated at each facility, independent of operational efficiency.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Differences in severity are driven by ",
+                    "value": " that is ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "who is treated, how patients arrive, and the facility’s role within the broader care system",
+                    "value": "largely independent of day-to-day operational processes",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " (e.g., referral patterns, specialty services, regional coverage).",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Unlike operational processes, severity is ",
+                    "value": " and is ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "largely exogenous",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": " to short-term management decisions and cannot be smoothed or redistributed without system-level changes.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "When severity composition differs meaningfully across facilities or peer groups, ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "variation in length of stay, cost, mortality, and resource utilization may reflect baseline clinical demand rather than operational performance",
+                    "value": "shaped by broader system-level factors",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
@@ -141,8 +57,7 @@
                       "fontSize": "11pt"
                     }
                   }
-                ],
-                "listType": "bullet"
+                ]
               },
               {
                 "textRuns": [
@@ -154,20 +69,20 @@
               {
                 "textRuns": [
                   {
-                    "value": "Under these conditions, downstream metrics should be interpreted ",
+                    "value": "When severity differs meaningfully across facilities, ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "relative to peer-group severity baselines",
+                    "value": "variation in LOS, cost, and mortality may reflect baseline clinical demand",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not system-wide averages.",
+                    "value": " rather than differences in operational performance.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -178,6 +93,23 @@
                 "textRuns": [
                   {
                     "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Downstream metrics are most appropriately interpreted relative to peer-group severity baselines",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", rather than system-wide averages.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               }
