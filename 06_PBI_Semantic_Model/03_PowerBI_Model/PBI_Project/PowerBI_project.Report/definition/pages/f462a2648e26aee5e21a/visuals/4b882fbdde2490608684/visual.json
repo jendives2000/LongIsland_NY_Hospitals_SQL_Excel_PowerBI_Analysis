@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "4b882fbdde2490608684",
   "position": {
     "x": 12.923076923076923,
@@ -19,7 +19,17 @@
               {
                 "textRuns": [
                   {
-                    "value": "Intake Pressure (Unplanned Admissions)",
+                    "value": "Intake Pressure (Unplanned Admissions",
+                    "textStyle": {
+                      "fontSize": "28pt",
+                      "color": "#ffffff"
+                    }
+                  },
+                  {
+                    "value": " "
+                  },
+                  {
+                    "value": "— Context)",
                     "textStyle": {
                       "fontSize": "28pt",
                       "color": "#ffffff"

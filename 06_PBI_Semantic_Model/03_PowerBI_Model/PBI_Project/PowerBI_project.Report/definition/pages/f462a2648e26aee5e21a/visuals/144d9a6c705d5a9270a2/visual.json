@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Use UA to set ",
+                    "value": "Use unplanned admission (UA) rates to establish ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -32,105 +32,7 @@
                     }
                   },
                   {
-                    "value": " before interpreting throughput and outcome pages.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Peer-relative read:",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": " Compare UA to the peer median to understand whether intake is more or less “unplanned” than typical for similar sites.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Volume interaction:",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": " Review UA alongside encounter volume to distinguish broad system pressure from isolated outliers.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Threshold flags (if used):",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": " Treat the 40% UA and 3,000 volume markers as ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "context flags",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": " (historical inflection points), not performance targets.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "These indicators are descriptive; they support interpretation and prioritization of review, not ranking or performance attribution.",
+                    "value": " before interpreting throughput or outcome metrics.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -141,6 +43,65 @@
                 "textRuns": [
                   {
                     "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Interpret UA ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "peer-relatively",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " and alongside encounter volume to distinguish ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "broad intake pressure from isolated exposure",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ".",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Reference markers (e.g., ~40% UA, ~3,000 encounters) are ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "directional context flags",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not performance targets; these indicators are descriptive and support interpretation, not ranking or attribution.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               }
@@ -179,5 +140,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "135042e2a6cede93c0b1"
+  "parentGroupName": "135042e2a6cede93c0b1",
+  "isHidden": true
 }

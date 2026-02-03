@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "f6ca2eb52561012c5ca3",
+  "name": "d57c5e7ffa9c0bdff35a",
   "position": {
     "x": 14.961038961038961,
-    "y": 203.14791701804688,
-    "z": 9000,
-    "height": 323.53246753246754,
+    "y": 8.570298313593991,
+    "z": 14500,
+    "height": 357.81818181818181,
     "width": 580.98701298701292,
-    "tabOrder": 9000
+    "tabOrder": 17005
   },
   "visual": {
     "visualType": "textbox",
@@ -19,92 +19,14 @@
               {
                 "textRuns": [
                   {
-                    "value": "INSIGHT",
-                    "textStyle": {
-                      "fontSize": "12pt",
-                      "textDecoration": "underline"
-                    }
-                  },
-                  {
-                    "value": ":",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "12pt",
-                      "textDecoration": "underline"
-                    }
-                  },
-                  {
-                    "value": " ",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "12pt"
-                    }
-                  }
-                ],
-                "horizontalTextAlignment": "center"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Severity Mix Index values are tightly clustered (2.35 to 2.92), with a network-wide median of 2.78, ",
-                    "textStyle": {
-                      "fontSize": "12pt"
-                    }
-                  },
-                  {
-                    "value": "suggesting broadly comparable patient acuity across facilities",
+                    "value": "Diagnostic Preview — ",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": ".",
-                    "textStyle": {
-                      "fontSize": "12pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "INTERPRETATION GUIDANCE:",
-                    "textStyle": {
-                      "fontSize": "12pt",
-                      "textDecoration": "underline"
-                    }
-                  },
-                  {
-                    "value": " ",
+                    "value": "Intake Pressure (Informational)",
                     "textStyle": {
                       "fontSize": "12pt"
                     }
@@ -122,33 +44,20 @@
               {
                 "textRuns": [
                   {
-                    "value": "Given this clustering, downstream variation in LOS, cost, or mortality is ",
+                    "value": "This analysis establishes unplanned intake as a ",
                     "textStyle": {
                       "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": "less likely to be attributable to case-mix differences alone",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "12pt"
-                    }
-                  },
-                  {
-                    "value": " and should be interpreted ",
-                    "textStyle": {
-                      "fontSize": "12pt"
-                    }
-                  },
-                  {
-                    "value": "relative to this severity context",
+                    "value": "system-wide operating condition",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": ".",
+                    "value": ", shaped by the interaction of admission rate and encounter volume.",
                     "textStyle": {
                       "fontSize": "12pt"
                     }
@@ -165,20 +74,111 @@
               {
                 "textRuns": [
                   {
-                    "value": "Severity context is intended as a ",
+                    "value": "If downstream variation warrants diagnostic investigation, such analysis would typically examine ",
                     "textStyle": {
                       "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": "baseline lens for interpretation",
+                    "value": "how the system absorbs and manages unplanned demand",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": ", not an explanatory endpoint.",
+                    "value": ", including:",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "admission routing and emergency department flow patterns",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "timing and coordination of inpatient bed placement",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "alignment between intake surges and staffing coverage",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "downstream flow and discharge coordination under unplanned load",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Inclusion of these domains does ",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": "not",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": " imply applicability in this case.",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Determining relevance requires targeted diagnostic analysis beyond the scope of this report.",
                     "textStyle": {
                       "fontSize": "12pt"
                     }
@@ -630,7 +630,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Insight'"
+                  "Value": "'Text Diagn Prev'"
                 }
               }
             }
@@ -640,5 +640,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "89c9b513a9ae920b0617"
+  "parentGroupName": "bef98f40ab81f19947c1"
 }

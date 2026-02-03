@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "b64c79f817f23e128443",
+  "name": "1f7831ada1b2f135bdcd",
   "position": {
-    "x": 408.31168831168827,
-    "y": 353.38168325181312,
-    "z": 500,
-    "height": 27.428571428571427,
-    "width": 33.038961038961034,
-    "tabOrder": 9000
+    "x": 0,
+    "y": 0,
+    "z": 14250,
+    "height": 376.51948051948051,
+    "width": 613.40259740259739,
+    "tabOrder": 17006
   },
   "visual": {
     "visualType": "shape",
@@ -18,7 +18,14 @@
             "tileShape": {
               "expr": {
                 "Literal": {
-                  "Value": "'arrowChevron'"
+                  "Value": "'tabRoundTopCorners'"
+                }
+              }
+            },
+            "tabRoundCornerTop": {
+              "expr": {
+                "Literal": {
+                  "Value": "5L"
                 }
               }
             }
@@ -31,7 +38,7 @@
             "shapeAngle": {
               "expr": {
                 "Literal": {
-                  "Value": "180L"
+                  "Value": "90L"
                 }
               }
             }
@@ -50,6 +57,13 @@
                       "Percent": 0
                     }
                   }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
@@ -80,41 +94,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Back Diagn Prev'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "visualLink": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "type": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Bookmark'"
-                }
-              }
-            },
-            "bookmark": {
-              "expr": {
-                "Literal": {
-                  "Value": "'8b90c1364508bc7d8d62'"
-                }
-              }
-            },
-            "tooltip": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Hide the text back'"
+                  "Value": "'Backdrop'"
                 }
               }
             }
@@ -124,6 +104,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "794b246562c1bd282392",
+  "parentGroupName": "bef98f40ab81f19947c1",
   "howCreated": "InsertVisualButton"
 }

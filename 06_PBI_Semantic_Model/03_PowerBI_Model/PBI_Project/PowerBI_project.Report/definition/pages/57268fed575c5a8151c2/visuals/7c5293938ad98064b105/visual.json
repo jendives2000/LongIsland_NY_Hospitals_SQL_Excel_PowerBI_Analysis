@@ -47,6 +47,23 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Dim_ClinicalClass"
+                  }
+                },
+                "Property": "PeerGroup Severity Median (PeerGroup safe)"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "objects": {
@@ -283,6 +300,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "89c9b513a9ae920b0617",
-  "isHidden": true
+  "parentGroupName": "89c9b513a9ae920b0617"
 }

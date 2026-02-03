@@ -3,9 +3,9 @@
   "name": "90e97d6593e6be9d99bf",
   "position": {
     "x": 14.337662337662337,
-    "y": 194.18389894129535,
+    "y": 182.67493514707837,
     "z": 6125,
-    "height": 389.61038961038957,
+    "height": 372.15584415584414,
     "width": 582.23376623376623,
     "tabOrder": 16000
   },
@@ -21,7 +21,6 @@
                   {
                     "value": "INSIGHT:",
                     "textStyle": {
-                      "fontWeight": "bold",
                       "fontSize": "11pt",
                       "textDecoration": "underline"
                     }
@@ -29,9 +28,16 @@
                   {
                     "value": " ",
                     "textStyle": {
-                      "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
                   }
                 ]
               },
@@ -44,40 +50,27 @@
                     }
                   },
                   {
-                    "value": "substantial dispersion across facilities",
+                    "value": "meaningful dispersion within peer groups (PG)",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", with values spanning a wide range relative to their ",
+                    "value": ", with facilities positioned on both sides of their own PG medians across all segments. This indicates that elevated unplanned intake is ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "own peer-group median benchmarks",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ". Facilities appear on both sides of their peer medians across all peer groups, indicating that elevated unplanned intake is ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "not confined to a single facility type or segment",
+                    "value": "not confined to a single facility type",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ".",
+                    "value": ", but varies within shared peer contexts.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -94,50 +87,20 @@
               {
                 "textRuns": [
                   {
-                    "value": "The distribution highlights ",
+                    "value": "The pattern reflects ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "within–peer-group variability",
+                    "value": "heterogeneous intake exposure among structurally similar facilities",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", where some facilities operate materially above their peer median while others fall below, even under similar structural classifications. This pattern reflects ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "heterogeneous intake exposure within shared peer contexts",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", rather than uniform pressure across all facilities in a group.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Importantly, the peer median line functions as a ",
+                    "value": ", rather than uniform pressure within each PG. The peer median functions as a ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -150,10 +113,17 @@
                     }
                   },
                   {
-                    "value": ", not a threshold. Positions above or below this line indicate relative intake alignment within peer context, not performance standing.",
+                    "value": ", not a performance threshold.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
                   }
                 ]
               },
@@ -169,49 +139,12 @@
                   {
                     "value": "INTERPRETATION GUIDANCE: ",
                     "textStyle": {
-                      "fontWeight": "bold",
                       "fontSize": "11pt",
                       "textDecoration": "underline"
                     }
                   }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Interpret this visual as a ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "within–peer-group positioning view",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", showing how facilities’ unplanned intake rates align relative to their ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "own peer medians",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", not as a cross-facility comparison.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
                 ],
-                "listType": "bullet"
+                "horizontalTextAlignment": "center"
               },
               {
                 "textRuns": [
@@ -223,26 +156,25 @@
               {
                 "textRuns": [
                   {
-                    "value": "Variation above or below the peer median should be read as ",
+                    "value": "Read this view as ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "differences in intake exposure and demand patterns",
+                    "value": "within–PG positioning",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not evidence of better or worse operational performance.",
+                    "value": ", not cross-facility comparison.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   }
-                ],
-                "listType": "bullet"
+                ]
               },
               {
                 "textRuns": [
@@ -254,38 +186,20 @@
               {
                 "textRuns": [
                   {
-                    "value": "Facilities above their peer median may be operating under ",
+                    "value": "Positions above or below the peer median indicate ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "greater structural intake pressure",
+                    "value": "relative intake exposure",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", while those below may experience comparatively lower unplanned demand — both conditions can exist simultaneously within the same peer group.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "This view should be used to ",
+                    "value": ", not operational performance or quality. Differences shown should be used to ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -298,13 +212,12 @@
                     }
                   },
                   {
-                    "value": " (e.g., LOS, cost, throughput) by highlighting differences in intake conditions that persist even among structurally similar facilities.",
+                    "value": " (e.g., LOS, cost, throughput) by highlighting intake conditions that vary even among similar facilities.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   }
-                ],
-                "listType": "bullet"
+                ]
               },
               {
                 "textRuns": [
@@ -316,7 +229,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Avoid using this visual to infer causality, effectiveness of intake management, or quality of care. The chart provides ",
+                    "value": "This view provides ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -329,13 +242,12 @@
                     }
                   },
                   {
-                    "value": ", not evaluative judgment.",
+                    "value": ", not causal explanation or evaluative judgment.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   }
-                ],
-                "listType": "bullet"
+                ]
               },
               {
                 "textRuns": [
@@ -1652,6 +1564,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "e61d07d0ba2506dc604d",
-  "isHidden": true
+  "parentGroupName": "e61d07d0ba2506dc604d"
 }

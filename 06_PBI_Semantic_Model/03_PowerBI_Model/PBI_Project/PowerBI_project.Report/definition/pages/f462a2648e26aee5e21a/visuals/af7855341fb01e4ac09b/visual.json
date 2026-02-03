@@ -3,9 +3,9 @@
   "name": "af7855341fb01e4ac09b",
   "position": {
     "x": 14.337662337662337,
-    "y": 194.18389894129535,
+    "y": 183.92168839383163,
     "z": 4500,
-    "height": 389.61038961038957,
+    "height": 371.53246753246754,
     "width": 582.23376623376623,
     "tabOrder": 15000
   },
@@ -21,7 +21,6 @@
                   {
                     "value": "INSIGHT:",
                     "textStyle": {
-                      "fontWeight": "bold",
                       "fontSize": "11pt",
                       "textDecoration": "underline"
                     }
@@ -29,16 +28,23 @@
                   {
                     "value": " ",
                     "textStyle": {
-                      "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "Unplanned intake pressure reflects the ",
+                    "value": "This view shows that unplanned intake (UI) pressure reflects the ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -51,7 +57,7 @@
                     }
                   },
                   {
-                    "value": ", rather than rate alone.",
+                    "value": ", not rate alone.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -68,33 +74,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Across the system, most facilities are positioned ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "to the right of the 40% unplanned admission rate threshold",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", and a substantial subset also operates at ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "moderate to high encounter volumes",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ". This places many facilities in a zone where ",
+                    "value": "All facilities operate above the ~40% unplanned admission reference, and many also at moderate to high encounter volumes, placing them in a zone where ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -107,37 +87,20 @@
                     }
                   },
                   {
-                    "value": ", indicating sustained exposure to unplanned intake pressure rather than isolated spikes.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Facilities with lower encounter volumes but high unplanned admission rates are also present, indicating that ",
+                    "value": ". Facilities with high rates but lower volumes are also present, indicating that UI pressure is ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "intake pressure is distributed across multiple operating contexts",
+                    "value": "distributed across operating contexts",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not limited to large hospitals.",
+                    "value": ", not confined to large hospitals.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -154,7 +117,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Overall, the visual shows ",
+                    "value": "Overall, the pattern reflects ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -167,10 +130,17 @@
                     }
                   },
                   {
-                    "value": ", with no single cluster dominating the pattern.",
+                    "value": ", rather than concentration in a single cluster.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
                   }
                 ]
               },
@@ -186,17 +156,24 @@
                   {
                     "value": "INTERPRETATION GUIDANCE: ",
                     "textStyle": {
-                      "fontWeight": "bold",
                       "fontSize": "11pt",
                       "textDecoration": "underline"
                     }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "This view should be read as a ",
+                    "value": "Read this view as a ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -226,17 +203,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Key interpretation principles:",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Unplanned intake pressure should be understood as a ",
+                    "value": "Unplanned intake pressure should be interpreted as a ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -249,69 +216,7 @@
                     }
                   },
                   {
-                    "value": ", not inferred from either dimension independently.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Facilities in the upper-right region reflect ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "sustained structural exposure",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": " to unplanned demand, while facilities high on rate but lower on volume represent ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "different operational contexts",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", not lower pressure.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Proximity to thresholds (e.g., 40% rate, ~3k encounters) indicates ",
+                    "value": ", with reference lines indicating ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -324,154 +229,10 @@
                     }
                   },
                   {
-                    "value": ", not categorical classification.",
+                    "value": ", not categorical thresholds; downstream variation (LOS, cost, throughput, outcomes) should be interpreted in light of intake exposure, not effectiveness or causality.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "When interpreting downstream metrics (LOS, cost, throughput, outcomes):",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Variation observed later in the report is ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "less likely to reflect random demand fluctuation",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": " and more likely to align with ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "intake and flow conditions",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ".",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "This visual establishes ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "baseline operating context",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": " and should be used to ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "frame interpretation",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", not to rank facilities or infer effectiveness.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Observed patterns describe ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "distribution and structural exposure",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", and do not establish causality or performance attribution.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
                   }
                 ]
               }

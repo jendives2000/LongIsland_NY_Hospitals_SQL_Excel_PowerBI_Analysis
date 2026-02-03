@@ -1,9 +1,15 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.0.0/schema.json",
-  "displayName": "Unplned Viz 3",
-  "name": "06c2508477409d31630b",
+  "displayName": "UA Back Diagn Prev",
+  "name": "6722694fc0c5cf86dd4c",
   "options": {
-    "targetVisualNames": []
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "bef98f40ab81f19947c1",
+      "d57c5e7ffa9c0bdff35a",
+      "1f7831ada1b2f135bdcd",
+      "6bea46abc17c4cf8f189"
+    ]
   },
   "explorationState": {
     "version": "1.3",
@@ -15,7 +21,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "ca7d8ff5e84e91c2694c",
+                  "name": "0b2784ceee083a3ca456",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -70,7 +76,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "7ab1219cb50c28e83cf1",
+                  "name": "559e17debc17e0dba2c0",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -130,10 +136,7 @@
           "09ae76ce3d61b6ac1aee": {
             "singleVisual": {
               "visualType": "actionButton",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
+              "objects": {}
             }
           },
           "09d727a09d1867438739": {
@@ -254,7 +257,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "83900f46d487cb5251a4",
+                  "name": "9491fbf58ec0b7a14060",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -269,7 +272,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "1a4bab801e54b8203c51",
+                  "name": "e5437a9b82570d3e601d",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -284,7 +287,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "4d1b2ec2cee913d113cc",
+                  "name": "d599d458f20be5f03bed",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -299,7 +302,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "a364e4449321b34fc866",
+                  "name": "502e26deaa6400baaaf3",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -419,7 +422,10 @@
           "6542876f5b5eb4020c12": {
             "singleVisual": {
               "visualType": "actionButton",
-              "objects": {}
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
             }
           },
           "66c8dced6265d9d68092": {
@@ -520,7 +526,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "d47e7e8667bdf78887d1",
+                  "name": "3b14390f96df43c3b1b3",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -535,7 +541,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "546934eae61f01d08e2b",
+                  "name": "0cfa68ab718deebacc6a",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -579,16 +585,6 @@
                         }
                       },
                       "Property": "PeerGroup_Name"
-                    }
-                  },
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "Facility_Name"
                     }
                   }
                 ]
@@ -659,7 +655,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "8dc3fe5fb7eab5fd19fd",
+                  "name": "8c40bd03ce979f7166af",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -674,7 +670,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "7ae85764aafe4555f024",
+                  "name": "3fb8bfec8561df6680ab",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -852,7 +848,10 @@
           "af7855341fb01e4ac09b": {
             "singleVisual": {
               "visualType": "textbox",
-              "objects": {}
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
             }
           },
           "b430d082383bdcea9914": {
@@ -897,17 +896,14 @@
           "c1687403a1d4c8bc5931": {
             "singleVisual": {
               "visualType": "textbox",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
+              "objects": {}
             }
           },
           "c243b20ec86ea91aeb55": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "9b95521aac2ce16fa589",
+                  "name": "245abeebe6df0d3d2e1f",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -922,7 +918,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e0121997667bae5f0d13",
+                  "name": "28aee50fe3e0830c93de",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -937,7 +933,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "2aeea398ece997abe901",
+                  "name": "7893016063cdd41079a3",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -952,7 +948,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "ea921b41f98dc5259dda",
+                  "name": "85ff29e9281f62b1e221",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -967,7 +963,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "6277f597f22d18dc7593",
+                  "name": "32a42582495603ab761b",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -982,7 +978,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "fd480ab9389ed5af068d",
+                  "name": "1c8efcd55db516fb95f0",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1027,16 +1023,6 @@
                       },
                       "Property": "PeerGroup_Name"
                     }
-                  },
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "Facility_Name"
-                    }
                   }
                 ],
                 "X": [
@@ -1051,39 +1037,10 @@
                     }
                   }
                 ]
+              },
+              "display": {
+                "mode": "hidden"
               }
-            },
-            "highlight": {
-              "selection": [
-                {
-                  "dataMap": {
-                    "Dim_Facility.PeerGroup_Name": [
-                      {
-                        "scopeId": {
-                          "Comparison": {
-                            "ComparisonKind": 0,
-                            "Left": {
-                              "Column": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Entity": "Dim_Facility"
-                                  }
-                                },
-                                "Property": "PeerGroup_Name"
-                              }
-                            },
-                            "Right": {
-                              "Literal": {
-                                "Value": "'PG-E Specialty-Dominant'"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
-                  }
-                }
-              ]
             }
           },
           "c6703c017e0647402da1": {
@@ -1247,7 +1204,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "9ada9ca468005231dfb4",
+                  "name": "1fee313e42bfa40469b7",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1262,7 +1219,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "af10ce6574f1487acec0",
+                  "name": "80616dffdb8a9c908f48",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1277,7 +1234,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "b2dda46ed81f0395c1cc",
+                  "name": "8caed4008acdeda6f4cc",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1297,7 +1254,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "893a9413fd7e166f1d53",
+                  "name": "1e637def865fe894fc61",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1344,9 +1301,6 @@
                     }
                   }
                 ]
-              },
-              "display": {
-                "mode": "hidden"
               }
             }
           },
@@ -1387,7 +1341,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "25778c0904b45dad17c2",
+                  "name": "3ea98059774306c0b96c",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1402,7 +1356,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "5ad46a89004719e8087b",
+                  "name": "4dd30648ff6ce6534c15",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1417,7 +1371,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "2dab08085287fbd7971c",
+                  "name": "87c96a5691d9b32ce00f",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1432,7 +1386,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "66322908281fb961f3ba",
+                  "name": "f013ec01069d74bfd07e",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1447,7 +1401,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "3ac0628f5ec9ab0df556",
+                  "name": "7dbb44cba2a244e2b983",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1462,7 +1416,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "74f8a41b6d83740b4be5",
+                  "name": "4e2aa54d93033e12072d",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
