@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "53479adc1795219eb76d",
   "position": {
-    "x": 981.81818181818176,
+    "x": 1102.1298701298701,
     "y": 78.545454545454547,
-    "z": 7000,
+    "z": 6000,
     "height": 41.766233766233768,
-    "width": 275.53246753246754,
+    "width": 167.06493506493507,
     "tabOrder": 5000
   },
   "visual": {
@@ -56,7 +56,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Next: Disposition (Exit Flow)'"
+                  "Value": "'Next: Disposition'"
                 }
               }
             },
@@ -102,7 +102,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Next: Disposition (Exit Flow)'"
+                  "Value": "'Next: Disposition'"
                 }
               }
             },
@@ -142,6 +142,20 @@
           },
           "selector": {
             "id": "hover"
+          }
+        },
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Next: Disposition'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "selected"
           }
         }
       ]

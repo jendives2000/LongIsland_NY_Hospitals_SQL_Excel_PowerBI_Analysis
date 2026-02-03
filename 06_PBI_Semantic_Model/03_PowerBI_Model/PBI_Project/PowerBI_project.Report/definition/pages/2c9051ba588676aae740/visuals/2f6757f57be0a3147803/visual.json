@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "2f6757f57be0a3147803",
   "position": {
-    "x": 955.63636363636363,
-    "y": 78.545454545454547,
+    "x": 1124.5714285714284,
+    "y": 81.662337662337663,
     "z": 7000,
     "height": 41.766233766233768,
-    "width": 285.50649350649348,
+    "width": 144.62337662337663,
     "tabOrder": 5000
   },
   "visual": {
@@ -56,7 +56,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Next: Mortality (Outcome Risk)'"
+                  "Value": "'Next: Mortality'"
                 }
               }
             },
@@ -102,7 +102,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Next: Mortality (Outcome Risk)'"
+                  "Value": "'Next: Mortality'"
                 }
               }
             },
@@ -142,6 +142,20 @@
           },
           "selector": {
             "id": "hover"
+          }
+        },
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Next: Mortality'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "selected"
           }
         }
       ]
