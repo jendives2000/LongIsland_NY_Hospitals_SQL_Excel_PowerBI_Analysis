@@ -1,9 +1,15 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.0.0/schema.json",
-  "displayName": "SMI Abv Own PG SMI Median",
-  "name": "511d5b418d274e084d07",
+  "displayName": "Back Diagn Prev",
+  "name": "8b90c1364508bc7d8d62",
   "options": {
-    "targetVisualNames": []
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "794b246562c1bd282392",
+      "5c1a0dace1eb37914518",
+      "86194b6af709ef546169",
+      "b64c79f817f23e128443"
+    ]
   },
   "explorationState": {
     "version": "1.3",
@@ -15,7 +21,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "8910a4c4316f9957c88a",
+                  "name": "56df7ff559e7b85a29c1",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -76,7 +82,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "08d042198c3840373aa8",
+                  "name": "6fc5c3ec9ad4dc5b31bf",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -91,7 +97,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "577ca4e7438cd1a070f3",
+                  "name": "b4d6dc4e97054af163b5",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -106,7 +112,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "a5844b288e690f1fdc2f",
+                  "name": "17febec5e6adbb39922b",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -121,7 +127,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "f26f1e7c677b5ee42868",
+                  "name": "79f66af5ad318317d5e3",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -136,7 +142,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "3795210eb8a5abb34012",
+                  "name": "5f3a28af4254e1b2c3d4",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -300,6 +306,9 @@
                     }
                   }
                 ]
+              },
+              "display": {
+                "mode": "hidden"
               }
             }
           },
@@ -351,10 +360,7 @@
           "3ad65d2b8dba95c351db": {
             "singleVisual": {
               "visualType": "actionButton",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
+              "objects": {}
             }
           },
           "40f2a68cc83ee6ec0c8a": {
@@ -402,7 +408,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "99fcaf5573ffdc935b92",
+                  "name": "c36afa122d979e7670d6",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -417,7 +423,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "b0c9470e1080e400b262",
+                  "name": "c72e8c60a193590f00d1",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -432,7 +438,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "14e2120e19f24b29fc41",
+                  "name": "f5e2bd8793fd21c91729",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -447,7 +453,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "17ae0ece1b8828378d4e",
+                  "name": "dab67804e1278babf065",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -493,40 +499,6 @@
                 {
                   "name": "4a561ee28947883dbd41",
                   "type": "Advanced",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "_",
-                        "Entity": "_Severity",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "Comparison": {
-                            "ComparisonKind": 0,
-                            "Left": {
-                              "Measure": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Source": "_"
-                                  }
-                                },
-                                "Property": "Is Above PG Severity Median (facility safe)"
-                              }
-                            },
-                            "Right": {
-                              "Literal": {
-                                "Value": "1L"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
-                  },
                   "expression": {
                     "Measure": {
                       "Expression": {
@@ -647,34 +619,6 @@
             "singleVisual": {
               "visualType": "lineClusteredColumnComboChart",
               "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 1,
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  }
-                },
-                {
-                  "Direction": 1,
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "Facility_Name"
-                    }
-                  }
-                }
-              ],
               "activeProjections": {
                 "Category": [
                   {
@@ -685,16 +629,6 @@
                         }
                       },
                       "Property": "PeerGroup_Name"
-                    }
-                  },
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "Facility_Name"
                     }
                   }
                 ]
@@ -777,7 +711,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "58b33cd9c1a954a4eaaf",
+                  "name": "57a9faa66c020e50e50d",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -792,7 +726,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "d1423ae2135e568e5c7b",
+                  "name": "665d20c009f6589d8e45",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1036,28 +970,15 @@
               "objects": {},
               "orderBy": [
                 {
-                  "Direction": 1,
+                  "Direction": 2,
                   "Expression": {
-                    "Column": {
+                    "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Dim_Facility"
+                          "Entity": "Dim_ClinicalClass"
                         }
                       },
-                      "Property": "PeerGroup_Name"
-                    }
-                  }
-                },
-                {
-                  "Direction": 1,
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "Facility_Name"
+                      "Property": "PeerGroup Severity Median"
                     }
                   }
                 }
@@ -1085,16 +1006,16 @@
                     }
                   }
                 ]
-              },
-              "display": {
-                "mode": "hidden"
               }
             }
           },
           "a025a1cc7e4e28d8adb7": {
             "singleVisual": {
               "visualType": "actionButton",
-              "objects": {}
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
             }
           },
           "a21c24dbd90993ffb4f8": {
@@ -1113,7 +1034,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "66a79653877f1c632812",
+                  "name": "0dfeb2eecce6dcce39c3",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1128,7 +1049,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "9dfd728b49c77242de74",
+                  "name": "57a6fe123dbaaa311c82",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1143,7 +1064,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e134683b38c99a9c3b2a",
+                  "name": "ec60e4c7f8a65139de17",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1199,14 +1120,17 @@
           "b97f46abfeb65bc12274": {
             "singleVisual": {
               "visualType": "textbox",
-              "objects": {}
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
             }
           },
           "cc529bc36dd10ebc2324": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "923cdca3c84e96eddefa",
+                  "name": "700e977bbfaf15c82978",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1221,7 +1145,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "fe591d55dfc0a4243eb7",
+                  "name": "9497a7c3580a6d909287",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1241,7 +1165,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "a22166399ea9addd8716",
+                  "name": "8eeae7b3ce851b2d9331",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1261,7 +1185,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "c89e64767136acd1b41a",
+                  "name": "4d41c85250425c79bb3e",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1276,7 +1200,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "dee192b3bb8e70749f67",
+                  "name": "13edae837483848bda91",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1291,7 +1215,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "56c7cb073a59f33d3555",
+                  "name": "28145b422a9a17295896",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1306,7 +1230,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "b0c78a5a29bdeb43d50f",
+                  "name": "a78160a520466fc1a0d3",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1435,17 +1359,14 @@
           "f6ca2eb52561012c5ca3": {
             "singleVisual": {
               "visualType": "textbox",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
+              "objects": {}
             }
           },
           "fb066f6bb065b705106c": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "a7cf1e72c6c1411fd6cb",
+                  "name": "837d000057502cf7e41e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {

@@ -2,9 +2,9 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "b97f46abfeb65bc12274",
   "position": {
-    "x": 14.947577443550259,
+    "x": 14.961038961038961,
     "y": 199.65894665901979,
-    "z": 1500,
+    "z": 4000,
     "height": 349.71428571428572,
     "width": 580.98701298701292,
     "tabOrder": 12000
@@ -19,61 +19,83 @@
               {
                 "textRuns": [
                   {
-                    "value": "I",
+                    "value": "INSIGHT:",
                     "textStyle": {
-                      "fontSize": "11pt",
-                      "textDecoration": "underline"
-                    }
-                  },
-                  {
-                    "value": "NSIGHT:",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt",
+                      "fontSize": "12pt",
                       "textDecoration": "underline"
                     }
                   },
                   {
                     "value": " ",
                     "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "This view highlights ",
+                    "value": "This view highlights facilities with Severity Mix Index (SMI) values ",
                     "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "within–peer-group severity positioning",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", showing facilities whose Severity Mix Index (SMI) sits ",
-                    "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
                     "value": "above their own peer-group median",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": ", rather than above a system-wide benchmark.",
+                    "value": ", reflecting ",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": "within–peer-group variation rather than system-wide severity differences",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": ". ",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Facilities above the median appear across peer groups, indicating ",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": "distributed intra-group positioning",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": ", not absolute severity dominance.",
+                    "textStyle": {
+                      "fontSize": "12pt"
                     }
                   }
                 ]
@@ -82,85 +104,6 @@
                 "textRuns": [
                   {
                     "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Facilities above their peer median are present across multiple peer groups, with ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "PG-B (Large Community)",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": " and ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "PG-C (Mid-Size Community)",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": " containing the greatest number of such facilities. This indicates that ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "relative severity positioning varies within peer groups",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", even where overall group medians differ.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "These patterns reflect ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "distribution within peer context",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", not absolute severity dominance across the system.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
                   }
                 ]
               },
@@ -176,56 +119,18 @@
                   {
                     "value": "INTERPRETATION GUIDANCE:",
                     "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt",
+                      "fontSize": "12pt",
                       "textDecoration": "underline"
                     }
                   },
                   {
                     "value": " ",
                     "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Being above a ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "peer-group median",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": " indicates ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "relative positioning within a similar operating and patient-mix context",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", not higher acuity compared to other peer groups.",
-                    "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   }
                 ],
-                "listType": "bullet"
+                "horizontalTextAlignment": "center"
               },
               {
                 "textRuns": [
@@ -237,163 +142,61 @@
               {
                 "textRuns": [
                   {
-                    "value": "This view is most useful for understanding ",
+                    "value": "Being above a peer median indicates ",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": "intra-group dispersion",
+                    "value": "relative positioning within a similar peer context",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": ", rather than cross-group comparison.",
+                    "value": ", not higher acuity across the system. ",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "Facilities above their peer median should be interpreted as operating on the ",
+                    "value": "Differences shown describe ",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": "upper end of expected severity for that peer type",
+                    "value": "case-mix variation within peer groups",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": ", not as outliers or exceptions.",
+                    "value": ", not performance, quality, or causality, and should be used as a ",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
+                  },
                   {
-                    "value": ""
+                    "value": "peer-relative baseline lens",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": " for interpreting downstream metrics.",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
                   }
                 ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Differences observed here describe ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "variation in case-mix composition within structurally similar settings",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", not performance differences or care quality.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Use this view to ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "refine contextual interpretation",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": " of downstream metrics (LOS, cost, mortality) by anchoring analysis to ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "peer-relative baselines",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", rather than system averages.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "This view provides ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "contextual positioning",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", not evaluation, and does not establish causality or performance attribution.subsequent pages, not as an explanatory endpoint.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
               },
               {
                 "textRuns": [

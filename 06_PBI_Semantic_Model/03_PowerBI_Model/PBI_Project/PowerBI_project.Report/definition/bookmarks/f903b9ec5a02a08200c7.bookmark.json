@@ -15,7 +15,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "5ecb0cdb83770127eb70",
+                  "name": "1ba427c4a6ee45e3aaa3",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -76,7 +76,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "b7048e3e8e14677b7e8c",
+                  "name": "8e91a2ffef4e56d7ad84",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -91,7 +91,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "933c6006f1158b33db81",
+                  "name": "f0dadd848c5a22966f23",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -106,7 +106,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "5f9690c23b9d1ff299bf",
+                  "name": "7a25f61f1364b8a52bde",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -121,7 +121,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "8822234f8e4cb0241f3e",
+                  "name": "aed1d785411e27f09b44",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -136,7 +136,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "d3f73fa8469e6da0a9e5",
+                  "name": "76a7573d54960142ce43",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -202,6 +202,12 @@
             }
           },
           "0e0f35ff6e4b60f830ab": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "0ef63fd81114b42d5d3d": {
             "singleVisual": {
               "visualType": "textbox",
               "objects": {}
@@ -364,6 +370,12 @@
               "objects": {}
             }
           },
+          "3ad65d2b8dba95c351db": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
           "40f2a68cc83ee6ec0c8a": {
             "singleVisual": {
               "visualType": "actionButton",
@@ -371,6 +383,15 @@
             }
           },
           "4b29bc1bb46db93c0a18": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "4e9c35379f043157869e": {
             "singleVisual": {
               "visualType": "textbox",
               "objects": {},
@@ -447,7 +468,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "4a79f028aee1b9c54de3",
+                  "name": "6ff9e1537d5cebd52ef0",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -462,7 +483,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "27be3622907b496df7d5",
+                  "name": "2d7f33ae6deacbb830fd",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -477,7 +498,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "27136977945b2c3085d9",
+                  "name": "fa3401de606fdc492b6f",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -492,7 +513,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "adb839ebbff28dbfe749",
+                  "name": "07abbb8b9294c1ceee3b",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -782,7 +803,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "a619b58f309dfe55c574",
+                  "name": "fc9088403039e32aae80",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -797,7 +818,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "5926720ae9672737f65d",
+                  "name": "31bd00dcd600bdb673a5",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1055,7 +1076,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "cc7c97fd0f1d13f84c04",
+                  "name": "909b7f00df6002f8fffb",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1070,7 +1091,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "0f5d1f3b6ffee05ffe5f",
+                  "name": "caf370051d7e3f8fef6d",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1085,7 +1106,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "5df6323aea4d502df775",
+                  "name": "3d21a69930144797964e",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1159,11 +1180,17 @@
               "objects": {}
             }
           },
+          "b97f46abfeb65bc12274": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
           "cc529bc36dd10ebc2324": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "bb11f5023348a790a6d1",
+                  "name": "b7ef4ab3ceacbacfedcd",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1178,7 +1205,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "1a965567932ac2ee4faf",
+                  "name": "19b4f9ddc9b6dbf62cde",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1198,7 +1225,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "1d95091b299a140e9ab4",
+                  "name": "6582581a000c74d4252b",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1218,7 +1245,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "a58b956502ef50bfa375",
+                  "name": "d1dd1a1d0bff13d850f8",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1233,7 +1260,22 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "55a70f550ceef4445f86",
+                  "name": "2cd34eb2266857f336f3",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Severity"
+                        }
+                      },
+                      "Property": "SMI Range"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "42b63251a7876bd7af0b",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1248,7 +1290,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "a3cd4bccd0ab201186f7",
+                  "name": "b7f48101cbe78ea98cf6",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1387,7 +1429,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "3ee3c483dcde7736199e",
+                  "name": "2ed50a65ad7c18f58eb0",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1450,25 +1492,22 @@
               "objects": {}
             }
           },
-          "b97f46abfeb65bc12274": {
+          "737f05ccab496872a8fa": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "5c1a0dace1eb37914518": {
             "singleVisual": {
               "visualType": "textbox",
               "objects": {}
             }
           },
-          "0ef63fd81114b42d5d3d": {
+          "86194b6af709ef546169": {
             "singleVisual": {
-              "visualType": "textbox",
+              "visualType": "shape",
               "objects": {}
-            }
-          },
-          "4e9c35379f043157869e": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
             }
           }
         },
@@ -1482,7 +1521,12 @@
             }
           },
           "89c9b513a9ae920b0617": {
-            "isHidden": true
+            "isHidden": true,
+            "children": {
+              "794b246562c1bd282392": {
+                "isHidden": true
+              }
+            }
           },
           "c617da6327cc700fbd92": {
             "isHidden": true,

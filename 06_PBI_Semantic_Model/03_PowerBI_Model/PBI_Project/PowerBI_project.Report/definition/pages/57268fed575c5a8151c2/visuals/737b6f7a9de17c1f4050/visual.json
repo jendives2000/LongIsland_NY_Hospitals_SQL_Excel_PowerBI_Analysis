@@ -2,9 +2,9 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "737b6f7a9de17c1f4050",
   "position": {
-    "x": 14.939444443400834,
+    "x": 14.952905960889536,
     "y": 198.87064251659319,
-    "z": 3500,
+    "z": 7000,
     "height": 349.71428571428572,
     "width": 580.98701298701292,
     "tabOrder": 11000
@@ -19,17 +19,17 @@
               {
                 "textRuns": [
                   {
-                    "value": "I",
+                    "value": "INSIGHT",
                     "textStyle": {
-                      "fontSize": "11pt",
+                      "fontSize": "12pt",
                       "textDecoration": "underline"
                     }
                   },
                   {
-                    "value": "NSIGHT:",
+                    "value": ":",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "11pt",
+                      "fontSize": "12pt",
                       "textDecoration": "underline"
                     }
                   },
@@ -37,30 +37,25 @@
                     "value": " ",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "This view isolates facilities whose ",
+                    "value": "This view isolates facilities with Severity Mix Index (SMI) values above the cross–peer-group median (2.78).",
                     "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "Severity Mix Index (SMI) exceeds the cross-peer-group median (2.78)",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ".",
-                    "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   }
                 ]
@@ -75,95 +70,22 @@
               {
                 "textRuns": [
                   {
-                    "value": "Even within this subset, SMI values remain ",
+                    "value": "Even within this subset, SMI values remain tightly clustered, indicating ",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": "tightly clustered",
+                    "value": "limited variation in baseline acuity rather than extreme differences",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": ", indicating that differences above the median reflect ",
+                    "value": ". Facilities above the median are distributed across peer groups, not concentrated in a single segment.",
                     "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "modest variation in baseline acuity",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", not extreme divergence.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "The presence of multiple facilities across different peer groups above the network median suggests that ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "elevated baseline severity is distributed",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", rather than concentrated in a single facility type or segment.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "This reinforces that patient acuity differences, while present, remain ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "bounded within a relatively narrow range",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ".",
-                    "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   }
                 ]
@@ -180,39 +102,45 @@
                   {
                     "value": "INTERPRETATION GUIDANCE:",
                     "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt",
+                      "fontSize": "12pt",
                       "textDecoration": "underline"
                     }
                   },
                   {
                     "value": " ",
                     "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "This filtered view should be read as a ",
+                    "value": "This filtered view provides ",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": "contextual lens",
+                    "value": "contextual orientation",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": ", not a performance distinction.",
+                    "value": ", not performance distinction.",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   }
                 ]
@@ -227,145 +155,38 @@
               {
                 "textRuns": [
                   {
-                    "value": "Because SMI values above the network median remain closely grouped:",
+                    "value": "Because severity above the median remains closely grouped, downstream variation in LOS, cost, mortality, or throughput is ",
                     "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Differences observed in downstream metrics (e.g., length of stay, cost, mortality, throughput) ",
-                    "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": "are unlikely to be driven by case-mix severity alone",
+                    "value": "less likely to be attributable to case-mix differences alone",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Facilities above the median should not be interpreted as operating under uniquely extreme acuity conditions",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Use this view to:",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Confirm that ",
-                    "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": "baseline severity has been accounted for",
+                    "value": ". Severity context should be used as a ",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": "baseline lens",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
+                  },
                   {
-                    "value": ""
+                    "value": ", not an explanatory endpoint.",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
                   }
                 ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Establish a ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "severity-adjusted comparison frame",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": " for subsequent pages",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Severity context provides ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "orientation",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", not explanation, and should inform interpretation of later metrics rather than serve as an endpoint.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
               },
               {
                 "textRuns": [

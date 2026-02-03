@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "f6ca2eb52561012c5ca3",
+  "name": "5c1a0dace1eb37914518",
   "position": {
     "x": 14.961038961038961,
-    "y": 230.20440120447418,
-    "z": 9000,
-    "height": 296.72727272727269,
+    "y": 16.134930005059857,
+    "z": 14500,
+    "height": 318.5454545454545,
     "width": 580.98701298701292,
-    "tabOrder": 9000
+    "tabOrder": 15003
   },
   "visual": {
     "visualType": "textbox",
@@ -19,25 +19,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "INSIGHT",
-                    "textStyle": {
-                      "fontSize": "12pt",
-                      "textDecoration": "underline"
-                    }
-                  },
-                  {
-                    "value": ":",
+                    "value": "Diagnostic Preview — Severity Context (Informational)",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "12pt",
-                      "textDecoration": "underline"
-                    }
-                  },
-                  {
-                    "value": " ",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   }
                 ],
@@ -53,22 +38,39 @@
               {
                 "textRuns": [
                   {
-                    "value": "Severity Mix Index values are tightly clustered (2.35 to 2.92), with a network-wide median of 2.78, ",
+                    "value": "This analysis establishes that baseline patient severity is broadly comparable across facilities, with bounded variation primarily in case-mix composition rather than overall acuity.",
                     "textStyle": {
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "If downstream variation warrants diagnostic investigation, such analysis would typically examine ",
+                    "textStyle": {
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "suggesting broadly comparable patient acuity across facilities",
+                    "value": "how care processes respond to differing acuity profiles",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ".",
+                    "value": ", including:",
                     "textStyle": {
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   }
                 ]
@@ -83,34 +85,46 @@
               {
                 "textRuns": [
                   {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "INTERPRETATION GUIDANCE:",
+                    "value": "care pathway design for high-severity cases",
                     "textStyle": {
-                      "fontSize": "12pt",
-                      "textDecoration": "underline"
-                    }
-                  },
-                  {
-                    "value": " ",
-                    "textStyle": {
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   }
                 ],
-                "horizontalTextAlignment": "center"
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "sequencing and coordination of services across acuity levels",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "escalation, monitoring, and transition practices for Extreme-severity patients",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "alignment between clinical complexity and operational workflows",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
               },
               {
                 "textRuns": [
@@ -122,35 +136,22 @@
               {
                 "textRuns": [
                   {
-                    "value": "Given this clustering, downstream variation in LOS, cost, or mortality is ",
+                    "value": "Inclusion of these domains does ",
                     "textStyle": {
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "less likely to be attributable to case-mix differences alone",
+                    "value": "not",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " and should be interpreted ",
+                    "value": " imply applicability in this case.",
                     "textStyle": {
-                      "fontSize": "12pt"
-                    }
-                  },
-                  {
-                    "value": "relative to this severity context",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "12pt"
-                    }
-                  },
-                  {
-                    "value": ".",
-                    "textStyle": {
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   }
                 ]
@@ -158,29 +159,9 @@
               {
                 "textRuns": [
                   {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Severity context is intended as a ",
+                    "value": "Determining relevance requires targeted diagnostic analysis beyond the scope of this report.",
                     "textStyle": {
-                      "fontSize": "12pt"
-                    }
-                  },
-                  {
-                    "value": "baseline lens for interpretation",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "12pt"
-                    }
-                  },
-                  {
-                    "value": ", not an explanatory endpoint.",
-                    "textStyle": {
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   }
                 ]
@@ -630,7 +611,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Insight'"
+                  "Value": "'Text Diagn Prev'"
                 }
               }
             }
@@ -640,5 +621,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "89c9b513a9ae920b0617"
+  "parentGroupName": "794b246562c1bd282392"
 }

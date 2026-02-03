@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "0fa7ca062c6449c11d8c",
+  "name": "86194b6af709ef546169",
   "position": {
-    "x": 869.61038961038957,
-    "y": 577.2467532467532,
-    "z": 4000,
-    "height": 61.714285714285708,
-    "width": 379.01298701298697,
-    "tabOrder": 11000
+    "x": 0,
+    "y": 0,
+    "z": 14250,
+    "height": 344.72727272727269,
+    "width": 613.40259740259739,
+    "tabOrder": 15004
   },
   "visual": {
     "visualType": "shape",
@@ -18,7 +18,14 @@
             "tileShape": {
               "expr": {
                 "Literal": {
-                  "Value": "'arrowPentagon'"
+                  "Value": "'tabRoundTopCorners'"
+                }
+              }
+            },
+            "tabRoundCornerTop": {
+              "expr": {
+                "Literal": {
+                  "Value": "5L"
                 }
               }
             }
@@ -31,7 +38,7 @@
             "shapeAngle": {
               "expr": {
                 "Literal": {
-                  "Value": "180L"
+                  "Value": "90L"
                 }
               }
             }
@@ -47,7 +54,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 1,
-                      "Percent": 0.2
+                      "Percent": 0
                     }
                   }
                 }
@@ -72,7 +79,22 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Backdrop'"
                 }
               }
             }
@@ -82,5 +104,6 @@
     },
     "drillFilterOtherVisuals": true
   },
+  "parentGroupName": "794b246562c1bd282392",
   "howCreated": "InsertVisualButton"
 }
