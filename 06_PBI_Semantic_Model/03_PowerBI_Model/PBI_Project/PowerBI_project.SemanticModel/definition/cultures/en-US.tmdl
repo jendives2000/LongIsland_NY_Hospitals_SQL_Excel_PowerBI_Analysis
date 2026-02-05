@@ -12983,12 +12983,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "payer encounters": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "aggregate payer encounter": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -13019,16 +13013,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "payer happenstance": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
 			          "total payer meeting": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -13046,16 +13030,6 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "payer meeting": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
 			          }
 			        },
 			        {
@@ -19951,12 +19925,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peer median": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "smi peer norm": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -20037,23 +20005,23 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peer norm": {
+			          "smi peer middle": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.475
+			            "Weight": 0.468
 			          }
 			        },
 			        {
-			          "peer nucleus": {
+			          "smi peer center": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.475
+			            "Weight": 0.468
 			          }
 			        },
 			        {
@@ -21632,12 +21600,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peer median": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "rate peer median": {
 			            "State": "Generated",
 			            "Weight": 0.97
@@ -23036,12 +22998,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peer median": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "los peer norm": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -23122,23 +23078,23 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peer norm": {
+			          "los peer middle": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.475
+			            "Weight": 0.468
 			          }
 			        },
 			        {
-			          "peer nucleus": {
+			          "los peer center": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.475
+			            "Weight": 0.468
 			          }
 			        }
 			      ]
@@ -28186,6 +28142,1257 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "dim_payer.payer_sort": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Payer",
+			          "ConceptualProperty": "Payer_Sort"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "payer sort": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Payer_Sort": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "payer category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "payer genus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "payer species": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "payer variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "payer nature": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "payer kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "payer class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "payer type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "payer ilk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "payer order": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.payer_encounters": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "Payer Encounters"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "payer encounters": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "encounters": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "payer happenstance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "happenstance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "payer meeting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "meeting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.payer_share_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "Payer Share %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "payer share %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "payer share percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "payer share pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.risk_payer_share_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "Risk Payer Share %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "risk payer share %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "risk payer share percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "risk payer share pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.PeerGroup_risk_payer_share_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "PeerGroup Risk Payer Share Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PeerGroup risk payer share median": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "peergroup risk payer share norm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "peergroup risk payer share nucleus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "peergroup risk payer share midpoint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "peergroup risk payer share middle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "peergroup risk payer share center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "peergroup risk payer share medium": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "peergroup risk payer share mean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "peergroup risk payer share average": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "peergroup risk payer share par": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "peergroup risk payer share standard": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "Peer Median": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.is_above_PG_risk_payer_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "Is Above PG Risk Payer Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "is above PG risk payer median": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.facilities_above_own_PG_risk_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "Facilities Above Own PG Risk Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "facilities above own PG risk median": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.top_payer_share__facility": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "Top Payer Share % (Facility)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top payer share % (facility)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "top payer share %": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.payer_HHI_facility": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "Payer HHI (Facility)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "payer HHI (facility)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "payer HHI": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.risk_payer_share_median_all_facilities": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "Risk Payer Share Median (All Facilities)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "risk payer share median (all facilities)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "risk payer share median": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.HHI_category": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "HHI Category"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "HHI category": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "category": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "hhi classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "hhi class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "hhi group": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "hhi type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "hhi grouping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "hhi kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "grouping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.HHI_color": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "HHI Color"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "HHI color": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "hhi hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "hhi tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "hhi shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "hhi dye": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "hhi paint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "hhi pigment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "dye": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.is_high_HHI": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "Is High HHI"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "is high HHI": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "HHI": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "high HHI": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.facilities_high_HHI_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "Facilities High HHI Count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "facilities high HHI count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "HHI count": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "high HHI count": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "facility high hhi amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "high hhi amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hhi amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.HHI_median_all_facilities": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "HHI Median (All Facilities)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "HHI median (all facilities)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "HHI median": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.PeerGroup_HHI_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "PeerGroup HHI Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PeerGroup HHI median": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "peergroup hhi norm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "peergroup hhi nucleus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "peergroup hhi midpoint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "peergroup hhi middle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peergroup hhi center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peergroup hhi medium": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peergroup hhi mean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peergroup hhi average": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peergroup hhi par": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peergroup hhi standard": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.is_above_PG_HHI_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "Is Above PG HHI Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "is above PG HHI median": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.risk_payer_share_system_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "Risk Payer Share (System %)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "risk payer share (system %)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "risk payer share": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.commercial_share_system_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "Commercial Share (System %)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "commercial share (system %)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "commercial share": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.medicare_share_system_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "Medicare Share (System %)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medicare share (system %)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "medicare share": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.medicaid_share_system_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "Medicaid Share (System %)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medicaid share (system %)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "medicaid share": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.negative_margin_encounters": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "Negative Margin Encounters"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "negative margin encounters": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "encounters": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "margin encounters": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "negative margin happenstance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "margin happenstance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "negative margin meeting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "happenstance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "margin meeting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "meeting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.negative_margin_encounter_rate_system_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "Negative Margin Encounter Rate (System %)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "negative margin encounter rate (system %)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "negative margin encounter rate": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.top_payer_share_system_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "Top Payer Share (System %)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top payer share (system %)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "top payer share": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.top_payer_share__PeerGroup": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "Top Payer Share % (PeerGroup)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top payer share % (PeerGroup)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "top payer share %": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.payer_HHI_PeerGroup": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "Payer HHI (PeerGroup)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "payer HHI (PeerGroup)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "payer HHI": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.risk_payer_delta_vs_PG_median_pp": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "Risk Payer Delta vs PG Median (pp)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "risk payer delta vs PG median (pp)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "risk payer delta vs PG median": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -28660,6 +29867,2151 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_years_have_fact_KPI_dispositions"
+			        }
+			      ]
+			    },
+			    "vw_fact_KPI_severity_mix_by_severity_has_entity__PayerMix_risk_payer_delta_vs_PG_median_pp": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_Fact_KPI_SeverityMix_BySeverity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fact_KPI_severity_mix_by_severity": {
+			          "Target": {
+			            "Entity": "vw_fact_KPI_severity_mix_by_severity"
+			          }
+			        },
+			        "entity__PayerMix.risk_payer_delta_vs_PG_median_pp": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.risk_payer_delta_vs_PG_median_pp"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fact_KPI_severity_mix_by_severity"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.risk_payer_delta_vs_PG_median_pp"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fact_KPI_severity_mix_by_severity_have_risk_payer_delta_vs_PG_median_pp"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_entity__PayerMix_risk_payer_delta_vs_PG_median_pp": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "entity__PayerMix.risk_payer_delta_vs_PG_median_pp": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.risk_payer_delta_vs_PG_median_pp"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.risk_payer_delta_vs_PG_median_pp"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_risk_payer_delta_vs_PG_median_pp"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_entity__PayerMix_risk_payer_delta_vs_PG_median_pp": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "entity__PayerMix.risk_payer_delta_vs_PG_median_pp": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.risk_payer_delta_vs_PG_median_pp"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.risk_payer_delta_vs_PG_median_pp"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_risk_payer_delta_vs_PG_median_pp"
+			        }
+			      ]
+			    },
+			    "vw_fact_KPI_severity_mix_by_severity_has_entity__PayerMix_payer_HHI_PeerGroup": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_Fact_KPI_SeverityMix_BySeverity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fact_KPI_severity_mix_by_severity": {
+			          "Target": {
+			            "Entity": "vw_fact_KPI_severity_mix_by_severity"
+			          }
+			        },
+			        "entity__PayerMix.payer_HHI_PeerGroup": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.payer_HHI_PeerGroup"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fact_KPI_severity_mix_by_severity"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.payer_HHI_PeerGroup"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fact_KPI_severity_mix_by_severity_have_payer_HHI_PeerGroup"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_entity__PayerMix_payer_HHI_PeerGroup": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "entity__PayerMix.payer_HHI_PeerGroup": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.payer_HHI_PeerGroup"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.payer_HHI_PeerGroup"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_payer_HHI_PeerGroup"
+			        }
+			      ]
+			    },
+			    "dim_payer_has_entity__PayerMix_payer_HHI_PeerGroup": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Payer"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_payer": {
+			          "Target": {
+			            "Entity": "dim_payer"
+			          }
+			        },
+			        "entity__PayerMix.payer_HHI_PeerGroup": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.payer_HHI_PeerGroup"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_payer"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.payer_HHI_PeerGroup"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_payers_have_payer_HHI_PeerGroup"
+			        }
+			      ]
+			    },
+			    "vw_fact_KPI_severity_mix_by_severity_has_entity__PayerMix_top_payer_share__PeerGroup": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_Fact_KPI_SeverityMix_BySeverity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fact_KPI_severity_mix_by_severity": {
+			          "Target": {
+			            "Entity": "vw_fact_KPI_severity_mix_by_severity"
+			          }
+			        },
+			        "entity__PayerMix.top_payer_share__PeerGroup": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.top_payer_share__PeerGroup"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fact_KPI_severity_mix_by_severity"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.top_payer_share__PeerGroup"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fact_KPI_severity_mix_by_severity_have_top_payer_share__PeerGroup"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_entity__PayerMix_top_payer_share__PeerGroup": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "entity__PayerMix.top_payer_share__PeerGroup": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.top_payer_share__PeerGroup"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.top_payer_share__PeerGroup"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_top_payer_share__PeerGroup"
+			        }
+			      ]
+			    },
+			    "dim_payer_has_entity__PayerMix_top_payer_share__PeerGroup": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Payer"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_payer": {
+			          "Target": {
+			            "Entity": "dim_payer"
+			          }
+			        },
+			        "entity__PayerMix.top_payer_share__PeerGroup": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.top_payer_share__PeerGroup"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_payer"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.top_payer_share__PeerGroup"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_payers_have_top_payer_share__PeerGroup"
+			        }
+			      ]
+			    },
+			    "entity__PayerMix_has_top_payer_share_system_": {
+			      "Binding": {
+			        "ConceptualEntity": "_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__PayerMix": {
+			          "Target": {
+			            "Entity": "entity__PayerMix"
+			          }
+			        },
+			        "entity__PayerMix.top_payer_share_system_": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.top_payer_share_system_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__PayerMix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.top_payer_share_system_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_PayerMixes_have_top_payer_share_system_"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_entity__PayerMix_negative_margin_encounter_rate_system_": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "entity__PayerMix.negative_margin_encounter_rate_system_": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.negative_margin_encounter_rate_system_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.negative_margin_encounter_rate_system_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_negative_margin_encounter_rate_system_"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_entity__PayerMix_negative_margin_encounters": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "entity__PayerMix.negative_margin_encounters": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.negative_margin_encounters"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.negative_margin_encounters"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_negative_margin_encounters"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_entity__PayerMix_medicaid_share_system_": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "entity__PayerMix.medicaid_share_system_": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.medicaid_share_system_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.medicaid_share_system_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_medicaid_share_system_"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_entity__PayerMix_medicare_share_system_": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "entity__PayerMix.medicare_share_system_": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.medicare_share_system_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.medicare_share_system_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_medicare_share_system_"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_entity__PayerMix_commercial_share_system_": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "entity__PayerMix.commercial_share_system_": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.commercial_share_system_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.commercial_share_system_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_commercial_share_system_"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_entity__PayerMix_risk_payer_share_system_": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "entity__PayerMix.risk_payer_share_system_": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.risk_payer_share_system_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.risk_payer_share_system_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_risk_payer_share_system_"
+			        }
+			      ]
+			    },
+			    "vw_fact_KPI_severity_mix_by_severity_has_entity__PayerMix_is_above_PG_HHI_median": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_Fact_KPI_SeverityMix_BySeverity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fact_KPI_severity_mix_by_severity": {
+			          "Target": {
+			            "Entity": "vw_fact_KPI_severity_mix_by_severity"
+			          }
+			        },
+			        "entity__PayerMix.is_above_PG_HHI_median": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.is_above_PG_HHI_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fact_KPI_severity_mix_by_severity"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.is_above_PG_HHI_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fact_KPI_severity_mix_by_severity_have_is_above_PG_HHI_median"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_entity__PayerMix_is_above_PG_HHI_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "entity__PayerMix.is_above_PG_HHI_median": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.is_above_PG_HHI_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.is_above_PG_HHI_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_is_above_PG_HHI_median"
+			        }
+			      ]
+			    },
+			    "dim_payer_has_entity__PayerMix_is_above_PG_HHI_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Payer"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_payer": {
+			          "Target": {
+			            "Entity": "dim_payer"
+			          }
+			        },
+			        "entity__PayerMix.is_above_PG_HHI_median": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.is_above_PG_HHI_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_payer"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.is_above_PG_HHI_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_payers_have_is_above_PG_HHI_median"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_entity__PayerMix_is_above_PG_HHI_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "entity__PayerMix.is_above_PG_HHI_median": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.is_above_PG_HHI_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.is_above_PG_HHI_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_is_above_PG_HHI_median"
+			        }
+			      ]
+			    },
+			    "vw_fact_KPI_severity_mix_by_severity_has_entity__PayerMix_PeerGroup_HHI_median": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_Fact_KPI_SeverityMix_BySeverity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fact_KPI_severity_mix_by_severity": {
+			          "Target": {
+			            "Entity": "vw_fact_KPI_severity_mix_by_severity"
+			          }
+			        },
+			        "entity__PayerMix.PeerGroup_HHI_median": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.PeerGroup_HHI_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fact_KPI_severity_mix_by_severity"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.PeerGroup_HHI_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fact_KPI_severity_mix_by_severity_have_PeerGroup_HHI_median"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_entity__PayerMix_PeerGroup_HHI_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "entity__PayerMix.PeerGroup_HHI_median": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.PeerGroup_HHI_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.PeerGroup_HHI_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_PeerGroup_HHI_median"
+			        }
+			      ]
+			    },
+			    "dim_payer_has_entity__PayerMix_PeerGroup_HHI_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Payer"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_payer": {
+			          "Target": {
+			            "Entity": "dim_payer"
+			          }
+			        },
+			        "entity__PayerMix.PeerGroup_HHI_median": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.PeerGroup_HHI_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_payer"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.PeerGroup_HHI_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_payers_have_PeerGroup_HHI_median"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_entity__PayerMix_PeerGroup_HHI_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "entity__PayerMix.PeerGroup_HHI_median": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.PeerGroup_HHI_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.PeerGroup_HHI_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_PeerGroup_HHI_median"
+			        }
+			      ]
+			    },
+			    "vw_fact_KPI_severity_mix_by_severity_has_entity__PayerMix_HHI_median_all_facilities": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_Fact_KPI_SeverityMix_BySeverity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fact_KPI_severity_mix_by_severity": {
+			          "Target": {
+			            "Entity": "vw_fact_KPI_severity_mix_by_severity"
+			          }
+			        },
+			        "entity__PayerMix.HHI_median_all_facilities": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.HHI_median_all_facilities"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fact_KPI_severity_mix_by_severity"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.HHI_median_all_facilities"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fact_KPI_severity_mix_by_severity_have_HHI_median_all_facilities"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_entity__PayerMix_HHI_median_all_facilities": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "entity__PayerMix.HHI_median_all_facilities": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.HHI_median_all_facilities"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.HHI_median_all_facilities"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_HHI_median_all_facilities"
+			        }
+			      ]
+			    },
+			    "dim_payer_has_entity__PayerMix_HHI_median_all_facilities": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Payer"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_payer": {
+			          "Target": {
+			            "Entity": "dim_payer"
+			          }
+			        },
+			        "entity__PayerMix.HHI_median_all_facilities": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.HHI_median_all_facilities"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_payer"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.HHI_median_all_facilities"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_payers_have_HHI_median_all_facilities"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_entity__PayerMix_HHI_median_all_facilities": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "entity__PayerMix.HHI_median_all_facilities": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.HHI_median_all_facilities"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.HHI_median_all_facilities"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_HHI_median_all_facilities"
+			        }
+			      ]
+			    },
+			    "vw_fact_KPI_severity_mix_by_severity_has_entity__PayerMix_facilities_high_HHI_count": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_Fact_KPI_SeverityMix_BySeverity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fact_KPI_severity_mix_by_severity": {
+			          "Target": {
+			            "Entity": "vw_fact_KPI_severity_mix_by_severity"
+			          }
+			        },
+			        "entity__PayerMix.facilities_high_HHI_count": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.facilities_high_HHI_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fact_KPI_severity_mix_by_severity"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.facilities_high_HHI_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fact_KPI_severity_mix_by_severity_have_facilities_high_HHI_count"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_entity__PayerMix_facilities_high_HHI_count": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "entity__PayerMix.facilities_high_HHI_count": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.facilities_high_HHI_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.facilities_high_HHI_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_facilities_high_HHI_count"
+			        }
+			      ]
+			    },
+			    "dim_payer_has_entity__PayerMix_facilities_high_HHI_count": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Payer"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_payer": {
+			          "Target": {
+			            "Entity": "dim_payer"
+			          }
+			        },
+			        "entity__PayerMix.facilities_high_HHI_count": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.facilities_high_HHI_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_payer"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.facilities_high_HHI_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_payers_have_facilities_high_HHI_count"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_entity__PayerMix_facilities_high_HHI_count": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "entity__PayerMix.facilities_high_HHI_count": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.facilities_high_HHI_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.facilities_high_HHI_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_facilities_high_HHI_count"
+			        }
+			      ]
+			    },
+			    "vw_fact_KPI_severity_mix_by_severity_has_entity__PayerMix_is_high_HHI": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_Fact_KPI_SeverityMix_BySeverity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fact_KPI_severity_mix_by_severity": {
+			          "Target": {
+			            "Entity": "vw_fact_KPI_severity_mix_by_severity"
+			          }
+			        },
+			        "entity__PayerMix.is_high_HHI": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.is_high_HHI"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fact_KPI_severity_mix_by_severity"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.is_high_HHI"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fact_KPI_severity_mix_by_severity_have_is_high_HHI"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_entity__PayerMix_is_high_HHI": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "entity__PayerMix.is_high_HHI": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.is_high_HHI"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.is_high_HHI"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_is_high_HHI"
+			        }
+			      ]
+			    },
+			    "dim_payer_has_entity__PayerMix_is_high_HHI": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Payer"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_payer": {
+			          "Target": {
+			            "Entity": "dim_payer"
+			          }
+			        },
+			        "entity__PayerMix.is_high_HHI": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.is_high_HHI"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_payer"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.is_high_HHI"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_payers_have_is_high_HHI"
+			        }
+			      ]
+			    },
+			    "vw_fact_KPI_severity_mix_by_severity_has_entity__PayerMix_HHI_color": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_Fact_KPI_SeverityMix_BySeverity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fact_KPI_severity_mix_by_severity": {
+			          "Target": {
+			            "Entity": "vw_fact_KPI_severity_mix_by_severity"
+			          }
+			        },
+			        "entity__PayerMix.HHI_color": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.HHI_color"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fact_KPI_severity_mix_by_severity"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.HHI_color"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fact_KPI_severity_mix_by_severity_have_HHI_color"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_entity__PayerMix_HHI_color": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "entity__PayerMix.HHI_color": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.HHI_color"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.HHI_color"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_HHI_color"
+			        }
+			      ]
+			    },
+			    "dim_payer_has_entity__PayerMix_HHI_color": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Payer"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_payer": {
+			          "Target": {
+			            "Entity": "dim_payer"
+			          }
+			        },
+			        "entity__PayerMix.HHI_color": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.HHI_color"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_payer"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.HHI_color"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_payers_have_HHI_color"
+			        }
+			      ]
+			    },
+			    "vw_fact_KPI_severity_mix_by_severity_has_entity__PayerMix_HHI_category": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_Fact_KPI_SeverityMix_BySeverity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fact_KPI_severity_mix_by_severity": {
+			          "Target": {
+			            "Entity": "vw_fact_KPI_severity_mix_by_severity"
+			          }
+			        },
+			        "entity__PayerMix.HHI_category": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.HHI_category"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fact_KPI_severity_mix_by_severity"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.HHI_category"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fact_KPI_severity_mix_by_severity_have_HHI_category"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_entity__PayerMix_HHI_category": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "entity__PayerMix.HHI_category": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.HHI_category"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.HHI_category"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_HHI_category"
+			        }
+			      ]
+			    },
+			    "dim_payer_has_entity__PayerMix_HHI_category": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Payer"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_payer": {
+			          "Target": {
+			            "Entity": "dim_payer"
+			          }
+			        },
+			        "entity__PayerMix.HHI_category": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.HHI_category"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_payer"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.HHI_category"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_payers_have_HHI_category"
+			        }
+			      ]
+			    },
+			    "vw_fact_KPI_severity_mix_by_severity_has_entity__PayerMix_risk_payer_share_median_all_facilities": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_Fact_KPI_SeverityMix_BySeverity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fact_KPI_severity_mix_by_severity": {
+			          "Target": {
+			            "Entity": "vw_fact_KPI_severity_mix_by_severity"
+			          }
+			        },
+			        "entity__PayerMix.risk_payer_share_median_all_facilities": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.risk_payer_share_median_all_facilities"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fact_KPI_severity_mix_by_severity"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.risk_payer_share_median_all_facilities"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fact_KPI_severity_mix_by_severity_have_risk_payer_share_median_all_facilities"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_entity__PayerMix_risk_payer_share_median_all_facilities": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "entity__PayerMix.risk_payer_share_median_all_facilities": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.risk_payer_share_median_all_facilities"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.risk_payer_share_median_all_facilities"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_risk_payer_share_median_all_facilities"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_entity__PayerMix_risk_payer_share_median_all_facilities": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "entity__PayerMix.risk_payer_share_median_all_facilities": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.risk_payer_share_median_all_facilities"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.risk_payer_share_median_all_facilities"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_risk_payer_share_median_all_facilities"
+			        }
+			      ]
+			    },
+			    "vw_fact_KPI_severity_mix_by_severity_has_entity__PayerMix_payer_HHI_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_Fact_KPI_SeverityMix_BySeverity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fact_KPI_severity_mix_by_severity": {
+			          "Target": {
+			            "Entity": "vw_fact_KPI_severity_mix_by_severity"
+			          }
+			        },
+			        "entity__PayerMix.payer_HHI_facility": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.payer_HHI_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fact_KPI_severity_mix_by_severity"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.payer_HHI_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fact_KPI_severity_mix_by_severity_have_payer_HHI_facility"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_entity__PayerMix_payer_HHI_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "entity__PayerMix.payer_HHI_facility": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.payer_HHI_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.payer_HHI_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_payer_HHI_facility"
+			        }
+			      ]
+			    },
+			    "dim_payer_has_entity__PayerMix_payer_HHI_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Payer"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_payer": {
+			          "Target": {
+			            "Entity": "dim_payer"
+			          }
+			        },
+			        "entity__PayerMix.payer_HHI_facility": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.payer_HHI_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_payer"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.payer_HHI_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_payers_have_payer_HHI_facility"
+			        }
+			      ]
+			    },
+			    "vw_fact_KPI_severity_mix_by_severity_has_entity__PayerMix_top_payer_share__facility": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_Fact_KPI_SeverityMix_BySeverity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fact_KPI_severity_mix_by_severity": {
+			          "Target": {
+			            "Entity": "vw_fact_KPI_severity_mix_by_severity"
+			          }
+			        },
+			        "entity__PayerMix.top_payer_share__facility": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.top_payer_share__facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fact_KPI_severity_mix_by_severity"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.top_payer_share__facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fact_KPI_severity_mix_by_severity_have_top_payer_share__facility"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_entity__PayerMix_top_payer_share__facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "entity__PayerMix.top_payer_share__facility": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.top_payer_share__facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.top_payer_share__facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_top_payer_share__facility"
+			        }
+			      ]
+			    },
+			    "dim_payer_has_entity__PayerMix_top_payer_share__facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Payer"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_payer": {
+			          "Target": {
+			            "Entity": "dim_payer"
+			          }
+			        },
+			        "entity__PayerMix.top_payer_share__facility": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.top_payer_share__facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_payer"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.top_payer_share__facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_payers_have_top_payer_share__facility"
+			        }
+			      ]
+			    },
+			    "vw_fact_KPI_severity_mix_by_severity_has_entity__PayerMix_facilities_above_own_PG_risk_median": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_Fact_KPI_SeverityMix_BySeverity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fact_KPI_severity_mix_by_severity": {
+			          "Target": {
+			            "Entity": "vw_fact_KPI_severity_mix_by_severity"
+			          }
+			        },
+			        "entity__PayerMix.facilities_above_own_PG_risk_median": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.facilities_above_own_PG_risk_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fact_KPI_severity_mix_by_severity"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.facilities_above_own_PG_risk_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fact_KPI_severity_mix_by_severity_have_facilities_above_own_PG_risk_median"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_entity__PayerMix_facilities_above_own_PG_risk_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "entity__PayerMix.facilities_above_own_PG_risk_median": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.facilities_above_own_PG_risk_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.facilities_above_own_PG_risk_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_facilities_above_own_PG_risk_median"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_entity__PayerMix_facilities_above_own_PG_risk_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "entity__PayerMix.facilities_above_own_PG_risk_median": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.facilities_above_own_PG_risk_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.facilities_above_own_PG_risk_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_facilities_above_own_PG_risk_median"
+			        }
+			      ]
+			    },
+			    "vw_fact_KPI_severity_mix_by_severity_has_entity__PayerMix_is_above_PG_risk_payer_median": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_Fact_KPI_SeverityMix_BySeverity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fact_KPI_severity_mix_by_severity": {
+			          "Target": {
+			            "Entity": "vw_fact_KPI_severity_mix_by_severity"
+			          }
+			        },
+			        "entity__PayerMix.is_above_PG_risk_payer_median": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.is_above_PG_risk_payer_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fact_KPI_severity_mix_by_severity"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.is_above_PG_risk_payer_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fact_KPI_severity_mix_by_severity_have_is_above_PG_risk_payer_median"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_entity__PayerMix_is_above_PG_risk_payer_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "entity__PayerMix.is_above_PG_risk_payer_median": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.is_above_PG_risk_payer_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.is_above_PG_risk_payer_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_is_above_PG_risk_payer_median"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_entity__PayerMix_is_above_PG_risk_payer_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "entity__PayerMix.is_above_PG_risk_payer_median": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.is_above_PG_risk_payer_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.is_above_PG_risk_payer_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_is_above_PG_risk_payer_median"
+			        }
+			      ]
+			    },
+			    "vw_fact_KPI_severity_mix_by_severity_has_entity__PayerMix_PeerGroup_risk_payer_share_median": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_Fact_KPI_SeverityMix_BySeverity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fact_KPI_severity_mix_by_severity": {
+			          "Target": {
+			            "Entity": "vw_fact_KPI_severity_mix_by_severity"
+			          }
+			        },
+			        "entity__PayerMix.PeerGroup_risk_payer_share_median": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.PeerGroup_risk_payer_share_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fact_KPI_severity_mix_by_severity"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.PeerGroup_risk_payer_share_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fact_KPI_severity_mix_by_severity_have_PeerGroup_risk_payer_share_median"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_entity__PayerMix_PeerGroup_risk_payer_share_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "entity__PayerMix.PeerGroup_risk_payer_share_median": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.PeerGroup_risk_payer_share_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.PeerGroup_risk_payer_share_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_PeerGroup_risk_payer_share_median"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_entity__PayerMix_PeerGroup_risk_payer_share_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "entity__PayerMix.PeerGroup_risk_payer_share_median": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.PeerGroup_risk_payer_share_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.PeerGroup_risk_payer_share_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_PeerGroup_risk_payer_share_median"
+			        }
+			      ]
+			    },
+			    "vw_fact_KPI_severity_mix_by_severity_has_entity__PayerMix_risk_payer_share_": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_Fact_KPI_SeverityMix_BySeverity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fact_KPI_severity_mix_by_severity": {
+			          "Target": {
+			            "Entity": "vw_fact_KPI_severity_mix_by_severity"
+			          }
+			        },
+			        "entity__PayerMix.risk_payer_share_": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.risk_payer_share_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fact_KPI_severity_mix_by_severity"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.risk_payer_share_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fact_KPI_severity_mix_by_severity_have_risk_payer_share_"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_entity__PayerMix_risk_payer_share_": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "entity__PayerMix.risk_payer_share_": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.risk_payer_share_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.risk_payer_share_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_risk_payer_share_"
+			        }
+			      ]
+			    },
+			    "vw_fact_KPI_severity_mix_by_severity_has_entity__PayerMix_payer_share_": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_Fact_KPI_SeverityMix_BySeverity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fact_KPI_severity_mix_by_severity": {
+			          "Target": {
+			            "Entity": "vw_fact_KPI_severity_mix_by_severity"
+			          }
+			        },
+			        "entity__PayerMix.payer_share_": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.payer_share_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fact_KPI_severity_mix_by_severity"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.payer_share_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fact_KPI_severity_mix_by_severity_have_payer_share_"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_entity__PayerMix_payer_share_": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "entity__PayerMix.payer_share_": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.payer_share_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.payer_share_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_payer_share_"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_entity__PayerMix_payer_encounters": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "entity__PayerMix.payer_encounters": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.payer_encounters"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.payer_encounters"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_payer_encounters"
+			        }
+			      ]
+			    },
+			    "dim_payer_has_payer_sort": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Payer"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_payer": {
+			          "Target": {
+			            "Entity": "dim_payer"
+			          }
+			        },
+			        "dim_payer.payer_sort": {
+			          "Target": {
+			            "Entity": "dim_payer.payer_sort"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_payer"
+			            },
+			            "Object": {
+			              "Role": "dim_payer.payer_sort"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_payers_have_payer_sorts"
 			        }
 			      ]
 			    },

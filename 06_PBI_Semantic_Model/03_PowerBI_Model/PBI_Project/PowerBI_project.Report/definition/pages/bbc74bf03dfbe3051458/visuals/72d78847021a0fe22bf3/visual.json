@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "72d78847021a0fe22bf3",
   "position": {
-    "x": 660.77922077922074,
-    "y": 19.948051948051948,
+    "x": 646.44155844155841,
+    "y": 12.242389978651712,
     "z": 7000,
-    "height": 534.85714285714278,
-    "width": 603.42857142857144,
+    "height": 535.48051948051943,
+    "width": 632.72727272727275,
     "tabOrder": 2000
   },
   "visual": {
@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": false
+              "active": true
             }
           ]
         },
@@ -65,6 +65,66 @@
             }
           ]
         },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_PayerMix"
+                    }
+                  },
+                  "Property": "Risk Payer Share Median (All Facilities)"
+                }
+              },
+              "queryRef": "_PayerMix.Risk Payer Share Median (All Facilities)",
+              "nativeQueryRef": "Risk Payer Share Median (All Facilities)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_PayerMix"
+                    }
+                  },
+                  "Property": "Risk Payer Delta vs PG Median (pp)"
+                }
+              },
+              "queryRef": "_PayerMix.Risk Payer Delta vs PG Median (pp)",
+              "nativeQueryRef": "Risk Payer Delta vs PG Median (pp)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_PayerMix"
+                    }
+                  },
+                  "Property": "Total Payer Encounters"
+                }
+              },
+              "queryRef": "_PayerMix.Total Payer Encounters",
+              "nativeQueryRef": "Total Payer Encounters"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Financial_Basic"
+                    }
+                  },
+                  "Property": "Neg Margin Rate"
+                }
+              },
+              "queryRef": "_Financial_Basic.Neg Margin Rate",
+              "nativeQueryRef": "Neg Margin Rate"
+            }
+          ]
+        },
         "Y": {
           "projections": [
             {
@@ -72,14 +132,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_KPI_Measures"
+                      "Entity": "_PayerMix"
                     }
                   },
-                  "Property": "Unplanned Admission Rate"
+                  "Property": "Risk Payer Share %"
                 }
               },
-              "queryRef": "_KPI_Measures.Unplanned Admission Rate",
-              "nativeQueryRef": "Unplanned Admission Rate"
+              "queryRef": "_PayerMix.Risk Payer Share %",
+              "nativeQueryRef": "Risk Payer Share %"
             }
           ]
         },
@@ -90,14 +150,15 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Dim_ClinicalClass"
+                      "Entity": "_PayerMix"
                     }
                   },
-                  "Property": "PeerGroup UA Rate Median"
+                  "Property": "PeerGroup Risk Payer Share Median"
                 }
               },
-              "queryRef": "Dim_ClinicalClass.PeerGroup Unplanned Rate Median",
-              "nativeQueryRef": "PeerGroup UA Rate Median"
+              "queryRef": "_PayerMix.PeerGroup Risk Payer Share Median",
+              "nativeQueryRef": "Peer Median",
+              "displayName": "Peer Median"
             }
           ]
         }
@@ -109,10 +170,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Dim_ClinicalClass"
+                    "Entity": "_PayerMix"
                   }
                 },
-                "Property": "PeerGroup UA Rate Median"
+                "Property": "PeerGroup Risk Payer Share Median"
               }
             },
             "direction": "Descending"
@@ -240,6 +301,48 @@
               }
             },
             "secShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "end": {
+              "expr": {
+                "Literal": {
+                  "Value": "0.6D"
+                }
+              }
+            },
+            "secEnd": {
+              "expr": {
+                "Literal": {
+                  "Value": "0.6D"
+                }
+              }
+            },
+            "start": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "secStart": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "alignZeros": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "secShowAxisTitle": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -396,10 +499,10 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "_Unplanned"
+                                      "Entity": "_PayerMix"
                                     }
                                   },
-                                  "Property": "Is Above PG Unplanned Rate Median"
+                                  "Property": "Is Above PG Risk Payer Median"
                                 }
                               },
                               "Right": {
@@ -423,10 +526,10 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "_Unplanned"
+                                      "Entity": "_PayerMix"
                                     }
                                   },
-                                  "Property": "Is Above PG Unplanned Rate Median"
+                                  "Property": "Is Above PG Risk Payer Median"
                                 }
                               },
                               "Right": {
@@ -461,21 +564,14 @@
         },
         {
           "properties": {
-            "showSeries": {
+            "enableValueDataLabel": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
             },
-            "labelPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Under'"
-                }
-              }
-            },
-            "enableDetailDataLabel": {
+            "enableTitleDataLabel": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -484,7 +580,7 @@
             }
           },
           "selector": {
-            "metadata": "Dim_ClinicalClass.PeerGroup Unplanned Rate Median"
+            "metadata": "_PayerMix.PeerGroup Risk Payer Share Median"
           }
         }
       ],
@@ -648,7 +744,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -667,6 +763,45 @@
               }
             }
           }
+        },
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            },
+            "seriesColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#744EC2'"
+                    }
+                  }
+                }
+              }
+            },
+            "seriesWordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_PayerMix.PeerGroup Risk Payer Share Median"
+          }
         }
       ]
     },
@@ -677,7 +812,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Unplanned Intake vs Peer Median'"
+                  "Value": "'Risk Payer Share vs Peer Median'"
                 }
               }
             },
@@ -729,7 +864,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Directional benchmark, not a performance threshold'"
+                  "Value": "'Directional benchmark within peer groups. Median line is a reference, not a threshold. '"
                 }
               }
             },
@@ -882,6 +1017,5 @@
       }
     ],
     "filterSortOrder": "Custom"
-  },
-  "isHidden": true
+  }
 }

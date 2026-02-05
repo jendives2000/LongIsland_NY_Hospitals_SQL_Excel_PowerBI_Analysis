@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "725e5e9104aa5ad76daa",
+  "name": "78e00a5d47f1f89505a4",
   "position": {
-    "x": 454.44155844155841,
-    "y": 690.70129870129858,
-    "z": 3000,
-    "height": 29.298701298701296,
-    "width": 158.96103896103895,
-    "tabOrder": 6000
+    "x": 192,
+    "y": 51.4050676903209,
+    "z": 9500,
+    "height": 32.415584415584412,
+    "width": 248.72727272727272,
+    "tabOrder": 19000
   },
   "visual": {
     "visualType": "actionButton",
@@ -56,7 +56,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Diagnostic Preview'"
+                  "Value": "'Payer Risk Exposure vs Volume'"
                 }
               }
             },
@@ -71,9 +71,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.6
+                    "Literal": {
+                      "Value": "'#9370DD'"
                     }
                   }
                 }
@@ -89,7 +88,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "12D"
                 }
               }
             },
@@ -110,7 +109,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Click to Read it'"
+                  "Value": "'Click to Visualize it'"
                 }
               }
             },
@@ -136,7 +135,7 @@
             "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -150,7 +149,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "11D"
                 }
               }
             }
@@ -172,13 +171,6 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "''"
                 }
               }
             }
@@ -194,7 +186,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -248,87 +240,6 @@
           },
           "selector": {
             "id": "default"
-          }
-        }
-      ],
-      "shape": [
-        {
-          "properties": {
-            "roundEdge": {
-              "expr": {
-                "Literal": {
-                  "Value": "25L"
-                }
-              }
-            },
-            "tileShape": {
-              "expr": {
-                "Literal": {
-                  "Value": "'tabRoundTopCorners'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        }
-      ],
-      "fill": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        },
-        {
-          "properties": {
-            "fillColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        },
-        {
-          "properties": {
-            "fillColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "selected"
           }
         }
       ]
@@ -354,14 +265,14 @@
             "tooltip": {
               "expr": {
                 "Literal": {
-                  "Value": "'Hospitals with an SMI over their own peer groups SMI median.'"
+                  "Value": "'Severity of Illness reflects how clinically complex and physiologically unstable patients are at admission.  It is not a measure of care quality.'"
                 }
               }
             },
             "bookmark": {
               "expr": {
                 "Literal": {
-                  "Value": "'ae49ba1891b3206ee64a'"
+                  "Value": "'7a1dcf2f092b39ca8fcf'"
                 }
               }
             }
@@ -374,39 +285,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Butt Select Diagnostic Preview'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "background": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
+                  "Value": "'Butt Viz 4'"
                 }
               }
             }
@@ -416,5 +295,6 @@
     },
     "drillFilterOtherVisuals": true
   },
+  "parentGroupName": "409ae89dcff4e930ba8e",
   "howCreated": "InsertVisualButton"
 }

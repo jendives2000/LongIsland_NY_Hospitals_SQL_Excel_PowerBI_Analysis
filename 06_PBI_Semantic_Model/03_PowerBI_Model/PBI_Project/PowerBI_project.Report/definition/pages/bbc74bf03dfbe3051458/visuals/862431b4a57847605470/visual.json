@@ -2,15 +2,15 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "862431b4a57847605470",
   "position": {
-    "x": 660.30769230769226,
-    "y": 17.251118476425713,
+    "x": 660.15584415584408,
+    "y": 16.207792207792217,
     "z": 9000,
-    "height": 561.23076923076928,
-    "width": 608,
+    "height": 541.71428571428567,
+    "width": 608.41558441558436,
     "tabOrder": 4000
   },
   "visual": {
-    "visualType": "clusteredBarChart",
+    "visualType": "hundredPercentStackedBarChart",
     "query": {
       "queryState": {
         "Category": {
@@ -29,21 +29,24 @@
               "queryRef": "Dim_PeerGroup.PeerGroup_Name",
               "nativeQueryRef": "PeerGroup_Name",
               "active": true
-            },
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Dim_Facility"
+                      "Entity": "Dim_Payer"
                     }
                   },
-                  "Property": "Facility_Name"
+                  "Property": "Payment_Typology_Group"
                 }
               },
-              "queryRef": "Dim_Facility.Facility_Name",
-              "nativeQueryRef": "Facility_Name",
-              "active": false
+              "queryRef": "Dim_Payer.Payment_Typology_Group",
+              "nativeQueryRef": "Payment_Typology_Group"
             }
           ]
         },
@@ -51,22 +54,87 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Fact_KPI_Unplanned"
-                        }
-                      },
-                      "Property": "Unplanned_Encounter_Count"
+                    "SourceRef": {
+                      "Entity": "_PayerMix"
                     }
                   },
-                  "Function": 0
+                  "Property": "Total Payer Encounters"
                 }
               },
-              "queryRef": "Sum(Fact_KPI_Unplanned.Unplanned_Encounter_Count)",
-              "nativeQueryRef": "Sum of Unplanned_Encounter_Count"
+              "queryRef": "_PayerMix.Total Payer Encounters",
+              "nativeQueryRef": "Total Payer Encounters"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_PayerMix"
+                    }
+                  },
+                  "Property": "Payer Total Charges"
+                }
+              },
+              "queryRef": "_PayerMix.Payer Total Charges",
+              "nativeQueryRef": "Payer Total Charges"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_PayerMix"
+                    }
+                  },
+                  "Property": "Risk Payer Share %"
+                }
+              },
+              "queryRef": "_PayerMix.Risk Payer Share %",
+              "nativeQueryRef": "Risk Payer Share %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_PayerMix"
+                    }
+                  },
+                  "Property": "Top Payer Share % (PeerGroup)"
+                }
+              },
+              "queryRef": "_PayerMix.Top Payer Share % (PeerGroup)",
+              "nativeQueryRef": "Top Payer Share % (PeerGroup)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Financial_Basic"
+                    }
+                  },
+                  "Property": "Neg Margin Rate"
+                }
+              },
+              "queryRef": "_Financial_Basic.Neg Margin Rate",
+              "nativeQueryRef": "Neg Margin Rate"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_PayerMix"
+                    }
+                  },
+                  "Property": "Payer HHI (PeerGroup)"
+                }
+              },
+              "queryRef": "_PayerMix.Payer HHI (PeerGroup)",
+              "nativeQueryRef": "Payer HHI (PeerGroup)"
             }
           ]
         },
@@ -77,14 +145,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_KPI_Measures"
+                      "Entity": "_PayerMix"
                     }
                   },
-                  "Property": "Unplanned Admission Rate"
+                  "Property": "Payer Share %"
                 }
               },
-              "queryRef": "_KPI_Measures.Unplanned Admission Rate",
-              "nativeQueryRef": "Unplanned Admission Rate"
+              "queryRef": "_PayerMix.Payer Share %",
+              "nativeQueryRef": "Payer Share %"
             }
           ]
         }
@@ -96,10 +164,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "_KPI_Measures"
+                    "Entity": "_PayerMix"
                   }
                 },
-                "Property": "Unplanned Admission Rate"
+                "Property": "Top Payer Share % (PeerGroup)"
               }
             },
             "direction": "Descending"
@@ -161,7 +229,40 @@
             "labelPosition": {
               "expr": {
                 "Literal": {
-                  "Value": "'InsideEnd'"
+                  "Value": "'InsideCenter'"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "41D"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
                 }
               }
             }
@@ -449,6 +550,212 @@
               }
             ]
           }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Dim_Payer"
+                          }
+                        },
+                        "Property": "Payment_Typology_Group"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Medicare'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#A16868'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Dim_Payer"
+                          }
+                        },
+                        "Property": "Payment_Typology_Group"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Medicaid'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#B04F73'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Dim_Payer"
+                          }
+                        },
+                        "Property": "Payment_Typology_Group"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Self-Pay'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#385E80'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Dim_Payer"
+                          }
+                        },
+                        "Property": "Payment_Typology_Group"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Commercial'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3B7B4C'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Dim_Payer"
+                          }
+                        },
+                        "Property": "Payment_Typology_Group"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Other'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
         }
       ],
       "legend": [
@@ -464,7 +771,7 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'Top'"
+                  "Value": "'TopCenter'"
                 }
               }
             }
@@ -542,7 +849,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Unplanned Admission Share by Peer Group'"
+                  "Value": "'Payer Mix Composition across Peer Groups'"
                 }
               }
             },
@@ -561,7 +868,7 @@
             "alignment": {
               "expr": {
                 "Literal": {
-                  "Value": "'left'"
+                  "Value": "'center'"
                 }
               }
             },
@@ -588,7 +895,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Emergency & urgent admissions as % of inpatient volume'"
+                  "Value": "'Reimbursement context lens, not performance'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
                 }
               }
             }
@@ -598,5 +912,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "409ae89dcff4e930ba8e"
+  "parentGroupName": "409ae89dcff4e930ba8e",
+  "isHidden": true
 }

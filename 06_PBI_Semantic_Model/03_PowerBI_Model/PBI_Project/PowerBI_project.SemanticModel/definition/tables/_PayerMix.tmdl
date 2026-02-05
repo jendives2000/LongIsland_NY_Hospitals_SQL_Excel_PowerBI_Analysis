@@ -2,7 +2,7 @@ table _PayerMix
 	lineageTag: 5c677962-0278-49e5-a97e-cdd8deedd191
 
 	measure 'Total Payer Encounters' = [PayerMix Total Encounters]
-		formatString: 0
+		formatString: #,0
 		lineageTag: bd26007e-f0e1-4313-9d46-716667c72c8a
 
 	measure 'Payer Encounter Share' = ```
@@ -87,11 +87,13 @@ table _PayerMix
 	/// Encounters for selected payer(s)
 	measure 'Payer Encounters' = SUM ( Fact_KPI_PayerMix[Encounter_Count] )
 		displayFolder: Base
+		lineageTag: 7999df1a-33e7-4f12-8c33-d7041729c890
 
 	/// Percentage share of encounters for selected payer(s)
 	measure 'Payer Share %' = DIVIDE ( [Payer Encounters], CALCULATE ( [Total Encounters], REMOVEFILTERS ( Dim_Payer ) ) )
 		formatString: 0.0%
 		displayFolder: Base
+		lineageTag: 24e07d1f-bdc6-4593-97a9-88b07efa1dac
 
 	/// Combined share of Medicaid and Self-Pay encounters representing reimbursement risk
 	measure 'Risk Payer Share %' =
@@ -103,6 +105,7 @@ table _PayerMix
 			)
 		formatString: 0.0%
 		displayFolder: Risk Payer
+		lineageTag: da259af1-b77b-4b48-a1c1-01317822c583
 
 	/// Median risk payer share within the current peer group
 	measure 'PeerGroup Risk Payer Share Median' =
@@ -118,6 +121,7 @@ table _PayerMix
 			)
 		formatString: 0.0%
 		displayFolder: Risk Payer
+		lineageTag: 281a9f72-b330-4aad-a488-061903855b47
 
 	/// Flag indicating if facility is above peer group risk payer median (1=above, 0=at or below)
 	measure 'Is Above PG Risk Payer Median' =
@@ -126,6 +130,7 @@ table _PayerMix
 			RETURN IF ( NOT ISBLANK(v) && v > m, 1, 0 )
 		formatString: 0
 		displayFolder: Helper
+		lineageTag: 164500c9-351b-4de2-a106-1bbeb57affba
 
 	/// Count of facilities above their own peer group risk payer median
 	measure 'Facilities Above Own PG Risk Median' =
@@ -137,6 +142,7 @@ table _PayerMix
 			)
 		formatString: 0
 		displayFolder: Helper
+		lineageTag: e44731de-8f8b-4171-b62a-44718460a9da
 
 	/// Highest single payer share at facility level
 	measure 'Top Payer Share % (Facility)' =
@@ -146,6 +152,7 @@ table _PayerMix
 			)
 		formatString: 0.0%
 		displayFolder: Concentration
+		lineageTag: 62cf6b23-8a41-4e2b-8da4-975ba69557d1
 
 	/// Herfindahl-Hirschman Index measuring payer concentration (0-1 scale, higher = more concentrated)
 	measure 'Payer HHI (Facility)' =
@@ -156,6 +163,7 @@ table _PayerMix
 			)
 		formatString: 0.0000
 		displayFolder: Concentration
+		lineageTag: 954993f7-315e-4aed-b67e-d7f7cc715a44
 
 	/// System-wide median of risk payer share across all facilities
 	measure 'Risk Payer Share Median (All Facilities)' =
@@ -165,6 +173,7 @@ table _PayerMix
 			)
 		formatString: 0.0%
 		displayFolder: Risk Payer
+		lineageTag: f167f2b0-47b6-4c4a-adce-df9339ef7237
 
 	/// Payer concentration category: Low (<0.15), Moderate (0.15-0.25), High (>0.25)
 	measure 'HHI Category' =
@@ -178,6 +187,7 @@ table _PayerMix
 			    "High"
 			)
 		displayFolder: Concentration
+		lineageTag: 0af44c60-e1d5-4684-a9d7-d04ff47c5aa5
 
 	/// Conditional formatting color for HHI: Green (Low), Orange (Moderate), Red (High)
 	measure 'HHI Color' =
@@ -191,6 +201,7 @@ table _PayerMix
 			    "#F44336"
 			)
 		displayFolder: Helper
+		lineageTag: df8c365f-4102-488d-9be0-68d6b5b4750a
 
 	/// Flag indicating high payer concentration (1=high, 0=not high)
 	measure 'Is High HHI' =
@@ -199,6 +210,7 @@ table _PayerMix
 			IF( NOT ISBLANK(hhi) && hhi > 0.25, 1, 0 )
 		formatString: 0
 		displayFolder: Helper
+		lineageTag: 22daa17e-9ed9-46ee-a526-59b9c9c8ca94
 
 	/// Count of facilities with high payer concentration (HHI > 0.25)
 	measure 'Facilities High HHI Count' =
@@ -208,6 +220,7 @@ table _PayerMix
 			)
 		formatString: 0
 		displayFolder: Concentration
+		lineageTag: ce6c72e8-90de-4792-b12e-eb5c602d64b7
 
 	/// System-wide median HHI across all facilities
 	measure 'HHI Median (All Facilities)' =
@@ -217,6 +230,7 @@ table _PayerMix
 			)
 		formatString: 0.0000
 		displayFolder: Concentration
+		lineageTag: 78565483-ba9a-470c-ac04-ac295e001dba
 
 	/// Median HHI within the current peer group
 	measure 'PeerGroup HHI Median' =
@@ -232,6 +246,7 @@ table _PayerMix
 			)
 		formatString: 0.0000
 		displayFolder: Concentration
+		lineageTag: 1a4fd5ff-efa7-4604-bdf6-44850fb4de7a
 
 	/// Flag indicating if facility HHI is above peer group median (1=above, 0=at or below)
 	measure 'Is Above PG HHI Median' =
@@ -240,6 +255,7 @@ table _PayerMix
 			RETURN IF( NOT ISBLANK(v) && v > m, 1, 0 )
 		formatString: 0
 		displayFolder: Helper
+		lineageTag: a6576c6e-19d9-49a8-9911-71ba570a11e0
 
 	/// System-wide combined share of Medicaid and Self-Pay encounters, indicating overall reimbursement risk exposure
 	measure 'Risk Payer Share (System %)' = ```
@@ -261,6 +277,7 @@ table _PayerMix
 			```
 		formatString: 0.0%
 		displayFolder: System Metrics
+		lineageTag: 0e9fe8d7-50be-4112-9353-4c063b166158
 
 	/// System-wide share of Commercial/private insurance encounters, typically the highest-margin payer category
 	measure 'Commercial Share (System %)' = ```
@@ -281,6 +298,7 @@ table _PayerMix
 			```
 		formatString: 0.0%
 		displayFolder: System Metrics
+		lineageTag: ecae3392-8712-4860-a309-a1d4c77c31fd
 
 	/// System-wide share of Medicare encounters, reflecting federal program dependency and aging population served
 	measure 'Medicare Share (System %)' = ```
@@ -301,6 +319,7 @@ table _PayerMix
 			```
 		formatString: 0.0%
 		displayFolder: System Metrics
+		lineageTag: a0808c07-ead0-47df-993c-e956b1d0037d
 
 	/// System-wide share of Medicaid encounters, indicating safety-net role and exposure to lowest reimbursement rates
 	measure 'Medicaid Share (System %)' = ```
@@ -321,11 +340,13 @@ table _PayerMix
 			```
 		formatString: 0.0%
 		displayFolder: System Metrics
+		lineageTag: 2878b799-4562-4c8a-a429-834b2fd0f24b
 
 	/// Count of encounters where costs exceeded revenue
 	measure 'Negative Margin Encounters' = SUM( Fact_KPI_PayerMix[Negative_Margin_Encounter_Count] )
 		formatString: #,0
 		displayFolder: Financial Risk
+		lineageTag: 18c84466-d69f-4f59-be02-646c7a494961
 
 	/// System-wide percentage of encounters with negative margin (costs > revenue), indicating direct financial stress from payer mix
 	measure 'Negative Margin Encounter Rate (System %)' = ```
@@ -346,6 +367,7 @@ table _PayerMix
 			```
 		formatString: 0.0%
 		displayFolder: System Metrics
+		lineageTag: 2ccbe73d-9b19-4515-a133-f5bbf7c72de5
 
 	/// System-wide top payer category with its share percentage, indicating payer concentration and negotiating dependency
 	measure 'Top Payer Share (System %)' = ```
@@ -373,6 +395,42 @@ table _PayerMix
 			    TopPayerName & " (" & FORMAT( TopPayerShare, "0.0%" ) & ")"
 			```
 		displayFolder: System Metrics
+		lineageTag: ff51a15d-af6e-4497-9f77-32079f7bddfc
+
+	/// Highest single payer share at peer-group level for tooltip display
+	measure 'Top Payer Share % (PeerGroup)' =
+			MAXX(
+			    VALUES( Dim_Payer[Payment_Typology_Group] ),
+			    [Payer Share %]
+			)
+		formatString: 0.0%
+		displayFolder: Concentration
+		lineageTag: d7acec8b-1c0c-4ecf-b020-f2cf2c6a77c9
+
+	/// Herfindahl-Hirschman Index at peer-group level measuring payer concentration
+	measure 'Payer HHI (PeerGroup)' =
+			SUMX(
+			    VALUES( Dim_Payer[Payment_Typology_Group] ),
+			    VAR s = [Payer Share %]
+			    RETURN s * s
+			)
+		formatString: 0.00
+		displayFolder: Concentration
+		lineageTag: 2c0462c7-035a-41ef-94e9-1d40d6717735
+
+	/// Percentage point difference between facility's risk payer share and its peer group median. Positive = higher risk exposure than peers.
+	measure 'Risk Payer Delta vs PG Median (pp)' =
+			VAR FacilityShare = [Risk Payer Share %]
+			VAR PGMedian = [PeerGroup Risk Payer Share Median]
+			RETURN
+			    IF(
+			        NOT ISBLANK(FacilityShare) && NOT ISBLANK(PGMedian),
+			        (FacilityShare - PGMedian) * 100,
+			        BLANK()
+			    )
+		formatString: +#,0.0 pp;-#,0.0 pp;0.0 pp
+		displayFolder: Risk Payer
+		lineageTag: 16bcc6d2-234f-439d-982e-126aa39c8ca0
 
 	column Column
 		isHidden
