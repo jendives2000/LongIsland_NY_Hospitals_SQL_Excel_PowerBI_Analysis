@@ -84,6 +84,296 @@ table _PayerMix
 		formatString: 0
 		lineageTag: d2e91c04-48ff-47b8-8332-acd8ad0346fb
 
+	/// Encounters for selected payer(s)
+	measure 'Payer Encounters' = SUM ( Fact_KPI_PayerMix[Encounter_Count] )
+		displayFolder: Base
+
+	/// Percentage share of encounters for selected payer(s)
+	measure 'Payer Share %' = DIVIDE ( [Payer Encounters], CALCULATE ( [Total Encounters], REMOVEFILTERS ( Dim_Payer ) ) )
+		formatString: 0.0%
+		displayFolder: Base
+
+	/// Combined share of Medicaid and Self-Pay encounters representing reimbursement risk
+	measure 'Risk Payer Share %' =
+			VAR RiskSet = { "Medicaid", "Self-Pay" }
+			RETURN
+			CALCULATE (
+			    [Payer Share %],
+			    Dim_Payer[Payment_Typology_Group] IN RiskSet
+			)
+		formatString: 0.0%
+		displayFolder: Risk Payer
+
+	/// Median risk payer share within the current peer group
+	measure 'PeerGroup Risk Payer Share Median' =
+			VAR CurrentPG = SELECTEDVALUE ( Dim_Facility[PeerGroup_Name] )
+			RETURN
+			CALCULATE (
+			    MEDIANX (
+			        VALUES ( Dim_Facility[Facility_Key] ),
+			        CALCULATE ( [Risk Payer Share %], REMOVEFILTERS ( Dim_Payer ) )
+			    ),
+			    REMOVEFILTERS ( Dim_Facility ),
+			    Dim_Facility[PeerGroup_Name] = CurrentPG
+			)
+		formatString: 0.0%
+		displayFolder: Risk Payer
+
+	/// Flag indicating if facility is above peer group risk payer median (1=above, 0=at or below)
+	measure 'Is Above PG Risk Payer Median' =
+			VAR v = [Risk Payer Share %]
+			VAR m = [PeerGroup Risk Payer Share Median]
+			RETURN IF ( NOT ISBLANK(v) && v > m, 1, 0 )
+		formatString: 0
+		displayFolder: Helper
+
+	/// Count of facilities above their own peer group risk payer median
+	measure 'Facilities Above Own PG Risk Median' =
+			SUMX (
+			    VALUES ( Dim_Facility[Facility_Key] ),
+			    VAR v = CALCULATE ( [Risk Payer Share %] )
+			    VAR m = CALCULATE ( [PeerGroup Risk Payer Share Median] )
+			    RETURN IF ( NOT ISBLANK(v) && v > m, 1, 0 )
+			)
+		formatString: 0
+		displayFolder: Helper
+
+	/// Highest single payer share at facility level
+	measure 'Top Payer Share % (Facility)' =
+			MAXX (
+			    VALUES ( Dim_Payer[Payer_Key] ),
+			    CALCULATE ( [Payer Share %] )
+			)
+		formatString: 0.0%
+		displayFolder: Concentration
+
+	/// Herfindahl-Hirschman Index measuring payer concentration (0-1 scale, higher = more concentrated)
+	measure 'Payer HHI (Facility)' =
+			SUMX (
+			    VALUES ( Dim_Payer[Payer_Key] ),
+			    VAR s = CALCULATE ( [Payer Share %] )
+			    RETURN s * s
+			)
+		formatString: 0.0000
+		displayFolder: Concentration
+
+	/// System-wide median of risk payer share across all facilities
+	measure 'Risk Payer Share Median (All Facilities)' =
+			MEDIANX (
+			    VALUES ( Dim_Facility[Facility_Key] ),
+			    CALCULATE ( [Risk Payer Share %], REMOVEFILTERS ( Dim_Payer ) )
+			)
+		formatString: 0.0%
+		displayFolder: Risk Payer
+
+	/// Payer concentration category: Low (<0.15), Moderate (0.15-0.25), High (>0.25)
+	measure 'HHI Category' =
+			VAR hhi = [Payer HHI (Facility)]
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(hhi), BLANK(),
+			    hhi < 0.15, "Low",
+			    hhi <= 0.25, "Moderate",
+			    "High"
+			)
+		displayFolder: Concentration
+
+	/// Conditional formatting color for HHI: Green (Low), Orange (Moderate), Red (High)
+	measure 'HHI Color' =
+			VAR hhi = [Payer HHI (Facility)]
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(hhi), BLANK(),
+			    hhi < 0.15, "#4CAF50",
+			    hhi <= 0.25, "#FF9800",
+			    "#F44336"
+			)
+		displayFolder: Helper
+
+	/// Flag indicating high payer concentration (1=high, 0=not high)
+	measure 'Is High HHI' =
+			VAR hhi = [Payer HHI (Facility)]
+			RETURN
+			IF( NOT ISBLANK(hhi) && hhi > 0.25, 1, 0 )
+		formatString: 0
+		displayFolder: Helper
+
+	/// Count of facilities with high payer concentration (HHI > 0.25)
+	measure 'Facilities High HHI Count' =
+			SUMX(
+			    VALUES( Dim_Facility[Facility_Key] ),
+			    [Is High HHI]
+			)
+		formatString: 0
+		displayFolder: Concentration
+
+	/// System-wide median HHI across all facilities
+	measure 'HHI Median (All Facilities)' =
+			MEDIANX(
+			    VALUES( Dim_Facility[Facility_Key] ),
+			    [Payer HHI (Facility)]
+			)
+		formatString: 0.0000
+		displayFolder: Concentration
+
+	/// Median HHI within the current peer group
+	measure 'PeerGroup HHI Median' =
+			VAR CurrentPG = SELECTEDVALUE( Dim_Facility[PeerGroup_Name] )
+			RETURN
+			CALCULATE(
+			    MEDIANX(
+			        VALUES( Dim_Facility[Facility_Key] ),
+			        [Payer HHI (Facility)]
+			    ),
+			    REMOVEFILTERS( Dim_Facility ),
+			    Dim_Facility[PeerGroup_Name] = CurrentPG
+			)
+		formatString: 0.0000
+		displayFolder: Concentration
+
+	/// Flag indicating if facility HHI is above peer group median (1=above, 0=at or below)
+	measure 'Is Above PG HHI Median' =
+			VAR v = [Payer HHI (Facility)]
+			VAR m = [PeerGroup HHI Median]
+			RETURN IF( NOT ISBLANK(v) && v > m, 1, 0 )
+		formatString: 0
+		displayFolder: Helper
+
+	/// System-wide combined share of Medicaid and Self-Pay encounters, indicating overall reimbursement risk exposure
+	measure 'Risk Payer Share (System %)' = ```
+			VAR RiskSet = { "Medicaid", "Self-Pay" }
+			VAR RiskEncounters = 
+			    CALCULATE(
+			        [Payer Encounters],
+			        Dim_Payer[Payment_Typology_Group] IN RiskSet,
+			        REMOVEFILTERS( Dim_Facility )
+			    )
+			VAR TotalEncounters = 
+			    CALCULATE(
+			        [Payer Encounters],
+			        REMOVEFILTERS( Dim_Payer ),
+			        REMOVEFILTERS( Dim_Facility )
+			    )
+			RETURN
+			    DIVIDE( RiskEncounters, TotalEncounters )
+			```
+		formatString: 0.0%
+		displayFolder: System Metrics
+
+	/// System-wide share of Commercial/private insurance encounters, typically the highest-margin payer category
+	measure 'Commercial Share (System %)' = ```
+			VAR CommercialEncounters = 
+			    CALCULATE(
+			        [Payer Encounters],
+			        Dim_Payer[Payment_Typology_Group] = "Commercial",
+			        REMOVEFILTERS( Dim_Facility )
+			    )
+			VAR TotalEncounters = 
+			    CALCULATE(
+			        [Payer Encounters],
+			        REMOVEFILTERS( Dim_Payer ),
+			        REMOVEFILTERS( Dim_Facility )
+			    )
+			RETURN
+			    DIVIDE( CommercialEncounters, TotalEncounters )
+			```
+		formatString: 0.0%
+		displayFolder: System Metrics
+
+	/// System-wide share of Medicare encounters, reflecting federal program dependency and aging population served
+	measure 'Medicare Share (System %)' = ```
+			VAR MedicareEncounters = 
+			    CALCULATE(
+			        [Payer Encounters],
+			        Dim_Payer[Payment_Typology_Group] = "Medicare",
+			        REMOVEFILTERS( Dim_Facility )
+			    )
+			VAR TotalEncounters = 
+			    CALCULATE(
+			        [Payer Encounters],
+			        REMOVEFILTERS( Dim_Payer ),
+			        REMOVEFILTERS( Dim_Facility )
+			    )
+			RETURN
+			    DIVIDE( MedicareEncounters, TotalEncounters )
+			```
+		formatString: 0.0%
+		displayFolder: System Metrics
+
+	/// System-wide share of Medicaid encounters, indicating safety-net role and exposure to lowest reimbursement rates
+	measure 'Medicaid Share (System %)' = ```
+			VAR MedicaidEncounters = 
+			    CALCULATE(
+			        [Payer Encounters],
+			        Dim_Payer[Payment_Typology_Group] = "Medicaid",
+			        REMOVEFILTERS( Dim_Facility )
+			    )
+			VAR TotalEncounters = 
+			    CALCULATE(
+			        [Payer Encounters],
+			        REMOVEFILTERS( Dim_Payer ),
+			        REMOVEFILTERS( Dim_Facility )
+			    )
+			RETURN
+			    DIVIDE( MedicaidEncounters, TotalEncounters )
+			```
+		formatString: 0.0%
+		displayFolder: System Metrics
+
+	/// Count of encounters where costs exceeded revenue
+	measure 'Negative Margin Encounters' = SUM( Fact_KPI_PayerMix[Negative_Margin_Encounter_Count] )
+		formatString: #,0
+		displayFolder: Financial Risk
+
+	/// System-wide percentage of encounters with negative margin (costs > revenue), indicating direct financial stress from payer mix
+	measure 'Negative Margin Encounter Rate (System %)' = ```
+			VAR NegativeEncounters = 
+			    CALCULATE(
+			        [Negative Margin Encounters],
+			        REMOVEFILTERS( Dim_Payer ),
+			        REMOVEFILTERS( Dim_Facility )
+			    )
+			VAR TotalEncounters = 
+			    CALCULATE(
+			        [Payer Encounters],
+			        REMOVEFILTERS( Dim_Payer ),
+			        REMOVEFILTERS( Dim_Facility )
+			    )
+			RETURN
+			    DIVIDE( NegativeEncounters, TotalEncounters )
+			```
+		formatString: 0.0%
+		displayFolder: System Metrics
+
+	/// System-wide top payer category with its share percentage, indicating payer concentration and negotiating dependency
+	measure 'Top Payer Share (System %)' = ```
+			VAR TotalEncounters = 
+			    CALCULATE(
+			        [Payer Encounters],
+			        REMOVEFILTERS( Dim_Payer ),
+			        REMOVEFILTERS( Dim_Facility )
+			    )
+			VAR PayerTable = 
+			    ADDCOLUMNS(
+			        VALUES( Dim_Payer[Payment_Typology_Group] ),
+			        "@Share", 
+			        VAR PayerEncounters = 
+			            CALCULATE(
+			                [Payer Encounters],
+			                REMOVEFILTERS( Dim_Facility )
+			            )
+			        RETURN DIVIDE( PayerEncounters, TotalEncounters )
+			    )
+			VAR TopPayer = TOPN( 1, PayerTable, [@Share], DESC )
+			VAR TopPayerName = MAXX( TopPayer, [Payment_Typology_Group] )
+			VAR TopPayerShare = MAXX( TopPayer, [@Share] )
+			RETURN
+			    TopPayerName & " (" & FORMAT( TopPayerShare, "0.0%" ) & ")"
+			```
+		displayFolder: System Metrics
+
 	column Column
 		isHidden
 		formatString: 0

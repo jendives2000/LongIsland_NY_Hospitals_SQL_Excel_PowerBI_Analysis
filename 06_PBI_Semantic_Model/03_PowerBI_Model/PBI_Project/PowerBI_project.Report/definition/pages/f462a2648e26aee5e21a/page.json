@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
   "name": "f462a2648e26aee5e21a",
   "displayName": "Unplanned Intake",
   "displayOption": "FitToPage",
@@ -64,16 +64,6 @@
   },
   "visibility": "HiddenInViewMode",
   "visualInteractions": [
-    {
-      "source": "6701c84b78b50db7e1d8",
-      "target": "8d39895367ad2c814bad",
-      "type": "DataFilter"
-    },
-    {
-      "source": "6701c84b78b50db7e1d8",
-      "target": "bcb5bc5c4503642497d2",
-      "type": "DataFilter"
-    },
     {
       "source": "6701c84b78b50db7e1d8",
       "target": "89f24a48ee57b4bce0ad",
