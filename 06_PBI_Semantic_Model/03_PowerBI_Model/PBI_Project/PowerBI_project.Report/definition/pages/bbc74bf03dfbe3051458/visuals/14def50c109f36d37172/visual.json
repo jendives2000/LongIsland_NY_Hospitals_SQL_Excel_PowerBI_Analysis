@@ -44,7 +44,33 @@
               {
                 "textRuns": [
                   {
-                    "value": "This view establishes intake context that should be carried forward when interpreting throughput, cost, and outcome variation.",
+                    "value": "Payer mix (PM) differs ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "structurally across peer groups",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", indicating ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "uneven reimbursement exposure",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not a common financial baseline.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -61,20 +87,85 @@
               {
                 "textRuns": [
                   {
-                    "value": "Unplanned admission share is elevated across all peer groups (≈65%–86%), indicating that ",
+                    "value": "Medicare dominates across all peers, but the ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "unplanned intake is a system-wide operating condition",
+                    "value": "Medicare–Commercial–Medicaid balance shifts materially",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not one confined to a specific segment. While levels vary by peer group, overall intake remains high across the network, consistent with emergency and urgent pathways serving as primary admission routes.",
+                    "value": " by peer group (PG). Given prior context of ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "comparable severity",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " and ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "system-wide unplanned intake",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", downstream variation should ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "not be attributed to acuity",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " and only ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "partially to payer mix",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ". This visual establishes ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "financial context",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not performance or causality.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -123,7 +214,7 @@
                     }
                   },
                   {
-                    "value": "context, not performance evaluation",
+                    "value": "reimbursement context, not performance evaluation",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
@@ -147,33 +238,72 @@
               {
                 "textRuns": [
                   {
-                    "value": "Because unplanned intake is high across peer groups, downstream metrics (e.g., LOS, cost, throughput) should be interpreted with ",
+                    "value": "Because PM varies across peer groups while ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "intake pressure as a common baseline",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", rather than assuming a low-intake operating state. Differences across peer groups provide ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "contextual segmentation",
+                    "value": "severity is broadly comparable",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not causal explanation or evidence of operational effectiveness.",
+                    "value": " and ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "unplanned intake pressure is system-wide",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", downstream cost, margin, and outcome metrics should be interpreted ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "relative to PG reimbursement structure",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not as direct reflections of operational effectiveness. Differences shown here segment the ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "financial environment",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " in which care is delivered; they do ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "not",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " explain outcomes on their own and should be carried forward as baseline context when assessing downstream variation.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -1495,6 +1625,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "409ae89dcff4e930ba8e",
-  "isHidden": true
+  "parentGroupName": "409ae89dcff4e930ba8e"
 }

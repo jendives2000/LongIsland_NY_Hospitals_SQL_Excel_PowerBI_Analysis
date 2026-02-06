@@ -19,22 +19,22 @@
               {
                 "textRuns": [
                   {
-                    "value": "Use unplanned admission (UA) rates to establish ",
+                    "value": "Read payer mix as ",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": "baseline operating context",
+                    "value": "baseline financial context",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": " before interpreting throughput or outcome metrics.",
+                    "value": ", not a performance signal.",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   }
                 ]
@@ -49,35 +49,22 @@
               {
                 "textRuns": [
                   {
-                    "value": "Interpret UA ",
+                    "value": "Interpret cost, margin, and outcome variation ",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": "peer-relatively",
+                    "value": "relative to peer-group payer structure",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": " and alongside encounter volume to distinguish ",
+                    "value": ", not system averages.",
                     "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "broad intake pressure from isolated exposure",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ".",
-                    "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   }
                 ]
@@ -85,22 +72,29 @@
               {
                 "textRuns": [
                   {
-                    "value": "Reference markers (e.g., ~40% UA, ~3,000 encounters) are ",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Payer mix provides ",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": "directional context flags",
+                    "value": "orientation, not explanation",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": ", not performance targets; these indicators are descriptive and support interpretation, not ranking or attribution.",
+                    "value": ", and should inform — not replace — downstream analysis.",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   }
                 ]

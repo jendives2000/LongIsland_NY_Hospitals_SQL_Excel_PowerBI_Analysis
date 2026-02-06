@@ -3,9 +3,9 @@
   "name": "d3c05b8f41f9eda78dd6",
   "position": {
     "x": 13.09090909090909,
-    "y": 147.11688311688312,
+    "y": 142.75324675324674,
     "z": 4000,
-    "height": 76.675324675324674,
+    "height": 104.1038961038961,
     "width": 600.31168831168827,
     "tabOrder": 4000
   },
@@ -19,9 +19,21 @@
               {
                 "textRuns": [
                   {
-                    "value": "This page provides context, not performance evaluation.",
+                    "value": "This page provides ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "context, not performance evaluation",
                     "textStyle": {
                       "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ".",
+                    "textStyle": {
                       "fontSize": "11pt"
                     }
                   }
@@ -30,33 +42,30 @@
               {
                 "textRuns": [
                   {
-                    "value": "It describes whether unplanned admissions represent a ",
+                    "value": "It establishes whether reimbursement exposure is broadly comparable across the system or varies meaningfully within peer groups.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "This context should be understood before interpreting ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "structural operating condition",
-                    "textStyle": {
-                      "fontStyle": "italic",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": " across the system, which must be understood ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "before interpreting length of stay, cost, or throughput metrics",
+                    "value": "cost, margin, throughput, or outcome metrics",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ".",
+                    "value": ", which are sensitive to baseline payer structure.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
