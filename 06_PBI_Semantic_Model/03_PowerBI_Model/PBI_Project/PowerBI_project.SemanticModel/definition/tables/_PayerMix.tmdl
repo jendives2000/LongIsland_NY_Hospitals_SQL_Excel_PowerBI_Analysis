@@ -454,16 +454,19 @@ table _PayerMix
 			RETURN Result
 			```
 		displayFolder: Concentration
+		lineageTag: b8bcec83-2791-4394-b09f-9c1a00363f95
 
 	/// Reference line threshold for moderate payer concentration (HHI = 0.15). Used for visual reference bands.
 	measure 'HHI Threshold - Moderate' = 0.15
 		formatString: 0.00
 		displayFolder: Helper
+		lineageTag: 75747f0f-5739-4176-891d-f95c4f83a6ac
 
 	/// Reference line threshold for high payer concentration (HHI = 0.25). Used for visual reference bands.
 	measure 'HHI Threshold - High' = 0.25
 		formatString: 0.00
 		displayFolder: Helper
+		lineageTag: 54688e1c-3b36-4dc2-81ad-e3e3c41586be
 
 	column Column
 		isHidden

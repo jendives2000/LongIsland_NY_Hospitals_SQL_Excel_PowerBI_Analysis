@@ -2,15 +2,15 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "e8c5023c6240fb422377",
   "position": {
-    "x": 660.62499999999977,
-    "y": 34.988202310237973,
+    "x": 660.77922077922074,
+    "y": 15.982649718911453,
     "z": 3000,
-    "height": 440.625,
-    "width": 603.75,
+    "height": 534.85714285714278,
+    "width": 603.42857142857144,
     "tabOrder": 0
   },
   "visual": {
-    "visualType": "hundredPercentStackedBarChart",
+    "visualType": "scatterChart",
     "query": {
       "queryState": {
         "Category": {
@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Dim_PeerGroup"
+                      "Entity": "Dim_Facility"
                     }
                   },
                   "Property": "PeerGroup_Name"
                 }
               },
-              "queryRef": "Dim_PeerGroup.PeerGroup_Name",
+              "queryRef": "Dim_Facility.PeerGroup_Name",
               "nativeQueryRef": "PeerGroup_Name",
               "active": true
             },
@@ -54,14 +54,84 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "vw_Fact_KPI_SeverityMix_BySeverity"
+                      "Entity": "Dim_Facility"
                     }
                   },
-                  "Property": "APR_Severity_Description"
+                  "Property": "PeerGroup_Name"
                 }
               },
-              "queryRef": "vw_Fact_KPI_SeverityMix_BySeverity.APR_Severity_Description",
-              "nativeQueryRef": "APR_Severity_Description"
+              "queryRef": "Dim_Facility.PeerGroup_Name",
+              "nativeQueryRef": "PeerGroup_Name"
+            }
+          ]
+        },
+        "Size": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_PayerMix"
+                    }
+                  },
+                  "Property": "Total Payer Encounters"
+                }
+              },
+              "queryRef": "_PayerMix.Total Payer Encounters",
+              "nativeQueryRef": "Total Payer Encounters"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Financial_Basic"
+                    }
+                  },
+                  "Property": "Total Charges"
+                }
+              },
+              "queryRef": "_Financial_Basic.Total Charges",
+              "nativeQueryRef": "Total Charges"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Financial_Basic"
+                    }
+                  },
+                  "Property": "Neg Margin Rate"
+                }
+              },
+              "queryRef": "_Financial_Basic.Neg Margin Rate",
+              "nativeQueryRef": "Neg Margin Rate"
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_PayerMix"
+                    }
+                  },
+                  "Property": "Risk Payer Share %"
+                }
+              },
+              "queryRef": "_PayerMix.Risk Payer Share %",
+              "nativeQueryRef": "Risk Payer Share",
+              "active": true,
+              "displayName": "Risk Payer Share"
             }
           ]
         },
@@ -69,55 +139,20 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "vw_Fact_KPI_SeverityMix_BySeverity"
-                        }
-                      },
-                      "Property": "Encounter_Count"
+                    "SourceRef": {
+                      "Entity": "_PayerMix"
                     }
                   },
-                  "Function": 0
+                  "Property": "Total Payer Encounters"
                 }
               },
-              "queryRef": "Sum(vw_Fact_KPI_SeverityMix_BySeverity.Encounter_Count)",
-              "nativeQueryRef": "Sum of Encounter_Count"
+              "queryRef": "_PayerMix.Total Payer Encounters",
+              "nativeQueryRef": "Total Payer Encounters"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Dim_PeerGroup"
-                  }
-                },
-                "Property": "PeerGroup_Name"
-              }
-            },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Dim_Facility"
-                  }
-                },
-                "Property": "Facility_Name"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ]
       }
     },
     "objects": {
@@ -134,7 +169,7 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'TopCenter'"
+                  "Value": "'BottomCenter'"
                 }
               }
             },
@@ -165,17 +200,10 @@
                 }
               }
             },
-            "concatenateLabels": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
             "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -189,7 +217,7 @@
             "gridlineShow": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -204,6 +232,50 @@
               "expr": {
                 "Literal": {
                   "Value": "15L"
+                }
+              }
+            },
+            "start": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "end": {
+              "expr": {
+                "Literal": {
+                  "Value": "0.6D"
+                }
+              }
+            },
+            "gridlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.4
+                    }
+                  }
+                }
+              }
+            },
+            "gridlineTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "55D"
+                }
+              }
+            },
+            "titleColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3F3F3F'"
+                    }
+                  }
                 }
               }
             }
@@ -242,222 +314,21 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "labels": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
                   "Value": "true"
                 }
               }
             },
-            "labelPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "'InsideEnd'"
-                }
-              }
-            },
-            "labelOrientation": {
+            "start": {
               "expr": {
                 "Literal": {
                   "Value": "0D"
                 }
               }
             },
-            "optimizeLabelDisplay": {
+            "end": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "enableDetailDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "enableValueDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "labelContainerMaxWidth": {
-              "expr": {
-                "Literal": {
-                  "Value": "30D"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "enableBackground": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "labelOverflow": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "1000D"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "2L"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            }
-          }
-        },
-        {
-          "properties": {
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "Dim_PeerGroup"
-                          }
-                        },
-                        "Property": "PeerGroup_Sort"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "3L"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
-                }
-              }
-            },
-            "showSeries": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "vw_Fact_KPI_SeverityMix_BySeverity"
-                          }
-                        },
-                        "Property": "APR_Severity_Description"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'Minor'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        }
-      ],
-      "layout": [
-        {
-          "properties": {
-            "seriesOrderSorted": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "seriesOrderReversed": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+                  "Value": "55000D"
                 }
               }
             }
@@ -886,29 +757,181 @@
           }
         }
       ],
-      "ribbonBands": [
+      "xAxisReferenceLine": [
         {
           "properties": {
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "displayName": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Risk Payer % Median'"
+                }
+              }
+            },
+            "value": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_PayerMix"
+                    }
+                  },
+                  "Property": "Risk Payer Share Median (All Facilities)"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            },
+            "style": {
+              "expr": {
+                "Literal": {
+                  "Value": "'dotted'"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'back'"
+                }
+              }
+            },
+            "dataLabelShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "dataLabelHorizontalPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'right'"
+                }
+              }
+            },
+            "dataLabelText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ValueAndName'"
                 }
               }
             }
+          },
+          "selector": {
+            "id": "1"
           }
         }
       ],
-      "totals": [
+      "y1AxisReferenceLine": [
         {
           "properties": {
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "displayName": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Volume'"
+                }
+              }
+            },
+            "value": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Unplanned"
+                    }
+                  },
+                  "Property": "Volume Threshold (Encounters)"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "dataLabelShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "dataLabelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "dataLabelText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ValueAndName'"
+                }
+              }
+            },
+            "dataLabelHorizontalPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'right'"
                 }
               }
             }
+          },
+          "selector": {
+            "id": "1"
           }
         }
       ]
@@ -920,7 +943,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Distribution of Patient Severity Levels'"
+                  "Value": "'Payer Risk Exposure vs Volume'"
                 }
               }
             },
@@ -965,14 +988,14 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Share of encounters by severity level'"
+                  "Value": "'Context risk rises when payer mix risk intersects with high volume'"
                 }
               }
             },
@@ -1105,6 +1128,5 @@
         }
       }
     ]
-  },
-  "isHidden": true
+  }
 }

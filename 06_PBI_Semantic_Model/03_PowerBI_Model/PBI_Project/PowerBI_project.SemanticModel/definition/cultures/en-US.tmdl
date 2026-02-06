@@ -19995,16 +19995,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "moderate": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
 			          "smi peer middle": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -20016,6 +20006,16 @@ cultureInfo en-US
 			        },
 			        {
 			          "smi peer center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "smi peer medium": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -23068,16 +23068,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "moderate": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
 			          "los peer middle": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -23089,6 +23079,16 @@ cultureInfo en-US
 			        },
 			        {
 			          "los peer center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "los peer medium": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -28397,6 +28397,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.748
 			          }
+			        },
+			        {
+			          "Risk Payer Share": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -29393,147 +29403,163 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "entity__PayerMix.top_payer_name_facility": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "Top Payer Name (Facility)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top payer name (facility)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "top payer name": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.HHI_threshold__moderate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "HHI Threshold - Moderate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "HHI threshold - moderate": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "HHI threshold moderate": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "moderate": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "threshold moderate": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "relative": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "fair": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "mild": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "medium": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "middling": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "ordinary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "mean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.HHI_threshold__high": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "HHI Threshold - High"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "HHI threshold - high": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "HHI threshold high": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "threshold high": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "fact_KPI_severity_mix_has_dim_facility": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_SeverityMix"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_severity_mix": {
-			          "Target": {
-			            "Entity": "fact_KPI_severity_mix"
-			          }
-			        },
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_severity_mix"
-			            },
-			            "Object": {
-			              "Role": "dim_facility"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_severity_mixes_have_dim_facilities"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_severity_mix"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_fact_KPI_severity_mixes"
-			        }
-			      ]
-			    },
-			    "fact_KPI_payer_mix_has_dim_facility": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_PayerMix"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_payer_mix": {
-			          "Target": {
-			            "Entity": "fact_KPI_payer_mix"
-			          }
-			        },
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_payer_mix"
-			            },
-			            "Object": {
-			              "Role": "dim_facility"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_payer_mixes_have_dim_facilities"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_payer_mix"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_fact_KPI_payer_mixes"
-			        }
-			      ]
-			    },
-			    "fact_KPI_payer_mix_has_dim_payer": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_PayerMix"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_payer_mix": {
-			          "Target": {
-			            "Entity": "fact_KPI_payer_mix"
-			          }
-			        },
-			        "dim_payer": {
-			          "Target": {
-			            "Entity": "dim_payer"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_payer_mix"
-			            },
-			            "Object": {
-			              "Role": "dim_payer"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_payer_mixes_have_dim_payers"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_payer"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_payer_mix"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_payers_have_fact_KPI_payer_mixes"
-			        }
-			      ]
-			    },
 			    "fact_KPI_payer_mix_has_dim_year": {
 			      "Binding": {
 			        "ConceptualEntity": "Fact_KPI_PayerMix"
@@ -29867,6 +29893,105 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_years_have_fact_KPI_dispositions"
+			        }
+			      ]
+			    },
+			    "entity__PayerMix_has_HHI_threshold__high": {
+			      "Binding": {
+			        "ConceptualEntity": "_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__PayerMix": {
+			          "Target": {
+			            "Entity": "entity__PayerMix"
+			          }
+			        },
+			        "entity__PayerMix.HHI_threshold__high": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.HHI_threshold__high"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__PayerMix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.HHI_threshold__high"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_PayerMixes_have_HHI_threshold__high"
+			        }
+			      ]
+			    },
+			    "entity__PayerMix_has_HHI_threshold__moderate": {
+			      "Binding": {
+			        "ConceptualEntity": "_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__PayerMix": {
+			          "Target": {
+			            "Entity": "entity__PayerMix"
+			          }
+			        },
+			        "entity__PayerMix.HHI_threshold__moderate": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.HHI_threshold__moderate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__PayerMix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.HHI_threshold__moderate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_PayerMixes_have_HHI_threshold__moderate"
+			        }
+			      ]
+			    },
+			    "dim_payer_has_entity__PayerMix_top_payer_name_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Payer"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_payer": {
+			          "Target": {
+			            "Entity": "dim_payer"
+			          }
+			        },
+			        "entity__PayerMix.top_payer_name_facility": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.top_payer_name_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_payer"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.top_payer_name_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_payers_have_top_payer_name_facility"
 			        }
 			      ]
 			    },
@@ -42986,6 +43111,144 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_dim_payers_are_unknown_dim_payers"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_dim_payer": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "dim_payer": {
+			          "Target": {
+			            "Entity": "dim_payer"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "dim_payer"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_dim_payers"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_payer"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_payer_mix"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_payers_have_fact_KPI_payer_mixes"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_payer_mix"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_fact_KPI_payer_mixes"
+			        }
+			      ]
+			    },
+			    "fact_KPI_severity_mix_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_SeverityMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_severity_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_severity_mix"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_severity_mix"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_severity_mixes_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_severity_mix"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_fact_KPI_severity_mixes"
 			        }
 			      ]
 			    },
