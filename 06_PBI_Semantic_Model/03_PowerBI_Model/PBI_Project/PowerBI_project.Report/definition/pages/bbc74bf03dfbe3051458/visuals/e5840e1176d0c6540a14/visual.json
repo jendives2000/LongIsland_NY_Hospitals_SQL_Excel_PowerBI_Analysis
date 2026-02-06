@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "e5840e1176d0c6540a14",
   "position": {
-    "x": 14.153846153846153,
-    "y": 24.002756755920764,
+    "x": 14.337662337662337,
+    "y": 5.385247121508856,
     "z": 14000,
-    "height": 41.230769230769234,
-    "width": 226.46153846153845,
+    "height": 30.545454545454543,
+    "width": 279.27272727272725,
     "tabOrder": 8000
   },
   "visual": {
@@ -56,7 +56,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Unplanned Admission Rate'"
+                  "Value": "'Payer Mix Composition across PG'"
                 }
               }
             },
@@ -272,7 +272,7 @@
             "bookmark": {
               "expr": {
                 "Literal": {
-                  "Value": "'878bb3c10b3bd994ce16'"
+                  "Value": "'ad6eb94d82634c2dd821'"
                 }
               }
             }
@@ -296,6 +296,5 @@
     "drillFilterOtherVisuals": true
   },
   "parentGroupName": "409ae89dcff4e930ba8e",
-  "isHidden": true,
   "howCreated": "InsertVisualButton"
 }

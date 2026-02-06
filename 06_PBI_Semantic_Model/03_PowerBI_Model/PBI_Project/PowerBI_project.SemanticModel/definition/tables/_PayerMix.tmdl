@@ -161,7 +161,7 @@ table _PayerMix
 			    VAR s = CALCULATE ( [Payer Share %] )
 			    RETURN s * s
 			)
-		formatString: 0.0000
+		formatString: 0.00
 		displayFolder: Concentration
 		lineageTag: 954993f7-315e-4aed-b67e-d7f7cc715a44
 
@@ -431,6 +431,39 @@ table _PayerMix
 		formatString: +#,0.0 pp;-#,0.0 pp;0.0 pp
 		displayFolder: Risk Payer
 		lineageTag: 16bcc6d2-234f-439d-982e-126aa39c8ca0
+
+	/// Name of the payer group with the highest encounter share at facility level
+	measure 'Top Payer Name (Facility)' = ```
+			// Find the payer with the highest share at facility level
+			VAR TopPayerTable = 
+			    TOPN(
+			        1,
+			        ADDCOLUMNS(
+			            VALUES(Dim_Payer[Payer_Key]),
+			            "@Share", [Payer Share %]
+			        ),
+			        [@Share], DESC
+			    )
+			VAR TopPayerKey = 
+			    MAXX(TopPayerTable, Dim_Payer[Payer_Key])
+			VAR Result = 
+			    CALCULATE(
+			        SELECTEDVALUE(Dim_Payer[Payment_Typology_Group]),
+			        Dim_Payer[Payer_Key] = TopPayerKey
+			    )
+			RETURN Result
+			```
+		displayFolder: Concentration
+
+	/// Reference line threshold for moderate payer concentration (HHI = 0.15). Used for visual reference bands.
+	measure 'HHI Threshold - Moderate' = 0.15
+		formatString: 0.00
+		displayFolder: Helper
+
+	/// Reference line threshold for high payer concentration (HHI = 0.25). Used for visual reference bands.
+	measure 'HHI Threshold - High' = 0.25
+		formatString: 0.00
+		displayFolder: Helper
 
 	column Column
 		isHidden

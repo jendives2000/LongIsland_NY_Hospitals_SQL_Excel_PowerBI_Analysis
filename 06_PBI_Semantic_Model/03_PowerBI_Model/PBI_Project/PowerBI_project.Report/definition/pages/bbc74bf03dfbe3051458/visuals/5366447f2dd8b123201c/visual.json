@@ -10,7 +10,7 @@
     "tabOrder": 5000
   },
   "visual": {
-    "visualType": "scatterChart",
+    "visualType": "clusteredBarChart",
     "query": {
       "queryState": {
         "Category": {
@@ -43,63 +43,53 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": false
-            }
-          ]
-        },
-        "Series": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Dim_Facility"
-                    }
-                  },
-                  "Property": "PeerGroup_Name"
-                }
-              },
-              "queryRef": "Dim_Facility.PeerGroup_Name",
-              "nativeQueryRef": "PeerGroup_Name",
-              "displayName": "Peer Groups"
-            }
-          ]
-        },
-        "Size": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Volume_&_Denominators"
-                    }
-                  },
-                  "Property": "Unplanned Total Encounters"
-                }
-              },
-              "queryRef": "_Volume_&_Denominators.Unplanned Total Encounters",
-              "nativeQueryRef": "Unplanned Total Encounters"
-            }
-          ]
-        },
-        "X": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_KPI_Measures"
-                    }
-                  },
-                  "Property": "Unplanned Admission Rate"
-                }
-              },
-              "queryRef": "_KPI_Measures.Unplanned Admission Rate",
-              "nativeQueryRef": "Unplanned Admission Rate",
               "active": true
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_PayerMix"
+                    }
+                  },
+                  "Property": "Top Payer Name (Facility)"
+                }
+              },
+              "queryRef": "_PayerMix.Top Payer Name (Facility)",
+              "nativeQueryRef": "Top Payer Name (Facility)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_PayerMix"
+                    }
+                  },
+                  "Property": "Top Payer Share % (Facility)"
+                }
+              },
+              "queryRef": "_PayerMix.Top Payer Share % (Facility)",
+              "nativeQueryRef": "Top Payer Share % (Facility)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_PayerMix"
+                    }
+                  },
+                  "Property": "Total Payer Encounters"
+                }
+              },
+              "queryRef": "_PayerMix.Total Payer Encounters",
+              "nativeQueryRef": "Total Payer Encounters"
             }
           ]
         },
@@ -110,14 +100,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fact_KPI_Unplanned"
+                      "Entity": "_PayerMix"
                     }
                   },
-                  "Property": "Total Encounters (Y)"
+                  "Property": "Payer HHI (Facility)"
                 }
               },
-              "queryRef": "Fact_KPI_Unplanned.Total Encounters (Y)",
-              "nativeQueryRef": "Total Encounters (Y)"
+              "queryRef": "_PayerMix.Payer HHI (Facility)",
+              "nativeQueryRef": "Payer HHI (Facility)"
             }
           ]
         }
@@ -129,10 +119,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "_KPI_Measures"
+                    "Entity": "_PayerMix"
                   }
                 },
-                "Property": "Unplanned Admission Rate"
+                "Property": "Payer HHI (Facility)"
               }
             },
             "direction": "Descending"
@@ -173,229 +163,13 @@
           }
         }
       ],
-      "y1AxisReferenceLine": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "displayName": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Encounters'"
-                }
-              }
-            },
-            "value": {
-              "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Dim_ClinicalClass"
-                    }
-                  },
-                  "Property": "PeerGroup UA Rate Median"
-                }
-              }
-            },
-            "lineColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "width": {
-              "expr": {
-                "Literal": {
-                  "Value": "2D"
-                }
-              }
-            },
-            "style": {
-              "expr": {
-                "Literal": {
-                  "Value": "'dotted'"
-                }
-              }
-            },
-            "dataLabelShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "dataLabelColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.3
-                    }
-                  }
-                }
-              }
-            },
-            "dataLabelText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'ValueAndName'"
-                }
-              }
-            },
-            "dataLabelVerticalPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "'under'"
-                }
-              }
-            },
-            "dataLabelHorizontalPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "'right'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "1"
-          }
-        },
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "displayName": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Encounters'"
-                }
-              }
-            },
-            "style": {
-              "expr": {
-                "Literal": {
-                  "Value": "'dotted'"
-                }
-              }
-            },
-            "width": {
-              "expr": {
-                "Literal": {
-                  "Value": "2D"
-                }
-              }
-            },
-            "dataLabelShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "lineColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "dataLabelColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.5
-                    }
-                  }
-                }
-              }
-            },
-            "dataLabelText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'ValueAndName'"
-                }
-              }
-            },
-            "dataLabelHorizontalPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "'left'"
-                }
-              }
-            },
-            "dataLabelVerticalPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "'under'"
-                }
-              }
-            },
-            "dataLabelDecimalPoints": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "3000D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "2"
-          }
-        }
-      ],
       "valueAxis": [
         {
           "properties": {
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -417,6 +191,20 @@
                   }
                 }
               }
+            },
+            "start": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "end": {
+              "expr": {
+                "Literal": {
+                  "Value": "0.6D"
+                }
+              }
             }
           }
         }
@@ -434,7 +222,7 @@
             "maxMarginFactor": {
               "expr": {
                 "Literal": {
-                  "Value": "50L"
+                  "Value": "25L"
                 }
               }
             },
@@ -463,37 +251,32 @@
                   }
                 }
               }
-            }
-          }
-        }
-      ],
-      "categoryLabels": [
-        {
-          "properties": {
-            "show": {
+            },
+            "concatenateLabels": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
-            }
-          }
-        }
-      ],
-      "bubbles": [
-        {
-          "properties": {
-            "markerRangeType": {
+            },
+            "preferredCategoryWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "'dataRange'"
+                  "Value": "20D"
                 }
               }
             },
-            "bubbleSize": {
+            "switchAxisPosition": {
               "expr": {
                 "Literal": {
-                  "Value": "-4L"
+                  "Value": "false"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
                 }
               }
             }
@@ -581,6 +364,374 @@
                   "Value": "8D"
                 }
               }
+            },
+            "showGradientLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "y1AxisReferenceLine": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "displayName": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Low Concentration'"
+                }
+              }
+            },
+            "value": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_PayerMix"
+                    }
+                  },
+                  "Property": "HHI Threshold - Moderate"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "dataLabelShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "dataLabelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#656565'"
+                    }
+                  }
+                }
+              }
+            },
+            "dataLabelText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Name'"
+                }
+              }
+            },
+            "shadeShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "shadeColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "shadeTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "94D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "1"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "displayName": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Moderate'"
+                }
+              }
+            },
+            "value": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_PayerMix"
+                    }
+                  },
+                  "Property": "HHI Threshold - High"
+                }
+              }
+            },
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "dataLabelShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "dataLabelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#656565'"
+                    }
+                  }
+                }
+              }
+            },
+            "dataLabelText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Name'"
+                }
+              }
+            },
+            "shadeShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "shadeColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "shadeTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "84D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "2"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "displayName": {
+              "expr": {
+                "Literal": {
+                  "Value": "'High'"
+                }
+              }
+            },
+            "value": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_PayerMix"
+                    }
+                  },
+                  "Property": "HHI Threshold - High"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            },
+            "dataLabelShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "dataLabelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#656565'"
+                    }
+                  }
+                }
+              }
+            },
+            "dataLabelHorizontalPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'right'"
+                }
+              }
+            },
+            "dataLabelText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Name'"
+                }
+              }
+            },
+            "dataLabelVerticalPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'above'"
+                }
+              }
+            },
+            "shadeShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "shadeColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "shadeRegion": {
+              "expr": {
+                "Literal": {
+                  "Value": "'after'"
+                }
+              }
+            },
+            "shadeTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "90D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "3"
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'InsideEnd'"
+                }
+              }
             }
           }
         }
@@ -593,7 +744,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Unplanned Intake Pressure vs Volume'"
+                  "Value": "'Payer Concentration by Facility'"
                 }
               }
             },
@@ -625,7 +776,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Rate × volume interaction driving intake pressure'"
+                  "Value": "'Higher concentration reflects higher reimbursement dependency'"
                 }
               }
             }
@@ -635,6 +786,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "409ae89dcff4e930ba8e",
-  "isHidden": true
+  "parentGroupName": "409ae89dcff4e930ba8e"
 }

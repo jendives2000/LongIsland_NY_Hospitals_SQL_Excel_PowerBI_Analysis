@@ -3,9 +3,7 @@
   "displayName": "Viz 2 RPS vs PM",
   "name": "45e6fc9661d51f6bfac1",
   "options": {
-    "targetVisualNames": [
-      "e2ae284cc7b982dfb138"
-    ]
+    "targetVisualNames": []
   },
   "explorationState": {
     "version": "1.3",
@@ -13,67 +11,18 @@
     "sections": {
       "bbc74bf03dfbe3051458": {
         "visualContainers": {
-          "9e8f02c224e518c7b32c": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "86745523defca4b7b6b9",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
+          "00339c67085c461ac095": {
             "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Basic'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  }
-                ]
-              },
+              "visualType": "textbox",
+              "objects": {},
               "display": {
                 "mode": "hidden"
               }
             }
           },
-          "d04ec8cafecba38effe9": {
+          "06836c97fd7769faf9df": {
             "singleVisual": {
-              "visualType": "textbox",
+              "visualType": "actionButton",
               "objects": {}
             }
           },
@@ -86,19 +35,28 @@
               }
             }
           },
-          "a4b8de6b2c3bad305a4f": {
+          "0955e73b70832d788d1d": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "0c44f41b690f4abd3e23": {
             "singleVisual": {
               "visualType": "textbox",
               "objects": {}
             }
           },
-          "ad25e5b4f0ee0092a8a3": {
+          "0c5c4de6a542023af747": {
             "singleVisual": {
-              "visualType": "textbox",
+              "visualType": "shape",
               "objects": {}
             }
           },
-          "66d6aab069bdaf241c03": {
+          "0fbd8745bf2321a6f298": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {}
@@ -110,182 +68,28 @@
               "objects": {}
             }
           },
-          "a1512a9b11d80d4984a8": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "bb931116029ed6d99393": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "e2ae284cc7b982dfb138": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "0fbd8745bf2321a6f298": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "8d44c7d4a5f87e14a44a": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "0c44f41b690f4abd3e23": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "e7f92f791cb1a8c027b1": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "497f3e9ee531218e2f09": {
+          "14def50c109f36d37172": {
             "singleVisual": {
               "visualType": "textbox",
               "objects": {},
               "display": {
                 "mode": "hidden"
               }
+            }
+          },
+          "15d708c29b99be4e705e": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "1b190af8fdbf5fb09d51": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
             }
           },
           "22e5ccbbdb3b4e18b139": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "988285d3472567dd9119": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "444cfac5600290c0f069",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_PayerMix"
-                        }
-                      },
-                      "Property": "Risk Payer Share (System %)"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "aeaf158acc4fc0290305",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_PayerMix"
-                        }
-                      },
-                      "Property": "Commercial Share (System %)"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "34ce70f8826964ed92f7",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_PayerMix"
-                        }
-                      },
-                      "Property": "Medicare Share (System %)"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "d0fc1605dfb31653cd3b",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_PayerMix"
-                        }
-                      },
-                      "Property": "Medicaid Share (System %)"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "5ac30721a0c0b69a98d9",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_PayerMix"
-                        }
-                      },
-                      "Property": "Top Payer Share (System %)"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "aeae0a67abc696873a05",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_PayerMix"
-                        }
-                      },
-                      "Property": "Negative Margin Encounter Rate (System %)"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "cardVisual",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_PayerMix"
-                        }
-                      },
-                      "Property": "Risk Payer Share (System %)"
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          "d8717bb1891abf6fd8cb": {
             "singleVisual": {
               "visualType": "shape",
               "objects": {}
@@ -297,167 +101,26 @@
               "objects": {}
             }
           },
-          "1b190af8fdbf5fb09d51": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "c823da8483e853bf9464": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "0c5c4de6a542023af747": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "ec96a25b814d2f092fe9": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
           "378d656ab1e943c82cf5": {
             "singleVisual": {
               "visualType": "textbox",
               "objects": {}
             }
           },
-          "5c03508c8fa3b89e80fa": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "7faaaee4d46641ef7fe6": {
+          "497f3e9ee531218e2f09": {
             "singleVisual": {
               "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "5559ec38a7a2b92e83d2": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "ccb4ad45f4dd91926969": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "ca3a22d0a205cd12d400": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "a29fb765dd01b1393834": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "725e5e9104aa5ad76daa": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "d3c05b8f41f9eda78dd6": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "e4669062342467626f42": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "95dd24500fdad6ce0d9d": {
-            "singleVisual": {
-              "visualType": "actionButton",
               "objects": {},
               "display": {
                 "mode": "hidden"
               }
             }
           },
-          "c7c3694bc3bc50918ddf": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "e8c5023c6240fb422377": {
+          "5366447f2dd8b123201c": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "e498205fc2b10be80993",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "d",
-                        "Entity": "Dim_ClinicalClass",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "Not": {
-                            "Expression": {
-                              "In": {
-                                "Expressions": [
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "d"
-                                        }
-                                      },
-                                      "Property": "APR_Severity_Description"
-                                    }
-                                  }
-                                ],
-                                "Values": [
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "null"
-                                      }
-                                    }
-                                  ]
-                                ]
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_ClinicalClass"
-                        }
-                      },
-                      "Property": "APR_Severity_Description"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "fef700bca4ef098ef77d",
+                  "name": "e43a3da19f84bf89bf58",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -472,7 +135,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "07c2205573d138370da2",
+                  "name": "4e755ed53a86f4939cd2",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -487,36 +150,61 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "f379139cdab9033ee49a",
+                  "name": "badcdc9a05b62902f808",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "vw_Fact_KPI_SeverityMix_BySeverity"
+                          "Entity": "Dim_Facility"
                         }
                       },
-                      "Property": "APR_Severity_Description"
+                      "Property": "PeerGroup_Name"
                     }
                   },
                   "howCreated": 0
                 },
                 {
-                  "name": "25d62dc2839ae2806f2b",
+                  "name": "3dcd7457f2a0d126c7b3",
                   "type": "Advanced",
                   "expression": {
-                    "Aggregation": {
+                    "Measure": {
                       "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "vw_Fact_KPI_SeverityMix_BySeverity"
-                            }
-                          },
-                          "Property": "Encounter_Count"
+                        "SourceRef": {
+                          "Entity": "_Volume_&_Denominators"
                         }
                       },
-                      "Function": 0
+                      "Property": "Unplanned Total Encounters"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "859b7ed8f5e4c60b89ec",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_KPI_Measures"
+                        }
+                      },
+                      "Property": "Unplanned Admission Rate"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "34fc780daa9298460ab3",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Fact_KPI_Unplanned"
+                        }
+                      },
+                      "Property": "Total Encounters (Y)"
                     }
                   },
                   "howCreated": 0
@@ -524,32 +212,19 @@
               ]
             },
             "singleVisual": {
-              "visualType": "hundredPercentStackedBarChart",
+              "visualType": "scatterChart",
               "objects": {},
               "orderBy": [
                 {
-                  "Direction": 1,
+                  "Direction": 2,
                   "Expression": {
-                    "Column": {
+                    "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
+                          "Entity": "_KPI_Measures"
                         }
                       },
-                      "Property": "PeerGroup_Name"
-                    }
-                  }
-                },
-                {
-                  "Direction": 1,
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "Facility_Name"
+                      "Property": "Unplanned Admission Rate"
                     }
                   }
                 }
@@ -565,15 +240,17 @@
                       },
                       "Property": "PeerGroup_Name"
                     }
-                  },
+                  }
+                ],
+                "X": [
                   {
-                    "Column": {
+                    "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Dim_Facility"
+                          "Entity": "_KPI_Measures"
                         }
                       },
-                      "Property": "Facility_Name"
+                      "Property": "Unplanned Admission Rate"
                     }
                   }
                 ]
@@ -583,22 +260,28 @@
               }
             }
           },
-          "7a9d211d6a9e23856ca7": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "e5840e1176d0c6540a14": {
+          "5559ec38a7a2b92e83d2": {
             "singleVisual": {
               "visualType": "actionButton",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
+              "objects": {}
+            }
+          },
+          "5c03508c8fa3b89e80fa": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "66d6aab069bdaf241c03": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "725e5e9104aa5ad76daa": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
             }
           },
           "72d78847021a0fe22bf3": {
@@ -693,31 +376,91 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "b82d3e3435838bfb8f56",
+                  "name": "ed35bff167cb5e3220c7",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "_KPI_Measures"
+                          "Entity": "_PayerMix"
                         }
                       },
-                      "Property": "Unplanned Admission Rate"
+                      "Property": "Risk Payer Share Median (All Facilities)"
                     }
                   },
                   "howCreated": 0
                 },
                 {
-                  "name": "edd80fd5b76dc84af2b0",
+                  "name": "bf06118f23e8a852d7d3",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Dim_ClinicalClass"
+                          "Entity": "_PayerMix"
                         }
                       },
-                      "Property": "PeerGroup UA Rate Median"
+                      "Property": "Risk Payer Delta vs PG Median (pp)"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "3c752a7c44464a608aab",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PayerMix"
+                        }
+                      },
+                      "Property": "Total Payer Encounters"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "aed8e06a46d1e3ee5dcb",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Financial_Basic"
+                        }
+                      },
+                      "Property": "Neg Margin Rate"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b42bffed242d63c7fcf9",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PayerMix"
+                        }
+                      },
+                      "Property": "Risk Payer Share %"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "10955f7b0c1745d8591b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PayerMix"
+                        }
+                      },
+                      "Property": "PeerGroup Risk Payer Share Median"
                     }
                   },
                   "howCreated": 0
@@ -753,114 +496,8 @@
                       },
                       "Property": "PeerGroup_Name"
                     }
-                  }
-                ]
-              },
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "7a328e838539afc67d4b": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "f60ab10e6403a46369da": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "ca19a50dc0c8cdfc09c9": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "eb2c5542f81aff725dc9": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "06836c97fd7769faf9df": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "00339c67085c461ac095": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "0955e73b70832d788d1d": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "a0f60133398d8a438267": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "bbd5c54c983114a945bb": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "15d708c29b99be4e705e": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "14def50c109f36d37172": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "5366447f2dd8b123201c": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "34c1ad4742c202129c63",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
                   },
-                  "howCreated": 0
-                },
-                {
-                  "name": "a7bd3ffa83913338dae3",
-                  "type": "Categorical",
-                  "expression": {
+                  {
                     "Column": {
                       "Expression": {
                         "SourceRef": {
@@ -869,125 +506,43 @@
                       },
                       "Property": "Facility_Name"
                     }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "0cca8688173e97beaf95",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "4b6a10c7f0bb342ddbf5",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Volume_&_Denominators"
-                        }
-                      },
-                      "Property": "Unplanned Total Encounters"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "6851493fa7bfa3017bc0",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_KPI_Measures"
-                        }
-                      },
-                      "Property": "Unplanned Admission Rate"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "4640fe6f7b2faf56f0c0",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Fact_KPI_Unplanned"
-                        }
-                      },
-                      "Property": "Total Encounters (Y)"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "scatterChart",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_KPI_Measures"
-                        }
-                      },
-                      "Property": "Unplanned Admission Rate"
-                    }
-                  }
-                }
-              ],
-              "activeProjections": {
-                "Category": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  }
-                ],
-                "X": [
-                  {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_KPI_Measures"
-                        }
-                      },
-                      "Property": "Unplanned Admission Rate"
-                    }
                   }
                 ]
-              },
+              }
+            }
+          },
+          "78e00a5d47f1f89505a4": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "7a328e838539afc67d4b": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "7a9d211d6a9e23856ca7": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {},
               "display": {
                 "mode": "hidden"
               }
+            }
+          },
+          "7faaaee4d46641ef7fe6": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
             }
           },
           "862431b4a57847605470": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "fda76ed6af45f17d6e5a",
+                  "name": "214cb6f6b49595e2620c",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1002,7 +557,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "01c3439d630834769d28",
+                  "name": "fabb60b83e003a1764bf",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1017,22 +572,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "108d153ec6348e806a19",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_PayerMix"
-                        }
-                      },
-                      "Property": "Payer Share %"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "37c30acb9277fb70f5c5",
+                  "name": "7e255e465741b1c5242f",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1047,7 +587,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "3a171134ddedb0a97919",
+                  "name": "1993cf88ff4e2467d590",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1062,7 +602,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "edb09ec6965b8c70ec2f",
+                  "name": "d02ca1345aa1988c258e",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1077,7 +617,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "d17e8cdc22908d2c5c46",
+                  "name": "4e2aff77ec157d013df1",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1092,7 +632,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "6963fa91cadaa1ad5d28",
+                  "name": "568f0c9a999e2516c2a7",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1107,7 +647,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "82d2e8d8c610e5929e69",
+                  "name": "f1216974b84cecca79a8",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1117,6 +657,21 @@
                         }
                       },
                       "Property": "Payer HHI (PeerGroup)"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "44633ad61d957baf7dfd",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PayerMix"
+                        }
+                      },
+                      "Property": "Payer Share %"
                     }
                   },
                   "howCreated": 0
@@ -1133,10 +688,10 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "_KPI_Measures"
+                          "Entity": "_PayerMix"
                         }
                       },
-                      "Property": "Unplanned Admission Rate"
+                      "Property": "Top Payer Share % (PeerGroup)"
                     }
                   }
                 }
@@ -1154,7 +709,517 @@
                     }
                   }
                 ]
+              },
+              "display": {
+                "mode": "hidden"
               }
+            }
+          },
+          "8d44c7d4a5f87e14a44a": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "95dd24500fdad6ce0d9d": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "985ec9017fb136af90b3": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "988285d3472567dd9119": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "2f9ab90e2f772d584305",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PayerMix"
+                        }
+                      },
+                      "Property": "Risk Payer Share (System %)"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "053eab41f3004b9c51b7",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PayerMix"
+                        }
+                      },
+                      "Property": "Commercial Share (System %)"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "ef3e91de8bdb0ab93f02",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PayerMix"
+                        }
+                      },
+                      "Property": "Medicare Share (System %)"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "153936d96ef520a314db",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PayerMix"
+                        }
+                      },
+                      "Property": "Medicaid Share (System %)"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "dd1a931c5f3fa63e3780",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PayerMix"
+                        }
+                      },
+                      "Property": "Top Payer Share (System %)"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0506e4c8a75d300f33c5",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PayerMix"
+                        }
+                      },
+                      "Property": "Negative Margin Encounter Rate (System %)"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PayerMix"
+                        }
+                      },
+                      "Property": "Risk Payer Share (System %)"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "9e8f02c224e518c7b32c": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "07a91ca14fbb21fc739c",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Basic'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "a0f60133398d8a438267": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "a1512a9b11d80d4984a8": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "a29fb765dd01b1393834": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "a4b8de6b2c3bad305a4f": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "ad25e5b4f0ee0092a8a3": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "bb931116029ed6d99393": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "bbd5c54c983114a945bb": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "c7c3694bc3bc50918ddf": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "c823da8483e853bf9464": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "ca19a50dc0c8cdfc09c9": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "ca3a22d0a205cd12d400": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "ccb4ad45f4dd91926969": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "d04ec8cafecba38effe9": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "d3c05b8f41f9eda78dd6": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "d8717bb1891abf6fd8cb": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "e2ae284cc7b982dfb138": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "e4669062342467626f42": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "e5840e1176d0c6540a14": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "e7f92f791cb1a8c027b1": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "e8c5023c6240fb422377": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "e498205fc2b10be80993",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "d",
+                        "Entity": "Dim_ClinicalClass",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "d"
+                                        }
+                                      },
+                                      "Property": "APR_Severity_Description"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "null"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_ClinicalClass"
+                        }
+                      },
+                      "Property": "APR_Severity_Description"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "ca8a8348107d1d12b2ec",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d3f70e577a313ae9c201",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "Facility_Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "67e83e926e6b1f1d66dc",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "vw_Fact_KPI_SeverityMix_BySeverity"
+                        }
+                      },
+                      "Property": "APR_Severity_Description"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "ba5d3e757d4e9a6e0d03",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "vw_Fact_KPI_SeverityMix_BySeverity"
+                            }
+                          },
+                          "Property": "Encounter_Count"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "hundredPercentStackedBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  }
+                },
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "Facility_Name"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "Facility_Name"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "eb2c5542f81aff725dc9": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
             }
           },
           "eb807b6c19f80f5ef23d": {
@@ -1163,27 +1228,36 @@
               "objects": {}
             }
           },
-          "985ec9017fb136af90b3": {
+          "ec96a25b814d2f092fe9": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "f60ab10e6403a46369da": {
             "singleVisual": {
               "visualType": "actionButton",
-              "objects": {}
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
             }
           }
         },
         "visualContainerGroups": {
-          "47f2946be8170ba19c72": {
-            "isHidden": false
-          },
           "352418d8c5beb72ae3dd": {
             "isHidden": false
           },
           "409ae89dcff4e930ba8e": {
-            "isHidden": true,
+            "isHidden": false,
             "children": {
               "2c67209493e542c08232": {
                 "isHidden": true
               }
             }
+          },
+          "47f2946be8170ba19c72": {
+            "isHidden": true
           }
         }
       }
