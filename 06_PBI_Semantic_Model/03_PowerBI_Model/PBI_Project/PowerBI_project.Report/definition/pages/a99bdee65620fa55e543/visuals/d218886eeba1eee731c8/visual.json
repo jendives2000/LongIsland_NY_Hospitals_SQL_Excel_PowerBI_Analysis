@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "d218886eeba1eee731c8",
   "position": {
-    "x": 349.09090909090907,
-    "y": 0.01619160060718295,
+    "x": 365.46206896551723,
+    "y": 0.60328296225409217,
     "z": 6000,
-    "height": 43.636363636363633,
-    "width": 217.55844155844156,
+    "height": 40.38620689655172,
+    "width": 247.61379310344827,
     "tabOrder": 4000
   },
   "visual": {
@@ -56,7 +56,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Mortality vs Peer Median'"
+                  "Value": "'Death % vs Acute Transfer %'"
                 }
               }
             },
@@ -272,7 +272,7 @@
             "bookmark": {
               "expr": {
                 "Literal": {
-                  "Value": "'7f43f553516d23c6764c'"
+                  "Value": "'03dcdb02d347f320b0a8'"
                 }
               }
             },

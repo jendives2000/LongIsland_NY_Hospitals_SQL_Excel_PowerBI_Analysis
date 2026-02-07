@@ -3,7 +3,7 @@
   "name": "3508f4ccf853d5563460",
   "position": {
     "x": 14.337662337662337,
-    "y": 185.18404970037582,
+    "y": 185.12123236725446,
     "z": 2000,
     "height": 361.55844155844153,
     "width": 582.23376623376623,
@@ -21,7 +21,7 @@
                   {
                     "value": "INSIGHT:",
                     "textStyle": {
-                      "fontSize": "12pt",
+                      "fontSize": "11pt",
                       "textDecoration": "underline",
                       "color": "#ffffff"
                     }
@@ -29,7 +29,7 @@
                   {
                     "value": " ",
                     "textStyle": {
-                      "fontSize": "12pt",
+                      "fontSize": "11pt",
                       "color": "#ffffff"
                     }
                   }
@@ -46,22 +46,32 @@
               {
                 "textRuns": [
                   {
-                    "value": "Observed mortality mix is ",
+                    "value": "Discharge destination mix varies across facilities, including within peer groups.",
                     "textStyle": {
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Variation in home, post-acute, and acute transfer shares is ",
+                    "textStyle": {
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "broadly similar across facilities",
+                    "value": "uneven",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", with comparable distribution across APR risk categories rather than concentration in extreme risk alone.",
+                    "value": ", indicating structural differences in exit routing and downstream capacity exposure rather than uniform system behavior.",
                     "textStyle": {
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   }
                 ]
@@ -76,22 +86,45 @@
               {
                 "textRuns": [
                   {
-                    "value": "Modest variation in Major and Extreme risk shares reflects ",
+                    "value": "Within peer groups, exit-flow dependency is ",
                     "textStyle": {
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "case-mix composition",
+                    "value": "distributed",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not distinct mortality profiles or outcome performance.",
+                    "value": ", with some facilities more post-acute or transfer-oriented and others home-dominant.",
                     "textStyle": {
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "This pattern reflects ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "exit-flow composition",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not outcome quality or performance ranking.",
+                    "textStyle": {
+                      "fontSize": "11pt"
                     }
                   }
                 ]
@@ -115,7 +148,7 @@
                   {
                     "value": "INTERPRETATION GUIDELINES: ",
                     "textStyle": {
-                      "fontSize": "12pt",
+                      "fontSize": "11pt",
                       "textDecoration": "underline",
                       "color": "#ffffff"
                     }
@@ -133,61 +166,96 @@
               {
                 "textRuns": [
                   {
-                    "value": "Read this view as ",
+                    "value": "Bar segments show ",
                     "textStyle": {
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "mortality risk composition context",
+                    "value": "exit-flow distribution",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not outcome evaluation.",
+                    "value": ", not effectiveness.",
                     "textStyle": {
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   }
-                ]
+                ],
+                "listType": "bullet"
               },
               {
                 "textRuns": [
                   {
-                    "value": "Percentages show the ",
+                    "value": "Peer grouping provides ",
                     "textStyle": {
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "distribution of observed mortality across risk tiers",
+                    "value": "context",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not mortality rates or care quality. Differences describe ",
+                    "value": ", not ranking.",
                     "textStyle": {
-                      "fontSize": "12pt"
-                    }
-                  },
-                  {
-                    "value": "risk mix",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "12pt"
-                    }
-                  },
-                  {
-                    "value": ", not survival performance.",
-                    "textStyle": {
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   }
-                ]
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Higher post-acute or transfer shares indicate ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "downstream reliance",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not inefficiency.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Interpret alongside severity, intake pressure, and LOS context.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "No causality or quality inference is implied.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
               },
               {
                 "textRuns": [
@@ -199,22 +267,22 @@
               {
                 "textRuns": [
                   {
-                    "value": "This view should be carried forward to ",
+                    "value": "This visual is a ",
                     "textStyle": {
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "contextualize downstream mortality metrics",
+                    "value": "baseline context lens",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not to infer causality, effectiveness, or accountability.",
+                    "value": ", not a diagnostic endpoint.",
                     "textStyle": {
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   }
                 ]

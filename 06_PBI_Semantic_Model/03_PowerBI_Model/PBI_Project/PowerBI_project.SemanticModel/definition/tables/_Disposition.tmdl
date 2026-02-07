@@ -120,6 +120,106 @@ table _Disposition
 		displayFolder: PeerGroup Benchmarks
 		lineageTag: 69e7d6d8-19e4-479c-a45a-b2c79ce26cd3
 
+	/// Percentage of encounters with Other disposition (transfers, AMA, hospice, behavioral health)
+	measure 'Other Discharge Share %' =
+			CALCULATE(
+			    [Disposition Share],
+			    Dim_Disposition[Disposition_Grouped] = "Other"
+			)
+		formatString: 0.0%
+		displayFolder: Share Metrics
+
+	/// Median acute transfer share across facilities within the same peer group
+	measure 'PeerGroup Acute Transfer Share Median' = ```
+			VAR CurrentPeerGroup = SELECTEDVALUE(Dim_PeerGroup[PeerGroup_Name])
+			VAR FacilitiesInPeerGroup = 
+			    CALCULATETABLE(
+			        VALUES(Dim_Facility[Facility_Name]),
+			        ALL(Dim_Facility),
+			        Dim_PeerGroup[PeerGroup_Name] = CurrentPeerGroup
+			    )
+			RETURN
+			MEDIANX(
+			    FacilitiesInPeerGroup,
+			    [Acute Transfer Share %]
+			)
+			```
+		formatString: 0.0%
+		displayFolder: PeerGroup Benchmarks
+
+	/// Facility post-acute share minus peer group median (percentage points)
+	measure 'Post-Acute vs Peer Median (pp)' =
+			VAR FacilityRate = [Post-Acute Discharge Share %]
+			VAR PGMedian = [PeerGroup Post-Acute Share Median]
+			RETURN
+			IF(
+			    NOT ISBLANK(FacilityRate) && NOT ISBLANK(PGMedian),
+			    (FacilityRate - PGMedian) * 100,
+			    BLANK()
+			)
+		formatString: +0.0;-0.0;0.0
+		displayFolder: Variance
+
+	/// Facility acute transfer share minus peer group median (percentage points)
+	measure 'Transfer vs Peer Median (pp)' =
+			VAR FacilityRate = [Acute Transfer Share %]
+			VAR PGMedian = [PeerGroup Acute Transfer Share Median]
+			RETURN
+			IF(
+			    NOT ISBLANK(FacilityRate) && NOT ISBLANK(PGMedian),
+			    (FacilityRate - PGMedian) * 100,
+			    BLANK()
+			)
+		formatString: +0.0;-0.0;0.0
+		displayFolder: Variance
+
+	/// Conditional formatting: White if above PG median, gray otherwise
+	measure 'Post-Acute Share Label Color' = ```
+			VAR FacilityRate = [Post-Acute Discharge Share %]
+			VAR CurrentPeerGroup = 
+			    MAXX(
+			        RELATEDTABLE(Bridge_Facility_PeerGroup),
+			        RELATED(Dim_PeerGroup[PeerGroup_Name])
+			    )
+			VAR PGMedian = 
+			    MEDIANX(
+			        CALCULATETABLE(
+			            VALUES(Dim_Facility[Facility_Name]),
+			            ALL(Dim_Facility),
+			            Dim_PeerGroup[PeerGroup_Name] = CurrentPeerGroup
+			        ),
+			        [Post-Acute Discharge Share %]
+			    )
+			RETURN
+			IF(
+			    ISBLANK(PGMedian),
+			    "#808080",
+			    IF(FacilityRate > PGMedian, "White", "#808080")
+			)
+			```
+		isHidden
+		displayFolder: Helper
+
+	/// Post-acute median for the facility's peer group (works without PG in filter context)
+	measure 'Facility PeerGroup Post-Acute Median' = ```
+			VAR CurrentPeerGroup = 
+			    MAXX(
+			        RELATEDTABLE(Bridge_Facility_PeerGroup),
+			        RELATED(Dim_PeerGroup[PeerGroup_Name])
+			    )
+			RETURN
+			MEDIANX(
+			    CALCULATETABLE(
+			        VALUES(Dim_Facility[Facility_Name]),
+			        ALL(Dim_Facility),
+			        Dim_PeerGroup[PeerGroup_Name] = CurrentPeerGroup
+			    ),
+			    [Post-Acute Discharge Share %]
+			)
+			```
+		formatString: 0.0%
+		displayFolder: PeerGroup Benchmarks
+
 	column Column
 		isHidden
 		formatString: 0

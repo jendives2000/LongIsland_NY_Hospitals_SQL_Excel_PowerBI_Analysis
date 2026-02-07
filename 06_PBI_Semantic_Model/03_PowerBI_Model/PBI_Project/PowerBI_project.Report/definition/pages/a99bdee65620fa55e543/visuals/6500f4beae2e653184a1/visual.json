@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "6500f4beae2e653184a1",
   "position": {
-    "x": 660.15584415584408,
-    "y": 16.191600607185023,
+    "x": 661.40689655172412,
+    "y": 15.809641242785489,
     "z": 3000,
-    "height": 536.72727272727275,
-    "width": 608.41558441558436,
+    "height": 536.93793103448274,
+    "width": 607.11724137931037,
     "tabOrder": 1000
   },
   "visual": {
@@ -54,14 +54,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Dim_ClinicalClass"
+                      "Entity": "Dim_Disposition"
                     }
                   },
-                  "Property": "APR_Risk_Of_Mortality_Desc"
+                  "Property": "Disposition_Grouped"
                 }
               },
-              "queryRef": "Dim_ClinicalClass.APR_Risk_Of_Mortality_Desc",
-              "nativeQueryRef": "APR_Risk_Of_Mortality_Desc"
+              "queryRef": "Dim_Disposition.Disposition_Grouped",
+              "nativeQueryRef": "Disposition_Grouped"
             }
           ]
         },
@@ -72,14 +72,112 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Mortality"
+                      "Entity": "_Disposition"
                     }
                   },
-                  "Property": "High ROM Sort"
+                  "Property": "Total Inpatient Encounters"
                 }
               },
-              "queryRef": "_Mortality.High ROM Sort",
-              "nativeQueryRef": "High ROM Sort"
+              "queryRef": "_Disposition.Total Inpatient Encounters",
+              "nativeQueryRef": "Total Inpatient Encounters"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Disposition"
+                    }
+                  },
+                  "Property": "Home Discharge Share %"
+                }
+              },
+              "queryRef": "_Disposition.Home Discharge Share %",
+              "nativeQueryRef": "Home Discharge Share %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Disposition"
+                    }
+                  },
+                  "Property": "Post-Acute Discharge Share %"
+                }
+              },
+              "queryRef": "_Disposition.Post-Acute Discharge Share %",
+              "nativeQueryRef": "Post-Acute Discharge Share %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Disposition"
+                    }
+                  },
+                  "Property": "Acute Transfer Share %"
+                }
+              },
+              "queryRef": "_Disposition.Acute Transfer Share %",
+              "nativeQueryRef": "Acute Transfer Share %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Disposition"
+                    }
+                  },
+                  "Property": "Other Discharge Share %"
+                }
+              },
+              "queryRef": "_Disposition.Other Discharge Share %",
+              "nativeQueryRef": "Other Discharge Share %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Disposition"
+                    }
+                  },
+                  "Property": "In-Hospital Death Share %"
+                }
+              },
+              "queryRef": "_Disposition.In-Hospital Death Share %",
+              "nativeQueryRef": "In-Hospital Death Share %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Disposition"
+                    }
+                  },
+                  "Property": "Post-Acute vs Peer Median (pp)"
+                }
+              },
+              "queryRef": "_Disposition.Post-Acute vs Peer Median (pp)",
+              "nativeQueryRef": "Post-Acute vs Peer Median (pp)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Disposition"
+                    }
+                  },
+                  "Property": "Transfer vs Peer Median (pp)"
+                }
+              },
+              "queryRef": "_Disposition.Transfer vs Peer Median (pp)",
+              "nativeQueryRef": "Transfer vs Peer Median (pp)"
             }
           ]
         },
@@ -87,22 +185,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "vw_Fact_KPI_SeverityMix_BySeverity"
-                        }
-                      },
-                      "Property": "Encounter_Year"
+                    "SourceRef": {
+                      "Entity": "_Disposition"
                     }
                   },
-                  "Function": 5
+                  "Property": "Disposition Share"
                 }
               },
-              "queryRef": "CountNonNull(vw_Fact_KPI_SeverityMix_BySeverity.Encounter_Year)",
-              "nativeQueryRef": "Encounter_Year"
+              "queryRef": "_Disposition.Disposition Share",
+              "nativeQueryRef": "Disposition Share"
             }
           ]
         }
@@ -111,16 +204,42 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "_Mortality"
+                    "Entity": "Dim_Facility"
                   }
                 },
-                "Property": "High ROM Sort"
+                "Property": "PeerGroup_Name"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
+          },
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Dim_Facility"
+                  }
+                },
+                "Property": "Facility_Name"
+              }
+            },
+            "direction": "Ascending"
+          },
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Dim_Disposition"
+                  }
+                },
+                "Property": "Disposition_Grouped"
+              }
+            },
+            "direction": "Ascending"
           }
         ]
       }
@@ -853,7 +972,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Mortality Mix by APR Risk of Mortality'"
+                  "Value": "'Discharge Destination Mix by Facility'"
                 }
               }
             },
@@ -892,14 +1011,14 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'System-level distribution of observed mortality rates (contextual signal)'"
+                  "Value": "'Exit-flow composition within peer context'"
                 }
               }
             }
@@ -909,5 +1028,190 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "2eb65d35cb0f0175ac20"
+  "parentGroupName": "2eb65d35cb0f0175ac20",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "73d47ac8eedf769ea9ba",
+        "ordinal": 0,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Facility"
+              }
+            },
+            "Property": "PeerGroup_Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "fe1a0b315c765a59d822",
+        "ordinal": 1,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Facility"
+              }
+            },
+            "Property": "Facility_Name"
+          }
+        },
+        "type": "TopN"
+      },
+      {
+        "name": "7f81965eb639cc129655",
+        "ordinal": 2,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Disposition"
+              }
+            },
+            "Property": "Acute Transfer Share %"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "1e466a1547c89f1effae",
+        "ordinal": 3,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Disposition"
+              }
+            },
+            "Property": "Disposition Share"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "1f26144a0850ff9ef772",
+        "ordinal": 4,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Disposition"
+              }
+            },
+            "Property": "Disposition_Grouped"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0a92261d417221d18b0c",
+        "ordinal": 5,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Disposition"
+              }
+            },
+            "Property": "Home Discharge Share %"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8b1bf75a7bbc099879a3",
+        "ordinal": 6,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Disposition"
+              }
+            },
+            "Property": "In-Hospital Death Share %"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f4ada3af6d7b86a61441",
+        "ordinal": 7,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Disposition"
+              }
+            },
+            "Property": "Other Discharge Share %"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "cc1fad094ce03c9bb824",
+        "ordinal": 8,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Disposition"
+              }
+            },
+            "Property": "Post-Acute Discharge Share %"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9731d1ef4d32e4e70121",
+        "ordinal": 9,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Disposition"
+              }
+            },
+            "Property": "Post-Acute vs Peer Median (pp)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "257c46cab90c51162315",
+        "ordinal": 10,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Disposition"
+              }
+            },
+            "Property": "Total Inpatient Encounters"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a7e57494f18ef511f325",
+        "ordinal": 11,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Disposition"
+              }
+            },
+            "Property": "Transfer vs Peer Median (pp)"
+          }
+        },
+        "type": "Advanced"
+      }
+    ],
+    "filterSortOrder": "Custom"
+  }
 }
