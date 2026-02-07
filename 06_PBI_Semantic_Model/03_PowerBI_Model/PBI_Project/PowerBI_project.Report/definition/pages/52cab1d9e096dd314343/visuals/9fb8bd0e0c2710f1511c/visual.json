@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "9fb8bd0e0c2710f1511c",
   "position": {
-    "x": 14.36734693877551,
-    "y": 194.78548100575426,
+    "x": 14.337662337662337,
+    "y": 188.66033695349429,
     "z": 4750,
-    "height": 389.22448979591837,
-    "width": 582.530612244898,
+    "height": 353.45454545454544,
+    "width": 586.59740259740261,
     "tabOrder": 22000
   },
   "visual": {
@@ -33,6 +33,14 @@
                       "color": "#ffffff"
                     }
                   }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
                 ]
               },
               {
@@ -51,7 +59,56 @@
                     }
                   },
                   {
-                    "value": " among a small subset of facilities rather than evenly distributed across the system.",
+                    "value": ", not evenly distributed.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "In this view, ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "six facilities account for ~983K bed-days (~54% of ~2M)",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", reflecting the ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "interaction of sustained volume and moderate-to-elevated LOS",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ". Facilities near or beyond both the LOS (≈5 days) and volume (~3,000 encounters) references generate ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "disproportionately higher bed-day impact",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " than sites with longer stays but lower volume.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -68,46 +125,20 @@
               {
                 "textRuns": [
                   {
-                    "value": "In this focused view, ",
+                    "value": "This pattern shows that ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "six facilities account for approximately 983K inpatient bed-days",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", representing ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "roughly 54% of the system’s total ~2M bed-days",
+                    "value": "system-level throughput pressure arises from concentration effects",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ". These facilities combine ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "moderate-to-elevated length of stay with sustained encounter volume",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", resulting in disproportionate contribution to overall throughput load.",
+                    "value": ", not uniform inefficiency.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -118,85 +149,6 @@
                 "textRuns": [
                   {
                     "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Positioning relative to the ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "LOS reference line (5 days)",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": " and the ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "volume reference line (~3,000 encounters)",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": " highlights how ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "throughput risk emerges from the interaction of LOS and volume",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", not from either dimension in isolation. Facilities near or beyond both reference points generate substantially more bed-day impact than facilities with longer stays but lower volume.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "This pattern indicates that ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "system-level throughput pressure is driven by concentration effects",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", where a limited number of high-volume settings shape aggregate capacity constraints.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
                   }
                 ]
               },
@@ -217,12 +169,20 @@
                       "color": "#ffffff"
                     }
                   }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "This visual is a ",
+                    "value": "Read this as a ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -235,64 +195,30 @@
                     }
                   },
                   {
-                    "value": ", not a performance comparison. It isolates the facilities that collectively account for the majority of inpatient bed-days to clarify where system-wide throughput pressure is most pronounced.",
+                    "value": ", not a performance comparison.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "The ",
+                    "value": "The LOS and volume lines are ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "LOS = 5 days",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": " and ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "Volume = 3,000 encounters",
+                    "value": "directional references",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " lines are ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "directional reference points",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", not medians, targets, or thresholds. Proximity to these lines indicates ",
+                    "value": ", not targets. Proximity indicates ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -305,13 +231,12 @@
                     }
                   },
                   {
-                    "value": ", not categorical classification.",
+                    "value": ", not classification.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   }
-                ],
-                "listType": "bullet"
+                ]
               },
               {
                 "textRuns": [
@@ -323,7 +248,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Large bubble size reflects ",
+                    "value": "Bubble size reflects ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -336,50 +261,38 @@
                     }
                   },
                   {
-                    "value": ", which captures the ",
+                    "value": " (LOS × volume), capturing ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "system impact of LOS when paired with volume",
+                    "value": "system impact",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", rather than inefficiency or quality differences.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Facilities shown here should be interpreted as ",
+                    "value": ", not quality or efficiency. Facilities shown are ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "structural throughput drivers",
+                    "value": "structural drivers due to scale",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " due to scale and case flow, not as outliers or underperformers.",
+                    "value": ", not outliers.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   }
-                ],
-                "listType": "bullet"
+                ]
               },
               {
                 "textRuns": [
@@ -391,20 +304,20 @@
               {
                 "textRuns": [
                   {
-                    "value": "Facilities outside this view may exhibit elevated LOS but contribute ",
+                    "value": "Facilities outside this view may have elevated LOS but ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "less to overall system pressure",
+                    "value": "lower system impact",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " because of lower volume; their exclusion reflects ",
+                    "value": " due to volume; exclusion reflects ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -422,8 +335,7 @@
                       "fontSize": "11pt"
                     }
                   }
-                ],
-                "listType": "bullet"
+                ]
               },
               {
                 "textRuns": [
@@ -435,31 +347,23 @@
               {
                 "textRuns": [
                   {
-                    "value": "This view should be used to ",
+                    "value": "Use this view to ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "contextualize downstream congestion, capacity strain, and LOS dispersion",
+                    "value": "contextualize system congestion and capacity strain",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " observed at the system level, not to attribute causality or assign accountability.",
+                    "value": ", not to infer causes or assign accountability.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
                   }
                 ]
               }
@@ -2107,6 +2011,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "ed3e78b7d54e31523a69",
-  "isHidden": true
+  "parentGroupName": "ed3e78b7d54e31523a69"
 }

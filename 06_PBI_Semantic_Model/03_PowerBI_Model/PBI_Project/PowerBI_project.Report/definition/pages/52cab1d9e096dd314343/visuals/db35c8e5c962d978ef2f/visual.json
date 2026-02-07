@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "db35c8e5c962d978ef2f",
   "position": {
-    "x": 14.337662337662337,
-    "y": 194.53118247250387,
+    "x": 15.584415584415584,
+    "y": 186.79020708336441,
     "z": 5500,
-    "height": 389.61038961038957,
-    "width": 582.23376623376623,
+    "height": 352.83116883116884,
+    "width": 587.22077922077915,
     "tabOrder": 20000
   },
   "visual": {
@@ -33,12 +33,46 @@
                       "color": "#ffffff"
                     }
                   }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "Throughput burden is unevenly distributed across the system and is driven by the interaction between length of stay and encounter volume rather than LOS differences alone.",
+                    "value": "Throughput burden is ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "unevenly distributed",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " and driven by the ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "interaction of LOS and encounter volume",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not LOS alone.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -55,7 +89,33 @@
               {
                 "textRuns": [
                   {
-                    "value": "Facilities positioned toward longer average stays and higher inpatient volume account for a disproportionate share of total inpatient bed-days, indicating that system-level throughput pressure is concentrated among a limited number of high-impact sites. Facilities with longer LOS but lower volume contribute meaningfully less to aggregate bed-day burden, while high-volume facilities with more typical LOS still exert material pressure due to scale.",
+                    "value": "Facilities with ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "both longer stays and higher volume",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " account for a disproportionate share of inpatient bed-days, concentrating system-level throughput pressure in a ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "small number of sites",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ". Longer LOS at low volume contributes limited aggregate burden, while high volume with typical LOS still exerts material pressure due to scale.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -72,7 +132,33 @@
               {
                 "textRuns": [
                   {
-                    "value": "The reference lines (LOS ≈ 5 days and ~3,000 encounters) provide directional context for relative positioning. Proximity to these lines reflects gradations of throughput exposure, not categorical performance or efficiency thresholds.",
+                    "value": "Reference lines (LOS ≈ 5 days; ~3,000 encounters) provide ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "directional context",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " only. Proximity reflects ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "relative throughput exposure",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not performance.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -89,10 +175,43 @@
               {
                 "textRuns": [
                   {
-                    "value": "Overall, this pattern indicates that sustained throughput strain emerges where LOS and volume coincide, reinforcing that operational risk is driven by concentration effects rather than uniform system inefficiency.",
+                    "value": "Overall, sustained throughput strain arises where ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
+                  },
+                  {
+                    "value": "LOS and volume coincide",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", indicating ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "concentration rather than system-wide inefficiency",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ".",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
                   }
                 ]
               },
@@ -113,52 +232,116 @@
                       "color": "#ffffff"
                     }
                   }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "The dashed reference lines at ",
+                    "value": "Read this view as ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "LOS = 5 days",
+                    "value": "throughput burden context",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " and ",
+                    "value": ", not performance evaluation.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "The LOS and volume reference lines are ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "Volume = 3,000 encounters",
+                    "value": "orientation anchors",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " are ",
+                    "value": ", not targets. Distance from either line indicates ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "contextual anchors",
+                    "value": "degree of exposure",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not performance thresholds.",
+                    "value": ", not acceptability.",
                     "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Above the volume line: higher potential system impact due to scale",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Right of the LOS line: longer-than-typical stays, with impact dependent on volume",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Upper-right region: areas where throughput variation is more likely to translate into ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "system-level capacity pressure",
+                    "textStyle": {
+                      "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   }
@@ -175,26 +358,12 @@
               {
                 "textRuns": [
                   {
-                    "value": "These lines provide a ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "shared frame of reference",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": " to support visual orientation and comparison across facilities of different scale.",
+                    "value": "Facilities below one or both lines may still experience localized issues, but their contribution to total bed-day burden is more limited.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   }
-                ],
-                "listType": "bullet"
+                ]
               },
               {
                 "textRuns": [
@@ -206,224 +375,20 @@
               {
                 "textRuns": [
                   {
-                    "value": "Proximity to either line indicates relative positioning",
+                    "value": "Crossing a reference line ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "does not imply inefficiency or need for action",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not categorical classification or acceptability.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Facilities above the ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "volume reference line",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": " represent higher potential system impact due to scale, regardless of whether LOS is modest or elevated.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Facilities to the right of the ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "LOS reference line",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": " indicate longer-than-typical stays, but their ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "operational significance depends on volume",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ".",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Facilities in the ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "upper-right region",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": " (above both reference lines) signal areas where ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "throughput variation is more likely to translate into system-level capacity pressure",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ".",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Facilities below one or both reference lines may still exhibit localized inefficiencies, but their ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "contribution to aggregate bed-day burden is more limited",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ".",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "As with the Intake Pressure vs Volume view, ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "these reference lines are directional guides",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", intended to support interpretation of interaction effects rather than define high/low performance states.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Key caution:",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": " Crossing a reference line does not imply inefficiency, deficiency, or need for intervention. The visual describes ",
+                    "value": ". This view shows ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -440,13 +405,6 @@
                     "textStyle": {
                       "fontSize": "11pt"
                     }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
                   }
                 ]
               }
