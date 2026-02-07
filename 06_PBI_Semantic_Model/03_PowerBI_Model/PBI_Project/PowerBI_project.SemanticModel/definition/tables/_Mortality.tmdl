@@ -86,13 +86,18 @@ table _Mortality
 		displayFolder: Helper
 		lineageTag: fc376d70-8cd4-492b-b7b6-0592c6fd1071
 
-	/// Share of encounters with High or Extreme Risk of Mortality
-	measure 'High Extreme ROM Share' =
-			VAR HighExtreme = CALCULATE([Mortality Total Encounters], Fact_KPI_Mortality[Risk_of_Mortality] IN {"High", "Extreme"})
-			VAR Total = [Mortality Total Encounters]
+	/// Share of encounters with Major or Extreme Risk of Mortality (high-acuity cases)
+	measure 'Major-Extreme ROM Share' = ```
+			VAR HighRisk = 
+			    CALCULATE(
+			        SUM(vw_Fact_KPI_SeverityMix_BySeverity[Encounter_Count]),
+			        Dim_ClinicalClass[APR_Risk_Of_Mortality_Desc] IN {"Major", "Extreme"}
+			    )
+			VAR Total = SUM(vw_Fact_KPI_SeverityMix_BySeverity[Encounter_Count])
 			RETURN
-			DIVIDE(HighExtreme, Total)
-		formatString: 0.00%
+			DIVIDE(HighRisk, Total)
+			```
+		formatString: 0.0%
 		displayFolder: ROM Mix
 		lineageTag: 78d94f95-e3cd-4383-9c32-bbc35323ff97
 
@@ -142,6 +147,39 @@ table _Mortality
 			IF(NOT ISBLANK(r) && r > m, "#FFFFFF", "#808080")
 		displayFolder: Helper
 		lineageTag: 1a4bfe68-67df-4b2a-a915-0adc8e36d2ef
+
+	/// Sort helper for Major+Extreme ROM percentage
+	measure 'Major-Extreme ROM % (Sort)' =
+			CALCULATE(
+			    DIVIDE(
+			        SUM(vw_Fact_KPI_SeverityMix_BySeverity[Encounter_Count]),
+			        CALCULATE(
+			            SUM(vw_Fact_KPI_SeverityMix_BySeverity[Encounter_Count]),
+			            ALLSELECTED(Dim_ClinicalClass[APR_Risk_Of_Mortality_Desc])
+			        )
+			    ),
+			    ALLSELECTED(Dim_ClinicalClass[APR_Risk_Of_Mortality_Desc]),
+			    Dim_ClinicalClass[APR_Risk_Of_Mortality_Desc] IN {"Major", "Extreme"}
+			)
+		formatString: 0.0%
+		displayFolder: Helper
+		lineageTag: e8a3e094-f8ec-4999-935c-4bbc3cca5d76
+
+	/// Sort helper: Major+Extreme ROM share, ignores legend filter
+	measure 'High ROM Sort' = ```
+			VAR _Total = SUM(vw_Fact_KPI_SeverityMix_BySeverity[Encounter_Count])
+			VAR _HighRisk = 
+			    CALCULATE(
+			        SUM(vw_Fact_KPI_SeverityMix_BySeverity[Encounter_Count]),
+			        Dim_ClinicalClass[APR_Risk_Of_Mortality_Desc] IN {"Major", "Extreme"},
+			        ALL(Dim_ClinicalClass[APR_Risk_Of_Mortality_Desc])
+			    )
+			RETURN
+			DIVIDE(_HighRisk, _Total)
+			```
+		formatString: 0.0%
+		isHidden
+		displayFolder: Helper
 
 	column Column
 		formatString: 0

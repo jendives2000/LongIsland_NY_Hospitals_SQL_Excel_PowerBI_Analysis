@@ -3,14 +3,14 @@
   "name": "906977a8f16faabf7618",
   "position": {
     "x": 660.15584415584408,
-    "y": 16.822453112946903,
+    "y": 16.191600607185023,
     "z": 3000,
-    "height": 530.49350649350652,
+    "height": 536.72727272727275,
     "width": 608.41558441558436,
-    "tabOrder": 23003
+    "tabOrder": 1000
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "hundredPercentStackedBarChart",
     "query": {
       "queryState": {
         "Category": {
@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Dim_PeerGroup"
+                      "Entity": "Dim_Facility"
                     }
                   },
                   "Property": "PeerGroup_Name"
                 }
               },
-              "queryRef": "Dim_PeerGroup.PeerGroup_Name",
+              "queryRef": "Dim_Facility.PeerGroup_Name",
               "nativeQueryRef": "PeerGroup_Name",
               "active": true
             },
@@ -47,7 +47,43 @@
             }
           ]
         },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_ClinicalClass"
+                    }
+                  },
+                  "Property": "APR_Risk_Of_Mortality_Desc"
+                }
+              },
+              "queryRef": "Dim_ClinicalClass.APR_Risk_Of_Mortality_Desc",
+              "nativeQueryRef": "APR_Risk_Of_Mortality_Desc"
+            }
+          ]
+        },
         "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Mortality"
+                    }
+                  },
+                  "Property": "High ROM Sort"
+                }
+              },
+              "queryRef": "_Mortality.High ROM Sort",
+              "nativeQueryRef": "High ROM Sort"
+            }
+          ]
+        },
+        "Y": {
           "projections": [
             {
               "field": {
@@ -56,50 +92,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Fact_KPI_FinancialPressure"
+                          "Entity": "vw_Fact_KPI_SeverityMix_BySeverity"
                         }
                       },
-                      "Property": "Encounter_Count"
+                      "Property": "Encounter_Year"
                     }
                   },
-                  "Function": 0
+                  "Function": 5
                 }
               },
-              "queryRef": "Sum(Fact_KPI_FinancialPressure.Encounter_Count)",
-              "nativeQueryRef": "Total Encounter",
-              "displayName": "Total Encounter"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Volume_&_Denominators"
-                    }
-                  },
-                  "Property": "Deaths Count"
-                }
-              },
-              "queryRef": "_Volume_&_Denominators.Deaths Count",
-              "nativeQueryRef": "Deaths Count"
-            }
-          ]
-        },
-        "Y": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Guardrails"
-                    }
-                  },
-                  "Property": "Mortality Rate (Guarded)"
-                }
-              },
-              "queryRef": "_Guardrails.Mortality Rate (Guarded)",
-              "nativeQueryRef": "Mortality Rate (Guarded)"
+              "queryRef": "CountNonNull(vw_Fact_KPI_SeverityMix_BySeverity.Encounter_Year)",
+              "nativeQueryRef": "Encounter_Year"
             }
           ]
         }
@@ -111,10 +114,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "_Guardrails"
+                    "Entity": "_Mortality"
                   }
                 },
-                "Property": "Mortality Rate (Guarded)"
+                "Property": "High ROM Sort"
               }
             },
             "direction": "Descending"
@@ -150,14 +153,14 @@
             "enableDetailDataLabel": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
             "enableValueDataLabel": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -176,7 +179,7 @@
             "labelPosition": {
               "expr": {
                 "Literal": {
-                  "Value": "'OutsideEnd'"
+                  "Value": "'InsideCenter'"
                 }
               }
             },
@@ -188,6 +191,20 @@
               }
             },
             "optimizeLabelDisplay": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "labelOverflow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableBackground": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -277,6 +294,48 @@
               }
             ],
             "metadata": "_Financial_Basic.PeerGroup Margin Pressure Median"
+          }
+        },
+        {
+          "properties": {
+            "detailColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.2
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Dim_ClinicalClass"
+                          }
+                        },
+                        "Property": "APR_Risk_Of_Mortality_Desc"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Extreme'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
           }
         }
       ],
@@ -524,6 +583,174 @@
           "selector": {
             "metadata": "_Financial_Basic.PeerGroup Margin Pressure Median"
           }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Dim_ClinicalClass"
+                          }
+                        },
+                        "Property": "APR_Risk_Of_Mortality_Desc"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Minor'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Dim_ClinicalClass"
+                          }
+                        },
+                        "Property": "APR_Risk_Of_Mortality_Desc"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Moderate'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.6
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Dim_ClinicalClass"
+                          }
+                        },
+                        "Property": "APR_Risk_Of_Mortality_Desc"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Major'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Dim_ClinicalClass"
+                          }
+                        },
+                        "Property": "APR_Risk_Of_Mortality_Desc"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Extreme'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
         }
       ],
       "legend": [
@@ -581,13 +808,6 @@
                   }
                 }
               }
-            },
-            "end": {
-              "expr": {
-                "Literal": {
-                  "Value": "0.05D"
-                }
-              }
             }
           }
         }
@@ -611,6 +831,19 @@
             }
           }
         }
+      ],
+      "ribbonBands": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -620,7 +853,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Mortality Rate across Peer Groups'"
+                  "Value": "'Mortality Mix by APR Risk of Mortality'"
                 }
               }
             },
@@ -659,7 +892,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },

@@ -3,7 +3,7 @@
   "name": "bac8e83d9ba73dead5c6",
   "position": {
     "x": 14.961038961038961,
-    "y": 8.570298313593991,
+    "y": 6.70016844346412,
     "z": 2000,
     "height": 357.81818181818181,
     "width": 580.98701298701292,
@@ -26,7 +26,7 @@
                     }
                   },
                   {
-                    "value": "C&MP (Informational)",
+                    "value": "Mortality (Informational)",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -44,7 +44,33 @@
               {
                 "textRuns": [
                   {
-                    "value": "The cost and margin pressure views define how financial stress is distributed across the system but do not explain why that distribution occurs. ",
+                    "value": "The mortality views provide ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "risk-mix context",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", showing how observed mortality is distributed across APR Risk of Mortality categories by facility. They describe ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "risk composition",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not outcome performance or causes.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -61,7 +87,59 @@
               {
                 "textRuns": [
                   {
-                    "value": "Where observed concentration, dispersion, or co-occurrence raises interpretive questions, diagnostic analysis would generally span multiple structural dimensions. These may include:",
+                    "value": "In the context of ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "broadly comparable severity",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "system-wide intake pressure",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", and ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "localized throughput burden",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", observed mortality occurs within a ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "shared risk environment",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not one dominated by isolated concentrations of extreme-risk cases.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -78,7 +156,37 @@
               {
                 "textRuns": [
                   {
-                    "value": "the composition of underlying cost bases",
+                    "value": "If downstream patterns warrant diagnostic review, analysis would typically examine ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "separate dimensions",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", such as:",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "concordance between outcomes and APR risk stratification",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -89,7 +197,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "service intensity and case-mix profiles",
+                    "value": "timing of adverse events relative to prolonged LOS",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -100,7 +208,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "reimbursement and payer mix exposure",
+                    "value": "interaction between throughput congestion and high-risk cohorts",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -111,7 +219,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "sustained volume patterns",
+                    "value": "care transitions and escalation patterns across risk levels",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -122,7 +230,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "and the interaction between utilization pressure and internal throughput constraints",
+                    "value": "overlap with cost accumulation or capacity strain",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -140,7 +248,20 @@
               {
                 "textRuns": [
                   {
-                    "value": "Additional consideration may extend to coding realization, contractual reimbursement structures, and dependence on external care continuums or market conditions.",
+                    "value": "These domains are ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "illustrative only",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ".",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -150,14 +271,20 @@
               {
                 "textRuns": [
                   {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
+                    "value": "Relevance requires ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
                   {
-                    "value": "The inclusion of these domains is illustrative rather than inferential. Their relevance cannot be assumed and must be established through separate, methodologically appropriate diagnostic analysis.",
+                    "value": "independent diagnostic analysis",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " beyond this contextual view.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }

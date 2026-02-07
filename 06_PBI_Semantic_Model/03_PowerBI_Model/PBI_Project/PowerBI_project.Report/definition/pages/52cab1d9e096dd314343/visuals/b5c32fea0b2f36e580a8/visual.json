@@ -126,5 +126,23 @@
     "drillFilterOtherVisuals": true
   },
   "parentGroupName": "ed3e78b7d54e31523a69",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "e67dd52ce974a732c5ee",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Facility"
+              }
+            },
+            "Property": "Facility_Name"
+          }
+        },
+        "type": "TopN"
+      }
+    ]
+  },
   "isHidden": true
 }

@@ -3,11 +3,11 @@
   "name": "38f067af30044765da63",
   "position": {
     "x": 14.337662337662337,
-    "y": 185.12123236725446,
+    "y": 185.18404970037582,
     "z": 2000,
     "height": 361.55844155844153,
     "width": 582.23376623376623,
-    "tabOrder": 23002
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "textbox",
@@ -21,7 +21,7 @@
                   {
                     "value": "INSIGHT:",
                     "textStyle": {
-                      "fontSize": "11pt",
+                      "fontSize": "12pt",
                       "textDecoration": "underline",
                       "color": "#ffffff"
                     }
@@ -29,7 +29,7 @@
                   {
                     "value": " ",
                     "textStyle": {
-                      "fontSize": "11pt",
+                      "fontSize": "12pt",
                       "color": "#ffffff"
                     }
                   }
@@ -46,19 +46,22 @@
               {
                 "textRuns": [
                   {
-                    "value": "Mortality rates show a wide but continuous distribution across facilities and peer groups, reflecting variation in outcome exposure rather than discrete performance categories. ",
+                    "value": "Observed mortality mix is ",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
+                  },
                   {
-                    "value": "Given tightly clustered patient severity, system-wide unplanned intake pressure, unevenly concentrated throughput burden as reflected in excess LOS, and concentrated C&MP, observed mortality variation occurs within shared structural operating conditions. ",
+                    "value": "broadly similar across facilities",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": ", with comparable distribution across APR risk categories rather than concentration in extreme risk alone.",
+                    "textStyle": {
+                      "fontSize": "12pt"
                     }
                   }
                 ]
@@ -73,9 +76,22 @@
               {
                 "textRuns": [
                   {
-                    "value": "The pattern reflects system-level outcome distribution shaped by upstream risk and operating context, not performance ranking or causal attribution.",
+                    "value": "Modest variation in Major and Extreme risk shares reflects ",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": "case-mix composition",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": ", not distinct mortality profiles or outcome performance.",
+                    "textStyle": {
+                      "fontSize": "12pt"
                     }
                   }
                 ]
@@ -99,7 +115,7 @@
                   {
                     "value": "INTERPRETATION GUIDELINES: ",
                     "textStyle": {
-                      "fontSize": "11pt",
+                      "fontSize": "12pt",
                       "textDecoration": "underline",
                       "color": "#ffffff"
                     }
@@ -117,9 +133,58 @@
               {
                 "textRuns": [
                   {
-                    "value": "Bars show mortality distribution under comparable structural context, with ordering indicating relative position within the spread rather than quality tiers. The range reflects system-level variation, not acceptable limits. ",
+                    "value": "Read this view as ",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": "mortality risk composition context",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": ", not outcome evaluation.",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Percentages show the ",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": "distribution of observed mortality across risk tiers",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": ", not mortality rates or care quality. Differences describe ",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": "risk mix",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": ", not survival performance.",
+                    "textStyle": {
+                      "fontSize": "12pt"
                     }
                   }
                 ]
@@ -134,19 +199,22 @@
               {
                 "textRuns": [
                   {
-                    "value": "This view does not establish causation, assign performance or accountability, or isolate drivers. Mortality should be interpreted only alongside upstream context, using proximity for contextual comparison rather than corrective inference. ",
+                    "value": "This view should be carried forward to ",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
+                  },
                   {
-                    "value": "This visual functions as an outcome-context lens, not an explanatory endpoint.",
+                    "value": "contextualize downstream mortality metrics",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": ", not to infer causality, effectiveness, or accountability.",
+                    "textStyle": {
+                      "fontSize": "12pt"
                     }
                   }
                 ]

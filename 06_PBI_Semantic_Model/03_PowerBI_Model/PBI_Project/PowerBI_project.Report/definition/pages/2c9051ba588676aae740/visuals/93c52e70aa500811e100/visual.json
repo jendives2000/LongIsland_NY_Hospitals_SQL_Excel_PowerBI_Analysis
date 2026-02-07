@@ -136,6 +136,21 @@
         }
       },
       "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Financial_Basic"
+                  }
+                },
+                "Property": "Margin Pressure Burden"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
         "isDefaultSort": true
       }
     },
@@ -843,6 +858,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "46481fb3a6142db9409d",
-  "isHidden": true
+  "parentGroupName": "46481fb3a6142db9409d"
 }

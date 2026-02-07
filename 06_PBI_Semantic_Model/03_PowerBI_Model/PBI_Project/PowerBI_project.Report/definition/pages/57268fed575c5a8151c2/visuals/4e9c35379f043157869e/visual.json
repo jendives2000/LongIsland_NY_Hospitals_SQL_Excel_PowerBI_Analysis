@@ -6,7 +6,7 @@
     "y": 201.76024562733079,
     "z": 7500,
     "height": 359.06493506493507,
-    "width": 580.98701298701292,
+    "width": 585.974025974026,
     "tabOrder": 12000
   },
   "visual": {
@@ -21,11 +21,15 @@
                   {
                     "value": "INSIGHT:",
                     "textStyle": {
+                      "fontSize": "11pt",
                       "textDecoration": "underline"
                     }
                   },
                   {
-                    "value": " "
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ],
                 "horizontalTextAlignment": "center"
@@ -40,25 +44,36 @@
               {
                 "textRuns": [
                   {
-                    "value": "This view shows the share of "
+                    "value": "This view shows the share of ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   },
                   {
                     "value": "Extreme-severity cases",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " by facility relative to a "
+                    "value": " by facility relative to a ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   },
                   {
                     "value": "peer-group baseline (33.3%)",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", highlighting how the highest-acuity cases are distributed within comparable contexts."
+                    "value": ", highlighting how the highest-acuity cases are distributed within comparable contexts.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               },
@@ -72,25 +87,36 @@
               {
                 "textRuns": [
                   {
-                    "value": "Facilities span a range around the peer median, indicating "
+                    "value": "Facilities span a range around the peer median, indicating ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   },
                   {
                     "value": "variation in acuity concentration within peer groups",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", even where overall severity levels are otherwise comparable. This reflects "
+                    "value": ", even where overall severity levels are otherwise comparable. This reflects ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   },
                   {
                     "value": "case-mix composition",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not absolute severity dominance across the system."
+                    "value": ", not severity dominance in the system.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               },
@@ -113,11 +139,15 @@
                   {
                     "value": "INTERPRETATION GUIDANCE:",
                     "textStyle": {
+                      "fontSize": "11pt",
                       "textDecoration": "underline"
                     }
                   },
                   {
-                    "value": " "
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ],
                 "horizontalTextAlignment": "center"
@@ -132,16 +162,23 @@
               {
                 "textRuns": [
                   {
-                    "value": "Extreme severity share reflects "
+                    "value": "Extreme severity share reflects ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   },
                   {
                     "value": "concentration of highest-acuity cases",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not overall complexity or performance."
+                    "value": ", not overall complexity or performance.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               },
@@ -155,34 +192,49 @@
               {
                 "textRuns": [
                   {
-                    "value": "Being above the peer median indicates "
+                    "value": "Being above the peer median indicates ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   },
                   {
                     "value": "relative positioning within a similar context",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not exceptional severity across facilities. Differences shown provide "
+                    "value": ", not exceptional severity across facilities. Differences shown provide ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   },
                   {
                     "value": "acuity-mix context",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " for interpreting downstream metrics (LOS, cost, mortality) and should be used as "
+                    "value": " for interpreting downstream metrics (LOS, cost, mortality) and should be used as ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   },
                   {
                     "value": "contextual input",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not as an evaluative or explanatory endpoint."
+                    "value": ", not as an evaluative or explanatory endpoint.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               }
