@@ -3,9 +3,9 @@
   "name": "0e45b83c79986c27d7f1",
   "position": {
     "x": 13.09090909090909,
-    "y": 163.67594894564027,
+    "y": 47.182219029073565,
     "z": 12000,
-    "height": 182.02597402597402,
+    "height": 215.06493506493504,
     "width": 600.31168831168827,
     "tabOrder": 3000
   },
@@ -19,20 +19,30 @@
               {
                 "textRuns": [
                   {
-                    "value": "Throughput pressure reflects how ",
+                    "value": "This view provides throughput context, not performance evaluation. ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Throughput reflects how patients move through inpatient care ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "patient movement through inpatient care is observed once admitted",
+                    "value": "after admission",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", given prevailing intake conditions.",
+                    "value": ", given prevailing intake pressure.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -59,7 +69,29 @@
               {
                 "textRuns": [
                   {
-                    "value": "Internal flow design and care sequencing",
+                    "value": "care sequencing and coordination",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "bed availability and unit-level capacity alignment",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "discharge planning and downstream exit constraints",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -77,74 +109,20 @@
               {
                 "textRuns": [
                   {
-                    "value": "Bed availability and unit-level capacity alignment",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Discharge coordination and downstream exit constraints",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "The co-occurrence between sustained intake pressure and operational responsiveness",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "When LOS variation is observed ",
+                    "value": "When LOS varies ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "within peer groups operating under similar acuity and intake conditions",
+                    "value": "within peer groups operating under similar acuity and intake",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", it is more frequently aligned with ",
+                    "value": ", it is more consistent with ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -161,13 +139,6 @@
                     "textStyle": {
                       "fontSize": "11pt"
                     }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
                   }
                 ]
               }

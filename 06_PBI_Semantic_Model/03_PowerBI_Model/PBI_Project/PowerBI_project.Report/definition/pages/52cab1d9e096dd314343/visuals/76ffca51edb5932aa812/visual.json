@@ -3,9 +3,9 @@
   "name": "76ffca51edb5932aa812",
   "position": {
     "x": 13.09090909090909,
-    "y": 414.18142754705065,
+    "y": 330.81858266543719,
     "z": 6000,
-    "height": 146.49350649350649,
+    "height": 219.42857142857142,
     "width": 600.31168831168827,
     "tabOrder": 10000
   },
@@ -19,20 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Throughput is associated with how inpatient capacity is ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "absorbed, constrained, or released",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": " across the system.",
+                    "value": "Throughput shapes how inpatient capacity is absorbed and released.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -49,7 +36,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "When patient severity is tightly clustered and unplanned intake is sustained, variation in LOS is observed alongside:",
+                    "value": "With comparable severity and sustained unplanned intake, LOS variation is observed alongside:",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -59,7 +46,36 @@
               {
                 "textRuns": [
                   {
-                    "value": "Differences in bed availability and congestion",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "differences in bed congestion",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "variation in cost accumulation and margin pressure",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "differing exposure to downstream utilization and outcome metrics",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -77,53 +93,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "Co-occurring variation in cost accumulation and margin pressure",
+                    "value": "Understanding throughput context is essential when interpreting downstream variation.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Is associated with differing exposure to downstream operational and outcome measures",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Understanding throughput context is timportant when interpreting differences in cost, utilization, or outcomes across facilities or peer groups.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
                   }
                 ]
               }
