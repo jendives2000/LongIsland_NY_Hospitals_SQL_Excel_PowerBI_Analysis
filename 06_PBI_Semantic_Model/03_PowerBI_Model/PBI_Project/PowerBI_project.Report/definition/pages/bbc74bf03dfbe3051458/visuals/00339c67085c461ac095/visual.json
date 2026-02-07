@@ -44,20 +44,46 @@
               {
                 "textRuns": [
                   {
-                    "value": "This view shows that unplanned intake (UI) pressure reflects the ",
+                    "value": "Payer concentration is ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "interaction between admission rate and inpatient volume",
+                    "value": "uneven across facilities",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not rate alone.",
+                    "value": ", with some operating under ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "high reliance on a small number of payers",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " while others maintain more diversified reimbursement exposure. This reflects ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "facility-level variation in reimbursement dependency",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not differences in patient acuity, demand, or operational performance.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -74,63 +100,46 @@
               {
                 "textRuns": [
                   {
-                    "value": "All facilities operate above the ~40% unplanned admission reference, and many also at moderate to high encounter volumes, placing them in a zone where ",
+                    "value": "Given ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "rate and scale compound",
+                    "value": "comparable severity",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ". Facilities with high rates but lower volumes are also present, indicating that UI pressure is ",
+                    "value": " and ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "distributed across operating contexts",
+                    "value": "system-wide unplanned intake",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not confined to large hospitals.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Overall, the pattern reflects ",
+                    "value": ", higher concentration signals ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "dispersion across both dimensions",
+                    "value": "greater sensitivity to payer-specific reimbursement conditions",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", rather than concentration in a single cluster.",
+                    "value": ", not quality or efficiency.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -173,20 +182,56 @@
               {
                 "textRuns": [
                   {
-                    "value": "Read this view as a ",
+                    "value": "Read this view as ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "context signal",
+                    "value": "reimbursement dependency context, not performance evaluation",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not a performance comparison.",
+                    "value": ".",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Concentration bands are ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "descriptive references",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not thresholds or targets. Higher concentration indicates ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "greater reliance on fewer payers",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", shaping financial exposure rather than operations.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -203,33 +248,20 @@
               {
                 "textRuns": [
                   {
-                    "value": "Unplanned intake pressure should be interpreted as a ",
+                    "value": "Downstream differences in margin pressure, cost, or disposition should be interpreted ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "rate × volume interaction",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", with reference lines indicating ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "relative positioning",
+                    "value": "with payer dependency carried forward as context",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not categorical thresholds; downstream variation (LOS, cost, throughput, outcomes) should be interpreted in light of intake exposure, not effectiveness or causality.",
+                    "value": ", not as evidence of operational effectiveness or outcome causality.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }

@@ -170,10 +170,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "_PayerMix"
+                    "Entity": "Dim_ClinicalClass"
                   }
                 },
-                "Property": "PeerGroup Risk Payer Share Median"
+                "Property": "PeerGroup UA Rate Median"
               }
             },
             "direction": "Descending"
@@ -1017,5 +1017,6 @@
       }
     ],
     "filterSortOrder": "Custom"
-  }
+  },
+  "isHidden": true
 }
