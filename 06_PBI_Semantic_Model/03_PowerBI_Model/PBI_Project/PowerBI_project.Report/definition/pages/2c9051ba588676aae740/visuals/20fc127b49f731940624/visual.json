@@ -3,9 +3,9 @@
   "name": "20fc127b49f731940624",
   "position": {
     "x": 14.337662337662337,
-    "y": 193.87012987012986,
+    "y": 194.16967448136279,
     "z": 10500,
-    "height": 389.61038961038957,
+    "height": 345.35064935064935,
     "width": 582.23376623376623,
     "tabOrder": 21000
   },
@@ -33,27 +33,8 @@
                       "color": "#ffffff"
                     }
                   }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Cost and margin pressure (financial stress) shows an uneven distribution across facilities when viewed against an all-facilities median rather than within peer groups.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Variation in the cost-to-charge ratio remains clustered, with a subset of facilities positioned well above the system-wide reference line, while a broad middle and lower segment spans below it.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
+                ],
+                "horizontalTextAlignment": "center"
               },
               {
                 "textRuns": [
@@ -65,7 +46,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "This indicates that financial stress exposure is concentrated in specific facilities rather than uniformly elevated across the system. Using a single, all-facilities median reframes relative positioning but does not change the underlying structural signal: pressure is unevenly distributed, not system-wide.",
+                    "value": "Against the all-facilities median, margin pressure is unevenly distributed, with financial stress concentrated in a limited subset of facilities rather than system-wide. A small number of sites sit materially above the system reference while most remain near or below it. Relative position reflects combined exposure from cost structure, volume, and reimbursement context, including payer mix, not performance or causality. The visual shows distribution of margin pressure, not ranking.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -76,16 +57,6 @@
                 "textRuns": [
                   {
                     "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Overall, this pattern reflects distribution and concentration of financial stress exposure, not performance ranking, causality, or financial effectiveness.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
                   }
                 ]
               },
@@ -106,62 +77,8 @@
                       "color": "#ffffff"
                     }
                   }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "How to read this visual",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Bars represent facility-level cost-to-charge ratios as a directional indicator of margin pressure.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
                 ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "The all-facilities median line provides a system-wide contextual benchmark, not a target or standard.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Distance above or below the median reflects relative exposure to financial stress within the system, not efficiency or management quality.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Ordering emphasizes spread and concentration, not priority or rank-based performance.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
+                "horizontalTextAlignment": "center"
               },
               {
                 "textRuns": [
@@ -173,46 +90,12 @@
               {
                 "textRuns": [
                   {
-                    "value": "What this does not imply",
+                    "value": "Facility-level margin pressure is a directional indicator of financial stress, with the all-facilities median serving as contextual reference rather than target. Distance from the median indicates relative exposure under prevailing operating and reimbursement conditions, not efficiency or management quality. ",
                     "textStyle": {
-                      "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   }
                 ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "This view does not control for peer-group differences, case mix, or market structure.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "It does not establish causal reasons for higher or lower margin pressure.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "It does not assign financial performance scores or judgments.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
               },
               {
                 "textRuns": [
@@ -224,74 +107,8 @@
               {
                 "textRuns": [
                   {
-                    "value": "How to use this insight",
+                    "value": "This view does not adjust for peer context, case mix, or payer composition and should be used only as a system-level baseline to contextualize downstream metrics, not as an explanatory endpoint.",
                     "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Use this view to understand where financial stress is concentrated at the system level.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Compare this system-wide exposure lens with peer-group views to distinguish structural context from relative positioning.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Interpret downstream financial or operational metrics with this baseline context in mind, not as standalone evidence.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "This visual should be used as a system-level baseline lens, not an explanatory endpoint.",
-                    "textStyle": {
-                      "fontStyle": "italic",
                       "fontSize": "11pt"
                     }
                   }

@@ -3,9 +3,9 @@
   "name": "d683d8460a03e1d0bc96",
   "position": {
     "x": 13.09090909090909,
-    "y": 148.20172035756451,
+    "y": 57.3545032328223,
     "z": 8500,
-    "height": 196.98701298701297,
+    "height": 218.18181818181816,
     "width": 600.31168831168827,
     "tabOrder": 10000
   },
@@ -19,20 +19,14 @@
               {
                 "textRuns": [
                   {
-                    "value": "Financial stress reflects the degree to which inpatient operating costs and reimbursement dynamics are associated with ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "sustained margin pressure under prevailing demand conditions",
+                    "value": "Financial Stress Pressure (FSP)",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ".",
+                    "value": " reflects sustained inpatient margin pressure driven by the interaction of operating costs, reimbursement, payer mix, and demand conditions. It describes system-level operating strain rather than short-term financial fluctuation.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -49,104 +43,61 @@
               {
                 "textRuns": [
                   {
-                    "value": "Margin pressure is associated with:",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "The volume and mix of inpatient encounters",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "The balance between medical cost per encounter and realized reimbursement",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "The co-occurrence between sustained utilization and operational throughput constraints",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "When cost and margin pressure are observed broadly across peer groups, financial outcomes tend to align more closely with ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "system-level operating conditions",
+                    "value": "What drives FSP",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
-                  },
-                  {
-                    "value": " rather than isolated site-level inefficiencies or short-term financial variation. ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "Observed associations describe operating conditions and do not establish causal relationships.",
+                    "value": "Inpatient volume and encounter mix",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   }
-                ]
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Medical cost per encounter relative to realized reimbursement",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Sustained utilization combined with throughput constraints",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
               },
               {
                 "textRuns": [
                   {
                     "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "When margin pressure is observed broadly across peers, financial outcomes tend to reflect shared operating conditions rather than isolated site-level inefficiencies. Observed associations are descriptive and not causal.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               }

@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": true
+              "active": false
             }
           ]
         },
@@ -725,5 +725,6 @@
       }
     ],
     "filterSortOrder": "Custom"
-  }
+  },
+  "isHidden": true
 }
