@@ -3,9 +3,9 @@
   "name": "86d6ad09f4356bb32144",
   "position": {
     "x": 14.337662337662337,
-    "y": 193.87012987012986,
+    "y": 187.31253162421993,
     "z": 8500,
-    "height": 389.61038961038957,
+    "height": 350.33766233766232,
     "width": 582.23376623376623,
     "tabOrder": 23000
   },
@@ -33,25 +33,20 @@
                       "color": "#ffffff"
                     }
                   }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "Margin pressure burden is ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "highly concentrated across a limited subset of facilities",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", rather than evenly distributed across the system.",
+                    "value": "Margin pressure burden is concentrated in a small subset of facilities rather than distributed evenly across the system. The cumulative curve rises steeply early and flattens quickly, indicating that a limited number of sites account for most system exposure while the remainder contribute marginally. ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -68,7 +63,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "The cumulative distribution shows that a relatively small number of facilities account for a disproportionate share of total margin pressure burden, with the cumulative curve rising steeply early and flattening as additional facilities are added.",
+                    "value": "This reflects structural concentration driven by cost, volume, and reimbursement context, including payer mix, not broad-based financial stress. The visual shows allocation of exposure, not performance or causality.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -79,59 +74,6 @@
                 "textRuns": [
                   {
                     "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "This pattern indicates ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "concentration rather than broad-based financial stress",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", where incremental facilities beyond the initial group contribute progressively smaller additions to total system burden. The long tail reflects diffuse, lower-magnitude exposure across many sites rather than widespread high pressure.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Overall, this visual reflects ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "how financial stress exposure is structurally allocated across facilities",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", not performance ranking, prioritization, or causal explanation.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
                   }
                 ]
               },
@@ -152,62 +94,8 @@
                       "color": "#ffffff"
                     }
                   }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "How to read this visual",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Bars represent facility-level margin pressure burden, ordered from highest to lowest contribution.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
                 ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "The cumulative line shows the running share of total margin pressure burden accounted for as facilities are added.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Early steep increases in the cumulative curve indicate concentration of burden among fewer facilities.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Later flattening indicates diminishing marginal contribution from additional facilities.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
+                "horizontalTextAlignment": "center"
               },
               {
                 "textRuns": [
@@ -219,46 +107,12 @@
               {
                 "textRuns": [
                   {
-                    "value": "What this does not imply",
+                    "value": "Facilities are ordered by margin pressure contribution, with bars showing individual burden and the cumulative line showing total share. Early steep increases indicate concentration; later flattening indicates diminishing contribution. ",
                     "textStyle": {
-                      "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   }
                 ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "This view does not assess financial performance, efficiency, or management effectiveness.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "It does not establish why certain facilities contribute more to total burden.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "It does not imply that facilities contributing less are financially stable or optimized.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
               },
               {
                 "textRuns": [
@@ -270,73 +124,8 @@
               {
                 "textRuns": [
                   {
-                    "value": "How to use this insight",
+                    "value": "The view does not assess efficiency or explain drivers and should be used solely as a concentration lens to contextualize peer and downstream financial or operational metrics, not as a ranking or diagnostic endpoint.",
                     "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Use this visual to understand whether margin pressure is system-wide or concentrated in a limited number of facilities.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Interpret peer comparisons, financial ratios, or operational metrics with this concentration context in mind.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Treat facilities contributing to early cumulative share as ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "structural drivers of system exposure",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", not as ranked or prioritized targets.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "This visual should be used as a concentration lens for financial stress exposure, not as a performance or causal explanation.",
-                    "textStyle": {
-                      "fontStyle": "italic",
                       "fontSize": "11pt"
                     }
                   }
@@ -1986,6 +1775,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "46481fb3a6142db9409d",
-  "isHidden": true
+  "parentGroupName": "46481fb3a6142db9409d"
 }

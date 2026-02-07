@@ -3,9 +3,9 @@
   "name": "b512917a40103f121086",
   "position": {
     "x": 14.337662337662337,
-    "y": 193.87012987012986,
+    "y": 186.6891550008433,
     "z": 9500,
-    "height": 389.61038961038957,
+    "height": 350.96103896103892,
     "width": 582.23376623376623,
     "tabOrder": 22000
   },
@@ -33,12 +33,20 @@
                       "color": "#ffffff"
                     }
                   }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "Financial stress (margin pressure) and throughput drag (excess LOS) exhibit a dispersed and uneven structural relationship across facilities rather than moving together in a uniform or linear pattern.",
+                    "value": "Margin pressure and throughput drag show a dispersed, non-linear relationship across facilities. Financial stress appears at both high and low excess LOS, and elevated throughput drag does not consistently align with higher margin pressure. ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -55,7 +63,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Facilities are distributed across all regions of the view, with margin pressure observed both above and below the system median at varying levels of throughput drag.",
+                    "value": "This dispersion reflects heterogeneous structural exposure, not a dominant system-wide relationship, and may be influenced by reimbursement context, including payer mix. The visual shows joint operating context, not performance, impact, or causality.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -66,33 +74,6 @@
                 "textRuns": [
                   {
                     "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "This dispersion indicates that elevated financial stress is not consistently aligned with higher throughput drag, and conversely, higher throughput drag does not uniformly correspond to increased margin pressure. The pattern reflects heterogeneous structural exposure across facilities, rather than a single dominant system-wide relationship between these two dimensions.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Overall, this visual reflects variation in joint operating context, not performance ranking, scale of impact, or causal linkage between throughput and financial stress.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
                   }
                 ]
               },
@@ -113,75 +94,8 @@
                       "color": "#ffffff"
                     }
                   }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "How to read this visual",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Each point represents a facility positioned by throughput drag (x-axis) and margin pressure (y-axis).",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
                 ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Marker size is uniform and does ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "not",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": " encode volume, scale, or impact.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "The vertical reference line represents the LOS peer median; the horizontal reference line represents the all-facilities margin pressure median.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Position relative to these lines indicates contextual placement within the distribution, not classification or segmentation.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
+                "horizontalTextAlignment": "center"
               },
               {
                 "textRuns": [
@@ -193,46 +107,12 @@
               {
                 "textRuns": [
                   {
-                    "value": "What this does not imply",
+                    "value": "Each point represents a facility positioned by excess LOS and margin pressure, with reference lines marking the LOS peer median and the all-facilities margin-pressure median. Position indicates relative context within the distribution, not classification. ",
                     "textStyle": {
-                      "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   }
                 ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "This view does not establish a causal relationship between throughput drag and financial stress.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "It does not imply that changes in LOS would directly alter margin pressure.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "It does not assess operational effectiveness, financial performance, or managerial quality.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
               },
               {
                 "textRuns": [
@@ -244,60 +124,8 @@
               {
                 "textRuns": [
                   {
-                    "value": "How to use this insight",
+                    "value": "This view does not adjust for case mix, service mix, market structure, or payer composition and does not support causal inference. Use it only as joint-context baseline to interpret downstream financial or capacity metrics, not as a diagnostic endpoint.",
                     "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Use this view to understand how financial and throughput pressures may be structurally decoupled or co-present across facilities.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Interpret downstream financial or capacity-related metrics with this joint context in mind.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Treat quadrant placement as a comparative lens for structural context, not as a diagnostic or prioritization rule.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "This visual should be used as a joint-context lens, not an explanatory or causal endpoint.",
-                    "textStyle": {
-                      "fontStyle": "italic",
                       "fontSize": "11pt"
                     }
                   }
