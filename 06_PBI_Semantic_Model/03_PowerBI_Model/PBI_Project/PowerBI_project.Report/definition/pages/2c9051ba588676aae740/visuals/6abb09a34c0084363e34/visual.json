@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "585cdcbf3bcb3e92ba16",
+  "name": "6abb09a34c0084363e34",
   "position": {
-    "x": 646.76923076923072,
-    "y": 1.1397360036413318,
-    "z": 4000,
-    "height": 502.76923076923077,
-    "width": 633.23076923076928,
-    "tabOrder": 16000
+    "x": 0,
+    "y": 0,
+    "z": 1000,
+    "height": 376.51948051948051,
+    "width": 613.40259740259739,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "shape",
@@ -38,7 +38,7 @@
             "shapeAngle": {
               "expr": {
                 "Literal": {
-                  "Value": "270L"
+                  "Value": "90L"
                 }
               }
             }
@@ -52,8 +52,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#302744'"
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
                     }
                   }
                 }
@@ -86,8 +87,23 @@
         }
       ]
     },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Backdrop'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "46481fb3a6142db9409d",
+  "parentGroupName": "b5ef1d7e31169f88ba72",
   "howCreated": "InsertVisualButton"
 }
