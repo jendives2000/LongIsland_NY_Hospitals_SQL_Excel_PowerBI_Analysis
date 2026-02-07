@@ -22,13 +22,13 @@
                     "value": "Diagnostic Preview — ",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": "Payer Mix (Informational)",
+                    "value": "LOS (Informational)",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   }
                 ],
@@ -44,35 +44,61 @@
               {
                 "textRuns": [
                   {
-                    "value": "The Payer Mix views are intended to ",
+                    "value": "The LOS views outline the ",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": "situate downstream metrics within their reimbursement environment",
+                    "value": "throughput setting",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": ", not to account for observed differences in performance, cost, or outcomes. Together, they describe how exposure to reimbursement conditions is ",
+                    "value": " in which inpatient care occurs. They show how stay duration varies and concentrates—particularly when combined with volume—under ",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": "distributed, concentrated, and scaled",
+                    "value": "similar acuity",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": " across peer groups and facilities.",
+                    "value": " and ",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": "ongoing intake pressure",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": ". These views indicate ",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": "where capacity pressure appears",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": ", not why it occurs.",
+                    "textStyle": {
+                      "fontSize": "12pt"
                     }
                   }
                 ]
@@ -87,22 +113,22 @@
               {
                 "textRuns": [
                   {
-                    "value": "Should subsequent outcome patterns prompt diagnostic exploration, such work would typically involve examining several ",
+                    "value": "If downstream patterns merit diagnostic review, analysis would typically consider several ",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": "separate analytical dimensions",
+                    "value": "separate operational dimensions",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
                     "value": ", such as:",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   }
                 ]
@@ -110,9 +136,16 @@
               {
                 "textRuns": [
                   {
-                    "value": "how encounter mix aligns with underlying service cost profiles",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "coordination and sequencing of inpatient care",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   }
                 ],
@@ -121,9 +154,9 @@
               {
                 "textRuns": [
                   {
-                    "value": "differences in payer-specific payment structures and contractual design",
+                    "value": "alignment of bed supply with admission flow",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   }
                 ],
@@ -132,9 +165,9 @@
               {
                 "textRuns": [
                   {
-                    "value": "the compounding effect of payer composition and encounter scale on financial sensitivity",
+                    "value": "discharge timing and post-acute access",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   }
                 ],
@@ -143,9 +176,9 @@
               {
                 "textRuns": [
                   {
-                    "value": "variability in discharge pathways and post-acute availability associated with payer rules",
+                    "value": "effects of sustained volume on fixed capacity",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   }
                 ],
@@ -154,9 +187,9 @@
               {
                 "textRuns": [
                   {
-                    "value": "lag or mismatch between encounter activity and financial realization",
+                    "value": "recurrence of extended stays across services or cohorts",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   }
                 ],
@@ -172,22 +205,22 @@
               {
                 "textRuns": [
                   {
-                    "value": "The inclusion of these dimensions is ",
+                    "value": "The domains listed are ",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": "illustrative, not directive",
+                    "value": "illustrative only",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
                     "value": ".",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   }
                 ]
@@ -195,22 +228,22 @@
               {
                 "textRuns": [
                   {
-                    "value": "Whether any are relevant in a given case can only be determined through ",
+                    "value": "Relevance must be determined through ",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
                     "value": "standalone diagnostic analysis",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": ", conducted outside the scope of this contextual view.",
+                    "value": " beyond this contextual view.",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   }
                 ]
