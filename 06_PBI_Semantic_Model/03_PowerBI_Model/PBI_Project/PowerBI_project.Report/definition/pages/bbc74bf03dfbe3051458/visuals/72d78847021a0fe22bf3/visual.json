@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": false
+              "active": true
             }
           ]
         },
@@ -170,10 +170,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Dim_ClinicalClass"
+                    "Entity": "_PayerMix"
                   }
                 },
-                "Property": "PeerGroup UA Rate Median"
+                "Property": "PeerGroup Risk Payer Share Median"
               }
             },
             "direction": "Descending"
@@ -1017,6 +1017,5 @@
       }
     ],
     "filterSortOrder": "Custom"
-  },
-  "isHidden": true
+  }
 }

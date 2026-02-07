@@ -44,33 +44,33 @@
               {
                 "textRuns": [
                   {
-                    "value": "Unplanned admission rates show ",
+                    "value": "Risk payer share is ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "meaningful dispersion within peer groups (PG)",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", with facilities positioned on both sides of their own PG medians across all segments. This indicates that elevated unplanned intake is ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "not confined to a single facility type",
+                    "value": "unevenly distributed within peer groups (PG)",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", but varies within shared peer contexts.",
+                    "value": ", with facilities spread on both sides of the peer median rather than clustered around a common baseline. This indicates ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "heterogeneous reimbursement exposure among otherwise comparable peers",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not differences in acuity or demand.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -87,33 +87,46 @@
               {
                 "textRuns": [
                   {
-                    "value": "The pattern reflects ",
+                    "value": "Given ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "heterogeneous intake exposure among structurally similar facilities",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", rather than uniform pressure within each PG. The peer median functions as a ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "directional reference",
+                    "value": "comparable severity",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not a performance threshold.",
+                    "value": " and ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "system-wide unplanned intake",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", this view reflects ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "relative financial exposure within PG",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not operational performance or causal drivers of outcomes.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -162,14 +175,50 @@
                     }
                   },
                   {
-                    "value": "within–PG positioning",
+                    "value": "relative reimbursement context, not performance evaluation",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not cross-facility comparison.",
+                    "value": ".",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "The peer median line is a ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "directional reference",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not a threshold. Distance from the median reflects the ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "degree of risk-payer exposure relative to peers",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not quality or efficiency.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -186,63 +235,20 @@
               {
                 "textRuns": [
                   {
-                    "value": "Positions above or below the peer median indicate ",
+                    "value": "Because acuity and intake pressure are broadly similar, cost, margin, LOS, and outcome differences should be interpreted ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "relative intake exposure",
+                    "value": "in light of this within–peer reimbursement heterogeneity",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not operational performance or quality. Differences shown should be used to ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "contextualize downstream metrics",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": " (e.g., LOS, cost, throughput) by highlighting intake conditions that vary even among similar facilities.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "This view provides ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "contextual alignment",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", not causal explanation or evaluative judgment.",
+                    "value": ", not attributed to patient mix or operational effectiveness alone.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -1564,6 +1570,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "409ae89dcff4e930ba8e",
-  "isHidden": true
+  "parentGroupName": "409ae89dcff4e930ba8e"
 }
