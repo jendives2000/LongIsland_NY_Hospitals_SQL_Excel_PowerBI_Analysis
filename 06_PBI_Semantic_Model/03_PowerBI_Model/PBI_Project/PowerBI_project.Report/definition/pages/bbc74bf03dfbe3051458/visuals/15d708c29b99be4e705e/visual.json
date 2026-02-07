@@ -22,13 +22,13 @@
                     "value": "Diagnostic Preview — ",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "Intake Pressure (Informational)",
+                    "value": "Payer Mix (Informational)",
                     "textStyle": {
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   }
                 ],
@@ -44,22 +44,35 @@
               {
                 "textRuns": [
                   {
-                    "value": "This analysis establishes unplanned intake as a ",
+                    "value": "The Payer Mix views are intended to ",
                     "textStyle": {
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "system-wide operating condition",
+                    "value": "situate downstream metrics within their reimbursement environment",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", shaped by the interaction of admission rate and encounter volume.",
+                    "value": ", not to account for observed differences in performance, cost, or outcomes. Together, they describe how exposure to reimbursement conditions is ",
                     "textStyle": {
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "distributed, concentrated, and scaled",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " across peer groups and facilities.",
+                    "textStyle": {
+                      "fontSize": "11pt"
                     }
                   }
                 ]
@@ -74,25 +87,80 @@
               {
                 "textRuns": [
                   {
-                    "value": "If downstream variation warrants diagnostic investigation, such analysis would typically examine ",
+                    "value": "Should subsequent outcome patterns prompt diagnostic exploration, such work would typically involve examining several ",
                     "textStyle": {
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "how the system absorbs and manages unplanned demand",
+                    "value": "separate analytical dimensions",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", including:",
+                    "value": ", such as:",
                     "textStyle": {
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   }
                 ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "how encounter mix aligns with underlying service cost profiles",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "differences in payer-specific payment structures and contractual design",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "the compounding effect of payer composition and encounter scale on financial sensitivity",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "variability in discharge pathways and post-acute availability associated with payer rules",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "lag or mismatch between encounter activity and financial realization",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
               },
               {
                 "textRuns": [
@@ -104,73 +172,22 @@
               {
                 "textRuns": [
                   {
-                    "value": "admission routing and emergency department flow patterns",
+                    "value": "The inclusion of these dimensions is ",
                     "textStyle": {
-                      "fontSize": "12pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "timing and coordination of inpatient bed placement",
-                    "textStyle": {
-                      "fontSize": "12pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "alignment between intake surges and staffing coverage",
-                    "textStyle": {
-                      "fontSize": "12pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "downstream flow and discharge coordination under unplanned load",
-                    "textStyle": {
-                      "fontSize": "12pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Inclusion of these domains does ",
-                    "textStyle": {
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "not",
+                    "value": "illustrative, not directive",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " imply applicability in this case.",
+                    "value": ".",
                     "textStyle": {
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
                     }
                   }
                 ]
@@ -178,9 +195,22 @@
               {
                 "textRuns": [
                   {
-                    "value": "Determining relevance requires targeted diagnostic analysis beyond the scope of this report.",
+                    "value": "Whether any are relevant in a given case can only be determined through ",
                     "textStyle": {
-                      "fontSize": "12pt"
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "standalone diagnostic analysis",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", conducted outside the scope of this contextual view.",
+                    "textStyle": {
+                      "fontSize": "11pt"
                     }
                   }
                 ]
