@@ -9445,9 +9445,6 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
 			      "Terms": [
 			        {
 			          "APR risk of mortality desc": {
@@ -27423,136 +27420,131 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__mortality.high_extreme_ROM_share": {
+			    "dim_clinical_class.APR_ROM_sort": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_Mortality",
-			          "ConceptualProperty": "High Extreme ROM Share"
+			          "ConceptualEntity": "Dim_ClinicalClass",
+			          "ConceptualProperty": "APR_ROM_Sort"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "high extreme ROM share": {
+			          "APR ROM sort": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "share": {
+			          "APR_ROM_Sort": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ROM sort": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "ROM share": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "extreme ROM share": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "high extreme rom part": {
+			          "apr rom category": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.499
+			            "Weight": 0.508
 			          }
 			        },
 			        {
-			          "high extreme rom portion": {
+			          "apr rom genus": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.499
+			            "Weight": 0.508
 			          }
 			        },
 			        {
-			          "high extreme rom segment": {
+			          "apr rom species": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.499
+			            "Weight": 0.508
 			          }
 			        },
 			        {
-			          "high extreme rom cut": {
+			          "apr rom variety": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.499
+			            "Weight": 0.508
 			          }
 			        },
 			        {
-			          "high extreme rom stake": {
+			          "apr rom nature": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.499
+			            "Weight": 0.508
 			          }
 			        },
 			        {
-			          "high extreme rom bit": {
+			          "rom category": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.499
+			            "Weight": 0.5
 			          }
 			        },
 			        {
-			          "high extreme rom piece": {
+			          "rom genus": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.499
+			            "Weight": 0.5
 			          }
 			        },
 			        {
-			          "extreme rom part": {
+			          "rom species": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.492
+			            "Weight": 0.5
 			          }
 			        },
 			        {
-			          "extreme rom portion": {
+			          "rom variety": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.492
+			            "Weight": 0.5
 			          }
 			        },
 			        {
-			          "extreme rom segment": {
+			          "rom nature": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.492
+			            "Weight": 0.5
 			          }
 			        }
 			      ]
@@ -29557,168 +29549,872 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "entity__disposition.home_discharge_share_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Disposition",
+			          "ConceptualProperty": "Home Discharge Share %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "home discharge share %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "home discharge share percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "home discharge share pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "entity__disposition.postacute_discharge_share_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Disposition",
+			          "ConceptualProperty": "Post-Acute Discharge Share %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "post-acute discharge share %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "post acute discharge share %": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "post acute discharge share percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "post acute discharge share pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        }
+			      ]
+			    },
+			    "entity__disposition.acute_transfer_share_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Disposition",
+			          "ConceptualProperty": "Acute Transfer Share %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "acute transfer share %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "acute transfer share percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "acute transfer share pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "entity__disposition.inhospital_death_share_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Disposition",
+			          "ConceptualProperty": "In-Hospital Death Share %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "in-hospital death share %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "in hospital death share %": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "in hospital death share percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "in hospital death share pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "in infirmary death share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "in hospice death share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "in sickbay death share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "in sanatorium death share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "in hospital expiry share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "in hospital bereavement share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "in clinic death share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "in hospital loss share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        }
+			      ]
+			    },
+			    "entity__disposition.total_inpatient_encounters": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Disposition",
+			          "ConceptualProperty": "Total Inpatient Encounters"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total inpatient encounters": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "encounters": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "inpatient encounters": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "aggregate inpatient encounter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall inpatient encounter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "total inpatient happenstance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "inpatient happenstance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "total inpatient meeting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "happenstance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "inpatient meeting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "meeting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "entity__disposition.PeerGroup_postacute_share_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Disposition",
+			          "ConceptualProperty": "PeerGroup Post-Acute Share Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PeerGroup post-acute share median": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PeerGroup post acute share median": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "peergroup post acute share norm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "peergroup post acute share nucleus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "peergroup post acute share midpoint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "peergroup post acute share middle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "peergroup post acute share center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "peergroup post acute share medium": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "peergroup post acute share mean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "peergroup post acute share average": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "peergroup post acute share par": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "peergroup post acute share standard": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        }
+			      ]
+			    },
+			    "entity__disposition.is_above_PG_postacute_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Disposition",
+			          "ConceptualProperty": "Is Above PG Post-Acute Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "is above PG post-acute median": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "is above PG post acute median": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "entity__disposition.facilities_above_PG_postacute_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Disposition",
+			          "ConceptualProperty": "Facilities Above PG Post-Acute Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "facilities above PG post-acute median": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "facilities above PG post acute median": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "Fac. Above PG Post-Acute Median": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__mortality.majorextreme_ROM_share": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Mortality",
+			          "ConceptualProperty": "Major-Extreme ROM Share"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "major-extreme ROM share": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "major extreme ROM share": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "share": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ROM share": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "extreme ROM share": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "major-extreme rom part": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "major-extreme rom portion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "major-extreme rom segment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "major-extreme rom cut": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "major-extreme rom stake": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "major-extreme rom bit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "major-extreme rom piece": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "major extreme rom part": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "major extreme rom portion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "major extreme rom segment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "entity__mortality.majorextreme_ROM__sort": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Mortality",
+			          "ConceptualProperty": "Major-Extreme ROM % (Sort)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "major-extreme ROM % (sort)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "major-extreme ROM %": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "major extreme ROM % (sort)": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "entity__mortality.high_ROM_sort": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Mortality",
+			          "ConceptualProperty": "High ROM Sort"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "high ROM sort": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ROM sort": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "high rom category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "high rom genus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "high rom species": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "high rom variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "high rom nature": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "rom category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "rom genus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "rom species": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "rom variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "rom nature": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "fact_KPI_payer_mix_has_dim_year": {
+			    "dim_facility_has_entity__disposition_facilities_above_PG_postacute_median": {
 			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			        "ConceptualEntity": "Dim_Facility"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fact_KPI_payer_mix": {
-			          "Target": {
-			            "Entity": "fact_KPI_payer_mix"
-			          }
-			        },
-			        "dim_year": {
-			          "Target": {
-			            "Entity": "dim_year"
-			          },
-			          "Nouns": [
-			            {
-			              "discharge year": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_payer_mix"
-			            },
-			            "Object": {
-			              "Role": "dim_year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_payer_mixes_have_dim_years"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_year"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_payer_mix"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_years_have_fact_KPI_payer_mixes"
-			        }
-			      ]
-			    },
-			    "fact_KPI_mortality_has_dim_facility": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_Mortality"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_mortality": {
-			          "Target": {
-			            "Entity": "fact_KPI_mortality"
-			          }
-			        },
 			        "dim_facility": {
 			          "Target": {
 			            "Entity": "dim_facility"
 			          }
+			        },
+			        "entity__disposition.facilities_above_PG_postacute_median": {
+			          "Target": {
+			            "Entity": "entity__disposition.facilities_above_PG_postacute_median"
+			          }
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fact_KPI_mortality"
+			              "Role": "dim_facility"
 			            },
 			            "Object": {
-			              "Role": "dim_facility"
+			              "Role": "entity__disposition.facilities_above_PG_postacute_median"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_KPI_mortalities_have_dim_facilities"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_mortality"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_fact_KPI_mortalities"
+			          "ID": "dim_facilities_have_facilities_above_PG_postacute_median"
 			        }
 			      ]
 			    },
-			    "fact_KPI_LOS_summary_has_dim_facility": {
+			    "bridge_facility_peer_group_has_entity__disposition_facilities_above_PG_postacute_median": {
 			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
+			        "ConceptualEntity": "Bridge_Facility_PeerGroup"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fact_KPI_LOS_summary": {
+			        "bridge_facility_peer_group": {
 			          "Target": {
-			            "Entity": "fact_KPI_LOS_summary"
+			            "Entity": "bridge_facility_peer_group"
 			          }
 			        },
-			        "dim_facility": {
+			        "entity__disposition.facilities_above_PG_postacute_median": {
 			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_LOS_summary"
-			            },
-			            "Object": {
-			              "Role": "dim_facility"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_LOS_summaries_have_dim_facilities"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_LOS_summary"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_fact_KPI_LOS_summaries"
-			        }
-			      ]
-			    },
-			    "fact_KPI_financial_pressure_has_dim_facility": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_FinancialPressure"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_financial_pressure": {
-			          "Target": {
-			            "Entity": "fact_KPI_financial_pressure"
-			          }
-			        },
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
+			            "Entity": "entity__disposition.facilities_above_PG_postacute_median"
 			          }
 			        }
 			      },
@@ -29726,32 +30422,19 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fact_KPI_financial_pressure"
+			              "Role": "bridge_facility_peer_group"
 			            },
 			            "Object": {
-			              "Role": "dim_facility"
+			              "Role": "entity__disposition.facilities_above_PG_postacute_median"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_KPI_financial_pressures_have_dim_facilities"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_financial_pressure"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_fact_KPI_financial_pressures"
+			          "ID": "bridge_facility_peer_groups_have_facilities_above_PG_postacute_median"
 			        }
 			      ]
 			    },
-			    "fact_KPI_disposition_has_dim_facility": {
+			    "fact_KPI_disposition_has_entity__disposition_PeerGroup_postacute_share_median": {
 			      "Binding": {
 			        "ConceptualEntity": "Fact_KPI_Disposition"
 			      },
@@ -29762,42 +30445,62 @@ cultureInfo en-US
 			            "Entity": "fact_KPI_disposition"
 			          }
 			        },
+			        "entity__disposition.PeerGroup_postacute_share_median": {
+			          "Target": {
+			            "Entity": "entity__disposition.PeerGroup_postacute_share_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_disposition"
+			            },
+			            "Object": {
+			              "Role": "entity__disposition.PeerGroup_postacute_share_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_dispositions_have_PeerGroup_postacute_share_median"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_entity__disposition_PeerGroup_postacute_share_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
 			        "dim_facility": {
 			          "Target": {
 			            "Entity": "dim_facility"
 			          }
+			        },
+			        "entity__disposition.PeerGroup_postacute_share_median": {
+			          "Target": {
+			            "Entity": "entity__disposition.PeerGroup_postacute_share_median"
+			          }
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fact_KPI_disposition"
+			              "Role": "dim_facility"
 			            },
 			            "Object": {
-			              "Role": "dim_facility"
+			              "Role": "entity__disposition.PeerGroup_postacute_share_median"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_KPI_dispositions_have_dim_facilities"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_disposition"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_fact_KPI_dispositions"
+			          "ID": "dim_facilities_have_PeerGroup_postacute_share_median"
 			        }
 			      ]
 			    },
-			    "fact_KPI_disposition_has_dim_disposition": {
+			    "fact_KPI_disposition_has_entity__disposition_total_inpatient_encounters": {
 			      "Binding": {
 			        "ConceptualEntity": "Fact_KPI_Disposition"
 			      },
@@ -29808,9 +30511,9 @@ cultureInfo en-US
 			            "Entity": "fact_KPI_disposition"
 			          }
 			        },
-			        "dim_disposition": {
+			        "entity__disposition.total_inpatient_encounters": {
 			          "Target": {
-			            "Entity": "dim_disposition"
+			            "Entity": "entity__disposition.total_inpatient_encounters"
 			          }
 			        }
 			      },
@@ -29821,29 +30524,16 @@ cultureInfo en-US
 			              "Role": "fact_KPI_disposition"
 			            },
 			            "Object": {
-			              "Role": "dim_disposition"
+			              "Role": "entity__disposition.total_inpatient_encounters"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_KPI_dispositions_have_dim_dispositions"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_disposition"
-			            },
-			            "Object": {
-			              "Role": "fact_KPI_disposition"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_dispositions_have_fact_KPI_dispositions"
+			          "ID": "fact_KPI_dispositions_have_total_inpatient_encounters"
 			        }
 			      ]
 			    },
-			    "fact_KPI_disposition_has_dim_year": {
+			    "fact_KPI_disposition_has_entity__disposition_inhospital_death_share_": {
 			      "Binding": {
 			        "ConceptualEntity": "Fact_KPI_Disposition"
 			      },
@@ -29854,17 +30544,10 @@ cultureInfo en-US
 			            "Entity": "fact_KPI_disposition"
 			          }
 			        },
-			        "dim_year": {
+			        "entity__disposition.inhospital_death_share_": {
 			          "Target": {
-			            "Entity": "dim_year"
-			          },
-			          "Nouns": [
-			            {
-			              "discharge year": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
+			            "Entity": "entity__disposition.inhospital_death_share_"
+			          }
 			        }
 			      },
 			      "Phrasings": [
@@ -29874,25 +30557,111 @@ cultureInfo en-US
 			              "Role": "fact_KPI_disposition"
 			            },
 			            "Object": {
-			              "Role": "dim_year"
+			              "Role": "entity__disposition.inhospital_death_share_"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_KPI_dispositions_have_dim_years"
+			          "ID": "fact_KPI_dispositions_have_inhospital_death_share_"
+			        }
+			      ]
+			    },
+			    "fact_KPI_disposition_has_entity__disposition_acute_transfer_share_": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Disposition"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_disposition": {
+			          "Target": {
+			            "Entity": "fact_KPI_disposition"
+			          }
 			        },
+			        "entity__disposition.acute_transfer_share_": {
+			          "Target": {
+			            "Entity": "entity__disposition.acute_transfer_share_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "dim_year"
+			              "Role": "fact_KPI_disposition"
 			            },
 			            "Object": {
-			              "Role": "fact_KPI_disposition"
+			              "Role": "entity__disposition.acute_transfer_share_"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_years_have_fact_KPI_dispositions"
+			          "ID": "fact_KPI_dispositions_have_acute_transfer_share_"
+			        }
+			      ]
+			    },
+			    "fact_KPI_disposition_has_entity__disposition_postacute_discharge_share_": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Disposition"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_disposition": {
+			          "Target": {
+			            "Entity": "fact_KPI_disposition"
+			          }
+			        },
+			        "entity__disposition.postacute_discharge_share_": {
+			          "Target": {
+			            "Entity": "entity__disposition.postacute_discharge_share_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_disposition"
+			            },
+			            "Object": {
+			              "Role": "entity__disposition.postacute_discharge_share_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_dispositions_have_postacute_discharge_share_"
+			        }
+			      ]
+			    },
+			    "fact_KPI_disposition_has_entity__disposition_home_discharge_share_": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Disposition"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_disposition": {
+			          "Target": {
+			            "Entity": "fact_KPI_disposition"
+			          }
+			        },
+			        "entity__disposition.home_discharge_share_": {
+			          "Target": {
+			            "Entity": "entity__disposition.home_discharge_share_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_disposition"
+			            },
+			            "Object": {
+			              "Role": "entity__disposition.home_discharge_share_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_dispositions_have_home_discharge_share_"
 			        }
 			      ]
 			    },
@@ -32576,20 +33345,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__mortality_has_high_extreme_ROM_share": {
+			    "dim_clinical_class_has_APR_ROM_sort": {
 			      "Binding": {
-			        "ConceptualEntity": "_Mortality"
+			        "ConceptualEntity": "Dim_ClinicalClass"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity__mortality": {
+			        "dim_clinical_class": {
 			          "Target": {
-			            "Entity": "entity__mortality"
+			            "Entity": "dim_clinical_class"
 			          }
 			        },
-			        "entity__mortality.high_extreme_ROM_share": {
+			        "dim_clinical_class.APR_ROM_sort": {
 			          "Target": {
-			            "Entity": "entity__mortality.high_extreme_ROM_share"
+			            "Entity": "dim_clinical_class.APR_ROM_sort"
 			          }
 			        }
 			      },
@@ -32597,15 +33366,15 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity__mortality"
+			              "Role": "dim_clinical_class"
 			            },
 			            "Object": {
-			              "Role": "entity__mortality.high_extreme_ROM_share"
+			              "Role": "dim_clinical_class.APR_ROM_sort"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing_mortalities_have_high_extreme_ROM_share"
+			          "ID": "dim_clinical_classes_have_APR_ROM_sorts"
 			        }
 			      ]
 			    },
@@ -41633,6 +42402,39 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "dim_clinical_class_has_APR_risk_of_mortality_desc": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_ClinicalClass"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_clinical_class": {
+			          "Target": {
+			            "Entity": "dim_clinical_class"
+			          }
+			        },
+			        "dim_clinical_class.APR_risk_of_mortality_desc": {
+			          "Target": {
+			            "Entity": "dim_clinical_class.APR_risk_of_mortality_desc"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_clinical_class"
+			            },
+			            "Object": {
+			              "Role": "dim_clinical_class.APR_risk_of_mortality_desc"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_clinical_classes_have_APR_risk_of_mortality_desc"
+			        }
+			      ]
+			    },
 			    "dim_clinical_class_has_APR_severity_description": {
 			      "Binding": {
 			        "ConceptualEntity": "Dim_ClinicalClass"
@@ -43111,6 +43913,474 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_dim_payers_are_unknown_dim_payers"
+			        }
+			      ]
+			    },
+			    "dim_peer_group_has_entity__disposition_facilities_above_PG_postacute_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_PeerGroup"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_peer_group": {
+			          "Target": {
+			            "Entity": "dim_peer_group"
+			          }
+			        },
+			        "entity__disposition.facilities_above_PG_postacute_median": {
+			          "Target": {
+			            "Entity": "entity__disposition.facilities_above_PG_postacute_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_peer_group"
+			            },
+			            "Object": {
+			              "Role": "entity__disposition.facilities_above_PG_postacute_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_peer_groups_have_facilities_above_PG_postacute_median"
+			        }
+			      ]
+			    },
+			    "fact_KPI_disposition_has_entity__disposition_facilities_above_PG_postacute_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Disposition"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_disposition": {
+			          "Target": {
+			            "Entity": "fact_KPI_disposition"
+			          }
+			        },
+			        "entity__disposition.facilities_above_PG_postacute_median": {
+			          "Target": {
+			            "Entity": "entity__disposition.facilities_above_PG_postacute_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_disposition"
+			            },
+			            "Object": {
+			              "Role": "entity__disposition.facilities_above_PG_postacute_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_dispositions_have_facilities_above_PG_postacute_median"
+			        }
+			      ]
+			    },
+			    "vw_fact_KPI_severity_mix_by_severity_has_entity__mortality_majorextreme_ROM_share": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_Fact_KPI_SeverityMix_BySeverity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fact_KPI_severity_mix_by_severity": {
+			          "Target": {
+			            "Entity": "vw_fact_KPI_severity_mix_by_severity"
+			          }
+			        },
+			        "entity__mortality.majorextreme_ROM_share": {
+			          "Target": {
+			            "Entity": "entity__mortality.majorextreme_ROM_share"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fact_KPI_severity_mix_by_severity"
+			            },
+			            "Object": {
+			              "Role": "entity__mortality.majorextreme_ROM_share"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fact_KPI_severity_mix_by_severity_have_majorextreme_ROM_share"
+			        }
+			      ]
+			    },
+			    "vw_fact_KPI_severity_mix_by_severity_has_entity__mortality_majorextreme_ROM__sort": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_Fact_KPI_SeverityMix_BySeverity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fact_KPI_severity_mix_by_severity": {
+			          "Target": {
+			            "Entity": "vw_fact_KPI_severity_mix_by_severity"
+			          }
+			        },
+			        "entity__mortality.majorextreme_ROM__sort": {
+			          "Target": {
+			            "Entity": "entity__mortality.majorextreme_ROM__sort"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fact_KPI_severity_mix_by_severity"
+			            },
+			            "Object": {
+			              "Role": "entity__mortality.majorextreme_ROM__sort"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fact_KPI_severity_mix_by_severity_have_majorextreme_ROM__sort"
+			        }
+			      ]
+			    },
+			    "fact_KPI_disposition_has_dim_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Disposition"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_disposition": {
+			          "Target": {
+			            "Entity": "fact_KPI_disposition"
+			          }
+			        },
+			        "dim_year": {
+			          "Target": {
+			            "Entity": "dim_year"
+			          },
+			          "Nouns": [
+			            {
+			              "discharge year": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_disposition"
+			            },
+			            "Object": {
+			              "Role": "dim_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_dispositions_have_dim_years"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_year"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_disposition"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_years_have_fact_KPI_dispositions"
+			        }
+			      ]
+			    },
+			    "fact_KPI_disposition_has_dim_disposition": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Disposition"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_disposition": {
+			          "Target": {
+			            "Entity": "fact_KPI_disposition"
+			          }
+			        },
+			        "dim_disposition": {
+			          "Target": {
+			            "Entity": "dim_disposition"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_disposition"
+			            },
+			            "Object": {
+			              "Role": "dim_disposition"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_dispositions_have_dim_dispositions"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_disposition"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_disposition"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dispositions_have_fact_KPI_dispositions"
+			        }
+			      ]
+			    },
+			    "fact_KPI_disposition_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Disposition"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_disposition": {
+			          "Target": {
+			            "Entity": "fact_KPI_disposition"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_disposition"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_dispositions_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_disposition"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_fact_KPI_dispositions"
+			        }
+			      ]
+			    },
+			    "fact_KPI_financial_pressure_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_FinancialPressure"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_financial_pressure": {
+			          "Target": {
+			            "Entity": "fact_KPI_financial_pressure"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_financial_pressure"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_financial_pressures_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_financial_pressure"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_fact_KPI_financial_pressures"
+			        }
+			      ]
+			    },
+			    "fact_KPI_LOS_summary_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_LOS_summary": {
+			          "Target": {
+			            "Entity": "fact_KPI_LOS_summary"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_LOS_summary"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_LOS_summaries_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_LOS_summary"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_fact_KPI_LOS_summaries"
+			        }
+			      ]
+			    },
+			    "fact_KPI_mortality_has_dim_facility": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Mortality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_mortality": {
+			          "Target": {
+			            "Entity": "fact_KPI_mortality"
+			          }
+			        },
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_mortality"
+			            },
+			            "Object": {
+			              "Role": "dim_facility"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_mortalities_have_dim_facilities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_mortality"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_fact_KPI_mortalities"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_dim_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "dim_year": {
+			          "Target": {
+			            "Entity": "dim_year"
+			          },
+			          "Nouns": [
+			            {
+			              "discharge year": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "dim_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_dim_years"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_year"
+			            },
+			            "Object": {
+			              "Role": "fact_KPI_payer_mix"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_years_have_fact_KPI_payer_mixes"
 			        }
 			      ]
 			    },

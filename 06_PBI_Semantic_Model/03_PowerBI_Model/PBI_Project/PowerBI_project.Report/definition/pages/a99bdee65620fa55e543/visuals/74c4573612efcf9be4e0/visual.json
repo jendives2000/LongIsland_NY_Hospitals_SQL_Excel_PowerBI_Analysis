@@ -1,0 +1,42 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "74c4573612efcf9be4e0",
+  "position": {
+    "x": 720.61538461538464,
+    "y": 180.30769230769232,
+    "z": 19000,
+    "height": 299.69230769230768,
+    "width": 299.69230769230768,
+    "tabOrder": 15000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_ClinicalClass"
+                    }
+                  },
+                  "Property": "PeerGroup Margin Pressure Median"
+                }
+              },
+              "queryRef": "_Financial_Basic.PeerGroup Margin Pressure Median",
+              "nativeQueryRef": "PeerGroup Margin Pressure Median"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "isHidden": true
+}

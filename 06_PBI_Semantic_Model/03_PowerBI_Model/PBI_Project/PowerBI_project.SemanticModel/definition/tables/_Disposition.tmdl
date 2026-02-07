@@ -26,6 +26,100 @@ table _Disposition
 		formatString: 0
 		lineageTag: db0845f2-236d-4b49-b601-0eef2ed76b18
 
+	/// Percentage of encounters discharged to home
+	measure 'Home Discharge Share %' =
+			CALCULATE(
+			    [Disposition Share],
+			    Dim_Disposition[Disposition_Grouped] = "Home"
+			)
+		formatString: 0.0%
+		displayFolder: Share Metrics
+		lineageTag: 6dca9da3-22ee-4545-9091-90c7203e0ac9
+
+	/// Percentage of encounters discharged to post-acute care (SNF/Rehab)
+	measure 'Post-Acute Discharge Share %' =
+			CALCULATE(
+			    [Disposition Share],
+			    Dim_Disposition[Disposition_Grouped] = "Skilled Nursing / Rehab"
+			)
+		formatString: 0.0%
+		displayFolder: Share Metrics
+		lineageTag: acf5b2a0-5f2d-4ca7-a309-929049b9832b
+
+	/// Percentage of encounters with 'Other' disposition (includes transfers, AMA, hospice, behavioral health)
+	measure 'Acute Transfer Share %' =
+			CALCULATE(
+			    [Disposition Share],
+			    Dim_Disposition[Disposition_Grouped] = "Other"
+			)
+		formatString: 0.0%
+		displayFolder: Share Metrics
+		lineageTag: ec8d34e4-6c7f-4146-a27f-7d480fba02ae
+
+	/// Percentage of encounters resulting in in-hospital death
+	measure 'In-Hospital Death Share %' =
+			CALCULATE(
+			    [Disposition Share],
+			    Dim_Disposition[Disposition_Grouped] = "Death"
+			)
+		formatString: 0.0%
+		displayFolder: Share Metrics
+		lineageTag: cb92ddad-d835-4075-868c-ce46dc3abaa1
+
+	/// Total inpatient encounters across all dispositions
+	measure 'Total Inpatient Encounters' = [Disposition Facility-Year Encounters]
+		formatString: #,##0
+		displayFolder: Volume
+		lineageTag: b4a41d74-5124-4395-87bd-942477dcc499
+
+	/// Median post-acute discharge share across facilities within the same peer group
+	measure 'PeerGroup Post-Acute Share Median' = ```
+			VAR CurrentPeerGroup = SELECTEDVALUE(Dim_PeerGroup[PeerGroup_Name])
+			VAR FacilitiesInPeerGroup = 
+			    CALCULATETABLE(
+			        VALUES(Dim_Facility[Facility_Name]),
+			        ALL(Dim_Facility),
+			        Dim_PeerGroup[PeerGroup_Name] = CurrentPeerGroup
+			    )
+			RETURN
+			MEDIANX(
+			    FacilitiesInPeerGroup,
+			    [Post-Acute Discharge Share %]
+			)
+			```
+		formatString: 0.0%
+		displayFolder: PeerGroup Benchmarks
+		lineageTag: 9d8acee7-9788-44c4-a03e-ffa2855befee
+
+	/// Flag (1/0) indicating if facility post-acute share exceeds peer group median
+	measure 'Is Above PG Post-Acute Median' =
+			IF(
+			    [Post-Acute Discharge Share %] > [PeerGroup Post-Acute Share Median],
+			    1,
+			    0
+			)
+		formatString: 0
+		isHidden
+		displayFolder: Helper
+		lineageTag: 34ef1ba6-c34b-4aa9-be56-49c84544afb4
+
+	/// Count of facilities with post-acute discharge share above their peer group median
+	measure 'Facilities Above PG Post-Acute Median' =
+			SUMX(
+			    SUMMARIZE(
+			        Bridge_Facility_PeerGroup,
+			        Dim_PeerGroup[PeerGroup_Name],
+			        Dim_Facility[Facility_Name]
+			    ),
+			    VAR FacilityRate = [Post-Acute Discharge Share %]
+			    VAR PGMedian = [PeerGroup Post-Acute Share Median]
+			    RETURN
+			    IF(FacilityRate > PGMedian, 1, 0)
+			)
+		formatString: 0
+		displayFolder: PeerGroup Benchmarks
+		lineageTag: 69e7d6d8-19e4-479c-a45a-b2c79ce26cd3
+
 	column Column
 		isHidden
 		formatString: 0
