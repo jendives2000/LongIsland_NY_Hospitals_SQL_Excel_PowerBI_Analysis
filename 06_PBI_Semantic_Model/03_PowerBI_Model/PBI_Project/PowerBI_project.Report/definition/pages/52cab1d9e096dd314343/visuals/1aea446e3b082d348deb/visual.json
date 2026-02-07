@@ -140,16 +140,29 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Dim_ClinicalClass"
+                    "Entity": "Dim_PeerGroup"
                   }
                 },
-                "Property": "PeerGroup LOS Median"
+                "Property": "PeerGroup_Name"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
+          },
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Dim_Facility"
+                  }
+                },
+                "Property": "Facility_Name"
+              }
+            },
+            "direction": "Ascending"
           }
         ]
       }
@@ -828,5 +841,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "ed3e78b7d54e31523a69"
+  "parentGroupName": "ed3e78b7d54e31523a69",
+  "isHidden": true
 }
