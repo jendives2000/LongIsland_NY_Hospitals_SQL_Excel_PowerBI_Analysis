@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "0992089c403a635f05ae",
   "position": {
-    "x": 14.153846153846153,
-    "y": 196.0340971770722,
+    "x": 14.337662337662337,
+    "y": 185.12123236725446,
     "z": 2000,
-    "height": 389.53846153846155,
-    "width": 582.15384615384619,
+    "height": 361.55844155844153,
+    "width": 582.23376623376623,
     "tabOrder": 0
   },
   "visual": {
@@ -33,12 +33,30 @@
                       "color": "#ffffff"
                     }
                   }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "Mortality rates exhibit a wide but continuous distribution across facilities and peer groups, reflecting variation in outcome exposure rather than discrete performance categories.",
+                    "value": "Mortality rates show a wide but continuous distribution across facilities and peer groups, reflecting variation in outcome exposure rather than discrete performance categories. ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Given tightly clustered patient severity, system-wide unplanned intake pressure, unevenly concentrated throughput burden as reflected in excess LOS, and concentrated C&MP, observed mortality variation occurs within shared structural operating conditions. ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -55,7 +73,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Given that patient severity is tightly clustered, unplanned intake pressure is system-wide, and throughput burden is unevenly concentrated, observed mortality variation should be interpreted as occurring within shared structural operating conditions rather than as a standalone signal.",
+                    "value": "The pattern reflects system-level outcome distribution shaped by upstream risk and operating context, not performance ranking or causal attribution.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -66,16 +84,6 @@
                 "textRuns": [
                   {
                     "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Overall, this pattern reflects system-level outcome distribution, not performance ranking or causal attribution.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
                   }
                 ]
               },
@@ -96,51 +104,8 @@
                       "color": "#ffffff"
                     }
                   }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "How to read this visual:",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Bars show mortality rate distribution across facilities and peer groups under comparable structural context.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
                 ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Ordering reflects relative position within the distribution, not quality tiers or performance bands.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "The range displayed represents system-level spread, not expected or acceptable limits.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
+                "horizontalTextAlignment": "center"
               },
               {
                 "textRuns": [
@@ -152,111 +117,8 @@
               {
                 "textRuns": [
                   {
-                    "value": "What this does not imply:",
+                    "value": "Bars show mortality distribution under comparable structural context, with ordering indicating relative position within the spread rather than quality tiers. The range reflects system-level variation, not acceptable limits. ",
                     "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "This view does not establish causation between mortality and severity, intake pressure, length of stay, or cost.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "This view does not assign performance scores, quality judgments, or accountability.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "This view does not isolate operational drivers of mortality differences.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "How to use this insight:",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Interpret mortality patterns only in conjunction with upstream context (severity mix, intake pressure, throughput burden).",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Use this view to understand where outcome exposure varies within shared operating constraints, not to infer effectiveness.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Treat proximity within the distribution as contextual comparison, not corrective signal.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "This visual should be used as an outcome context lens, not an explanatory endpoint.",
-                    "textStyle": {
-                      "fontStyle": "italic",
                       "fontSize": "11pt"
                     }
                   }
@@ -266,6 +128,26 @@
                 "textRuns": [
                   {
                     "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "This view does not establish causation, assign performance or accountability, or isolate drivers. Mortality should be interpreted only alongside upstream context, using proximity for contextual comparison rather than corrective inference. ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "This visual functions as an outcome-context lens, not an explanatory endpoint.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               }
@@ -1913,6 +1795,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "c7ebd38028686a49054b",
-  "isHidden": true
+  "parentGroupName": "c7ebd38028686a49054b"
 }
