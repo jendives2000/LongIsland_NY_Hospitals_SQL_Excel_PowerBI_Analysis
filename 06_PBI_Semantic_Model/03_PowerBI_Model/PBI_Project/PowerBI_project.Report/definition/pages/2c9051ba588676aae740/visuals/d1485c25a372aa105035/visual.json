@@ -134,23 +134,6 @@
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "_Guardrails"
-                  }
-                },
-                "Property": "Margin Pressure (Guarded)"
-              }
-            },
-            "direction": "Descending"
-          }
-        ]
       }
     },
     "objects": {
@@ -892,5 +875,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "46481fb3a6142db9409d"
+  "parentGroupName": "46481fb3a6142db9409d",
+  "isHidden": true
 }

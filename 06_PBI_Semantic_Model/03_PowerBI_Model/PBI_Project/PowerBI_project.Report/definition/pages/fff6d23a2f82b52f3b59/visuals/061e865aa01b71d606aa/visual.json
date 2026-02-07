@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "061e865aa01b71d606aa",
   "position": {
-    "x": 13.350993377483443,
-    "y": 396.62681461339417,
+    "x": 14.337662337662337,
+    "y": 310.91111485916684,
     "z": 7000,
-    "height": 169.74834437086091,
-    "width": 600.158940397351,
+    "height": 249.97402597402595,
+    "width": 600.31168831168827,
     "tabOrder": 11000
   },
   "visual": {
@@ -19,9 +19,19 @@
               {
                 "textRuns": [
                   {
-                    "value": "Mortality (Outcome Risk) describes the observed distribution of inpatient death outcomes across facilities and peer groups, viewed in the context of baseline patient risk and prevailing operating conditions.",
+                    "value": "Mortality represents the distribution of inpatient death outcomes across facilities and peer groups, interpreted in the context of baseline risk and prevailing operating conditions. ",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "It is treated as a contextual outcome signal, not a measure of care quality or performance. ",
+                    "textStyle": {
+                      "fontSize": "12pt"
                     }
                   }
                 ]
@@ -36,60 +46,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "In this report, mortality is treated as a ",
+                    "value": "Observed variation reflects exposure arising from patient acuity, sustained demand, and structural context rather than isolated events or short-term variation.",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
-                  },
-                  {
-                    "value": "contextual outcome signal",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", not a direct measure of care quality or performance. It reflects how outcome risk is distributed across the system under existing severity mix, intake pressure, throughput conditions, and financial environment.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Observed mortality variation captures ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "exposure to outcome risk",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", shaped by the combined presence of patient acuity, sustained demand, and structural operating context, rather than isolated events or short-term fluctuation.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
                   }
                 ]
               }
@@ -128,5 +88,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "4d10fe4bb614ceaf9aeb"
+  "parentGroupName": "4d10fe4bb614ceaf9aeb",
+  "isHidden": true
 }

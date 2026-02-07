@@ -2,10 +2,10 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "4a1a704c58ee5e7ae764",
   "position": {
-    "x": 13.09090909090909,
-    "y": 392.17675830662847,
+    "x": 14.337662337662337,
+    "y": 304.05397200202395,
     "z": 5000,
-    "height": 174.54545454545453,
+    "height": 258.7012987012987,
     "width": 600.31168831168827,
     "tabOrder": 15000
   },
@@ -19,9 +19,9 @@
               {
                 "textRuns": [
                   {
-                    "value": "Mortality represents the most consequential downstream outcome in the inpatient care pathway and provides essential context for interpreting subsequent operational and financial patterns.",
+                    "value": "As the most consequential downstream outcome, mortality provides essential context for interpreting subsequent operational and financial patterns. ",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   }
                 ]
@@ -36,34 +36,12 @@
               {
                 "textRuns": [
                   {
-                    "value": "When upstream conditions such as patient severity, unplanned intake, length of stay, and margin pressure are already established, mortality variation helps distinguish:",
+                    "value": "Given established upstream conditions, mortality variation helps distinguish system-wide outcome risk from localized concentration and separates baseline risk context from downstream disposition and reimbursement dynamics. ",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   }
                 ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "system-wide outcome risk exposure from localized concentration, and",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "baseline risk context from downstream disposition and reimbursement patterns.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
               },
               {
                 "textRuns": [
@@ -75,48 +53,9 @@
               {
                 "textRuns": [
                   {
-                    "value": "Understanding mortality context is necessary before interpreting:",
+                    "value": "Without this context, later variation may be misattributed to operational or financial factors alone.",
                     "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "discharge disposition mix and exit flow dynamics, and",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "payer mix and reimbursement exposure, which are sensitive to patient outcomes and end-of-stay pathways.",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Without this context, variation observed in later domains may be misattributed to operational or financial factors alone, rather than understood within the broader outcome risk environment.",
-                    "textStyle": {
-                      "fontSize": "11pt"
+                      "fontSize": "12pt"
                     }
                   }
                 ]
