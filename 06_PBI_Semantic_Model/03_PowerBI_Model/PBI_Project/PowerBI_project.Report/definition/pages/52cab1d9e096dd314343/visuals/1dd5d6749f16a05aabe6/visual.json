@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "ac2f09e64ac61a656ae7",
+  "name": "1dd5d6749f16a05aabe6",
   "position": {
-    "x": 300.30769230769232,
-    "y": 23.821433414097573,
-    "z": 14000,
-    "height": 41.230769230769234,
-    "width": 226.46153846153845,
-    "tabOrder": 12000
+    "x": 454.44155844155841,
+    "y": 690.70129870129858,
+    "z": 11500,
+    "height": 29.298701298701296,
+    "width": 158.96103896103895,
+    "tabOrder": 25002
   },
   "visual": {
     "visualType": "actionButton",
@@ -56,7 +56,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Unplanned Admission Rate'"
+                  "Value": "'Diagnostic Preview'"
                 }
               }
             },
@@ -71,8 +71,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#9370DD'"
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.6
                     }
                   }
                 }
@@ -88,7 +89,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "10D"
                 }
               }
             },
@@ -109,7 +110,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Click to Visualize it'"
+                  "Value": "'Click to Read it'"
                 }
               }
             },
@@ -135,7 +136,7 @@
             "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -149,7 +150,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "10D"
                 }
               }
             }
@@ -173,6 +174,13 @@
                   "Value": "true"
                 }
               }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
+                }
+              }
             }
           },
           "selector": {
@@ -186,7 +194,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -242,6 +250,87 @@
             "id": "default"
           }
         }
+      ],
+      "shape": [
+        {
+          "properties": {
+            "roundEdge": {
+              "expr": {
+                "Literal": {
+                  "Value": "25L"
+                }
+              }
+            },
+            "tileShape": {
+              "expr": {
+                "Literal": {
+                  "Value": "'tabRoundTopCorners'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "fill": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "selected"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -265,14 +354,14 @@
             "tooltip": {
               "expr": {
                 "Literal": {
-                  "Value": "'Severity of Illness reflects how clinically complex and physiologically unstable patients are at admission.  It is not a measure of care quality.'"
+                  "Value": "'Hospitals with an SMI over their own peer groups SMI median.'"
                 }
               }
             },
             "bookmark": {
               "expr": {
                 "Literal": {
-                  "Value": "'878bb3c10b3bd994ce16'"
+                  "Value": "'a4885759f57aa88c201e'"
                 }
               }
             }
@@ -285,7 +374,39 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Butt Viz 1 copy'"
+                  "Value": "'Butt Select Diagnostic Preview'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
@@ -295,7 +416,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "ed3e78b7d54e31523a69",
-  "isHidden": true,
   "howCreated": "InsertVisualButton"
 }

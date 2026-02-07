@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "ed9dd9d8666da710c220",
+  "name": "63e91bbac0a04b14e107",
   "position": {
-    "x": 0,
-    "y": 175.5694278625852,
-    "z": 2000,
-    "height": 374.64935064935065,
-    "width": 613.40259740259739,
-    "tabOrder": 9000
+    "x": 408.31168831168827,
+    "y": 385.24675324675326,
+    "z": 0,
+    "height": 27.428571428571427,
+    "width": 33.038961038961034,
+    "tabOrder": 25003
   },
   "visual": {
     "visualType": "shape",
@@ -18,14 +18,7 @@
             "tileShape": {
               "expr": {
                 "Literal": {
-                  "Value": "'tabRoundTopCorners'"
-                }
-              }
-            },
-            "tabRoundCornerTop": {
-              "expr": {
-                "Literal": {
-                  "Value": "5L"
+                  "Value": "'arrowChevron'"
                 }
               }
             }
@@ -38,7 +31,7 @@
             "shapeAngle": {
               "expr": {
                 "Literal": {
-                  "Value": "90L"
+                  "Value": "180L"
                 }
               }
             }
@@ -57,13 +50,6 @@
                       "Percent": 0
                     }
                   }
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "80D"
                 }
               }
             }
@@ -87,8 +73,57 @@
         }
       ]
     },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Back Diagn Prev'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualLink": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "type": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Bookmark'"
+                }
+              }
+            },
+            "bookmark": {
+              "expr": {
+                "Literal": {
+                  "Value": "'c3aa7ea90af52d161422'"
+                }
+              }
+            },
+            "tooltip": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Hide the text back'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "ed3e78b7d54e31523a69",
+  "parentGroupName": "364240cdcd6efe2bb978",
   "howCreated": "InsertVisualButton"
 }

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "a3dbe476d650be919278",
+  "name": "5bca6128b41b387d8b27",
   "position": {
-    "x": 14.153846153846153,
-    "y": 216.84212596687931,
-    "z": 16000,
-    "height": 366.76923076923077,
-    "width": 582.15384615384619,
-    "tabOrder": 13000
+    "x": 14.961038961038961,
+    "y": 8.570298313593991,
+    "z": 2000,
+    "height": 357.81818181818181,
+    "width": 580.98701298701292,
+    "tabOrder": 25004
   },
   "visual": {
     "visualType": "textbox",
@@ -19,9 +19,60 @@
               {
                 "textRuns": [
                   {
-                    "value": "PG-A Academic / Tertiary:",
+                    "value": "Diagnostic Preview — ",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "Payer Mix (Informational)",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "The Payer Mix views are intended to ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "situate downstream metrics within their reimbursement environment",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not to account for observed differences in performance, cost, or outcomes. Together, they describe how exposure to reimbursement conditions is ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "distributed, concentrated, and scaled",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " across peer groups and facilities.",
+                    "textStyle": {
+                      "fontSize": "11pt"
                     }
                   }
                 ]
@@ -29,13 +80,6 @@
               {
                 "textRuns": [
                   {
-                    "value": "High unplanned is structurally expected; volume amplifies risk"
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
                     "value": ""
                   }
                 ]
@@ -43,16 +87,22 @@
               {
                 "textRuns": [
                   {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "PG-B + PG-C Community:",
+                    "value": "Should subsequent outcome patterns prompt diagnostic exploration, such work would typically involve examining several ",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "separate analytical dimensions",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", such as:",
+                    "textStyle": {
+                      "fontSize": "11pt"
                     }
                   }
                 ]
@@ -60,30 +110,84 @@
               {
                 "textRuns": [
                   {
-                    "value": "Elevated unplanned often reflects ED dependence and limited diversion capacity"
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "PG-D Rural / East-End:",
+                    "value": "how encounter mix aligns with underlying service cost profiles",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "differences in payer-specific payment structures and contractual design",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "the compounding effect of payer composition and encounter scale on financial sensitivity",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "variability in discharge pathways and post-acute availability associated with payer rules",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "lag or mismatch between encounter activity and financial realization",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "The inclusion of these dimensions is ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "illustrative, not directive",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ".",
+                    "textStyle": {
+                      "fontSize": "11pt"
                     }
                   }
                 ]
@@ -91,30 +195,22 @@
               {
                 "textRuns": [
                   {
-                    "value": "Lower volume, but thin staffing elasticity increases sensitivity"
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "PG-E Specialty-Dominant: ",
+                    "value": "Whether any are relevant in a given case can only be determined through ",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "standalone diagnostic analysis",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", conducted outside the scope of this contextual view.",
+                    "textStyle": {
+                      "fontSize": "11pt"
                     }
                   }
                 ]
@@ -122,7 +218,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Lower baseline unplanned; deviations are more informative"
+                    "value": ""
                   }
                 ]
               }
@@ -231,7 +327,7 @@
                     "version": 1,
                     "kind": "NaturalLanguage",
                     "annotation": {
-                      "name": "smi_max",
+                      "name": "Value",
                       "utterance": "smi max"
                     }
                   }
@@ -240,7 +336,7 @@
             }
           },
           "selector": {
-            "id": "smi_max"
+            "id": "Value"
           }
         },
         {
@@ -269,15 +365,15 @@
                                       "Source": "_"
                                     }
                                   },
-                                  "Property": "Median Extreme % (Selected)"
+                                  "Property": "Facility Count"
                                 },
-                                "Name": "_Severity.Median Extreme % (Selected)"
+                                "Name": "_Severity.Facility Count"
                               }
                             ]
                           }
                         }
                       },
-                      "Property": "_Severity.Median Extreme % (Selected)"
+                      "Property": "_Severity.Facility Count"
                     }
                   },
                   "IncludeAllTypes": 1
@@ -287,8 +383,8 @@
                     "version": 1,
                     "kind": "NaturalLanguage",
                     "annotation": {
-                      "name": "med_extreme",
-                      "utterance": "Median Extreme % (Selected)"
+                      "name": "total_cnt",
+                      "utterance": "facility count"
                     }
                   }
                 }
@@ -296,7 +392,7 @@
             }
           },
           "selector": {
-            "id": "med_extreme"
+            "id": "total_cnt"
           }
         },
         {
@@ -325,15 +421,15 @@
                                       "Source": "_"
                                     }
                                   },
-                                  "Property": "Facilities Above Median Extreme"
+                                  "Property": "Facilities Above Own PG Sev Median"
                                 },
-                                "Name": "_Severity.Facilities Above Median Extreme"
+                                "Name": "_Severity.Facilities Above Own PG Sev Median"
                               }
                             ]
                           }
                         }
                       },
-                      "Property": "_Severity.Facilities Above Median Extreme"
+                      "Property": "_Severity.Facilities Above Own PG Sev Median"
                     }
                   },
                   "IncludeAllTypes": 1
@@ -343,8 +439,8 @@
                     "version": 1,
                     "kind": "NaturalLanguage",
                     "annotation": {
-                      "name": "n_above",
-                      "utterance": "Facilities Above Median Extreme"
+                      "name": "facilities_abv_own_pgSevMedian",
+                      "utterance": "Facilities Above Own PG Sev Median"
                     }
                   }
                 }
@@ -352,7 +448,7 @@
             }
           },
           "selector": {
-            "id": "n_above"
+            "id": "facilities_abv_own_pgSevMedian"
           }
         },
         {
@@ -381,15 +477,15 @@
                                       "Source": "_"
                                     }
                                   },
-                                  "Property": "Facilities Selected"
+                                  "Property": "Facility Count"
                                 },
-                                "Name": "_Severity.Facilities Selected"
+                                "Name": "_Severity.Facility Count"
                               }
                             ]
                           }
                         }
                       },
-                      "Property": "_Severity.Facilities Selected"
+                      "Property": "_Severity.Facility Count"
                     }
                   },
                   "IncludeAllTypes": 1
@@ -399,8 +495,8 @@
                     "version": 1,
                     "kind": "NaturalLanguage",
                     "annotation": {
-                      "name": "n_fac",
-                      "utterance": "Facilities Selected"
+                      "name": "Value 2",
+                      "utterance": "facility count"
                     }
                   }
                 }
@@ -408,7 +504,63 @@
             }
           },
           "selector": {
-            "id": "n_fac"
+            "id": "Value 2"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "d",
+                                "Entity": "Dim_ClinicalClass",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "d"
+                                    }
+                                  },
+                                  "Property": "PeerGroup Severity Median (FacilitySafe)"
+                                },
+                                "Name": "Dim_ClinicalClass.PeerGroup Severity Median (FacilitySafe)"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "Dim_ClinicalClass.PeerGroup Severity Median (FacilitySafe)"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "median_smi",
+                      "utterance": "PeerGroup Severity Median (FacilitySafe)"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "median_smi"
           }
         },
         {
@@ -437,15 +589,15 @@
                                       "Source": "_"
                                     }
                                   },
-                                  "Property": "Top Facility Extreme (Name)"
+                                  "Property": "Facilities Above SMI Median"
                                 },
-                                "Name": "_Severity.Top Facility Extreme (Name)"
+                                "Name": "_Severity.Facilities Above SMI Median"
                               }
                             ]
                           }
                         }
                       },
-                      "Property": "_Severity.Top Facility Extreme (Name)"
+                      "Property": "_Severity.Facilities Above SMI Median"
                     }
                   },
                   "IncludeAllTypes": 1
@@ -455,8 +607,8 @@
                     "version": 1,
                     "kind": "NaturalLanguage",
                     "annotation": {
-                      "name": "TopName",
-                      "utterance": "Top Facility Extreme (Name)"
+                      "name": "above_cnt",
+                      "utterance": "Facilities Above SMI Median"
                     }
                   }
                 }
@@ -464,119 +616,7 @@
             }
           },
           "selector": {
-            "id": "TopName"
-          }
-        },
-        {
-          "properties": {
-            "expr": {
-              "expr": {
-                "Min": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "Subquery": {
-                          "Query": {
-                            "Version": 2,
-                            "From": [
-                              {
-                                "Name": "_",
-                                "Entity": "_Severity",
-                                "Type": 0
-                              }
-                            ],
-                            "Select": [
-                              {
-                                "Measure": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Source": "_"
-                                    }
-                                  },
-                                  "Property": "PeerGroups_Selected"
-                                },
-                                "Name": "_Severity.PeerGroups_Selected"
-                              }
-                            ]
-                          }
-                        }
-                      },
-                      "Property": "_Severity.PeerGroups_Selected"
-                    }
-                  },
-                  "IncludeAllTypes": 1
-                },
-                "Annotations": {
-                  "NaturalLanguage": {
-                    "version": 1,
-                    "kind": "NaturalLanguage",
-                    "annotation": {
-                      "name": "peergroup_selected",
-                      "utterance": "PeerGroups_Selected"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "peergroup_selected"
-          }
-        },
-        {
-          "properties": {
-            "expr": {
-              "expr": {
-                "Min": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "Subquery": {
-                          "Query": {
-                            "Version": 2,
-                            "From": [
-                              {
-                                "Name": "_",
-                                "Entity": "_Severity",
-                                "Type": 0
-                              }
-                            ],
-                            "Select": [
-                              {
-                                "Measure": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Source": "_"
-                                    }
-                                  },
-                                  "Property": "Top Facility Extreme (%)"
-                                },
-                                "Name": "_Severity.Top Facility Extreme (%)"
-                              }
-                            ]
-                          }
-                        }
-                      },
-                      "Property": "_Severity.Top Facility Extreme (%)"
-                    }
-                  },
-                  "IncludeAllTypes": 1
-                },
-                "Annotations": {
-                  "NaturalLanguage": {
-                    "version": 1,
-                    "kind": "NaturalLanguage",
-                    "annotation": {
-                      "name": "top_pct",
-                      "utterance": "top facility extreme (%)"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "top_pct"
+            "id": "above_cnt"
           }
         }
       ]
@@ -592,22 +632,22 @@
                 }
               }
             },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "28D"
+                }
+              }
+            },
             "color": {
               "solid": {
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 1,
-                      "Percent": 0
+                      "Percent": 0.1
                     }
                   }
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "70D"
                 }
               }
             }
@@ -620,27 +660,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Info PeerGroup'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "padding": [
-        {
-          "properties": {
-            "left": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "right": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
+                  "Value": "'Text Diagn Prev'"
                 }
               }
             }
@@ -650,6 +670,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "ed3e78b7d54e31523a69",
-  "isHidden": true
+  "parentGroupName": "364240cdcd6efe2bb978"
 }

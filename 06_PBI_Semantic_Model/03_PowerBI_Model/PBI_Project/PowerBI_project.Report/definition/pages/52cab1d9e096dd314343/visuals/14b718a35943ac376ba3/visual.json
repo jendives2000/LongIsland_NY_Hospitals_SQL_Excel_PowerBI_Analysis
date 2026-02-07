@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "ed9dd9d8666da710c220",
+  "name": "14b718a35943ac376ba3",
   "position": {
     "x": 0,
-    "y": 175.5694278625852,
-    "z": 2000,
-    "height": 374.64935064935065,
+    "y": 0,
+    "z": 1000,
+    "height": 376.51948051948051,
     "width": 613.40259740259739,
-    "tabOrder": 9000
+    "tabOrder": 25005
   },
   "visual": {
     "visualType": "shape",
@@ -63,7 +63,7 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "80D"
+                  "Value": "0D"
                 }
               }
             }
@@ -87,8 +87,23 @@
         }
       ]
     },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Backdrop'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "ed3e78b7d54e31523a69",
+  "parentGroupName": "364240cdcd6efe2bb978",
   "howCreated": "InsertVisualButton"
 }

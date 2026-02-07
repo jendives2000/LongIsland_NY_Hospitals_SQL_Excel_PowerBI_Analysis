@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "e7c9d0a0c003a2761065",
   "position": {
-    "x": 14.153846153846153,
-    "y": 194.89835649102065,
+    "x": 14.337662337662337,
+    "y": 179.93306422622155,
     "z": 9500,
-    "height": 389.53846153846155,
-    "width": 582.15384615384619,
+    "height": 365.9220779220779,
+    "width": 582.23376623376623,
     "tabOrder": 3000
   },
   "visual": {
@@ -33,12 +33,46 @@
                       "color": "#ffffff"
                     }
                   }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "Average length of stay (LOS) shows clear variation across peer groups, with peer-group medians distributed across a defined range rather than concentrated at a single system value. This indicates that baseline throughput expectations differ by peer context.",
+                    "value": "Average length of stay (LOS) varies ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "across peer groups",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", with peer medians spanning a range rather than converging on a single system value. This indicates ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "different baseline throughput contexts",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " by peer group.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -55,10 +89,43 @@
               {
                 "textRuns": [
                   {
-                    "value": "Within peer groups, LOS values are dispersed around the peer-group median, with a subset of facilities positioned above their own peer benchmark. This pattern reflects uneven throughput conditions under otherwise comparable peer-group contexts, rather than uniform system behavior.",
+                    "value": "Within peer groups, LOS is ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
+                  },
+                  {
+                    "value": "dispersed around the peer median",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", with some facilities positioned above their own peer reference. This reflects ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "uneven throughput conditions within comparable peer contexts",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not uniform system behavior.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
                   }
                 ]
               },
@@ -79,12 +146,46 @@
                       "color": "#ffffff"
                     }
                   }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "Because patient severity is tightly clustered within peer groups and unplanned intake pressure is broadly distributed across the system, observed LOS variation should be interpreted as a ",
+                    "value": "Given ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "tightly clustered severity",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " and ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "system-wide unplanned intake",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", LOS variation should be read as a ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -97,7 +198,7 @@
                     }
                   },
                   {
-                    "value": ", not as a proxy for case-mix complexity or random demand fluctuation.",
+                    "value": ", not as case-mix complexity or random demand.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -114,20 +215,33 @@
               {
                 "textRuns": [
                   {
-                    "value": "LOS values above the peer median indicate relative positioning within a shared operating context, not inefficiency or performance deviation. Facilities operating at or below their peer-group LOS median represent ",
+                    "value": "Positioning above the peer median indicates ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "throughput-stable reference points",
+                    "value": "relative throughput exposure within a shared context",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " for interpretation, not benchmarks for ranking or evaluation.",
+                    "value": ", not inefficiency or performance deviation. Facilities at or below the peer median serve as ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "contextual reference points",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not ranking benchmarks.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -144,20 +258,20 @@
               {
                 "textRuns": [
                   {
-                    "value": "Findings on this page establish ",
+                    "value": "Findings here ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "context for subsequent metrics",
+                    "value": "establish context only",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " and should not be used in isolation to infer operational causes, assign accountability, or recommend actions.",
+                    "value": " and should not be used in isolation to infer causes, assign accountability, or recommend actions.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
