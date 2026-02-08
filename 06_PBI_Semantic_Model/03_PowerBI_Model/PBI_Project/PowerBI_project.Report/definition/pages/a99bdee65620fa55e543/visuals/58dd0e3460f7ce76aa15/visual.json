@@ -3,7 +3,7 @@
   "name": "58dd0e3460f7ce76aa15",
   "position": {
     "x": 14.337662337662337,
-    "y": 185.12123236725446,
+    "y": 187.07502215575352,
     "z": 2000,
     "height": 361.55844155844153,
     "width": 582.23376623376623,
@@ -46,17 +46,59 @@
               {
                 "textRuns": [
                   {
-                    "value": "Mortality rates show a wide but continuous distribution across facilities and peer groups, reflecting variation in outcome exposure rather than discrete performance categories. ",
+                    "value": "Disposition mix differs ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
+                  },
                   {
-                    "value": "Given tightly clustered patient severity, system-wide unplanned intake pressure, unevenly concentrated throughput burden as reflected in excess LOS, and concentrated C&MP, observed mortality variation occurs within shared structural operating conditions. ",
+                    "value": "systematically by peer group",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", creating distinct ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "exit-flow signatures",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ". Home discharge dominates across peers, while variation is concentrated in ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "post-acute and alternative exits",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", reflecting ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "structural discharge environments",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not performance.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -73,7 +115,46 @@
               {
                 "textRuns": [
                   {
-                    "value": "The pattern reflects system-level outcome distribution shaped by upstream risk and operating context, not performance ranking or causal attribution.",
+                    "value": "Given ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "comparable severity",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " and ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "system-wide intake",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", these differences indicate ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "peer-level discharge structure and access",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not acuity or demand.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -117,7 +198,56 @@
               {
                 "textRuns": [
                   {
-                    "value": "Bars show mortality distribution under comparable structural context, with ordering indicating relative position within the spread rather than quality tiers. The range reflects system-level variation, not acceptable limits. ",
+                    "value": "Read this view as ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "peer-level disposition context",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not outcome evaluation.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Values show ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "exit distribution",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not quality or effectiveness. Differences describe ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "discharge structure",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not success or failure.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -134,17 +264,59 @@
               {
                 "textRuns": [
                   {
-                    "value": "This view does not establish causation, assign performance or accountability, or isolate drivers. Mortality should be interpreted only alongside upstream context, using proximity for contextual comparison rather than corrective inference. ",
+                    "value": "Carry this context forward when interpreting ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
+                  },
                   {
-                    "value": "This visual functions as an outcome-context lens, not an explanatory endpoint.",
+                    "value": "LOS",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "throughput",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", and ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "cost/margin pressure",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", where post-acute availability shapes downstream impact. This view ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "anchors peer expectations",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " and does not imply causality, ranking, or accountability.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }

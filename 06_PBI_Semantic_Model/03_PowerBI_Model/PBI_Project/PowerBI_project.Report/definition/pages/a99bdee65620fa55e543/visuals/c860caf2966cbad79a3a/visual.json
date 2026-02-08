@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "fe2b637ab034aae32b0e",
+  "name": "c860caf2966cbad79a3a",
   "position": {
-    "x": 20.34437086092715,
-    "y": 0,
-    "z": 6000,
-    "height": 43.867549668874169,
-    "width": 275.28476821192049,
-    "tabOrder": 4000
+    "x": 963.17880794701978,
+    "y": 78.198675496688736,
+    "z": 18000,
+    "height": 41.960264900662253,
+    "width": 152.58278145695363,
+    "tabOrder": 18000
   },
   "visual": {
     "visualType": "actionButton",
@@ -56,7 +56,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Discharge Destination Mix by Facility'"
+                  "Value": "'LOS page'"
                 }
               }
             },
@@ -81,21 +81,14 @@
             "italic": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+                  "Value": "14D"
                 }
               }
             }
@@ -109,7 +102,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Click to Visualize it'"
+                  "Value": "'LOS page'"
                 }
               }
             },
@@ -135,7 +128,7 @@
             "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -143,13 +136,6 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "11D"
                 }
               }
             }
@@ -160,86 +146,16 @@
         },
         {
           "properties": {
-            "italic": {
+            "text": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "'LOS page'"
                 }
               }
             }
           },
           "selector": {
             "id": "selected"
-          }
-        }
-      ],
-      "outline": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        },
-        {
-          "properties": {
-            "weight": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            },
-            "lineColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#744EC2'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "hover"
-          }
-        },
-        {
-          "properties": {
-            "lineColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#744EC2'"
-                    }
-                  }
-                }
-              }
-            },
-            "weight": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
           }
         }
       ]
@@ -258,48 +174,14 @@
             "type": {
               "expr": {
                 "Literal": {
-                  "Value": "'Bookmark'"
+                  "Value": "'PageNavigation'"
                 }
               }
             },
-            "tooltip": {
+            "navigationSection": {
               "expr": {
                 "Literal": {
-                  "Value": "'Severity of Illness reflects how clinically complex and physiologically unstable patients are at admission.  It is not a measure of care quality.'"
-                }
-              }
-            },
-            "bookmark": {
-              "expr": {
-                "Literal": {
-                  "Value": "'fb468657a2900a1867d7'"
-                }
-              }
-            },
-            "showDefaultTooltip": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "title": [
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Butt Viz 2 Mortality vs Peer Median'"
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+                  "Value": "'52cab1d9e096dd314343'"
                 }
               }
             }
@@ -309,6 +191,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "256ff8cf1eedb8717a6a",
   "howCreated": "InsertVisualButton"
 }
