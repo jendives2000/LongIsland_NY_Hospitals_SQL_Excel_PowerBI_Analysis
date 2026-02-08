@@ -128,6 +128,7 @@ table _Disposition
 			)
 		formatString: 0.0%
 		displayFolder: Share Metrics
+		lineageTag: 5f25cb25-0ed4-46db-a5ab-00f0ae44ebe4
 
 	/// Median acute transfer share across facilities within the same peer group
 	measure 'PeerGroup Acute Transfer Share Median' = ```
@@ -146,6 +147,7 @@ table _Disposition
 			```
 		formatString: 0.0%
 		displayFolder: PeerGroup Benchmarks
+		lineageTag: 2b150438-0773-43c1-93c1-828d584b4281
 
 	/// Facility post-acute share minus peer group median (percentage points)
 	measure 'Post-Acute vs Peer Median (pp)' =
@@ -159,6 +161,7 @@ table _Disposition
 			)
 		formatString: +0.0;-0.0;0.0
 		displayFolder: Variance
+		lineageTag: 0f14710d-2c3b-4260-808e-6451e6204111
 
 	/// Facility acute transfer share minus peer group median (percentage points)
 	measure 'Transfer vs Peer Median (pp)' =
@@ -172,6 +175,7 @@ table _Disposition
 			)
 		formatString: +0.0;-0.0;0.0
 		displayFolder: Variance
+		lineageTag: 56dd824f-d96c-4345-9372-968d2fc0d6e5
 
 	/// Conditional formatting: White if above PG median, gray otherwise
 	measure 'Post-Acute Share Label Color' = ```
@@ -199,6 +203,7 @@ table _Disposition
 			```
 		isHidden
 		displayFolder: Helper
+		lineageTag: 6d9b36c5-1773-431a-9b9c-3df9e5771776
 
 	/// Post-acute median for the facility's peer group (works without PG in filter context)
 	measure 'Facility PeerGroup Post-Acute Median' = ```
@@ -219,6 +224,7 @@ table _Disposition
 			```
 		formatString: 0.0%
 		displayFolder: PeerGroup Benchmarks
+		lineageTag: 6360e029-50f1-413c-8a37-b88573ed1314
 
 	column Column
 		isHidden

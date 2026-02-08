@@ -108,16 +108,29 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "_Guardrails"
+                    "Entity": "Dim_PeerGroup"
                   }
                 },
-                "Property": "Mortality Rate (Guarded)"
+                "Property": "PeerGroup_Name"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
+          },
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Dim_Facility"
+                  }
+                },
+                "Property": "Facility_Name"
+              }
+            },
+            "direction": "Ascending"
           }
         ]
       }
