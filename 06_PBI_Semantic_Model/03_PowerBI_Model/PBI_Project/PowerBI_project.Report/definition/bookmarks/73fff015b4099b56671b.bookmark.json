@@ -1,9 +1,15 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.0.0/schema.json",
-  "displayName": "Disp Reset",
-  "name": "c70d09059fc7243e44ee",
+  "displayName": "Butt Disp back Diag P",
+  "name": "73fff015b4099b56671b",
   "options": {
-    "targetVisualNames": []
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "43a1581ad1434e7f1d45",
+      "15f0dfe5dc00dedd0cac",
+      "4b6488c8babba681165a",
+      "778a62b35e6d71186971"
+    ]
   },
   "explorationState": {
     "version": "1.3",
@@ -30,7 +36,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "678fc311b82914c3271f",
+                  "name": "a742ec9d58d58dc7a2e5",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -78,9 +84,6 @@
                     }
                   }
                 ]
-              },
-              "display": {
-                "mode": "hidden"
               }
             }
           },
@@ -573,15 +576,41 @@
               "objects": {},
               "orderBy": [
                 {
-                  "Direction": 2,
+                  "Direction": 1,
                   "Expression": {
-                    "Measure": {
+                    "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "_Mortality"
+                          "Entity": "Dim_Facility"
                         }
                       },
-                      "Property": "High ROM Sort"
+                      "Property": "PeerGroup_Name"
+                    }
+                  }
+                },
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "Facility_Name"
+                    }
+                  }
+                },
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Disposition"
+                        }
+                      },
+                      "Property": "Disposition_Grouped"
                     }
                   }
                 }
@@ -673,7 +702,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "cdd864e6c941d539fe41",
+                  "name": "cfa37855ca4c3e7bc4cd",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -688,7 +717,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "b6fbaf440f3e04a6d7af",
+                  "name": "50c45718098fea5d54d0",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -703,7 +732,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "757f5293c30742549fd0",
+                  "name": "1ca81ed806548eea9f6e",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -723,7 +752,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "8c222b5475456a530ffc",
+                  "name": "5d111afda4b492770bf6",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -738,7 +767,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "bf12d854dd99b5089705",
+                  "name": "88bc83b343b3f29b58cb",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -753,7 +782,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "20fc044239d27b0057c2",
+                  "name": "89226e68a9f538954fae",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -768,7 +797,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "3dcf5e6f8b70b8e0a688",
+                  "name": "38655153a7b884f9fc4a",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -885,7 +914,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "d5c0586de056deb0aa26",
+                  "name": "dad1aa509d68ce600428",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -900,7 +929,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "7237171c8ec7439007c6",
+                  "name": "6bccaecc97e2b9a92687",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -915,7 +944,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "486c2b74dfe1a30ee2c3",
+                  "name": "2e582fc94da2a1d759df",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -930,7 +959,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "13c12f2e3e535a71d3aa",
+                  "name": "1bc86c662cc9d88dda1b",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1119,7 +1148,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "ceba43cf4b395eb791d7",
+                  "name": "fe9abb043161a9d87923",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1139,7 +1168,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e73640a459eb5097d7a6",
+                  "name": "d816603c501a744f86b3",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1154,7 +1183,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "89f1eee39bdcc1ddeeba",
+                  "name": "f041e70b849196f7360b",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1169,7 +1198,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e8f000ad9fffb2fda370",
+                  "name": "926c5787cc47efd1f55e",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1184,7 +1213,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "979ad596cb5cb6086cd6",
+                  "name": "6843813d62335d5cebfe",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1244,7 +1273,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "f1d7450fe9a8149fa8ac",
+                  "name": "957cd2f5a8172a555ea6",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1259,7 +1288,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "61261e83e6b1215252b2",
+                  "name": "6d85975ed51b57213450",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1274,7 +1303,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "58b4f6d7ccc8de2c6b3b",
+                  "name": "880b651442b19f1f9431",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1289,7 +1318,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "5c0b2db715b1d750594e",
+                  "name": "38b5313fe14b61c55bb5",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1382,7 +1411,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "915b63f2b9231fb228c7",
+                  "name": "d6d3818eff34cfa4d60e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1397,7 +1426,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "21816c27dee0aba5d955",
+                  "name": "e89d82c60e9ff0ac42ab",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1412,7 +1441,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "6fec9f1aa3754a82d692",
+                  "name": "ad596e37faf95e3975d5",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1427,7 +1456,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "6d229ea7c6adda5a0d0b",
+                  "name": "ecabcabcba4e98424c7d",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1442,7 +1471,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "9f9b29da572dc380998b",
+                  "name": "947fd5125f98df40acd0",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1457,7 +1486,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "3ce331e1ce14e052fa73",
+                  "name": "9eb6913b3582b36ad001",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1472,7 +1501,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "775b80c8fe43eedfae83",
+                  "name": "90fba1da2c0f10e1078b",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1487,7 +1516,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "21c1073a49a6549419ef",
+                  "name": "1cad57dadaf55ff47f75",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1502,7 +1531,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "65c2158a40e0e4c272fe",
+                  "name": "19da4c9fd7bcca6e439b",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1517,7 +1546,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "182314a88bc22bde86a9",
+                  "name": "a53af488f6ac37c3c75e",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1590,7 +1619,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "0877c67f757c7bc5e1a6",
+                  "name": "015b1f5501e3b3ff4c2c",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1605,7 +1634,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "02a1a64ce1854e6ccf3b",
+                  "name": "e4443fb2910ff524e014",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1620,7 +1649,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "c37ebf85a8be0ba9c8cc",
+                  "name": "7da7d4c2b7974ce94ac2",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1640,7 +1669,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "cb87a0ac1c9410be051f",
+                  "name": "2487e5ad255460b1653b",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1655,7 +1684,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "a3fb255aea0c8b971258",
+                  "name": "5f8d389df3fd6db22cf3",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1670,7 +1699,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "f790a361f6c47b9d52e9",
+                  "name": "5f96d690c714ce9dd712",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1685,7 +1714,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "ff2586a2201c26d8ebcf",
+                  "name": "2daf4fc864192668a749",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1790,7 +1819,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "769470a0b62270d9344e",
+                  "name": "45e039966f3fd649cfb7",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1805,7 +1834,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "4b00c2abfede0aa5dcaf",
+                  "name": "4a82cd13bdc61832e1c5",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1820,7 +1849,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "aa08c0344813e26f8f17",
+                  "name": "3a48e64a1a1e0d770206",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1945,10 +1974,7 @@
           "43b43270b063bbf990b6": {
             "singleVisual": {
               "visualType": "textbox",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
+              "objects": {}
             }
           },
           "46cc2ca6801e9f426858": {
@@ -2059,7 +2085,10 @@
           "c271c5d3fa6981b0d6c0": {
             "singleVisual": {
               "visualType": "textbox",
-              "objects": {}
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
             }
           },
           "e66de504fb9083563ebe": {
@@ -2084,7 +2113,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "6a6abd308997faad07c3",
+                  "name": "9c60240d616864309d71",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -2099,7 +2128,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e603b4778cc7b06fa3bd",
+                  "name": "3542e82245fc3c901160",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -2114,7 +2143,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "1ffa26c51d22088c206b",
+                  "name": "2dc0b3f9cb26a7c81b1f",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -2129,7 +2158,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "57ed1f4e60d817658248",
+                  "name": "166ef5fae56c1f6bb23a",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -2144,7 +2173,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "392c800af6b4e3c772d3",
+                  "name": "cb376bef57d95f5d4a9c",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -2159,7 +2188,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "13f6e500c4890ca3d217",
+                  "name": "0b73c5f993cc68fb041b",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -2220,7 +2249,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "1a4c8111c09b3e94eb4f",
+                  "name": "386bb51c0319e7b74ea6",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -2248,7 +2277,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "14b1202e5a1145ceac7f",
+                  "name": "585cb78894d54684a695",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -2347,10 +2376,7 @@
           "e9765bce2cb1edabea0b": {
             "singleVisual": {
               "visualType": "actionButton",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
+              "objects": {}
             }
           },
           "c860caf2966cbad79a3a": {
@@ -2362,7 +2388,7 @@
         },
         "visualContainerGroups": {
           "2f4d60abd3a748c3344c": {
-            "isHidden": true,
+            "isHidden": false,
             "children": {
               "256ff8cf1eedb8717a6a": {
                 "isHidden": true
@@ -2382,7 +2408,7 @@
             }
           },
           "5fe36c2423d4f2892930": {
-            "isHidden": false
+            "isHidden": true
           }
         }
       }
@@ -2395,7 +2421,7 @@
               "expanded": {
                 "expr": {
                   "Literal": {
-                    "Value": "false"
+                    "Value": "true"
                   }
                 }
               }

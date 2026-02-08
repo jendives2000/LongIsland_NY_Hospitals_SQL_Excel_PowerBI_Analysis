@@ -26,7 +26,7 @@
                     }
                   },
                   {
-                    "value": "Mortality (Informational)",
+                    "value": "Disposition (Informational)",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -44,33 +44,33 @@
               {
                 "textRuns": [
                   {
-                    "value": "The mortality views provide ",
+                    "value": "The disposition views describe ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "risk-mix context",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", showing how observed mortality is distributed across APR Risk of Mortality categories by facility. They describe ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "risk composition",
+                    "value": "how inpatient episodes conclude",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not outcome performance or causes.",
+                    "value": " across facilities and PG, outlining variation in exit destinations, escalation paths, and end-of-stay outcomes. They characterize ",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": "exit-flow structure",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": ", not performance/outcome drivers.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -100,46 +100,33 @@
                     }
                   },
                   {
-                    "value": ", ",
+                    "value": " and ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "system-wide intake pressure",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": ", and ",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  },
-                  {
-                    "value": "localized throughput burden",
+                    "value": "system-wide unplanned intake",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", observed mortality occurs within a ",
+                    "value": ", observed differences in disposition reflect ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "shared risk environment",
+                    "value": "structural differences in downstream capacity, access, and coordination",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", not one dominated by isolated concentrations of extreme-risk cases.",
+                    "value": ", rather than patient acuity or demand pressure.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -156,20 +143,20 @@
               {
                 "textRuns": [
                   {
-                    "value": "If downstream patterns warrant diagnostic review, analysis would typically examine ",
+                    "value": "If downstream variation warrants diagnostic review, such analysis would typically examine ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "separate dimensions",
+                    "value": "independent dimensions",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": ", such as:",
+                    "value": ", including:",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -186,7 +173,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "concordance between outcomes and APR risk stratification",
+                    "value": "availability and coordination of post-acute and community-based care",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -197,7 +184,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "timing of adverse events relative to prolonged LOS",
+                    "value": "patterns of escalation and acute transfer across peer contexts",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -208,7 +195,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "interaction between throughput congestion and high-risk cohorts",
+                    "value": "discharge timing relative to LOS and throughput pressure",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -219,7 +206,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "care transitions and escalation patterns across risk levels",
+                    "value": "interaction between exit mix and cost or margin accumulation",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -230,7 +217,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "overlap with cost accumulation or capacity strain",
+                    "value": "consistency of discharge pathways across services or cohorts",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -248,7 +235,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "These domains are ",
+                    "value": "The domains listed are ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
@@ -261,30 +248,20 @@
                     }
                   },
                   {
-                    "value": ".",
-                    "textStyle": {
-                      "fontSize": "11pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Relevance requires ",
+                    "value": ". Determining relevance requires ",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "independent diagnostic analysis",
+                    "value": "separate diagnostic analysis",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " beyond this contextual view.",
+                    "value": " beyond this contextual assessment.",
                     "textStyle": {
                       "fontSize": "11pt"
                     }
