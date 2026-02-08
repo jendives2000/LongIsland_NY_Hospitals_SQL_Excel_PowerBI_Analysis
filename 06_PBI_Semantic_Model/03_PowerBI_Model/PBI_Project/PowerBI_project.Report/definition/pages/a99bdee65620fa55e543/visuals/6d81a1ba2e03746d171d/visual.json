@@ -69,6 +69,23 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Guardrails"
+                  }
+                },
+                "Property": "Mortality Rate (Guarded)"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "objects": {
@@ -713,51 +730,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "256ff8cf1eedb8717a6a",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "d43d9f2ade8563346661",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Dim_PeerGroup"
-              }
-            },
-            "Property": "PeerGroup_Name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "6e7aedbc93e8d0c05924",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Dim_Disposition"
-              }
-            },
-            "Property": "Disposition_Grouped"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "1a4fc8e6e0f1cd6c20fc",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Disposition"
-              }
-            },
-            "Property": "Disposition Share"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "parentGroupName": "256ff8cf1eedb8717a6a"
 }

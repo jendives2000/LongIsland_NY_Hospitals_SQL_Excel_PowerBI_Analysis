@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": true
+              "active": false
             }
           ]
         },
@@ -83,23 +83,6 @@
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "_Disposition"
-                  }
-                },
-                "Property": "Facility PeerGroup Post-Acute Median"
-              }
-            },
-            "direction": "Descending"
-          }
-        ]
       }
     },
     "objects": {

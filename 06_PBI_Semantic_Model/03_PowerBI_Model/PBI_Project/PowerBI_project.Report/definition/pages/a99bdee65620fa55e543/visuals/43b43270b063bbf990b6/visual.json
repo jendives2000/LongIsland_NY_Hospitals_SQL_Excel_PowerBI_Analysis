@@ -19,7 +19,16 @@
               {
                 "textRuns": [
                   {
-                    "value": "Structural context only, not outcome assessment.",
+                    "value": "Structural context only, not outcome or success/failure",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": " "
+                  },
+                  {
+                    "value": "assessment.",
                     "textStyle": {
                       "fontSize": "12pt"
                     }
@@ -92,7 +101,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "This page provides exit-flow context only.",
+                    "value": "This page provides exit-flow context only. Driver assessment requires separate analysis.",
                     "textStyle": {
                       "fontSize": "12pt"
                     }
@@ -102,7 +111,14 @@
               {
                 "textRuns": [
                   {
-                    "value": " Driver assessment requires separate analysis.",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "All findings below should be interpreted against a shared baseline of broadly comparable severity, system-wide unplanned intake, and structurally segmented reimbursement exposure.",
                     "textStyle": {
                       "fontSize": "12pt"
                     }
@@ -144,5 +160,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "5fe36c2423d4f2892930"
+  "parentGroupName": "5fe36c2423d4f2892930",
+  "isHidden": true
 }
