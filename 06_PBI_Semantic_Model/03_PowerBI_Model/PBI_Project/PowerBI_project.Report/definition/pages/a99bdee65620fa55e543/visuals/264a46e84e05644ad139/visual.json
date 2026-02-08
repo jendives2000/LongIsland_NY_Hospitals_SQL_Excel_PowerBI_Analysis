@@ -232,5 +232,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2fe78847f9a20d0d664b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_PeerGroup"
+              }
+            },
+            "Property": "PeerGroup_Name"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

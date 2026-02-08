@@ -3,14 +3,14 @@
   "name": "c89a2d67f7c6b8d0304f",
   "position": {
     "x": 660.15584415584408,
-    "y": 17.227243128126528,
+    "y": 17.466305583673506,
     "z": 3000,
     "height": 530.49350649350652,
     "width": 608.41558441558436,
     "tabOrder": 1000
   },
   "visual": {
-    "visualType": "lineClusteredColumnComboChart",
+    "visualType": "scatterChart",
     "query": {
       "queryState": {
         "Category": {
@@ -47,28 +47,44 @@
             }
           ]
         },
-        "Tooltips": {
+        "Series": {
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Column": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Fact_KPI_FinancialPressure"
-                        }
-                      },
-                      "Property": "Encounter_Count"
+                    "SourceRef": {
+                      "Entity": "Dim_Facility"
                     }
                   },
-                  "Function": 0
+                  "Property": "PeerGroup_Name"
                 }
               },
-              "queryRef": "Sum(Fact_KPI_FinancialPressure.Encounter_Count)",
-              "nativeQueryRef": "Total Encounter",
-              "displayName": "Total Encounter"
-            },
+              "queryRef": "Dim_Facility.PeerGroup_Name",
+              "nativeQueryRef": "PeerGroup_Name1"
+            }
+          ]
+        },
+        "Size": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Disposition"
+                    }
+                  },
+                  "Property": "Total Inpatient Encounters"
+                }
+              },
+              "queryRef": "_Disposition.Total Inpatient Encounters",
+              "nativeQueryRef": "Total Inpatient Encounters"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
             {
               "field": {
                 "Measure": {
@@ -82,6 +98,67 @@
               },
               "queryRef": "_Volume_&_Denominators.Deaths Count",
               "nativeQueryRef": "Deaths Count"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Disposition"
+                    }
+                  },
+                  "Property": "Acute Transfer Count"
+                }
+              },
+              "queryRef": "_Disposition.Acute Transfer Count",
+              "nativeQueryRef": "Acute Transfer Count"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Guardrails"
+                    }
+                  },
+                  "Property": "Severity Mix Index (Guarded)"
+                }
+              },
+              "queryRef": "_Guardrails.Severity Mix Index (Guarded)",
+              "nativeQueryRef": "Severity Mix Index (Guarded)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Guardrails"
+                    }
+                  },
+                  "Property": "Average LOS (Guarded)"
+                }
+              },
+              "queryRef": "_Guardrails.Average LOS (Guarded)",
+              "nativeQueryRef": "Average LOS (Guarded)"
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Disposition"
+                    }
+                  },
+                  "Property": "Acute Transfer Share %"
+                }
+              },
+              "queryRef": "_Disposition.Acute Transfer Share %",
+              "nativeQueryRef": "Acute Transfer Share %",
+              "active": true
             }
           ]
         },
@@ -92,274 +169,20 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Guardrails"
+                      "Entity": "_Disposition"
                     }
                   },
-                  "Property": "Mortality Rate (Guarded)"
+                  "Property": "In-Hospital Death Share %"
                 }
               },
-              "queryRef": "_Guardrails.Mortality Rate (Guarded)",
-              "nativeQueryRef": "Mortality Rate (Guarded)"
-            }
-          ]
-        },
-        "Y2": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Mortality"
-                    }
-                  },
-                  "Property": "PeerGroup Mortality Rate Median"
-                }
-              },
-              "queryRef": "_Mortality.PeerGroup Mortality Rate Median",
-              "nativeQueryRef": "PeerGroup Mortality Rate Median"
+              "queryRef": "_Disposition.In-Hospital Death Share %",
+              "nativeQueryRef": "In-Hospital Death Share %"
             }
           ]
         }
       }
     },
     "objects": {
-      "labels": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "detailLabelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
-                }
-              }
-            },
-            "detailContentType": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Percent of total'"
-                }
-              }
-            },
-            "enableDetailDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "enableValueDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "detailColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "labelPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "'OutsideEnd'"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "1L"
-                }
-              }
-            },
-            "optimizeLabelDisplay": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "enableBackground": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        },
-        {
-          "properties": {
-            "enableValueDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "detailBold": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "vw_Fact_KPI_SeverityMix_BySeverity"
-                          }
-                        },
-                        "Property": "APR_Severity_Description"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'Extreme'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {},
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 1
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "showSeries": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Financial_Basic.PeerGroup Margin Pressure Median"
-          }
-        },
-        {
-          "properties": {},
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 1
-                }
-              }
-            ],
-            "metadata": "_Financial_Basic.PeerGroup Margin Pressure Median"
-          }
-        },
-        {
-          "properties": {
-            "enableValueDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Mortality.PeerGroup Mortality Rate Median"
-          }
-        },
-        {
-          "properties": {
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Mortality"
-                        }
-                      },
-                      "Property": "Mortality Label Color"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 1
-                }
-              }
-            ],
-            "metadata": "_Guardrails.Mortality Rate (Guarded)"
-          }
-        },
-        {
-          "properties": {
-            "optimizeLabelDisplay": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Guardrails.Mortality Rate (Guarded)"
-          }
-        }
-      ],
       "dataPoint": [
         {
           "properties": {
@@ -604,25 +427,6 @@
           "selector": {
             "metadata": "_Financial_Basic.PeerGroup Margin Pressure Median"
           }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 7,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Mortality.PeerGroup Mortality Rate Median"
-          }
         }
       ],
       "legend": [
@@ -638,14 +442,7 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'Top'"
-                }
-              }
-            },
-            "legendMarkerRendering": {
-              "expr": {
-                "Literal": {
-                  "Value": "'lineAndMarker'"
+                  "Value": "'BottomCenter'"
                 }
               }
             }
@@ -658,14 +455,14 @@
             "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -681,8 +478,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.6
+                      "ColorId": 1,
+                      "Percent": 0.4
                     }
                   }
                 }
@@ -695,17 +492,21 @@
                 }
               }
             },
-            "secEnd": {
-              "expr": {
-                "Literal": {
-                  "Value": "0.05D"
+            "titleColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3A3A3A'"
+                    }
+                  }
                 }
               }
             },
-            "secStart": {
+            "gridlineTransparency": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "50D"
                 }
               }
             }
@@ -718,7 +519,7 @@
             "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -735,34 +536,300 @@
                   "Value": "true"
                 }
               }
+            },
+            "start": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "end": {
+              "expr": {
+                "Literal": {
+                  "Value": "0.4D"
+                }
+              }
+            },
+            "titleColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3A3A3A'"
+                    }
+                  }
+                }
+              }
+            },
+            "gridlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.4
+                    }
+                  }
+                }
+              }
+            },
+            "gridlineTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "50D"
+                }
+              }
             }
           }
         }
       ],
-      "lineStyles": [
+      "bubbles": [
         {
           "properties": {
-            "strokeWidth": {
+            "markerRangeType": {
               "expr": {
                 "Literal": {
-                  "Value": "2D"
+                  "Value": "'magnitude'"
                 }
               }
             },
-            "strokeLineJoin": {
+            "bubbleSize": {
               "expr": {
                 "Literal": {
-                  "Value": "'round'"
-                }
-              }
-            },
-            "lineChartType": {
-              "expr": {
-                "Literal": {
-                  "Value": "'step'"
+                  "Value": "-17L"
                 }
               }
             }
+          }
+        }
+      ],
+      "markers": [
+        {
+          "properties": {
+            "borderShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "referenceLine": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "displayName": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ATS Median'"
+                }
+              }
+            },
+            "value": {
+              "expr": {
+                "Aggregation": {
+                  "Expression": {
+                    "SelectRef": {
+                      "ExpressionName": "_Disposition.Acute Transfer Share %"
+                    }
+                  },
+                  "Function": 6
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "shadeShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "shadeTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "95D"
+                }
+              }
+            },
+            "shadeColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": -0.25
+                    }
+                  }
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'back'"
+                }
+              }
+            },
+            "dataLabelShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "dataLabelText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ValueAndName'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Disposition.Acute Transfer Share %",
+            "id": "1"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "displayName": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Death % Median'"
+                }
+              }
+            },
+            "value": {
+              "expr": {
+                "Aggregation": {
+                  "Expression": {
+                    "SelectRef": {
+                      "ExpressionName": "_Disposition.In-Hospital Death Share %"
+                    }
+                  },
+                  "Function": 6
+                }
+              }
+            },
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "shadeShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "shadeColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "shadeTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "95D"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'back'"
+                }
+              }
+            },
+            "dataLabelShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "dataLabelHorizontalPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'right'"
+                }
+              }
+            },
+            "dataLabelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "dataLabelText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ValueAndName'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Disposition.In-Hospital Death Share %",
+            "id": "2"
           }
         }
       ]
@@ -774,7 +841,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Mortality vs Peer Median'"
+                  "Value": "'Death Share vs Acute Transfer Share'"
                 }
               }
             },
@@ -820,7 +887,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'System-level distribution of observed mortality rates (contextual signal)'"
+                  "Value": "'Exit mix interaction, interpret with volume'"
                 }
               }
             }
@@ -830,5 +897,149 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "c2414fcf6983c3fb7d55"
+  "parentGroupName": "c2414fcf6983c3fb7d55",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "126430635bc5c01cd2e7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_PeerGroup"
+              }
+            },
+            "Property": "PeerGroup_Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "5aac202b158014acc8cc",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Facility"
+              }
+            },
+            "Property": "Facility_Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1cd06d86d6f6130734c0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Volume_&_Denominators"
+              }
+            },
+            "Property": "Deaths Count"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "156a1e2a336e073c2e97",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Disposition"
+              }
+            },
+            "Property": "Total Inpatient Encounters"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "20a918b81d51af93bfab",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Disposition"
+              }
+            },
+            "Property": "In-Hospital Death Share %"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d25acaa79b9424f75d41",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Facility"
+              }
+            },
+            "Property": "PeerGroup_Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6ed11f0d3cbe2615a2dc",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Disposition"
+              }
+            },
+            "Property": "Acute Transfer Count"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "eca4738ad5f4dc77988f",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Disposition"
+              }
+            },
+            "Property": "Acute Transfer Share %"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "83eddd5d3637a385395a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Guardrails"
+              }
+            },
+            "Property": "Severity Mix Index (Guarded)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fa024c61d50227484a95",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Guardrails"
+              }
+            },
+            "Property": "Average LOS (Guarded)"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
 }

@@ -226,6 +226,33 @@ table _Disposition
 		displayFolder: PeerGroup Benchmarks
 		lineageTag: 6360e029-50f1-413c-8a37-b88573ed1314
 
+	/// Count of encounters with acute transfer/other disposition
+	measure 'Acute Transfer Count' =
+			CALCULATE(
+			    [Disp Total Encounters],
+			    Dim_Disposition[Disposition_Grouped] = "Other"
+			)
+		formatString: #,##0
+		displayFolder: Volume
+
+	/// Median in-hospital death share across all facilities regardless of peer group
+	measure 'Cross-PG Death Share Median' =
+			MEDIANX(
+			    VALUES(Dim_Facility[Facility_Name]),
+			    [In-Hospital Death Share %]
+			)
+		formatString: 0.0%
+		displayFolder: Cross-PG Benchmarks
+
+	/// Median acute transfer share across all facilities regardless of peer group
+	measure 'Cross-PG Acute Transfer Share Median' =
+			MEDIANX(
+			    VALUES(Dim_Facility[Facility_Name]),
+			    [Acute Transfer Share %]
+			)
+		formatString: 0.0%
+		displayFolder: Cross-PG Benchmarks
+
 	column Column
 		isHidden
 		formatString: 0
