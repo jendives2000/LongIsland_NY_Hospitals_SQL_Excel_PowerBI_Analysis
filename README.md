@@ -6,6 +6,8 @@ This repository demonstrates a comprehensive healthcare analytics initiative ana
 
 The analysis is structured to **establish operating context first, then interpret outcome performance** within that context—enabling healthcare leaders to distinguish true performance from operational variation.
 
+The project mirrors how enterprise healthcare analytics teams structure executive-facing performance reviews.
+
 **Analytical Framework:**
 - **Operating Context:** Patient acuity (Severity Mix), arrival patterns (Unplanned Intake), payer composition
 - **Outcome Metrics:** Financial pressure (Cost & Margin), clinical risk (Mortality), throughput efficiency (Length of Stay), patient disposition (Exit Flow)
@@ -29,18 +31,25 @@ This analysis addresses core healthcare executive needs through a context-driven
 
 ```
 LongIsland_NY_Hospitals_SQL_Excel_PowerBI_Analysis/
-├── Step_0_DB_Creation/          # Database schemas and data pipeline setup
-├── data/                         # Processed analytical datasets (CSV/Excel)
-├── notebooks/                    # Analysis and exploratory work
-├── powerbi/                      # Interactive dashboards and reports (.pbix)
-└── README.md                     # This file
+├── 00_DB_Creation/                     # Raw schema + initial load scripts
+├── 01_Profiling/                       # Data profiling queries
+├── 02_Data_Cleaning/                   # Cleaning + standardization SQL
+├── 03_Analytical_Data_Modeling/        # Star-schema + peer-group framework
+├── 04_Analytical_Validation/           # Excel + SQL reconciliation checks
+├── 05_KPI_Dev/                         # KPI-specific SQL + Excel validation packs
+├── 06_PBI_Semantic_Model/              # Fact KPI build, dimensions, model + report project, dictionary
+└── 07_Excel_Executive_Analytics/       # Executive Excel dashboards and templates
+
 ```
 
 ## Data & Methodology
 
 - **Data Source:** Long Island hospital system operational data. Year 2015 only.
 - **Data:** SQL for database + data extraction, and data validation made in Excel
-- **Analysis:** Explainability-first, non-causal analysis in line with descriptive analytics of advanced healthcare analytics. Each KPI analysis is added with a diagnosis preview, listing potential domains to invest further analysis in.
+- **Analysis:** 
+  - Explainability-first, non-causal descriptive analysis designed to surface structural signals rather than infer causality. 
+  - Each KPI analysis is added with a diagnosis preview, listing potential domains to invest further analysis in. 
+  - Year 2015 snapshot (sufficient to demonstrate cross-facility structural patterns; not intended for time-series inference).
 - **Visualization:** Power BI report organized by operating context, then outcome metrics. Each KPI page comprises a landing page and 3 to 4 visuals
 - **Governance:** Anonymized data; no PII or sensitive patient information included
 
@@ -51,7 +60,7 @@ All KPIs should be interpreted as contextual signals, not absolute performance r
 
 | Component | Tool |
 |-----------|------|
-| Data Warehouse | SSMS22 SQL Server / PostgreSQL |
+| Data Warehouse | SSMS22 SQL Server / TSQL |
 | Analysis | Excel, Power BI |
 | Visualization | Power BI Desktop |
 | Version Control | Git/GitHub |
@@ -68,9 +77,10 @@ cd LongIsland_NY_Hospitals_SQL_Excel_PowerBI_Analysis
 Review and execute scripts in `Step_0_DB_Creation/` to establish the analytical data mart.
 
 ### 3. Review Analysis
-- Examine processed datasets in `data/`
-- Review analytical notebooks in `notebooks/` for methodology and assumptions
-- Open Power BI files in `powerbi/` for interactive dashboards
+- Start with `06_PBI_Semantic_Model/03_PowerBI_Model/PBI_Project/` to review the Power BI report and semantic model implementation.
+- Use `05_KPI_Dev/` to inspect KPI definitions, business rules, and SQL/Excel validation by KPI.
+- Use `04_Analytical_Validation/` and `06_PBI_Semantic_Model/05_Validation/` to review reconciliation outputs and QA checks.
+- For end-user Excel deliverables, see `07_Excel_Executive_Analytics/`.
 
 ### 4. Navigate the Power BI Report
 **Start with Context Pages (establish baseline understanding):**
@@ -122,11 +132,11 @@ This project framework can be extended to:
 
 ## Author & Contact
 
-**Project Owner:** jendives2000  
+**Project Owner:** Jean-Yves Tran - jy.tran@datascience-jy.com  
 **Purpose:** Portfolio demonstration of healthcare analytics competency  
 **Audience:** Healthcare executives, data analysts, clinical operations leaders, recruiters
 
-For questions or collaboration inquiries, please contact via GitHub or professional networks.
+For questions or collaboration inquiries, please contact via email, LinkedIn, or GitHub.
 
 ---
 
@@ -135,4 +145,4 @@ For questions or collaboration inquiries, please contact via GitHub or professio
 MIT License — See LICENSE file for details
 
 **Generated:** 2025  
-**Last Updated:** 2025
+**Last Updated:** Feb. 2026

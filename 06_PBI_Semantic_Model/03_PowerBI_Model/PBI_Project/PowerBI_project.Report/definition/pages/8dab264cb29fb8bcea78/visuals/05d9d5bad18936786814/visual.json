@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "55b8b0b32ba2150b412b",
+  "name": "05d9d5bad18936786814",
   "position": {
-    "x": 12.792411180462295,
-    "y": 1.0786053560391227,
-    "z": 1000,
-    "height": 40.519480519480517,
-    "width": 324.77922077922074,
-    "tabOrder": 0
+    "x": 13.09090909090909,
+    "y": 132.15584415584414,
+    "z": 24001,
+    "height": 28.675324675324674,
+    "width": 1233.0389610389609,
+    "tabOrder": 27001
   },
   "visual": {
     "visualType": "textbox",
@@ -19,11 +19,9 @@
               {
                 "textRuns": [
                   {
-                    "value": "Context Drives Every Metric",
+                    "value": "This report establishes operating context first and then presents outcome metrics, including measures of exposure and pressure, to ensure findings are interpreted as contextual signals.",
                     "textStyle": {
-                      "fontFamily": "Arial",
-                      "fontSize": "18pt",
-                      "color": "#ffffff"
+                      "fontSize": "11pt"
                     }
                   }
                 ]
@@ -53,7 +51,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Title'"
+                  "Value": "'SubTitle'"
                 }
               }
             }
@@ -62,6 +60,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "parentGroupName": "724b42d653e4a5974457"
+  }
 }
