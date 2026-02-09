@@ -1,0 +1,84 @@
+table _DataDictionary
+	lineageTag: da47c216-636f-442f-8b91-75acc21017b5
+
+	column ObjectType
+		lineageTag: 3cceb0f9-b588-4680-89bf-bbb8a2cda129
+		isNameInferred
+		sourceColumn: [ObjectType]
+
+	column ObjectName
+		lineageTag: 236194f5-4ee6-4a79-be24-568cf4d57f9a
+		isNameInferred
+		sourceColumn: [ObjectName]
+
+	column Description
+		lineageTag: 6bc2fc4c-15a1-42bd-8a30-f9466423474c
+		isNameInferred
+		sourceColumn: [Description]
+
+	column Location
+		lineageTag: 5f17246d-dd7e-431d-b53f-935736028421
+		isNameInferred
+		sourceColumn: [Location]
+
+	column Expression
+		lineageTag: 8da138d0-17b1-46d5-886f-d69d9722e24b
+		isNameInferred
+		sourceColumn: [Expression]
+
+	column DataType
+		lineageTag: e3006ee5-e6e1-4e60-8454-75a64914404b
+		isNameInferred
+		sourceColumn: [DataType]
+
+	column DisplayFolder
+		lineageTag: 36a91914-0482-4fc2-be8b-94ae0a6c4979
+		isNameInferred
+		sourceColumn: [DisplayFolder]
+
+	partition _DataDictionary = calculated
+		mode: import
+		source =
+				UNION(
+				    SELECTCOLUMNS(
+				        FILTER(_Meta_Measures, [IsHidden] = FALSE),
+				        "ObjectType", "Measure",
+				        "ObjectName", [Name],
+				        "Description", [Description],
+				        "Location", [Table],
+				        "Expression", [Expression],
+				        "DataType", [DataType],
+				        "DisplayFolder", [DisplayFolder]
+				    ),
+				    SELECTCOLUMNS(
+				        FILTER(_Meta_Columns, [IsHidden] = FALSE && [Type] <> "RowNumber"),
+				        "ObjectType", "Column",
+				        "ObjectName", [Name],
+				        "Description", [Description],
+				        "Location", [Table],
+				        "Expression", [Expression],
+				        "DataType", [DataType],
+				        "DisplayFolder", [DisplayFolder]
+				    ),
+				    SELECTCOLUMNS(
+				        FILTER(_Meta_Tables, [IsHidden] = FALSE),
+				        "ObjectType", "Table",
+				        "ObjectName", [Name],
+				        "Description", [Description],
+				        "Location", BLANK(),
+				        "Expression", BLANK(),
+				        "DataType", BLANK(),
+				        "DisplayFolder", BLANK()
+				    ),
+				    SELECTCOLUMNS(
+				        _Meta_Relationships,
+				        "ObjectType", "Relationship",
+				        "ObjectName", [FromTable] & "[" & [FromColumn] & "] -> " & [ToTable] & "[" & [ToColumn] & "]",
+				        "Description", "Cardinality: " & [FromCardinality] & " to " & [ToCardinality] & " | Cross-filter: " & [CrossFilteringBehavior],
+				        "Location", [FromTable] & " -> " & [ToTable],
+				        "Expression", BLANK(),
+				        "DataType", BLANK(),
+				        "DisplayFolder", BLANK()
+				    )
+				)
+

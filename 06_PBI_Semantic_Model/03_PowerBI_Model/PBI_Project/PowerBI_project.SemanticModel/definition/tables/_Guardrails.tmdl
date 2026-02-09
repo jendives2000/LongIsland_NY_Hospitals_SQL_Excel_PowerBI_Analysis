@@ -1,6 +1,7 @@
 table _Guardrails
 	lineageTag: 00aa30d6-32e3-4af0-88ef-d3c099beaf07
 
+	/// Mortality rate with 30-encounter minimum guardrail
 	measure 'Mortality Rate (Guarded)' =
 			
 			IF(
@@ -14,6 +15,7 @@ table _Guardrails
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: bd055ef9-9393-4017-a57f-0dcea98e5f82
 
+	/// Average length of stay with 30-encounter minimum guardrail (returns BLANK if below threshold)
 	measure 'Average LOS (Guarded)' =
 			
 			IF(
@@ -28,6 +30,7 @@ table _Guardrails
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Severity mix index with 30-encounter minimum guardrail
 	measure 'Severity Mix Index (Guarded)' =
 			
 			IF(
@@ -42,6 +45,7 @@ table _Guardrails
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Financial margin with 30-encounter minimum guardrail
 	measure 'FP Margin (Guarded)' =
 			
 			IF(
@@ -53,6 +57,7 @@ table _Guardrails
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Payer mix margin with 30-encounter minimum guardrail
 	measure 'PM Margin (Guarded)' =
 			
 			IF(
@@ -64,6 +69,7 @@ table _Guardrails
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Unplanned admission rate with 30-encounter minimum guardrail
 	measure 'Unplanned Admission Rate (Guarded)' =
 			
 			IF(
@@ -78,6 +84,7 @@ table _Guardrails
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Disposition share with 30-encounter minimum guardrail
 	measure 'Disp Share (Guarded)' =
 			
 			VAR denom =
@@ -88,6 +95,7 @@ table _Guardrails
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Payer encounter share with 30-encounter minimum guardrail
 	measure 'Payer Encounter Share (Guarded)' =
 			
 			VAR denom =
@@ -98,6 +106,7 @@ table _Guardrails
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Flag (1/0) indicating if severity mix data has >= 30 encounters
 	measure 'Severity Mix Has Volume' =
 			
 			IF(SUM(Fact_KPI_SeverityMix[Total_Encounters]) >= 30, 1, 0)
@@ -105,6 +114,7 @@ table _Guardrails
 		displayFolder: Has Volume
 		lineageTag: f42b169e-a47d-4652-a27c-6ece1a819820
 
+	/// Flag (1/0) indicating if mortality data has >= 30 encounters
 	measure 'Mortality Has Volume' =
 			
 			IF(SUM(Fact_KPI_Mortality[Total_Encounters]) >= 30, 1, 0)
@@ -112,6 +122,7 @@ table _Guardrails
 		displayFolder: Has Volume
 		lineageTag: b966c948-0aa8-46b5-b324-8823706c0f48
 
+	/// Flag (1/0) indicating if LOS data has >= 30 encounters
 	measure 'LOS Has Volume' =
 			
 			IF(SUM(Fact_KPI_LOS_Summary[Encounter_Count]) >= 30, 1, 0)
@@ -119,6 +130,7 @@ table _Guardrails
 		displayFolder: Has Volume
 		lineageTag: d8bc77e4-b18a-49bd-9020-ba386747f58c
 
+	/// Flag (1/0) indicating if unplanned admissions data has >= 30 encounters
 	measure 'Unplanned Has Volume' =
 			
 			IF([Unplanned Total Encounters] >= 30, 1, 0)
@@ -126,6 +138,7 @@ table _Guardrails
 		displayFolder: Has Volume
 		lineageTag: ba500e1c-c105-4a17-a232-0c629a2e6acc
 
+	/// Flag (1/0) indicating if financial pressure data has >= 30 encounters
 	measure 'FP Has Volume' =
 			
 			IF([FinPressure Total Encounters] >= 30, 1, 0)
@@ -133,6 +146,7 @@ table _Guardrails
 		displayFolder: Has Volume
 		lineageTag: b8388b14-23fe-4b8d-a6bb-22fc5a1fce3e
 
+	/// Flag (1/0) indicating if specific payer has >= 30 encounters
 	measure 'Payer Mix Has Volume (Payer)' =
 			
 			IF([PayerMix Total Encounters] >= 30, 1, 0)
@@ -140,6 +154,7 @@ table _Guardrails
 		displayFolder: Has Volume
 		lineageTag: 8bc868f7-cc3c-4d89-8fd4-3c1b761b1d1b
 
+	/// Flag (1/0) indicating if facility-year payer mix has >= 30 encounters
 	measure 'Payer Mix Has Volume (Facility-Year)' =
 			
 			IF([Payer Mix Facility-Year Encounters] >= 30, 1, 0)
@@ -147,6 +162,7 @@ table _Guardrails
 		displayFolder: Has Volume
 		lineageTag: 8b2fa325-16f8-42ce-a0a5-ea0f918bf90b
 
+	/// Flag (1/0) indicating if disposition category has >= 30 encounters
 	measure 'Disposition Has Volume (Disposition)' =
 			
 			IF([Disp Total Encounters] >= 30, 1, 0)
@@ -154,6 +170,7 @@ table _Guardrails
 		displayFolder: Has Volume
 		lineageTag: af51bd91-bbcc-411f-88b4-b1e4431ece45
 
+	/// Flag (1/0) indicating if facility-year has >= 30 total encounters
 	measure 'Disposition Has Volume (Facility-Year)' =
 			
 			IF([Disposition Facility-Year Encounters] >= 30, 1, 0)
@@ -161,6 +178,7 @@ table _Guardrails
 		displayFolder: Has Volume
 		lineageTag: 0fdf1882-7393-4610-a0f5-d56e23aef443
 
+	/// Margin pressure (cost-to-charge ratio) with volume guardrail applied
 	measure 'Margin Pressure (Guarded)' =
 			
 			IF(
@@ -171,6 +189,7 @@ table _Guardrails
 		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 7b7905f1-7d2c-41b1-a2a0-2414f8cb745e
 
+	/// Average cost per encounter with 30-encounter minimum guardrail
 	measure 'FP Avg Cost per Encounter (Guarded)' = ```
 			
 			IF(

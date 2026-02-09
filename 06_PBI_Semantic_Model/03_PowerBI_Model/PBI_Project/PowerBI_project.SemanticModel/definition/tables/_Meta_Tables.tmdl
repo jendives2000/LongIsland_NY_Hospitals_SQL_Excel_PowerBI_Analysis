@@ -1,0 +1,73 @@
+table _Meta_Tables
+	isHidden
+	lineageTag: 861d37ff-3153-4ba4-a002-d932ecaa90a6
+
+	column ID
+		lineageTag: c8361a2a-a68e-46d5-9e8e-e8971a7761fe
+		isNameInferred
+		sourceColumn: [ID]
+
+	column Name
+		lineageTag: 143afd01-2f3d-49ab-b19e-30446ec7d39f
+		isNameInferred
+		sourceColumn: [Name]
+
+	column Model
+		lineageTag: 04222eb6-ccab-4a25-bac5-bcee931e4205
+		isNameInferred
+		sourceColumn: [Model]
+
+	column DataCategory
+		lineageTag: 97190789-0353-4964-b507-29be43b3c32d
+		isNameInferred
+		sourceColumn: [DataCategory]
+
+	column Description
+		lineageTag: 063cc4d1-f42c-45b4-980e-e895ae1dff33
+		isNameInferred
+		sourceColumn: [Description]
+
+	column IsHidden
+		lineageTag: 5309f9c9-330b-49d5-a329-1dd77a3224ae
+		isNameInferred
+		sourceColumn: [IsHidden]
+
+	column StorageMode
+		lineageTag: e8b9112b-6dd6-4da4-a021-40e924c80428
+		isNameInferred
+		sourceColumn: [StorageMode]
+
+	column TableStorage
+		lineageTag: 6875a0c0-befd-468c-9fff-8f82065b677d
+		isNameInferred
+		sourceColumn: [TableStorage]
+
+	column Expression
+		lineageTag: 2ec2ac42-fb79-462f-a9d2-07196dda3ca0
+		isNameInferred
+		sourceColumn: [Expression]
+
+	column ShowAsVariationOnly
+		lineageTag: ea70396a-d52f-4388-bab9-77111f670231
+		isNameInferred
+		sourceColumn: [ShowAsVariationOnly]
+
+	column IsPrivate
+		lineageTag: ad00eaee-46bc-4cb9-9898-1e8b0e03fce0
+		isNameInferred
+		sourceColumn: [IsPrivate]
+
+	column CalculationGroupPrecedence
+		lineageTag: 94401601-43f7-4a00-bf64-f48b4a6bfb8f
+		isNameInferred
+		sourceColumn: [CalculationGroupPrecedence]
+
+	column LineageTag
+		lineageTag: 2750f3e8-2493-4841-a3e6-ba0f76c2ce64
+		isNameInferred
+		sourceColumn: [LineageTag]
+
+	partition _Meta_Tables = calculated
+		mode: import
+		source = INFO.VIEW.TABLES()
+

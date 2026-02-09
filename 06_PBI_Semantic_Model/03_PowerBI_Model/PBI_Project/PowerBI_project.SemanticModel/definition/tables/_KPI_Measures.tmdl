@@ -1,6 +1,7 @@
 table _KPI_Measures
 	lineageTag: 29eefdf6-619c-4b82-acc5-33a3ef6f72d8
 
+	/// Weighted average APR severity (1=Minor to 4=Extreme), higher indicates sicker patient population
 	measure 'Severity Mix Index' =
 			
 			DIVIDE(
@@ -10,6 +11,7 @@ table _KPI_Measures
 		formatString: 0.00
 		lineageTag: 0160202b-84e7-4ce7-a81d-477b56a0208d
 
+	/// Percentage of admissions that were unplanned/emergency
 	measure 'Unplanned Admission Rate' =
 			
 			DIVIDE(
@@ -19,6 +21,7 @@ table _KPI_Measures
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 7dba8b71-1622-4fb1-b9e9-d5119894323d
 
+	/// In-hospital mortality rate (deaths / total encounters)
 	measure 'Mortality Rate' =
 			
 			DIVIDE(
@@ -29,6 +32,7 @@ table _KPI_Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Average length of stay in days (total LOS days / encounter count)
 	measure 'AVG LOS' =
 			
 			DIVIDE(
@@ -39,6 +43,7 @@ table _KPI_Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Financial margin calculated as total charges minus total costs
 	measure 'FP Margin' = ```
 			
 			SUM(Fact_KPI_FinancialPressure[Total_Charges])
@@ -49,6 +54,7 @@ table _KPI_Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Payer mix margin calculated as charges minus costs from payer mix fact
 	measure 'PM Margin' =
 			
 			SUM(Fact_KPI_PayerMix[Total_Charges]) - SUM(Fact_KPI_PayerMix[Total_Costs])
@@ -56,6 +62,7 @@ table _KPI_Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Cost-to-charge ratio indicating financial pressure (higher = more pressure, >1 = loss)
 	measure 'Margin Pressure' =
 			
 			DIVIDE(

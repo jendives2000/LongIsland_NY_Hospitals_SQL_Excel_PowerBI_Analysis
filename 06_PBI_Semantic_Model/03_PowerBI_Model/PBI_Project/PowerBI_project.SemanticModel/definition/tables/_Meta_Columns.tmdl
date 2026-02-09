@@ -1,0 +1,128 @@
+table _Meta_Columns
+	isHidden
+	lineageTag: 1aae712c-c3f3-44a3-afb6-53bf0e008f4f
+
+	column ID
+		lineageTag: 8d48aacc-4154-432e-a07c-a68c009f97f7
+		isNameInferred
+		sourceColumn: [ID]
+
+	column Name
+		lineageTag: 2421eced-6468-4c53-b76b-b06cecdb767a
+		isNameInferred
+		sourceColumn: [Name]
+
+	column Table
+		lineageTag: 148c9366-a832-4543-93ec-f0b09cbb8d3d
+		isNameInferred
+		sourceColumn: [Table]
+
+	column DataType
+		lineageTag: d18ae30e-cd6e-447c-a975-8cd697053d50
+		isNameInferred
+		sourceColumn: [DataType]
+
+	column DataCategory
+		lineageTag: c5e4ba73-6fa0-4ae4-9f74-23b4b1535d27
+		isNameInferred
+		sourceColumn: [DataCategory]
+
+	column Description
+		lineageTag: 5cced86b-095b-4242-b08f-04cdb38c51c1
+		isNameInferred
+		sourceColumn: [Description]
+
+	column IsHidden
+		lineageTag: fc67eddb-9bf4-47d4-af10-794338d5ac6d
+		isNameInferred
+		sourceColumn: [IsHidden]
+
+	column IsUnique
+		lineageTag: 27f9324f-70ba-4bcb-8605-e9a87e22f22f
+		isNameInferred
+		sourceColumn: [IsUnique]
+
+	column IsKey
+		lineageTag: 2cc7ce58-c10d-4ec3-9ed1-82f492f1e038
+		isNameInferred
+		sourceColumn: [IsKey]
+
+	column IsNullable
+		lineageTag: 66f8c836-99c0-4757-9c8e-0ba7477231a0
+		isNameInferred
+		sourceColumn: [IsNullable]
+
+	column Alignment
+		lineageTag: 4d4b2b30-cc4e-46da-aff8-45bca6b319df
+		isNameInferred
+		sourceColumn: [Alignment]
+
+	column SummarizeBy
+		lineageTag: b47bb928-e76c-4f88-84aa-b5257fe39b4c
+		isNameInferred
+		sourceColumn: [SummarizeBy]
+
+	column ColumnStorage
+		lineageTag: e6358d7f-763c-4892-beeb-29e0bba05bd7
+		isNameInferred
+		sourceColumn: [ColumnStorage]
+
+	column Type
+		lineageTag: 47aa8f34-c747-4a46-99fa-12a84f39459f
+		isNameInferred
+		sourceColumn: [Type]
+
+	column SourceColumn
+		lineageTag: da355f5a-dc90-44ca-8e20-ec938dc63fdc
+		isNameInferred
+		sourceColumn: [SourceColumn]
+
+	column Expression
+		lineageTag: 9291f426-7981-4623-9508-c6f322a4612c
+		isNameInferred
+		sourceColumn: [Expression]
+
+	column FormatString
+		lineageTag: 3c5fd70c-b540-4d2c-9c9d-d59e99ac7b8d
+		isNameInferred
+		sourceColumn: [FormatString]
+
+	column IsAvailableInMDX
+		lineageTag: 98011546-64ef-482e-bea9-04422ef60466
+		isNameInferred
+		sourceColumn: [IsAvailableInMDX]
+
+	column SortByColumn
+		lineageTag: ede70ed6-b60d-4c9c-9604-2a2fab08ed4a
+		isNameInferred
+		sourceColumn: [SortByColumn]
+
+	column GroupingBehavior
+		lineageTag: 57342aa8-c49f-4676-a744-555727858094
+		isNameInferred
+		sourceColumn: [GroupingBehavior]
+
+	column SourceProviderType
+		lineageTag: f9d1fcad-908d-41ac-b9af-78958aa56334
+		isNameInferred
+		sourceColumn: [SourceProviderType]
+
+	column DisplayFolder
+		lineageTag: 1ef8c73e-d6be-42aa-b18f-e709cb489785
+		isNameInferred
+		sourceColumn: [DisplayFolder]
+
+	column AlternateOf
+		lineageTag: 881ced45-aada-443e-8e71-40b5d30664cf
+		isNameInferred
+		sourceColumn: [AlternateOf]
+
+	column LineageTag
+		lineageTag: de19320c-40c9-4b32-9d02-1f10ab8bfabb
+		isNameInferred
+		sourceColumn: [LineageTag]
+
+	partition _Meta_Columns = calculated
+		mode: import
+		source = INFO.VIEW.COLUMNS()
+

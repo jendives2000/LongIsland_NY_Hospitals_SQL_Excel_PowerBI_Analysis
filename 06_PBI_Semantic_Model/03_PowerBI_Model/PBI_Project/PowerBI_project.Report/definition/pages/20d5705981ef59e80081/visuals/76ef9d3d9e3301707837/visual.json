@@ -1,0 +1,82 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "76ef9d3d9e3301707837",
+  "position": {
+    "x": 30.889110889110889,
+    "y": 491.84415584415581,
+    "z": 3000,
+    "height": 40.519480519480517,
+    "width": 465.038961038961,
+    "tabOrder": 16000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Cost & Margin Pressure ",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "18pt",
+                      "color": "#744ec2"
+                    }
+                  },
+                  {
+                    "value": "(Financial Stress) ",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "14pt",
+                      "color": "#744ec2"
+                    }
+                  },
+                  {
+                    "value": "🔒",
+                    "textStyle": {
+                      "fontSize": "14pt",
+                      "color": "#744ec2"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Cost & Margin Pressure (Financial Stress)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "edf491f5a5452030ee7f"
+}

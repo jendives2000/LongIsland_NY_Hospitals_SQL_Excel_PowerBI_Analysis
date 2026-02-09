@@ -1,0 +1,82 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "6001249ce68220f0bbec",
+  "position": {
+    "x": 954.1098901098901,
+    "y": 430.12987012987014,
+    "z": 500,
+    "height": 40.519480519480517,
+    "width": 240,
+    "tabOrder": 18000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Payer Mix ",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "18pt",
+                      "color": "#744ec2"
+                    }
+                  },
+                  {
+                    "value": "(Context) ",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "14pt",
+                      "color": "#744ec2"
+                    }
+                  },
+                  {
+                    "value": "🔒",
+                    "textStyle": {
+                      "fontSize": "14pt",
+                      "color": "#744ec2"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Severity Mix (Context)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "edf491f5a5452030ee7f"
+}

@@ -1,10 +1,12 @@
 table _Disposition
 	lineageTag: 9e3e0b45-93e8-449c-8ab4-b7106ff886a6
 
+	/// Total count of disposition encounters from Fact_KPI_Disposition
 	measure 'Disp Total Encounters' = SUM(Fact_KPI_Disposition[Disposition_Count])
 		formatString: 0
 		lineageTag: 5eba2b4e-434b-46b2-89bd-a1c96631fd4b
 
+	/// Percentage share of encounters for the selected disposition category
 	measure 'Disposition Share' = ```
 			
 			DIVIDE(
@@ -20,6 +22,7 @@ table _Disposition
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Total encounters for a facility-year regardless of disposition category
 	measure 'Disposition Facility-Year Encounters' =
 			
 			CALCULATE([Disp Total Encounters], ALL(Dim_Disposition))
@@ -234,6 +237,7 @@ table _Disposition
 			)
 		formatString: #,##0
 		displayFolder: Volume
+		lineageTag: c919271e-c92c-41fa-bf82-80be9af78af2
 
 	/// Median in-hospital death share across all facilities regardless of peer group
 	measure 'Cross-PG Death Share Median' =
@@ -243,6 +247,7 @@ table _Disposition
 			)
 		formatString: 0.0%
 		displayFolder: Cross-PG Benchmarks
+		lineageTag: 930a3465-83b0-455b-b06b-ba94e4f0a54e
 
 	/// Median acute transfer share across all facilities regardless of peer group
 	measure 'Cross-PG Acute Transfer Share Median' =
@@ -252,6 +257,7 @@ table _Disposition
 			)
 		formatString: 0.0%
 		displayFolder: Cross-PG Benchmarks
+		lineageTag: c37464d5-9b70-402a-bc96-2d3cc864d64a
 
 	column Column
 		isHidden

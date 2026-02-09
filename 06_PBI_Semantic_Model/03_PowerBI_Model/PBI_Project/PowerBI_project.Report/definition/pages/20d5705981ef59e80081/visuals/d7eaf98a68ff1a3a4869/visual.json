@@ -1,0 +1,82 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "d7eaf98a68ff1a3a4869",
+  "position": {
+    "x": 550.16183816183809,
+    "y": 430.75324675324669,
+    "z": 11000,
+    "height": 40.519480519480517,
+    "width": 329.14285714285711,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Unplanned Intake ",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "18pt",
+                      "color": "#744ec2"
+                    }
+                  },
+                  {
+                    "value": "(Context) ",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "14pt",
+                      "color": "#744ec2"
+                    }
+                  },
+                  {
+                    "value": "🔒",
+                    "textStyle": {
+                      "fontSize": "14pt",
+                      "color": "#744ec2"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Unplanned Intake (Pressure)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "edf491f5a5452030ee7f"
+}

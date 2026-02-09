@@ -1,0 +1,82 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "5e9144f5c22a9d5b396f",
+  "position": {
+    "x": 535.82417582417577,
+    "y": 491.84415584415581,
+    "z": 5000,
+    "height": 40.519480519480517,
+    "width": 285.50649350649348,
+    "tabOrder": 14000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Mortality ",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "18pt",
+                      "color": "#744ec2"
+                    }
+                  },
+                  {
+                    "value": "(Outcome Risk) ",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "14pt",
+                      "color": "#744ec2"
+                    }
+                  },
+                  {
+                    "value": "🔒",
+                    "textStyle": {
+                      "fontSize": "14pt",
+                      "color": "#744ec2"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Mortality (Outcome Risk)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "edf491f5a5452030ee7f"
+}

@@ -1,0 +1,88 @@
+table _Meta_Measures
+	isHidden
+	lineageTag: 491ce666-5ed1-40bc-b2dd-3e82ae68b997
+
+	column ID
+		lineageTag: 26dd62d7-6edc-4d64-b387-146fbb0fd857
+		isNameInferred
+		sourceColumn: [ID]
+
+	column Name
+		lineageTag: 4cce7cc3-1d4e-4b79-8014-b2d6a791f86e
+		isNameInferred
+		sourceColumn: [Name]
+
+	column Table
+		lineageTag: c307a25c-4120-4ede-b9d2-aff983debf36
+		isNameInferred
+		sourceColumn: [Table]
+
+	column Description
+		lineageTag: 7f82b0b0-c1d0-48ea-ae7f-a6c4ddfdf8b4
+		isNameInferred
+		sourceColumn: [Description]
+
+	column DataType
+		lineageTag: 492fa0ea-8062-429e-9b41-23649c6a8f0a
+		isNameInferred
+		sourceColumn: [DataType]
+
+	column Expression
+		lineageTag: 996e7d1d-6a95-4d20-aa0d-caebde1cfacc
+		isNameInferred
+		sourceColumn: [Expression]
+
+	column FormatString
+		lineageTag: b7848c86-a213-471e-a7d4-2adcf7b4d1a2
+		isNameInferred
+		sourceColumn: [FormatString]
+
+	column IsHidden
+		lineageTag: f3198a94-6d14-4a09-8ff2-f09a32cccbfc
+		isNameInferred
+		sourceColumn: [IsHidden]
+
+	column State
+		lineageTag: d2976205-c136-4495-9bdb-4b815ad19597
+		isNameInferred
+		sourceColumn: [State]
+
+	column KPIID
+		lineageTag: 99272bf0-ab20-4c01-a779-297e8b128a89
+		isNameInferred
+		sourceColumn: [KPIID]
+
+	column IsSimpleMeasure
+		lineageTag: 70e5f3ba-b5c4-419b-b37b-65b58ea671a4
+		isNameInferred
+		sourceColumn: [IsSimpleMeasure]
+
+	column DisplayFolder
+		lineageTag: 970cd86c-9a24-4f28-b6df-78869edc0227
+		isNameInferred
+		sourceColumn: [DisplayFolder]
+
+	column DetailRowsDefinition
+		lineageTag: c81b0dc8-da12-41ca-a393-0362cb1d9058
+		isNameInferred
+		sourceColumn: [DetailRowsDefinition]
+
+	column DataCategory
+		lineageTag: 2b3dd5b3-51e8-4d41-be4a-d9e7880746ae
+		isNameInferred
+		sourceColumn: [DataCategory]
+
+	column FormatStringDefinition
+		lineageTag: 5fbb9e5a-bdbd-478d-8b35-4f2482c73dd1
+		isNameInferred
+		sourceColumn: [FormatStringDefinition]
+
+	column LineageTag
+		lineageTag: ec56e8f6-66a8-47a0-8663-8dd6ef7350da
+		isNameInferred
+		sourceColumn: [LineageTag]
+
+	partition _Meta_Measures = calculated
+		mode: import
+		source = INFO.VIEW.MEASURES()
+

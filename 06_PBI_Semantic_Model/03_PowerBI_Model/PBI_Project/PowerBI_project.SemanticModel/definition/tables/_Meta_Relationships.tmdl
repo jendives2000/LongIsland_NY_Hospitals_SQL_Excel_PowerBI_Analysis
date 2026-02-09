@@ -1,0 +1,83 @@
+table _Meta_Relationships
+	isHidden
+	lineageTag: df2711b6-6076-4402-8c35-aef6b3476e5e
+
+	column ID
+		lineageTag: eac3e832-3324-4ec0-83e2-2c85600a68a9
+		isNameInferred
+		sourceColumn: [ID]
+
+	column Name
+		lineageTag: 0d2e234b-1b77-49c1-b099-e8c84b0d0526
+		isNameInferred
+		sourceColumn: [Name]
+
+	column Relationship
+		lineageTag: 9ed605a9-ae6a-4a8c-81f5-c1472139a64d
+		isNameInferred
+		sourceColumn: [Relationship]
+
+	column Model
+		lineageTag: a50dc8f7-30f1-4261-8564-b2f7a550916e
+		isNameInferred
+		sourceColumn: [Model]
+
+	column IsActive
+		lineageTag: e666b45b-cac4-4815-a981-c605d1915959
+		isNameInferred
+		sourceColumn: [IsActive]
+
+	column CrossFilteringBehavior
+		lineageTag: 505fa3df-49da-4dc5-a0ad-753bad9ce320
+		isNameInferred
+		sourceColumn: [CrossFilteringBehavior]
+
+	column RelyOnReferentialIntegrity
+		lineageTag: dfe58f60-0e97-4c0c-be92-3b46ce0ca93b
+		isNameInferred
+		sourceColumn: [RelyOnReferentialIntegrity]
+
+	column FromTable
+		lineageTag: 356c1cc1-9b35-4520-8191-69ad10ed3163
+		isNameInferred
+		sourceColumn: [FromTable]
+
+	column FromColumn
+		lineageTag: b407696e-8803-4f63-b562-d80249b62e2c
+		isNameInferred
+		sourceColumn: [FromColumn]
+
+	column FromCardinality
+		lineageTag: 38b35e46-bceb-45d6-b5f6-eab7ed40da1d
+		isNameInferred
+		sourceColumn: [FromCardinality]
+
+	column ToTable
+		lineageTag: 94afd1ba-34be-4ac5-acfe-144b18ab4e18
+		isNameInferred
+		sourceColumn: [ToTable]
+
+	column ToColumn
+		lineageTag: 6e39eb56-8b01-4d5a-b8d6-bc3dde176467
+		isNameInferred
+		sourceColumn: [ToColumn]
+
+	column ToCardinality
+		lineageTag: 907328a9-4aa4-4fe5-941f-6b4b0800ed5d
+		isNameInferred
+		sourceColumn: [ToCardinality]
+
+	column State
+		lineageTag: a11074dd-5114-4f6b-9a0d-6573df5588e5
+		isNameInferred
+		sourceColumn: [State]
+
+	column SecurityFilteringBehavior
+		lineageTag: 84bcb0fe-fd0b-45d4-bfb2-66a9688ecc15
+		isNameInferred
+		sourceColumn: [SecurityFilteringBehavior]
+
+	partition _Meta_Relationships = calculated
+		mode: import
+		source = INFO.VIEW.RELATIONSHIPS()
+

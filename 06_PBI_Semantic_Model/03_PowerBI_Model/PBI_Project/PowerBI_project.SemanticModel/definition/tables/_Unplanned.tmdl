@@ -1,6 +1,7 @@
 table _Unplanned
 	lineageTag: 3a80cc42-0d16-4c93-b12a-895a9f3763a4
 
+	/// Median unplanned rate across all facilities in selection
 	measure 'Median Unplanned % (Selected)' =
 			
 			CALCULATE(
@@ -14,6 +15,7 @@ table _Unplanned
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: fbf76dd7-d8d4-4360-9447-fdf424e34d73
 
+	/// Flag (1/0) if facility UA rate exceeds peer group median
 	measure 'Is Above PG Unplanned Rate Median' =
 			
 			VAR ur = [Unplanned Admission Rate]
@@ -23,6 +25,7 @@ table _Unplanned
 		displayFolder: Helper
 		lineageTag: 4a580510-add0-4e7c-b087-33e9a1c91d83
 
+	/// Minimum unplanned admission rate across facilities
 	measure 'UA rate Min' = ```
 			
 			MINX( VALUES( Dim_Facility[Facility_Key] ), [Unplanned Admission Rate] )
@@ -32,6 +35,7 @@ table _Unplanned
 		displayFolder: Helper
 		lineageTag: 1ad94198-64f6-4ae7-b2f2-f634b38e27f6
 
+	/// Maximum unplanned admission rate across facilities
 	measure 'UA rate Max' = ```
 			
 			MAXX( VALUES( Dim_Facility[Facility_Key] ), [Unplanned Admission Rate] )
@@ -41,6 +45,7 @@ table _Unplanned
 		displayFolder: Helper
 		lineageTag: 35d21a0c-0b5d-43ba-af5a-43a5553dbd73
 
+	/// Count of facilities with UA rate above cross-peer-group median
 	measure 'Facilities Above UA rate Median' =
 			
 			VAR PeerMedian = [All PeerGroups UA rate Median]
@@ -55,6 +60,7 @@ table _Unplanned
 		displayFolder: Helper
 		lineageTag: e66d6baa-a3d3-460a-87fb-365c695e2c6a
 
+	/// Count of distinct facilities in current filter context
 	measure 'UA Total Facilities' =
 			
 			COUNTROWS (
@@ -64,6 +70,7 @@ table _Unplanned
 		displayFolder: Helper
 		lineageTag: 68d79da2-2e55-4ff4-a9e7-be984a49514c
 
+	/// Configurable UA rate threshold for analysis (default: 40%)
 	measure 'UA Threshold (%)' =
 			
 			0.40
@@ -71,6 +78,7 @@ table _Unplanned
 		displayFolder: Helper
 		lineageTag: d9b2a38e-28a6-4600-8e51-6c89740b33c5
 
+	/// Configurable volume threshold for analysis (default: 3000 encounters)
 	measure 'Volume Threshold (Encounters)' = ```
 			
 			3000
@@ -80,6 +88,7 @@ table _Unplanned
 		displayFolder: Helper
 		lineageTag: 3cae6fb1-5f69-4673-bcee-58f83e4ad6e5
 
+	/// Flag (1/0) if facility UA rate is below the threshold
 	measure 'Is Below UA Threshold' = ```
 			
 			VAR ua = [Unplanned Admission Rate]
@@ -91,6 +100,7 @@ table _Unplanned
 		displayFolder: Helper
 		lineageTag: 643c69fd-08ce-4cac-a023-b89732ab710c
 
+	/// Flag (1/0) if facility volume is below threshold
 	measure 'Is Below Volume Threshold' = ```
 			
 			VAR vol = [Total Encounters (Y)]
@@ -102,6 +112,7 @@ table _Unplanned
 		displayFolder: Helper
 		lineageTag: a9f5a454-2111-4f07-a752-794de943a88a
 
+	/// Count of facilities below both UA and volume thresholds (low concern)
 	measure 'Facilities In Low-Pressure Zone' = ```
 			
 			COUNTROWS (
@@ -118,6 +129,7 @@ table _Unplanned
 		displayFolder: Helper
 		lineageTag: 5ed48267-df99-457e-a74e-ec4d9b0d3929
 
+	/// Count of facilities exceeding both UA rate and volume thresholds
 	measure 'Facilities Above Both Thresholds' = ```
 			
 			COUNTROWS (
@@ -133,6 +145,7 @@ table _Unplanned
 		displayFolder: Helper
 		lineageTag: 2c2e8e66-68ea-4f58-af3b-f1fa2a0ada0e
 
+	/// Peer group UA rate median using facility-safe calculation
 	measure 'UA rate Peer Median' = ```
 			Dim_ClinicalClass[PeerGroup UA rate Median (FacilitySafe)]
 			
@@ -141,6 +154,7 @@ table _Unplanned
 		displayFolder: Helper
 		lineageTag: 697b5791-3150-4d80-be84-a309d4b98d24
 
+	/// Peer group UA rate median using peer-group-safe calculation
 	measure 'UA rate Peer Median (group safe)' = ```
 			Dim_ClinicalClass[PeerGroup UA rate Median (PeerGroup safe)]
 			
@@ -149,6 +163,7 @@ table _Unplanned
 		displayFolder: Helper
 		lineageTag: a97cc030-ebd2-4d36-b727-460fab9c103e
 
+	/// Flag (1/0) if facility UA rate exceeds its own peer group median
 	measure 'Is Above Own UA rate Median' =
 			
 			IF(
@@ -162,6 +177,7 @@ table _Unplanned
 		displayFolder: Helper
 		lineageTag: c3ebc98c-ec69-436d-b82c-f3c3414a70ee
 
+	/// Median unplanned admission rate within the selected peer group
 	measure 'PeerGroup Median Unplanned Rate' = ```
 			
 			VAR pg = SELECTEDVALUE( Dim_Facility[PeerGroup_Name] )
@@ -179,6 +195,7 @@ table _Unplanned
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 3257f97f-5812-416b-9755-821aa0de95ec
 
+	/// Median unplanned admission rate across all peer groups
 	measure 'All PeerGroups UA rate Median' =
 			
 			MEDIANX(
@@ -192,6 +209,7 @@ table _Unplanned
 		displayFolder: Helper
 		lineageTag: 3be22942-8b3b-40eb-abe7-43f904148bff
 
+	/// Facilities in low-pressure zone with BLANK replaced by 0
 	measure 'Facilities In Low-Pressure Zone (0 safe)' = ```
 			
 			COALESCE ( [Facilities In Low-Pressure Zone], 0 )
@@ -201,6 +219,7 @@ table _Unplanned
 		displayFolder: Helper
 		lineageTag: 228e1a82-d038-4267-9b26-79f642ed3516
 
+	/// Count of facilities meeting the volume threshold
 	measure 'Facilities Above volume threshold' =
 			
 			COUNTROWS (
@@ -213,6 +232,7 @@ table _Unplanned
 		displayFolder: Helper
 		lineageTag: 48d331ac-08d6-4957-a7a9-e35abb6f0259
 
+	/// Display text showing range of peer group UA medians (min to max)
 	measure 'PG UA Median Range Text' = ```
 			
 			VAR pg_table =
@@ -237,6 +257,7 @@ table _Unplanned
 		displayFolder: Helper
 		lineageTag: 68d8e5f5-ccbb-46dd-b0a8-60ff04d2e9be
 
+	/// Count of facilities with UA rate above their own peer group median
 	measure 'Facilities Above Own UA rate Median' =
 			
 			COUNTROWS (
@@ -249,6 +270,7 @@ table _Unplanned
 		displayFolder: Helper
 		lineageTag: bf7504f2-8f20-48eb-893b-bf1ed2e0d9ef
 
+	/// Count of facilities outside low-pressure zone (potential concerns)
 	measure 'Facilities Out of Low-Pressure Zone' =
 			
 			COUNTROWS (
