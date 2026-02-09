@@ -4,7 +4,7 @@
   "position": {
     "x": 660.77922077922074,
     "y": 15.982649718911453,
-    "z": 3000,
+    "z": 4000,
     "height": 534.85714285714278,
     "width": 603.42857142857144,
     "tabOrder": 0
@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": true
+              "active": false
             }
           ]
         },
@@ -153,6 +153,36 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Dim_PeerGroup"
+                  }
+                },
+                "Property": "PeerGroup_Name"
+              }
+            },
+            "direction": "Ascending"
+          },
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Dim_Facility"
+                  }
+                },
+                "Property": "Facility_Name"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
       }
     },
     "objects": {
@@ -1128,5 +1158,6 @@
         }
       }
     ]
-  }
+  },
+  "isHidden": true
 }

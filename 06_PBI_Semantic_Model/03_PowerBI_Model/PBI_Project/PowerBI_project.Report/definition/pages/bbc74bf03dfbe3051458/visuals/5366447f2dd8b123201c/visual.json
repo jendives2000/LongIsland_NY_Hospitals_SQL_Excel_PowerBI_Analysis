@@ -4,7 +4,7 @@
   "position": {
     "x": 660.77922077922074,
     "y": 16.182207710064468,
-    "z": 5000,
+    "z": 6000,
     "height": 537.974025974026,
     "width": 608.41558441558436,
     "tabOrder": 5000
@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": true
+              "active": false
             }
           ]
         },
@@ -119,10 +119,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "_PayerMix"
+                    "Entity": "_KPI_Measures"
                   }
                 },
-                "Property": "Payer HHI (Facility)"
+                "Property": "Unplanned Admission Rate"
               }
             },
             "direction": "Descending"

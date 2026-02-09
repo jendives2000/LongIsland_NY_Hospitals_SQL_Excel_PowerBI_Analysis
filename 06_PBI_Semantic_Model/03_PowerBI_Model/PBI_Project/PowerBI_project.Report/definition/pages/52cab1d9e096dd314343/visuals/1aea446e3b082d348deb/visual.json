@@ -4,7 +4,7 @@
   "position": {
     "x": 660.15584415584408,
     "y": 15.361635654792995,
-    "z": 10000,
+    "z": 15000,
     "height": 548.57142857142856,
     "width": 608.41558441558436,
     "tabOrder": 4000
@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": false
+              "active": true
             }
           ]
         },
@@ -143,10 +143,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "_KPI_Measures"
+                    "Entity": "Dim_ClinicalClass"
                   }
                 },
-                "Property": "Unplanned Admission Rate"
+                "Property": "PeerGroup LOS Median"
               }
             },
             "direction": "Descending"
