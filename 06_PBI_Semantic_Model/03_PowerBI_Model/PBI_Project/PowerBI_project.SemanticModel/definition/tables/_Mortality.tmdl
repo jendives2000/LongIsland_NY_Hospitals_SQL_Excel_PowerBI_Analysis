@@ -1,12 +1,13 @@
+/// Mortality analysis measure container. Contains measures for mortality rates, risk of mortality distributions, peer group mortality benchmarking, and cross-facility mortality comparisons with conditional formatting helpers.
 table _Mortality
 	lineageTag: 0045e4f3-140d-4eaa-9bd5-7abd99387dca
 
-	/// Total count of deaths from Fact_KPI_Mortality
+	/// Count of in-hospital deaths.
 	measure 'Mortality Deaths' = SUM(Fact_KPI_Mortality[Death_Count])
 		formatString: #,0
 		lineageTag: d6ed49db-f69c-42eb-b6e5-64653e1d00a9
 
-	/// Median Mortality Rate across facilities within the selected PeerGroup
+	/// Median mortality rate across facilities in the selected peer group. Requires peer group in filter context.
 	measure 'PeerGroup Mortality Rate Median' =
 			VAR pg = SELECTEDVALUE(Dim_Facility[PeerGroup_Name])
 			RETURN
@@ -22,7 +23,7 @@ table _Mortality
 		displayFolder: PeerGroup Benchmarks
 		lineageTag: 80400c08-b766-42f1-ac28-f36b03fbf579
 
-	/// Flag (1/0) indicating if facility mortality rate exceeds peer group median
+	/// Flag (1/0) if facility mortality rate exceeds peer group median.
 	measure 'Is Above PG Mortality Median' =
 			VAR r = [Mortality Rate]
 			VAR m = [PeerGroup Mortality Rate Median]
@@ -31,7 +32,7 @@ table _Mortality
 		displayFolder: Helper
 		lineageTag: a031a8e8-f54d-4a8d-baa6-dcd4d87cfba1
 
-	/// Count of facilities with mortality rate above their peer group median
+	/// Count of facilities with mortality rate above their own peer group median.
 	measure 'Facilities Above Own PG Mortality Median' =
 			SUMX(
 			    VALUES(Dim_Facility[Facility_Key]),
@@ -41,25 +42,25 @@ table _Mortality
 		displayFolder: Helper
 		lineageTag: 8b068887-e4be-4684-9846-088200a6a660
 
-	/// Count of distinct facilities in current filter context
+	/// Count of facilities in current filter context.
 	measure 'Mortality Facility Count' = COUNTROWS(VALUES(Dim_Facility[Facility_Key]))
 		formatString: #,0
 		displayFolder: Helper
 		lineageTag: c51bea79-dee0-4be4-82cb-2c29a2e3187c
 
-	/// Threshold for mortality rate used in scatter plot analysis
+	/// Constant: 3% (0.03). Threshold for scatter plot analysis.
 	measure 'Mortality Threshold (%)' = 0.03
 		formatString: 0.00%
 		displayFolder: Thresholds
 		lineageTag: d5846fc2-67df-4c46-b1cd-5a7f6824b607
 
-	/// Minimum encounter volume threshold for scatter plot analysis
+	/// Constant: 3000 encounters. Volume threshold for scatter plot analysis.
 	measure 'Mortality Volume Threshold (Encounters)' = 3000
 		formatString: #,0
 		displayFolder: Thresholds
 		lineageTag: 328ef24c-cbc7-4b1d-ae7a-83278fe06681
 
-	/// Display text showing range of PeerGroup Mortality Rate Medians (min to max)
+	/// Display text: peer group mortality median range as 'min% to max%' format.
 	measure 'PG Mortality Median Range' =
 			VAR MinMedian = MINX(VALUES(Dim_Facility[PeerGroup_Name]), [PeerGroup Mortality Rate Median])
 			VAR MaxMedian = MAXX(VALUES(Dim_Facility[PeerGroup_Name]), [PeerGroup Mortality Rate Median])
@@ -68,7 +69,7 @@ table _Mortality
 		displayFolder: Helper
 		lineageTag: b367485a-4bd4-4e87-9d8b-31978d48be89
 
-	/// Display text showing count of facilities above PG mortality median vs total facilities
+	/// Display text: 'X of Y' facilities above peer group mortality median.
 	measure 'PG Mortality Facilities Summary' =
 			VAR AboveCount = [Facilities Above Own PG Mortality Median]
 			VAR TotalCount = [Mortality Facility Count]
@@ -77,7 +78,7 @@ table _Mortality
 		displayFolder: Helper
 		lineageTag: c781f926-772f-455b-a77d-72e5dba851d5
 
-	/// Highest PeerGroup mortality rate median with peer group name
+	/// Display text: highest peer group mortality median with peer group name.
 	measure 'Highest PG Mortality Rate' =
 			VAR MaxRate = MAXX(VALUES(Dim_Facility[PeerGroup_Name]), [PeerGroup Mortality Rate Median])
 			VAR PGName = MAXX(FILTER(VALUES(Dim_Facility[PeerGroup_Name]), [PeerGroup Mortality Rate Median] = MaxRate), Dim_Facility[PeerGroup_Name])
@@ -86,7 +87,7 @@ table _Mortality
 		displayFolder: Helper
 		lineageTag: fc376d70-8cd4-492b-b7b6-0592c6fd1071
 
-	/// Share of encounters with Major or Extreme Risk of Mortality (high-acuity cases)
+	/// Share of encounters with Major or Extreme risk of mortality. Indicates high-acuity case mix. Context: reflects patient population severity, not care quality.
 	measure 'Major-Extreme ROM Share' = ```
 			VAR HighRisk = 
 			    CALCULATE(
@@ -101,7 +102,7 @@ table _Mortality
 		displayFolder: ROM Mix
 		lineageTag: 78d94f95-e3cd-4383-9c32-bbc35323ff97
 
-	/// Median Mortality Rate across all facilities regardless of peer group
+	/// Median mortality rate across all facilities system-wide. Ignores peer group assignment.
 	measure 'Cross-PG Mortality Rate Median' =
 			MEDIANX(
 			    VALUES(Dim_Facility[Facility_Key]),
@@ -111,7 +112,7 @@ table _Mortality
 		displayFolder: PeerGroup Benchmarks
 		lineageTag: 928f100e-d2d4-40ba-91ce-1ebf723023c2
 
-	/// Flag (1/0) indicating if facility mortality rate exceeds cross peer group median
+	/// Flag (1/0) if facility mortality rate exceeds system-wide median.
 	measure 'Is Above Cross-PG Mortality Median' =
 			VAR r = [Mortality Rate]
 			VAR m = [Cross-PG Mortality Rate Median]
@@ -120,7 +121,7 @@ table _Mortality
 		displayFolder: Helper
 		lineageTag: 0db06d0f-54e1-4c61-80c9-94dc30333fea
 
-	/// Count of facilities with mortality rate above cross peer group median
+	/// Count of facilities with mortality rate above the system-wide median.
 	measure 'Facilities Above Cross-PG Mortality Median' =
 			SUMX(
 			    VALUES(Dim_Facility[Facility_Key]),
@@ -130,7 +131,7 @@ table _Mortality
 		displayFolder: Helper
 		lineageTag: 7c255d57-a05d-412f-b48c-3ed049c7b166
 
-	/// Display text showing count of facilities above cross-PG mortality median vs total
+	/// Display text: 'X of Y' facilities above cross-PG mortality median.
 	measure 'Cross-PG Mortality Facilities Summary' =
 			VAR AboveCount = [Facilities Above Cross-PG Mortality Median]
 			VAR TotalCount = [Mortality Facility Count]
@@ -139,7 +140,7 @@ table _Mortality
 		displayFolder: Helper
 		lineageTag: e6caab55-9425-4cef-8a72-c03f50b7366a
 
-	/// Conditional formatting: White if above PG median, gray otherwise
+	/// Conditional formatting: white (#FFFFFF) if above PG median, gray (#808080) otherwise.
 	measure 'Mortality Label Color' =
 			VAR r = [Mortality Rate]
 			VAR m = [PeerGroup Mortality Rate Median]
@@ -148,7 +149,7 @@ table _Mortality
 		displayFolder: Helper
 		lineageTag: 1a4bfe68-67df-4b2a-a915-0adc8e36d2ef
 
-	/// Sort helper for Major+Extreme ROM percentage
+	/// Sort helper for Major+Extreme risk of mortality share. Use for sorting, not display.
 	measure 'Major-Extreme ROM % (Sort)' =
 			CALCULATE(
 			    DIVIDE(

@@ -1,25 +1,26 @@
+/// Financial analysis measure container. Contains measures for margin pressure analysis, cost-per-encounter metrics, negative margin rates, peer group financial benchmarking, and Pareto analysis of margin burden across facilities.
 table _Financial_Basic
 	lineageTag: 9abe8882-ef5b-477d-a3c5-eabaf7b09d85
 
-	/// Sum of total costs from financial pressure fact table
+	/// Sum of costs.
 	measure 'Total Costs' = SUM(Fact_KPI_FinancialPressure[Total_Costs])
 		lineageTag: 46929712-57b8-435d-ac1f-49bc5893fb1e
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Sum of total charges from financial pressure fact table
+	/// Sum of charges.
 	measure 'Total Charges' = SUM(Fact_KPI_FinancialPressure[Total_Charges])
 		lineageTag: c08d873e-819b-4cef-9527-b8d9de87ff22
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Total margin (charges minus costs) across all encounters
+	/// Alias for FP Margin. Total charges minus total costs.
 	measure 'Total Margin' = [FP Margin]
 		lineageTag: 219223b6-bf98-4a47-a2ce-38ec07807251
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Average costs per inpatient encounter
+	/// Average costs per encounter.
 	measure 'AVG Cost / Encounter' =
 			
 			DIVIDE(
@@ -31,7 +32,7 @@ table _Financial_Basic
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
-	/// Average charges per inpatient encounter
+	/// Average charges per encounter.
 	measure 'AVG Charge / Encounter' =
 			
 			DIVIDE(
@@ -42,7 +43,7 @@ table _Financial_Basic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Average margin (charges minus costs) per inpatient encounter
+	/// Average margin (charges minus costs) per encounter.
 	measure 'AVG Margin / Encounter' =
 			
 			DIVIDE(
@@ -53,12 +54,12 @@ table _Financial_Basic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Count of encounters with negative margin
+	/// Count of encounters where costs exceeded charges.
 	measure 'Neg Margin Total Encounters' = SUM(Fact_KPI_FinancialPressure[Negative_Margin_Encounter_Count])
 		formatString: 0
 		lineageTag: 5aa6b431-9348-41c5-8f75-add6f1f9ebba
 
-	/// Percentage of encounters with negative margin (costs exceed charges)
+	/// Share of encounters with negative margin (costs exceed charges).
 	measure 'Neg Margin Rate' =
 			
 			DIVIDE(
@@ -68,7 +69,7 @@ table _Financial_Basic
 		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 5a3a15b3-1591-45d1-9632-c2d3e0beb332
 
-	/// Total margin pressure weighted by encounter volume (margin pressure × encounters)
+	/// Cost-to-charge ratio weighted by encounter volume. Higher values indicate both poor margins and high volume—priority targets for intervention.
 	measure 'Margin Pressure Burden' =
 			
 			[Margin Pressure] * SUM(Fact_KPI_FinancialPressure[Encounter_Count])
@@ -77,7 +78,7 @@ table _Financial_Basic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Median margin pressure across all facilities regardless of peer group
+	/// Median cost-to-charge ratio across all facilities. Ignores peer group assignment.
 	measure 'Cross-PG Margin Pressure Median' =
 			
 			CALCULATE(
@@ -92,7 +93,7 @@ table _Financial_Basic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Facility margin pressure minus peer group median (positive = worse than peers)
+	/// Facility cost-to-charge ratio minus peer group median. Positive = worse financial position than peers.
 	measure 'Excess Margin Pressure vs PG Median' =
 			
 			[Margin Pressure] - [PeerGroup Margin Pressure Median]
@@ -101,7 +102,7 @@ table _Financial_Basic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Flag (1/0) indicating if facility margin pressure exceeds peer group median
+	/// Flag (1/0) if facility cost-to-charge ratio exceeds peer group median.
 	measure 'Is Above PG Margin Median' =
 			
 			VAR Excess = [Excess Margin Pressure vs PG Median]
@@ -111,7 +112,7 @@ table _Financial_Basic
 		displayFolder: Helper
 		lineageTag: 933af802-bc9b-4dad-9de6-4a0dea35cdb7
 
-	/// Flag indicating if facility margin pressure exceeds cross-peer-group median
+	/// Flag (TRUE/FALSE) if facility cost-to-charge ratio exceeds system-wide median.
 	measure 'Is Above Cross-PG Margin Median' =
 			
 			VAR CurrentMP = [Margin Pressure]
@@ -122,7 +123,7 @@ table _Financial_Basic
 		displayFolder: Helper
 		lineageTag: 4ca6b3d2-f9f0-489d-af10-559e5f8cf05d
 
-	/// Count of facilities with any negative margin encounters
+	/// Count of facilities with any negative-margin encounters.
 	measure 'Facilities with Negative Margin' =
 			
 			CALCULATE(
@@ -136,7 +137,7 @@ table _Financial_Basic
 		displayFolder: Helper
 		lineageTag: b9f84d05-479c-4b79-b00a-f840ca92fc2e
 
-	/// Cumulative share of margin burden for Pareto analysis, ranking facilities by margin pressure contribution
+	/// Running share of total margin burden for Pareto analysis. Facilities ranked by margin burden descending; shows cumulative percentage at each facility. Returns blank if facility has no margin burden.
 	measure 'Cumulative Margin Burden %' = ```
 			
 			VAR Cohort =
@@ -160,7 +161,7 @@ table _Financial_Basic
 		displayFolder: Helper
 		lineageTag: 2cffff85-b832-4500-8f88-6338855e0483
 
-	/// Volume guardrail flag (1 if encounters >= 30, else 0)
+	/// Volume guardrail flag. Returns 1 if encounters ≥ 30, else 0. Used to suppress unreliable rates from small samples.
 	measure 'Financial Has Volume' =
 			
 			IF(
@@ -172,7 +173,7 @@ table _Financial_Basic
 		displayFolder: Helper
 		lineageTag: 469913f9-2613-4e1e-bf3b-e11c17b80229
 
-	/// Count of facilities with margin pressure above their peer group median
+	/// Count of facilities with cost-to-charge ratio above their peer group median.
 	measure 'Facilities Above PG Median' =
 			
 			CALCULATE(
@@ -186,14 +187,14 @@ table _Financial_Basic
 		displayFolder: Helper
 		lineageTag: 5a3e057f-8324-44b9-8287-e102ffd4539d
 
-	/// Average charges per inpatient encounter (alias)
+	/// Alias for AVG Charge / Encounter.
 	measure 'Avg Charges per Encounter' = [AVG Charge / Encounter]
 		formatString: \$#,0.0;(\$#,0.0);\$#,0.0
 		lineageTag: 72384724-e34a-4b2e-a20b-db528c447066
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
-	/// Count of facilities with margin pressure above the cross-peer-group median
+	/// Count of facilities with cost-to-charge ratio above the system-wide median.
 	measure 'Facilities Above Cross-PG Median' =
 			
 			CALCULATE(
@@ -207,7 +208,7 @@ table _Financial_Basic
 		displayFolder: Helper
 		lineageTag: 5125b51d-bdf8-4234-9bd0-3be9cb64af62
 
-	/// Count of distinct facilities in current filter context
+	/// Count of facilities in current filter context.
 	measure 'Total Fin Facilities' =
 			
 			DISTINCTCOUNT(Dim_Facility[Facility_Key])
@@ -215,7 +216,7 @@ table _Financial_Basic
 		displayFolder: Helper
 		lineageTag: 4abbf1d6-7b2b-4b3b-9220-6c0ede6a6b89
 
-	/// Flag (1/0) indicating if facility margin pressure exceeds its own peer group median
+	/// Flag (1/0) if facility cost-to-charge ratio exceeds its own peer group median. Uses guarded margin pressure (returns 0 if volume < 30).
 	measure 'Is Above Own PG Margin Median' = ```
 			
 			VAR FacilityMargin =
@@ -237,7 +238,7 @@ table _Financial_Basic
 		displayFolder: Helper
 		lineageTag: b1811f68-ad78-40b0-95ac-ba434205034a
 
-	/// Median margin pressure (cost-to-charge ratio) across all facilities system-wide
+	/// Median cost-to-charge ratio across all facilities system-wide. Ignores peer group assignment and current facility filter.
 	measure 'All-Facilities Margin Pressure Median' = ```
 			
 			CALCULATE (

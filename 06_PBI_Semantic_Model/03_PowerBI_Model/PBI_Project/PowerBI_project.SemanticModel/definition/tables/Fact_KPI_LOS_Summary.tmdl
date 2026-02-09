@@ -1,3 +1,4 @@
+/// Length of stay summary fact table. Grain: one row per facility × year. Contains total LOS days and encounter counts for average LOS calculations. Source for bed-day utilization and efficiency analysis.
 table Fact_KPI_LOS_Summary
 	lineageTag: 4f38a133-375c-441a-a981-a1b9ff20836e
 

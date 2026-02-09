@@ -1,10 +1,13 @@
+/// Peer group dimension. Grain: one row per peer group classification. Defines hospital comparison cohorts (Academic/Tertiary, Large Community, Mid-Size Community, Rural/East-End, Specialty-Dominant). Used for benchmarking facilities against similar institutions.
 table Dim_PeerGroup
 	lineageTag: a1e31423-ec89-4c97-a3e5-5d384d87fa5d
 
+	/// Debug helper: concatenated peer group names in current filter context.
 	measure 'DBG PeerGroup Name' = CONCATENATEX(VALUES(Dim_PeerGroup[PeerGroup_Name]), Dim_PeerGroup[PeerGroup_Name], ", ")
 		displayFolder: Helper
 		lineageTag: ed046001-302a-4114-b6e1-b67ed533645b
 
+	/// Debug helper: count of bridge table rows for selected facility. Should be 1 per facility if relationships are correct.
 	measure 'DBG Bridge Rows per Facility' = ```
 			
 			VAR fac = SELECTEDVALUE(Dim_Facility[Facility_Key])
@@ -19,6 +22,7 @@ table Dim_PeerGroup
 		displayFolder: Helper
 		lineageTag: 68e5863c-eef7-4074-b994-fb2a6c98a92f
 
+	/// Debug helper: count of peer groups for selected facility via bridge table.
 	measure 'DBG PeerGroup Count (FacilitySafe)' = ```
 			
 			VAR fk = SELECTEDVALUE(Dim_Facility[Facility_Key])
@@ -34,6 +38,7 @@ table Dim_PeerGroup
 		displayFolder: Helper
 		lineageTag: 8b72bf6a-4e26-40a2-806f-5a62dae8bf02
 
+	/// Debug helper: peer group name for selected facility via bridge table lookup.
 	measure 'DBG PeerGroup Name (FacilitySafe)' = ```
 			
 			VAR fk = SELECTEDVALUE(Dim_Facility[Facility_Key])

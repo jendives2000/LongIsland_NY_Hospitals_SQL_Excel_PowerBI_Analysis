@@ -1,6 +1,8 @@
+/// Clinical classification dimension. Grain: one row per APR-DRG severity × risk of mortality combination. Contains APR severity levels (Minor/Moderate/Major/Extreme) and risk of mortality descriptions. Also serves as a measure container for peer group median calculations.
 table Dim_ClinicalClass
 	lineageTag: d9d210df-7172-4ab6-9dc0-9f46d270c13c
 
+	/// Median SMI across facilities in selected peer group. Requires peer group in filter context.
 	measure 'PeerGroup Severity Median' = ```
 			
 			VAR CurrentPeerGroup =
@@ -20,6 +22,7 @@ table Dim_ClinicalClass
 		displayFolder: Severity
 		lineageTag: 749a10eb-083d-4033-95ae-db75a0122d08
 
+	/// Peer group SMI median that works per facility row. Removes facility filter to calculate median across peer group.
 	measure 'PeerGroup Severity Median (FacilitySafe)' = ```
 			
 			VAR FacilitiesInSelectedPeerGroups =
@@ -39,6 +42,7 @@ table Dim_ClinicalClass
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Peer group SMI median safe for matrix visuals with peer group on rows. Uses bridge table for peer group lookup.
 	measure 'PeerGroup Severity Median (RowSafe)' = ```
 			
 			VAR pg =
@@ -56,6 +60,7 @@ table Dim_ClinicalClass
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Peer group SMI median safe for grouped contexts. Preserves only peer group filter.
 	measure 'PeerGroup Severity Median (PeerGroup safe)' = ```
 			
 			CALCULATE(
@@ -72,6 +77,7 @@ table Dim_ClinicalClass
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Median UA rate across facilities in selected peer group. Requires single peer group in filter context; otherwise returns blank.
 	measure 'PeerGroup UA Rate Median' = ```
 			
 			VAR pg = SELECTEDVALUE(Dim_Facility[PeerGroup_Name])
@@ -93,6 +99,7 @@ table Dim_ClinicalClass
 		displayFolder: Unplanned
 		lineageTag: 9f68e053-c2b3-46ba-bdca-2204372564bf
 
+	/// Peer group UA rate median that works per facility row. Removes facility filter to calculate median across peer group.
 	measure 'PeerGroup UA rate Median (FacilitySafe)' =
 			
 			VAR FacilitiesInSelectedPeerGroups =
@@ -109,6 +116,7 @@ table Dim_ClinicalClass
 		displayFolder: Unplanned
 		lineageTag: d23bd079-9eb3-4aee-a277-d7c7025895e7
 
+	/// Peer group UA rate median safe for grouped contexts. Preserves only peer group filter.
 	measure 'PeerGroup UA rate Median (PeerGroup safe)' =
 			
 			CALCULATE(
@@ -123,6 +131,7 @@ table Dim_ClinicalClass
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Median average LOS across facilities in selected peer group. Requires single peer group in filter context; otherwise returns blank.
 	measure 'PeerGroup LOS Median' = ```
 			
 			IF(
@@ -143,6 +152,7 @@ table Dim_ClinicalClass
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Peer group LOS median that works per facility row. Uses bridge table lookup to find peer group without requiring peer group in filter.
 	measure 'PeerGroup LOS Median (FacilitySafe)' = ```
 			
 			MEDIANX(
@@ -160,6 +170,7 @@ table Dim_ClinicalClass
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Peer group LOS median safe for grouped contexts. Preserves only peer group filter, removing facility-level filters.
 	measure 'PeerGroup LOS Median (PeerGroup safe)' = ```
 			
 			-- one value per peer group, safe in grouped contexts
@@ -180,6 +191,7 @@ table Dim_ClinicalClass
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Peer group margin pressure median safe for grouped contexts. Preserves only peer group filter.
 	measure 'PeerGroup Margin Median (PeerGroup safe)' =
 			
 			-- one value per peer group, safe in grouped contexts
@@ -197,6 +209,7 @@ table Dim_ClinicalClass
 		displayFolder: C&M P
 		lineageTag: f9e9adea-68f6-46da-bb31-6a69055ccc14
 
+	/// Median cost-to-charge ratio across facilities in selected peer group. Requires single peer group in filter context; otherwise returns blank.
 	measure 'PeerGroup Margin Pressure Median' =
 			
 			VAR CurrentPG = SELECTEDVALUE(Dim_Facility[PeerGroup_Name])

@@ -1,6 +1,8 @@
+/// What-if parameter table for excess LOS analysis. Contains user-adjustable threshold value for determining clinically significant LOS variance. Enables interactive sensitivity analysis in reports.
 table 'Excess LOS Materiality Threshold (Days)'
 	lineageTag: 9b51afa6-46f2-40a1-a852-fa3b96c59414
 
+	/// What-if parameter value: excess LOS threshold in days for conditional formatting and sensitivity analysis.
 	measure 'Excess LOS Materiality Threshold (Days) Value' = SELECTEDVALUE('Excess LOS Materiality Threshold (Days)'[Excess LOS Materiality Threshold (Days)])
 		formatString: 0
 		lineageTag: 0f7c5088-c7d2-477e-bfac-20e41fb7c5d4

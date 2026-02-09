@@ -1,3 +1,4 @@
+/// Payer mix fact table. Grain: one row per facility × year × payer. Contains encounter counts, charges, costs, and negative margin encounters by payer category. Source for payer concentration (HHI) and reimbursement risk analysis.
 table Fact_KPI_PayerMix
 	lineageTag: 4e5bbc2f-ef0d-4989-937d-abe48d75934e
 

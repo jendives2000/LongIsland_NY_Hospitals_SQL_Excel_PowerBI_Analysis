@@ -1,3 +1,4 @@
+/// Financial pressure fact table. Grain: one row per facility × year. Contains aggregated charges, costs, margins, and negative margin encounter counts. Source for margin pressure analysis and cost-to-charge ratio calculations.
 table Fact_KPI_FinancialPressure
 	lineageTag: 8a5ee703-ad3e-4f40-8e91-46930e042ec1
 

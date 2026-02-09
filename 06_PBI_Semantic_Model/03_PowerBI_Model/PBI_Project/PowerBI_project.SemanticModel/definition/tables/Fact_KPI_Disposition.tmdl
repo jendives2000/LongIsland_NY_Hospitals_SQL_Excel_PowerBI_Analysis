@@ -1,3 +1,4 @@
+/// Discharge disposition fact table. Grain: one row per facility × year × disposition category. Contains encounter counts by discharge destination (home, SNF/rehab, death, other). Source for disposition mix analysis and post-acute care patterns.
 table Fact_KPI_Disposition
 	lineageTag: 28d54733-b7f6-4bb7-8037-c796ad6b3786
 

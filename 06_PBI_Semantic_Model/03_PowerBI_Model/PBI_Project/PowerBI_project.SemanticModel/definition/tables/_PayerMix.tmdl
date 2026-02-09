@@ -1,12 +1,13 @@
+/// Payer mix analysis measure container. Contains measures for payer concentration (HHI), risk payer exposure (Medicaid + Self-Pay), payer-specific margins, and peer group payer mix benchmarking for reimbursement risk assessment.
 table _PayerMix
 	lineageTag: 5c677962-0278-49e5-a97e-cdd8deedd191
 
-	/// Total encounters from payer mix fact table
+	/// Alias for PayerMix Total Encounters.
 	measure 'Total Payer Encounters' = [PayerMix Total Encounters]
 		formatString: #,0
 		lineageTag: bd26007e-f0e1-4313-9d46-716667c72c8a
 
-	/// Percentage of total encounters for selected payer(s)
+	/// Percentage of total encounters from selected payer(s).
 	measure 'Payer Encounter Share' = ```
 			
 			DIVIDE(
@@ -20,7 +21,7 @@ table _PayerMix
 			```
 		lineageTag: f8e6005c-1a2d-4865-ac57-e755bd4c15a4
 
-	/// Percentage of total costs attributable to selected payer(s)
+	/// Percentage of total costs from selected payer(s).
 	measure 'Payer Cost Share' = ```
 			
 			DIVIDE(
@@ -36,7 +37,7 @@ table _PayerMix
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Percentage of total charges attributable to selected payer(s)
+	/// Percentage of total charges from selected payer(s).
 	measure 'Payer Charge Share' =
 			
 			DIVIDE(
@@ -50,25 +51,25 @@ table _PayerMix
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Sum of charges from payer mix fact table
+	/// Sum of charges for selected payer(s).
 	measure 'Payer Total Charges' = SUM(Fact_KPI_PayerMix[Total_Charges])
 		lineageTag: 17030b95-6374-4377-9598-0c2ae584f6db
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Sum of costs from payer mix fact table
+	/// Sum of costs for selected payer(s).
 	measure 'Payer Total Costs' = SUM(Fact_KPI_PayerMix[Total_Costs])
 		lineageTag: c41ac738-73ee-4367-b92f-806f137c99dd
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Total margin (charges minus costs) for selected payer(s)
+	/// Total margin (charges minus costs) for selected payer(s).
 	measure 'Payer Margin' = [Payer Total Charges] - [Payer Total Costs]
 		lineageTag: a4c1dc7b-c436-4d07-8317-8b2fc5144376
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Margin as percentage of charges for selected payer(s)
+	/// Margin as percentage of charges for selected payer(s).
 	measure 'Payer Margin Rate' =
 			
 			DIVIDE([Payer Margin], [Payer Total Charges])
@@ -76,7 +77,7 @@ table _PayerMix
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Average margin per encounter for selected payer(s)
+	/// Average margin per encounter for selected payer(s).
 	measure 'Avg Payer Margin per Encounter' =
 			
 			DIVIDE(
@@ -87,25 +88,25 @@ table _PayerMix
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Total encounters for facility-year regardless of payer
+	/// Total encounters for facility-year across all payers. Used as denominator for payer share calculations.
 	measure 'Payer Mix Facility-Year Encounters' =
 			
 			CALCULATE([PayerMix Total Encounters], ALL(Dim_Payer))
 		formatString: 0
 		lineageTag: d2e91c04-48ff-47b8-8332-acd8ad0346fb
 
-	/// Encounters for selected payer(s)
+	/// Encounter count for selected payer(s).
 	measure 'Payer Encounters' = SUM ( Fact_KPI_PayerMix[Encounter_Count] )
 		displayFolder: Base
 		lineageTag: 7999df1a-33e7-4f12-8c33-d7041729c890
 
-	/// Percentage share of encounters for selected payer(s)
+	/// Percentage share of encounters for selected payer(s).
 	measure 'Payer Share %' = DIVIDE ( [Payer Encounters], CALCULATE ( [Total Encounters], REMOVEFILTERS ( Dim_Payer ) ) )
 		formatString: 0.0%
 		displayFolder: Base
 		lineageTag: 24e07d1f-bdc6-4593-97a9-88b07efa1dac
 
-	/// Combined share of Medicaid and Self-Pay encounters representing reimbursement risk
+	/// Combined share of Medicaid and Self-Pay encounters. Indicator of reimbursement risk—these payers typically have lowest margins.
 	measure 'Risk Payer Share %' =
 			VAR RiskSet = { "Medicaid", "Self-Pay" }
 			RETURN
@@ -117,7 +118,7 @@ table _PayerMix
 		displayFolder: Risk Payer
 		lineageTag: da259af1-b77b-4b48-a1c1-01317822c583
 
-	/// Median risk payer share within the current peer group
+	/// Median risk payer share (Medicaid + Self-Pay) within the selected peer group. Requires peer group in filter context.
 	measure 'PeerGroup Risk Payer Share Median' =
 			VAR CurrentPG = SELECTEDVALUE ( Dim_Facility[PeerGroup_Name] )
 			RETURN
@@ -133,7 +134,7 @@ table _PayerMix
 		displayFolder: Risk Payer
 		lineageTag: 281a9f72-b330-4aad-a488-061903855b47
 
-	/// Flag indicating if facility is above peer group risk payer median (1=above, 0=at or below)
+	/// Flag (1/0) if facility risk payer share exceeds peer group median.
 	measure 'Is Above PG Risk Payer Median' =
 			VAR v = [Risk Payer Share %]
 			VAR m = [PeerGroup Risk Payer Share Median]
@@ -142,7 +143,7 @@ table _PayerMix
 		displayFolder: Helper
 		lineageTag: 164500c9-351b-4de2-a106-1bbeb57affba
 
-	/// Count of facilities above their own peer group risk payer median
+	/// Count of facilities with risk payer share (Medicaid + Self-Pay) above their own peer group median.
 	measure 'Facilities Above Own PG Risk Median' =
 			SUMX (
 			    VALUES ( Dim_Facility[Facility_Key] ),
@@ -154,7 +155,7 @@ table _PayerMix
 		displayFolder: Helper
 		lineageTag: e44731de-8f8b-4171-b62a-44718460a9da
 
-	/// Highest single payer share at facility level
+	/// Highest single payer share at facility level.
 	measure 'Top Payer Share % (Facility)' =
 			MAXX (
 			    VALUES ( Dim_Payer[Payer_Key] ),
@@ -164,7 +165,7 @@ table _PayerMix
 		displayFolder: Concentration
 		lineageTag: 62cf6b23-8a41-4e2b-8da4-975ba69557d1
 
-	/// Herfindahl-Hirschman Index measuring payer concentration (0-1 scale, higher = more concentrated)
+	/// Herfindahl-Hirschman Index at facility level. Ranges 0-1; higher = more concentrated payer mix. Above 0.25 indicates high concentration risk.
 	measure 'Payer HHI (Facility)' =
 			SUMX (
 			    VALUES ( Dim_Payer[Payer_Key] ),
@@ -175,7 +176,7 @@ table _PayerMix
 		displayFolder: Concentration
 		lineageTag: 954993f7-315e-4aed-b67e-d7f7cc715a44
 
-	/// System-wide median of risk payer share across all facilities
+	/// Median risk payer share across all facilities system-wide.
 	measure 'Risk Payer Share Median (All Facilities)' =
 			MEDIANX (
 			    VALUES ( Dim_Facility[Facility_Key] ),
@@ -185,7 +186,7 @@ table _PayerMix
 		displayFolder: Risk Payer
 		lineageTag: f167f2b0-47b6-4c4a-adce-df9339ef7237
 
-	/// Payer concentration category: Low (<0.15), Moderate (0.15-0.25), High (>0.25)
+	/// Payer concentration category based on HHI: Low (< 0.15), Moderate (0.15-0.25), High (> 0.25). Returns blank if no HHI value.
 	measure 'HHI Category' =
 			VAR hhi = [Payer HHI (Facility)]
 			RETURN
@@ -199,7 +200,7 @@ table _PayerMix
 		displayFolder: Concentration
 		lineageTag: 0af44c60-e1d5-4684-a9d7-d04ff47c5aa5
 
-	/// Conditional formatting color for HHI: Green (Low), Orange (Moderate), Red (High)
+	/// Conditional formatting hex color based on HHI category: Green (Low), Orange (Moderate), Red (High).
 	measure 'HHI Color' =
 			VAR hhi = [Payer HHI (Facility)]
 			RETURN
@@ -213,7 +214,7 @@ table _PayerMix
 		displayFolder: Helper
 		lineageTag: df8c365f-4102-488d-9be0-68d6b5b4750a
 
-	/// Flag indicating high payer concentration (1=high, 0=not high)
+	/// Flag (1/0) if facility HHI > 0.25. Indicates high payer concentration risk.
 	measure 'Is High HHI' =
 			VAR hhi = [Payer HHI (Facility)]
 			RETURN
@@ -222,7 +223,7 @@ table _PayerMix
 		displayFolder: Helper
 		lineageTag: 22daa17e-9ed9-46ee-a526-59b9c9c8ca94
 
-	/// Count of facilities with high payer concentration (HHI > 0.25)
+	/// Count of facilities with high payer concentration (HHI > 0.25).
 	measure 'Facilities High HHI Count' =
 			SUMX(
 			    VALUES( Dim_Facility[Facility_Key] ),
@@ -232,7 +233,7 @@ table _PayerMix
 		displayFolder: Concentration
 		lineageTag: ce6c72e8-90de-4792-b12e-eb5c602d64b7
 
-	/// System-wide median HHI across all facilities
+	/// Median HHI across all facilities system-wide.
 	measure 'HHI Median (All Facilities)' =
 			MEDIANX(
 			    VALUES( Dim_Facility[Facility_Key] ),
@@ -242,7 +243,7 @@ table _PayerMix
 		displayFolder: Concentration
 		lineageTag: 78565483-ba9a-470c-ac04-ac295e001dba
 
-	/// Median HHI within the current peer group
+	/// Median HHI within the selected peer group. Requires peer group in filter context.
 	measure 'PeerGroup HHI Median' =
 			VAR CurrentPG = SELECTEDVALUE( Dim_Facility[PeerGroup_Name] )
 			RETURN
@@ -258,7 +259,7 @@ table _PayerMix
 		displayFolder: Concentration
 		lineageTag: 1a4fd5ff-efa7-4604-bdf6-44850fb4de7a
 
-	/// Flag indicating if facility HHI is above peer group median (1=above, 0=at or below)
+	/// Flag (1/0) if facility HHI exceeds peer group median.
 	measure 'Is Above PG HHI Median' =
 			VAR v = [Payer HHI (Facility)]
 			VAR m = [PeerGroup HHI Median]
@@ -267,7 +268,7 @@ table _PayerMix
 		displayFolder: Helper
 		lineageTag: a6576c6e-19d9-49a8-9911-71ba570a11e0
 
-	/// System-wide combined share of Medicaid and Self-Pay encounters, indicating overall reimbursement risk exposure
+	/// System-wide combined Medicaid + Self-Pay share. Overall reimbursement risk exposure.
 	measure 'Risk Payer Share (System %)' = ```
 			VAR RiskSet = { "Medicaid", "Self-Pay" }
 			VAR RiskEncounters = 
@@ -289,7 +290,7 @@ table _PayerMix
 		displayFolder: System Metrics
 		lineageTag: 0e9fe8d7-50be-4112-9353-4c063b166158
 
-	/// System-wide share of Commercial/private insurance encounters, typically the highest-margin payer category
+	/// System-wide Commercial/private insurance share. Typically highest-margin payer category.
 	measure 'Commercial Share (System %)' = ```
 			VAR CommercialEncounters = 
 			    CALCULATE(
@@ -310,7 +311,7 @@ table _PayerMix
 		displayFolder: System Metrics
 		lineageTag: ecae3392-8712-4860-a309-a1d4c77c31fd
 
-	/// System-wide share of Medicare encounters, reflecting federal program dependency and aging population served
+	/// System-wide Medicare share. Reflects federal program dependency and aging population served.
 	measure 'Medicare Share (System %)' = ```
 			VAR MedicareEncounters = 
 			    CALCULATE(
@@ -331,7 +332,7 @@ table _PayerMix
 		displayFolder: System Metrics
 		lineageTag: a0808c07-ead0-47df-993c-e956b1d0037d
 
-	/// System-wide share of Medicaid encounters, indicating safety-net role and exposure to lowest reimbursement rates
+	/// System-wide Medicaid share. Indicates safety-net role and exposure to low reimbursement.
 	measure 'Medicaid Share (System %)' = ```
 			VAR MedicaidEncounters = 
 			    CALCULATE(
@@ -352,13 +353,13 @@ table _PayerMix
 		displayFolder: System Metrics
 		lineageTag: 2878b799-4562-4c8a-a429-834b2fd0f24b
 
-	/// Count of encounters where costs exceeded revenue
+	/// Count of encounters where costs exceeded revenue.
 	measure 'Negative Margin Encounters' = SUM( Fact_KPI_PayerMix[Negative_Margin_Encounter_Count] )
 		formatString: #,0
 		displayFolder: Financial Risk
 		lineageTag: 18c84466-d69f-4f59-be02-646c7a494961
 
-	/// System-wide percentage of encounters with negative margin (costs > revenue), indicating direct financial stress from payer mix
+	/// System-wide share of encounters with negative margin. Direct indicator of payer-mix-driven financial stress.
 	measure 'Negative Margin Encounter Rate (System %)' = ```
 			VAR NegativeEncounters = 
 			    CALCULATE(
@@ -379,7 +380,7 @@ table _PayerMix
 		displayFolder: System Metrics
 		lineageTag: 2ccbe73d-9b19-4515-a133-f5bbf7c72de5
 
-	/// System-wide top payer category with its share percentage, indicating payer concentration and negotiating dependency
+	/// Display text: system-wide top payer with share percentage. Indicates payer concentration.
 	measure 'Top Payer Share (System %)' = ```
 			VAR TotalEncounters = 
 			    CALCULATE(
@@ -407,7 +408,7 @@ table _PayerMix
 		displayFolder: System Metrics
 		lineageTag: ff51a15d-af6e-4497-9f77-32079f7bddfc
 
-	/// Highest single payer share at peer-group level for tooltip display
+	/// Highest single payer share at peer group level. For tooltip display.
 	measure 'Top Payer Share % (PeerGroup)' =
 			MAXX(
 			    VALUES( Dim_Payer[Payment_Typology_Group] ),
@@ -417,7 +418,7 @@ table _PayerMix
 		displayFolder: Concentration
 		lineageTag: d7acec8b-1c0c-4ecf-b020-f2cf2c6a77c9
 
-	/// Herfindahl-Hirschman Index at peer-group level measuring payer concentration
+	/// Herfindahl-Hirschman Index at peer group level.
 	measure 'Payer HHI (PeerGroup)' =
 			SUMX(
 			    VALUES( Dim_Payer[Payment_Typology_Group] ),
@@ -428,7 +429,7 @@ table _PayerMix
 		displayFolder: Concentration
 		lineageTag: 2c0462c7-035a-41ef-94e9-1d40d6717735
 
-	/// Percentage point difference between facility's risk payer share and its peer group median. Positive = higher risk exposure than peers.
+	/// Facility risk payer share minus peer group median, in percentage points. Positive = higher risk exposure than peers. Returns blank if either value missing.
 	measure 'Risk Payer Delta vs PG Median (pp)' =
 			VAR FacilityShare = [Risk Payer Share %]
 			VAR PGMedian = [PeerGroup Risk Payer Share Median]
@@ -442,7 +443,7 @@ table _PayerMix
 		displayFolder: Risk Payer
 		lineageTag: 16bcc6d2-234f-439d-982e-126aa39c8ca0
 
-	/// Name of the payer group with the highest encounter share at facility level
+	/// Name of the payer group with highest encounter share at facility level.
 	measure 'Top Payer Name (Facility)' = ```
 			// Find the payer with the highest share at facility level
 			VAR TopPayerTable = 
@@ -466,13 +467,13 @@ table _PayerMix
 		displayFolder: Concentration
 		lineageTag: b8bcec83-2791-4394-b09f-9c1a00363f95
 
-	/// Reference line threshold for moderate payer concentration (HHI = 0.15). Used for visual reference bands.
+	/// Constant: 0.15. Reference threshold for moderate payer concentration.
 	measure 'HHI Threshold - Moderate' = 0.15
 		formatString: 0.00
 		displayFolder: Helper
 		lineageTag: 75747f0f-5739-4176-891d-f95c4f83a6ac
 
-	/// Reference line threshold for high payer concentration (HHI = 0.25). Used for visual reference bands.
+	/// Constant: 0.25. Reference threshold for high payer concentration.
 	measure 'HHI Threshold - High' = 0.25
 		formatString: 0.00
 		displayFolder: Helper

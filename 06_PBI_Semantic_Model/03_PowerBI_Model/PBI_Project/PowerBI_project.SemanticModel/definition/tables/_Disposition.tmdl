@@ -1,12 +1,13 @@
+/// Disposition analysis measure container. Contains measures for discharge pattern analysis including home discharge share, post-acute care rates, transfer rates, in-hospital death rates, and peer group benchmarking for disposition outcomes.
 table _Disposition
 	lineageTag: 9e3e0b45-93e8-449c-8ab4-b7106ff886a6
 
-	/// Total count of disposition encounters from Fact_KPI_Disposition
+	/// Encounter count for selected disposition category.
 	measure 'Disp Total Encounters' = SUM(Fact_KPI_Disposition[Disposition_Count])
 		formatString: 0
 		lineageTag: 5eba2b4e-434b-46b2-89bd-a1c96631fd4b
 
-	/// Percentage share of encounters for the selected disposition category
+	/// Percentage of facility encounters in the selected disposition category.
 	measure 'Disposition Share' = ```
 			
 			DIVIDE(
@@ -22,14 +23,14 @@ table _Disposition
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Total encounters for a facility-year regardless of disposition category
+	/// Total encounters for a facility-year across all disposition categories. Used as denominator for disposition share calculations.
 	measure 'Disposition Facility-Year Encounters' =
 			
 			CALCULATE([Disp Total Encounters], ALL(Dim_Disposition))
 		formatString: 0
 		lineageTag: db0845f2-236d-4b49-b601-0eef2ed76b18
 
-	/// Percentage of encounters discharged to home
+	/// Share of facility encounters discharged to home.
 	measure 'Home Discharge Share %' =
 			CALCULATE(
 			    [Disposition Share],
@@ -39,7 +40,7 @@ table _Disposition
 		displayFolder: Share Metrics
 		lineageTag: 6dca9da3-22ee-4545-9091-90c7203e0ac9
 
-	/// Percentage of encounters discharged to post-acute care (SNF/Rehab)
+	/// Share of facility encounters discharged to SNF or rehab facilities.
 	measure 'Post-Acute Discharge Share %' =
 			CALCULATE(
 			    [Disposition Share],
@@ -49,7 +50,7 @@ table _Disposition
 		displayFolder: Share Metrics
 		lineageTag: acf5b2a0-5f2d-4ca7-a309-929049b9832b
 
-	/// Percentage of encounters with 'Other' disposition (includes transfers, AMA, hospice, behavioral health)
+	/// Share of facility encounters in 'Other' disposition category. Includes acute transfers, AMA, hospice, and behavioral health discharges.
 	measure 'Acute Transfer Share %' =
 			CALCULATE(
 			    [Disposition Share],
@@ -59,7 +60,7 @@ table _Disposition
 		displayFolder: Share Metrics
 		lineageTag: ec8d34e4-6c7f-4146-a27f-7d480fba02ae
 
-	/// Percentage of encounters resulting in in-hospital death
+	/// Share of facility encounters resulting in in-hospital death. Context: raw rate not risk-adjusted.
 	measure 'In-Hospital Death Share %' =
 			CALCULATE(
 			    [Disposition Share],
@@ -69,13 +70,13 @@ table _Disposition
 		displayFolder: Share Metrics
 		lineageTag: cb92ddad-d835-4075-868c-ce46dc3abaa1
 
-	/// Total inpatient encounters across all dispositions
+	/// Alias for Disposition Facility-Year Encounters.
 	measure 'Total Inpatient Encounters' = [Disposition Facility-Year Encounters]
 		formatString: #,##0
 		displayFolder: Volume
 		lineageTag: b4a41d74-5124-4395-87bd-942477dcc499
 
-	/// Median post-acute discharge share across facilities within the same peer group
+	/// Median post-acute discharge share across facilities in the selected peer group. Requires peer group in filter context.
 	measure 'PeerGroup Post-Acute Share Median' = ```
 			VAR CurrentPeerGroup = SELECTEDVALUE(Dim_PeerGroup[PeerGroup_Name])
 			VAR FacilitiesInPeerGroup = 
@@ -106,7 +107,7 @@ table _Disposition
 		displayFolder: Helper
 		lineageTag: 34ef1ba6-c34b-4aa9-be56-49c84544afb4
 
-	/// Count of facilities with post-acute discharge share above their peer group median
+	/// Count of facilities whose post-acute discharge share exceeds their own peer group median. Each facility compared to its assigned peer group.
 	measure 'Facilities Above PG Post-Acute Median' =
 			SUMX(
 			    SUMMARIZE(
@@ -123,7 +124,7 @@ table _Disposition
 		displayFolder: PeerGroup Benchmarks
 		lineageTag: 69e7d6d8-19e4-479c-a45a-b2c79ce26cd3
 
-	/// Percentage of encounters with Other disposition (transfers, AMA, hospice, behavioral health)
+	/// Alias for Acute Transfer Share %. Share of encounters in 'Other' disposition category.
 	measure 'Other Discharge Share %' =
 			CALCULATE(
 			    [Disposition Share],
@@ -133,7 +134,7 @@ table _Disposition
 		displayFolder: Share Metrics
 		lineageTag: 5f25cb25-0ed4-46db-a5ab-00f0ae44ebe4
 
-	/// Median acute transfer share across facilities within the same peer group
+	/// Median acute transfer share across facilities in the selected peer group. Requires peer group in filter context.
 	measure 'PeerGroup Acute Transfer Share Median' = ```
 			VAR CurrentPeerGroup = SELECTEDVALUE(Dim_PeerGroup[PeerGroup_Name])
 			VAR FacilitiesInPeerGroup = 
@@ -152,7 +153,7 @@ table _Disposition
 		displayFolder: PeerGroup Benchmarks
 		lineageTag: 2b150438-0773-43c1-93c1-828d584b4281
 
-	/// Facility post-acute share minus peer group median (percentage points)
+	/// Facility post-acute share minus peer group median, in percentage points. Positive = higher post-acute rate than peers. Returns blank if either value missing.
 	measure 'Post-Acute vs Peer Median (pp)' =
 			VAR FacilityRate = [Post-Acute Discharge Share %]
 			VAR PGMedian = [PeerGroup Post-Acute Share Median]
@@ -166,7 +167,7 @@ table _Disposition
 		displayFolder: Variance
 		lineageTag: 0f14710d-2c3b-4260-808e-6451e6204111
 
-	/// Facility acute transfer share minus peer group median (percentage points)
+	/// Facility acute transfer share minus peer group median, in percentage points. Positive = higher transfer rate than peers. Returns blank if either value missing.
 	measure 'Transfer vs Peer Median (pp)' =
 			VAR FacilityRate = [Acute Transfer Share %]
 			VAR PGMedian = [PeerGroup Acute Transfer Share Median]
@@ -208,7 +209,7 @@ table _Disposition
 		displayFolder: Helper
 		lineageTag: 6d9b36c5-1773-431a-9b9c-3df9e5771776
 
-	/// Post-acute median for the facility's peer group (works without PG in filter context)
+	/// Post-acute discharge median for the facility's peer group. Looks up peer group via bridge table when peer group is not in filter context. Use for per-facility comparisons in visuals without peer group on axis.
 	measure 'Facility PeerGroup Post-Acute Median' = ```
 			VAR CurrentPeerGroup = 
 			    MAXX(
@@ -229,7 +230,7 @@ table _Disposition
 		displayFolder: PeerGroup Benchmarks
 		lineageTag: 6360e029-50f1-413c-8a37-b88573ed1314
 
-	/// Count of encounters with acute transfer/other disposition
+	/// Encounters discharged to 'Other' category (acute transfers, AMA, hospice, behavioral health).
 	measure 'Acute Transfer Count' =
 			CALCULATE(
 			    [Disp Total Encounters],
@@ -239,7 +240,7 @@ table _Disposition
 		displayFolder: Volume
 		lineageTag: c919271e-c92c-41fa-bf82-80be9af78af2
 
-	/// Median in-hospital death share across all facilities regardless of peer group
+	/// Median in-hospital death share across all facilities system-wide. Ignores peer group assignment.
 	measure 'Cross-PG Death Share Median' =
 			MEDIANX(
 			    VALUES(Dim_Facility[Facility_Name]),
@@ -249,7 +250,7 @@ table _Disposition
 		displayFolder: Cross-PG Benchmarks
 		lineageTag: 930a3465-83b0-455b-b06b-ba94e4f0a54e
 
-	/// Median acute transfer share across all facilities regardless of peer group
+	/// Median acute transfer share across all facilities system-wide. Ignores peer group assignment.
 	measure 'Cross-PG Acute Transfer Share Median' =
 			MEDIANX(
 			    VALUES(Dim_Facility[Facility_Name]),

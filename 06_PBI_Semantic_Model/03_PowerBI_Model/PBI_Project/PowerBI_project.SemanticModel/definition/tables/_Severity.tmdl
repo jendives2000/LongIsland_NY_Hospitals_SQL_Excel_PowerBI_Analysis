@@ -1,7 +1,8 @@
+/// Patient acuity analysis measure container. Contains measures for severity mix index, extreme severity percentages, peer group severity benchmarking, and facility comparison flags. Supports contextual interpretation of case-mix complexity.
 table _Severity
 	lineageTag: 1a92feb6-85fb-43a8-88bb-9033582841e1
 
-	/// Percentage of encounters for selected severity level
+	/// Share of encounters for selected severity level.
 	measure 'Severity Encounter %' = ```
 			
 			VAR Num =
@@ -18,7 +19,7 @@ table _Severity
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 0d681068-6f35-4ab5-9770-fa46e04f9580
 
-	/// Percentage of encounters with Extreme APR severity classification
+	/// Share of encounters with Extreme APR severity. Indicates high-acuity case mix.
 	measure 'Extreme Severity %' = ```
 			
 			DIVIDE(
@@ -31,7 +32,7 @@ table _Severity
 		displayFolder: Extreme Level
 		lineageTag: dbaec5fa-2515-403e-9623-85858aa1e8eb
 
-	/// Median extreme severity % within the selected peer group
+	/// Median extreme severity % within the selected peer group. Requires peer group in filter context.
 	measure 'Peer Group Median Extreme %' = ```
 			
 			VAR CurrentPG = SELECTEDVALUE( Dim_PeerGroup[PeerGroup_Name] )
@@ -52,7 +53,7 @@ table _Severity
 		displayFolder: Extreme Level
 		lineageTag: d3fa44b6-8a8b-4836-bcce-a65f036d0628
 
-	/// Facility extreme severity % minus peer group median (positive = higher acuity than peers)
+	/// Facility extreme severity % minus peer group median. Positive = higher acuity than peers.
 	measure 'Extreme % vs Peer Median' = ```
 			
 			[Extreme Severity %] - [Peer Group Median Extreme %]
@@ -63,7 +64,7 @@ table _Severity
 		displayFolder: Extreme Level
 		lineageTag: 80582048-dbc5-43b6-8fd4-bdc28ed246e0
 
-	/// Text flag indicating if facility is above or at/below peer median for extreme severity
+	/// Text flag: 'Above Peer Median' or 'At or Below Peer Median' for extreme severity share.
 	measure 'Extreme Above Peer Median Flag' = ```
 			
 			IF(
@@ -76,7 +77,7 @@ table _Severity
 		displayFolder: Extreme Level
 		lineageTag: 2bf14f6e-d8c2-4bcf-81f3-c1b1b8ce6320
 
-	/// Total encounter count from severity mix by severity view
+	/// Total encounters from severity mix by severity view.
 	measure 'Total Encounters' = ```
 			
 			SUM ( vw_Fact_KPI_SeverityMix_BySeverity[Encounter_Count] )
@@ -85,7 +86,7 @@ table _Severity
 		formatString: 0
 		lineageTag: 660a6176-8cc0-4625-b07c-f87f826105ca
 
-	/// Count of encounters with Extreme APR severity level
+	/// Count of encounters with Extreme APR severity level.
 	measure 'Extreme Encounters' = ```
 			
 			CALCULATE(
@@ -99,7 +100,7 @@ table _Severity
 		displayFolder: Extreme Level
 		lineageTag: 485287fa-08f6-403b-bd67-d60b0c325242
 
-	/// Median extreme severity % across all facilities (ignores current facility filter)
+	/// Median extreme severity % across all facilities. Ignores current facility and peer group filters.
 	measure 'Median Extreme % (Selected)' = ```
 			
 			CALCULATE(
@@ -116,7 +117,7 @@ table _Severity
 		displayFolder: Extreme Level
 		lineageTag: 64aead1c-c363-4697-9c75-c3866cd56851
 
-	/// Conditional formatting color for extreme severity comparison charts
+	/// Conditional formatting: dark gray if above median, neutral gray otherwise.
 	measure 'Extreme vs Median Bar Color' = ```
 			
 			IF(
@@ -129,7 +130,7 @@ table _Severity
 		displayFolder: Helper
 		lineageTag: 6a350604-ebc6-4f66-941d-ceb6b53edad0
 
-	/// Flag (1/0) if facility extreme % exceeds selected median
+	/// Flag (1/0) if facility extreme severity % exceeds selected median.
 	measure 'Is Above Median Extreme' = ```
 			
 			IF( [Extreme Severity %] > [Median Extreme % (Selected)], 1, 0 )
@@ -139,7 +140,7 @@ table _Severity
 		displayFolder: Helper
 		lineageTag: 2a7222a2-67a0-4e23-8b46-106a2716073e
 
-	/// Count of facilities with extreme severity % above the selected median
+	/// Count of facilities with extreme severity % above the selected median.
 	measure 'Facilities Above Median Extreme' = ```
 			
 			SUMX(
@@ -152,7 +153,7 @@ table _Severity
 		displayFolder: Helper
 		lineageTag: 2f7a2178-e0e7-489c-99e9-5ab33dda803d
 
-	/// Count of facilities in current filter context
+	/// Count of facilities in current filter context.
 	measure 'Facilities Selected' = ```
 			
 			COUNTROWS( VALUES( Dim_Facility[Facility_Key] ) )
@@ -162,7 +163,7 @@ table _Severity
 		displayFolder: Helper
 		lineageTag: a70c49dd-9f5f-406e-83b6-5485b95badd4
 
-	/// Name of facility with highest extreme severity share
+	/// Name of facility with highest extreme severity share.
 	measure 'Top Facility Extreme (Name)' = ```
 			
 			VAR T =
@@ -179,7 +180,7 @@ table _Severity
 		displayFolder: Helper
 		lineageTag: 53d1a359-32b9-4db9-be91-cc21a257f561
 
-	/// Extreme severity % of the facility with highest extreme share
+	/// Extreme severity % of the facility with highest extreme share.
 	measure 'Top Facility Extreme (%)' = ```
 			
 			VAR T =
@@ -197,7 +198,7 @@ table _Severity
 		displayFolder: Helper
 		lineageTag: f15d59d1-e9d8-4767-8473-e0bff83c176d
 
-	/// Minimum severity mix index across facilities in selection
+	/// Minimum SMI across facilities in selection.
 	measure 'SMI Min' = ```
 			
 			MINX( VALUES( Dim_Facility[Facility_Key] ), [Severity Mix Index] )
@@ -208,7 +209,7 @@ table _Severity
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Maximum severity mix index across facilities in selection
+	/// Maximum SMI across facilities in selection.
 	measure 'SMI Max' = ```
 			
 			MAXX( VALUES( Dim_Facility[Facility_Key] ), [Severity Mix Index] )
@@ -219,7 +220,7 @@ table _Severity
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Concatenated list of peer groups in current selection
+	/// Concatenated list of peer groups in current selection.
 	measure PeerGroups_Selected = ```
 			
 			    CONCATENATEX(
@@ -231,7 +232,7 @@ table _Severity
 		displayFolder: Helper
 		lineageTag: f8deb001-8bb8-42b9-8aca-289613ec05c2
 
-	/// Count of distinct facilities in current selection
+	/// Count of facilities in current selection.
 	measure 'Facility Count' = ```
 			
 			COUNTROWS (
@@ -243,7 +244,7 @@ table _Severity
 		displayFolder: Helper
 		lineageTag: 16ed3103-2ae5-4f16-91b7-e9323195d7b7
 
-	/// Peer group severity median using facility-safe calculation
+	/// Alias for PeerGroup Severity Median (FacilitySafe).
 	measure 'SMI Peer Median' = ```
 			Dim_ClinicalClass[PeerGroup Severity Median (FacilitySafe)]
 			
@@ -253,7 +254,7 @@ table _Severity
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Count of facilities with SMI above peer group median
+	/// Count of facilities with SMI above peer group median.
 	measure 'Facilities Above SMI Median' = ```
 			
 			VAR PeerMedian = [PeerGroup Severity Median (FacilitySafe)]
@@ -270,7 +271,7 @@ table _Severity
 		displayFolder: Helper
 		lineageTag: 136cf811-d3c1-4c71-a585-9abc4745addc
 
-	/// Count of facilities with SMI at or below peer group median
+	/// Count of facilities with SMI at or below peer group median.
 	measure 'Facilities At or Below SMI Median' = ```
 			
 			VAR PeerMedian = [SMI Peer Median]
@@ -287,7 +288,7 @@ table _Severity
 		displayFolder: Helper
 		lineageTag: 95a3bf77-ad7b-41ce-bd60-46e57bed465d
 
-	/// Flag (1/0) if facility SMI exceeds peer group median
+	/// Flag (1/0) if facility SMI exceeds peer group median.
 	measure 'Is Above PG Severity Median' = ```
 			
 			VAR smi = [Severity Mix Index]
@@ -300,7 +301,7 @@ table _Severity
 		displayFolder: Helper
 		lineageTag: bb74ddad-1a4f-465d-b8e7-8068d57df297
 
-	/// Flag (1/0) if facility SMI exceeds its own peer group median
+	/// Flag (1/0) if facility SMI exceeds its own peer group median. Uses peer-group-safe lookup. Returns blank if multiple facilities in context.
 	measure 'Is Above Own PG Sev Median' = ```
 			
 			IF(
@@ -316,7 +317,7 @@ table _Severity
 		displayFolder: Helper
 		lineageTag: b348ad4e-8958-4727-8c84-d914774a926a
 
-	/// Count of facilities with SMI above their own peer group median
+	/// Count of facilities with SMI above their own peer group median.
 	measure 'Facilities Above Own PG Sev Median' = ```
 			
 			-- Count of facilities above their OWN peer-group median
@@ -330,7 +331,7 @@ table _Severity
 		displayFolder: Helper
 		lineageTag: 83b72a5e-669d-47b9-aceb-5d132867ff2a
 
-	/// Median SMI across all facilities respecting slicer selection
+	/// Median SMI across all facilities in current slicer selection. Ignores visual-level facility/peer group filters but respects slicer selections.
 	measure 'SMI Median (All Facilities, Selected)' = ```
 			
 			VAR SelectedPeerGroups =
@@ -359,7 +360,7 @@ table _Severity
 		displayFolder: Helper
 		lineageTag: b7aa5a3a-bbab-4e66-9372-9c899477e55d
 
-	/// Flag (1/0) if facility SMI exceeds all-facilities median
+	/// Flag (1/0) if facility SMI exceeds all-facilities median. Returns 0 if multiple facilities in context.
 	measure 'Is Above SMI Median (All Facilities)' = ```
 			
 			VAR smi = [Severity Mix Index]
@@ -377,7 +378,7 @@ table _Severity
 		formatString: 0
 		lineageTag: 1e19f9cf-a192-42ab-a61b-c49507e1811e
 
-	/// Flag (1/0) if facility SMI exceeds peer group median (facility-safe calculation)
+	/// Flag (1/0) if facility SMI exceeds peer group median. Uses facility-safe median calculation.
 	measure 'Is Above PG Severity Median (facility safe)' =
 			
 			VAR smi = [Severity Mix Index]
@@ -387,7 +388,7 @@ table _Severity
 		displayFolder: Helper
 		lineageTag: 2de1163a-3b85-4a8a-90da-b6bbe3ed9916
 
-	/// Displays the severity mix index range across facilities as Min – Max for card visuals
+	/// Display text: SMI range as 'min – max' format. Returns blank if either value missing.
 	measure 'SMI Range' =
 			VAR _Min = [SMI Min]
 			VAR _Max = [SMI Max]

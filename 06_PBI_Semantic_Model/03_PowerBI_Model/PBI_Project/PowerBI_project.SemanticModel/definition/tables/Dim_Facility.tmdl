@@ -1,3 +1,4 @@
+/// Hospital/facility dimension. Grain: one row per facility. Contains facility identifiers, names, geographic attributes (county, health service area), and denormalized peer group assignment. Primary organizational hierarchy for all KPI analysis.
 table Dim_Facility
 	lineageTag: 42fcdb87-5f7a-4947-90cc-90a460c02430
 

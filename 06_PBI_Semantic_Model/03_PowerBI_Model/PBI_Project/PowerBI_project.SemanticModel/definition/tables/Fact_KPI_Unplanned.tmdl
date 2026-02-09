@@ -1,6 +1,8 @@
+/// Unplanned admissions fact table. Grain: one row per facility × year. Contains unplanned/emergency admission counts and total encounters. Source for unplanned admission rate analysis.
 table Fact_KPI_Unplanned
 	lineageTag: ffddfc83-a994-4118-8837-d1fe22b87a62
 
+	/// Total encounters from unplanned fact table. (Y) suffix indicates year-level grain.
 	measure 'Total Encounters (Y)' =
 			
 			SUM ( Fact_KPI_Unplanned[Total_Encounters] )

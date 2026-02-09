@@ -1,7 +1,8 @@
+/// Core KPI measure container. Houses the seven primary healthcare performance indicators: Severity Mix Index, Mortality Rate, Unplanned Admission Rate, Average LOS, Margin Pressure, and Margins. These are the foundational metrics referenced by domain-specific measure tables.
 table _KPI_Measures
 	lineageTag: 29eefdf6-619c-4b82-acc5-33a3ef6f72d8
 
-	/// Weighted average APR severity (1=Minor to 4=Extreme), higher indicates sicker patient population
+	/// Weighted average APR severity (1=Minor to 4=Extreme). Higher values indicate sicker patient population. Context: reflects case-mix complexity, not quality.
 	measure 'Severity Mix Index' =
 			
 			DIVIDE(
@@ -11,7 +12,7 @@ table _KPI_Measures
 		formatString: 0.00
 		lineageTag: 0160202b-84e7-4ce7-a81d-477b56a0208d
 
-	/// Percentage of admissions that were unplanned/emergency
+	/// Share of admissions that were unplanned/emergency.
 	measure 'Unplanned Admission Rate' =
 			
 			DIVIDE(
@@ -21,7 +22,7 @@ table _KPI_Measures
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 7dba8b71-1622-4fb1-b9e9-d5119894323d
 
-	/// In-hospital mortality rate (deaths / total encounters)
+	/// In-hospital mortality rate (deaths / encounters). Not risk-adjusted.
 	measure 'Mortality Rate' =
 			
 			DIVIDE(
@@ -32,7 +33,7 @@ table _KPI_Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Average length of stay in days (total LOS days / encounter count)
+	/// Average length of stay in days.
 	measure 'AVG LOS' =
 			
 			DIVIDE(
@@ -43,7 +44,7 @@ table _KPI_Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Financial margin calculated as total charges minus total costs
+	/// Total margin: charges minus costs.
 	measure 'FP Margin' = ```
 			
 			SUM(Fact_KPI_FinancialPressure[Total_Charges])
@@ -54,7 +55,7 @@ table _KPI_Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Payer mix margin calculated as charges minus costs from payer mix fact
+	/// Total margin from payer mix fact table. Charges minus costs.
 	measure 'PM Margin' =
 			
 			SUM(Fact_KPI_PayerMix[Total_Charges]) - SUM(Fact_KPI_PayerMix[Total_Costs])
@@ -62,7 +63,7 @@ table _KPI_Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Cost-to-charge ratio indicating financial pressure (higher = more pressure, >1 = loss)
+	/// Cost-to-charge ratio. Values > 1.0 indicate costs exceed charges (operating at a loss). Higher = more financial pressure.
 	measure 'Margin Pressure' =
 			
 			DIVIDE(

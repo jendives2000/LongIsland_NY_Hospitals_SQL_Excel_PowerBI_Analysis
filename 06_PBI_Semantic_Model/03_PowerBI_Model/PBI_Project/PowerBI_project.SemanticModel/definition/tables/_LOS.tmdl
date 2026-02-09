@@ -1,7 +1,8 @@
+/// Length of stay analysis measure container. Contains measures for average LOS, excess LOS calculations, bed-day utilization, peer group LOS benchmarking, and threshold-based facility segmentation for operational efficiency analysis.
 table _LOS
 	lineageTag: 874ec203-bb35-4c59-a6b4-737b1ac71b37
 
-	/// Configurable LOS threshold in days for scatter plot analysis (default: 5)
+	/// Constant: 5 days. Threshold for scatter plot analysis.
 	measure 'LOS Threshold (Days)' = ```
 			5
 			
@@ -10,13 +11,13 @@ table _LOS
 		displayFolder: Helper
 		lineageTag: 0bdd391b-29c9-44e9-bd2d-d0ed0f9ffdce
 
-	/// Configurable volume threshold for analysis (default: 3000 encounters)
+	/// Constant: 3000 encounters. Volume threshold for LOS analysis.
 	measure 'LOS Volume Threshold (Encounters)' = 3000
 		formatString: 0
 		displayFolder: Helper
 		lineageTag: 56191e9e-399e-4b90-8eaf-6218633dc20f
 
-	/// Count of distinct facilities in current filter context
+	/// Count of facilities in current filter context.
 	measure 'LOS Total Facilities' = ```
 			DISTINCTCOUNT(Dim_Facility[Facility_Key])
 			
@@ -25,7 +26,7 @@ table _LOS
 		displayFolder: Helper
 		lineageTag: a971f21e-4c76-4e13-b053-4f46a4b297b2
 
-	/// Minimum average LOS across facilities (facility-safe calculation)
+	/// Minimum average LOS across all facilities. Works per facility row without requiring specific facility filter.
 	measure 'LOS Min (FacilitySafe)' =
 			
 			MINX(
@@ -37,7 +38,7 @@ table _LOS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Maximum average LOS across facilities (facility-safe calculation)
+	/// Maximum average LOS across all facilities. Works per facility row without requiring specific facility filter.
 	measure 'LOS Max (FacilitySafe)' = ```
 			
 			MAXX(
@@ -51,7 +52,7 @@ table _LOS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Median LOS across all facilities in current selection
+	/// Median LOS across all facilities in current selection. Cross-facility comparison, not peer-group specific.
 	measure 'LOS Peer Median' = ```
 			
 			-- Cross-facility LOS median (across all facilities in current selection)
@@ -63,7 +64,7 @@ table _LOS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Flag (1/0) indicating if facility LOS exceeds peer group median
+	/// Flag (1/0) if facility LOS exceeds peer group median.
 	measure 'Is Above PG LOS Median' = ```
 			
 			VAR v = [AVG LOS]
@@ -75,7 +76,7 @@ table _LOS
 		displayFolder: Helper
 		lineageTag: 9a612987-788e-4a8a-8791-f46d7776e591
 
-	/// Flag (1/0) indicating if facility LOS exceeds its own peer group median
+	/// Flag (1/0) if facility LOS exceeds its own peer group median. Uses peer-group-safe median lookup.
 	measure 'Is Above Own PG LOS Median' = ```
 			
 			VAR v = [AVG LOS]
@@ -94,7 +95,7 @@ table _LOS
 		displayFolder: Helper
 		lineageTag: 2cbb311e-8f00-4e6b-baf8-fac5c65ca5c4
 
-	/// Flag (1/0) indicating if facility LOS exceeds peer median
+	/// Flag (1/0) if facility LOS exceeds peer median. Uses LOS Peer Median measure.
 	measure 'Is Above LOS Median' = ```
 			
 			VAR v = [AVG LOS]
@@ -106,7 +107,7 @@ table _LOS
 		displayFolder: Helper
 		lineageTag: e91c97a4-19d2-413d-bde9-398f8a97e6a7
 
-	/// Flag (1/0) indicating if facility LOS is below the LOS threshold
+	/// Flag (1/0) if facility average LOS < 5 days.
 	measure 'Is Below LOS Threshold' = ```
 			
 			IF( NOT ISBLANK([AVG LOS]) && [AVG LOS] < [LOS Threshold (Days)], 1, 0)
@@ -117,7 +118,7 @@ table _LOS
 		displayFolder: Helper
 		lineageTag: e553c3cd-f12a-4ba2-b50f-ae0974a29b70
 
-	/// Flag (1/0) indicating if facility volume is below threshold
+	/// Flag (1/0) if facility encounters < 3000.
 	measure 'Is Below LOS Volume Threshold' =
 			
 			VAR enc = [Total Encounters]
@@ -126,7 +127,7 @@ table _LOS
 		displayFolder: Helper
 		lineageTag: 005cb404-6886-4d4f-b743-205c02ff6bd3
 
-	/// Flag (1/0) indicating if facility meets volume threshold for analysis
+	/// Flag (1/0) if facility encounters ≥ 3000. Volume threshold for inclusion in LOS analysis.
 	measure 'Is Above LOS Volume Threshold' =
 			
 			VAR enc = [Total Encounters]
@@ -135,7 +136,7 @@ table _LOS
 		displayFolder: Helper
 		lineageTag: 7e4ea352-220a-4186-904c-8977bc2250f8
 
-	/// Count of facilities below both LOS and volume thresholds
+	/// Count of facilities below both LOS threshold (5 days) and volume threshold (3000 encounters). Low concern for LOS intervention.
 	measure 'Facilities In LOS Low-Pressure Zone' = ```
 			
 			COUNTROWS(
@@ -151,7 +152,7 @@ table _LOS
 		displayFolder: Helper
 		lineageTag: 1541672e-21d4-493a-b997-8d11a9642ac1
 
-	/// Count of facilities outside the low-pressure zone (potential concerns)
+	/// Count of facilities outside low-pressure zone—exceeding at least one threshold. Potential LOS concerns requiring attention.
 	measure 'Facilities Out of LOS Low-Pressure Zone' = ```
 			
 			[LOS Total Facilities] - [Facilities In LOS Low-Pressure Zone]
@@ -161,7 +162,7 @@ table _LOS
 		displayFolder: Helper
 		lineageTag: f9f4f37e-05be-41bc-aaf9-e316a57affda
 
-	/// Count of facilities exceeding both LOS and volume thresholds
+	/// Count of facilities exceeding both the LOS threshold (5 days) and volume threshold (3000 encounters). Identifies high-impact LOS concerns.
 	measure 'Facilities Above Both LOS Thresholds' = ```
 			
 			COUNTROWS(
@@ -177,7 +178,7 @@ table _LOS
 		displayFolder: Helper
 		lineageTag: b8c1a11e-d430-4802-8ae9-4cdbc995f0be
 
-	/// Display text showing range of peer group LOS medians (min to max)
+	/// Display text showing peer group LOS median range as 'min to max' format.
 	measure 'PG LOS Median Range Text' = ```
 			
 			VAR pgList = VALUES(Dim_Facility[PeerGroup_Name])
@@ -192,7 +193,7 @@ table _LOS
 		displayFolder: Helper
 		lineageTag: cfb40435-71c9-4ef3-8808-773827458ca8
 
-	/// Facility average LOS minus peer group LOS median (positive = longer than peers)
+	/// Facility average LOS minus peer group median. Positive = longer stays than peer median. Requires peer group in filter context.
 	measure 'Excess LOS Days' = ```
 			
 			[AVG LOS] - [PeerGroup LOS Median]
@@ -203,7 +204,7 @@ table _LOS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Excess LOS days calculated with peer-group-safe median lookup
+	/// Facility average LOS minus peer group median. Uses peer-group-safe median lookup that works per facility row without requiring peer group in filter. Returns blank if either value missing.
 	measure 'Excess LOS Days (PeerGroup safe)' = ```
 			
 			VAR v   = CALCULATE([AVG LOS])
@@ -217,14 +218,14 @@ table _LOS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Total bed-days calculated as average LOS multiplied by encounter count
+	/// Total bed-days: average LOS × encounter count.
 	measure 'Total Bed-Days' =
 			
 			[AVG LOS] * [Total Encounters]
 		formatString: #,0
 		lineageTag: d86d3105-1693-4626-9711-4833372cf718
 
-	/// Facility's share of total system bed-days
+	/// Facility's share of total system bed-days. Ignores peer group.
 	measure 'Share of Bed-Days' =
 			
 			DIVIDE(
@@ -234,7 +235,7 @@ table _LOS
 		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 5343bce0-2bad-4235-9b02-3f226ca4a482
 
-	/// Median average LOS across all facilities regardless of peer group
+	/// Median average LOS across all facilities system-wide. Ignores peer group assignment.
 	measure 'Cross–Peer-Group LOS Median' =
 			
 			MEDIANX(
@@ -249,7 +250,7 @@ table _LOS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Count of facilities with LOS above cross-peer-group median
+	/// Count of facilities with average LOS above cross-peer-group median.
 	measure 'Facilities Above CPG LOS Median' =
 			
 			VAR m = [Cross–Peer-Group LOS Median]
@@ -264,7 +265,7 @@ table _LOS
 		displayFolder: Helper
 		lineageTag: 8021d41f-47d7-4f8b-9942-bb4c1f401b99
 
-	/// Count of facilities with LOS above their own peer group median
+	/// Count of facilities with average LOS above their own peer group median. Each facility compared to its assigned peer group.
 	measure 'Facilities Above Own Peer-Group LOS Median' = ```
 			
 			VAR Facilities =
@@ -293,7 +294,7 @@ table _LOS
 		displayFolder: Helper
 		lineageTag: ed377f10-050a-48a4-9fe6-df222851bb98
 
-	/// Median excess LOS days across all facilities
+	/// Median excess LOS (vs peer group) across all facilities. System-level summary of LOS variance.
 	measure 'Median Excess LOS (Days)' = ```
 			
 			MEDIANX(
@@ -308,7 +309,7 @@ table _LOS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Number of top facilities accounting for 50% of total bed-days
+	/// Number of top facilities that together account for 50% of total bed-days. Lower count = more concentrated bed-day utilization.
 	measure 'Facilities Driving 50% of Bed-Days (Count)' =
 			
 			VAR Base =
@@ -347,7 +348,7 @@ table _LOS
 		displayFolder: Helper
 		lineageTag: caf85b95-9498-43dc-8fbe-48af96a42f82
 
-	/// Conditional formatting color based on excess LOS vs threshold parameter
+	/// Conditional formatting hex color based on excess LOS vs what-if threshold parameter. Red shades for excess, blue shades for below median, gray for near-median or blank.
 	measure 'Excess LOS Color (WhatIf)' = ```
 			
 			VAR v = [Excess LOS Days]
@@ -367,7 +368,7 @@ table _LOS
 		displayFolder: Helper
 		lineageTag: 5387658b-e645-4fa7-ba5e-43a290516d9c
 
-	/// Median excess LOS with BLANK replaced by 0 for display
+	/// Median excess LOS with BLANK replaced by 0. For card visuals that cannot display blanks.
 	measure 'Median Excess LOS (Days) (Display)' = ```
 			
 			COALESCE([Median Excess LOS (Days)], 0)
@@ -378,7 +379,7 @@ table _LOS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Average excess LOS days for facilities above their peer group median
+	/// Average excess LOS days, calculated only for facilities above their peer group median. Excludes facilities at or below median.
 	measure 'Avg Excess LOS (Days) Above Peer Median' =
 			
 			AVERAGEX(
@@ -393,7 +394,7 @@ table _LOS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// 75th percentile of excess LOS days across facilities
+	/// 75th percentile of excess LOS days across facilities. Shows upper quartile of LOS variance.
 	measure 'P75 Excess LOS (Days)' = ```
 			
 			PERCENTILEX.INC(
@@ -408,7 +409,7 @@ table _LOS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Facility's percentage share of total bed-days across all facilities
+	/// Facility's percentage of total bed-days across all selected facilities.
 	measure 'Facility Bed-Days Share %' = ```
 			
 			VAR ThisBD = [Total Bed-Days]
@@ -424,7 +425,7 @@ table _LOS
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: e31044f0-9196-4770-829e-bfe46285edca
 
-	/// Facility rank by total bed-days (1 = highest bed-days)
+	/// Facility rank by total bed-days. Rank 1 = highest bed-day consumer.
 	measure 'Facility Bed-Days Rank' = ```
 			
 			VAR CurrentKey = SELECTEDVALUE(Dim_Facility[Facility_Key])
@@ -448,7 +449,7 @@ table _LOS
 		formatString: 0
 		lineageTag: e738bbd7-f838-4fc0-9b00-b4ab7bceaf61
 
-	/// Cumulative percentage of total bed-days for Pareto analysis
+	/// Running share of total bed-days for Pareto analysis. Facilities ranked by bed-days descending. Shows what percentage of system bed-days are accounted for at each rank position.
 	measure 'Cumulative Bed-Days Share %' = ```
 			
 			VAR CurrentKey =
@@ -478,7 +479,7 @@ table _LOS
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: b9131801-a5ba-4343-9aab-36d19f6d0977
 
-	/// Debug helper: total bed-days across all selected facilities
+	/// Debug helper: total bed-days ignoring facility filter.
 	measure 'DBG Total Bed-Days (All Facilities)' = ```
 			
 			CALCULATE(
@@ -493,7 +494,7 @@ table _LOS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// Debug helper: returns 1 if single facility in context
+	/// Debug helper: returns 1 if exactly one facility in current filter context.
 	measure 'DBG Has One Facility Key' = ```
 			
 			IF(HASONEVALUE(Dim_Facility[Facility_Key]), 1, 0)
@@ -502,7 +503,7 @@ table _LOS
 		formatString: 0
 		lineageTag: 6941c542-6e10-453f-bf61-e792c71f0803
 
-	/// Facility LOS minus peer group median in days
+	/// Facility LOS minus peer group median in days. Returns blank if either value missing.
 	measure 'Excess LOS vs Peer Median (Days)' =
 			
 			VAR los = [Avg LOS]
