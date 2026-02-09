@@ -27,6 +27,33 @@ This is a **descriptive, explainability-first analysis**, not a causal or predic
 
 ---
 
+<details>
+<summary><b>Table of Contents</b></summary>
+
+- [Long Island, NY Hospitals](#long-island-ny-hospitals)
+  - [Healthcare Data Analytics \& Business Intelligence](#healthcare-data-analytics--business-intelligence)
+  - [Executive Summary](#executive-summary)
+  - [Project Scope \& Business Value](#project-scope--business-value)
+    - [Establishing Operating Reality (Context KPIs)](#establishing-operating-reality-context-kpis)
+    - [Interpreting Outcomes Within Context](#interpreting-outcomes-within-context)
+  - [Repository Structure](#repository-structure)
+  - [Data \& Methodology](#data--methodology)
+  - [Technical Stack](#technical-stack)
+  - [Getting Started](#getting-started)
+    - [1. Clone the Repository](#1-clone-the-repository)
+    - [2. Database Setup](#2-database-setup)
+    - [3. Review the Analysis](#3-review-the-analysis)
+  - [Power BI Report Navigation](#power-bi-report-navigation)
+  - [Key Deliverables](#key-deliverables)
+  - [Data Privacy \& Compliance](#data-privacy--compliance)
+  - [Intended Audience \& Use](#intended-audience--use)
+  - [Author](#author)
+  - [License](#license)
+
+</details>
+
+---
+
 ## Project Scope & Business Value
 
 This project addresses core questions faced by healthcare executives and analytics teams.
@@ -88,7 +115,9 @@ This structure mirrors how enterprise healthcare analytics teams separate **data
 
 * **Analytical Approach**  
   Explainability-first, non-causal descriptive analysis designed to surface structural signals rather than infer causality.
-  Each KPI includes a *Diagnostic Preview* highlighting domains where deeper analysis would typically be warranted.
+  Each KPI includes a *Diagnostic Preview* highlighting domains where deeper analysis would typically be warranted.  
+  
+  All narrative and explainability text in this project is grounded in established healthcare explainability, communication, and governance frameworks, adapted into a context-first, non-causal analytical design suitable for executive and system-level decision support.
 
 * **Validation & Governance**  
 
