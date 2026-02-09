@@ -18,9 +18,9 @@ The analysis is deliberately structured to **establish operating context first**
 
 * **Outcome Signals**
 
-  * Financial stress (Cost & Margin Pressure)
-  * Clinical risk exposure (Mortality)
   * Throughput efficiency (Length of Stay)
+  * Clinical risk exposure (Mortality)
+  * Financial stress (Cost & Margin Pressure)
   * Exit flow distribution (Disposition)
 
 This is a **descriptive, explainability-first analysis**, not a causal or predictive model.
@@ -33,27 +33,27 @@ This project addresses core questions faced by healthcare executives and analyti
 
 ### Establishing Operating Reality (Context KPIs)
 
-* **Severity Mix**
+* **Severity Mix**   
   What level of patient acuity is being treated, and how comparable is case mix across facilities?
 
-* **Unplanned Intake**
+* **Unplanned Intake**  
   To what extent is system demand driven by unscheduled admissions, and how much baseline pressure does this impose?
 
-* **Payer Mix**
+* **Payer Mix**  
   What reimbursement structures shape downstream financial and operational outcomes?
 
 ### Interpreting Outcomes Within Context
 
-* **Cost & Margin Pressure**
-  Financial sustainability under observed case mix and payer exposure.
-
-* **Mortality (Outcome Risk)**
-  Distribution of mortality exposure interpreted within severity, intake, and throughput context.
-
-* **Length of Stay (Throughput)**
+* **Length of Stay (Throughput)**  
   Efficiency and congestion signals after accounting for demand and patient complexity.
 
-* **Disposition (Exit Flow)**
+* **Mortality (Outcome Risk)**  
+  Distribution of mortality exposure interpreted within severity, intake, and throughput context.
+
+* **Cost & Margin Pressure**  
+  Financial sustainability under observed case mix and payer exposure.
+
+* **Disposition (Exit Flow)**  
   How inpatient episodes resolve across discharge destinations and downstream capacity.
 
 All outcome metrics are interpreted **relative to established context**, not as isolated performance scores.
@@ -66,14 +66,14 @@ The repository follows a **pipeline-oriented structure**, progressing from raw d
 
 ```
 LongIsland_NY_Hospitals_SQL_Excel_PowerBI_Analysis/
-├── 00_DB_Creation/              # Database schemas and initial load scripts
-├── 01_Profiling/                # Data profiling and exploratory SQL
-├── 02_Data_Cleaning/            # Cleaning, normalization, and standardization
-├── 03_Analytical_Data_Modeling/ # Analytical star schema and peer-group framework
-├── 04_Analytical_Validation/    # SQL and Excel-based reconciliation checks
-├── 05_KPI_Dev/                  # KPI-specific SQL logic and Excel validation packs
-├── 06_PBI_Semantic_Model/       # Fact KPI layer, dimensions, Power BI semantic model, data dictionary
-└── 07_Excel_Executive_Analytics/# Executive Excel dashboards, screenshots, and templates
+├── 00_DB_Creation/                  # Database schemas and initial load scripts
+├── 01_Profiling/                    # Data profiling and exploratory SQL
+├── 02_Data_Cleaning/                # Cleaning, normalization, and standardization
+├── 03_Analytical_Data_Modeling/     # Analytical star schema and peer-group framework
+├── 04_Analytical_Validation/        # SQL and Excel-based reconciliation checks
+├── 05_KPI_Dev/                      # KPI-specific SQL logic and Excel validation packs
+├── 06_PBI_Semantic_Model/           # Fact KPI layer, dimensions, Power BI semantic model, data dictionary
+└── 07_Excel_Executive_Analytics/    # Executive Excel dashboards, screenshots, and templates
 ```
 
 This structure mirrors how enterprise healthcare analytics teams separate **data engineering**, **KPI logic**, **validation**, and **semantic modeling**.
@@ -82,21 +82,21 @@ This structure mirrors how enterprise healthcare analytics teams separate **data
 
 ## Data & Methodology
 
-* **Data Source**
+* **Data Source**  
   Long Island hospital system operational data (2015 snapshot).
   The dataset is sufficient to demonstrate cross-facility structural patterns but is not intended for time-series inference.
 
-* **Analytical Approach**
+* **Analytical Approach**  
   Explainability-first, non-causal descriptive analysis designed to surface structural signals rather than infer causality.
   Each KPI includes a *Diagnostic Preview* highlighting domains where deeper analysis would typically be warranted.
 
-* **Validation & Governance**
+* **Validation & Governance**  
 
   * SQL-level checks and Excel reconciliation
   * Explicit KPI definitions and business rules
   * Anonymized data; no patient-identifiable information included
 
-**Key Principle**
+**Key Principle**  
 All KPIs are treated as **contextual signals**, not absolute rankings or performance judgments.
 
 ---
@@ -105,10 +105,10 @@ All KPIs are treated as **contextual signals**, not absolute rankings or perform
 
 | Layer                      | Tooling                       |
 | -------------------------- | ----------------------------- |
-| Data Engineering           | SQL Server (SSMS), PostgreSQL |
+| Data Engineering           | SQL Server (SSMS), TSQL |
 | Validation & QA            | Excel                         |
 | Semantic Model & Reporting | Power BI (PBIP project)       |
-| Version Control            | Git / GitHub                  |
+| Version Control            | Git / GitHub, VsCode                 |
 
 ---
 
@@ -128,18 +128,18 @@ Subsequent folders (`01_Profiling` through `03_Analytical_Data_Modeling`) reflec
 
 ### 3. Review the Analysis
 
-* **Primary analytical narrative**
-  Open the Power BI project in
-  `06_PBI_Semantic_Model/03_PowerBI_Model/`
+* **Primary analytical narrative**  
+  Open the Power BI project in  
+  `06_PBI_Semantic_Model/03_PowerBI_Model/`  
   This contains the semantic model, report structure, and KPI interpretation.
 
-* **KPI logic and validation**
+* **KPI logic and validation**  
   Review `05_KPI_Dev/` for KPI-specific SQL logic and Excel validation artifacts.
 
-* **Quality assurance**
+* **Quality assurance**  
   Refer to `04_Analytical_Validation/` and `06_PBI_Semantic_Model/05_Validation/` for reconciliation and QA outputs.
 
-* **Executive Excel outputs**
+* **Executive Excel outputs**  
   See `07_Excel_Executive_Analytics/` for Excel-based executive views.
 
 ---
@@ -151,9 +151,9 @@ Subsequent folders (`01_Profiling` through `03_Analytical_Data_Modeling`) reflec
 1. **Severity Mix (Context)**
 2. **Unplanned Intake (Context)**
 3. **Payer Mix (Context)**
-4. **Cost & Margin Pressure**
+4. **Length of Stay (Throughput)**
 5. **Mortality (Outcome Risk)**
-6. **Length of Stay (Throughput)**
+6. **Cost & Margin Pressure**
 7. **Disposition (Exit Flow)**
 
 Outcome pages assume prior context unless explicitly stated otherwise.
