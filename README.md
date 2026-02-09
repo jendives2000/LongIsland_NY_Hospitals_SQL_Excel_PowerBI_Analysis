@@ -1,148 +1,208 @@
-# Long Island, NY Hospitals: Data Analytics & Business Intelligence
+# Long Island, NY Hospitals
+
+## Healthcare Data Analytics & Business Intelligence
 
 ## Executive Summary
 
-This repository demonstrates a comprehensive healthcare analytics initiative analyzing Long Island hospital performance metrics. The project combines SQL-based data engineering, Excel-driven analysis, and Power BI visualization to surface actionable insights on hospital operations, capacity utilization, clinical outcomes, and resource allocation—directly supporting strategic decision-making for healthcare leadership.
+This repository presents an end-to-end healthcare analytics initiative analyzing Long Island hospital performance across clinical, operational, and financial dimensions. The project integrates SQL-based data engineering, Excel-based validation, and a Power BI semantic model to surface **explainable, decision-relevant signals** for healthcare leadership.
 
-The analysis is structured to **establish operating context first, then interpret outcome performance** within that context—enabling healthcare leaders to distinguish true performance from operational variation.
+The analysis is deliberately structured to **establish operating context first**, and only then interpret outcome metrics within that context. This design reduces misinterpretation and helps decision-makers distinguish structural operating conditions from true performance differences.
 
-The project mirrors how enterprise healthcare analytics teams structure executive-facing performance reviews.
+**Analytical Framework**
 
-**Analytical Framework:**
-- **Operating Context:** Patient acuity (Severity Mix), arrival patterns (Unplanned Intake), payer composition
-- **Outcome Metrics:** Financial pressure (Cost & Margin), clinical risk (Mortality), throughput efficiency (Length of Stay), patient disposition (Exit Flow)
+* **Operating Context**
+
+  * Patient acuity and case mix (Severity Mix)
+  * Intake dynamics (Unplanned Admissions)
+  * Reimbursement exposure (Payer Mix)
+
+* **Outcome Signals**
+
+  * Financial stress (Cost & Margin Pressure)
+  * Clinical risk exposure (Mortality)
+  * Throughput efficiency (Length of Stay)
+  * Exit flow distribution (Disposition)
+
+This is a **descriptive, explainability-first analysis**, not a causal or predictive model.
+
+---
 
 ## Project Scope & Business Value
 
-This analysis addresses core healthcare executive needs through a context-driven lens:
+This project addresses core questions faced by healthcare executives and analytics teams.
 
-**Understanding Hospital Operating Reality:**
-- **Severity Mix (Context):** What mix of patient acuity are we treating? (Direct impact on cost, outcomes, staffing)
-- **Unplanned Intake (Context):** What proportion of patients arrive unscheduled vs. planned? (Capacity pressure, operational complexity)
-- **Payer Mix (Context):** What is our reimbursement exposure? (Financial sustainability, margin pressure)
+### Establishing Operating Reality (Context KPIs)
 
-**Interpreting Outcome Performance:**
-- **Cost & Margin Pressure (Financial Stress):** Are we sustainable given our patient population?
-- **Mortality (Outcome Risk):** How does clinical performance compare, adjusted for case mix?
-- **Length of Stay (Throughput):** How efficiently are we managing patient flow?
-- **Disposition (Exit Flow):** Where are patients going post-discharge? (Readmission risk, continuity of care)
+* **Severity Mix**
+  What level of patient acuity is being treated, and how comparable is case mix across facilities?
+
+* **Unplanned Intake**
+  To what extent is system demand driven by unscheduled admissions, and how much baseline pressure does this impose?
+
+* **Payer Mix**
+  What reimbursement structures shape downstream financial and operational outcomes?
+
+### Interpreting Outcomes Within Context
+
+* **Cost & Margin Pressure**
+  Financial sustainability under observed case mix and payer exposure.
+
+* **Mortality (Outcome Risk)**
+  Distribution of mortality exposure interpreted within severity, intake, and throughput context.
+
+* **Length of Stay (Throughput)**
+  Efficiency and congestion signals after accounting for demand and patient complexity.
+
+* **Disposition (Exit Flow)**
+  How inpatient episodes resolve across discharge destinations and downstream capacity.
+
+All outcome metrics are interpreted **relative to established context**, not as isolated performance scores.
+
+---
 
 ## Repository Structure
 
-```
-LongIsland_NY_Hospitals_SQL_Excel_PowerBI_Analysis/
-├── 00_DB_Creation/                     # Raw schema + initial load scripts
-├── 01_Profiling/                       # Data profiling queries
-├── 02_Data_Cleaning/                   # Cleaning + standardization SQL
-├── 03_Analytical_Data_Modeling/        # Star-schema + peer-group framework
-├── 04_Analytical_Validation/           # Excel + SQL reconciliation checks
-├── 05_KPI_Dev/                         # KPI-specific SQL + Excel validation packs
-├── 06_PBI_Semantic_Model/              # Fact KPI build, dimensions, model + report project, dictionary
-└── 07_Excel_Executive_Analytics/       # Executive Excel dashboards and templates
+The repository follows a **pipeline-oriented structure**, progressing from raw data preparation through KPI development and executive-ready analytics.
 
 ```
+LongIsland_NY_Hospitals_SQL_Excel_PowerBI_Analysis/
+├── 00_DB_Creation/              # Database schemas and initial load scripts
+├── 01_Profiling/                # Data profiling and exploratory SQL
+├── 02_Data_Cleaning/            # Cleaning, normalization, and standardization
+├── 03_Analytical_Data_Modeling/ # Analytical star schema and peer-group framework
+├── 04_Analytical_Validation/    # SQL and Excel-based reconciliation checks
+├── 05_KPI_Dev/                  # KPI-specific SQL logic and Excel validation packs
+├── 06_PBI_Semantic_Model/       # Fact KPI layer, dimensions, Power BI semantic model, data dictionary
+└── 07_Excel_Executive_Analytics/# Executive Excel dashboards, screenshots, and templates
+```
+
+This structure mirrors how enterprise healthcare analytics teams separate **data engineering**, **KPI logic**, **validation**, and **semantic modeling**.
+
+---
 
 ## Data & Methodology
 
-- **Data Source:** Long Island hospital system operational data. Year 2015 only.
-- **Data:** SQL for database + data extraction, and data validation made in Excel
-- **Analysis:** 
-  - Explainability-first, non-causal descriptive analysis designed to surface structural signals rather than infer causality. 
-  - Each KPI analysis is added with a diagnosis preview, listing potential domains to invest further analysis in. 
-  - Year 2015 snapshot (sufficient to demonstrate cross-facility structural patterns; not intended for time-series inference).
-- **Visualization:** Power BI report organized by operating context, then outcome metrics. Each KPI page comprises a landing page and 3 to 4 visuals
-- **Governance:** Anonymized data; no PII or sensitive patient information included
+* **Data Source**
+  Long Island hospital system operational data (2015 snapshot).
+  The dataset is sufficient to demonstrate cross-facility structural patterns but is not intended for time-series inference.
 
-**Key Principle:**   
-All KPIs should be interpreted as contextual signals, not absolute performance rankings. Diagnostic Preview for each KPI lists potential domains where typical further analysis could be done. 
+* **Analytical Approach**
+  Explainability-first, non-causal descriptive analysis designed to surface structural signals rather than infer causality.
+  Each KPI includes a *Diagnostic Preview* highlighting domains where deeper analysis would typically be warranted.
+
+* **Validation & Governance**
+
+  * SQL-level checks and Excel reconciliation
+  * Explicit KPI definitions and business rules
+  * Anonymized data; no patient-identifiable information included
+
+**Key Principle**
+All KPIs are treated as **contextual signals**, not absolute rankings or performance judgments.
+
+---
 
 ## Technical Stack
 
-| Component | Tool |
-|-----------|------|
-| Data Warehouse | SSMS22 SQL Server / TSQL |
-| Analysis | Excel, Power BI |
-| Visualization | Power BI Desktop |
-| Version Control | Git/GitHub |
+| Layer                      | Tooling                       |
+| -------------------------- | ----------------------------- |
+| Data Engineering           | SQL Server (SSMS), PostgreSQL |
+| Validation & QA            | Excel                         |
+| Semantic Model & Reporting | Power BI (PBIP project)       |
+| Version Control            | Git / GitHub                  |
+
+---
 
 ## Getting Started
 
-### 1. Clone & Setup
+### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/jendives2000/LongIsland_NY_Hospitals_SQL_Excel_PowerBI_Analysis.git
 cd LongIsland_NY_Hospitals_SQL_Excel_PowerBI_Analysis
 ```
 
-### 2. Database Initialization
-Review and execute scripts in `Step_0_DB_Creation/` to establish the analytical data mart.
+### 2. Database Setup
 
-### 3. Review Analysis
-- Start with `06_PBI_Semantic_Model/03_PowerBI_Model/PBI_Project/` to review the Power BI report and semantic model implementation.
-- Use `05_KPI_Dev/` to inspect KPI definitions, business rules, and SQL/Excel validation by KPI.
-- Use `04_Analytical_Validation/` and `06_PBI_Semantic_Model/05_Validation/` to review reconciliation outputs and QA checks.
-- For end-user Excel deliverables, see `07_Excel_Executive_Analytics/`.
+Execute scripts in `00_DB_Creation/` to establish schemas and base tables.
+Subsequent folders (`01_Profiling` through `03_Analytical_Data_Modeling`) reflect the logical build-up of the analytical model.
 
-### 4. Navigate the Power BI Report
-**Start with Context Pages (establish baseline understanding):**
-1. **Severity Mix (Context)** — Patient acuity distribution; shapes all downstream outcomes
-2. **Unplanned Intake (Context)** — Emergency vs. scheduled admission patterns; operational pressure indicator
-3. **Payer Mix (Context)** — Insurance composition; financial sustainability driver
+### 3. Review the Analysis
 
-**Then Review Outcome Metrics (interpret within context):**
-4. **Cost & Margin Pressure (Financial Stress)** — Unit economics and reimbursement adequacy
-5. **Mortality (Outcome Risk)** — Clinical outcomes adjusted for case complexity
-6. **Length of Stay (Throughput)** — Care efficiency and operational performance
-7. **Disposition (Exit Flow)** — Post-acute placement and continuity of care
+* **Primary analytical narrative**
+  Open the Power BI project in
+  `06_PBI_Semantic_Model/03_PowerBI_Model/`
+  This contains the semantic model, report structure, and KPI interpretation.
 
-**Refer back to context pages when reviewing outcomes to distinguish population differences from performance variation.**
+* **KPI logic and validation**
+  Review `05_KPI_Dev/` for KPI-specific SQL logic and Excel validation artifacts.
 
-## Key Insights & Deliverables
+* **Quality assurance**
+  Refer to `04_Analytical_Validation/` and `06_PBI_Semantic_Model/05_Validation/` for reconciliation and QA outputs.
 
-- **Executive Dashboard:** Multi-page Power BI report with guided navigation order
-- **Context-Driven Analysis:** Operating environment established before outcome interpretation
-- **Analytical Notebooks:** Documented methodology, assumptions, and limitations
-- **Data Dictionary:** Field definitions and business rule transparency
-- **Decision-Support Framing:** Structured to reduce misinterpretation and support informed leadership decisions
+* **Executive Excel outputs**
+  See `07_Excel_Executive_Analytics/` for Excel-based executive views.
+
+---
+
+## Power BI Report Navigation
+
+**Recommended reading order**
+
+1. **Severity Mix (Context)**
+2. **Unplanned Intake (Context)**
+3. **Payer Mix (Context)**
+4. **Cost & Margin Pressure**
+5. **Mortality (Outcome Risk)**
+6. **Length of Stay (Throughput)**
+7. **Disposition (Exit Flow)**
+
+Outcome pages assume prior context unless explicitly stated otherwise.
+
+---
+
+## Key Deliverables
+
+* Enterprise-style Power BI semantic model and report
+* KPI-level SQL logic with validation lineage
+* Data dictionary and business rule documentation
+* Diagnostic previews to guide further investigation
+* Executive-ready Power BI and Excel artifacts
+
+---
 
 ## Data Privacy & Compliance
 
-- ✓ All patient-identifiable information (PII) removed or anonymized
-- ✓ HIPAA-conscious data handling and governance practices
-- ✓ Data minimization principles applied
-- ✓ Version control excludes raw or sensitive datasets
-- ✓ Recommended `.gitignore` includes large binary files (`.xlsx`, `.pbix`)
+* Patient data anonymized; no PII present
+* HIPAA-conscious handling principles applied
+* Raw or sensitive data excluded from version control
+* Repository designed for auditability and reproducibility
 
-## Best Practices Implemented
+---
 
-- **Version Control:** Git history for reproducibility and audit trail
-- **Documentation:** Inline comments and data dictionaries for clarity
-- **Code Quality:** Modular SQL scripts and organized notebooks
-- **Data Validation:** Integrity checks and reconciliation procedures
-- **Analytical Rigor:** Context-first interpretation to prevent false conclusions
-- **Scalability:** Designed for expansion to multi-site hospital networks
+## Intended Audience & Use
 
-## Recommendations for Healthcare Leaders
+* Healthcare executives and operational leaders
+* Senior data analysts and analytics engineers
+* Healthcare BI and decision-support teams
+* Recruiters evaluating healthcare analytics capability
 
-This project framework can be extended to:
-- Multi-hospital network benchmarking with context-adjusted outcome comparison
-- Predictive modeling for patient demand and resource forecasting
-- Quality improvement initiatives grounded in root-cause investigation
-- Financial impact modeling and scenario planning
-- Integration with EHR data for enhanced clinical outcome correlation
+This repository is a **portfolio demonstration** of how to design, validate, and communicate healthcare analytics in an enterprise setting.
 
-## Author & Contact
+---
 
-**Project Owner:** Jean-Yves Tran - jy.tran@datascience-jy.com  
-**Purpose:** Portfolio demonstration of healthcare analytics competency  
-**Audience:** Healthcare executives, data analysts, clinical operations leaders, recruiters
+## Author
 
-For questions or collaboration inquiries, please contact via email, LinkedIn, or GitHub.
+**Jean-Yves Tran**
+Healthcare Data Analyst
+📧 [jy.tran@datascience-jy.com](mailto:jy.tran@datascience-jy.com)
 
 ---
 
 ## License
 
-MIT License — See LICENSE file for details
+MIT License — see LICENSE file for details
 
-**Generated:** 2025  
-**Last Updated:** Feb. 2026
+**Generated:** 2025
+**Last Updated:** February 2026
+
+---
