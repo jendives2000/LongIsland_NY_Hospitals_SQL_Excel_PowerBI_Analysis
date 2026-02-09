@@ -1,41 +1,23 @@
-# 06 — PowerBI Semantic Model
+# 06 — Power BI Semantic Model
 
-This step formalizes a **Power BI–ready semantic model** on top of the validated KPI layer from `05_KPI_Dev`.  
->**KPIs are now locked.** 
+This folder formalizes a **Power BI–ready semantic model** on top of the validated KPI layer from `05_KPI_Dev`.
 
-The key idea is to introduce a **KPI Integration Layer**: a stable, documented set of **KPI fact tables + shared dimensions** that makes dashboards fast to build, easy to validate, and hard to break.
+The KPI Integration Layer provides a stable, documented set of **KPI fact tables and shared dimensions** that:
 
----
+* Ensures consistent metric definitions across all dashboards
+* Eliminates duplicated logic and inconsistent calculations
+* Enables reproducible results across Power BI, SQL, and Excel validation
+* Supports rapid dashboard development without reworking the model
 
-## Why this step exists
-
-KPIs from SQL scripts were reconciled and confirmed. For BI tools we now need a semantic model with:
-
-* consistent **grain** (what a row means)
-* predictable **relationships**
-* reusable **dimensions**
-* measures that behave correctly under slicing and filtering
-
-Without a semantic model, BI becomes:
-
-* duplicated metric logic
-* inconsistent totals
-* fragile visuals
-* slow performance
-
-The semantic model is the “contract” that guarantees:
-
-* **one definition per metric**
-* **one relationship path per slice**
-* **reproducible results** across Power BI, Excel validation, and SQL outputs
+All narrative and measure definitions in this layer are grounded in the healthcare explainability frameworks referenced in the main repository README.
 
 ---
 
 <details>
 <summary><strong>Table of Contents</strong></summary>
 
-- [06 — PowerBI Semantic Model](#06--powerbi-semantic-model)
-  - [Why this step exists](#why-this-step-exists)
+- [06 — Power BI Semantic Model](#06--power-bi-semantic-model)
+  - [Why This Layer Exists](#why-this-layer-exists)
   - [KPI Integration Layer](#kpi-integration-layer)
   - [1. KPI Facts](#1-kpi-facts)
     - [Guidelines](#guidelines)
@@ -43,21 +25,45 @@ The semantic model is the “contract” that guarantees:
   - [2. Dimensions](#2-dimensions)
     - [Guidelines](#guidelines-1)
     - [Role-Playing Dates](#role-playing-dates)
-  - [3. Star Schema for BI Tool](#3-star-schema-for-bi-tool)
+  - [3. Star Schema for BI](#3-star-schema-for-bi)
     - [Guidelines](#guidelines-2)
     - [Recommended Relationship Rules](#recommended-relationship-rules)
-  - [4. Mapping KPIs](#4-mapping-kpis)
-  - [Best-Practice Additions](#best-practice-additions)
-    - [Grain \& Additivity Rules](#grain--additivity-rules)
+  - [4. KPI Mapping](#4-kpi-mapping)
+  - [Best Practices](#best-practices)
+    - [Grain \& Additivity](#grain--additivity)
     - [Measures vs Columns](#measures-vs-columns)
     - [Naming Conventions](#naming-conventions)
     - [Performance \& Refresh](#performance--refresh)
-    - [Security \& Governance](#security--governance)
+    - [Governance \& Documentation](#governance--documentation)
     - [Validation Workflow](#validation-workflow)
   - [Completion Criteria](#completion-criteria)
-  - [Folder Structure:](#folder-structure)
+  - [Folder Structure](#folder-structure)
 
 </details>
+
+---
+
+## Why This Layer Exists
+
+KPIs from `05_KPI_Dev` have been reconciled and validated. To bridge between SQL outputs and executive dashboards, we need a semantic model that guarantees:
+
+* **Consistent grain** (what a row represents)
+* **Predictable relationships** (how dimensions filter facts)
+* **Reusable dimensions** (one definition across all KPIs)
+* **Correct measure aggregation** (rates computed from stored totals, not summed precomputed rates)
+
+Without this layer, BI becomes fragile:
+
+* Metric logic duplicated across visuals
+* Filter paths ambiguous or conflicting
+* Totals inconsistent across reports
+* New visuals require new logic instead of reusing measures
+
+The semantic model is the **governance contract** ensuring:
+
+* **Single source of truth** for each metric
+* **One relationship path** per analytical question
+* **Reproducible results** across tools (Power BI, Excel, SQL)
 
 ---
 
@@ -65,24 +71,24 @@ The semantic model is the “contract” that guarantees:
 
 The KPI Integration Layer sits between:
 
-* **SQL KPI scripts** (metric truth)
-* **Power BI dashboards** (metric consumption)
+* **SQL KPI scripts** (source of metric truth)
+* **Power BI dashboards** (metric consumption and storytelling)
 
 It contains:
 
-* a small number of **KPI fact tables** (each at a clear grain)
-* a shared set of **conformed dimensions** (Facility, Date, etc.)
-* a consistent set of **measures** (Avg LOS, Mortality Rate, Margin Pressure, …)
+* A curated set of **KPI fact tables** (each at a clear, documented grain)
+* **Conformed dimensions** (Facility, Date, Payer, Severity, Disposition)
+* **Semantic measures** (defined once, reused across all pages)
 
 <details>
-<summary>Technical definition</summary>
+<summary><strong>Technical definition</strong></summary>
 
 A KPI Integration Layer is a curated semantic representation that:
 
-* enforces dimensional consistency (conformed dimensions)
-* prevents metric drift (single source of measure logic)
-* optimizes BI query patterns (star schema, low-cardinality columns)
-* enables deterministic reconciliation (Excel/SQL matching)
+* Enforces dimensional consistency (same definitions across all KPIs)
+* Prevents metric drift (measures owned by layer, not recreated in visuals)
+* Optimizes for BI query patterns (star schema, low-cardinality design)
+* Enables deterministic validation (Excel pivot reconciliation matches SQL outputs exactly)
 
 </details>
 
@@ -90,167 +96,160 @@ A KPI Integration Layer is a curated semantic representation that:
 
 ## 1. KPI Facts
 
-KPI facts are **analysis-ready tables** designed for BI. They should be small enough to refresh quickly but rich enough to support slicing and drill-down.
+KPI facts are **analysis-ready tables** designed for Power BI consumption. They balance:
+
+* **Aggregation** (small enough to load and refresh quickly)
+* **Richness** (detailed enough to support slicing and drill-down)
+* **Reconciliation** (storing both numerators and denominators for rates)
 
 ### Guidelines
 
-* **Define the grain explicitly** in the table header.
-
-  * Example: “One row per Facility–Year–LOS_Bucket”.
-* Prefer **aggregated KPI fact tables** for dashboards.
-
-  * Encounter-level extracts exist for validation, not for default BI consumption.
-* Include **reconciliation totals**.
-
-  * Example: when computing ratios, store numerator and denominator totals as columns.
-* Keep fact tables **narrow**.
-
-  * Use integer keys + a small set of numeric columns.
-* Avoid storing “rates” only.
-
-  * Store counts/totals so measures can recompute rates correctly under filtering.
+* **Define grain explicitly** in table documentation.
+  * Example: "One row per Facility–Year–Severity_Bucket"
+* Prefer **aggregated KPI fact tables** for dashboard consumption.
+  * Encounter-level exports exist for validation, not for default visuals.
+* Include **reconciliation totals** alongside derived metrics.
+  * Example: Store death count + total encounters separately, so mortality rate can recompute correctly under filtering.
+* Keep fact tables **narrow** (integer keys + essential numeric columns).
+* Avoid storing precomputed rates or averages as the only measure.
+  * Store raw totals; let Power BI DAX compute derived metrics.
 
 ### How Facts Connect to Dimensions
 
 Facts connect to dimensions through **surrogate keys**:
 
 * `Facility_Key` → `Dim_Facility`
-* `Discharge_Date_Key` or derived `Year`/`Month_Number` → `Dim_Date`
-* `ClinicalClass_Key` or derived severity group → `Dim_ClinicalClass` (if used as a slicer)
-* Category attributes used in pivots (e.g., `LOS_Bucket`, `Disposition_Grouped`) can be:
-
-  * kept as low-cardinality columns in the fact, or
-  * modeled as small dimensions if they are reused broadly.
+* `Year`, `Month_Number` → `Dim_Date`
+* `ClinicalClass_Key` or severity group → `Dim_ClinicalClass` (if reused across facts)
+* Low-cardinality category attributes (e.g., `LOS_Bucket`, `Disposition_Grouped`) can be:
+  * Stored directly in the fact as columns, or
+  * Modeled as small dimensions if reused broadly
 
 ---
 
 ## 2. Dimensions
 
-Dimensions provide the **slicing vocabulary** for the entire KPI suite. The goal is to reuse the same dimensions across facts to guarantee consistent filters.
+Dimensions provide the **consistent slicing vocabulary** for the entire KPI suite. Reusing the same dimensions across all facts guarantees predictable filter behavior.
 
 ### Guidelines
 
-* Dimensions should be **conformed** (shared, consistent definitions across all KPI facts).
-* Use a single `Dim_Date` with standard fields:
-
+* Dimensions should be **conformed** (shared, consistent definitions).
+* Use a single `Dim_Date` with standard attributes:
   * Year, Quarter, Month_Number, Month_Name
-* Keep dimension keys stable:
+* Keep dimension **keys stable** (avoid regenerating during refresh).
+* Add only attributes that support slicing and storytelling.
+  * Avoid sparse "junk dimensions" with many unused columns.
 
-  * avoid regenerating keys during refresh
-* Add only attributes that are useful for slicing.
-
-  * Avoid “junk dimensions” with many sparse columns.
-
-Dimensions are owned by the Core Data Model.
-KPI Integration Layer consumes but does not redefine them.
+Dimensions are owned by the Core Data Model. The KPI Integration Layer consumes but does not redefine them.
 
 ### Role-Playing Dates
 
-Some models need multiple dates (admit vs discharge). This project primarily anchors KPIs on **discharge**.
+This project primarily anchors KPIs on **discharge date**. If multiple date roles are needed:
 
-If multiple date roles are required:
-
-* create role-playing views (e.g., `Dim_Date_Discharge`, `Dim_Date_Admission`) **without duplicating the table physically**, or
-* use one `Dim_Date` and separate foreign keys (only when those keys exist).
+* Create role-playing views (e.g., `Dim_Date_Discharge`, `Dim_Date_Admission`) without duplicating the physical table, or
+* Use a single `Dim_Date` with separate foreign keys (only when those keys exist in the source facts)
 
 ---
 
-## 3. Star Schema for BI Tool
+## 3. Star Schema for BI
 
-A star schema is the most reliable structure for BI:
+A star schema is the most reliable structure for Power BI:
 
 * **Facts in the center** (KPI outputs)
-* **Dimensions around the edges** (Facility, Date, Payer, Severity, …)
+* **Dimensions radiating outward** (Facility, Date, Payer, Severity, Disposition, etc.)
 
-This minimizes ambiguity, prevents filter path conflicts, and improves performance.
+This design:
+
+* Minimizes filter-path ambiguity
+* Prevents many-to-many relationship conflicts
+* Improves query performance
+* Makes visual logic straightforward
 
 ### Guidelines
 
 * Use **one-to-many** relationships from dimensions to facts.
 * Prefer **single-direction** filtering (Dimensions → Facts).
-* Avoid many-to-many unless strictly necessary.
-* Keep a clean separation between:
-
-  * **semantic measures** (DAX)
-  * **physical columns** (SQL outputs)
+* Avoid many-to-many relationships unless unavoidable.
+* Keep clear separation between:
+  * **Semantic measures** (DAX calculations)
+  * **Physical columns** (SQL materialized values)
 
 ### Recommended Relationship Rules
 
-* Dimensions filter facts (single direction).
-* No relationships between facts.
-* If you need cross-fact visuals:
-
-  * use conformed dimensions + measures
-  * avoid bridging fact-to-fact tables unless unavoidable.
+* Dimensions filter facts (one direction only).
+* No direct relationships between facts.
+* For cross-fact visuals:
+  * Use conformed dimensions + measures
+  * Avoid fact-to-fact bridges unless strictly necessary
 
 ---
 
-## 4. Mapping KPIs
+## 4. KPI Mapping
 
-The table below proposes a practical mapping from the 7 KPIs to BI-ready fact tables and their primary dimensions.
+The table below maps the 7 KPIs to BI-ready fact tables, their grain, and primary dimensions.
 
-> Note: Naming is intentionally explicit (Fact_KPI_*). This prevents confusion between encounter-level sources and KPI-level outputs.
+Naming convention: `Fact_KPI_*` prevents confusion between encounter-level sources and KPI-level outputs.
 
-| KPI                                  | Proposed Fact Table                                  | Grain (What 1 Row Means)                                       | Core Measures (examples)                               | Dimensions (slicers)                                 |
-| ------------------------------------ | ---------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------ | ---------------------------------------------------- |
-| 05.01 Severity Mix Index             | `Fact_KPI_SeverityMix`                               | Facility–Year (optionally Month)                               | Severity Mix Index, Encounter Count                    | Date, Facility, ClinicalClass (optional)             |
-| 05.02 Payer Mix & Reimbursement Risk | `Fact_KPI_PayerMix`                                  | Facility–Year–PayerGroup                                       | Payer Encounters, Payer Share                          | Date, Facility, Payer                                |
-| 05.03 Unplanned Admission Rate       | `Fact_KPI_Unplanned`                                 | Facility–Year (optionally Month)                               | Unplanned Count, Total Encounters, Unplanned Rate      | Date, Facility                                       |
-| 05.04 Disposition Outcomes           | `Fact_KPI_Disposition`                               | Facility–Year–DispositionCategory                              | Disposition Count, Disposition Share                   | Date, Facility, Disposition                          |
-| 05.05 Length of Stay (LOS)           | `Fact_KPI_LOS_Summary` + `Fact_KPI_LOS_Distribution` | Summary: Facility–Year; Distribution: Facility–Year–LOS_Bucket | Avg/Min/Max LOS; Bucket Counts/Shares                  | Date, Facility, LOS Bucket, ClinicalClass (Severity) |
-| 05.06 Mortality Rate                 | `Fact_KPI_Mortality`                                 | Facility–Year (optionally Month)                               | Death Count, Total Encounters, Mortality Rate          | Date, Facility                                       |
-| 05.07 MCost & Margin Pressure        | `Fact_KPI_FinancialPressure`                         | Facility–Year (optionally Month)                               | Avg MCost, Total Costs, Total Charges, Margin Pressure | Date, Facility                                       |
+| KPI                                  | Fact Table                                  | Grain                                          | Core Measures                                  | Primary Dimensions              |
+| ------------------------------------ | ------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- | ------------------------------- |
+| Severity Mix (Context)               | `Fact_KPI_SeverityMix`                      | Facility–Year                                  | Severity Mix Index, Encounter Count            | Date, Facility, ClinicalClass   |
+| Payer Mix (Context)                  | `Fact_KPI_PayerMix`                         | Facility–Year–PayerGroup                       | Payer Encounters, Payer Share %                | Date, Facility, Payer           |
+| Unplanned Intake (Context)           | `Fact_KPI_Unplanned`                        | Facility–Year                                  | Unplanned Count, Total Encounters, Rate        | Date, Facility                  |
+| Length of Stay (Throughput)          | `Fact_KPI_LOS_Summary` + Distribution       | Summary: Facility–Year; Distribution: Bucket  | Avg/Min/Max LOS, Bucket Counts & Shares        | Date, Facility, LOS Bucket      |
+| Mortality (Outcome Risk)             | `Fact_KPI_Mortality`                        | Facility–Year                                  | Death Count, Total Encounters, Rate            | Date, Facility                  |
+| Cost & Margin Pressure (Financial)   | `Fact_KPI_FinancialPressure`                | Facility–Year                                  | Avg MCost, Total Costs, Margin Pressure        | Date, Facility                  |
+| Disposition (Exit Flow)              | `Fact_KPI_Disposition`                      | Facility–Year–DispositionCategory              | Disposition Count, Disposition Share %         | Date, Facility, Disposition     |
 
 <details>
-<summary>Technical note — why some KPIs have multiple fact tables</summary>
+<summary><strong>Why some KPIs have multiple fact tables</strong></summary>
 
-Some KPIs naturally produce multiple BI-friendly views:
+Some KPIs naturally produce multiple analysis-ready views:
 
-* LOS has a *summary view* (avg/min/max) and a *distribution view* (buckets).
+* **LOS** has both a *summary view* (avg/min/max) and a *distribution view* (bucketed counts).
 
-Splitting them improves:
+Separating them improves:
 
-* model clarity (each fact has one grain)
-* performance (smaller tables)
-* visual design (summary cards vs distribution charts)
+* Model clarity (each fact has one grain)
+* Performance (smaller, focused tables)
+* Visual design (summary cards vs distribution charts can use different grains)
 
 </details>
 
 ---
 
-## Best-Practice Additions
+## Best Practices
 
-### Grain & Additivity Rules
+### Grain & Additivity
 
-Before building any measures, verify:
+Before building measures, document:
 
-* **Grain is explicit** in every fact table.
+* **Grain is explicit** for every fact table.
 * Measures are classified as:
-
-  * **Additive** (counts, sums)
-  * **Semi-additive** (snapshots)
-  * **Non-additive** (rates, averages)
+  * **Additive** (counts, sums—safe to aggregate across all dimensions)
+  * **Semi-additive** (snapshots—safe to aggregate across some dimensions)
+  * **Non-additive** (rates, averages—must compute from stored numerators/denominators, not sum precomputed values)
 
 For rates and averages in Power BI:
 
-* compute from stored numerators/denominators rather than summing precomputed rates.
+* Compute from stored totals rather than summing precomputed rates.
 
 ---
 
 ### Measures vs Columns
 
-* Use SQL to materialize:
+Use SQL to materialize:
 
-  * keys
-  * descriptive low-cardinality categories
-  * reconciliation totals
-* Use Power BI measures (DAX) for:
+* Surrogate keys
+* Low-cardinality descriptive categories
+* Reconciliation totals (numerators and denominators for rates)
 
-  * ratios (rates)
-  * weighted averages
-  * dynamic time selections
+Use Power BI DAX measures for:
 
-This reduces drift and keeps the model extensible.
+* Ratios and rates (computed from totals)
+* Weighted averages (dynamic aggregations)
+* Time-based selections (YTD, prior year, etc.)
+
+This separation reduces drift and keeps the model extensible.
 
 ---
 
@@ -258,55 +257,52 @@ This reduces drift and keeps the model extensible.
 
 Recommended conventions:
 
-* Facts: `Fact_KPI_*`
-* Dimensions: `Dim_*`
-* Measures: `m_*` (e.g., `m_MortalityRate`, `m_AvgLOS`)
-* Columns:
-
-  * keys end with `_Key`
-  * rates end with `_Rate` (prefer measures)
+* **Facts**: `Fact_KPI_*` (e.g., `Fact_KPI_SeverityMix`)
+* **Dimensions**: `Dim_*` (e.g., `Dim_Facility`)
+* **Measures**: `m_*` (e.g., `m_MortalityRate`, `m_AvgLOS`)
+* **Columns**:
+  * Keys end with `_Key`
+  * Prefer measure definitions over rate columns
 
 ---
 
 ### Performance & Refresh
 
 * Prefer aggregated KPI facts for visuals.
-* Keep encounter-level exports out of the default model.
+* Keep encounter-level exports separate (used for validation, not default consumption).
 * Use incremental refresh where possible (date-partitioned facts).
-* Reduce cardinality:
-
-  * store `Month_Number` rather than full dates when month slicing is enough
+* Minimize cardinality:
+  * Store `Month_Number` rather than full dates when month-level slicing is sufficient.
 
 ---
 
-### Security & Governance
+### Governance & Documentation
 
-If distributing beyond local analysis:
-
-* implement Row-Level Security (RLS) by Facility where appropriate
-* document metric definitions and ownership
-* version KPI changes (measure changes should be treated like API changes)
+* Document metric ownership and definitions in the Data Dictionary (folder `04_KPI_Data_Dictionary`).
+* Implement Row-Level Security (RLS) by Facility if sharing beyond local analysis.
+* Treat measure changes as API changes—version and communicate updates.
+* Maintain a changelog for all semantic model modifications.
 
 ---
 
 ### Validation Workflow
 
-Validation is performed using **Excel Pivot reconciliation** against encounter-level exports:
+Validation uses **Excel pivot reconciliation** against encounter-level exports:
 
-1. Export the encounter-level dataset defined in each KPI README (see [05_KPI_Dev](../05_KPI_Dev/)).
+1. Export the encounter-level dataset defined in each KPI folder (see `05_KPI_Dev`).
 2. Build pivots to compute:
-
-   * totals (counts, sums)
-   * derived metrics (rates, averages)
+   * Totals (counts, sums)
+   * Derived metrics (rates, averages)
 3. Confirm exact match to KPI fact outputs.
 
 <details>
-<summary>What to do when reconciliation fails</summary>
+<summary><strong>Troubleshooting reconciliation mismatches</strong></summary>
 
 * Confirm you used the same time anchor (discharge year/month).
-* Confirm NULL / Unknown categories are included.
-* Confirm no filters were applied in Excel (especially outliers).
-* Compare numerator/denominator totals first, then the derived ratio.
+* Confirm NULL/Unknown categories are included.
+* Confirm no filters were applied in Excel (especially outlier exclusions).
+* Compare numerator/denominator totals separately before reviewing derived ratios.
+* Cross-check measure definitions against the KPI README in `05_KPI_Dev`.
 
 </details>
 
@@ -316,19 +312,20 @@ Validation is performed using **Excel Pivot reconciliation** against encounter-l
 
 This step is complete when:
 
-* All KPI facts load into Power BI without relationship ambiguity.
-* All KPI measures reconcile to SQL outputs.
-* Dashboards can be built without writing new metric logic.
+* All KPI facts load into Power BI without relationship ambiguity or circular dependencies.
+* All KPI measures reconcile exactly to SQL outputs (verified by Excel pivot validation).
+* New dashboards can be built by reusing existing measures without writing new metric logic.
 * A new KPI can be added by:
-
-  * creating one KPI fact table
-  * reusing existing dimensions
-  * adding measures, not reworking the model
+  * Creating one KPI fact table (SQL)
+  * Reusing existing conformed dimensions
+  * Adding measures (DAX) without restructuring the model
 
 ---
-## Folder Structure: 
+
+## Folder Structure
+
 ```text
-06 — PowerBI Semantic Model
+06_PBI_Semantic_Model/
 │
 ├── README.md
 │
