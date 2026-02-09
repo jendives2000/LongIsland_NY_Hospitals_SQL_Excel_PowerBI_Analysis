@@ -193,7 +193,8 @@ Outcome pages assume prior context unless explicitly stated otherwise.
 
 * Enterprise-style Power BI semantic model and report
 * KPI-level SQL logic with validation lineage
-* Data dictionary and business rule documentation
+* Data dictionary and business rule documentation with comprehensive metadata integration
+  * Clear measure definitions and business rule documentation across all KPI domains to support faster onboarding and reduce interpretation risk
 * Diagnostic previews to guide further investigation
 * Executive-ready Power BI and Excel artifacts
 
