@@ -1,427 +1,350 @@
-# 06.03 — Power BI Semantic Model
+# KPI Data Dictionary & Semantic Model Documentation
 
-This folder documents the **Power BI semantic model** built on top of the
-validated KPI facts (`06.01`) and governed dimensions (`06.02`).
+## Healthcare Performance Analytics — Long Island & New York Hospitals
 
-It represents the transition from:
+---
 
-- **SQL-defined KPI contracts**
-to
-- **Certified analytical consumption** in Power BI and Excel
+## Overview
 
-This is where business logic becomes **measures**, relationships are enforced,
-and executive-safe analytics are exposed.
+This semantic model delivers hospital performance analytics across seven clinical and financial domains, built for healthcare executives, senior analysts, and system-level decision-makers. It supports peer group benchmarking and statistical guardrails against small-sample distortion — all within a single, governed Power BI dataset.
 
-The Power BI semantic model is implemented as a Power BI Project (.pbip) to enable:
-* source control
-* explicit relationship management
-* and governed measure versioning
+The model contains **227 measures** organized across **10 domain-specific measure tables**, connected to **7 fact tables** and **8 dimensions** through **21 relationships**. Every measure carries a production-grade description, making the model fully self-documenting and auditable.
+
+A live data dictionary — generated directly from the semantic model using DAX metadata functions — ensures documentation never drifts from the model itself.
 
 ---
 
 <details>
-<summary><strong>📑 Table of Contents</strong></summary>
+<summary><b>Table of Contents</b></summary>
 
-- [06.03 — Power BI Semantic Model](#0603--power-bi-semantic-model)
-  - [Purpose of This Step](#purpose-of-this-step)
-  - [What This Folder Contains](#what-this-folder-contains)
-  - [Semantic Model Design Principles](#semantic-model-design-principles)
-  - [Model Structure Overview](#model-structure-overview)
-    - [Fact Tables](#fact-tables)
-    - [Dimensions](#dimensions)
-  - [Relationship Rules (Non-Negotiable)](#relationship-rules-non-negotiable)
-  - [Fact ↔ Dimension Wiring (Keys + Attributes)](#fact--dimension-wiring-keys--attributes)
-  - [Measure Strategy](#measure-strategy)
-    - [Additive vs Derived Measures](#additive-vs-derived-measures)
-    - [KPI Guardrail Measures (Data Stability \& Interpretability)](#kpi-guardrail-measures-data-stability--interpretability)
-      - [Rationale](#rationale)
-      - [Guardrail Rule](#guardrail-rule)
-      - [Implementation Pattern](#implementation-pattern)
-    - [Certified KPI Measures](#certified-kpi-measures)
-  - [Visual Interpretation Rules](#visual-interpretation-rules)
-    - [Severity Context — Severity Mix Index by Facility](#severity-context--severity-mix-index-by-facility)
-    - [Important Clarifications](#important-clarifications)
-    - [How to Interpret “Above Median”](#how-to-interpret-above-median)
-    - [Analytical Implication](#analytical-implication)
-    - [Executive Shortcut](#executive-shortcut)
-  - [Excel Compatibility \& Executive Access](#excel-compatibility--executive-access)
+- [KPI Data Dictionary \& Semantic Model Documentation](#kpi-data-dictionary--semantic-model-documentation)
+  - [Healthcare Performance Analytics — Long Island \& New York Hospitals](#healthcare-performance-analytics--long-island--new-york-hospitals)
+  - [Overview](#overview)
+  - [Design Principles](#design-principles)
+  - [Fact Tables](#fact-tables)
+  - [Dimensions](#dimensions)
+    - [Peer Group Infrastructure](#peer-group-infrastructure)
+  - [Relationship Wiring](#relationship-wiring)
+  - [Measure Architecture](#measure-architecture)
+    - [Domain Tables](#domain-tables)
+    - [Display Folder Convention](#display-folder-convention)
+    - [Measure Patterns](#measure-patterns)
+    - [Conditional Formatting Threshold](#conditional-formatting-threshold)
+  - [Statistical Guardrails](#statistical-guardrails)
+  - [Severity as Context, Not Performance](#severity-as-context-not-performance)
+  - [Live Data Dictionary](#live-data-dictionary)
+    - [Architecture](#architecture)
+    - [How to Use](#how-to-use)
+  - [Certified KPI Measures](#certified-kpi-measures)
+    - [Core KPIs (in `_KPI_Measures`)](#core-kpis-in-_kpi_measures)
+    - [Domain KPIs](#domain-kpis)
+  - [Visual Encoding Standards](#visual-encoding-standards)
+    - [Pressure × Volume Scatter Pattern](#pressure--volume-scatter-pattern)
+    - [Conditional Formatting](#conditional-formatting)
   - [Governance \& Change Control](#governance--change-control)
-  - [Relationship to Other Steps](#relationship-to-other-steps)
-  - [Final Principle](#final-principle)
+  - [Project Structure](#project-structure)
+  - [Technical Notes](#technical-notes)
 
 </details>
 
 ---
 
-## Purpose of This Step
+## Design Principles
 
-The purpose of `06.03` is to implement a **clean, deterministic, and governed**
-Power BI semantic model that:
-
-- faithfully represents SQL KPI contracts
-- prevents metric drift
-- supports **both Power BI dashboards and Excel pivot analysis**
-- is safe for executive self-service
-
-This step answers the question:
-
-> *How do we expose complex healthcare KPIs in a way that is accurate,
-> reproducible, and usable by non-technical decision-makers?*
+| Principle | Implementation |
+|-----------|----------------|
+| **Star schema** | Conformed dimensions shared across all fact tables; no snowflaking |
+| **One-to-many, single-direction** | All relationships filter from dimension to fact (one sanctioned exception documented below) |
+| **Statistical reliability** | 30-encounter minimum guardrails suppress unreliable rates from small samples |
+| **Excel compatibility** | All measures evaluate correctly in Excel-connected PivotTables |
+| **No visual-level calculations** | All business logic lives in certified DAX measures, not in report visuals |
+| **Self-documenting** | Every visible measure, table, and column carries a business-language description |
 
 ---
 
-## What This Folder Contains
+## Fact Tables
 
-This folder documents:
+Seven KPI fact tables, each at facility × year grain (unless noted), sourced from SQL views over hospital discharge data.
 
-- the **Power BI data model structure**
-- relationship rules between facts and dimensions
-- the **measure layer design philosophy**
-- how KPIs are safely consumed in:
-  - Power BI dashboards
-  - Excel (via Analyze in Excel / PivotTables)
+| Fact Table | Grain | Core Metrics |
+|------------|-------|--------------|
+| `Fact_KPI_SeverityMix` | Facility × Year | Weighted severity sums, encounter counts |
+| `Fact_KPI_Mortality` | Facility × Year | Death counts, total encounters |
+| `Fact_KPI_Unplanned` | Facility × Year | Unplanned admission counts, total encounters |
+| `Fact_KPI_LOS_Summary` | Facility × Year | Total LOS days, encounter counts |
+| `Fact_KPI_FinancialPressure` | Facility × Year | Charges, costs, margins, negative margin encounters |
+| `Fact_KPI_PayerMix` | Facility × Year × Payer | Encounter counts, charges, costs by payer category |
+| `Fact_KPI_Disposition` | Facility × Year × Disposition | Encounter counts by discharge destination |
 
-**Important:**  
-No SQL logic lives here.  
-All transformations are upstream (Steps 04–05).
-
----
-
-## Semantic Model Design Principles
-
-The Power BI model strictly follows these principles:
-
-1. **Star schema only**
-   - No snowflaking
-   - No fact-to-fact relationships
-
-2. **One KPI = one fact table**
-   - Matches `Fact_KPI_*` design from `06.01`
-
-3. **Dimensions are conformed**
-   - Exactly as documented in `06.02`
-   - No KPI-specific dimension variants
-
-4. **No business logic in visuals**
-   - All logic lives in measures
-   - Visuals only consume certified measures
-
-5. **Excel-safe by design**
-   - No ambiguous filters
-   - Deterministic aggregation behavior
+A supplemental detail view, `vw_Fact_KPI_SeverityMix_BySeverity`, breaks severity data to Facility × Year × APR Severity Level for distribution analysis.
 
 ---
 
-## Model Structure Overview
+## Dimensions
 
-### Fact Tables
+| Dimension | Grain | Role |
+|-----------|-------|------|
+| `Dim_Facility` | One row per hospital | Primary organizational hierarchy — name, county, health service area, peer group assignment |
+| `Dim_Year` | One row per discharge year | **Primary time dimension** for all fact tables |
+| `Dim_Payer` | One row per payer category | Payment typology groups (Medicare, Medicaid, Commercial, Self-Pay, Other) |
+| `Dim_Disposition` | One row per disposition category | Discharge destinations (Home, SNF/Rehab, Death, Other) |
+| `Dim_ClinicalClass` | One row per APR-DRG severity × ROM | APR severity levels and risk of mortality classifications |
+| `Dim_PeerGroup` | One row per peer group | Hospital comparison cohorts (Academic/Tertiary, Large Community, Mid-Size Community, Rural/East-End, Specialty-Dominant) |
+| `Dim_Date` | One row per calendar date | Connected only to `vw_Fact_KPI_SeverityMix_BySeverity` for date-level severity analysis |
+| `Dim_AdmissionType` | One row per admission type | Hidden; available for future use |
 
-The semantic model imports the following **KPI fact tables**:
+### Peer Group Infrastructure
 
-| Fact Table | KPI Purpose | Grain |
-|-----------|-------------|-------|
-| `Fact_KPI_SeverityMix` | Clinical acuity context | Facility–Year |
-| `Fact_KPI_PayerMix` | Payer distribution & risk | Facility–Year–Payer |
-| `Fact_KPI_Unplanned` | Acute intake pressure | Facility–Year |
-| `Fact_KPI_Disposition` | Discharge outcomes | Facility–Year–Disposition |
-| `Fact_KPI_LOS_Summary` | Length of stay behavior | Facility–Year |
-| `Fact_KPI_Mortality` | In-hospital mortality | Facility–Year |
-| `Fact_KPI_FinancialPressure` | Cost & margin stress | Facility–Year |
+Peer group benchmarking uses a **bridge table pattern** to enable many-to-many facility-to-peer-group comparisons:
 
-Each fact:
-- is imported at its **authoritative grain**
-- contains only **additive components**
-- does **not** store final KPI rates as authoritative values
+```
+Dim_PeerGroup ←(1:*) Bridge_Facility_PeerGroup (*:1)→ Dim_Facility
+```
 
-Supporting Views:
-- vw_Fact_KPI_SeverityMix_BySeverity  
-  Facility-Year-Severity fact used for APR severity distribution visuals
-  (context only, no performance interpretation).
-
+**Note on bi-directional relationship**: The `Bridge_Facility_PeerGroup → Dim_Facility` relationship uses bi-directional cross-filtering. This is the only bi-directional relationship in the model. Peer group assignment is also denormalized into `Dim_Facility (PeerGroup_Key, PeerGroup_Name, PeerGroup_Sort)`, which most peer group median measures use directly. The bridge table and bi-directional filter exist as an alternative path for calculations that need to iterate across peer group membership independently of the facility filter context.
 
 ---
 
-### Dimensions
+## Relationship Wiring
 
-All facts connect to the conformed dimensions documented in `06.02`:
+All seven core fact tables connect to `Dim_Facility` via `Facility_Key` (many-to-one, single-direction).
 
-- `Dim_Date`
-- `Dim_Facility`
-- `Dim_Payer`
-- `Dim_AdmissionType`
-- `Dim_Disposition`
-- `Dim_ClinicalClass` (selective usage)
+Time filtering uses `Discharge_Year → Dim_Year.Discharge_Year`. Active year relationships exist for `Disposition` and `PayerMix`; remaining facts have inactive year relationships available for explicit USERELATIONSHIP calls.
 
-No dimension logic is duplicated or redefined in Power BI.
+Additional dimension relationships:
 
----
-
-## Relationship Rules (Non-Negotiable)
-
-The following modeling rules are enforced:
-
-- **One-to-many** relationships only  
-  (Dimension → Fact)
-
-- **Single-direction filtering**
-  - Prevents ambiguous paths
-  - Ensures Excel pivots behave predictably
-
-- **No bi-directional filters**
-- **No fact-to-fact joins**
-- **One active date relationship per fact**
-  - Anchored on **Discharge Date**
-
-Violating any of these rules invalidates KPI certification.
+| Fact Table | Dimension | Key |
+|------------|-----------|-----|
+| `Fact_KPI_PayerMix` | `Dim_Payer` | `Payer_Key` |
+| `Fact_KPI_Disposition` | `Dim_Disposition` | `Disposition_Key` |
+| `vw_Fact_KPI_SeverityMix_BySeverity` | `Dim_ClinicalClass` | `ClinicalClass_Key` |
+| `vw_Fact_KPI_SeverityMix_BySeverity` | `Dim_Date` | `Discharge_Date_Key` |
 
 ---
 
-## Fact ↔ Dimension Wiring (Keys + Attributes)
+## Measure Architecture
 
-> Relationship pattern: Dim[PK] (1) → Fact[FK] (*), single-direction.
-> Date is anchored on Discharge: Fact.Discharge_Date_Key → Dim_Date.Date_Key
+### Domain Tables
 
-| Fact Table | Fact FK (column) | Dimension | Dim PK | Common Dim Attributes to expose |
-|---|---|---|---|---|
-| Fact_KPI_SeverityMix | Facility_Key | Dim_Facility | Facility_Key | Facility_Name |
-|  | Discharge_Date_Key | Dim_Date | Date_Key | Year, Quarter, Month, Month_Number |
-|  | ClinicalClass_Key (optional) | Dim_ClinicalClass | ClinicalClass_Key | APR_Severity_Code, APR_Severity_Description, APR_Risk_Of_Mortality_Desc |
-| Fact_KPI_PayerMix | Facility_Key | Dim_Facility | Facility_Key | Facility_Name |
-|  | Discharge_Date_Key | Dim_Date | Date_Key | Year, Quarter, Month, Month_Number |
-|  | Payer_Key | Dim_Payer | Payer_Key | Payment_Typology_Group, Payment_Typology_1 |
-| Fact_KPI_Unplanned | Facility_Key | Dim_Facility | Facility_Key | Facility_Name |
-|  | Discharge_Date_Key | Dim_Date | Date_Key | Year, Quarter, Month, Month_Number |
-|  | AdmissionType_Key (optional) | Dim_AdmissionType | AdmissionType_Key | AdmissionType_Std |
-| Fact_KPI_Disposition | Facility_Key | Dim_Facility | Facility_Key | Facility_Name |
-|  | Discharge_Date_Key | Dim_Date | Date_Key | Year, Quarter, Month, Month_Number |
-|  | Disposition_Key | Dim_Disposition | Disposition_Key | Disposition_Grouped |
-| Fact_KPI_LOS_Summary | Facility_Key | Dim_Facility | Facility_Key | Facility_Name |
-|  | Discharge_Date_Key | Dim_Date | Date_Key | Year, Quarter, Month, Month_Number |
-|  | ClinicalClass_Key (optional) | Dim_ClinicalClass | ClinicalClass_Key | APR_Severity_Code, APR_Severity_Description |
-| Fact_KPI_Mortality | Facility_Key | Dim_Facility | Facility_Key | Facility_Name |
-|  | Discharge_Date_Key | Dim_Date | Date_Key | Year, Quarter, Month, Month_Number |
-|  | Disposition_Key (optional) | Dim_Disposition | Disposition_Key | Disposition_Grouped |
-|  | ClinicalClass_Key (optional) | Dim_ClinicalClass | ClinicalClass_Key | APR_Severity_Code, APR_Risk_Of_Mortality_Desc |
-| Fact_KPI_FinancialPressure | Facility_Key | Dim_Facility | Facility_Key | Facility_Name |
-|  | Discharge_Date_Key | Dim_Date | Date_Key | Year, Quarter, Month, Month_Number |
-|  | Payer_Key (optional) | Dim_Payer | Payer_Key | Payment_Typology_Group |
+All business logic lives in **10 domain-specific measure tables** (prefixed with `_`), not in fact or dimension tables. Each table owns the measures for its analytical domain.
 
+| Measure Table | Measures | Domain |
+|---------------|----------|--------|
+| `_KPI_Measures` | 7 | Core KPIs — Severity Mix Index, Mortality Rate, Unplanned Admission Rate, Average LOS, Margin Pressure, Margins |
+| `_Severity` | 30 | Severity mix analysis, extreme severity %, peer group severity benchmarking |
+| `_LOS` | 35 | Average LOS, excess LOS, bed-day utilization, Pareto analysis, what-if sensitivity |
+| `_Unplanned` | 24 | Unplanned admission rates, pressure zone segmentation, peer group UA benchmarking |
+| `_Mortality` | 18 | Mortality rates, risk of mortality, peer group mortality benchmarking |
+| `_Financial_Basic` | 23 | Margin pressure, cost-per-encounter, negative margin analysis, peer group financial benchmarking |
+| `_PayerMix` | 40 | Payer concentration (HHI), risk payer exposure, payer-specific margins, reimbursement risk |
+| `_Disposition` | 20 | Discharge patterns, post-acute rates, transfer rates, peer group disposition benchmarking |
+| `_Guardrails` | 19 | Volume-guarded KPI variants and Has Volume flags |
+| `_Volume_&_Denominators` | 10 | Base encounter counts from each fact table |
 
+### Display Folder Convention
 
+Within each measure table, measures are organized into display folders:
 
----
+| Folder | Contents |
+|--------|----------|
+| **Base** | Primary business-facing measures (rates, shares, totals) |
+| **PeerGroup Benchmarks** | Peer group medians — the "how do we compare" measures |
+| **Helper** | Flags, conditional formatting, intermediate calculations for visuals |
+| **Has Volume** | Guardrail flags (in `_Guardrails`) |
+| **Extreme Level** | Extreme severity analysis (in `_Severity`) |
+| **Risk Payer** | Medicaid + Self-Pay exposure measures (in `_PayerMix`) |
+| **Concentration** | HHI and payer concentration measures (in `_PayerMix`) |
+| **Financial Risk** | Payer-specific cost/margin analysis (in `_PayerMix`) |
+| **System Metrics** | System-wide aggregate benchmarks (in `_PayerMix`) |
+| **Share Metrics** | Disposition share percentages (in `_Disposition`) |
+| **Variance** | Delta vs. peer median measures (in `_Disposition`) |
+| **Cross-PG Benchmarks** | System-wide medians ignoring peer groups (in `_Disposition`) |
 
-## Measure Strategy
+### Measure Patterns
 
-### Additive vs Derived Measures
+**Guarded measures** return BLANK when encounter volume falls below 30, preventing misleading rates from small samples. Named with `(Guarded)` suffix. Example: `Mortality Rate (Guarded)` returns BLANK if facility has fewer than 30 encounters.
 
-**Authoritative data in the model is additive.**
+**Peer group medians** come in two variants:
 
-Examples:
-- Encounter_Count
-- Total_Costs
-- Total_Charges
-- Death_Count
-- Unplanned_Encounter_Count
+| Variant | Naming | Behavior |
+|---------|--------|----------|
+| **Base** | `PeerGroup [KPI] Median` | Requires a single peer group in filter context. Returns blank if multiple or no peer groups selected. Use in visuals where peer group is on the axis or in a slicer. |
+| **FacilitySafe** | `PeerGroup [KPI] Median (FacilitySafe)` | Removes facility filter to calculate median across the peer group. Works per facility row without requiring peer group in the filter context. Use in facility-level tables and conditional formatting. |
 
-All **rates, averages, and indexes** are computed as **DAX measures**.
+**Flag measures** (1/0 integers) power conditional formatting and counting logic. Named `Is Above…`, `Is Below…`, `Has Volume`, etc.
 
-This guarantees:
-- correct aggregation at any slice level
-- Excel and Power BI consistency
-- auditability
+**Display measures** replace BLANK with 0 for card visuals that cannot render blanks. Named with `(Display)` or `(0 safe)` suffix.
 
----
+### Conditional Formatting Threshold
 
-### KPI Guardrail Measures (Data Stability & Interpretability)
-
-To prevent misleading KPI interpretation caused by low encounter volumes, the semantic model implements **guardrail measures** for all rate-based KPIs.
-
-#### Rationale
-Rate and ratio KPIs (e.g., Mortality Rate, Unplanned Admission Rate, Average LOS) can fluctuate dramatically when calculated on very small denominators.  
-To ensure analytical stability and executive trust, KPIs are suppressed when the underlying encounter volume is insufficient.
-
-#### Guardrail Rule
-- A **minimum denominator threshold of 30 encounters** is enforced.
-- When the denominator is below this threshold:
-  - KPI measures return `BLANK()`
-  - Visuals automatically suppress the value
-  - Totals and roll-ups remain mathematically correct
-
-#### Implementation Pattern
-Each guarded KPI follows a consistent DAX structure:
-1. Explicit denominator measure
-2. Volume sufficiency check (`>= 30`)
-3. Guarded KPI using `DIVIDE()` and conditional blanking
-
-This approach:
-- avoids divide-by-zero errors
-- prevents unstable or misleading rates
-- keeps visuals clean without manual filtering
-- preserves correct aggregation behavior across Facility and Year
-
-**How to use them in reports:**
-
-- **Guarded KPI measures** (e.g. *Mortality Rate (Guarded)*, *Average LOS (Guarded)*)  
-  Use these measures in **all executive-facing visuals** (cards, tables, trend lines).  
-  When encounter volume is below the defined threshold, the measure returns `BLANK()`, and the visual automatically suppresses the value.
-
-- **Data coverage flags** (e.g. *Mortality Has Volume*)  
-  Use these measures as **visual-level filters** with the condition `= 1`.  
-  This ensures visuals only display results based on stable and interpretable data.
-
-
-Guardrail logic is applied **at the measure level**, not in SQL, ensuring transparency and flexibility within the semantic model.
-
+The `Excess LOS Materiality Threshold (Days)` table is a Power BI what-if parameter that lets report users adjust the threshold for LOS excess conditional formatting. The `Materiality Threshold Value` measure reads the selected value (default: 0.25 days) and feeds `Excess LOS Color (WhatIf)`, which assigns red shades to facilities exceeding the threshold and blue shades to those below.
 
 ---
 
-### Certified KPI Measures
+## Statistical Guardrails
 
-Each KPI exposes **certified measures**, such as:
+The `_Guardrails` table enforces a **30-encounter minimum** across all rate-based KPIs. This is a standard practice in healthcare analytics to prevent small-sample distortion.
 
-- Severity Mix Index
-- Unplanned Admission Rate
-- Average LOS
-- Mortality Rate
-- Average Medical Cost per Encounter
-- Margin Pressure Ratio
-- Payer Share (%)
+**How it works:**
+- Each KPI domain has a `[Domain] Has Volume` flag that returns 1 if encounters ≥ 30, else 0
+- Guarded measure variants check the flag and return BLANK when volume is insufficient
+- Visuals bound to guarded measures automatically suppress unreliable data points
 
-Rules:
-- Measures are documented
-- Measures are reused across visuals
-- Visuals do **not** recompute logic
-
-Hidden columns:
-- SQL validation fields
-- pre-computed averages
-- reconciliation helpers
+**Domains covered:** Severity Mix, Mortality, LOS, Unplanned Admissions, Financial Pressure, Payer Mix (both payer-level and facility-year-level), Disposition (both category-level and facility-year-level).
 
 ---
 
-## Visual Interpretation Rules
+## Severity as Context, Not Performance
 
-### Severity Context — Severity Mix Index by Facility
+Severity Mix Index is a **descriptive contextual signal**, not a performance indicator. It reflects the acuity of patients a hospital treats, not the quality of care delivered.
 
+**Interpretation guidance for executives:**
+- Higher SMI indicates sicker, more complex patient populations
+- SMI should be read alongside — not compared against — outcome metrics (mortality, LOS, cost)
+- A hospital with high SMI and high mortality is a different story than one with low SMI and high mortality
+- Peer group benchmarking controls for this by comparing facilities against cohorts with similar case-mix profiles
 
-**Applies to:**
-- **Report page:** *Severity Context*
-- **Visual:** *Severity Mix Index by Facility*
-- **Helper measure:** `Is Above PG Severity Median`
-
-In the visual *Severity Mix Index by Facility*, a facility is flagged as **“above peer-group median severity”** when its **Severity Mix Index (SMI)** is *numerically greater* than the median SMI of its **own assigned peer group**.
-
-This logic is implemented via the DAX helper measure:  
-`Is Above PG Severity Median`
-
-Facilities for which this measure evaluates to `TRUE` are rendered in **white** in the *Severity Mix Index by Facility* visual.  
-
-<details>
-<summary>See the Screenshot</Summary>
-
-![alt text](image.png)
-
-</details>
-
-This designation is **directional**, not a threshold of material clinical difference.
+This principle extends to all contextual measures in the model. Measures that describe patient population characteristics are separated from those that assess operational or clinical outcomes.
 
 ---
 
-### Important Clarifications
+## Live Data Dictionary
 
-- The **Severity Mix Index (SMI)** is calculated and evaluated at **full numeric precision**.
-- Visual labels format SMI values to **two decimals** for readability, but **comparisons and medians use the underlying full-precision values**.
-- As a result, facilities that appear visually equal to the peer median may still be classified as slightly above or below due to **decimal-level differences**.
+### Architecture
 
----
+The data dictionary is generated from the semantic model itself using DAX `INFO.VIEW()` metadata functions, ensuring zero documentation drift.
 
-### How to Interpret “Above Median”
+**Layer 1 — Metadata Extraction (hidden calculated tables):**
 
-**Above median means:**
-- The facility’s case-mix complexity is **marginally higher** than the peer-group midpoint.
-- The facility sits on the **upper half of its peer-group severity distribution**.
+| Table | Source | Purpose |
+|-------|--------|---------|
+| `_Meta_Measures` | `INFO.VIEW.MEASURES()` | All measures with expressions, descriptions, data types |
+| `_Meta_Tables` | `INFO.VIEW.TABLES()` | Table names, row counts, properties |
+| `_Meta_Columns` | `INFO.VIEW.COLUMNS()` | Column definitions, data types, relationships |
+| `_Meta_Relationships` | `INFO.VIEW.RELATIONSHIPS()` | Relationship cardinalities and filter directions |
 
-**Above median does *not* mean:**
-- Clinically meaningfully sicker patients
-- A materially different acuity profile
-- A risk-adjustment requirement by default
+**Layer 2 — Unified Dictionary:**
 
----
+The `_DataDictionary` calculated table unions all four metadata sources into a single searchable structure with standardized fields: Type, Name, Description, Location, Expression, DataType, and DisplayFolder. Hidden objects and `_Meta_*` tables are filtered out automatically.
 
-### Analytical Implication
+**Layer 3 — Report Interface:**
 
-Because **Severity Mix Index values remain tightly clustered within each peer group**, small deviations above the peer median should be interpreted as **context-setting signals**, not as drivers of downstream performance variation on their own.
+A dedicated report page surfaces the dictionary with slicers by object type, a search box for measure lookup, and a detail view showing full DAX expressions and business definitions.
 
-Accordingly:
-- LOS, cost, and outcome KPIs should **not be over-attributed to acuity**
-- **Operational factors** remain the primary focus when interpreting downstream KPIs
-- **Peer-group comparisons** remain fair, proportional, and statistically honest
+### How to Use
 
----
+**Finding a KPI:** Open the Data Dictionary page → filter by Type = Measure → search by name → review Description for business definition and Expression for calculation logic.
 
-### Executive Shortcut
+**Understanding relationships:** Filter by Type = Relationship → identify source/target tables, cardinality, and filter direction.
 
-> *“Above peer median indicates relative position within the peer distribution, not a clinically material difference in patient acuity.”*
-
+**Exploring columns:** Filter by Type = Column → use Location field to browse by parent table → check DataType and Description.
 
 ---
 
-## Excel Compatibility & Executive Access
+## Certified KPI Measures
 
-This semantic model is intentionally **Excel-first compatible**.
+The following measures are the primary business-facing indicators exposed to report consumers. All live in `_KPI_Measures` or their respective domain tables.
 
-Executives can:
-- connect using **Analyze in Excel**
-- build PivotTables
-- slice by Facility, Year, Payer, Disposition, etc.
-- trust that totals and rates reconcile with Power BI
+### Core KPIs (in `_KPI_Measures`)
 
-Why this matters:
-- Many executives prefer Excel
-- Excel is still the dominant executive analysis tool
-- A governed semantic model enables **safe self-service**
+| Measure | Description |
+|---------|-------------|
+| Severity Mix Index | Weighted average APR severity (1–4). Context signal, not performance. |
+| Mortality Rate | In-hospital deaths / encounters. Not risk-adjusted. |
+| Unplanned Admission Rate | Share of emergency/unplanned admissions. |
+| AVG LOS | Average length of stay in days. |
+| Margin Pressure | Cost-to-charge ratio. Above 1.0 = operating at a loss. |
+| FP Margin | Total margin (charges − costs) from financial fact. |
+| PM Margin | Total margin from payer mix fact. |
 
-Power BI becomes the **same truth**, just visualized differently.
+### Domain KPIs
+
+| Domain | Key Business Measures |
+|--------|----------------------|
+| **Severity** | Extreme Severity %, Peer Group Median Extreme %, SMI Range |
+| **Mortality** | PeerGroup Mortality Rate Median, Cross-PG Mortality Rate Median, Major-Extreme ROM Share |
+| **Unplanned** | PeerGroup UA Rate Median, Median Unplanned % (Selected) |
+| **LOS** | Total Bed-Days, Share of Bed-Days, Excess LOS Days, Median Excess LOS (Days) |
+| **Financial** | Neg Margin Rate, AVG Cost / Encounter, Margin Pressure Burden, PeerGroup Margin Pressure Median |
+| **Payer Mix** | Risk Payer Share %, Payer HHI (Facility), Top Payer Share %, PeerGroup Risk Payer Share Median |
+| **Disposition** | Home Discharge Share %, Post-Acute Discharge Share %, Acute Transfer Share %, PeerGroup Post-Acute Share Median |
+
+---
+
+## Visual Encoding Standards
+
+### Pressure × Volume Scatter Pattern
+
+Several report pages use a consistent bubble chart pattern for identifying high-priority facilities:
+
+| Channel | Encoding | Example |
+|---------|----------|---------|
+| **X-axis** | Rate or ratio metric | Unplanned Admission Rate, Margin Pressure |
+| **Y-axis** | Volume (encounter count) | Total Encounters, Payer Encounters |
+| **Bubble size** | Burden or absolute impact | Unplanned Encounter Count, Margin Pressure Burden |
+| **Color** | Peer group assignment | Dim_Facility[PeerGroup_Name] |
+
+Threshold reference lines (dashed) mark analytical boundaries — for example, 40% UA rate and 3,000 encounters define a "low-pressure zone" where intervention is less urgent.
+
+### Conditional Formatting
+
+Color-coding measures (e.g., `Excess LOS Color (WhatIf)`, `HHI Color`, `Post-Acute Share Label Color`) use hex color strings evaluated via SWITCH logic. These drive conditional formatting rules in report visuals without requiring visual-level calculated fields.
 
 ---
 
 ## Governance & Change Control
 
-Any change to the Power BI semantic model requires:
+**Measure ownership:** All business logic is centralized in DAX measures. No calculated columns, no visual-level measures, no report-level calculations.
 
-1. Upstream SQL change (Step 05)
-2. Excel reconciliation (Step 06.05)
-3. Measure impact review
-4. README update
-5. Re-certification of affected KPIs
+**Version control:** The model is saved as a `.pbip` (Power BI Project) file, enabling Git-based version control of TMDL definition files.
 
-No ad-hoc measures.
-No silent changes.
+**Description standard:** Every visible measure carries a description that states what is calculated, at what grain, and any suppression or guardrail logic. Complex measures include interpretation cues where misuse risk is high.
 
----
-
-## Relationship to Other Steps
-
-- **06.01 — Fact KPI SQL**  
-  Defines the authoritative KPI data contracts
-
-- **06.02 — Dimensions Reference**  
-  Defines the slicing vocabulary and keys
-
-- **06.03 — Power BI Model**  
-  Implements relationships and measures
-
-- **06.05 — Validation**  
-  Confirms Power BI results reconcile with Excel and SQL
+**Naming conventions:**
+- Measure tables prefixed with `_` (underscore)
+- Guarded variants suffixed with `(Guarded)`
+- FacilitySafe variants suffixed with `(FacilitySafe)`
+- Display/card-safe variants suffixed with `(Display)` or `(0 safe)`
+- Hidden technical tables prefixed with `_Meta_`
 
 ---
 
-## Final Principle
+## Project Structure
 
-> **SQL defines truth.**  
-> **The semantic model enforces it.**  
-> **Power BI and Excel merely consume it.**
+```
+06_PBI_Semantic_Model/
+├── 01_Fact_KPI_SQL/
+├── 02_Dimensions_Reference/
+├── 03_PowerBI_Model/
+│   └── PBI_Project/
+│       ├── PowerBI_project.Report/
+│       │   ├── .pbi
+│       │   └── definition/
+│       │       ├── bookmarks/
+│       │       └── pages/
+│       │           └── <page_id>/
+│       │               └── visuals/
+│       ├── StaticResources/
+│       │   ├── RegisteredResources/
+│       │   ├── SharedResources/
+│       │   └── BaseThemes/
+│       └── PowerBI_project.SemanticModel/
+│           ├── .pbi
+│           └── definition/
+│               ├── cultures/
+│               └── tables/
+├── 04_KPI_Data_Dictionary/
+└── 05_Validation/
+```
 
-This step ensures that executive insight is built on
-**discipline, not convenience**.
+---
+
+## Technical Notes
+
+**DAX version:** `INFO.VIEW()` functions require Power BI Desktop or Premium capacity with dynamic metadata support.
+
+**Refresh behavior:** `_DataDictionary` and `_Meta_*` tables refresh automatically on model deployment. No independent schedule required.
+
+**Excel connectivity:** All measures evaluate correctly when connected via Analyze in Excel. Guarded measures return BLANK (displayed as empty cells) when volume thresholds are not met.
+
+**Compatibility level:** Model uses current Power BI Desktop compatibility level. Peer group bridge pattern and INFO.VIEW functions are supported in all recent versions.
