@@ -165,7 +165,7 @@ table _PayerMix
 		displayFolder: Concentration
 		lineageTag: 62cf6b23-8a41-4e2b-8da4-975ba69557d1
 
-	/// Herfindahl-Hirschman Index at facility level. Ranges 0-1; higher = more concentrated payer mix. Above 0.25 indicates high concentration risk.
+	/// Herfindahl-Hirschman Index at facility level. Ranges 0-1; higher = more concentrated payer mix. Above 0.25 indicates high concentration risk. Facility HHI is computed across individual Payer_Key, not typology groups.
 	measure 'Payer HHI (Facility)' =
 			SUMX (
 			    VALUES ( Dim_Payer[Payer_Key] ),
@@ -418,7 +418,7 @@ table _PayerMix
 		displayFolder: Concentration
 		lineageTag: d7acec8b-1c0c-4ecf-b020-f2cf2c6a77c9
 
-	/// Herfindahl-Hirschman Index at peer group level.
+	/// Herfindahl-Hirschman Index at peer group level. PeerGroup HHI is computed across Payment_Typology_Group (category-level), not individual payers.
 	measure 'Payer HHI (PeerGroup)' =
 			SUMX(
 			    VALUES( Dim_Payer[Payment_Typology_Group] ),

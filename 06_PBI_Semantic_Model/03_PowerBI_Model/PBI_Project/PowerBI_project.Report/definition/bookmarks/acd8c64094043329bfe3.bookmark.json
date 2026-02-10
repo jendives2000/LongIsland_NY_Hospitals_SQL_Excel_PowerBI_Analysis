@@ -11,48 +11,6 @@
     "sections": {
       "bbc74bf03dfbe3051458": {
         "visualContainers": {
-          "378d656ab1e943c82cf5": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "5559ec38a7a2b92e83d2": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "5c03508c8fa3b89e80fa": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "7faaaee4d46641ef7fe6": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "a29fb765dd01b1393834": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "ca3a22d0a205cd12d400": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "ccb4ad45f4dd91926969": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
           "00339c67085c461ac095": {
             "singleVisual": {
               "visualType": "textbox",
@@ -74,7 +32,40 @@
               "objects": {}
             }
           },
+          "07d4c0b693a38201b9f9": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
           "0955e73b70832d788d1d": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "0c44f41b690f4abd3e23": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "0c5c4de6a542023af747": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "0fbd8745bf2321a6f298": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "14bd1f3084c1c2f9d00e": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {}
@@ -92,23 +83,44 @@
               "objects": {}
             }
           },
-          "a0f60133398d8a438267": {
+          "1b190af8fdbf5fb09d51": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "22e5ccbbdb3b4e18b139": {
             "singleVisual": {
               "visualType": "shape",
               "objects": {}
             }
           },
-          "bbd5c54c983114a945bb": {
+          "273291c30e75a4f5df63": {
             "singleVisual": {
               "visualType": "shape",
               "objects": {}
+            }
+          },
+          "378d656ab1e943c82cf5": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "497f3e9ee531218e2f09": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
             }
           },
           "5366447f2dd8b123201c": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "eb93dfecf47e02cb80ad",
+                  "name": "4db37a01dc87466a4bfb",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -123,7 +135,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "9bbda32c93530886ab0c",
+                  "name": "6c89b868dcdbc1ddd7d0",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -138,7 +150,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "392f2840666b4131514e",
+                  "name": "ec7eeb851e7153b69a09",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -153,7 +165,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "ce202d8e9d751a564cc6",
+                  "name": "423757e955a86d586bc9",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -168,7 +180,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "118f38156a5401aa486d",
+                  "name": "09251f2db3c77fef791b",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -183,7 +195,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "0366dc2a1706e28202a0",
+                  "name": "0ee9534a058d119322a0",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -240,6 +252,39 @@
             "singleVisual": {
               "visualType": "textbox",
               "objects": {}
+            }
+          },
+          "5559ec38a7a2b92e83d2": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "5c03508c8fa3b89e80fa": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "5e732d520d6aa6bba665": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "66d6aab069bdaf241c03": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "725e5e9104aa5ad76daa": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
             }
           },
           "72d78847021a0fe22bf3": {
@@ -334,7 +379,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "d7819a9e046ec086d54d",
+                  "name": "31a400fdcd98bab03ec0",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -349,7 +394,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "04d6346b916300d09c03",
+                  "name": "9a51debc1104a4f5e0ad",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -364,7 +409,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "f0abcf944b3a1aa62294",
+                  "name": "24747c10a889c9142091",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -379,7 +424,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "a45e6eb55043cd9f0606",
+                  "name": "2c2c70e242fec4515c1b",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -394,7 +439,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "889b9ce55847dc63943d",
+                  "name": "38f94396cfe371add36f",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -409,7 +454,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "1e3e84dc376bf4bad6bd",
+                  "name": "1ed7b79cb3e99a61e5d8",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -483,26 +528,17 @@
               }
             }
           },
+          "7faaaee4d46641ef7fe6": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
           "862431b4a57847605470": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "4ac5bce10b2e20a99360",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "4f58dbf24aed10950822",
+                  "name": "57b18c78f4e9c4bf4b9f",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -517,7 +553,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "813171e6304b19f015e3",
+                  "name": "b39896709e23e69cb32b",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -532,7 +568,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "4a082a09be23d63d1211",
+                  "name": "dfe041f11e27fca954c9",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -547,7 +583,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "087ad2aef72b3c54ebad",
+                  "name": "67312eaba07c386ebaa9",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -562,7 +598,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "0b6f5333a8c44adb3621",
+                  "name": "0afedc507108fdb4f5f7",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -577,7 +613,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "3c411f7e65569c1b7f33",
+                  "name": "af4fa4376b83a33203dc",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -592,7 +628,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "6b0c67203faab11a319a",
+                  "name": "ada0a51e00dd42c13725",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -607,7 +643,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "d9ca0483e9d035a2115c",
+                  "name": "f4c70a739e084c3f2fad",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -617,6 +653,21 @@
                         }
                       },
                       "Property": "Payer Share %"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "6d006715a149aec49b32",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
                     }
                   },
                   "howCreated": 0
@@ -647,7 +698,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
+                          "Entity": "Dim_Facility"
                         }
                       },
                       "Property": "PeerGroup_Name"
@@ -655,6 +706,12 @@
                   }
                 ]
               }
+            }
+          },
+          "8d44c7d4a5f87e14a44a": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
             }
           },
           "95dd24500fdad6ce0d9d": {
@@ -666,7 +723,240 @@
               }
             }
           },
+          "985ec9017fb136af90b3": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "988285d3472567dd9119": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "fd372bc0985159d3bd08",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PayerMix"
+                        }
+                      },
+                      "Property": "Risk Payer Share (System %)"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "21ce913b2c617dde720e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PayerMix"
+                        }
+                      },
+                      "Property": "Commercial Share (System %)"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9ce282a651561c450373",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PayerMix"
+                        }
+                      },
+                      "Property": "Medicare Share (System %)"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a725f3091c0f4ec0ef72",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PayerMix"
+                        }
+                      },
+                      "Property": "Medicaid Share (System %)"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "4b98d1567fb0c84b56e5",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PayerMix"
+                        }
+                      },
+                      "Property": "Top Payer Share (System %)"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7f1f7f38ef3be23ccbd1",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PayerMix"
+                        }
+                      },
+                      "Property": "Negative Margin Encounter Rate (System %)"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PayerMix"
+                        }
+                      },
+                      "Property": "Risk Payer Share (System %)"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "9e8f02c224e518c7b32c": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "552997ea8083c9162c6b",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Basic'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_PeerGroup"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "a0f60133398d8a438267": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "a1512a9b11d80d4984a8": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "a29fb765dd01b1393834": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "a4b8de6b2c3bad305a4f": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "ad25e5b4f0ee0092a8a3": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "b8d439900f9ac07dce73": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "bb931116029ed6d99393": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "bbd5c54c983114a945bb": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
           "c7c3694bc3bc50918ddf": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "c823da8483e853bf9464": {
             "singleVisual": {
               "visualType": "shape",
               "objects": {}
@@ -681,6 +971,42 @@
               }
             }
           },
+          "ca3a22d0a205cd12d400": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "ccb4ad45f4dd91926969": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "d04ec8cafecba38effe9": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "d3c05b8f41f9eda78dd6": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "d8717bb1891abf6fd8cb": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "e2ae284cc7b982dfb138": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
           "e4669062342467626f42": {
             "singleVisual": {
               "visualType": "actionButton",
@@ -690,6 +1016,15 @@
           "e5840e1176d0c6540a14": {
             "singleVisual": {
               "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "e7f92f791cb1a8c027b1": {
+            "singleVisual": {
+              "visualType": "shape",
               "objects": {},
               "display": {
                 "mode": "hidden"
@@ -757,7 +1092,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "ef48eab6d0d71f85e5b5",
+                  "name": "e642c247b97e7b974c17",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -772,7 +1107,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "9fa490204ad1af6587ac",
+                  "name": "240814beab8e668b2e83",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -787,7 +1122,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "361c67d4a55925a319af",
+                  "name": "91838c265fca933ba298",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -802,7 +1137,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "f4160152d4b6515bc5e4",
+                  "name": "dcad711491cdf4632f0b",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -817,7 +1152,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "d504807269ec30661fdd",
+                  "name": "213ed1477593c08dd319",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -832,7 +1167,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "faf1ee7add40d6ea5673",
+                  "name": "4686ea3addf485a445c5",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -842,6 +1177,21 @@
                         }
                       },
                       "Property": "Risk Payer Share %"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7b68d1d958577b3679a3",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PayerMix"
+                        }
+                      },
+                      "Property": "Risk Payer Encounters"
                     }
                   },
                   "howCreated": 0
@@ -925,6 +1275,12 @@
               "objects": {}
             }
           },
+          "ec96a25b814d2f092fe9": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
           "f60ab10e6403a46369da": {
             "singleVisual": {
               "visualType": "actionButton",
@@ -934,333 +1290,13 @@
               }
             }
           },
-          "07d4c0b693a38201b9f9": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "0c44f41b690f4abd3e23": {
+          "88482907f1858c264c93": {
             "singleVisual": {
               "visualType": "textbox",
               "objects": {},
               "display": {
                 "mode": "hidden"
               }
-            }
-          },
-          "0fbd8745bf2321a6f298": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "1b190af8fdbf5fb09d51": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "22e5ccbbdb3b4e18b139": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "273291c30e75a4f5df63": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "497f3e9ee531218e2f09": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "14bd1f3084c1c2f9d00e": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "66d6aab069bdaf241c03": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "a1512a9b11d80d4984a8": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "bb931116029ed6d99393": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "e2ae284cc7b982dfb138": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "8d44c7d4a5f87e14a44a": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "988285d3472567dd9119": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "0668c333f6672dd50d6a",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_PayerMix"
-                        }
-                      },
-                      "Property": "Risk Payer Share (System %)"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "ac368ab8282972de8775",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_PayerMix"
-                        }
-                      },
-                      "Property": "Commercial Share (System %)"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "ccc8eec0c15ab5cf24af",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_PayerMix"
-                        }
-                      },
-                      "Property": "Medicare Share (System %)"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "56cedcfb58743e9c7d43",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_PayerMix"
-                        }
-                      },
-                      "Property": "Medicaid Share (System %)"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "b72163eaba47ae8a9a8f",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_PayerMix"
-                        }
-                      },
-                      "Property": "Top Payer Share (System %)"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "720a6b6fb02a61f75a64",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_PayerMix"
-                        }
-                      },
-                      "Property": "Negative Margin Encounter Rate (System %)"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "cardVisual",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_PayerMix"
-                        }
-                      },
-                      "Property": "Risk Payer Share (System %)"
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          "a4b8de6b2c3bad305a4f": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "ad25e5b4f0ee0092a8a3": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "d8717bb1891abf6fd8cb": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "e7f92f791cb1a8c027b1": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "725e5e9104aa5ad76daa": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "985ec9017fb136af90b3": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "9e8f02c224e518c7b32c": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "17155298ac6f22ee97f1",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Basic'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  }
-                ]
-              },
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "d04ec8cafecba38effe9": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "d3c05b8f41f9eda78dd6": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "0c5c4de6a542023af747": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "c823da8483e853bf9464": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "ec96a25b814d2f092fe9": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
             }
           }
         },

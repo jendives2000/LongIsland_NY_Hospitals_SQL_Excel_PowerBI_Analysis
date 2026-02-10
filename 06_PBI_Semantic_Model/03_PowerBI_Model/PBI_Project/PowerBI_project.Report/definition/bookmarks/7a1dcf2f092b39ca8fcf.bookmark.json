@@ -20,6 +20,12 @@
               }
             }
           },
+          "06433924ea4a791606bb": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
           "06836c97fd7769faf9df": {
             "singleVisual": {
               "visualType": "actionButton",
@@ -120,7 +126,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "71309172c3f2fcd090a4",
+                  "name": "9ca9c5e21c35273868e1",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -135,7 +141,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "043d9167fa7727ec053e",
+                  "name": "6873c012fc93384da435",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -150,7 +156,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "1d67a5ff6b4fb6fe6e5c",
+                  "name": "6e12fe960c3f617dc075",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -159,13 +165,13 @@
                           "Entity": "_PayerMix"
                         }
                       },
-                      "Property": "Payer HHI (Facility)"
+                      "Property": "Top Payer Name (Facility)"
                     }
                   },
                   "howCreated": 0
                 },
                 {
-                  "name": "e9ff7e27820c81903442",
+                  "name": "ecd5f5d7d899273cb0c1",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -180,7 +186,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "ada292f3d7e01debf6cc",
+                  "name": "e4449a7ac2a31c990734",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -195,7 +201,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "983b3f3bdd1a572f647b",
+                  "name": "428ccbc8baacfeef439c",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -204,7 +210,7 @@
                           "Entity": "_PayerMix"
                         }
                       },
-                      "Property": "Top Payer Name (Facility)"
+                      "Property": "Payer HHI (Facility)"
                     }
                   },
                   "howCreated": 0
@@ -258,6 +264,12 @@
               }
             }
           },
+          "5545fda154a5f6701a0b": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
           "5559ec38a7a2b92e83d2": {
             "singleVisual": {
               "visualType": "actionButton",
@@ -265,6 +277,12 @@
             }
           },
           "5c03508c8fa3b89e80fa": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "5e732d520d6aa6bba665": {
             "singleVisual": {
               "visualType": "shape",
               "objects": {}
@@ -374,7 +392,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "3c1d43c8f4f3899ec07c",
+                  "name": "d1c221a25524345f0d2a",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -389,7 +407,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "ec5dd907dfa9c7819910",
+                  "name": "1763c8b1199fe3da14de",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -404,7 +422,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "dd908e828b3fd376e86b",
+                  "name": "0e09d0f529c1a8362a6c",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -419,7 +437,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "618cfc04af6df79e56ed",
+                  "name": "3560e20521a68db3ed1d",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -434,7 +452,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "71fe89ccd1cffa4b3564",
+                  "name": "cefe09a1b07002013f08",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -449,7 +467,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "1d6d8420b13afde05b52",
+                  "name": "19bfe05a2f4a79432edc",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -546,22 +564,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "6e93f8fd5e091a97f9b9",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "5348a9f138b80c5b543f",
+                  "name": "007e8bf51927a440fce9",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -576,7 +579,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "779ba6b9123523c4d4d5",
+                  "name": "558888e2b251a3ad7036",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -591,7 +594,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "4bcd4408afefee04d107",
+                  "name": "c9c4f60f31f7540b74b5",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -606,7 +609,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e66ebedacb0e559bec9c",
+                  "name": "40ecd46e004a14560c95",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -621,7 +624,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "63ab77dbc4e17a46bddf",
+                  "name": "528fe606e3ced073301e",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -636,7 +639,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "d4be60350314d64b4ba8",
+                  "name": "062e6b1a564335575822",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -651,7 +654,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "3a293f73a4a0f512bd90",
+                  "name": "ba906f72bc48a26cc32b",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -666,7 +669,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "a5aface19a5c379487d9",
+                  "name": "698d86f56f09e8773148",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -676,6 +679,21 @@
                         }
                       },
                       "Property": "Payer Share %"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "87c47cc3032ccc2fdfe8",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
                     }
                   },
                   "howCreated": 0
@@ -706,7 +724,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
+                          "Entity": "Dim_Facility"
                         }
                       },
                       "Property": "PeerGroup_Name"
@@ -741,7 +759,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "cf098e758870ef362bfd",
+                  "name": "652dff42dea9c9b4ce6a",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -756,7 +774,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e33b6247ca0bbe74a6d1",
+                  "name": "2eceea9098752fd5953e",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -771,7 +789,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "c524d90ddafbc3bf0e60",
+                  "name": "8d3a8aad5830d11578c5",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -786,7 +804,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "8edcd96b92a423337d4f",
+                  "name": "c0b00816c9722a4490f6",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -801,7 +819,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "ef293d652635288b693b",
+                  "name": "8357aec752a9cc5eadbe",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -816,7 +834,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "d76285dea10eaad1d9c8",
+                  "name": "e94ab89acb59f72bce50",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -856,7 +874,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "d6c2a125f6274f342cd9",
+                  "name": "046e009562f16dbe9bd0",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -934,6 +952,12 @@
           "ad25e5b4f0ee0092a8a3": {
             "singleVisual": {
               "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "b8d439900f9ac07dce73": {
+            "singleVisual": {
+              "visualType": "actionButton",
               "objects": {}
             }
           },
@@ -1094,37 +1118,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "f71c8ea94371fa5dddb4",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_PayerMix"
-                        }
-                      },
-                      "Property": "Risk Payer Share %"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "685a8bc46b0bad33ec33",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_PayerMix"
-                        }
-                      },
-                      "Property": "Total Payer Encounters"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "9a9d6b545b63661ff416",
+                  "name": "4890a92cc3490a3d082a",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1139,7 +1133,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "ac6147caea1ad08305fa",
+                  "name": "5145dc766707549d2f64",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1154,7 +1148,37 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "956c86c148f06bb6702a",
+                  "name": "6a5a8b9c9626a989b84c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PayerMix"
+                        }
+                      },
+                      "Property": "Total Payer Encounters"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "550cdb68f10bca13bf56",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Financial_Basic"
+                        }
+                      },
+                      "Property": "Total Charges"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "72214cc96ad3a55d799f",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1169,16 +1193,31 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "079dcebc46611af46ed6",
+                  "name": "1978fe81efacb223d6f4",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "_Financial_Basic"
+                          "Entity": "_PayerMix"
                         }
                       },
-                      "Property": "Total Charges"
+                      "Property": "Risk Payer Share %"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "af990a4d973682cfbc34",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PayerMix"
+                        }
+                      },
+                      "Property": "Risk Payer Encounters"
                     }
                   },
                   "howCreated": 0
@@ -1189,18 +1228,6 @@
               "visualType": "scatterChart",
               "objects": {},
               "activeProjections": {
-                "X": [
-                  {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_PayerMix"
-                        }
-                      },
-                      "Property": "Risk Payer Share %"
-                    }
-                  }
-                ],
                 "Category": [
                   {
                     "Column": {
@@ -1220,6 +1247,18 @@
                         }
                       },
                       "Property": "Facility_Name"
+                    }
+                  }
+                ],
+                "X": [
+                  {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PayerMix"
+                        }
+                      },
+                      "Property": "Risk Payer Share %"
                     }
                   }
                 ]
@@ -1256,16 +1295,13 @@
               }
             }
           },
-          "06433924ea4a791606bb": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "5545fda154a5f6701a0b": {
+          "88482907f1858c264c93": {
             "singleVisual": {
               "visualType": "textbox",
-              "objects": {}
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
             }
           }
         },
