@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": false
+              "active": true
             }
           ]
         },
@@ -106,6 +106,23 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Severity"
+                  }
+                },
+                "Property": "Extreme Severity %"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "objects": {
@@ -546,5 +563,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "f9f00eae4c0acbdd5301"
+  "parentGroupName": "f9f00eae4c0acbdd5301",
+  "isHidden": true
 }

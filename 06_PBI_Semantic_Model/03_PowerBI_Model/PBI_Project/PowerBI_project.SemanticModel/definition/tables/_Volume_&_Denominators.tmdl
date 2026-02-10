@@ -46,6 +46,14 @@ table _Volume_&_Denominators
 		displayFolder: LOS
 		lineageTag: 943faef9-f929-4b07-95ed-75eb7b843cfd
 
+	/// Total unplanned/emergency encounter count. Use for bubble size in pressure-vs-volume scatter to encode absolute unplanned burden separately from total volume.
+	measure 'Unplanned Encounter Count' = ```
+			
+			SUM(Fact_KPI_Unplanned[Unplanned_Encounter_Count])
+			
+			```
+		formatString: 0
+
 	column Column
 		formatString: 0
 		lineageTag: 9908f6be-87f0-47d9-b003-a856d1389904

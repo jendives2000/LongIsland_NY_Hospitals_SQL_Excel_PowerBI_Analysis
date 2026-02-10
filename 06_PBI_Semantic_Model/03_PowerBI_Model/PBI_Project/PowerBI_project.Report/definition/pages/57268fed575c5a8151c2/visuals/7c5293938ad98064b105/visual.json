@@ -47,23 +47,6 @@
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Dim_ClinicalClass"
-                  }
-                },
-                "Property": "PeerGroup Severity Median (PeerGroup safe)"
-              }
-            },
-            "direction": "Descending"
-          }
-        ]
       }
     },
     "objects": {
