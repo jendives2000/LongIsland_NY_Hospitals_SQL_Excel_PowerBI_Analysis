@@ -123,15 +123,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Dim_ClinicalClass"
+                      "Entity": "_LOS"
                     }
                   },
                   "Property": "PeerGroup LOS Median"
                 }
               },
-              "queryRef": "Dim_ClinicalClass.PeerGroup LOS Median",
-              "nativeQueryRef": "Peer-Group LOS Median",
-              "displayName": "Peer-Group LOS Median"
+              "queryRef": "_LOS.PeerGroup LOS Median",
+              "nativeQueryRef": "PeerGroup LOS Median"
             }
           ]
         }
@@ -140,16 +139,29 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Dim_ClinicalClass"
+                    "Entity": "Dim_PeerGroup"
                   }
                 },
-                "Property": "PeerGroup LOS Median"
+                "Property": "PeerGroup_Name"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
+          },
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Dim_Facility"
+                  }
+                },
+                "Property": "Facility_Name"
+              }
+            },
+            "direction": "Ascending"
           }
         ]
       }
@@ -272,51 +284,6 @@
         },
         {
           "properties": {
-            "backgroundColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "labelPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Under'"
-                }
-              }
-            },
-            "showSeries": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Dim_ClinicalClass.PeerGroup LOS Median"
-          }
-        },
-        {
-          "properties": {
             "labelPosition": {
               "expr": {
                 "Literal": {
@@ -428,6 +395,20 @@
               }
             ],
             "metadata": "_KPI_Measures.AVG LOS"
+          }
+        },
+        {
+          "properties": {
+            "enableValueDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_LOS.PeerGroup LOS Median"
           }
         }
       ],
@@ -656,25 +637,6 @@
               }
             ]
           }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 7,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Dim_ClinicalClass.PeerGroup LOS Median"
-          }
         }
       ],
       "legend": [
@@ -828,5 +790,113 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "ed3e78b7d54e31523a69"
+  "parentGroupName": "ed3e78b7d54e31523a69",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "d52323a5632d4cb9055f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_PeerGroup"
+              }
+            },
+            "Property": "PeerGroup_Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f47e34de908a7bcf840c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Facility"
+              }
+            },
+            "Property": "Facility_Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a862ddae0af6c583a01d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_LOS"
+              }
+            },
+            "Property": "Excess LOS Days"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "1f30181636a8f9d9f3e8",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact_KPI_LOS_Summary"
+                  }
+                },
+                "Property": "Encounter_Count"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0c1f29a1944b97351493",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_LOS"
+              }
+            },
+            "Property": "Total Bed-Days"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "06451088bd3255d4e408",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_KPI_Measures"
+              }
+            },
+            "Property": "AVG LOS"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "753fd30c4c44846e7035",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_LOS"
+              }
+            },
+            "Property": "PeerGroup LOS Median"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  },
+  "isHidden": true
 }

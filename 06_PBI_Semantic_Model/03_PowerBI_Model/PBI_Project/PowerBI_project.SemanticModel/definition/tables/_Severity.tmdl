@@ -246,7 +246,7 @@ table _Severity
 
 	/// Alias for PeerGroup Severity Median (FacilitySafe).
 	measure 'SMI Peer Median' = ```
-			Dim_ClinicalClass[PeerGroup Severity Median (FacilitySafe)]
+			[PeerGroup Severity Median (FacilitySafe)]
 			
 			```
 		displayFolder: Helper
@@ -295,7 +295,6 @@ table _Severity
 			VAR med = [PeerGroup Severity Median]
 			RETURN IF(NOT ISBLANK(smi) && smi > med, 1, 0)
 			
-			
 			```
 		formatString: 0
 		displayFolder: Helper
@@ -308,7 +307,7 @@ table _Severity
 			    NOT HASONEVALUE(Dim_Facility[Facility_Key]),
 			    BLANK(),
 			    VAR smi = [Severity Mix Index]
-			    VAR med = [PeerGroup Severity Median (PeerGroup safe)]
+			    VAR med = [PeerGroup Severity Median (FacilitySafe)]
 			    RETURN IF(NOT ISBLANK(smi) && smi > med, 1, 0)
 			)
 			
@@ -400,6 +399,45 @@ table _Severity
 			    )
 		displayFolder: Helper
 		lineageTag: 164a91a2-5637-4a23-8966-571f35ed848a
+
+	/// Median SMI across facilities in selected peer group. Requires peer group in filter context.
+	measure 'PeerGroup Severity Median' = ```
+			
+			VAR CurrentPeerGroup =
+			    SELECTEDVALUE ( Dim_Facility[PeerGroup_Name] )
+			RETURN
+			CALCULATE (
+			    MEDIANX (
+			        VALUES ( Dim_Facility[Facility_Key] ),
+			        [Severity Mix Index]
+			    ),
+			    ALL ( Dim_Facility ),
+			    Dim_Facility[PeerGroup_Name] = CurrentPeerGroup
+			)
+			
+			```
+		formatString: 0.00
+		displayFolder: PeerGroup Benchmarks
+		lineageTag: 2121ce2a-c599-45b8-84f6-1d617cef2fdd
+
+	/// Peer group SMI median that works per facility row. Removes facility filter to calculate median across peer group.
+	measure 'PeerGroup Severity Median (FacilitySafe)' = ```
+			
+			VAR FacilitiesInSelectedPeerGroups =
+			    CALCULATETABLE(
+			        VALUES(Dim_Facility[Facility_Key]),
+			        REMOVEFILTERS(Dim_Facility)
+			    )
+			RETURN
+			MEDIANX(
+			    FacilitiesInSelectedPeerGroups,
+			    CALCULATE([Severity Mix Index], REMOVEFILTERS(Dim_Facility))
+			)
+			
+			```
+		formatString: 0.00
+		displayFolder: PeerGroup Benchmarks
+		lineageTag: f6f5818f-adc7-4b8b-8e18-3acf830a34bf
 
 	column Column
 		isHidden

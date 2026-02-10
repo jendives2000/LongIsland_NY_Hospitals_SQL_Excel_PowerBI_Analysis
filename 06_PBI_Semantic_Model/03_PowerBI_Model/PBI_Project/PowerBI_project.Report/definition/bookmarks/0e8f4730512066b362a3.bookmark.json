@@ -38,6 +38,12 @@
               "objects": {}
             }
           },
+          "14b718a35943ac376ba3": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
           "14dd5c0854983ab1e2e7": {
             "singleVisual": {
               "visualType": "actionButton",
@@ -54,7 +60,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "9af300bf7a5b64415135",
+                  "name": "d52323a5632d4cb9055f",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -69,7 +75,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "99ff743f0515328f1b75",
+                  "name": "f47e34de908a7bcf840c",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -84,7 +90,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "073b919f5623e12f0f20",
+                  "name": "a862ddae0af6c583a01d",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -99,7 +105,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "1ae1e6a7a37ada957f14",
+                  "name": "1f30181636a8f9d9f3e8",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -119,7 +125,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "43834451a0c41aa9ef80",
+                  "name": "0c1f29a1944b97351493",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -134,7 +140,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "bd7e05e46e3cddfc2c9d",
+                  "name": "06451088bd3255d4e408",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -149,13 +155,13 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e51b05776ac8f4dcf02a",
+                  "name": "753fd30c4c44846e7035",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Dim_ClinicalClass"
+                          "Entity": "_LOS"
                         }
                       },
                       "Property": "PeerGroup LOS Median"
@@ -175,7 +181,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Dim_ClinicalClass"
+                          "Entity": "_LOS"
                         }
                       },
                       "Property": "PeerGroup LOS Median"
@@ -218,6 +224,12 @@
               }
             }
           },
+          "1dd5d6749f16a05aabe6": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
           "1fb56392bfe01488bb09": {
             "singleVisual": {
               "visualType": "actionButton",
@@ -239,6 +251,12 @@
           "27b9d7646199a8249e4d": {
             "singleVisual": {
               "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "2b1b1664e0060b260f49": {
+            "singleVisual": {
+              "visualType": "shape",
               "objects": {}
             }
           },
@@ -270,7 +288,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "2a332f7d1f0b6aafa9c6",
+                  "name": "ef09ee498dcd70c3bc55",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -285,7 +303,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "b2ad7205cdb44e1d5976",
+                  "name": "7a086a16b2cf09adb1b3",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -300,7 +318,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "37034bca46073b2516d4",
+                  "name": "bedd2293ad348d5bae1e",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -315,7 +333,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "0473c4933a2b27a49d70",
+                  "name": "a6a4270fbebe2b8d6265",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -330,7 +348,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "b72425b1108bb65b79dc",
+                  "name": "20a0ae7fe7401824bf31",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -345,7 +363,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "992c0e3b4ccbadb17e66",
+                  "name": "2dc23c3ad64af03d374f",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -360,7 +378,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "4909562bdedd427b2544",
+                  "name": "1fc6ee7a0800ddf0c6e8",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -403,7 +421,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "bff13bb6c55d0a8c2082",
+                  "name": "8b330bc814ed08dcd604",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -464,7 +482,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "e29e39121638fda6747e",
+                  "name": "8056bcbaab6fb2fb0a9c",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -530,6 +548,12 @@
           "59c0d5903d54756a348b": {
             "singleVisual": {
               "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "5bca6128b41b387d8b27": {
+            "singleVisual": {
+              "visualType": "textbox",
               "objects": {}
             }
           },
@@ -842,6 +866,12 @@
               "objects": {}
             }
           },
+          "63e91bbac0a04b14e107": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
           "694598a58c4872a92345": {
             "singleVisual": {
               "visualType": "actionButton",
@@ -906,7 +936,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "ac46afa3dee0f1257feb",
+                  "name": "5ade430d2bb896e5503f",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -916,21 +946,6 @@
                         }
                       },
                       "Property": "PeerGroup_Name"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "a0a997d15e5a2ddc3d2d",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_ClinicalClass"
-                        }
-                      },
-                      "Property": "PeerGroup Severity Median (PeerGroup safe)"
                     }
                   },
                   "howCreated": 0
@@ -1066,8 +1081,8 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "dbec3f3080daf96e75f4",
-                  "type": "Categorical",
+                  "name": "fdeb6c0b4bb43de6c1bd",
+                  "type": "TopN",
                   "expression": {
                     "Column": {
                       "Expression": {
@@ -1081,7 +1096,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "07c067aff2ecb00dad87",
+                  "name": "f43b3f74bc7164c25d7a",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1096,7 +1111,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "2166b148e28522ad151f",
+                  "name": "ddc170882a39c2d3f856",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1269,6 +1284,12 @@
               }
             }
           },
+          "ba9271f71565e8a9e671": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
           "bbee83d834acb0a23405": {
             "singleVisual": {
               "visualType": "actionButton",
@@ -1402,7 +1423,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "ec0548be34ac67c56403",
+                  "name": "b081e7aa4560c7a6fd79",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1417,7 +1438,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "9279acf80160d3c22ed5",
+                  "name": "2c78e1fed46d05c5e1c5",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1432,7 +1453,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "ade755954a96c52a1c46",
+                  "name": "49477696265d8742f44b",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1447,7 +1468,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "5a57cf7e26092494468c",
+                  "name": "bb2f925db47b821ae387",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1743,7 +1764,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "84b6d5c682086c676016",
+                  "name": "3f22941fdc18c603f76a",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1758,7 +1779,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "a55edb6313b54027b8d4",
+                  "name": "44ce6c6e19463f469a2d",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1773,7 +1794,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "6d728726c4c00d262211",
+                  "name": "f18dd38e6d43ebec12bb",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1845,30 +1866,6 @@
               "display": {
                 "mode": "hidden"
               }
-            }
-          },
-          "1dd5d6749f16a05aabe6": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "5bca6128b41b387d8b27": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "14b718a35943ac376ba3": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "63e91bbac0a04b14e107": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
             }
           }
         },

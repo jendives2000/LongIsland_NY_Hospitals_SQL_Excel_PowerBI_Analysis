@@ -53,6 +53,14 @@ table _Volume_&_Denominators
 			
 			```
 		formatString: 0
+		lineageTag: 8a3450c4-e4bb-4210-ae11-0f28e628ca3e
+
+	/// Total encounters from unplanned fact table. (Y) suffix indicates year-level grain.
+	measure 'Total Encounters (Y)' =
+			
+			SUM ( Fact_KPI_Unplanned[Total_Encounters] )
+		formatString: 0
+		lineageTag: 61555fd3-50b4-4a8f-9273-649826985b3c
 
 	column Column
 		formatString: 0

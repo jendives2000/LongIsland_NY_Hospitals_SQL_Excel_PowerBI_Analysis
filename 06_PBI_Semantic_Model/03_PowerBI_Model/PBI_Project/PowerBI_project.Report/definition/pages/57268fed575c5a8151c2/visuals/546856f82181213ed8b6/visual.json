@@ -90,13 +90,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Dim_ClinicalClass"
+                      "Entity": "_Severity"
                     }
                   },
                   "Property": "PeerGroup Severity Median (FacilitySafe)"
                 }
               },
-              "queryRef": "Dim_ClinicalClass.PeerGroup Severity Median (FacilitySafe)",
+              "queryRef": "_Severity.PeerGroup Severity Median (FacilitySafe)",
               "nativeQueryRef": "PeerGroup Severity Median (FacilitySafe)"
             }
           ]
@@ -422,27 +422,13 @@
             "enableValueDataLabel": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "enableDetailDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "enableTitleDataLabel": {
-              "expr": {
-                "Literal": {
                   "Value": "false"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Dim_ClinicalClass.PeerGroup Severity Median (FacilitySafe)"
+            "metadata": "_Severity.PeerGroup Severity Median (FacilitySafe)"
           }
         }
       ],
@@ -852,7 +838,8 @@
             "Property": "PeerGroup Severity Median (FacilitySafe)"
           }
         },
-        "type": "Advanced"
+        "type": "Advanced",
+        "howCreated": "User"
       }
     ],
     "filterSortOrder": "Custom"

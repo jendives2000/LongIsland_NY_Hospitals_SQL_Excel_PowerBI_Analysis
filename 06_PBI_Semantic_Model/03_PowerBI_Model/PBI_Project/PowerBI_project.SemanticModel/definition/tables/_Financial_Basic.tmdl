@@ -4,18 +4,21 @@ table _Financial_Basic
 
 	/// Sum of costs.
 	measure 'Total Costs' = SUM(Fact_KPI_FinancialPressure[Total_Costs])
+		displayFolder: Base
 		lineageTag: 46929712-57b8-435d-ac1f-49bc5893fb1e
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	/// Sum of charges.
 	measure 'Total Charges' = SUM(Fact_KPI_FinancialPressure[Total_Charges])
+		displayFolder: Base
 		lineageTag: c08d873e-819b-4cef-9527-b8d9de87ff22
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	/// Alias for FP Margin. Total charges minus total costs.
 	measure 'Total Margin' = [FP Margin]
+		displayFolder: Base
 		lineageTag: 219223b6-bf98-4a47-a2ce-38ec07807251
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -28,6 +31,7 @@ table _Financial_Basic
 			    SUM(Fact_KPI_FinancialPressure[Encounter_Count])
 			)
 		formatString: \$#,0.0;(\$#,0.0);\$#,0.0
+		displayFolder: Base
 		lineageTag: a59e7ed7-5288-4dc0-809a-ceb0c24daca7
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
@@ -39,6 +43,7 @@ table _Financial_Basic
 			    SUM(Fact_KPI_FinancialPressure[Total_Charges]),
 			    SUM(Fact_KPI_FinancialPressure[Encounter_Count])
 			)
+		displayFolder: Base
 		lineageTag: f1ef9784-bb46-46cf-9b54-7707921734bb
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -50,6 +55,7 @@ table _Financial_Basic
 			    [Total Margin],
 			    SUM(Fact_KPI_FinancialPressure[Encounter_Count])
 			)
+		displayFolder: Base
 		lineageTag: f95deb85-1fdb-4bd9-8fdf-96163dc2eb8b
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -57,6 +63,7 @@ table _Financial_Basic
 	/// Count of encounters where costs exceeded charges.
 	measure 'Neg Margin Total Encounters' = SUM(Fact_KPI_FinancialPressure[Negative_Margin_Encounter_Count])
 		formatString: 0
+		displayFolder: Base
 		lineageTag: 5aa6b431-9348-41c5-8f75-add6f1f9ebba
 
 	/// Share of encounters with negative margin (costs exceed charges).
@@ -67,6 +74,7 @@ table _Financial_Basic
 			    SUM(Fact_KPI_FinancialPressure[Encounter_Count])
 			)
 		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: Base
 		lineageTag: 5a3a15b3-1591-45d1-9632-c2d3e0beb332
 
 	/// Cost-to-charge ratio weighted by encounter volume. Higher values indicate both poor margins and high volume—priority targets for intervention.
@@ -190,6 +198,7 @@ table _Financial_Basic
 	/// Alias for AVG Charge / Encounter.
 	measure 'Avg Charges per Encounter' = [AVG Charge / Encounter]
 		formatString: \$#,0.0;(\$#,0.0);\$#,0.0
+		displayFolder: Base
 		lineageTag: 72384724-e34a-4b2e-a20b-db528c447066
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
@@ -221,10 +230,8 @@ table _Financial_Basic
 			
 			VAR FacilityMargin =
 			    [Margin Pressure (Guarded)]
-			
 			VAR PGMedian =
-			    [PeerGroup Margin Median (PeerGroup safe)]
-			
+			    [PeerGroup Margin Pressure Median]
 			RETURN
 			IF (
 			    NOT ISBLANK ( FacilityMargin )
@@ -256,6 +263,27 @@ table _Financial_Basic
 		formatString: 0.00%;-0.00%;0.00%
 		displayFolder: Helper
 		lineageTag: f91af44f-6756-45a9-9225-501dfed5dd3f
+
+	/// Median cost-to-charge ratio across facilities in selected peer group. Requires single peer group in filter context; otherwise returns blank.
+	measure 'PeerGroup Margin Pressure Median' =
+			
+			VAR CurrentPG = SELECTEDVALUE(Dim_Facility[PeerGroup_Name])
+			RETURN
+			IF(
+			    NOT ISBLANK(CurrentPG),
+			    CALCULATE(
+			        MEDIANX(
+			            VALUES(Dim_Facility[Facility_Key]),
+			            [Margin Pressure]
+			        ),
+			        REMOVEFILTERS(Dim_Facility[Facility_Key]),
+			        REMOVEFILTERS(Dim_Facility[Facility_Name]),
+			        Dim_Facility[PeerGroup_Name] = CurrentPG
+			    )
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: PeerGroup Benchmarks
+		lineageTag: a25f0900-a780-4fb7-8694-8d7f830c1600
 
 	column Column
 		formatString: 0

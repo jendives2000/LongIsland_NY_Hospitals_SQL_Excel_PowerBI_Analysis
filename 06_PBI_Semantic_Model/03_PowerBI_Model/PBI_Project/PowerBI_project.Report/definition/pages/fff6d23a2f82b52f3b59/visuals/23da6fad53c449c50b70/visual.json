@@ -72,13 +72,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fact_KPI_Unplanned"
+                      "Entity": "_Volume_&_Denominators"
                     }
                   },
                   "Property": "Total Encounters (Y)"
                 }
               },
-              "queryRef": "Fact_KPI_Unplanned.Total Encounters (Y)",
+              "queryRef": "_Volume_&_Denominators.Total Encounters (Y)",
               "nativeQueryRef": "Total Encounters (Y)"
             }
           ]
@@ -110,14 +110,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fact_KPI_Unplanned"
+                      "Entity": "_Volume_&_Denominators"
                     }
                   },
-                  "Property": "Total Encounters (Y)"
+                  "Property": "Mortality Total Encounters"
                 }
               },
-              "queryRef": "Fact_KPI_Unplanned.Total Encounters (Y)",
-              "nativeQueryRef": "Total Encounters (Y)"
+              "queryRef": "_Volume_&_Denominators.Mortality Total Encounters",
+              "nativeQueryRef": "Mortality Total Encounters"
             }
           ]
         }

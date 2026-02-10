@@ -2,13 +2,6 @@
 table Fact_KPI_Unplanned
 	lineageTag: ffddfc83-a994-4118-8837-d1fe22b87a62
 
-	/// Total encounters from unplanned fact table. (Y) suffix indicates year-level grain.
-	measure 'Total Encounters (Y)' =
-			
-			SUM ( Fact_KPI_Unplanned[Total_Encounters] )
-		formatString: 0
-		lineageTag: 4cbcd7aa-79ee-415b-8c55-f1e7ef577172
-
 	column Facility_Key
 		dataType: int64
 		isHidden

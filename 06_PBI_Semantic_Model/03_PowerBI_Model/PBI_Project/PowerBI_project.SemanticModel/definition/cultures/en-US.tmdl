@@ -9742,128 +9742,118 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "dim_clinical_class.PeerGroup_severity_median": {
+			    "dim_clinical_class.tbm_PeerGroup_margin_pressure_median": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Dim_ClinicalClass",
-			          "ConceptualProperty": "PeerGroup Severity Median"
+			          "ConceptualProperty": "tbm_PeerGroup Margin Pressure Median"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "PeerGroup severity median": {
+			          "tbm_PeerGroup margin pressure median": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "peergroup severity norm": {
+			          "tbm_peergroup margin pressure norm": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.482
+			            "Weight": 0.489
 			          }
 			        },
 			        {
-			          "peergroup severity nucleus": {
+			          "tbm_peergroup margin pressure nucleus": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.482
+			            "Weight": 0.489
 			          }
 			        },
 			        {
-			          "peergroup severity midpoint": {
+			          "tbm_peergroup margin pressure midpoint": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.482
+			            "Weight": 0.489
 			          }
 			        },
 			        {
-			          "peergroup severity middle": {
+			          "tbm_peergroup margin pressure middle": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.468
+			            "Weight": 0.474
 			          }
 			        },
 			        {
-			          "peergroup severity center": {
+			          "tbm_peergroup margin pressure center": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.468
+			            "Weight": 0.474
 			          }
 			        },
 			        {
-			          "peergroup severity medium": {
+			          "tbm_peergroup margin pressure medium": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.468
+			            "Weight": 0.474
 			          }
 			        },
 			        {
-			          "peergroup severity mean": {
+			          "tbm_peergroup margin pressure mean": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.468
+			            "Weight": 0.474
 			          }
 			        },
 			        {
-			          "peergroup severity average": {
+			          "tbm_peergroup margin pressure average": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.468
+			            "Weight": 0.474
 			          }
 			        },
 			        {
-			          "peergroup severity par": {
+			          "tbm_peergroup margin pressure par": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.468
+			            "Weight": 0.474
 			          }
 			        },
 			        {
-			          "peergroup severity standard": {
+			          "tbm_peergroup margin pressure standard": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.468
-			          }
-			        },
-			        {
-			          "PG Median": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
+			            "Weight": 0.474
 			          }
 			        }
 			      ]
@@ -18827,78 +18817,68 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "dim_clinical_class.PeerGroup_severity_median_FacilitySafe": {
+			    "dim_clinical_class.tbm_PeerGroup_margin_median_PeerGroup_safe": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Dim_ClinicalClass",
-			          "ConceptualProperty": "PeerGroup Severity Median (FacilitySafe)"
+			          "ConceptualProperty": "tbm_PeerGroup Margin Median (PeerGroup safe)"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "PeerGroup severity median (FacilitySafe)": {
+			          "tbm_PeerGroup margin median (PeerGroup safe)": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "PeerGroup severity median": {
+			          "tbm_PeerGroup margin median": {
 			            "State": "Generated",
 			            "Weight": 0.75
 			          }
 			        }
 			      ]
 			    },
-			    "dim_clinical_class.PeerGroup_severity_median_RowSafe": {
+			    "dim_clinical_class.tbm_PeerGroup_LOS_median_PeerGroup_safe": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Dim_ClinicalClass",
-			          "ConceptualProperty": "PeerGroup Severity Median (RowSafe)"
+			          "ConceptualProperty": "tbm_PeerGroup LOS Median (PeerGroup safe)"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "PeerGroup severity median (RowSafe)": {
+			          "tbm_PeerGroup LOS median (PeerGroup safe)": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "PeerGroup severity median": {
+			          "tbm_PeerGroup LOS median": {
 			            "State": "Generated",
 			            "Weight": 0.75
 			          }
 			        }
 			      ]
 			    },
-			    "dim_clinical_class.PeerGroup_severity_median_PeerGroup_safe": {
+			    "dim_clinical_class.tbm_PeerGroup_LOS_median_FacilitySafe": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Dim_ClinicalClass",
-			          "ConceptualProperty": "PeerGroup Severity Median (PeerGroup safe)"
+			          "ConceptualProperty": "tbm_PeerGroup LOS Median (FacilitySafe)"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "PeerGroup severity median (PeerGroup safe)": {
+			          "tbm_PeerGroup LOS median (FacilitySafe)": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "PeerGroup severity median": {
+			          "tbm_PeerGroup LOS median": {
 			            "State": "Generated",
 			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "SMI Median": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -18911,6 +18891,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "DBG PeerGroup name": {
@@ -18967,6 +18950,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "DBG bridge rows per facility": {
@@ -19101,6 +19087,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "DBG PeerGroup count (FacilitySafe)": {
@@ -19123,6 +19112,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "DBG PeerGroup name (FacilitySafe)": {
@@ -20377,118 +20369,118 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "dim_clinical_class.PeerGroup_UA_rate_median": {
+			    "dim_clinical_class.tbm_PeerGroup_LOS_median": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Dim_ClinicalClass",
-			          "ConceptualProperty": "PeerGroup UA Rate Median"
+			          "ConceptualProperty": "tbm_PeerGroup LOS Median"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "PeerGroup UA rate median": {
+			          "tbm_PeerGroup LOS median": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "peergroup ua rate norm": {
+			          "tbm_peergroup los norm": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.489
+			            "Weight": 0.482
 			          }
 			        },
 			        {
-			          "peergroup ua rate nucleus": {
+			          "tbm_peergroup los nucleus": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.489
+			            "Weight": 0.482
 			          }
 			        },
 			        {
-			          "peergroup ua rate midpoint": {
+			          "tbm_peergroup los midpoint": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.489
+			            "Weight": 0.482
 			          }
 			        },
 			        {
-			          "peergroup ua rate middle": {
+			          "tbm_peergroup los middle": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.474
+			            "Weight": 0.468
 			          }
 			        },
 			        {
-			          "peergroup ua rate center": {
+			          "tbm_peergroup los center": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.474
+			            "Weight": 0.468
 			          }
 			        },
 			        {
-			          "peergroup ua rate medium": {
+			          "tbm_peergroup los medium": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.474
+			            "Weight": 0.468
 			          }
 			        },
 			        {
-			          "peergroup ua rate mean": {
+			          "tbm_peergroup los mean": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.474
+			            "Weight": 0.468
 			          }
 			        },
 			        {
-			          "peergroup ua rate average": {
+			          "tbm_peergroup los average": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.474
+			            "Weight": 0.468
 			          }
 			        },
 			        {
-			          "peergroup ua rate par": {
+			          "tbm_peergroup los par": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.474
+			            "Weight": 0.468
 			          }
 			        },
 			        {
-			          "peergroup ua rate standard": {
+			          "tbm_peergroup los standard": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.474
+			            "Weight": 0.468
 			          }
 			        }
 			      ]
@@ -20665,88 +20657,162 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_KPI_unplanned.total_encounters_y": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Fact_KPI_Unplanned",
-			          "ConceptualProperty": "Total Encounters (Y)"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "total encounters (y)": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "total encounters": {
-			            "State": "Generated",
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "aggregate encounter (y)": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.605
-			          }
-			        },
-			        {
-			          "overall encounter (y)": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.605
-			          }
-			        }
-			      ]
-			    },
-			    "dim_clinical_class.PeerGroup_UA_rate_median_FacilitySafe": {
+			    "dim_clinical_class.tbm_PeerGroup_UA_rate_median_PeerGroup_safe": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Dim_ClinicalClass",
-			          "ConceptualProperty": "PeerGroup UA rate Median (FacilitySafe)"
+			          "ConceptualProperty": "tbm_PeerGroup UA rate Median (PeerGroup safe)"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "PeerGroup UA rate median (FacilitySafe)": {
+			          "tbm_PeerGroup UA rate median (PeerGroup safe)": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "PeerGroup UA rate median": {
+			          "tbm_PeerGroup UA rate median": {
 			            "State": "Generated",
 			            "Weight": 0.75
 			          }
 			        }
 			      ]
 			    },
-			    "dim_clinical_class.PeerGroup_UA_rate_median_PeerGroup_safe": {
+			    "dim_clinical_class.tbm_PeerGroup_UA_rate_median_FacilitySafe": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Dim_ClinicalClass",
-			          "ConceptualProperty": "PeerGroup UA rate Median (PeerGroup safe)"
+			          "ConceptualProperty": "tbm_PeerGroup UA rate Median (FacilitySafe)"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "PeerGroup UA rate median (PeerGroup safe)": {
+			          "tbm_PeerGroup UA rate median (FacilitySafe)": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "PeerGroup UA rate median": {
+			          "tbm_PeerGroup UA rate median": {
 			            "State": "Generated",
 			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "dim_clinical_class.tbm_PeerGroup_UA_rate_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_ClinicalClass",
+			          "ConceptualProperty": "tbm_PeerGroup UA Rate Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tbm_PeerGroup UA rate median": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tbm_peergroup ua rate norm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "tbm_peergroup ua rate nucleus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "tbm_peergroup ua rate midpoint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "tbm_peergroup ua rate middle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "tbm_peergroup ua rate center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "tbm_peergroup ua rate medium": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "tbm_peergroup ua rate mean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "tbm_peergroup ua rate average": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "tbm_peergroup ua rate par": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "tbm_peergroup ua rate standard": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
 			          }
 			        }
 			      ]
@@ -22286,170 +22352,66 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "dim_clinical_class.PeerGroup_LOS_median": {
+			    "dim_clinical_class.tbm_PeerGroup_severity_median_PeerGroup_safe": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Dim_ClinicalClass",
-			          "ConceptualProperty": "PeerGroup LOS Median"
+			          "ConceptualProperty": "tbm_PeerGroup Severity Median (PeerGroup safe)"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "PeerGroup LOS median": {
+			          "tbm_PeerGroup severity median (PeerGroup safe)": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "peergroup los norm": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.482
-			          }
-			        },
-			        {
-			          "peergroup los nucleus": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.482
-			          }
-			        },
-			        {
-			          "peergroup los midpoint": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.482
-			          }
-			        },
-			        {
-			          "peergroup los middle": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.468
-			          }
-			        },
-			        {
-			          "peergroup los center": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.468
-			          }
-			        },
-			        {
-			          "peergroup los medium": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.468
-			          }
-			        },
-			        {
-			          "peergroup los mean": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.468
-			          }
-			        },
-			        {
-			          "peergroup los average": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.468
-			          }
-			        },
-			        {
-			          "peergroup los par": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.468
-			          }
-			        },
-			        {
-			          "peergroup los standard": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.468
-			          }
-			        },
-			        {
-			          "Peer-Group LOS Median": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
-			    },
-			    "dim_clinical_class.PeerGroup_LOS_median_FacilitySafe": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Dim_ClinicalClass",
-			          "ConceptualProperty": "PeerGroup LOS Median (FacilitySafe)"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "PeerGroup LOS median (FacilitySafe)": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "PeerGroup LOS median": {
+			          "tbm_PeerGroup severity median": {
 			            "State": "Generated",
 			            "Weight": 0.75
 			          }
 			        }
 			      ]
 			    },
-			    "dim_clinical_class.PeerGroup_LOS_median_PeerGroup_safe": {
+			    "dim_clinical_class.tbm_PeerGroup_severity_median_RowSafe": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Dim_ClinicalClass",
-			          "ConceptualProperty": "PeerGroup LOS Median (PeerGroup safe)"
+			          "ConceptualProperty": "tbm_PeerGroup Severity Median (RowSafe)"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "PeerGroup LOS median (PeerGroup safe)": {
+			          "tbm_PeerGroup severity median (RowSafe)": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "PeerGroup LOS median": {
+			          "tbm_PeerGroup severity median": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "dim_clinical_class.tbm_PeerGroup_severity_median_FacilitySafe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_ClinicalClass",
+			          "ConceptualProperty": "tbm_PeerGroup Severity Median (FacilitySafe)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tbm_PeerGroup severity median (FacilitySafe)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tbm_PeerGroup severity median": {
 			            "State": "Generated",
 			            "Weight": 0.75
 			          }
@@ -24842,6 +24804,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "DBG total bed-days (all facilities)": {
@@ -24870,6 +24835,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "DBG has one facility key": {
@@ -25006,118 +24974,118 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "dim_clinical_class.PeerGroup_margin_pressure_median": {
+			    "dim_clinical_class.tbm_PeerGroup_severity_median": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Dim_ClinicalClass",
-			          "ConceptualProperty": "PeerGroup Margin Pressure Median"
+			          "ConceptualProperty": "tbm_PeerGroup Severity Median"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "PeerGroup margin pressure median": {
+			          "tbm_PeerGroup severity median": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "peergroup margin pressure norm": {
+			          "tbm_peergroup severity norm": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.489
+			            "Weight": 0.482
 			          }
 			        },
 			        {
-			          "peergroup margin pressure nucleus": {
+			          "tbm_peergroup severity nucleus": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.489
+			            "Weight": 0.482
 			          }
 			        },
 			        {
-			          "peergroup margin pressure midpoint": {
+			          "tbm_peergroup severity midpoint": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.489
+			            "Weight": 0.482
 			          }
 			        },
 			        {
-			          "peergroup margin pressure middle": {
+			          "tbm_peergroup severity middle": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.474
+			            "Weight": 0.468
 			          }
 			        },
 			        {
-			          "peergroup margin pressure center": {
+			          "tbm_peergroup severity center": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.474
+			            "Weight": 0.468
 			          }
 			        },
 			        {
-			          "peergroup margin pressure medium": {
+			          "tbm_peergroup severity medium": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.474
+			            "Weight": 0.468
 			          }
 			        },
 			        {
-			          "peergroup margin pressure mean": {
+			          "tbm_peergroup severity mean": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.474
+			            "Weight": 0.468
 			          }
 			        },
 			        {
-			          "peergroup margin pressure average": {
+			          "tbm_peergroup severity average": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.474
+			            "Weight": 0.468
 			          }
 			        },
 			        {
-			          "peergroup margin pressure par": {
+			          "tbm_peergroup severity par": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.474
+			            "Weight": 0.468
 			          }
 			        },
 			        {
-			          "peergroup margin pressure standard": {
+			          "tbm_peergroup severity standard": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.474
+			            "Weight": 0.468
 			          }
 			        }
 			      ]
@@ -26042,22 +26010,22 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "dim_clinical_class.PeerGroup_margin_median_PeerGroup_safe": {
+			    "fact_KPI_unplanned.tbm_Total_encounters_y": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Dim_ClinicalClass",
-			          "ConceptualProperty": "PeerGroup Margin Median (PeerGroup safe)"
+			          "ConceptualEntity": "Fact_KPI_Unplanned",
+			          "ConceptualProperty": "tbm_Total Encounters (Y)"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "PeerGroup margin median (PeerGroup safe)": {
+			          "tbm_Total encounters (y)": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "PeerGroup margin median": {
+			          "tbm_Total encounters": {
 			            "State": "Generated",
 			            "Weight": 0.75
 			          }
@@ -38797,6 +38765,838 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "entity__volume__denominator.unplanned_encounter_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Volume_&_Denominators",
+			          "ConceptualProperty": "Unplanned Encounter Count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "unplanned encounter count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "unplanned encounter amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "entity__volume__denominator.total_encounters_y": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Volume_&_Denominators",
+			          "ConceptualProperty": "Total Encounters (Y)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total encounters (y)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total encounters": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "aggregate encounter (y)": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "overall encounter (y)": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "financial_basic.PeerGroup_margin_pressure_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Financial_Basic",
+			          "ConceptualProperty": "PeerGroup Margin Pressure Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PeerGroup margin pressure median": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "peergroup margin pressure norm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "peergroup margin pressure nucleus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "peergroup margin pressure midpoint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "peergroup margin pressure middle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "peergroup margin pressure center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "peergroup margin pressure medium": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "peergroup margin pressure mean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "peergroup margin pressure average": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "peergroup margin pressure par": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "peergroup margin pressure standard": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        }
+			      ]
+			    },
+			    "financial_basic.PeerGroup_margin_median_PeerGroup_safe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Financial_Basic",
+			          "ConceptualProperty": "PeerGroup Margin Median (PeerGroup safe)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PeerGroup margin median (PeerGroup safe)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PeerGroup margin median": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__PayerMix.risk_payer_encounters": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PayerMix",
+			          "ConceptualProperty": "Risk Payer Encounters"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "risk payer encounters": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "encounters": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "risk payer happenstance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "risk payer meeting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "happenstance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "meeting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "entity__severity.PeerGroup_severity_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Severity",
+			          "ConceptualProperty": "PeerGroup Severity Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PeerGroup severity median": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "peergroup severity norm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "peergroup severity nucleus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "peergroup severity midpoint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "peergroup severity middle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peergroup severity center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peergroup severity medium": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peergroup severity mean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peergroup severity average": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peergroup severity par": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peergroup severity standard": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "SMI Median": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "PG SMI Median": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__severity.PeerGroup_severity_median_FacilitySafe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Severity",
+			          "ConceptualProperty": "PeerGroup Severity Median (FacilitySafe)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PeerGroup severity median (FacilitySafe)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PeerGroup severity median": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__severity.PeerGroup_severity_median_RowSafe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Severity",
+			          "ConceptualProperty": "PeerGroup Severity Median (RowSafe)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PeerGroup severity median (RowSafe)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PeerGroup severity median": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__severity.PeerGroup_severity_median_PeerGroup_safe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Severity",
+			          "ConceptualProperty": "PeerGroup Severity Median (PeerGroup safe)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PeerGroup severity median (PeerGroup safe)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PeerGroup severity median": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__unplanned.PeerGroup_UA_rate_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Unplanned",
+			          "ConceptualProperty": "PeerGroup UA Rate Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PeerGroup UA rate median": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "peergroup ua rate norm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "peergroup ua rate nucleus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "peergroup ua rate midpoint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "peergroup ua rate middle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "peergroup ua rate center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "peergroup ua rate medium": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "peergroup ua rate mean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "peergroup ua rate average": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "peergroup ua rate par": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "peergroup ua rate standard": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        }
+			      ]
+			    },
+			    "entity__unplanned.PeerGroup_UA_rate_median_FacilitySafe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Unplanned",
+			          "ConceptualProperty": "PeerGroup UA rate Median (FacilitySafe)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PeerGroup UA rate median (FacilitySafe)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PeerGroup UA rate median": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__unplanned.PeerGroup_UA_rate_median_PeerGroup_safe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Unplanned",
+			          "ConceptualProperty": "PeerGroup UA rate Median (PeerGroup safe)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PeerGroup UA rate median (PeerGroup safe)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PeerGroup UA rate median": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__los.PeerGroup_LOS_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "PeerGroup LOS Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PeerGroup LOS median": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "peergroup los norm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "peergroup los nucleus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "peergroup los midpoint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "peergroup los middle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peergroup los center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peergroup los medium": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peergroup los mean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peergroup los average": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peergroup los par": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peergroup los standard": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        }
+			      ]
+			    },
+			    "entity__los.PeerGroup_LOS_median_FacilitySafe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "PeerGroup LOS Median (FacilitySafe)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PeerGroup LOS median (FacilitySafe)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PeerGroup LOS median": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__los.PeerGroup_LOS_median_PeerGroup_safe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_LOS",
+			          "ConceptualProperty": "PeerGroup LOS Median (PeerGroup safe)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PeerGroup LOS median (PeerGroup safe)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PeerGroup LOS median": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "dim_clinicalclass.peergroup_los_median": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_ClinicalClass",
+			          "ConceptualProperty": "PeerGroup LOS Median"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Peer-Group LOS Median": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_clinicalclass.peergroup_severity_median_peergroup_safe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_ClinicalClass",
+			          "ConceptualProperty": "PeerGroup Severity Median (PeerGroup safe)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SMI Median": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -39225,6 +40025,897 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_years_have_fact_KPI_dispositions"
+			        }
+			      ]
+			    },
+			    "fact_KPI_LOS_summary_has_entity__los_PeerGroup_LOS_median_PeerGroup_safe": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_LOS_summary": {
+			          "Target": {
+			            "Entity": "fact_KPI_LOS_summary"
+			          }
+			        },
+			        "entity__los.PeerGroup_LOS_median_PeerGroup_safe": {
+			          "Target": {
+			            "Entity": "entity__los.PeerGroup_LOS_median_PeerGroup_safe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_LOS_summary"
+			            },
+			            "Object": {
+			              "Role": "entity__los.PeerGroup_LOS_median_PeerGroup_safe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_LOS_summaries_have_PeerGroup_LOS_median_PeerGroup_safe"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_entity__los_PeerGroup_LOS_median_PeerGroup_safe": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "entity__los.PeerGroup_LOS_median_PeerGroup_safe": {
+			          "Target": {
+			            "Entity": "entity__los.PeerGroup_LOS_median_PeerGroup_safe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "entity__los.PeerGroup_LOS_median_PeerGroup_safe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_PeerGroup_LOS_median_PeerGroup_safe"
+			        }
+			      ]
+			    },
+			    "fact_KPI_LOS_summary_has_entity__los_PeerGroup_LOS_median_FacilitySafe": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_LOS_summary": {
+			          "Target": {
+			            "Entity": "fact_KPI_LOS_summary"
+			          }
+			        },
+			        "entity__los.PeerGroup_LOS_median_FacilitySafe": {
+			          "Target": {
+			            "Entity": "entity__los.PeerGroup_LOS_median_FacilitySafe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_LOS_summary"
+			            },
+			            "Object": {
+			              "Role": "entity__los.PeerGroup_LOS_median_FacilitySafe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_LOS_summaries_have_PeerGroup_LOS_median_FacilitySafe"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_entity__los_PeerGroup_LOS_median_FacilitySafe": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "entity__los.PeerGroup_LOS_median_FacilitySafe": {
+			          "Target": {
+			            "Entity": "entity__los.PeerGroup_LOS_median_FacilitySafe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "entity__los.PeerGroup_LOS_median_FacilitySafe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_PeerGroup_LOS_median_FacilitySafe"
+			        }
+			      ]
+			    },
+			    "fact_KPI_LOS_summary_has_entity__los_PeerGroup_LOS_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_LOS_summary": {
+			          "Target": {
+			            "Entity": "fact_KPI_LOS_summary"
+			          }
+			        },
+			        "entity__los.PeerGroup_LOS_median": {
+			          "Target": {
+			            "Entity": "entity__los.PeerGroup_LOS_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_LOS_summary"
+			            },
+			            "Object": {
+			              "Role": "entity__los.PeerGroup_LOS_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_LOS_summaries_have_PeerGroup_LOS_median"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_entity__los_PeerGroup_LOS_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "entity__los.PeerGroup_LOS_median": {
+			          "Target": {
+			            "Entity": "entity__los.PeerGroup_LOS_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "entity__los.PeerGroup_LOS_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_PeerGroup_LOS_median"
+			        }
+			      ]
+			    },
+			    "fact_KPI_unplanned_has_entity__unplanned_PeerGroup_UA_rate_median_PeerGroup_safe": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_unplanned": {
+			          "Target": {
+			            "Entity": "fact_KPI_unplanned"
+			          }
+			        },
+			        "entity__unplanned.PeerGroup_UA_rate_median_PeerGroup_safe": {
+			          "Target": {
+			            "Entity": "entity__unplanned.PeerGroup_UA_rate_median_PeerGroup_safe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_unplanned"
+			            },
+			            "Object": {
+			              "Role": "entity__unplanned.PeerGroup_UA_rate_median_PeerGroup_safe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_unplanned_have_PeerGroup_UA_rate_median_PeerGroup_safe"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_entity__unplanned_PeerGroup_UA_rate_median_PeerGroup_safe": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "entity__unplanned.PeerGroup_UA_rate_median_PeerGroup_safe": {
+			          "Target": {
+			            "Entity": "entity__unplanned.PeerGroup_UA_rate_median_PeerGroup_safe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "entity__unplanned.PeerGroup_UA_rate_median_PeerGroup_safe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_PeerGroup_UA_rate_median_PeerGroup_safe"
+			        }
+			      ]
+			    },
+			    "fact_KPI_unplanned_has_entity__unplanned_PeerGroup_UA_rate_median_FacilitySafe": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_unplanned": {
+			          "Target": {
+			            "Entity": "fact_KPI_unplanned"
+			          }
+			        },
+			        "entity__unplanned.PeerGroup_UA_rate_median_FacilitySafe": {
+			          "Target": {
+			            "Entity": "entity__unplanned.PeerGroup_UA_rate_median_FacilitySafe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_unplanned"
+			            },
+			            "Object": {
+			              "Role": "entity__unplanned.PeerGroup_UA_rate_median_FacilitySafe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_unplanned_have_PeerGroup_UA_rate_median_FacilitySafe"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_entity__unplanned_PeerGroup_UA_rate_median_FacilitySafe": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "entity__unplanned.PeerGroup_UA_rate_median_FacilitySafe": {
+			          "Target": {
+			            "Entity": "entity__unplanned.PeerGroup_UA_rate_median_FacilitySafe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "entity__unplanned.PeerGroup_UA_rate_median_FacilitySafe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_PeerGroup_UA_rate_median_FacilitySafe"
+			        }
+			      ]
+			    },
+			    "fact_KPI_unplanned_has_entity__unplanned_PeerGroup_UA_rate_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_unplanned": {
+			          "Target": {
+			            "Entity": "fact_KPI_unplanned"
+			          }
+			        },
+			        "entity__unplanned.PeerGroup_UA_rate_median": {
+			          "Target": {
+			            "Entity": "entity__unplanned.PeerGroup_UA_rate_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_unplanned"
+			            },
+			            "Object": {
+			              "Role": "entity__unplanned.PeerGroup_UA_rate_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_unplanned_have_PeerGroup_UA_rate_median"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_entity__unplanned_PeerGroup_UA_rate_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "entity__unplanned.PeerGroup_UA_rate_median": {
+			          "Target": {
+			            "Entity": "entity__unplanned.PeerGroup_UA_rate_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "entity__unplanned.PeerGroup_UA_rate_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_PeerGroup_UA_rate_median"
+			        }
+			      ]
+			    },
+			    "fact_KPI_severity_mix_has_entity__severity_PeerGroup_severity_median_PeerGroup_safe": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_SeverityMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_severity_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_severity_mix"
+			          }
+			        },
+			        "entity__severity.PeerGroup_severity_median_PeerGroup_safe": {
+			          "Target": {
+			            "Entity": "entity__severity.PeerGroup_severity_median_PeerGroup_safe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_severity_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__severity.PeerGroup_severity_median_PeerGroup_safe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_severity_mixes_have_PeerGroup_severity_median_PeerGroup_safe"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_entity__severity_PeerGroup_severity_median_PeerGroup_safe": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "entity__severity.PeerGroup_severity_median_PeerGroup_safe": {
+			          "Target": {
+			            "Entity": "entity__severity.PeerGroup_severity_median_PeerGroup_safe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "entity__severity.PeerGroup_severity_median_PeerGroup_safe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_PeerGroup_severity_median_PeerGroup_safe"
+			        }
+			      ]
+			    },
+			    "fact_KPI_severity_mix_has_entity__severity_PeerGroup_severity_median_RowSafe": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_SeverityMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_severity_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_severity_mix"
+			          }
+			        },
+			        "entity__severity.PeerGroup_severity_median_RowSafe": {
+			          "Target": {
+			            "Entity": "entity__severity.PeerGroup_severity_median_RowSafe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_severity_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__severity.PeerGroup_severity_median_RowSafe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_severity_mixes_have_PeerGroup_severity_median_RowSafe"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_entity__severity_PeerGroup_severity_median_RowSafe": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "entity__severity.PeerGroup_severity_median_RowSafe": {
+			          "Target": {
+			            "Entity": "entity__severity.PeerGroup_severity_median_RowSafe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "entity__severity.PeerGroup_severity_median_RowSafe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_PeerGroup_severity_median_RowSafe"
+			        }
+			      ]
+			    },
+			    "fact_KPI_severity_mix_has_entity__severity_PeerGroup_severity_median_FacilitySafe": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_SeverityMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_severity_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_severity_mix"
+			          }
+			        },
+			        "entity__severity.PeerGroup_severity_median_FacilitySafe": {
+			          "Target": {
+			            "Entity": "entity__severity.PeerGroup_severity_median_FacilitySafe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_severity_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__severity.PeerGroup_severity_median_FacilitySafe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_severity_mixes_have_PeerGroup_severity_median_FacilitySafe"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_entity__severity_PeerGroup_severity_median_FacilitySafe": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "entity__severity.PeerGroup_severity_median_FacilitySafe": {
+			          "Target": {
+			            "Entity": "entity__severity.PeerGroup_severity_median_FacilitySafe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "entity__severity.PeerGroup_severity_median_FacilitySafe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_PeerGroup_severity_median_FacilitySafe"
+			        }
+			      ]
+			    },
+			    "fact_KPI_severity_mix_has_entity__severity_PeerGroup_severity_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_SeverityMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_severity_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_severity_mix"
+			          }
+			        },
+			        "entity__severity.PeerGroup_severity_median": {
+			          "Target": {
+			            "Entity": "entity__severity.PeerGroup_severity_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_severity_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__severity.PeerGroup_severity_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_severity_mixes_have_PeerGroup_severity_median"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_entity__severity_PeerGroup_severity_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "entity__severity.PeerGroup_severity_median": {
+			          "Target": {
+			            "Entity": "entity__severity.PeerGroup_severity_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "entity__severity.PeerGroup_severity_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_PeerGroup_severity_median"
+			        }
+			      ]
+			    },
+			    "fact_KPI_payer_mix_has_entity__PayerMix_risk_payer_encounters": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_PayerMix"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_payer_mix": {
+			          "Target": {
+			            "Entity": "fact_KPI_payer_mix"
+			          }
+			        },
+			        "entity__PayerMix.risk_payer_encounters": {
+			          "Target": {
+			            "Entity": "entity__PayerMix.risk_payer_encounters"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_payer_mix"
+			            },
+			            "Object": {
+			              "Role": "entity__PayerMix.risk_payer_encounters"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_payer_mixes_have_risk_payer_encounters"
+			        }
+			      ]
+			    },
+			    "fact_KPI_financial_pressure_has_financial_basic_PeerGroup_margin_median_PeerGroup_safe": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_FinancialPressure"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_financial_pressure": {
+			          "Target": {
+			            "Entity": "fact_KPI_financial_pressure"
+			          }
+			        },
+			        "financial_basic.PeerGroup_margin_median_PeerGroup_safe": {
+			          "Target": {
+			            "Entity": "financial_basic.PeerGroup_margin_median_PeerGroup_safe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_financial_pressure"
+			            },
+			            "Object": {
+			              "Role": "financial_basic.PeerGroup_margin_median_PeerGroup_safe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_financial_pressures_have_PeerGroup_margin_median_PeerGroup_safe"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_financial_basic_PeerGroup_margin_median_PeerGroup_safe": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "financial_basic.PeerGroup_margin_median_PeerGroup_safe": {
+			          "Target": {
+			            "Entity": "financial_basic.PeerGroup_margin_median_PeerGroup_safe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "financial_basic.PeerGroup_margin_median_PeerGroup_safe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_PeerGroup_margin_median_PeerGroup_safe"
+			        }
+			      ]
+			    },
+			    "fact_KPI_financial_pressure_has_financial_basic_PeerGroup_margin_pressure_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_FinancialPressure"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_financial_pressure": {
+			          "Target": {
+			            "Entity": "fact_KPI_financial_pressure"
+			          }
+			        },
+			        "financial_basic.PeerGroup_margin_pressure_median": {
+			          "Target": {
+			            "Entity": "financial_basic.PeerGroup_margin_pressure_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_financial_pressure"
+			            },
+			            "Object": {
+			              "Role": "financial_basic.PeerGroup_margin_pressure_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_financial_pressures_have_PeerGroup_margin_pressure_median"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_financial_basic_PeerGroup_margin_pressure_median": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "financial_basic.PeerGroup_margin_pressure_median": {
+			          "Target": {
+			            "Entity": "financial_basic.PeerGroup_margin_pressure_median"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "financial_basic.PeerGroup_margin_pressure_median"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_PeerGroup_margin_pressure_median"
+			        }
+			      ]
+			    },
+			    "fact_KPI_unplanned_has_entity__volume__denominator_total_encounters_y": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_unplanned": {
+			          "Target": {
+			            "Entity": "fact_KPI_unplanned"
+			          }
+			        },
+			        "entity__volume__denominator.total_encounters_y": {
+			          "Target": {
+			            "Entity": "entity__volume__denominator.total_encounters_y"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_unplanned"
+			            },
+			            "Object": {
+			              "Role": "entity__volume__denominator.total_encounters_y"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_unplanned_have_total_encounters_y"
+			        }
+			      ]
+			    },
+			    "fact_KPI_unplanned_has_entity__volume__denominator_unplanned_encounter_count": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_KPI_Unplanned"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_KPI_unplanned": {
+			          "Target": {
+			            "Entity": "fact_KPI_unplanned"
+			          }
+			        },
+			        "entity__volume__denominator.unplanned_encounter_count": {
+			          "Target": {
+			            "Entity": "entity__volume__denominator.unplanned_encounter_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_KPI_unplanned"
+			            },
+			            "Object": {
+			              "Role": "entity__volume__denominator.unplanned_encounter_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_KPI_unplanned_have_unplanned_encounter_count"
 			        }
 			      ]
 			    },
@@ -43822,20 +45513,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_KPI_financial_pressure_has_dim_clinical_class_PeerGroup_margin_median_PeerGroup_safe": {
+			    "fact_KPI_unplanned_has_tbm_Total_encounters_y": {
 			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_FinancialPressure"
+			        "ConceptualEntity": "Fact_KPI_Unplanned"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fact_KPI_financial_pressure": {
+			        "fact_KPI_unplanned": {
 			          "Target": {
-			            "Entity": "fact_KPI_financial_pressure"
+			            "Entity": "fact_KPI_unplanned"
 			          }
 			        },
-			        "dim_clinical_class.PeerGroup_margin_median_PeerGroup_safe": {
+			        "fact_KPI_unplanned.tbm_Total_encounters_y": {
 			          "Target": {
-			            "Entity": "dim_clinical_class.PeerGroup_margin_median_PeerGroup_safe"
+			            "Entity": "fact_KPI_unplanned.tbm_Total_encounters_y"
 			          }
 			        }
 			      },
@@ -43843,48 +45534,15 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fact_KPI_financial_pressure"
+			              "Role": "fact_KPI_unplanned"
 			            },
 			            "Object": {
-			              "Role": "dim_clinical_class.PeerGroup_margin_median_PeerGroup_safe"
+			              "Role": "fact_KPI_unplanned.tbm_Total_encounters_y"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_KPI_financial_pressures_have_PeerGroup_margin_median_PeerGroup_safe"
-			        }
-			      ]
-			    },
-			    "dim_facility_has_dim_clinical_class_PeerGroup_margin_median_PeerGroup_safe": {
-			      "Binding": {
-			        "ConceptualEntity": "Dim_Facility"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        },
-			        "dim_clinical_class.PeerGroup_margin_median_PeerGroup_safe": {
-			          "Target": {
-			            "Entity": "dim_clinical_class.PeerGroup_margin_median_PeerGroup_safe"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "dim_clinical_class.PeerGroup_margin_median_PeerGroup_safe"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_PeerGroup_margin_median_PeerGroup_safe"
+			          "ID": "fact_KPI_unplanned_have_tbm_Total_encounters_y"
 			        }
 			      ]
 			    },
@@ -44383,20 +46041,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_KPI_financial_pressure_has_dim_clinical_class_PeerGroup_margin_pressure_median": {
+			    "fact_KPI_severity_mix_has_dim_clinical_class_tbm_PeerGroup_severity_median": {
 			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_FinancialPressure"
+			        "ConceptualEntity": "Fact_KPI_SeverityMix"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fact_KPI_financial_pressure": {
+			        "fact_KPI_severity_mix": {
 			          "Target": {
-			            "Entity": "fact_KPI_financial_pressure"
+			            "Entity": "fact_KPI_severity_mix"
 			          }
 			        },
-			        "dim_clinical_class.PeerGroup_margin_pressure_median": {
+			        "dim_clinical_class.tbm_PeerGroup_severity_median": {
 			          "Target": {
-			            "Entity": "dim_clinical_class.PeerGroup_margin_pressure_median"
+			            "Entity": "dim_clinical_class.tbm_PeerGroup_severity_median"
 			          }
 			        }
 			      },
@@ -44404,19 +46062,19 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fact_KPI_financial_pressure"
+			              "Role": "fact_KPI_severity_mix"
 			            },
 			            "Object": {
-			              "Role": "dim_clinical_class.PeerGroup_margin_pressure_median"
+			              "Role": "dim_clinical_class.tbm_PeerGroup_severity_median"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_KPI_financial_pressures_have_PeerGroup_margin_pressure_median"
+			          "ID": "fact_KPI_severity_mixes_have_tbm_PeerGroup_severity_median"
 			        }
 			      ]
 			    },
-			    "dim_facility_has_dim_clinical_class_PeerGroup_margin_pressure_median": {
+			    "dim_facility_has_dim_clinical_class_tbm_PeerGroup_severity_median": {
 			      "Binding": {
 			        "ConceptualEntity": "Dim_Facility"
 			      },
@@ -44427,9 +46085,9 @@ cultureInfo en-US
 			            "Entity": "dim_facility"
 			          }
 			        },
-			        "dim_clinical_class.PeerGroup_margin_pressure_median": {
+			        "dim_clinical_class.tbm_PeerGroup_severity_median": {
 			          "Target": {
-			            "Entity": "dim_clinical_class.PeerGroup_margin_pressure_median"
+			            "Entity": "dim_clinical_class.tbm_PeerGroup_severity_median"
 			          }
 			        }
 			      },
@@ -44440,12 +46098,12 @@ cultureInfo en-US
 			              "Role": "dim_facility"
 			            },
 			            "Object": {
-			              "Role": "dim_clinical_class.PeerGroup_margin_pressure_median"
+			              "Role": "dim_clinical_class.tbm_PeerGroup_severity_median"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_PeerGroup_margin_pressure_median"
+			          "ID": "dim_facilities_have_tbm_PeerGroup_severity_median"
 			        }
 			      ]
 			    },
@@ -44479,105 +46137,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_KPI_financial_pressures_have_margin_pressure_burden"
-			        }
-			      ]
-			    },
-			    "dim_facility_has_entity__los_DBG_has_one_facility_key": {
-			      "Binding": {
-			        "ConceptualEntity": "Dim_Facility"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_facility": {
-			          "Target": {
-			            "Entity": "dim_facility"
-			          }
-			        },
-			        "entity__los.DBG_has_one_facility_key": {
-			          "Target": {
-			            "Entity": "entity__los.DBG_has_one_facility_key"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_facility"
-			            },
-			            "Object": {
-			              "Role": "entity__los.DBG_has_one_facility_key"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_DBG_has_one_facility_key"
-			        }
-			      ]
-			    },
-			    "vw_fact_KPI_severity_mix_by_severity_has_entity__los_DBG_total_beddays_all_facilities": {
-			      "Binding": {
-			        "ConceptualEntity": "vw_Fact_KPI_SeverityMix_BySeverity"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "vw_fact_KPI_severity_mix_by_severity": {
-			          "Target": {
-			            "Entity": "vw_fact_KPI_severity_mix_by_severity"
-			          }
-			        },
-			        "entity__los.DBG_total_beddays_all_facilities": {
-			          "Target": {
-			            "Entity": "entity__los.DBG_total_beddays_all_facilities"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "vw_fact_KPI_severity_mix_by_severity"
-			            },
-			            "Object": {
-			              "Role": "entity__los.DBG_total_beddays_all_facilities"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "vw_fact_KPI_severity_mix_by_severity_have_DBG_total_beddays_all_facilities"
-			        }
-			      ]
-			    },
-			    "fact_KPI_LOS_summary_has_entity__los_DBG_total_beddays_all_facilities": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_LOS_summary": {
-			          "Target": {
-			            "Entity": "fact_KPI_LOS_summary"
-			          }
-			        },
-			        "entity__los.DBG_total_beddays_all_facilities": {
-			          "Target": {
-			            "Entity": "entity__los.DBG_total_beddays_all_facilities"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_LOS_summary"
-			            },
-			            "Object": {
-			              "Role": "entity__los.DBG_total_beddays_all_facilities"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_LOS_summaries_have_DBG_total_beddays_all_facilities"
 			        }
 			      ]
 			    },
@@ -46396,20 +47955,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_KPI_LOS_summary_has_dim_clinical_class_PeerGroup_LOS_median_PeerGroup_safe": {
+			    "fact_KPI_severity_mix_has_dim_clinical_class_tbm_PeerGroup_severity_median_FacilitySafe": {
 			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
+			        "ConceptualEntity": "Fact_KPI_SeverityMix"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fact_KPI_LOS_summary": {
+			        "fact_KPI_severity_mix": {
 			          "Target": {
-			            "Entity": "fact_KPI_LOS_summary"
+			            "Entity": "fact_KPI_severity_mix"
 			          }
 			        },
-			        "dim_clinical_class.PeerGroup_LOS_median_PeerGroup_safe": {
+			        "dim_clinical_class.tbm_PeerGroup_severity_median_FacilitySafe": {
 			          "Target": {
-			            "Entity": "dim_clinical_class.PeerGroup_LOS_median_PeerGroup_safe"
+			            "Entity": "dim_clinical_class.tbm_PeerGroup_severity_median_FacilitySafe"
 			          }
 			        }
 			      },
@@ -46417,19 +47976,19 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fact_KPI_LOS_summary"
+			              "Role": "fact_KPI_severity_mix"
 			            },
 			            "Object": {
-			              "Role": "dim_clinical_class.PeerGroup_LOS_median_PeerGroup_safe"
+			              "Role": "dim_clinical_class.tbm_PeerGroup_severity_median_FacilitySafe"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_KPI_LOS_summaries_have_PeerGroup_LOS_median_PeerGroup_safe"
+			          "ID": "fact_KPI_severity_mixes_have_tbm_PeerGroup_severity_median_FacilitySafe"
 			        }
 			      ]
 			    },
-			    "dim_facility_has_dim_clinical_class_PeerGroup_LOS_median_PeerGroup_safe": {
+			    "dim_facility_has_dim_clinical_class_tbm_PeerGroup_severity_median_FacilitySafe": {
 			      "Binding": {
 			        "ConceptualEntity": "Dim_Facility"
 			      },
@@ -46440,9 +47999,9 @@ cultureInfo en-US
 			            "Entity": "dim_facility"
 			          }
 			        },
-			        "dim_clinical_class.PeerGroup_LOS_median_PeerGroup_safe": {
+			        "dim_clinical_class.tbm_PeerGroup_severity_median_FacilitySafe": {
 			          "Target": {
-			            "Entity": "dim_clinical_class.PeerGroup_LOS_median_PeerGroup_safe"
+			            "Entity": "dim_clinical_class.tbm_PeerGroup_severity_median_FacilitySafe"
 			          }
 			        }
 			      },
@@ -46453,29 +48012,29 @@ cultureInfo en-US
 			              "Role": "dim_facility"
 			            },
 			            "Object": {
-			              "Role": "dim_clinical_class.PeerGroup_LOS_median_PeerGroup_safe"
+			              "Role": "dim_clinical_class.tbm_PeerGroup_severity_median_FacilitySafe"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_PeerGroup_LOS_median_PeerGroup_safe"
+			          "ID": "dim_facilities_have_tbm_PeerGroup_severity_median_FacilitySafe"
 			        }
 			      ]
 			    },
-			    "fact_KPI_LOS_summary_has_dim_clinical_class_PeerGroup_LOS_median_FacilitySafe": {
+			    "fact_KPI_severity_mix_has_dim_clinical_class_tbm_PeerGroup_severity_median_RowSafe": {
 			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
+			        "ConceptualEntity": "Fact_KPI_SeverityMix"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fact_KPI_LOS_summary": {
+			        "fact_KPI_severity_mix": {
 			          "Target": {
-			            "Entity": "fact_KPI_LOS_summary"
+			            "Entity": "fact_KPI_severity_mix"
 			          }
 			        },
-			        "dim_clinical_class.PeerGroup_LOS_median_FacilitySafe": {
+			        "dim_clinical_class.tbm_PeerGroup_severity_median_RowSafe": {
 			          "Target": {
-			            "Entity": "dim_clinical_class.PeerGroup_LOS_median_FacilitySafe"
+			            "Entity": "dim_clinical_class.tbm_PeerGroup_severity_median_RowSafe"
 			          }
 			        }
 			      },
@@ -46483,19 +48042,19 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fact_KPI_LOS_summary"
+			              "Role": "fact_KPI_severity_mix"
 			            },
 			            "Object": {
-			              "Role": "dim_clinical_class.PeerGroup_LOS_median_FacilitySafe"
+			              "Role": "dim_clinical_class.tbm_PeerGroup_severity_median_RowSafe"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_KPI_LOS_summaries_have_PeerGroup_LOS_median_FacilitySafe"
+			          "ID": "fact_KPI_severity_mixes_have_tbm_PeerGroup_severity_median_RowSafe"
 			        }
 			      ]
 			    },
-			    "dim_facility_has_dim_clinical_class_PeerGroup_LOS_median_FacilitySafe": {
+			    "dim_facility_has_dim_clinical_class_tbm_PeerGroup_severity_median_RowSafe": {
 			      "Binding": {
 			        "ConceptualEntity": "Dim_Facility"
 			      },
@@ -46506,9 +48065,9 @@ cultureInfo en-US
 			            "Entity": "dim_facility"
 			          }
 			        },
-			        "dim_clinical_class.PeerGroup_LOS_median_FacilitySafe": {
+			        "dim_clinical_class.tbm_PeerGroup_severity_median_RowSafe": {
 			          "Target": {
-			            "Entity": "dim_clinical_class.PeerGroup_LOS_median_FacilitySafe"
+			            "Entity": "dim_clinical_class.tbm_PeerGroup_severity_median_RowSafe"
 			          }
 			        }
 			      },
@@ -46519,29 +48078,29 @@ cultureInfo en-US
 			              "Role": "dim_facility"
 			            },
 			            "Object": {
-			              "Role": "dim_clinical_class.PeerGroup_LOS_median_FacilitySafe"
+			              "Role": "dim_clinical_class.tbm_PeerGroup_severity_median_RowSafe"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_PeerGroup_LOS_median_FacilitySafe"
+			          "ID": "dim_facilities_have_tbm_PeerGroup_severity_median_RowSafe"
 			        }
 			      ]
 			    },
-			    "fact_KPI_LOS_summary_has_dim_clinical_class_PeerGroup_LOS_median": {
+			    "fact_KPI_severity_mix_has_dim_clinical_class_tbm_PeerGroup_severity_median_PeerGroup_safe": {
 			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
+			        "ConceptualEntity": "Fact_KPI_SeverityMix"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fact_KPI_LOS_summary": {
+			        "fact_KPI_severity_mix": {
 			          "Target": {
-			            "Entity": "fact_KPI_LOS_summary"
+			            "Entity": "fact_KPI_severity_mix"
 			          }
 			        },
-			        "dim_clinical_class.PeerGroup_LOS_median": {
+			        "dim_clinical_class.tbm_PeerGroup_severity_median_PeerGroup_safe": {
 			          "Target": {
-			            "Entity": "dim_clinical_class.PeerGroup_LOS_median"
+			            "Entity": "dim_clinical_class.tbm_PeerGroup_severity_median_PeerGroup_safe"
 			          }
 			        }
 			      },
@@ -46549,19 +48108,19 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fact_KPI_LOS_summary"
+			              "Role": "fact_KPI_severity_mix"
 			            },
 			            "Object": {
-			              "Role": "dim_clinical_class.PeerGroup_LOS_median"
+			              "Role": "dim_clinical_class.tbm_PeerGroup_severity_median_PeerGroup_safe"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_KPI_LOS_summaries_have_PeerGroup_LOS_median"
+			          "ID": "fact_KPI_severity_mixes_have_tbm_PeerGroup_severity_median_PeerGroup_safe"
 			        }
 			      ]
 			    },
-			    "dim_facility_has_dim_clinical_class_PeerGroup_LOS_median": {
+			    "dim_facility_has_dim_clinical_class_tbm_PeerGroup_severity_median_PeerGroup_safe": {
 			      "Binding": {
 			        "ConceptualEntity": "Dim_Facility"
 			      },
@@ -46572,9 +48131,9 @@ cultureInfo en-US
 			            "Entity": "dim_facility"
 			          }
 			        },
-			        "dim_clinical_class.PeerGroup_LOS_median": {
+			        "dim_clinical_class.tbm_PeerGroup_severity_median_PeerGroup_safe": {
 			          "Target": {
-			            "Entity": "dim_clinical_class.PeerGroup_LOS_median"
+			            "Entity": "dim_clinical_class.tbm_PeerGroup_severity_median_PeerGroup_safe"
 			          }
 			        }
 			      },
@@ -46585,12 +48144,12 @@ cultureInfo en-US
 			              "Role": "dim_facility"
 			            },
 			            "Object": {
-			              "Role": "dim_clinical_class.PeerGroup_LOS_median"
+			              "Role": "dim_clinical_class.tbm_PeerGroup_severity_median_PeerGroup_safe"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_PeerGroup_LOS_median"
+			          "ID": "dim_facilities_have_tbm_PeerGroup_severity_median_PeerGroup_safe"
 			        }
 			      ]
 			    },
@@ -47518,7 +49077,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_KPI_unplanned_has_dim_clinical_class_PeerGroup_UA_rate_median_PeerGroup_safe": {
+			    "fact_KPI_unplanned_has_dim_clinical_class_tbm_PeerGroup_UA_rate_median": {
 			      "Binding": {
 			        "ConceptualEntity": "Fact_KPI_Unplanned"
 			      },
@@ -47529,9 +49088,9 @@ cultureInfo en-US
 			            "Entity": "fact_KPI_unplanned"
 			          }
 			        },
-			        "dim_clinical_class.PeerGroup_UA_rate_median_PeerGroup_safe": {
+			        "dim_clinical_class.tbm_PeerGroup_UA_rate_median": {
 			          "Target": {
-			            "Entity": "dim_clinical_class.PeerGroup_UA_rate_median_PeerGroup_safe"
+			            "Entity": "dim_clinical_class.tbm_PeerGroup_UA_rate_median"
 			          }
 			        }
 			      },
@@ -47542,16 +49101,16 @@ cultureInfo en-US
 			              "Role": "fact_KPI_unplanned"
 			            },
 			            "Object": {
-			              "Role": "dim_clinical_class.PeerGroup_UA_rate_median_PeerGroup_safe"
+			              "Role": "dim_clinical_class.tbm_PeerGroup_UA_rate_median"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_KPI_unplanned_have_PeerGroup_UA_rate_median_PeerGroup_safe"
+			          "ID": "fact_KPI_unplanned_have_tbm_PeerGroup_UA_rate_median"
 			        }
 			      ]
 			    },
-			    "dim_facility_has_dim_clinical_class_PeerGroup_UA_rate_median_PeerGroup_safe": {
+			    "dim_facility_has_dim_clinical_class_tbm_PeerGroup_UA_rate_median": {
 			      "Binding": {
 			        "ConceptualEntity": "Dim_Facility"
 			      },
@@ -47562,9 +49121,9 @@ cultureInfo en-US
 			            "Entity": "dim_facility"
 			          }
 			        },
-			        "dim_clinical_class.PeerGroup_UA_rate_median_PeerGroup_safe": {
+			        "dim_clinical_class.tbm_PeerGroup_UA_rate_median": {
 			          "Target": {
-			            "Entity": "dim_clinical_class.PeerGroup_UA_rate_median_PeerGroup_safe"
+			            "Entity": "dim_clinical_class.tbm_PeerGroup_UA_rate_median"
 			          }
 			        }
 			      },
@@ -47575,16 +49134,16 @@ cultureInfo en-US
 			              "Role": "dim_facility"
 			            },
 			            "Object": {
-			              "Role": "dim_clinical_class.PeerGroup_UA_rate_median_PeerGroup_safe"
+			              "Role": "dim_clinical_class.tbm_PeerGroup_UA_rate_median"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_PeerGroup_UA_rate_median_PeerGroup_safe"
+			          "ID": "dim_facilities_have_tbm_PeerGroup_UA_rate_median"
 			        }
 			      ]
 			    },
-			    "fact_KPI_unplanned_has_dim_clinical_class_PeerGroup_UA_rate_median_FacilitySafe": {
+			    "fact_KPI_unplanned_has_dim_clinical_class_tbm_PeerGroup_UA_rate_median_FacilitySafe": {
 			      "Binding": {
 			        "ConceptualEntity": "Fact_KPI_Unplanned"
 			      },
@@ -47595,9 +49154,9 @@ cultureInfo en-US
 			            "Entity": "fact_KPI_unplanned"
 			          }
 			        },
-			        "dim_clinical_class.PeerGroup_UA_rate_median_FacilitySafe": {
+			        "dim_clinical_class.tbm_PeerGroup_UA_rate_median_FacilitySafe": {
 			          "Target": {
-			            "Entity": "dim_clinical_class.PeerGroup_UA_rate_median_FacilitySafe"
+			            "Entity": "dim_clinical_class.tbm_PeerGroup_UA_rate_median_FacilitySafe"
 			          }
 			        }
 			      },
@@ -47608,16 +49167,16 @@ cultureInfo en-US
 			              "Role": "fact_KPI_unplanned"
 			            },
 			            "Object": {
-			              "Role": "dim_clinical_class.PeerGroup_UA_rate_median_FacilitySafe"
+			              "Role": "dim_clinical_class.tbm_PeerGroup_UA_rate_median_FacilitySafe"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_KPI_unplanned_have_PeerGroup_UA_rate_median_FacilitySafe"
+			          "ID": "fact_KPI_unplanned_have_tbm_PeerGroup_UA_rate_median_FacilitySafe"
 			        }
 			      ]
 			    },
-			    "dim_facility_has_dim_clinical_class_PeerGroup_UA_rate_median_FacilitySafe": {
+			    "dim_facility_has_dim_clinical_class_tbm_PeerGroup_UA_rate_median_FacilitySafe": {
 			      "Binding": {
 			        "ConceptualEntity": "Dim_Facility"
 			      },
@@ -47628,9 +49187,9 @@ cultureInfo en-US
 			            "Entity": "dim_facility"
 			          }
 			        },
-			        "dim_clinical_class.PeerGroup_UA_rate_median_FacilitySafe": {
+			        "dim_clinical_class.tbm_PeerGroup_UA_rate_median_FacilitySafe": {
 			          "Target": {
-			            "Entity": "dim_clinical_class.PeerGroup_UA_rate_median_FacilitySafe"
+			            "Entity": "dim_clinical_class.tbm_PeerGroup_UA_rate_median_FacilitySafe"
 			          }
 			        }
 			      },
@@ -47641,16 +49200,16 @@ cultureInfo en-US
 			              "Role": "dim_facility"
 			            },
 			            "Object": {
-			              "Role": "dim_clinical_class.PeerGroup_UA_rate_median_FacilitySafe"
+			              "Role": "dim_clinical_class.tbm_PeerGroup_UA_rate_median_FacilitySafe"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_PeerGroup_UA_rate_median_FacilitySafe"
+			          "ID": "dim_facilities_have_tbm_PeerGroup_UA_rate_median_FacilitySafe"
 			        }
 			      ]
 			    },
-			    "fact_KPI_unplanned_has_total_encounters_y": {
+			    "fact_KPI_unplanned_has_dim_clinical_class_tbm_PeerGroup_UA_rate_median_PeerGroup_safe": {
 			      "Binding": {
 			        "ConceptualEntity": "Fact_KPI_Unplanned"
 			      },
@@ -47661,9 +49220,9 @@ cultureInfo en-US
 			            "Entity": "fact_KPI_unplanned"
 			          }
 			        },
-			        "fact_KPI_unplanned.total_encounters_y": {
+			        "dim_clinical_class.tbm_PeerGroup_UA_rate_median_PeerGroup_safe": {
 			          "Target": {
-			            "Entity": "fact_KPI_unplanned.total_encounters_y"
+			            "Entity": "dim_clinical_class.tbm_PeerGroup_UA_rate_median_PeerGroup_safe"
 			          }
 			        }
 			      },
@@ -47674,12 +49233,45 @@ cultureInfo en-US
 			              "Role": "fact_KPI_unplanned"
 			            },
 			            "Object": {
-			              "Role": "fact_KPI_unplanned.total_encounters_y"
+			              "Role": "dim_clinical_class.tbm_PeerGroup_UA_rate_median_PeerGroup_safe"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_KPI_unplanned_have_total_encounters_y"
+			          "ID": "fact_KPI_unplanned_have_tbm_PeerGroup_UA_rate_median_PeerGroup_safe"
+			        }
+			      ]
+			    },
+			    "dim_facility_has_dim_clinical_class_tbm_PeerGroup_UA_rate_median_PeerGroup_safe": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Facility"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_facility": {
+			          "Target": {
+			            "Entity": "dim_facility"
+			          }
+			        },
+			        "dim_clinical_class.tbm_PeerGroup_UA_rate_median_PeerGroup_safe": {
+			          "Target": {
+			            "Entity": "dim_clinical_class.tbm_PeerGroup_UA_rate_median_PeerGroup_safe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_facility"
+			            },
+			            "Object": {
+			              "Role": "dim_clinical_class.tbm_PeerGroup_UA_rate_median_PeerGroup_safe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_facilities_have_tbm_PeerGroup_UA_rate_median_PeerGroup_safe"
 			        }
 			      ]
 			    },
@@ -47782,20 +49374,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_KPI_unplanned_has_dim_clinical_class_PeerGroup_UA_rate_median": {
+			    "fact_KPI_LOS_summary_has_dim_clinical_class_tbm_PeerGroup_LOS_median": {
 			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_Unplanned"
+			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fact_KPI_unplanned": {
+			        "fact_KPI_LOS_summary": {
 			          "Target": {
-			            "Entity": "fact_KPI_unplanned"
+			            "Entity": "fact_KPI_LOS_summary"
 			          }
 			        },
-			        "dim_clinical_class.PeerGroup_UA_rate_median": {
+			        "dim_clinical_class.tbm_PeerGroup_LOS_median": {
 			          "Target": {
-			            "Entity": "dim_clinical_class.PeerGroup_UA_rate_median"
+			            "Entity": "dim_clinical_class.tbm_PeerGroup_LOS_median"
 			          }
 			        }
 			      },
@@ -47803,19 +49395,19 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fact_KPI_unplanned"
+			              "Role": "fact_KPI_LOS_summary"
 			            },
 			            "Object": {
-			              "Role": "dim_clinical_class.PeerGroup_UA_rate_median"
+			              "Role": "dim_clinical_class.tbm_PeerGroup_LOS_median"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_KPI_unplanned_have_PeerGroup_UA_rate_median"
+			          "ID": "fact_KPI_LOS_summaries_have_tbm_PeerGroup_LOS_median"
 			        }
 			      ]
 			    },
-			    "dim_facility_has_dim_clinical_class_PeerGroup_UA_rate_median": {
+			    "dim_facility_has_dim_clinical_class_tbm_PeerGroup_LOS_median": {
 			      "Binding": {
 			        "ConceptualEntity": "Dim_Facility"
 			      },
@@ -47826,9 +49418,9 @@ cultureInfo en-US
 			            "Entity": "dim_facility"
 			          }
 			        },
-			        "dim_clinical_class.PeerGroup_UA_rate_median": {
+			        "dim_clinical_class.tbm_PeerGroup_LOS_median": {
 			          "Target": {
-			            "Entity": "dim_clinical_class.PeerGroup_UA_rate_median"
+			            "Entity": "dim_clinical_class.tbm_PeerGroup_LOS_median"
 			          }
 			        }
 			      },
@@ -47839,12 +49431,12 @@ cultureInfo en-US
 			              "Role": "dim_facility"
 			            },
 			            "Object": {
-			              "Role": "dim_clinical_class.PeerGroup_UA_rate_median"
+			              "Role": "dim_clinical_class.tbm_PeerGroup_LOS_median"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_PeerGroup_UA_rate_median"
+			          "ID": "dim_facilities_have_tbm_PeerGroup_LOS_median"
 			        }
 			      ]
 			    },
@@ -48871,20 +50463,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "dim_peer_group_has_DBG_PeerGroup_name_FacilitySafe": {
+			    "fact_KPI_LOS_summary_has_dim_clinical_class_tbm_PeerGroup_LOS_median_FacilitySafe": {
 			      "Binding": {
-			        "ConceptualEntity": "Dim_PeerGroup"
+			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "dim_peer_group": {
+			        "fact_KPI_LOS_summary": {
 			          "Target": {
-			            "Entity": "dim_peer_group"
+			            "Entity": "fact_KPI_LOS_summary"
 			          }
 			        },
-			        "dim_peer_group.DBG_PeerGroup_name_FacilitySafe": {
+			        "dim_clinical_class.tbm_PeerGroup_LOS_median_FacilitySafe": {
 			          "Target": {
-			            "Entity": "dim_peer_group.DBG_PeerGroup_name_FacilitySafe"
+			            "Entity": "dim_clinical_class.tbm_PeerGroup_LOS_median_FacilitySafe"
 			          }
 			        }
 			      },
@@ -48892,151 +50484,19 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "dim_peer_group"
+			              "Role": "fact_KPI_LOS_summary"
 			            },
 			            "Object": {
-			              "Role": "dim_peer_group.DBG_PeerGroup_name_FacilitySafe"
+			              "Role": "dim_clinical_class.tbm_PeerGroup_LOS_median_FacilitySafe"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_peer_groups_have_DBG_PeerGroup_name_FacilitySafe"
+			          "ID": "fact_KPI_LOS_summaries_have_tbm_PeerGroup_LOS_median_FacilitySafe"
 			        }
 			      ]
 			    },
-			    "dim_peer_group_has_DBG_PeerGroup_count_FacilitySafe": {
-			      "Binding": {
-			        "ConceptualEntity": "Dim_PeerGroup"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_peer_group": {
-			          "Target": {
-			            "Entity": "dim_peer_group"
-			          }
-			        },
-			        "dim_peer_group.DBG_PeerGroup_count_FacilitySafe": {
-			          "Target": {
-			            "Entity": "dim_peer_group.DBG_PeerGroup_count_FacilitySafe"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_peer_group"
-			            },
-			            "Object": {
-			              "Role": "dim_peer_group.DBG_PeerGroup_count_FacilitySafe"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_peer_groups_have_DBG_PeerGroup_count_FacilitySafe"
-			        }
-			      ]
-			    },
-			    "bridge_facility_peer_group_has_dim_peer_group_DBG_bridge_rows_per_facility": {
-			      "Binding": {
-			        "ConceptualEntity": "Bridge_Facility_PeerGroup"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "bridge_facility_peer_group": {
-			          "Target": {
-			            "Entity": "bridge_facility_peer_group"
-			          }
-			        },
-			        "dim_peer_group.DBG_bridge_rows_per_facility": {
-			          "Target": {
-			            "Entity": "dim_peer_group.DBG_bridge_rows_per_facility"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "bridge_facility_peer_group"
-			            },
-			            "Object": {
-			              "Role": "dim_peer_group.DBG_bridge_rows_per_facility"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "bridge_facility_peer_groups_have_DBG_bridge_rows_per_facility"
-			        }
-			      ]
-			    },
-			    "dim_peer_group_has_DBG_PeerGroup_name": {
-			      "Binding": {
-			        "ConceptualEntity": "Dim_PeerGroup"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_peer_group": {
-			          "Target": {
-			            "Entity": "dim_peer_group"
-			          }
-			        },
-			        "dim_peer_group.DBG_PeerGroup_name": {
-			          "Target": {
-			            "Entity": "dim_peer_group.DBG_PeerGroup_name"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_peer_group"
-			            },
-			            "Object": {
-			              "Role": "dim_peer_group.DBG_PeerGroup_name"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_peer_groups_have_DBG_PeerGroup_name"
-			        }
-			      ]
-			    },
-			    "fact_KPI_severity_mix_has_dim_clinical_class_PeerGroup_severity_median_PeerGroup_safe": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_SeverityMix"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_KPI_severity_mix": {
-			          "Target": {
-			            "Entity": "fact_KPI_severity_mix"
-			          }
-			        },
-			        "dim_clinical_class.PeerGroup_severity_median_PeerGroup_safe": {
-			          "Target": {
-			            "Entity": "dim_clinical_class.PeerGroup_severity_median_PeerGroup_safe"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_KPI_severity_mix"
-			            },
-			            "Object": {
-			              "Role": "dim_clinical_class.PeerGroup_severity_median_PeerGroup_safe"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_KPI_severity_mixes_have_PeerGroup_severity_median_PeerGroup_safe"
-			        }
-			      ]
-			    },
-			    "dim_facility_has_dim_clinical_class_PeerGroup_severity_median_PeerGroup_safe": {
+			    "dim_facility_has_dim_clinical_class_tbm_PeerGroup_LOS_median_FacilitySafe": {
 			      "Binding": {
 			        "ConceptualEntity": "Dim_Facility"
 			      },
@@ -49047,9 +50507,9 @@ cultureInfo en-US
 			            "Entity": "dim_facility"
 			          }
 			        },
-			        "dim_clinical_class.PeerGroup_severity_median_PeerGroup_safe": {
+			        "dim_clinical_class.tbm_PeerGroup_LOS_median_FacilitySafe": {
 			          "Target": {
-			            "Entity": "dim_clinical_class.PeerGroup_severity_median_PeerGroup_safe"
+			            "Entity": "dim_clinical_class.tbm_PeerGroup_LOS_median_FacilitySafe"
 			          }
 			        }
 			      },
@@ -49060,29 +50520,29 @@ cultureInfo en-US
 			              "Role": "dim_facility"
 			            },
 			            "Object": {
-			              "Role": "dim_clinical_class.PeerGroup_severity_median_PeerGroup_safe"
+			              "Role": "dim_clinical_class.tbm_PeerGroup_LOS_median_FacilitySafe"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_PeerGroup_severity_median_PeerGroup_safe"
+			          "ID": "dim_facilities_have_tbm_PeerGroup_LOS_median_FacilitySafe"
 			        }
 			      ]
 			    },
-			    "fact_KPI_severity_mix_has_dim_clinical_class_PeerGroup_severity_median_RowSafe": {
+			    "fact_KPI_LOS_summary_has_dim_clinical_class_tbm_PeerGroup_LOS_median_PeerGroup_safe": {
 			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_SeverityMix"
+			        "ConceptualEntity": "Fact_KPI_LOS_Summary"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fact_KPI_severity_mix": {
+			        "fact_KPI_LOS_summary": {
 			          "Target": {
-			            "Entity": "fact_KPI_severity_mix"
+			            "Entity": "fact_KPI_LOS_summary"
 			          }
 			        },
-			        "dim_clinical_class.PeerGroup_severity_median_RowSafe": {
+			        "dim_clinical_class.tbm_PeerGroup_LOS_median_PeerGroup_safe": {
 			          "Target": {
-			            "Entity": "dim_clinical_class.PeerGroup_severity_median_RowSafe"
+			            "Entity": "dim_clinical_class.tbm_PeerGroup_LOS_median_PeerGroup_safe"
 			          }
 			        }
 			      },
@@ -49090,19 +50550,19 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fact_KPI_severity_mix"
+			              "Role": "fact_KPI_LOS_summary"
 			            },
 			            "Object": {
-			              "Role": "dim_clinical_class.PeerGroup_severity_median_RowSafe"
+			              "Role": "dim_clinical_class.tbm_PeerGroup_LOS_median_PeerGroup_safe"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_KPI_severity_mixes_have_PeerGroup_severity_median_RowSafe"
+			          "ID": "fact_KPI_LOS_summaries_have_tbm_PeerGroup_LOS_median_PeerGroup_safe"
 			        }
 			      ]
 			    },
-			    "dim_facility_has_dim_clinical_class_PeerGroup_severity_median_RowSafe": {
+			    "dim_facility_has_dim_clinical_class_tbm_PeerGroup_LOS_median_PeerGroup_safe": {
 			      "Binding": {
 			        "ConceptualEntity": "Dim_Facility"
 			      },
@@ -49113,9 +50573,9 @@ cultureInfo en-US
 			            "Entity": "dim_facility"
 			          }
 			        },
-			        "dim_clinical_class.PeerGroup_severity_median_RowSafe": {
+			        "dim_clinical_class.tbm_PeerGroup_LOS_median_PeerGroup_safe": {
 			          "Target": {
-			            "Entity": "dim_clinical_class.PeerGroup_severity_median_RowSafe"
+			            "Entity": "dim_clinical_class.tbm_PeerGroup_LOS_median_PeerGroup_safe"
 			          }
 			        }
 			      },
@@ -49126,29 +50586,29 @@ cultureInfo en-US
 			              "Role": "dim_facility"
 			            },
 			            "Object": {
-			              "Role": "dim_clinical_class.PeerGroup_severity_median_RowSafe"
+			              "Role": "dim_clinical_class.tbm_PeerGroup_LOS_median_PeerGroup_safe"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_PeerGroup_severity_median_RowSafe"
+			          "ID": "dim_facilities_have_tbm_PeerGroup_LOS_median_PeerGroup_safe"
 			        }
 			      ]
 			    },
-			    "fact_KPI_severity_mix_has_dim_clinical_class_PeerGroup_severity_median_FacilitySafe": {
+			    "fact_KPI_financial_pressure_has_dim_clinical_class_tbm_PeerGroup_margin_median_PeerGroup_safe": {
 			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_SeverityMix"
+			        "ConceptualEntity": "Fact_KPI_FinancialPressure"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fact_KPI_severity_mix": {
+			        "fact_KPI_financial_pressure": {
 			          "Target": {
-			            "Entity": "fact_KPI_severity_mix"
+			            "Entity": "fact_KPI_financial_pressure"
 			          }
 			        },
-			        "dim_clinical_class.PeerGroup_severity_median_FacilitySafe": {
+			        "dim_clinical_class.tbm_PeerGroup_margin_median_PeerGroup_safe": {
 			          "Target": {
-			            "Entity": "dim_clinical_class.PeerGroup_severity_median_FacilitySafe"
+			            "Entity": "dim_clinical_class.tbm_PeerGroup_margin_median_PeerGroup_safe"
 			          }
 			        }
 			      },
@@ -49156,19 +50616,19 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fact_KPI_severity_mix"
+			              "Role": "fact_KPI_financial_pressure"
 			            },
 			            "Object": {
-			              "Role": "dim_clinical_class.PeerGroup_severity_median_FacilitySafe"
+			              "Role": "dim_clinical_class.tbm_PeerGroup_margin_median_PeerGroup_safe"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_KPI_severity_mixes_have_PeerGroup_severity_median_FacilitySafe"
+			          "ID": "fact_KPI_financial_pressures_have_tbm_PeerGroup_margin_median_PeerGroup_safe"
 			        }
 			      ]
 			    },
-			    "dim_facility_has_dim_clinical_class_PeerGroup_severity_median_FacilitySafe": {
+			    "dim_facility_has_dim_clinical_class_tbm_PeerGroup_margin_median_PeerGroup_safe": {
 			      "Binding": {
 			        "ConceptualEntity": "Dim_Facility"
 			      },
@@ -49179,9 +50639,9 @@ cultureInfo en-US
 			            "Entity": "dim_facility"
 			          }
 			        },
-			        "dim_clinical_class.PeerGroup_severity_median_FacilitySafe": {
+			        "dim_clinical_class.tbm_PeerGroup_margin_median_PeerGroup_safe": {
 			          "Target": {
-			            "Entity": "dim_clinical_class.PeerGroup_severity_median_FacilitySafe"
+			            "Entity": "dim_clinical_class.tbm_PeerGroup_margin_median_PeerGroup_safe"
 			          }
 			        }
 			      },
@@ -49192,12 +50652,12 @@ cultureInfo en-US
 			              "Role": "dim_facility"
 			            },
 			            "Object": {
-			              "Role": "dim_clinical_class.PeerGroup_severity_median_FacilitySafe"
+			              "Role": "dim_clinical_class.tbm_PeerGroup_margin_median_PeerGroup_safe"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_PeerGroup_severity_median_FacilitySafe"
+			          "ID": "dim_facilities_have_tbm_PeerGroup_margin_median_PeerGroup_safe"
 			        }
 			      ]
 			    },
@@ -52054,20 +53514,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_KPI_severity_mix_has_dim_clinical_class_PeerGroup_severity_median": {
+			    "fact_KPI_financial_pressure_has_dim_clinical_class_tbm_PeerGroup_margin_pressure_median": {
 			      "Binding": {
-			        "ConceptualEntity": "Fact_KPI_SeverityMix"
+			        "ConceptualEntity": "Fact_KPI_FinancialPressure"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fact_KPI_severity_mix": {
+			        "fact_KPI_financial_pressure": {
 			          "Target": {
-			            "Entity": "fact_KPI_severity_mix"
+			            "Entity": "fact_KPI_financial_pressure"
 			          }
 			        },
-			        "dim_clinical_class.PeerGroup_severity_median": {
+			        "dim_clinical_class.tbm_PeerGroup_margin_pressure_median": {
 			          "Target": {
-			            "Entity": "dim_clinical_class.PeerGroup_severity_median"
+			            "Entity": "dim_clinical_class.tbm_PeerGroup_margin_pressure_median"
 			          }
 			        }
 			      },
@@ -52075,19 +53535,19 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fact_KPI_severity_mix"
+			              "Role": "fact_KPI_financial_pressure"
 			            },
 			            "Object": {
-			              "Role": "dim_clinical_class.PeerGroup_severity_median"
+			              "Role": "dim_clinical_class.tbm_PeerGroup_margin_pressure_median"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_KPI_severity_mixes_have_PeerGroup_severity_median"
+			          "ID": "fact_KPI_financial_pressures_have_tbm_PeerGroup_margin_pressure_median"
 			        }
 			      ]
 			    },
-			    "dim_facility_has_dim_clinical_class_PeerGroup_severity_median": {
+			    "dim_facility_has_dim_clinical_class_tbm_PeerGroup_margin_pressure_median": {
 			      "Binding": {
 			        "ConceptualEntity": "Dim_Facility"
 			      },
@@ -52098,9 +53558,9 @@ cultureInfo en-US
 			            "Entity": "dim_facility"
 			          }
 			        },
-			        "dim_clinical_class.PeerGroup_severity_median": {
+			        "dim_clinical_class.tbm_PeerGroup_margin_pressure_median": {
 			          "Target": {
-			            "Entity": "dim_clinical_class.PeerGroup_severity_median"
+			            "Entity": "dim_clinical_class.tbm_PeerGroup_margin_pressure_median"
 			          }
 			        }
 			      },
@@ -52111,12 +53571,12 @@ cultureInfo en-US
 			              "Role": "dim_facility"
 			            },
 			            "Object": {
-			              "Role": "dim_clinical_class.PeerGroup_severity_median"
+			              "Role": "dim_clinical_class.tbm_PeerGroup_margin_pressure_median"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_facilities_have_PeerGroup_severity_median"
+			          "ID": "dim_facilities_have_tbm_PeerGroup_margin_pressure_median"
 			        }
 			      ]
 			    },

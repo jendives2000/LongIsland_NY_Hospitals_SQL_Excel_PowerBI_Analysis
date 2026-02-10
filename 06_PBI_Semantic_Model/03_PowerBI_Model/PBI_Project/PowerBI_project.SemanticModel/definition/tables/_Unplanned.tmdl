@@ -148,7 +148,7 @@ table _Unplanned
 
 	/// Alias for PeerGroup UA rate Median (FacilitySafe).
 	measure 'UA rate Peer Median' = ```
-			Dim_ClinicalClass[PeerGroup UA rate Median (FacilitySafe)]
+			[PeerGroup UA Rate Median (FacilitySafe)]
 			
 			```
 		formatString: 0.00%;-0.00%;0.00%
@@ -157,7 +157,7 @@ table _Unplanned
 
 	/// Alias for PeerGroup UA rate Median (PeerGroup safe).
 	measure 'UA rate Peer Median (group safe)' = ```
-			Dim_ClinicalClass[PeerGroup UA rate Median (PeerGroup safe)]
+			[PeerGroup UA Rate Median (FacilitySafe)]
 			
 			```
 		formatString: 0.00%;-0.00%;0.00%
@@ -171,7 +171,7 @@ table _Unplanned
 			    NOT HASONEVALUE(Dim_Facility[Facility_Key]),
 			    BLANK(),
 			    VAR uar = [Unplanned Admission Rate]
-			    VAR med = [PeerGroup UA rate Median (PeerGroup safe)]
+			    VAR med = [PeerGroup UA Rate Median (FacilitySafe)]
 			    RETURN IF(NOT ISBLANK(uar) && uar > med, 1, 0)
 			)
 		formatString: 0
@@ -204,7 +204,7 @@ table _Unplanned
 			        ALL(Dim_Facility[PeerGroup_Name]),
 			        NOT ISBLANK(Dim_Facility[PeerGroup_Name])
 			    ),
-			    CALCULATE( [PeerGroup UA rate Median] )
+			    CALCULATE( [PeerGroup UA Rate Median] )
 			)
 		formatString: 0.00%;-0.00%;0.00%
 		displayFolder: Helper
@@ -240,15 +240,12 @@ table _Unplanned
 			    SUMMARIZE (
 			        ALL ( Dim_Facility[PeerGroup_Name] ),
 			        Dim_Facility[PeerGroup_Name],
-			        "PG_Median", [PeerGroup UA rate Median]
+			        "PG_Median", [PeerGroup UA Rate Median]
 			    )
-			
 			VAR min_pg =
 			    MINX ( pg_table, [PG_Median] )
-			
 			VAR max_pg =
 			    MAXX ( pg_table, [PG_Median] )
-			
 			RETURN
 			FORMAT ( min_pg, "0%" )
 			    & " to "
@@ -284,6 +281,44 @@ table _Unplanned
 		formatString: 0
 		displayFolder: Helper
 		lineageTag: d06dabca-55d0-4ea4-b52c-03abec8f73e2
+
+	/// Median UA rate across facilities in selected peer group. Requires single peer group in filter context; otherwise returns blank.
+	measure 'PeerGroup UA Rate Median' = ```
+			
+			VAR pg = SELECTEDVALUE(Dim_Facility[PeerGroup_Name])
+			RETURN
+			IF(
+			    NOT ISBLANK(pg),
+			    CALCULATE(
+			        MEDIANX(
+			            VALUES(Dim_Facility[Facility_Key]),
+			            [Unplanned Admission Rate]
+			        ),
+			        ALL(Dim_Facility),
+			        Dim_Facility[PeerGroup_Name] = pg
+			    )
+			)
+			
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: PeerGroup Benchmarks
+		lineageTag: 1e3437e6-d82f-4926-9dea-f5cc04c05b4d
+
+	/// Peer group UA rate median that works per facility row. Removes facility filter to calculate median across peer group.
+	measure 'PeerGroup UA Rate Median (FacilitySafe)' =
+			
+			VAR FacilitiesInSelectedPeerGroups =
+			    CALCULATETABLE(
+			        VALUES(Dim_Facility[Facility_Key]),
+			        REMOVEFILTERS(Dim_Facility)
+			    )
+			RETURN
+			MEDIANX(
+			    FacilitiesInSelectedPeerGroups,
+			    CALCULATE([Unplanned Admission Rate], REMOVEFILTERS(Dim_Facility))
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: PeerGroup Benchmarks
 
 	column Column
 		isHidden

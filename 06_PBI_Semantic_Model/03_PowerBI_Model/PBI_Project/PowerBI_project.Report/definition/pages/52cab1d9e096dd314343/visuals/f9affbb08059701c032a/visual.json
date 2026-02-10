@@ -28,7 +28,7 @@
               },
               "queryRef": "Dim_Facility.PeerGroup_Name",
               "nativeQueryRef": "PeerGroup_Name",
-              "active": true
+              "active": false
             },
             {
               "field": {
@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": false
+              "active": true
             }
           ]
         },
@@ -73,10 +73,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Dim_ClinicalClass"
+                    "Entity": "_LOS"
                   }
                 },
-                "Property": "PeerGroup UA Rate Median"
+                "Property": "Excess LOS Days"
               }
             },
             "direction": "Descending"

@@ -80,7 +80,7 @@ table _LOS
 	measure 'Is Above Own PG LOS Median' = ```
 			
 			VAR v = [AVG LOS]
-			VAR m = [PeerGroup LOS Median (PeerGroup safe)]
+			VAR m = [PeerGroup LOS Median (FacilitySafe)]
 			RETURN
 			IF(
 			    NOT ISBLANK(v)
@@ -183,9 +183,9 @@ table _LOS
 			
 			VAR pgList = VALUES(Dim_Facility[PeerGroup_Name])
 			VAR minMed =
-			    MINX(pgList, CALCULATE([PeerGroup LOS Median (PeerGroup safe)]))
+			    MINX(pgList, CALCULATE([PeerGroup LOS Median]))
 			VAR maxMed =
-			    MAXX(pgList, CALCULATE([PeerGroup LOS Median (PeerGroup safe)]))
+			    MAXX(pgList, CALCULATE([PeerGroup LOS Median]))
 			RETURN
 			FORMAT(minMed, "0.00") & " to " & FORMAT(maxMed, "0.00")
 			
@@ -208,7 +208,7 @@ table _LOS
 	measure 'Excess LOS Days (PeerGroup safe)' = ```
 			
 			VAR v   = CALCULATE([AVG LOS])
-			VAR pgm = CALCULATE([PeerGroup LOS Median (PeerGroup safe)])
+			VAR pgm = CALCULATE([PeerGroup LOS Median (FacilitySafe)])
 			RETURN
 			IF(NOT ISBLANK(v) && NOT ISBLANK(pgm), v - pgm)
 			
@@ -274,7 +274,7 @@ table _LOS
 			    SUMX(
 			        Facilities,
 			        VAR v   = CALCULATE([AVG LOS])
-			        VAR pgm = CALCULATE([PeerGroup LOS Median (PeerGroup safe)])
+			        VAR pgm = CALCULATE([PeerGroup LOS Median (FacilitySafe)])
 			        RETURN
 			            IF(
 			                NOT ISBLANK(v) && NOT ISBLANK(pgm) && v > pgm,
@@ -284,10 +284,6 @@ table _LOS
 			    )
 			RETURN
 			COALESCE(Result, 0)
-			
-			
-			
-			
 			
 			```
 		formatString: 0
@@ -479,30 +475,6 @@ table _LOS
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: b9131801-a5ba-4343-9aab-36d19f6d0977
 
-	/// Debug helper: total bed-days ignoring facility filter.
-	measure 'DBG Total Bed-Days (All Facilities)' = ```
-			
-			CALCULATE(
-			    [Total Bed-Days],
-			    ALLSELECTED(Dim_Facility),
-			    REMOVEFILTERS(Dim_Facility[Facility_Key]),
-			    REMOVEFILTERS(Dim_Facility[Facility_Name])
-			)
-			
-			```
-		lineageTag: 03ba8bb1-0793-437d-b467-dd3da6f4c8c7
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	/// Debug helper: returns 1 if exactly one facility in current filter context.
-	measure 'DBG Has One Facility Key' = ```
-			
-			IF(HASONEVALUE(Dim_Facility[Facility_Key]), 1, 0)
-			
-			```
-		formatString: 0
-		lineageTag: 6941c542-6e10-453f-bf61-e792c71f0803
-
 	/// Facility LOS minus peer group median in days. Returns blank if either value missing.
 	measure 'Excess LOS vs Peer Median (Days)' =
 			
@@ -514,6 +486,40 @@ table _LOS
 		lineageTag: 28c3ec23-a299-45a2-aac2-43eaec06d102
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Median average LOS across facilities in selected peer group. Requires single peer group in filter context; otherwise returns blank.
+	measure 'PeerGroup LOS Median' = ```
+			
+			IF(
+			    HASONEVALUE(Dim_Facility[PeerGroup_Name]),
+			    VAR pg = SELECTEDVALUE(Dim_Facility[PeerGroup_Name])
+			    RETURN
+			        CALCULATE(
+			            MEDIANX(VALUES(Dim_Facility[Facility_Key]), [AVG LOS]),
+			            REMOVEFILTERS(Dim_Facility[Facility_Name]),
+			            Dim_Facility[PeerGroup_Name] = pg
+			        )
+			)
+			
+			```
+		formatString: 0.00
+		displayFolder: PeerGroup Benchmarks
+		lineageTag: 5b06ff0c-d060-4de6-8068-5baecd0121b9
+
+	/// Peer group LOS median that works per facility row. Removes facility filter to calculate median across peer group.
+	measure 'PeerGroup LOS Median (FacilitySafe)' = ```
+			
+			MEDIANX(
+			    CALCULATETABLE(
+			        VALUES(Dim_Facility[Facility_Key]),
+			        REMOVEFILTERS(Dim_Facility[Facility_Name])
+			    ),
+			    CALCULATE([AVG LOS], REMOVEFILTERS(Dim_Facility[Facility_Name]))
+			)
+			
+			```
+		formatString: 0.00
+		displayFolder: PeerGroup Benchmarks
 
 	column Column
 		isHidden

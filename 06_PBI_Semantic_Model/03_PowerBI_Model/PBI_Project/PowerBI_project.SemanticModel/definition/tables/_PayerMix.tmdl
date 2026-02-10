@@ -5,6 +5,7 @@ table _PayerMix
 	/// Alias for PayerMix Total Encounters.
 	measure 'Total Payer Encounters' = [PayerMix Total Encounters]
 		formatString: #,0
+		displayFolder: Base
 		lineageTag: bd26007e-f0e1-4313-9d46-716667c72c8a
 
 	/// Percentage of total encounters from selected payer(s).
@@ -19,6 +20,7 @@ table _PayerMix
 			)
 			
 			```
+		displayFolder: Base
 		lineageTag: f8e6005c-1a2d-4865-ac57-e755bd4c15a4
 
 	/// Percentage of total costs from selected payer(s).
@@ -33,6 +35,7 @@ table _PayerMix
 			)
 			
 			```
+		displayFolder: Financial Risk
 		lineageTag: 95056329-25d6-42de-92e2-ff247778ee89
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -47,24 +50,28 @@ table _PayerMix
 			        ALL(Dim_Payer)
 			    )
 			)
+		displayFolder: Financial Risk
 		lineageTag: 20da6a52-3e91-4fb0-8033-ca7985795e94
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	/// Sum of charges for selected payer(s).
 	measure 'Payer Total Charges' = SUM(Fact_KPI_PayerMix[Total_Charges])
+		displayFolder: Financial Risk
 		lineageTag: 17030b95-6374-4377-9598-0c2ae584f6db
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	/// Sum of costs for selected payer(s).
 	measure 'Payer Total Costs' = SUM(Fact_KPI_PayerMix[Total_Costs])
+		displayFolder: Financial Risk
 		lineageTag: c41ac738-73ee-4367-b92f-806f137c99dd
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	/// Total margin (charges minus costs) for selected payer(s).
 	measure 'Payer Margin' = [Payer Total Charges] - [Payer Total Costs]
+		displayFolder: Financial Risk
 		lineageTag: a4c1dc7b-c436-4d07-8317-8b2fc5144376
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -73,6 +80,7 @@ table _PayerMix
 	measure 'Payer Margin Rate' =
 			
 			DIVIDE([Payer Margin], [Payer Total Charges])
+		displayFolder: Financial Risk
 		lineageTag: b564d636-8134-4b83-8b00-09b91a10e0bf
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -84,6 +92,7 @@ table _PayerMix
 			    [Payer Margin],
 			    [Total Payer Encounters]
 			)
+		displayFolder: Financial Risk
 		lineageTag: c3a889d7-6d26-42f6-9752-dd870abed350
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -93,6 +102,7 @@ table _PayerMix
 			
 			CALCULATE([PayerMix Total Encounters], ALL(Dim_Payer))
 		formatString: 0
+		displayFolder: Helper
 		lineageTag: d2e91c04-48ff-47b8-8332-acd8ad0346fb
 
 	/// Encounter count for selected payer(s).
@@ -492,6 +502,7 @@ table _PayerMix
 			```
 		formatString: #,0
 		displayFolder: Risk Payer
+		lineageTag: 25a2c6fd-c1f6-4487-a522-480b3286e499
 
 	column Column
 		isHidden

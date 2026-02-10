@@ -3,7 +3,9 @@
   "displayName": "Unplnd viz 2",
   "name": "935523c19b2667d57433",
   "options": {
-    "targetVisualNames": []
+    "targetVisualNames": [
+      "c243b20ec86ea91aeb55"
+    ]
   },
   "explorationState": {
     "version": "1.3",
@@ -15,7 +17,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "e25aeebebd173c01b5aa",
+                  "name": "bd34c51ccb8044b5d9b9",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -99,6 +101,12 @@
               "objects": {}
             }
           },
+          "1f7831ada1b2f135bdcd": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
           "2570bfaf24d931198809": {
             "singleVisual": {
               "visualType": "actionButton",
@@ -172,7 +180,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "420d9e2bc639338e0020",
+                  "name": "cf9ee519f0a7c5e6a857",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -187,7 +195,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "ffc25d5cc2fb721ceef9",
+                  "name": "e3cc09b2a3e8f4709a2d",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -202,7 +210,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "ccdc4dfb507ded519311",
+                  "name": "98e5e1144ff534ccc871",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -217,7 +225,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "4c86f5713c4173480a82",
+                  "name": "dc4bf57ea4061ae02b0b",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -296,6 +304,12 @@
               "display": {
                 "mode": "hidden"
               }
+            }
+          },
+          "37f4784c31d1f0fa892d": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
             }
           },
           "38aeb331b91881c4380a": {
@@ -432,7 +446,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "b6b447c0d772fafb0831",
+                  "name": "54bd1d950401dabc348c",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -447,13 +461,13 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "85d07c104339e44fc1aa",
+                  "name": "f5ae0641dbddc701687e",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Dim_ClinicalClass"
+                          "Entity": "_Unplanned"
                         }
                       },
                       "Property": "PeerGroup UA Rate Median"
@@ -473,7 +487,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Dim_ClinicalClass"
+                          "Entity": "_Unplanned"
                         }
                       },
                       "Property": "PeerGroup UA Rate Median"
@@ -507,6 +521,24 @@
               }
             }
           },
+          "675889dfb2a1b2a4b1ae": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "6a9c530da1b5ae426583": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "6bea46abc17c4cf8f189": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
           "6df9f3c943d00d434eaa": {
             "singleVisual": {
               "visualType": "actionButton",
@@ -525,6 +557,12 @@
           "788d65d40c13b6e40a75": {
             "singleVisual": {
               "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "7b78b6539d77f851df74": {
+            "singleVisual": {
+              "visualType": "shape",
               "objects": {}
             }
           },
@@ -640,7 +678,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "d9c1beacc5825a438df8",
+                  "name": "9fa8fa66606ce206e319",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -655,7 +693,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "6718e73bdb59f079a8ec",
+                  "name": "3b38d5b31f193db4c959",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -670,7 +708,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "54e9d0ed1da50622c7cc",
+                  "name": "9c5af90be8acb09d4b2d",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -685,22 +723,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "07f0481de10469014190",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Volume_&_Denominators"
-                        }
-                      },
-                      "Property": "Unplanned Total Encounters"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "083755b7d7a74f64a82b",
+                  "name": "e5b0a39587e760e73cdd",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -715,13 +738,28 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "6f35f866532a780bb4c2",
+                  "name": "e78b5ee9bfd577b1619f",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Fact_KPI_Unplanned"
+                          "Entity": "_Volume_&_Denominators"
+                        }
+                      },
+                      "Property": "Unplanned Encounter Count"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "ce7d9b52228a14c3e4cd",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Volume_&_Denominators"
                         }
                       },
                       "Property": "Total Encounters (Y)"
@@ -809,22 +847,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "c7b49d5d22e47d49df3f",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "580c9f565beb97ae7319",
+                  "name": "53df61e69253ff58770e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -839,7 +862,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "2071bfd03d265ccfdfb3",
+                  "name": "8a210f7fc55caf491436",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -859,7 +882,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "26603fd6e536d4f3b85a",
+                  "name": "14eea99d7bfb74bfdc65",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -869,6 +892,21 @@
                         }
                       },
                       "Property": "Unplanned Admission Rate"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "817b3168deaa9d7f51a4",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
                     }
                   },
                   "howCreated": 0
@@ -899,7 +937,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Dim_PeerGroup"
+                          "Entity": "Dim_Facility"
                         }
                       },
                       "Property": "PeerGroup_Name"
@@ -910,6 +948,12 @@
               "display": {
                 "mode": "hidden"
               }
+            }
+          },
+          "d57c5e7ffa9c0bdff35a": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
             }
           },
           "ddbaa83b4a7a90a943b9": {
@@ -940,7 +984,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "9c2326063800813c677b",
+                  "name": "af84fe85a1a9d4242061",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -955,7 +999,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "44a0aada8d0e6d582ee9",
+                  "name": "24a4bf5aa7d1059442e6",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -970,7 +1014,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "f403b0a470c89e3cfd8e",
+                  "name": "89755cdfed740cf30595",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -985,7 +1029,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "ded6e9734b711fc000ca",
+                  "name": "dccc2947b266c9171504",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1000,7 +1044,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "1d72416fd35af8d70a1c",
+                  "name": "5258e47d5708ae34e7be",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1015,7 +1059,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "b8de540ac6a26730f75c",
+                  "name": "7fed5162ff2480b1459e",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1065,30 +1109,6 @@
               "visualType": "actionButton",
               "objects": {}
             }
-          },
-          "6a9c530da1b5ae426583": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "d57c5e7ffa9c0bdff35a": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "1f7831ada1b2f135bdcd": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "6bea46abc17c4cf8f189": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
           }
         },
         "visualContainerGroups": {
@@ -1099,9 +1119,6 @@
                 "isHidden": false
               }
             }
-          },
-          "601e5e5d570e0920c80a": {
-            "isHidden": true
           },
           "e61d07d0ba2506dc604d": {
             "isHidden": false,

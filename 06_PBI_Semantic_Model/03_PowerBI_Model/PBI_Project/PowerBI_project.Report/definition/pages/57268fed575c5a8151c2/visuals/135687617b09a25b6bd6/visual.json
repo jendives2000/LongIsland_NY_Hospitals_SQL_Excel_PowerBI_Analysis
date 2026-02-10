@@ -90,7 +90,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Dim_ClinicalClass"
+                      "Entity": "_Severity"
                     }
                   },
                   "Property": "PeerGroup Severity Median"
@@ -337,20 +337,6 @@
         },
         {
           "properties": {
-            "enableValueDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Severity.PeerGroup Severity Median"
-          }
-        },
-        {
-          "properties": {
             "color": {
               "solid": {
                 "color": {
@@ -426,6 +412,20 @@
                 }
               }
             ]
+          }
+        },
+        {
+          "properties": {
+            "enableValueDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Severity.PeerGroup Severity Median"
           }
         }
       ],
@@ -759,7 +759,8 @@
             "Property": "PeerGroup Severity Median"
           }
         },
-        "type": "Advanced"
+        "type": "Advanced",
+        "howCreated": "User"
       },
       {
         "name": "b64acc8a05ac972ded80",

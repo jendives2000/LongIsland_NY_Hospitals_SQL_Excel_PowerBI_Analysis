@@ -35,13 +35,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Dim_ClinicalClass"
+                      "Entity": "_Severity"
                     }
                   },
-                  "Property": "PeerGroup Severity Median (PeerGroup safe)"
+                  "Property": "PeerGroup Severity Median"
                 }
               },
-              "queryRef": "Dim_ClinicalClass.PeerGroup Severity Median (PeerGroup safe)",
+              "queryRef": "_Severity.PeerGroup Severity Median",
               "nativeQueryRef": "SMI Median",
               "displayName": "SMI Median"
             }
@@ -99,50 +99,6 @@
           },
           "selector": {
             "metadata": "Dim_Facility.PeerGroup_Name"
-          }
-        },
-        {
-          "properties": {
-            "backColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#302744'"
-                    }
-                  }
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.5
-                    }
-                  }
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Center'"
-                }
-              }
-            },
-            "styleHeader": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Dim_ClinicalClass.PeerGroup Severity Median (PeerGroup safe)"
           }
         }
       ],

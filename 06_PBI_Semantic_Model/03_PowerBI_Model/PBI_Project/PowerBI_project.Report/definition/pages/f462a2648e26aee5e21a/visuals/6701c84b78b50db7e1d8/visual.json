@@ -90,13 +90,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Dim_ClinicalClass"
+                      "Entity": "_Unplanned"
                     }
                   },
                   "Property": "PeerGroup UA Rate Median"
                 }
               },
-              "queryRef": "Dim_ClinicalClass.PeerGroup Unplanned Rate Median",
+              "queryRef": "_Unplanned.PeerGroup UA Rate Median",
               "nativeQueryRef": "PeerGroup UA Rate Median"
             }
           ]
@@ -109,7 +109,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Dim_ClinicalClass"
+                    "Entity": "_Unplanned"
                   }
                 },
                 "Property": "PeerGroup UA Rate Median"
@@ -461,21 +461,7 @@
         },
         {
           "properties": {
-            "showSeries": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "labelPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Under'"
-                }
-              }
-            },
-            "enableDetailDataLabel": {
+            "enableValueDataLabel": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -484,7 +470,7 @@
             }
           },
           "selector": {
-            "metadata": "Dim_ClinicalClass.PeerGroup Unplanned Rate Median"
+            "metadata": "_Unplanned.PeerGroup UA Rate Median"
           }
         }
       ],
@@ -882,6 +868,5 @@
       }
     ],
     "filterSortOrder": "Custom"
-  },
-  "isHidden": true
+  }
 }
