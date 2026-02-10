@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Dim_PeerGroup"
+                      "Entity": "Dim_Facility"
                     }
                   },
                   "Property": "PeerGroup_Name"
                 }
               },
-              "queryRef": "Dim_PeerGroup.PeerGroup_Name",
+              "queryRef": "Dim_Facility.PeerGroup_Name",
               "nativeQueryRef": "PeerGroup_Name",
               "active": true
             }
@@ -912,5 +912,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "409ae89dcff4e930ba8e"
+  "parentGroupName": "409ae89dcff4e930ba8e",
+  "isHidden": true
 }

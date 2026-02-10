@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": false
+              "active": true
             }
           ]
         },
@@ -119,10 +119,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "_KPI_Measures"
+                    "Entity": "_PayerMix"
                   }
                 },
-                "Property": "Unplanned Admission Rate"
+                "Property": "Payer HHI (Facility)"
               }
             },
             "direction": "Descending"

@@ -479,6 +479,20 @@ table _PayerMix
 		displayFolder: Helper
 		lineageTag: 54688e1c-3b36-4dc2-81ad-e3e3c41586be
 
+	/// Absolute count of Medicaid + Self-Pay encounters. Use for bubble size in risk exposure scatter to encode risk burden separately from total volume.
+	measure 'Risk Payer Encounters' = ```
+			
+			VAR RiskSet = { "Medicaid", "Self-Pay" }
+			RETURN
+			CALCULATE (
+			    [Payer Encounters],
+			    Dim_Payer[Payment_Typology_Group] IN RiskSet
+			)
+			
+			```
+		formatString: #,0
+		displayFolder: Risk Payer
+
 	column Column
 		isHidden
 		formatString: 0
