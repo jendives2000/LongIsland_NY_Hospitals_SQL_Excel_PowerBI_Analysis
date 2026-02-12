@@ -5,6 +5,7 @@
 -- WHAT:
 --   Produce executive and analytic Length of Stay (LOS) metrics that describe
 --   how long inpatient encounters remain hospitalized.
+--   Produce a governed view of LOS at the Facility-Year grain, using only Fact + Dimensions and contain no “Excel logic”
 --
 --   Outputs include:
 --     (1) Encounter-level LOS data (one row per stay) for Excel validation
@@ -244,3 +245,6 @@ ORDER BY
         ELSE TRY_CAST(ISNULL(CAST(APR_Severity_Code AS VARCHAR(10)), 'Unknown') AS INT)
     END;
 GO
+
+-----------------------------------------------------------------------
+

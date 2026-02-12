@@ -637,6 +637,25 @@
               }
             ]
           }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 7,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_LOS.PeerGroup LOS Median"
+          }
         }
       ],
       "legend": [
@@ -705,7 +724,7 @@
             "strokeLineJoin": {
               "expr": {
                 "Literal": {
-                  "Value": "'round'"
+                  "Value": "'bevel'"
                 }
               }
             },

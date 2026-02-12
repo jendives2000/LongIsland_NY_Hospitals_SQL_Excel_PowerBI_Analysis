@@ -8,6 +8,7 @@
 --     (1) Encounter-level export for Excel validation
 --     (2) Facility-Year mortality counts and rate (primary KPI output)
 --     (3) Facility-Month mortality counts and rate (within-year trend)
+--     Produce a governed view of LOS at the Facility-Year grain, using only Fact + Dimensions and contain no “Excel logic”
 --
 -- WHY:
 --   Mortality is a high-signal outcome indicator. In this model it is identified
@@ -147,4 +148,28 @@ SELECT
 FROM #Encounter_Mortality
 GROUP BY Standardized_Disposition_Category
 ORDER BY Encounter_Count DESC;
+GO
+
+--------------------------------------------------------------------
+CREATE OR ALTER VIEW dbo.vw_KPI_Mortality_FacilityYear
+AS
+SELECT
+    e.Facility_Key,
+    f.Facility_Name,
+    d.[Year] AS Discharge_Year,
+    COUNT(*) AS Total_Encounters,
+    SUM(CASE WHEN disp.Disposition_Grouped = 'Death' THEN 1 ELSE 0 END) AS Death_Count,
+    CAST(SUM(CASE WHEN disp.Disposition_Grouped = 'Death' THEN 1 ELSE 0 END) AS float)
+      / NULLIF(COUNT(*), 0) AS Mortality_Rate
+FROM dbo.Fact_Encounter e
+JOIN dbo.Dim_Date d
+    ON d.Date_Key = e.Discharge_Date_Key
+JOIN dbo.Dim_Facility f
+    ON f.Facility_Key = e.Facility_Key
+LEFT JOIN dbo.Dim_Disposition disp
+    ON disp.Disposition_Key = e.Disposition_Key
+GROUP BY
+    e.Facility_Key,
+    f.Facility_Name,
+    d.[Year];
 GO

@@ -43,7 +43,6 @@ Excel here is a **trusted analytical interface**, not a calculation engine.
     - [❌ Does NOT belong here](#-does-not-belong-here)
   - [Excel Consumption Patterns](#excel-consumption-patterns)
     - [Pattern A — SQL KPI Fact Consumption](#pattern-a--sql-kpi-fact-consumption)
-    - [Pattern B — Semantic Model Consumption (optional)](#pattern-b--semantic-model-consumption-optional)
   - [Executive Dashboard Types](#executive-dashboard-types)
     - [1. Executive KPI Overview](#1-executive-kpi-overview)
     - [2. KPI Deep-Dive Dashboards](#2-kpi-deep-dive-dashboards)
@@ -130,7 +129,7 @@ Those belong in `05_Validation`.
 
 ## Excel Consumption Patterns
 
-Excel workbooks in this folder consume data using one of the following **approved patterns**:
+Excel workbooks in this folder consume data using the following **pattern**:
 
 ### Pattern A — SQL KPI Fact Consumption
 Excel connects (via Power Query or direct import) to:
@@ -142,16 +141,6 @@ This pattern ensures:
 - Deterministic results
 - Easy reconciliation if needed
 - No hidden transformations
-
-### Pattern B — Semantic Model Consumption (optional)
-Excel connects directly to the Power BI semantic model created in Step 06.
-
-This allows:
-- Use of pre-defined measures
-- Identical behavior to Power BI visuals
-- Zero metric duplication
-
-Both patterns preserve **single-source-of-truth semantics**.
 
 ---
 

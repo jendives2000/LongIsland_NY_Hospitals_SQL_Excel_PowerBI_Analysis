@@ -28,7 +28,7 @@
               },
               "queryRef": "Dim_PeerGroup.PeerGroup_Name",
               "nativeQueryRef": "PeerGroup_Name",
-              "active": false
+              "active": true
             },
             {
               "field": {
@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": true
+              "active": false
             }
           ]
         },
@@ -67,21 +67,6 @@
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "_Severity"
-                  }
-                },
-                "Property": "Extreme Severity %"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
         "isDefaultSort": true
       }
     },

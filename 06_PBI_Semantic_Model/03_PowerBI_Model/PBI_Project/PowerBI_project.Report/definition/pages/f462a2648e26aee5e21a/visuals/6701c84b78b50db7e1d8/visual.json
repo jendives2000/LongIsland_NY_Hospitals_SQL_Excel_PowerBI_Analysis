@@ -109,7 +109,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "_Unplanned"
+                    "Entity": "Dim_ClinicalClass"
                   }
                 },
                 "Property": "PeerGroup UA Rate Median"
@@ -868,5 +868,6 @@
       }
     ],
     "filterSortOrder": "Custom"
-  }
+  },
+  "isHidden": true
 }

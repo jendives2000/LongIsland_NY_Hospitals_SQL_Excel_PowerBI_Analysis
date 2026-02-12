@@ -9,6 +9,7 @@
 --         - Avg MCost per Encounter  = Sum(Total_Costs) / Count(Encounters)
 --         - Margin Pressure Ratio    = Sum(Total_Costs) / Sum(Total_Charges)
 --         - Supporting totals for reconciliation
+--         - Produce a governed view of LOS at the Facility-Year grain, using only Fact + Dimensions and contain no “Excel logic”
 --
 -- WHY:
 --   This KPI connects clinical volume to financial performance. It is designed
@@ -154,4 +155,31 @@ GROUP BY
 ORDER BY
     Facility_Name,
     Discharge_Year;
+GO
+
+-----------------------------------------------------------------------
+CREATE OR ALTER VIEW dbo.vw_KPI_CostPerCase_FacilityYear
+AS
+SELECT
+    e.Facility_Key,
+    f.Facility_Name,
+    d.[Year] AS Discharge_Year,
+    COUNT(*) AS Encounter_Count,
+    SUM(e.Total_Costs) AS Total_Costs,
+    SUM(e.Total_Charges) AS Total_Charges,
+    CAST(SUM(e.Total_Costs) AS float) / NULLIF(COUNT(*), 0) AS Avg_MCost,
+    CAST(SUM(e.Total_Costs) AS float) / NULLIF(SUM(e.Total_Charges), 0) AS Margin_Pressure_Ratio,
+    AVG(CASE WHEN e.Total_Costs > e.Total_Charges THEN 1.0 ELSE 0.0 END) AS NegMargin_Rate
+FROM dbo.Fact_Encounter e
+JOIN dbo.Dim_Date d
+    ON d.Date_Key = e.Discharge_Date_Key
+JOIN dbo.Dim_Facility f
+    ON f.Facility_Key = e.Facility_Key
+WHERE
+    e.Total_Costs IS NOT NULL
+    AND e.Total_Charges IS NOT NULL
+GROUP BY
+    e.Facility_Key,
+    f.Facility_Name,
+    d.[Year];
 GO

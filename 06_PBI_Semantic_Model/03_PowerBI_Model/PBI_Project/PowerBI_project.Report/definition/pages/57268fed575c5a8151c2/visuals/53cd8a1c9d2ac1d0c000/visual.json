@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": true
+              "active": false
             }
           ]
         },
@@ -88,36 +88,6 @@
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Dim_PeerGroup"
-                  }
-                },
-                "Property": "PeerGroup_Name"
-              }
-            },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Dim_Facility"
-                  }
-                },
-                "Property": "Facility_Name"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ]
       }
     },
     "objects": {
@@ -1044,50 +1014,6 @@
             "Property": "APR_Severity_Description"
           }
         },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "d",
-              "Entity": "Dim_ClinicalClass",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Not": {
-                  "Expression": {
-                    "In": {
-                      "Expressions": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "d"
-                              }
-                            },
-                            "Property": "APR_Severity_Description"
-                          }
-                        }
-                      ],
-                      "Values": [
-                        [
-                          {
-                            "Literal": {
-                              "Value": "null"
-                            }
-                          }
-                        ]
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
         "howCreated": "User",
         "objects": {
           "general": [
@@ -1106,6 +1032,5 @@
         }
       }
     ]
-  },
-  "isHidden": true
+  }
 }

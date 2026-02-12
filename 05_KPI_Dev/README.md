@@ -28,6 +28,7 @@ This is where the project transitions from *"Is the data trustworthy?"* to
     - [6. Mortality Rate](#6-mortality-rate)
     - [7. Cost per Encounter \& Margin Pressure](#7-cost-per-encounter--margin-pressure)
   - [Status](#status)
+  - [🔐 Executive KPI Deployment Contract (Production Readiness for Step 07)](#-executive-kpi-deployment-contract-production-readiness-for-step-07)
   - [🗂 Folder Structure for Step 05](#-folder-structure-for-step-05)
 
 </details>
@@ -319,6 +320,54 @@ We compute:
 
 The KPI layer is complete and validated.
 All metrics in this folder represent the finalized executive KPI contract used downstream in the Power BI semantic model.
+
+---
+
+## 🔐 Executive KPI Deployment Contract (Production Readiness for Step 07)
+
+Step 05 defines validated healthcare KPIs. Step 07 consumes those KPIs for executive analytics. To preserve analytical integrity, a formal SQL KPI contract is required before Excel or Power BI consumption.
+
+Some Step 05 scripts initially validated logic using analytical SELECT statements but did not deploy persistent CREATE VIEW objects. For executive reporting, this is insufficient.
+
+Why this matters for executive decision-making
+- Executive dashboards influence: capacity planning, cost containment, payer negotiation, clinical performance evaluation, and risk interpretation.
+- If KPI logic is re-aggregated or recomputed in Excel:
+  - Results may drift from validated definitions
+  - Grain mismatches can distort trends
+  - Reconciliation becomes fragile
+  - Trust in analytics erodes
+
+A governed SQL view layer eliminates these risks and ensures every executive metric is:
+- Traceable to validated data
+- Reproducible
+- Audit-ready
+- Consistent across tools
+
+Required Facility-Year KPI Views
+Grain: one row per Facility_Key + Discharge_Year
+
+| KPI | Required View |
+|---|---|
+| Length of Stay | dbo.vw_KPI_LOS_FacilityYear |
+| Mortality Rate | dbo.vw_KPI_Mortality_FacilityYear |
+| Cost per Encounter & Margin Pressure | dbo.vw_KPI_CostPerCase_FacilityYear |
+
+These views:
+- Contain no Excel logic
+- Perform no downstream reshaping
+- Represent finalized executive KPI definitions
+- Serve as the authoritative input layer for Step 07
+
+Architectural principle
+Clear separation of responsibilities:
+- Step 04 — Data validation & anomaly control
+- Step 05 — KPI definition & SQL governance
+- Step 07 — Executive exploration (no KPI recomputation)
+
+This architecture ensures analytical consistency across tools, protection against silent KPI drift, clean audit trails, and scalable extension to new KPIs.
+
+Executive outcome
+This deployment step transforms KPI logic from “validated analysis” into a governed, production-grade executive data contract — critical where clinical outcome interpretation must be defensible and financial metrics affect funding and negotiation.
 
 ---
 

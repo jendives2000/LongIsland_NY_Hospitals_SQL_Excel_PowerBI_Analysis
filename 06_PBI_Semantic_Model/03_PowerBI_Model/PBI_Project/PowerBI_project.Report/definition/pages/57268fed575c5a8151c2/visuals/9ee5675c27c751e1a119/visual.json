@@ -43,7 +43,7 @@
               },
               "queryRef": "Dim_Facility.Facility_Name",
               "nativeQueryRef": "Facility_Name",
-              "active": false
+              "active": true
             }
           ]
         },
@@ -107,29 +107,16 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Dim_PeerGroup"
+                    "Entity": "Dim_ClinicalClass"
                   }
                 },
-                "Property": "PeerGroup_Name"
+                "Property": "PeerGroup Severity Median"
               }
             },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Dim_Facility"
-                  }
-                },
-                "Property": "Facility_Name"
-              }
-            },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }
@@ -787,6 +774,44 @@
           }
         },
         "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "_",
+              "Entity": "_Severity",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Measure": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "_"
+                            }
+                          },
+                          "Property": "Is Above Own PG Sev Median"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "null"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
         "howCreated": "User"
       },
       {
