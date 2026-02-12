@@ -1,3 +1,21 @@
+/*==============================================================================
+  View: dbo.vw_Excel_KPI_Executive_FacilityYear
+
+  CHANGE:
+    Add Peer Group attributes for Excel slicing while preserving 1 row per
+    Facility-Year grain.
+
+  IMPORTANT (grain safety):
+    Bridge_Facility_PeerGroup is many-to-many by design. A direct join would
+    duplicate Facility-Year rows. To prevent that, we pre-aggregate peer groups
+    to a single row per Facility in PeerGroup_Facility.
+
+    Output columns added:
+      - PeerGroup_Name          (single label: exact name if 1, otherwise 'Multiple')
+      - PeerGroup_List          (all peer group names concatenated for transparency)
+      - PeerGroup_Count         (how many peer groups assigned to the facility)
+==============================================================================*/
+
 CREATE OR ALTER VIEW dbo.vw_Excel_KPI_Executive_FacilityYear
 AS
 WITH FacilityYear_Backbone AS (
@@ -10,6 +28,32 @@ WITH FacilityYear_Backbone AS (
     GROUP BY
         e.Facility_Key,
         d.[Year]
+),
+/*-----------------------------------------------------------------------------
+  Peer Group rollup to preserve Facility grain (avoid row duplication)
+-----------------------------------------------------------------------------*/
+PeerGroup_Facility AS (
+    SELECT
+        bpg.Facility_Key,
+        COUNT(*) AS PeerGroup_Count,
+
+        /* WHAT: Concatenated list for transparency in Excel.
+           WHY: If a facility belongs to multiple peer groups, we expose the full
+                list so the user understands why PeerGroup_Name may show 'Multiple'. */
+        STRING_AGG(pg.PeerGroup_Name, ', ') WITHIN GROUP (ORDER BY pg.PeerGroup_Name) AS PeerGroup_List,
+
+        /* WHAT: Single slicer-friendly label.
+           WHY: Excel slicers expect a single category per row; 'Multiple' flags
+                non-unique assignments without duplicating Facility-Year rows. */
+        CASE
+            WHEN COUNT(*) = 1 THEN MAX(pg.PeerGroup_Name)
+            ELSE 'Multiple'
+        END AS PeerGroup_Name
+    FROM dbo.Bridge_Facility_PeerGroup bpg
+    JOIN dbo.Dim_PeerGroup pg
+        ON pg.PeerGroup_Key = bpg.PeerGroup_Key
+    GROUP BY
+        bpg.Facility_Key
 ),
 PayerMix_FY AS (
     SELECT
@@ -32,7 +76,7 @@ Disposition_FY AS (
         dx.Discharge_Year,
 
         SUM(CASE WHEN dx.Standardized_Disposition_Category LIKE '%Home%' THEN dx.Disposition_Encounter_Count ELSE 0 END) AS Home_Count,
-        SUM(CASE WHEN dx.Standardized_Disposition_Category LIKE '%Skilled%' 
+        SUM(CASE WHEN dx.Standardized_Disposition_Category LIKE '%Skilled%'
                    OR dx.Standardized_Disposition_Category LIKE '%Rehab%'
                    OR dx.Standardized_Disposition_Category LIKE '%Nursing%'
                  THEN dx.Disposition_Encounter_Count ELSE 0 END) AS PostAcute_Count,
@@ -44,7 +88,7 @@ Disposition_FY AS (
         SUM(CASE WHEN dx.Standardized_Disposition_Category LIKE '%Unknown%' THEN dx.Disposition_Encounter_Count ELSE 0 END) AS OtherUnknown_Count,
 
         SUM(CASE WHEN dx.Standardized_Disposition_Category LIKE '%Home%' THEN dx.Disposition_Encounter_Share ELSE 0 END) AS Home_Share,
-        SUM(CASE WHEN dx.Standardized_Disposition_Category LIKE '%Skilled%' 
+        SUM(CASE WHEN dx.Standardized_Disposition_Category LIKE '%Skilled%'
                    OR dx.Standardized_Disposition_Category LIKE '%Rehab%'
                    OR dx.Standardized_Disposition_Category LIKE '%Nursing%'
                  THEN dx.Disposition_Encounter_Share ELSE 0 END) AS PostAcute_Share,
@@ -64,9 +108,15 @@ Disposition_FY AS (
 SELECT
     b.Facility_Key,
     f.Facility_Name,
+
+    /* Peer Group context for Excel slicing */
+    pgf.PeerGroup_Name,
+    pgf.PeerGroup_Count,
+    pgf.PeerGroup_List,
+
     b.Discharge_Year,
 
-    /* Severity Mix (use the view that actually defines these columns) */
+    /* Severity Mix */
     sm.Severity_Mix_Index,
     sm.Encounter_Count AS Severity_Encounter_Count,
     sm.Severity_1_Count,
@@ -74,7 +124,7 @@ SELECT
     sm.Severity_3_Count,
     sm.Severity_4_Count,
 
-    /* Payer Mix (pivoted from Payer_Share) */
+    /* Payer Mix */
     pmx.Commercial_Share,
     pmx.Medicaid_Share,
     pmx.Medicare_Share,
@@ -82,13 +132,13 @@ SELECT
     pmx.Other_Share,
     pmx.Payer_Encounter_Count_Sum,
 
-    /* Unplanned Admissions (Encounter_Year in the KPI view) */
+    /* Unplanned Admissions */
     ua.Encounter_Count_Total,
     ua.Encounter_Count_Unplanned,
     ua.Encounter_Count_Planned,
     ua.Unplanned_Admission_Rate,
 
-    /* Disposition Outcomes (pivoted from category rows) */
+    /* Disposition Outcomes */
     dx.Home_Count,
     dx.PostAcute_Count,
     dx.AcuteTransfer_Count,
@@ -101,7 +151,7 @@ SELECT
     dx.OtherUnknown_Share,
     dx.Disposition_Total_Encounters,
 
-    /* LOS, Mortality, Cost/Margin (your newly created Facility-Year views) */
+    /* LOS, Mortality, Cost/Margin */
     los.Avg_LOS,
     los.Min_LOS,
     los.Max_LOS,
@@ -116,6 +166,9 @@ SELECT
 FROM FacilityYear_Backbone b
 JOIN dbo.Dim_Facility f
     ON f.Facility_Key = b.Facility_Key
+
+LEFT JOIN PeerGroup_Facility pgf
+    ON pgf.Facility_Key = b.Facility_Key
 
 LEFT JOIN dbo.vw_KPI_05_01_SeverityMix_FacilityYear sm
     ON sm.Facility_Key = b.Facility_Key
@@ -146,14 +199,72 @@ LEFT JOIN dbo.vw_KPI_CostPerCase_FacilityYear cost
    AND cost.Discharge_Year = b.Discharge_Year;
 GO
 
-
--- Grain uniqueness check: if returns 0 rows: the integration view has the correct grain: exactly one row per Facility-Year.
+/* Grain uniqueness check: should return 0 rows */
 SELECT Facility_Key, Discharge_Year, COUNT(*) AS c
 FROM dbo.vw_Excel_KPI_Executive_FacilityYear
 GROUP BY Facility_Key, Discharge_Year
 HAVING COUNT(*) > 1;
 
--- Row-count sanity check: should return 23 (the number of Facility-Year combinations)
+/* Row-count sanity check */
 SELECT COUNT(*) AS Integration_RowCount
 FROM dbo.vw_Excel_KPI_Executive_FacilityYear;
 
+
+
+-- Check: Does every facility have a peer group? Why: Excel slicers must not have NULL peer groups unless intentionally allowed. Should return 0 rows
+SELECT
+    f.Facility_Key,
+    f.Facility_Name,
+    COUNT(bpg.PeerGroup_Key) AS PeerGroup_Assignments
+FROM dbo.Dim_Facility f
+LEFT JOIN dbo.Bridge_Facility_PeerGroup bpg
+    ON f.Facility_Key = bpg.Facility_Key
+GROUP BY
+    f.Facility_Key,
+    f.Facility_Name
+HAVING COUNT(bpg.PeerGroup_Key) = 0;
+
+-- Check: Are any facilities assigned to multiple peer groups? Why: Multiple assignments can break one-row-per-facility grain. Should return 0 rows
+SELECT
+    bpg.Facility_Key,
+    f.Facility_Name,
+    COUNT(*) AS PeerGroup_Count
+FROM dbo.Bridge_Facility_PeerGroup bpg
+JOIN dbo.Dim_Facility f
+    ON f.Facility_Key = bpg.Facility_Key
+GROUP BY
+    bpg.Facility_Key,
+    f.Facility_Name
+HAVING COUNT(*) > 1
+ORDER BY PeerGroup_Count DESC;
+
+-- Check: Is the bridge table valid (no orphan keys)? Why: Prevent broken joins. Should return 0 rows
+-- Orphan Facility Keys
+SELECT *
+FROM dbo.Bridge_Facility_PeerGroup bpg
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM dbo.Dim_Facility f
+    WHERE f.Facility_Key = bpg.Facility_Key
+);
+
+-- Orphan PeerGroup Keys
+SELECT *
+FROM dbo.Bridge_Facility_PeerGroup bpg
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM dbo.Dim_PeerGroup pg
+    WHERE pg.PeerGroup_Key = bpg.PeerGroup_Key
+);
+
+
+-- Check: Does the integration view still preserve grain? Should return 0 rows
+SELECT
+    Facility_Key,
+    Discharge_Year,
+    COUNT(*) AS Row_Count
+FROM dbo.vw_Excel_KPI_Executive_FacilityYear
+GROUP BY
+    Facility_Key,
+    Discharge_Year
+HAVING COUNT(*) > 1;
