@@ -2,11 +2,12 @@
 
 This step operationalizes the validated KPI framework for **executive self-service analysis in Excel**.
 
-While Power BI is used for curated dashboards and storytelling, Excel remains the **primary analytical tool for many executives** in real enterprise environments.  
+While Power BI is used for curated dashboards and storytelling, Excel remains the **primary analytical tool for many executives** in real enterprise environments.
+
 This folder demonstrates how the **same governed KPI definitions and semantic model** can be consumed directly in Excel — without re-implementing logic, without metric drift, and without BI-tool dependency.
 
 > **Core idea:**  
-> Excel is not used here to *define* metrics — it is used to *consume* them safely and confidently.
+> Excel is not used here to define metrics — it is used to consume them safely and confidently.
 
 ---
 
@@ -14,19 +15,19 @@ This folder demonstrates how the **same governed KPI definitions and semantic mo
 
 In many organizations:
 
-- Executives are deeply fluent in Excel
-- Strategic decisions are made inside spreadsheets
-- Ad-hoc slicing, exporting, annotating, and scenario exploration happen **outside BI tools**
-- BI publishing cycles are often slower than executive needs
+- Executives are deeply fluent in Excel  
+- Strategic decisions are made inside spreadsheets  
+- Ad-hoc slicing, exporting, annotating, and scenario exploration happen outside BI tools  
+- BI publishing cycles are often slower than executive needs  
 
-This step acknowledges that reality and turns it into a **strength**, by:
+This step turns that operational reality into a governance strength by:
 
-- Reusing the validated KPI layer from Step 05
-- Respecting the semantic model defined in Step 06
-- Enabling executives to answer real questions **directly in Excel**
-- Preserving governance, consistency, and auditability
+- Reusing the validated KPI layer from Step 05  
+- Respecting the semantic structure defined in Step 06  
+- Enabling executive exploration without metric mutation  
+- Preserving traceability and auditability  
 
-Excel here is a **trusted analytical interface**, not a calculation engine.
+Excel here is a **trusted analytical surface**, not a calculation engine.
 
 ---
 
@@ -36,18 +37,27 @@ Excel here is a **trusted analytical interface**, not a calculation engine.
 - [07 — Excel Executive Analytics](#07--excel-executive-analytics)
   - [Why this step exists](#why-this-step-exists)
   - [Positioning of Excel in the Analytics Lifecycle](#positioning-of-excel-in-the-analytics-lifecycle)
-  - [Design Principles](#design-principles)
+  - [Architecture Overview](#architecture-overview)
+  - [Explainability-First Design Principles](#explainability-first-design-principles)
+    - [1. No KPI Logic in Excel](#1-no-kpi-logic-in-excel)
+    - [2. Grain Preservation](#2-grain-preservation)
+    - [3. Pivot-Driven Consumption](#3-pivot-driven-consumption)
+    - [4. Interpretive Guardrails](#4-interpretive-guardrails)
+    - [5. Transparent Data Lineage](#5-transparent-data-lineage)
   - [Governance \& Trust Guarantees](#governance--trust-guarantees)
-  - [What Belongs in This Folder (and What Does Not)](#what-belongs-in-this-folder-and-what-does-not)
-    - [✅ Belongs here](#-belongs-here)
-    - [❌ Does NOT belong here](#-does-not-belong-here)
-  - [Excel Consumption Patterns](#excel-consumption-patterns)
+  - [Explainability Audit Results](#explainability-audit-results)
+    - [Check 1 — No KPI formulas](#check-1--no-kpi-formulas)
+    - [Check 2 — No Pivot Calculated Fields](#check-2--no-pivot-calculated-fields)
+    - [Check 3 — End-to-End Refresh Integrity](#check-3--end-to-end-refresh-integrity)
+    - [Check 4 — Spot Reconciliation](#check-4--spot-reconciliation)
+  - [Excel Consumption Pattern](#excel-consumption-pattern)
     - [Pattern A — SQL KPI Fact Consumption](#pattern-a--sql-kpi-fact-consumption)
-  - [Executive Dashboard Types](#executive-dashboard-types)
-    - [1. Executive KPI Overview](#1-executive-kpi-overview)
-    - [2. KPI Deep-Dive Dashboards](#2-kpi-deep-dive-dashboards)
-    - [3. Ad-Hoc Exploration Templates](#3-ad-hoc-exploration-templates)
+  - [Executive Artifacts](#executive-artifacts)
+    - [Executive Dashboard](#executive-dashboard)
+    - [Reusable Template](#reusable-template)
+    - [Interpretive Guide](#interpretive-guide)
   - [Folder Structure](#folder-structure)
+  - [Final Position](#final-position)
 
 </details>
 
@@ -55,150 +65,258 @@ Excel here is a **trusted analytical interface**, not a calculation engine.
 
 ## Positioning of Excel in the Analytics Lifecycle
 
-Excel appears **twice** in this project — intentionally and with different roles:
+Excel appears twice in this project, intentionally:
 
 | Step | Role of Excel | Purpose |
-|----|----|----|
+|------|--------------|----------|
 | `05_Validation` | Validation tool | Prove KPI correctness |
-| `07_Excel_Executive_Analytics` | Executive analytics client | Enable decision-making |
+| `07_Excel_Executive_Analytics` | Executive analytics client | Enable safe decision-making |
 
-This folder does **not** repeat validation.  
-It assumes KPIs are already correct and focuses on **usability and adoption**.
+Step 07 does not repeat validation.  
+It assumes KPI correctness and focuses on usability, exploration, and adoption.
 
 ---
 
-## Design Principles
+## Architecture Overview
 
-The Excel assets in this folder follow strict principles:
+Excel consumes a **thin integration SQL view**, defined in:
 
-1. **No KPI logic in Excel**
-   - No hard-coded formulas for rates
-   - No re-implementation of SQL logic
-2. **Same grain as KPI outputs**
-   - Facility-Year or Facility-Month (where applicable)
-3. **Pivot-driven, not formula-driven**
-   - PivotTables and PivotCharts are the primary mechanism
-4. **Exploration without risk**
-   - Executives can filter and slice
-   - They cannot accidentally redefine metrics
-5. **Visual clarity over density**
-   - Executive-readable layouts
-   - Minimal clutter, clear labels
+```
+07_SQL/07_01_vw_Excel_KPI_Executive_FacilityYear.sql
+```
 
-Excel is treated as a **safe window** into the KPI layer.
+The view:
+
+- Preserves one row per Facility-Year
+- Integrates all governed KPI outputs
+- Includes PeerGroup context for slicing
+- Contains zero KPI logic
+- Standardizes column naming for executive pivots
+
+All KPI calculations occur upstream in Step 05.  
+Excel receives only pre-computed results.
+
+---
+
+## Explainability-First Design Principles
+
+### 1. No KPI Logic in Excel
+
+- No formulas computing rates  
+- No pivot calculated fields  
+- No derived business logic  
+- No Excel-based transformations  
+
+Excel cannot redefine truth.
+
+---
+
+### 2. Grain Preservation
+
+- One row per Facility-Year  
+- PeerGroup added without duplicating rows  
+- Integration view validated for uniqueness  
+
+---
+
+### 3. Pivot-Driven Consumption
+
+- Native columns only  
+- SUM and AVERAGE aggregation only  
+- GETPIVOTDATA used strictly for read-back display  
+- Charts pull values from PivotTables only  
+
+---
+
+### 4. Interpretive Guardrails
+
+Dashboard includes static guidance:
+
+- Read as distribution and structural exposure, not ranking  
+- Interpret outcome KPIs after context KPIs  
+- Metrics originate from validated SQL logic  
+
+---
+
+### 5. Transparent Data Lineage
+
+Data Flow:
+
+```
+SQL KPI Views
+    ↓
+07_01_vw_Excel_KPI_Executive_FacilityYear.sql
+    ↓
+Excel 01_Data sheet
+    ↓
+PivotTable
+    ↓
+GETPIVOTDATA
+    ↓
+Charts & Scoreboard
+```
+
+No transformation layer exists inside Excel.
 
 ---
 
 ## Governance & Trust Guarantees
 
-This folder guarantees that:
-* All metrics originate from validated SQL logic
-* Excel outputs reconcile to KPI facts if audited
-* No hidden business rules exist in spreadsheets
-* Metric definitions remain consistent across:
-  * SQL
-  * Power BI
-  * Excel
+This folder guarantees:
 
-This is essential for executive trust.
-
----
-
-## What Belongs in This Folder (and What Does Not)
-
-### ✅ Belongs here
-
-- Executive dashboards
-- PivotTables & PivotCharts
-- Slicers and timelines
-- Facility and time comparisons
-- Export-ready summary tables
-- Templates for executive reuse
-
-### ❌ Does NOT belong here
-
-- Reconciliation checks
-- Row-level audit tables
-- Green/red validation flags
-- SQL parity formulas
-- Metric definitions
-
-Those belong in `05_Validation`.
+- All metrics originate from validated SQL logic  
+- Excel outputs reconcile exactly to SQL view values  
+- No hidden business rules exist in spreadsheets  
+- Metric definitions remain consistent across:
+  - SQL  
+  - Power BI  
+  - Excel  
 
 ---
 
-## Excel Consumption Patterns
+## Explainability Audit Results
 
-Excel workbooks in this folder consume data using the following **pattern**:
+**Status: PASSED (All 4 Checks)**
+
+### Check 1 — No KPI formulas
+
+- `01_Data` contains only flat SQL output  
+- `02_Pivots` contains only native pivot aggregations  
+- `03_Dashboard` uses GETPIVOTDATA read-backs only  
+- No cell computes or transforms a KPI  
+
+---
+
+### Check 2 — No Pivot Calculated Fields
+
+All value fields reference native SQL columns directly.
+
+---
+
+### Check 3 — End-to-End Refresh Integrity
+
+- SQL view refresh updates entire workbook  
+- Slicers propagate through pivot safely  
+- No recalculation logic introduced  
+
+---
+
+### Check 4 — Spot Reconciliation
+
+Example: Nassau University Medical Center (2015)
+
+All KPI values match SQL output exactly, including:
+
+- Severity_Mix_Index  
+- Unplanned_Admission_Rate  
+- Avg_LOS  
+- Mortality_Rate  
+- Margin_Pressure_Ratio  
+- NegMargin_Rate  
+- Total_Costs  
+- Total_Charges  
+
+Governance contract fully honored.
+
+---
+
+## Excel Consumption Pattern
 
 ### Pattern A — SQL KPI Fact Consumption
-Excel connects (via Power Query or direct import) to:
 
-- `Fact_KPI_*` tables produced in Step 05
-- Governed dimensions (`Dim_Facility`, `Dim_Date`, etc.)
+Excel connects directly to:
 
-This pattern ensures:
-- Deterministic results
-- Easy reconciliation if needed
-- No hidden transformations
+```
+dbo.vw_Excel_KPI_Executive_FacilityYear
+```
+
+Defined in:
+
+```
+07_SQL/07_01_vw_Excel_KPI_Executive_FacilityYear.sql
+```
+
+Benefits:
+
+- Deterministic results  
+- Minimal refresh surface  
+- No cross-table Excel joins  
+- No metric duplication  
+- Easy SQL reconciliation  
 
 ---
 
-## Executive Dashboard Types
+## Executive Artifacts
 
-Typical Excel dashboards in this folder include:
+### Executive Dashboard
 
-### 1. Executive KPI Overview
-High-level snapshot:
-- LOS
-- Unplanned Admission Rate
-- Mortality Rate
-- Margin Pressure
+```
+Dashboards/Executive_KPI_Overview.xlsx
+```
 
-Used for:
-- Monthly reviews
-- Board prep
-- Leadership briefings
+High-level cross-KPI view:
 
-### 2. KPI Deep-Dive Dashboards
-Focused exploration of a single KPI:
-- LOS distribution
-- Disposition outcomes
-- Payer mix and margin pressure
+- Severity Mix  
+- Unplanned Admission Rate  
+- Avg LOS  
+- Mortality Rate  
+- Margin Pressure  
+- Negative Margin Rate  
 
-Used for:
-- Root-cause analysis
-- Facility comparisons
-- Follow-up questions
+---
 
-### 3. Ad-Hoc Exploration Templates
-Reusable Excel templates allowing executives to:
-- Select facility
-- Select time period
-- Slice by category
-- Export results
+### Reusable Template
+
+```
+Templates/Executive_Pivot_Template.xlsx
+```
+
+- Pre-wired SQL connection  
+- Controlled slicers  
+- No KPI logic  
+
+---
+
+### Interpretive Guide
+
+```
+Templates/Executive_Guide_How_to_Read_the_Report.md
+```
+
+- Structural interpretation guidance  
+- Reinforces explainability-first discipline  
 
 ---
 
 ## Folder Structure
 
-Recommended structure:
-
 ```text
 07_Excel_Executive_Analytics/
 │
-├─ README.md
+├─ 07_SQL/
+│   └─ 07_01_vw_Excel_KPI_Executive_FacilityYear.sql
 │
 ├─ Dashboards/
-│   ├─ Executive_KPI_Overview.xlsx
-│   ├─ LOS_Deep_Dive.xlsx
-│   └─ Financial_Pressure_Analysis.xlsx
+│   └─ Executive_KPI_Overview.xlsx
 │
 ├─ Templates/
 │   ├─ Executive_Pivot_Template.xlsx
-│   └─ KPI_Exploration_Template.xlsx
+│   └─ Executive_Guide_How_to_Read_the_Report.md
 │
-└─ Screenshots/
-    ├─ Executive_Overview.png
-    └─ LOS_Distribution.png
+├─ Screenshots/
+│
+└─ README.md
 ```
+
+---
+
+## Final Position
+
+Step 07 proves that:
+
+* Governance survives outside BI tooling
+* KPI definitions remain immutable across environments
+* Executive exploration does not introduce metric drift
+* The architecture is tool-agnostic and production-ready
+
+Excel becomes a **controlled analytical interface**, not a shadow calculation engine.
