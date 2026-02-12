@@ -1,273 +1,29 @@
-# KPI 05.03 — Unplanned Admission Rate (ED & Urgent Intake Pressure)
-
-This KPI measures the rate and volume of unplanned inpatient admissions (Emergency and Urgent) by facility and year (2015). It quantifies operational intake pressure on EDs and inpatient capacity.
-
-> Executive question:  
-> Are observed operational strains (bed shortages, ED crowding, rising LOS) driven by higher unplanned admission volume?
-
----
-
-## Table of Contents
-<details>
-<summary>Open TOC</summary>
-
-- [KPI 05.03 — Unplanned Admission Rate (ED \& Urgent Intake Pressure)](#kpi-0503--unplanned-admission-rate-ed--urgent-intake-pressure)
-  - [Table of Contents](#table-of-contents)
-  - [Purpose](#purpose)
-  - [Business Meaning](#business-meaning)
-  - [Peer Group Context](#peer-group-context)
-  - [Design Summary](#design-summary)
-  - [Primary View](#primary-view)
-  - [Metric Definitions](#metric-definitions)
-  - [Reporting Grain](#reporting-grain)
-  - [Conceptual Flow](#conceptual-flow)
-  - [Interpretation Guidelines](#interpretation-guidelines)
-  - [Known Limitations](#known-limitations)
-  - [🐞 Bug Fix Documentation — Unplanned Admission Rate (05.03)](#-bug-fix-documentation--unplanned-admission-rate-0503)
-  - [Excel Validation](#excel-validation)
-  - [Downstream Usage](#downstream-usage)
-
-</details>
-
----
+﻿# KPI 05.03 - Unplanned Admission Rate
 
 ## Purpose
 
-This KPI identifies which facilities experience the most unplanned admission pressure and quantifies that pressure. It supports capacity planning, ED staffing decisions, and interpretation of downstream operational and clinical KPIs (LOS, mortality, cost).
+Measures unplanned intake burden (Emergency/Urgent standardized to `Unplanned`) at Facility-Year grain.
 
----
+## SQL Artifact
 
-## Business Meaning
+- `05_03_SQL/05_03_Unplanned_Admission_Rate.sql`
 
-Unplanned Admission Rate captures the proportion of inpatient encounters that originate from Emergency or Urgent intake (standardized to "Unplanned"). Higher rates indicate greater acute intake pressure and potential downstream effects on throughput, LOS, and costs.
+## Governed View
 
-Operationally, this KPI helps leadership to:
-- Monitor ED and inpatient capacity strain.
-- Trigger staffing, bed management, and diversion decisions.
-- Contextualize LOS and cost patterns that may be intake-driven rather than performance-driven.
+- `dbo.vw_KPI_UnplannedAdmissions_FacilityYear`
 
-Important: Admission type values are standardized before KPI calculation (see Step 04).
+## Validation Artifact
 
----
+- `05_03_Excel/05_03_Unplanned_Admission_Rate.xlsx`
 
-## Peer Group Context
+## Peer Group Reference
 
-Interpret Unplanned Admission Rate within appropriate peer groups to avoid structural bias. Peer groups used:
-- Academic / Tertiary Referral Centers
-- Large Community Acute-Care Hospitals
-- Mid-Size Community Hospitals
-- Rural / East-End Hospitals
+- `03_Analytical_Data_Modeling/03_Facility_Peer_Grouping_Framework/README.md`
 
-Specialty-dominant hospitals are excluded from comparisons because their admission patterns are atypical.
+## Step-07 Consumption Note
 
-➡ Peer group definitions are documented in [`03_03_Facility_Peer_Grouping_Framework`]()
+Step 07 consumes:
 
----
+- `dbo.vw_KPI_UnplannedAdmissions_FacilityYear`
 
-## Design Summary
-
-Primary view: dbo.vw_KPI_UnplannedAdmissions_FacilityYear
-
-Definition logic (project assumption):
-- AdmissionType_Std = 'Unplanned' → Unplanned
-- All other standardized admission types → Planned
-
-Grain: Facility × Discharge Year (2015)
-
-Outputs: Total encounters, Unplanned count, Planned count, Unplanned admission rate (%).
-
----
-
-## Primary View
-
-View name: `dbo.vw_KPI_UnplannedAdmissions_FacilityYear`
-
-Each row represents a facility-year with:
-- Total encounters
-- Unplanned encounters
-- Planned encounters
-- Unplanned admission rate (Unplanned / Total)
-
----
-
-## Metric Definitions
-- SQL file: [here](./05_03_SQL/05_03_Unplanned_Admission_Rate.sql)  
-  
-Primary calculation:
-- Unplanned Count: AdmissionType_Std = 'Unplanned'
-- Planned Count: = AdmissionType_Std <> 'Unplanned'
-- Unplanned Admission Rate = Unplanned Count / Total Encounters
-
-This KPI depends only on standardized AdmissionType and date dimensions.
-
----
-
-## Reporting Grain
-
-- Facility
-- Discharge Year (2015)
-
-All metrics are computed from encounter-level data for traceability.
-
----
-
-## Conceptual Flow
-```mermaid
-flowchart LR
-    A["Encounter"]
-    B["AdmissionType_Std"]
-    C["Unplanned vs Planned"]
-    D["Facility-Year Counts"]
-    E["Unplanned Admission Rate"]
-    A --> B --> C --> D --> E
-```
-
----
-
-## Interpretation Guidelines
-
-This KPI serves as a **context-setting indicator**, not a standalone performance score.
-
-Key interpretation rules:
-- A higher Unplanned Admission Rate indicates **greater acute intake pressure**, not poor operational quality.
-- Facilities with trauma services, tertiary referral roles, or ED dominance will structurally exhibit higher rates.
-- Compare facilities **only within appropriate peer groups**.
-- Interpret LOS, cost, and throughput KPIs **in conjunction** with unplanned intake levels.
-
-Recommended analytical questions:
-- Are LOS or cost outliers aligned with unusually high unplanned intake?
-- Does a facility’s unplanned rate explain ED crowding or bed occupancy pressure?
-- Are year-to-year changes driven by intake mix rather than operational deterioration (**not relevant** due to only one year available: 2015)?
-
-This KPI should always be read **before** drawing conclusions from downstream operational metrics.
-
----
-
-## Known Limitations
-
-This KPI reflects **intake mix**, not demand unmet or ED performance quality.
-
-Key limitations:
-- Does not measure ED visit volume or ED boarding time.
-- Does not capture patients diverted, transferred, or treated and released.
-- AdmissionType standardization depends on upstream mapping accuracy (Step 04).
-- Does not adjust for severity or acuity differences within unplanned admissions.
-- Single-year scope (2015) limits trend-based inference.
-
-As a result:
-- High unplanned rates should not be interpreted as failure.
-- Low unplanned rates do not imply superior operational efficiency.
-- Severity Mix Index and LOS KPIs are required for fair performance interpretation.
-
-
----
-
-## 🐞 Bug Fix Documentation — Unplanned Admission Rate (05.03)
-
-### Issue Summary
-
-The KPI view `dbo.vw_KPI_UnplannedAdmissions_FacilityYear` was returning:
-- `Encounter_Count_Unplanned = 0`
-- `Unplanned_Admission_Rate = 0`
-
-for all Facility-Year combinations. This issue surfaced during Step 07 Excel Executive Analytics integration, where Unplanned columns were consistently zero while other KPIs populated correctly.
-
-### Root Cause
-
-The KPI logic in the view defined Unplanned admissions as:
-
-```sql
-AdmissionType_Std IN ('Emergency', 'Urgent')
-```
-
-However, the standardized values in `dbo.Dim_AdmissionType.AdmissionType_Std` are:
-- `Elective`
-- `Other`
-- `Unplanned`
-
-Since neither `'Emergency'` nor `'Urgent'` exists in the dimension, the CASE expression never evaluated to 1. Result: all encounters were treated as Planned, numerator = 0, rate = 0.
-
-### Why This Was Not Detected Earlier
-
-The SQL file contained internal inconsistency:
-- The main KPI view used `'Emergency','Urgent'`
-- Granular extract and validation queries correctly used `'Unplanned'`
-
-Because validation queries were correct and reconciliation checks focused on total encounter counts (denominator only), the defect did not surface during Step 05 validation.
-
-### Fix Applied
-
-Updated the Unplanned flag logic in the KPI view.
-
-**Old logic (incorrect):**
-```sql
-CASE
-  WHEN da.AdmissionType_Std IN ('Emergency', 'Urgent') THEN 1
-  ELSE 0
-END
-```
-
-**Corrected logic:**
-```sql
-CASE
-  WHEN da.AdmissionType_Std = 'Unplanned' THEN 1
-  ELSE 0
-END
-```
-
-This aligns the KPI definition with the standardized domain in `Dim_AdmissionType`.
-
-### Validation After Fix
-
-Confirmed:
-- Non-zero `Encounter_Count_Unplanned`
-- Non-zero `Unplanned_Admission_Rate`
-- Reconciliation between KPI view, raw aggregation, and Excel validation pivot
-
-### Architectural Lesson
-
-This bug highlights an important governance principle:
-
-> KPI validation must reconcile both numerator and denominator, not just total encounter counts.
-
-Additionally: semantic alignment with standardized dimension values is critical. Step 07 Excel integration served as a structural stress test that exposed the inconsistency.
-
----
-
-## Excel Validation
-
-Excel file: [here](./05_03_Excel/05_03_Unplanned_Admission_Rate.xlsx)
-
-After the fix above, validation checklist:
-1. Encounter classification: ensure AdmissionType_Std = 'Unplanned' logic in Excel matches SQL.
-2. Counts: Unplanned + Planned = Total encounters.
-3. Rates: Unplanned Rate = Unplanned / Total (validate manual recomputation in Excel).
-
-   <details>
-   <summary>Screenshot: Logic Validation</summary>
-      Logic for above metrics confirmed by pivoting the granular Unplanned view:  
-
-      ![Pivoted Unplanned Metrics](image-6.png)
-
-   </details>
-
-<details>
-<summary>Screenshot: Unplanned Metrics Validation</summary>
-
-   ![Unplanned Metrics Validation](image-7.png)
-
-</details>
-
-Minor rounding differences may occur but totals and rates must reconcile.
-
----
-
-## Downstream Usage
-
-This KPI informs:
-- Length of Stay analysis (Step 05.04)
-- Cost-per-case and margin pressure analyses
-- ED throughput and capacity planning dashboards in Power BI
-- Operational decision-making around staffing and diversion
-
----
+This is the executive-facing KPI contract; any encounter-level checks remain validation-only.
