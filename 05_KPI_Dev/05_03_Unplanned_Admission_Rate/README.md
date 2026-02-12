@@ -23,6 +23,7 @@ This KPI measures the rate and volume of unplanned inpatient admissions (Emergen
   - [Conceptual Flow](#conceptual-flow)
   - [Interpretation Guidelines](#interpretation-guidelines)
   - [Known Limitations](#known-limitations)
+  - [🐞 Bug Fix Documentation — Unplanned Admission Rate (05.03)](#-bug-fix-documentation--unplanned-admission-rate-0503)
   - [Excel Validation](#excel-validation)
   - [Downstream Usage](#downstream-usage)
 
@@ -161,11 +162,83 @@ As a result:
 
 ---
 
+## 🐞 Bug Fix Documentation — Unplanned Admission Rate (05.03)
+
+### Issue Summary
+
+The KPI view `dbo.vw_KPI_UnplannedAdmissions_FacilityYear` was returning:
+- `Encounter_Count_Unplanned = 0`
+- `Unplanned_Admission_Rate = 0`
+
+for all Facility-Year combinations. This issue surfaced during Step 07 Excel Executive Analytics integration, where Unplanned columns were consistently zero while other KPIs populated correctly.
+
+### Root Cause
+
+The KPI logic in the view defined Unplanned admissions as:
+
+```sql
+AdmissionType_Std IN ('Emergency', 'Urgent')
+```
+
+However, the standardized values in `dbo.Dim_AdmissionType.AdmissionType_Std` are:
+- `Elective`
+- `Other`
+- `Unplanned`
+
+Since neither `'Emergency'` nor `'Urgent'` exists in the dimension, the CASE expression never evaluated to 1. Result: all encounters were treated as Planned, numerator = 0, rate = 0.
+
+### Why This Was Not Detected Earlier
+
+The SQL file contained internal inconsistency:
+- The main KPI view used `'Emergency','Urgent'`
+- Granular extract and validation queries correctly used `'Unplanned'`
+
+Because validation queries were correct and reconciliation checks focused on total encounter counts (denominator only), the defect did not surface during Step 05 validation.
+
+### Fix Applied
+
+Updated the Unplanned flag logic in the KPI view.
+
+**Old logic (incorrect):**
+```sql
+CASE
+  WHEN da.AdmissionType_Std IN ('Emergency', 'Urgent') THEN 1
+  ELSE 0
+END
+```
+
+**Corrected logic:**
+```sql
+CASE
+  WHEN da.AdmissionType_Std = 'Unplanned' THEN 1
+  ELSE 0
+END
+```
+
+This aligns the KPI definition with the standardized domain in `Dim_AdmissionType`.
+
+### Validation After Fix
+
+Confirmed:
+- Non-zero `Encounter_Count_Unplanned`
+- Non-zero `Unplanned_Admission_Rate`
+- Reconciliation between KPI view, raw aggregation, and Excel validation pivot
+
+### Architectural Lesson
+
+This bug highlights an important governance principle:
+
+> KPI validation must reconcile both numerator and denominator, not just total encounter counts.
+
+Additionally: semantic alignment with standardized dimension values is critical. Step 07 Excel integration served as a structural stress test that exposed the inconsistency.
+
+---
+
 ## Excel Validation
 
 Excel file: [here](./05_03_Excel/05_03_Unplanned_Admission_Rate.xlsx)
 
-Validation checklist:
+After the fix above, validation checklist:
 1. Encounter classification: ensure AdmissionType_Std = 'Unplanned' logic in Excel matches SQL.
 2. Counts: Unplanned + Planned = Total encounters.
 3. Rates: Unplanned Rate = Unplanned / Total (validate manual recomputation in Excel).
