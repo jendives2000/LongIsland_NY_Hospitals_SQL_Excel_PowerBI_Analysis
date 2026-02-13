@@ -31,8 +31,9 @@ Encounter-level outputs remain validation artifacts and are not the executive in
 
 ## Visual Snapshot
 
-![Visual Snapshot](./image.png)
-Additional screenshots: `image-1.png`, `image-2.png`, `image-3.png`, `image-4.png`
+![Visual Snapshot](./screenshots/image.png)
 
 ---
+
+
 

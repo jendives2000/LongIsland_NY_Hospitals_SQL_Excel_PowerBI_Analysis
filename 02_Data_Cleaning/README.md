@@ -35,7 +35,7 @@ SQL artifacts:
 
 Evidence artifacts:
 
-- `image.png` through `image-12.png`
+- `screenshots/image.png` through `screenshots/image-12.png`
 
 ---
 
@@ -58,8 +58,7 @@ This is the structural handoff to `03_Analytical_Data_Modeling`.
 
 ## Visual Snapshot
 
-![Visual Snapshot](./image.png)
-Additional screenshots: `image-1.png`, `image-10.png`, `image-11.png`, `image-12.png`, `image-2.png`, `image-3.png`, `image-4.png`, `image-5.png`, `image-6.png`, `image-7.png`, `image-8.png`, `image-9.png`
+![Visual Snapshot](./screenshots/image-10.png)
 
 ---
 
@@ -68,7 +67,7 @@ Additional screenshots: `image-1.png`, `image-10.png`, `image-11.png`, `image-12
 ```text
 02_Data_Cleaning/
 |-- README.md
-|-- image.png ... image-12.png
+|-- screenshots/image.png ... screenshots/image-12.png
 `-- 02_SQL/
     |-- 2_1_Currency_Formatting.sql
     |-- 2_2_Standardize_ZIP_data.sql
@@ -79,4 +78,7 @@ Additional screenshots: `image-1.png`, `image-10.png`, `image-11.png`, `image-12
     |-- 2_7_add_surrogate_PrimaryKey.sql
     `-- 2_8_payment_typology_grouping.sql
 ```
+
+
+
 

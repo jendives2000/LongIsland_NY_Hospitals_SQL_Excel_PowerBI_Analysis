@@ -25,7 +25,7 @@ This folder demonstrates senior BI delivery capability:
 - `PBI_Project/PowerBI_project.SemanticModel/definition/*.tmdl`
 - `PBI_Project/PowerBI_project.Report/definition/*`
 - `PowerBI_Report_Structure.md`
-- `image.png` (model/report preview)
+- `screenshots/image.png` (model/report preview)
 
 ---
 
@@ -52,9 +52,4 @@ Semantic model changes should be treated as production contract changes and requ
 
 - `04_KPI_Data_Dictionary/README.md`
 - `05_Validation/README.md`
-
-## Visual Snapshot
-
-![Visual Snapshot](./image.png)
----
 

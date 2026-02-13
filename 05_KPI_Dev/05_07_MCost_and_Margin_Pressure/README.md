@@ -26,8 +26,9 @@ Validation extracts and quality transparency outputs in this SQL script are auxi
 
 ## Visual Snapshot
 
-![Visual Snapshot](./image.png)
-Additional screenshots: `image-1.png`, `image-2.png`, `image-3.png`
+![Visual Snapshot](./screenshots/image.png)
 
 ---
+
+
 

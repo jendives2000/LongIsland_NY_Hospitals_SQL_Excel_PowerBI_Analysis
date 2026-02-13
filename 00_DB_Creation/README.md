@@ -30,9 +30,9 @@ This step ensures:
 
 ### Evidence Artifacts
 
-- `image.png` (row-count validation)
-- `image-1.png` (schema inspection)
-- `image-2.png` (queryability check)
+- `screenshots/image.png` (row-count validation)
+- `screenshots/image-1.png` (schema inspection)
+- `screenshots/image-2.png` (queryability check)
 
 ### Data Asset
 
@@ -90,8 +90,7 @@ This step delivers a query-ready base table and naming contract consumed by `01_
 
 ## Visual Snapshot
 
-![Visual Snapshot](./image.png)
-Additional screenshots: `image-1.png`, `image-2.png`
+![Visual Snapshot](./screenshots/image-1.png)
 
 ---
 
@@ -100,10 +99,13 @@ Additional screenshots: `image-1.png`, `image-2.png`
 ```text
 00_DB_Creation/
 |-- README.md
-|-- image.png
-|-- image-1.png
-|-- image-2.png
+|-- screenshots/image.png
+|-- screenshots/image-1.png
+|-- screenshots/image-2.png
 `-- 00_SQL/
     `-- 00_1.sql
 ```
+
+
+
 

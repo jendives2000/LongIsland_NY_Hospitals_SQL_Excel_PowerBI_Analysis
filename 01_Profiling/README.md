@@ -29,7 +29,7 @@ SQL artifacts:
 
 Evidence artifact:
 
-- `image.png`
+- `screenshots/image.png`
 
 ---
 
@@ -59,7 +59,7 @@ Step 01 produces a deterministic remediation backlog consumed by `02_Data_Cleani
 
 ## Visual Snapshot
 
-![Visual Snapshot](./image.png)
+![Visual Snapshot](./screenshots/image.png)
 ---
 
 ## Folder Contents
@@ -67,9 +67,10 @@ Step 01 produces a deterministic remediation backlog consumed by `02_Data_Cleani
 ```text
 01_Profiling/
 |-- README.md
-|-- image.png
+|-- screenshots/image.png
 `-- 01_SQL/
     |-- Columns_Profiling.sql
     `-- BirthWeight_correction.sql
 ```
+
 

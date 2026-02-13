@@ -26,8 +26,9 @@ Encounter-level exports in the SQL script are validation artifacts, not executiv
 
 ## Visual Snapshot
 
-![Visual Snapshot](./image.png)
-Additional screenshots: `image-1.png`, `image-2.png`, `image-3.png`
+![Visual Snapshot](./screenshots/image.png)
 
 ---
+
+
 

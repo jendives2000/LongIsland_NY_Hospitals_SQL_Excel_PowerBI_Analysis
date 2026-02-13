@@ -71,8 +71,7 @@ See:
 
 ## Visual Snapshot
 
-![Visual Snapshot](./image.png)
-Additional screenshots: `image-1.png`
+![Visual Snapshot](./screenshots/image.png)
 
 ---
 
@@ -82,7 +81,9 @@ Additional screenshots: `image-1.png`
 03_Facility_Peer_Grouping_Framework/
 |-- README.md
 |-- seed_dim_peergroup_and_bridge.sql
-|-- image.png
-`-- image-1.png
+|-- screenshots/image.png
+`-- screenshots/image-1.png
 ```
+
+
 
