@@ -24,3 +24,11 @@ Step 07 consumes:
 - `dbo.vw_KPI_PayerMix_FacilityYear`
 
 Excel-focused pivot safety logic in this SQL file supports validation and executive compatibility, but Step-07 should still use the governed KPI view as source.
+
+## Visual Snapshot
+
+![Visual Snapshot](./image.png)
+Additional screenshots: `image-1.png`, `image-2.png`, `image-3.png`, `image-4.png`
+
+---
+

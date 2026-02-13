@@ -27,3 +27,11 @@ Step 07 references:
 - `dbo.vw_KPI_LOS_FacilityYear`
 
 Dependency gap: this view is not created in `05_05_Length_of_Stay.sql` and must be added or sourced before Step-07 integration.
+
+## Visual Snapshot
+
+![Visual Snapshot](./image.png)
+Additional screenshots: `image-1.png`, `image-2.png`, `image-3.png`, `image-4.png`, `image-5.png`, `image-6.png`, `image-7.png`, `image-8.png`
+
+---
+

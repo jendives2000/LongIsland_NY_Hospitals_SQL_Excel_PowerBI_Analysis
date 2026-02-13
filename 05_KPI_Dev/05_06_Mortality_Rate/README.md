@@ -23,3 +23,11 @@ Step 07 consumes:
 - `dbo.vw_KPI_Mortality_FacilityYear`
 
 Encounter-level mortality exports are retained for validation and reconciliation.
+
+## Visual Snapshot
+
+![Visual Snapshot](./image.png)
+Additional screenshots: `image-1.png`, `image-2.png`
+
+---
+

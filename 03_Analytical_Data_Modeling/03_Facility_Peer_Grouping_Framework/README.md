@@ -69,6 +69,13 @@ See:
 
 ---
 
+## Visual Snapshot
+
+![Visual Snapshot](./image.png)
+Additional screenshots: `image-1.png`
+
+---
+
 ## Folder Contents
 
 ```text
@@ -78,3 +85,4 @@ See:
 |-- image.png
 `-- image-1.png
 ```
+

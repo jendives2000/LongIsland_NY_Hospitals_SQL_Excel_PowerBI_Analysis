@@ -23,3 +23,11 @@ Step 07 consumes:
 - `dbo.vw_KPI_DispositionOutcomes_FacilityYear`
 
 Encounter-level exports in the SQL script are validation artifacts, not executive integration sources.
+
+## Visual Snapshot
+
+![Visual Snapshot](./image.png)
+Additional screenshots: `image-1.png`, `image-2.png`, `image-3.png`
+
+---
+

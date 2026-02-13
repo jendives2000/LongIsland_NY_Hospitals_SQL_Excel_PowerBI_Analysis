@@ -88,6 +88,13 @@ This step delivers a query-ready base table and naming contract consumed by `01_
 
 ---
 
+## Visual Snapshot
+
+![Visual Snapshot](./image.png)
+Additional screenshots: `image-1.png`, `image-2.png`
+
+---
+
 ## Folder Contents
 
 ```text
@@ -99,3 +106,4 @@ This step delivers a query-ready base table and naming contract consumed by `01_
 `-- 00_SQL/
     `-- 00_1.sql
 ```
+

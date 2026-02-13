@@ -53,3 +53,8 @@ Semantic model changes should be treated as production contract changes and requ
 - `04_KPI_Data_Dictionary/README.md`
 - `05_Validation/README.md`
 
+## Visual Snapshot
+
+![Visual Snapshot](./image.png)
+---
+

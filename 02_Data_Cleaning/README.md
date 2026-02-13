@@ -56,6 +56,13 @@ This is the structural handoff to `03_Analytical_Data_Modeling`.
 
 ---
 
+## Visual Snapshot
+
+![Visual Snapshot](./image.png)
+Additional screenshots: `image-1.png`, `image-10.png`, `image-11.png`, `image-12.png`, `image-2.png`, `image-3.png`, `image-4.png`, `image-5.png`, `image-6.png`, `image-7.png`, `image-8.png`, `image-9.png`
+
+---
+
 ## Folder Contents
 
 ```text
@@ -72,3 +79,4 @@ This is the structural handoff to `03_Analytical_Data_Modeling`.
     |-- 2_7_add_surrogate_PrimaryKey.sql
     `-- 2_8_payment_typology_grouping.sql
 ```
+

@@ -28,6 +28,13 @@ Creates discharge-exit semantic facts for flow and downstream utilization analys
 - `Discharge_Year` -> `Dim_Year.Discharge_Year`
 - `Disposition_Key` -> `Dim_Disposition.Disposition_Key`
 
+## Visual Snapshot
+
+![Visual Snapshot](./screenshots/image.png)
+
+---
+
 ## Screenshot
 
 - `screenshots/image.png`
+

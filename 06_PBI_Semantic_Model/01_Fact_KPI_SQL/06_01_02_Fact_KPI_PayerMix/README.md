@@ -28,6 +28,13 @@ Creates payer-mix semantic facts for reimbursement exposure and financial interp
 - `Discharge_Year` -> `Dim_Year.Discharge_Year`
 - `Payer_Key` -> `Dim_Payer.Payer_Key`
 
+## Visual Snapshot
+
+![Visual Snapshot](./screenshots/image.png)
+
+---
+
 ## Screenshot
 
 - `screenshots/image.png`
+

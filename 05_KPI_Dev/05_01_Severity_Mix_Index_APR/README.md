@@ -28,3 +28,11 @@ Step 07 consumes:
 - `dbo.vw_KPI_05_01_SeverityMix_FacilityYear`
 
 Encounter-level outputs remain validation artifacts and are not the executive integration contract.
+
+## Visual Snapshot
+
+![Visual Snapshot](./image.png)
+Additional screenshots: `image-1.png`, `image-2.png`, `image-3.png`, `image-4.png`
+
+---
+

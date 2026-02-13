@@ -23,3 +23,11 @@ Step 07 consumes:
 - `dbo.vw_KPI_CostPerCase_FacilityYear`
 
 Validation extracts and quality transparency outputs in this SQL script are auxiliary and not the executive source contract.
+
+## Visual Snapshot
+
+![Visual Snapshot](./image.png)
+Additional screenshots: `image-1.png`, `image-2.png`, `image-3.png`
+
+---
+

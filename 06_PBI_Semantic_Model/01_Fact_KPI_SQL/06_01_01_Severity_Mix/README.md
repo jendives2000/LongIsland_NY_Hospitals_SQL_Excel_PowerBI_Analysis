@@ -27,6 +27,13 @@ Creates the severity context fact used to anchor downstream KPI interpretation.
 - `Facility_Key` -> `Dim_Facility.Facility_Key`
 - `Discharge_Year` -> `Dim_Year.Discharge_Year`
 
+## Visual Snapshot
+
+![Visual Snapshot](./screenshots/image.png)
+
+---
+
 ## Screenshot
 
 - `screenshots/image.png`
+
