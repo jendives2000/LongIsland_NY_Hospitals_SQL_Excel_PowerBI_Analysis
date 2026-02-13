@@ -58,7 +58,24 @@ This is the structural handoff to `03_Analytical_Data_Modeling`.
 
 ## Visual Snapshot
 
-![Visual Snapshot](./screenshots/image-10.png)
+<details>
+<summary>Show Screenshots</summary>
+
+![Screenshot](./screenshots/image.png)
+![Screenshot](./screenshots/image-1.png)
+![Screenshot](./screenshots/image-10.png)
+![Screenshot](./screenshots/image-11.png)
+![Screenshot](./screenshots/image-12.png)
+![Screenshot](./screenshots/image-2.png)
+![Screenshot](./screenshots/image-3.png)
+![Screenshot](./screenshots/image-4.png)
+![Screenshot](./screenshots/image-5.png)
+![Screenshot](./screenshots/image-6.png)
+![Screenshot](./screenshots/image-7.png)
+![Screenshot](./screenshots/image-8.png)
+![Screenshot](./screenshots/image-9.png)
+
+</details>
 
 ---
 
@@ -67,7 +84,8 @@ This is the structural handoff to `03_Analytical_Data_Modeling`.
 ```text
 02_Data_Cleaning/
 |-- README.md
-|-- screenshots/image.png ... screenshots/image-12.png
+|-- screenshots/
+|   `-- image.png ... image-12.png
 `-- 02_SQL/
     |-- 2_1_Currency_Formatting.sql
     |-- 2_2_Standardize_ZIP_data.sql
@@ -78,6 +96,8 @@ This is the structural handoff to `03_Analytical_Data_Modeling`.
     |-- 2_7_add_surrogate_PrimaryKey.sql
     `-- 2_8_payment_typology_grouping.sql
 ```
+
+
 
 
 

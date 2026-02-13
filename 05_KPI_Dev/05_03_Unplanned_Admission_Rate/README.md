@@ -30,9 +30,22 @@ This is the executive-facing KPI contract; any encounter-level checks remain val
 
 ## Visual Snapshot
 
-![Visual Snapshot](./screenshots/image.png)
+<details>
+<summary>Show Screenshots</summary>
+
+![Screenshot](./screenshots/image.png)
+![Screenshot](./screenshots/image-1.png)
+![Screenshot](./screenshots/image-2.png)
+![Screenshot](./screenshots/image-3.png)
+![Screenshot](./screenshots/image-4.png)
+![Screenshot](./screenshots/image-5.png)
+![Screenshot](./screenshots/image-6.png)
+![Screenshot](./screenshots/image-7.png)
+
+</details>
 
 ---
+
 
 
 

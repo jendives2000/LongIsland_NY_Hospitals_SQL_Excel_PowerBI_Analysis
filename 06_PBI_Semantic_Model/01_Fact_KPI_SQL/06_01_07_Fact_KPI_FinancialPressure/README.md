@@ -31,11 +31,17 @@ Creates financial-pressure semantic facts for cost intensity and margin stress i
 
 ## Visual Snapshot
 
-![Visual Snapshot](./screenshots/image.png)
+<details>
+<summary>Show Screenshots</summary>
+
+![Screenshot](./screenshots/image.png)
+
+</details>
 
 ---
 
 ## Screenshot
 
 - `screenshots/image.png`
+
 

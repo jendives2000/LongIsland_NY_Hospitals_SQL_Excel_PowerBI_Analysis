@@ -30,11 +30,17 @@ Creates payer-mix semantic facts for reimbursement exposure and financial interp
 
 ## Visual Snapshot
 
-![Visual Snapshot](./screenshots/image.png)
+<details>
+<summary>Show Screenshots</summary>
+
+![Screenshot](./screenshots/image.png)
+
+</details>
 
 ---
 
 ## Screenshot
 
 - `screenshots/image.png`
+
 

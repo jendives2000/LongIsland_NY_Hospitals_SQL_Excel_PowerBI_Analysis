@@ -75,7 +75,24 @@ Delivers a validation-certified base for KPI development:
 
 ## Visual Snapshot
 
-![Visual Snapshot](./screenshots/image-8.png)
+<details>
+<summary>Show Screenshots</summary>
+
+![Screenshot](./screenshots/image.png)
+![Screenshot](./screenshots/image-1.png)
+![Screenshot](./screenshots/image-10.png)
+![Screenshot](./screenshots/image-11.png)
+![Screenshot](./screenshots/image-12.png)
+![Screenshot](./screenshots/image-2.png)
+![Screenshot](./screenshots/image-3.png)
+![Screenshot](./screenshots/image-4.png)
+![Screenshot](./screenshots/image-5.png)
+![Screenshot](./screenshots/image-6.png)
+![Screenshot](./screenshots/image-7.png)
+![Screenshot](./screenshots/image-8.png)
+![Screenshot](./screenshots/image-9.png)
+
+</details>
 
 ---
 
@@ -84,10 +101,13 @@ Delivers a validation-certified base for KPI development:
 ```text
 04_Analytical_Validation/
 |-- README.md
-|-- screenshots/image.png ... screenshots/image-12.png
+|-- screenshots/
+|   `-- image.png ... image-12.png
 |-- 04_SQL/
 `-- 04_Excel/
 ```
+
+
 
 
 

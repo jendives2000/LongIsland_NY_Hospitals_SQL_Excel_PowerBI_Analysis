@@ -29,11 +29,17 @@ Creates the severity context fact used to anchor downstream KPI interpretation.
 
 ## Visual Snapshot
 
-![Visual Snapshot](./screenshots/image.png)
+<details>
+<summary>Show Screenshots</summary>
+
+![Screenshot](./screenshots/image.png)
+
+</details>
 
 ---
 
 ## Screenshot
 
 - `screenshots/image.png`
+
 

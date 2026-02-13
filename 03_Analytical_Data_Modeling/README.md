@@ -77,7 +77,21 @@ Provides the governed structural foundation consumed by:
 
 ## Visual Snapshot
 
-![Visual Snapshot](./screenshots/image-6.png)
+<details>
+<summary>Show Screenshots</summary>
+
+![Screenshot](./screenshots/image.png)
+![Screenshot](./screenshots/image-1.png)
+![Screenshot](./screenshots/image-2.png)
+![Screenshot](./screenshots/image-3.png)
+![Screenshot](./screenshots/image-4.png)
+![Screenshot](./screenshots/image-5.png)
+![Screenshot](./screenshots/image-6.png)
+![Screenshot](./screenshots/image-7.png)
+![Screenshot](./screenshots/image-8.png)
+![Screenshot](./screenshots/image-9.png)
+
+</details>
 
 ---
 
@@ -86,10 +100,13 @@ Provides the governed structural foundation consumed by:
 ```text
 03_Analytical_Data_Modeling/
 |-- README.md
-|-- screenshots/image.png ... screenshots/image-9.png
+|-- screenshots/
+|   `-- image.png ... image-9.png
 |-- 03_SQL/
 `-- 03_Facility_Peer_Grouping_Framework/
 ```
+
+
 
 
 

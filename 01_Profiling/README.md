@@ -59,7 +59,13 @@ Step 01 produces a deterministic remediation backlog consumed by `02_Data_Cleani
 
 ## Visual Snapshot
 
-![Visual Snapshot](./screenshots/image.png)
+<details>
+<summary>Show Screenshots</summary>
+
+![Screenshot](./screenshots/image.png)
+
+</details>
+
 ---
 
 ## Folder Contents
@@ -67,10 +73,13 @@ Step 01 produces a deterministic remediation backlog consumed by `02_Data_Cleani
 ```text
 01_Profiling/
 |-- README.md
-|-- screenshots/image.png
+|-- screenshots/
+|   `-- image.png
 `-- 01_SQL/
     |-- Columns_Profiling.sql
     `-- BirthWeight_correction.sql
 ```
+
+
 
 

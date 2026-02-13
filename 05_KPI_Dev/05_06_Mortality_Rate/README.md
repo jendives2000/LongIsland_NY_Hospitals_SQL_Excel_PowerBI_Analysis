@@ -26,9 +26,17 @@ Encounter-level mortality exports are retained for validation and reconciliation
 
 ## Visual Snapshot
 
-![Visual Snapshot](./screenshots/image.png)
+<details>
+<summary>Show Screenshots</summary>
+
+![Screenshot](./screenshots/image.png)
+![Screenshot](./screenshots/image-1.png)
+![Screenshot](./screenshots/image-2.png)
+
+</details>
 
 ---
+
 
 
 

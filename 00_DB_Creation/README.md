@@ -90,7 +90,14 @@ This step delivers a query-ready base table and naming contract consumed by `01_
 
 ## Visual Snapshot
 
-![Visual Snapshot](./screenshots/image-1.png)
+<details>
+<summary>Show Screenshots</summary>
+
+![Screenshot](./screenshots/image.png)
+![Screenshot](./screenshots/image-1.png)
+![Screenshot](./screenshots/image-2.png)
+
+</details>
 
 ---
 
@@ -99,12 +106,17 @@ This step delivers a query-ready base table and naming contract consumed by `01_
 ```text
 00_DB_Creation/
 |-- README.md
-|-- screenshots/image.png
-|-- screenshots/image-1.png
-|-- screenshots/image-2.png
+|-- screenshots/
+|   |-- image.png
+|   |-- image-1.png
+|   `-- image-2.png
 `-- 00_SQL/
     `-- 00_1.sql
 ```
+
+
+
+
 
 
 

@@ -30,11 +30,17 @@ Creates discharge-exit semantic facts for flow and downstream utilization analys
 
 ## Visual Snapshot
 
-![Visual Snapshot](./screenshots/image.png)
+<details>
+<summary>Show Screenshots</summary>
+
+![Screenshot](./screenshots/image.png)
+
+</details>
 
 ---
 
 ## Screenshot
 
 - `screenshots/image.png`
+
 
