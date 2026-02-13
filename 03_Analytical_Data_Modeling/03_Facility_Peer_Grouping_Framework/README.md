@@ -2,9 +2,9 @@
 
 ## Purpose
 
-This framework defines and governs facility peer-group assignments used for fair hospital comparison across KPI domains.
+Defines governed facility peer-group assignments used for fair cross-facility KPI comparison.
 
-Peer grouping is structural model context, not KPI math. It is implemented in SQL so the same comparison logic is reused consistently across validation, semantic modeling, and reporting.
+Peer grouping is structural context, not KPI math.
 
 ---
 
@@ -12,16 +12,12 @@ Peer grouping is structural model context, not KPI math. It is implemented in SQ
 
 This framework:
 
-- Defines canonical peer groups (`PG-A` through `PG-E`)
+- Defines canonical peer groups (`PG-A` to `PG-E`)
 - Seeds `Dim_PeerGroup`
 - Populates `Bridge_Facility_PeerGroup`
-- Enforces deterministic matching through canonical facility names
+- Uses deterministic exact-name matching for auditable assignments
 
-This framework does not:
-
-- Calculate KPI values
-- Modify KPI fact logic
-- Use fuzzy or heuristic matching
+This framework does not calculate KPI values.
 
 ---
 
@@ -35,19 +31,10 @@ This framework does not:
 
 ## Data Model Objects
 
-### 1) `dbo.Dim_PeerGroup`
+- `dbo.Dim_PeerGroup`: one row per peer group
+- `dbo.Bridge_Facility_PeerGroup`: facility-to-group assignment bridge
 
-- Grain: one row per peer group
-- Key: `PeerGroup_Key`
-- Role: canonical benchmark lens
-
-### 2) `dbo.Bridge_Facility_PeerGroup`
-
-- Grain: one row per facility-peer assignment
-- Composite key: (`Facility_Key`, `PeerGroup_Key`)
-- Role: factless bridge enabling peer-group filter propagation
-
-The bridge is retained to keep the model extensible if multi-group assignments are needed in the future.
+The bridge is retained for extensibility and filter-governance consistency.
 
 ---
 
@@ -59,67 +46,26 @@ The bridge is retained to keep the model extensible if multi-group assignments a
 - `PG-D Rural / East-End`
 - `PG-E Specialty-Dominant`
 
-Definitions and descriptions are seeded directly in `seed_dim_peergroup_and_bridge.sql`.
-
 ---
 
-## Assignment Method
+## QA Requirements
 
-Facility mappings are resolved by exact join on:
+Post-seed checks must confirm:
 
-- `Dim_Facility.Facility_Name`
-
-Why exact matching is enforced:
-
-- Prevents silent misclassification
-- Surfaces naming quality issues early
-- Preserves auditable and deterministic behavior
-
-If a name mismatch exists, no bridge row is created by design.
-
----
-
-## Required QA Checks
-
-After seeding:
-
-- All expected peer groups exist in `Dim_PeerGroup`
-- All mapped facilities resolve to `Dim_Facility`
-- Bridge rows contain valid foreign keys only
-
-The seed script includes QA queries for unresolved names and final assignment review.
-
----
-
-## KPI Interpretation Guidance
-
-Peer grouping provides comparison context. It does not replace clinical judgment.
-
-Use peer groups to reduce structural bias when interpreting:
-
-- Severity-driven outcomes
-- Throughput and LOS patterns
-- Payer and financial pressure profiles
-- Disposition and mortality differences
+- expected groups exist,
+- assignments resolve to valid facility keys,
+- unresolved names are flagged and reviewed.
 
 ---
 
 ## Downstream Usage
 
-In the semantic layer, peer context is consumed through model relationships rather than custom KPI rewrites.
+Used by semantic and reporting layers for interpretation-safe benchmarking.
 
-See also:
+See:
 
 - `../README.md`
 - `../../06_PBI_Semantic_Model/README.md`
-
----
-
-## Known Limitations
-
-- Peer grouping does not remove all case-mix heterogeneity
-- Small facilities may still show volatility on low denominators
-- Group definitions may require periodic governance refresh
 
 ---
 
