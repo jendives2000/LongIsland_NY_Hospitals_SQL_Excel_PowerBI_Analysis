@@ -1,30 +1,32 @@
-# 06.01.06 — `Fact_KPI_Mortality`
+﻿# KPI 06.01.06 - Fact_KPI_Mortality
 
-**Purpose**  
-Measures **in-hospital mortality exposure**.
+## Purpose
 
-**Grain**  
-- One row per **Facility × Discharge Year**
+Creates mortality semantic facts for outcome-risk interpretation.
 
-**Primary Measures**
-- Numerator: `Death_Count`
-- Denominator: `Total_Encounters`
-- Metric: `Mortality_Rate_validation` (stored for validation, recomputed in DAX)
+## SQL Artifact
 
-<details>
-<summary>🖼 See the Output Screenshot</summary>
+- `06_01_06_Fact_KPI_Mortality.sql`
 
-![Fact_KPI_Mortality](./screenshots/image.png)
+## Output Table
 
+- `dbo.Fact_KPI_Mortality`
 
-</details>
+## Grain
 
-**Key Dimensions**
-- Facility
-- Date (Year)
+- One row per Facility x Discharge Year
 
-**Analytical Role**
-- Outcome risk KPI
-- Always interpreted with Severity Mix
+## Core Fields
 
----
+- `Death_Count`
+- `Total_Encounters`
+- `Mortality_Rate_validation` (reconciliation support)
+
+## Key Relationships
+
+- `Facility_Key` -> `Dim_Facility.Facility_Key`
+- `Discharge_Year` -> `Dim_Year.Discharge_Year`
+
+## Screenshot
+
+- `screenshots/image.png`

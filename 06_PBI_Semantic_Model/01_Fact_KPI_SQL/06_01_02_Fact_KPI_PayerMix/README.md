@@ -1,31 +1,33 @@
-# 06.01.02 — `Fact_KPI_PayerMix`
+﻿# KPI 06.01.02 - Fact_KPI_PayerMix
 
-**Purpose**  
-Quantifies **payer distribution and reimbursement exposure** by facility.
+## Purpose
 
-**Grain**  
-- One row per **Facility × Discharge Year × Payment Typology Group**
+Creates payer-mix semantic facts for reimbursement exposure and financial interpretation.
 
-**Primary Measures**
-- Numerator `Payer_Encounter_Count`: Encounter count per payer group: 
-  - Commercial / Medicaid / Medicare / Self-Pay
-- Denominator `Total_Encounters_Facility_Year` (reconciliation-safe)
-- Metric: `Payer_Encounter_Share_validation` (stored for validation, recomputed in DAX)
+## SQL Artifact
 
-<details>
-<summary>🖼 See the Output Screenshot</summary>
+- `06_01_02_Fact_KPI_PayerMix.sql`
 
-![Fact_KPI_PayerMix](./screenshots/image.png)
+## Output Table
 
-</details>
+- `dbo.Fact_KPI_PayerMix`
 
-**Key Dimensions**
-- Facility
-- Date (Year)
-- Payer
+## Grain
 
-**Analytical Role**
-- Financial exposure context
-- Explains structural margin pressure
+- One row per Facility x Discharge Year x Payer Group
 
----
+## Core Fields
+
+- `Payer_Encounter_Count`
+- `Total_Encounters_Facility_Year`
+- `Payer_Encounter_Share_validation` (reconciliation support)
+
+## Key Relationships
+
+- `Facility_Key` -> `Dim_Facility.Facility_Key`
+- `Discharge_Year` -> `Dim_Year.Discharge_Year`
+- `Payer_Key` -> `Dim_Payer.Payer_Key`
+
+## Screenshot
+
+- `screenshots/image.png`

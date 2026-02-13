@@ -1,31 +1,32 @@
-# 06.01.05 — `Fact_KPI_LOS_Summary`
+﻿# KPI 06.01.05 - Fact_KPI_LOS_Summary
 
-**Purpose**  
-Summarizes **inpatient length-of-stay behavior** at an executive level.
+## Purpose
 
-**Grain**  
-- One row per **Facility × Discharge Year**
+Creates LOS summary semantic facts for throughput and capacity signals.
 
-**Primary Measures**
-- Numerator: `Total_LOS_Days`
-- Denominator: `Encounter_Count`
-- Metrics: `Avg_LOS_validation`, `Min_LOS_validation`, `Max_LOS_validation` (stored for validation, recomputed in DAX)
+## SQL Artifact
 
+- `06_01_05_Fact_KPI_LOS_Summary.sql`
 
-<details>
-<summary>🖼 See the Output Screenshot</summary>
+## Output Table
 
-![Fact_KPI_LOS_Summary](./screenshots/image.png)
+- `dbo.Fact_KPI_LOS_Summary`
 
+## Grain
 
-</details>
+- One row per Facility x Discharge Year
 
-**Key Dimensions**
-- Facility
-- Date (Year)
+## Core Fields
 
-**Analytical Role**
-- Throughput and capacity signal
-- Requires severity and intake context
+- `Total_LOS_Days`
+- `Encounter_Count`
+- `Avg_LOS_validation`, `Min_LOS_validation`, `Max_LOS_validation` (reconciliation support)
 
----
+## Key Relationships
+
+- `Facility_Key` -> `Dim_Facility.Facility_Key`
+- `Discharge_Year` -> `Dim_Year.Discharge_Year`
+
+## Screenshot
+
+- `screenshots/image.png`

@@ -1,32 +1,33 @@
-# 06.01.04 — `Fact_KPI_Disposition`
+﻿# KPI 06.01.04 - Fact_KPI_Disposition
 
-**Purpose**  
-Describes **how inpatient encounters conclude**, connecting care to downstream systems.
+## Purpose
 
-**Grain**  
-- One row per **Facility × Discharge Year × Disposition Group**
+Creates discharge-exit semantic facts for flow and downstream utilization analysis.
 
-**Primary Measures**
-- 4 Disposition Categories: `Disposition_Grouped`: Death - Home - Other - Skill Nursing / Rehab
-- Numerator: `Disposition_Count`
-- Denominator: `Total_Encounters_Facility_Year`
-- Metric: `Disposition_Rate_validation` (stored for validation, recomputed in DAX)
+## SQL Artifact
 
-<details>
-<summary>🖼 See the Output Screenshot</summary>
+- `06_01_04_Fact_KPI_Disposition.sql`
 
-![Fact_KPI_Disposition](./screenshots/image.png)
+## Output Table
 
+- `dbo.Fact_KPI_Disposition`
 
-</details>
+## Grain
 
-**Key Dimensions**
-- Facility
-- Date (Year)
-- Disposition
+- One row per Facility x Discharge Year x Disposition Group
 
-**Analytical Role**
-- Flow completion KPI
-- Interpreted alongside LOS and mortality
+## Core Fields
 
----
+- `Disposition_Count`
+- `Total_Encounters_Facility_Year`
+- `Disposition_Rate_validation` (reconciliation support)
+
+## Key Relationships
+
+- `Facility_Key` -> `Dim_Facility.Facility_Key`
+- `Discharge_Year` -> `Dim_Year.Discharge_Year`
+- `Disposition_Key` -> `Dim_Disposition.Disposition_Key`
+
+## Screenshot
+
+- `screenshots/image.png`

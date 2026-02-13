@@ -1,33 +1,34 @@
-# 06.01.07 — `Fact_KPI_FinancialPressure`
+﻿# KPI 06.01.07 - Fact_KPI_FinancialPressure
 
-**Purpose**  
-Surfaces **cost intensity and margin stress** at the system level.
+## Purpose
 
-**Grain**  
-- One row per **Facility × Discharge Year**
+Creates financial-pressure semantic facts for cost intensity and margin stress interpretation.
 
-**Primary Measures**
-- Numerator: `Total_Costs`
-- Denominator: `Encounter_Count`
-  - Metric: `Avg_Cost_Per_Encounter_validation` (stored for validation, recomputed in DAX)
-- Numerator: `Total_Margin`
-- Denominator: `Total_Charges`
-  - Metric: `Margin_Rate_validation` (stored for validation, recomputed in DAX)
+## SQL Artifact
+
+- `06_01_07_Fact_KPI_FinancialPressure.sql`
+
+## Output Table
+
+- `dbo.Fact_KPI_FinancialPressure`
+
+## Grain
+
+- One row per Facility x Discharge Year
+
+## Core Fields
+
+- `Total_Costs`
+- `Total_Charges`
+- `Encounter_Count`
 - `Negative_Margin_Encounter_Count`
+- `Avg_Cost_Per_Encounter_validation`, `Margin_Rate_validation` (reconciliation support)
 
-<details>
-<summary>🖼 See the Output Screenshot</summary>
+## Key Relationships
 
-![Fact_KPI_FinancialPressure](./screenshots/image.png)
+- `Facility_Key` -> `Dim_Facility.Facility_Key`
+- `Discharge_Year` -> `Dim_Year.Discharge_Year`
 
-</details>
+## Screenshot
 
-**Key Dimensions**
-- Facility
-- Date (Year)
-
-**Analytical Role**
-- Financial sustainability indicator
-- Contextualized by payer mix and severity
-
----
+- `screenshots/image.png`

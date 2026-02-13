@@ -1,30 +1,32 @@
-# 06.01.03 — `Fact_KPI_Unplanned`
+﻿# KPI 06.01.03 - Fact_KPI_Unplanned
 
-**Purpose**  
-Measures **acute intake pressure** driven by unplanned admissions.
+## Purpose
 
-**Grain**  
-- One row per **Facility × Discharge Year**
+Creates intake-pressure semantic facts from unplanned-admission KPI outputs.
 
-**Primary Measures**
-- Numerator: `Unplanned_Encounter_Count`
-- Denominator: `Total_Encounters`
-- Metric: `Unplanned_Admission_Rate_validation` (stored for validation, recomputed in DAX)
+## SQL Artifact
 
-<details>
-<summary>🖼 See the Output Screenshot</summary>
+- `06_01_03_Fact_KPI_Unplanned.sql`
 
-![Fact_KPI_Unplanned](./screenshots/image.png)
+## Output Table
 
+- `dbo.Fact_KPI_Unplanned`
 
-</details>
+## Grain
 
-**Key Dimensions**
-- Facility
-- Date (Year)
+- One row per Facility x Discharge Year
 
-**Analytical Role**
-- Intake pressure indicator
-- Interpreted before LOS and cost KPIs
+## Core Fields
 
----
+- `Unplanned_Encounter_Count`
+- `Total_Encounters`
+- `Unplanned_Admission_Rate_validation` (reconciliation support)
+
+## Key Relationships
+
+- `Facility_Key` -> `Dim_Facility.Facility_Key`
+- `Discharge_Year` -> `Dim_Year.Discharge_Year`
+
+## Screenshot
+
+- `screenshots/image.png`

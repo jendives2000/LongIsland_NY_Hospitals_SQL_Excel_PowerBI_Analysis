@@ -1,42 +1,32 @@
-# 06.01.01 — `Fact_KPI_SeverityMix`
-- SQL File: [here](.)
-  
-**Purpose**  
-Establishes the **clinical acuity baseline** required to interpret all downstream KPIs fairly.
+﻿# KPI 06.01.01 - Fact_KPI_SeverityMix
 
-**Grain**  
-- One row per **Facility × Discharge Year** - 2015
+## Purpose
 
-**Time Dimension**
-- This fact is modeled at **year grain** and relates to a tiny conformed dimension:
-  - `Dim_Year` (PK: `Discharge_Year`)
-- A full `Dim_Date` is intentionally not used, as no day or month granularity exists in this KPI.
+Creates the severity context fact used to anchor downstream KPI interpretation.
 
+## SQL Artifact
 
-**Primary Measures**
-- Numerator: `Weighted_Severity_Sum`
-- Denominator: `Total_Encounters`
-- Metric: `Severity_Mix_Index_validation` (stored for validation, recomputed in DAX)
+- `06_01_01_Fact_KPI_SeverityMix.sql`
 
-<details>
-<summary>🖼 See the Output Screenshot</summary>
+## Output Table
 
-![Fact_KPI_SeverityMix](./screenshots/image.png)
+- `dbo.Fact_KPI_SeverityMix`
 
+## Grain
 
-</details>
+- One row per Facility x Discharge Year
 
-**Key Dimensions**
-- Facility (`Dim_Facility`)
-- Year (`Dim_Year`)
+## Core Fields
 
-**Relationship Contract**
-- `Fact_KPI_SeverityMix.Facility_Key` → `Dim_Facility.Facility_Key`
-- `Fact_KPI_SeverityMix.Discharge_Year` → `Dim_Year.Discharge_Year`
+- `Weighted_Severity_Sum`
+- `Total_Encounters`
+- `Severity_Mix_Index_validation` (reconciliation support)
 
+## Key Relationships
 
-**Analytical Role**
-- Context KPI (not performance)
-- Used to explain LOS, mortality, and cost differences
+- `Facility_Key` -> `Dim_Facility.Facility_Key`
+- `Discharge_Year` -> `Dim_Year.Discharge_Year`
 
----
+## Screenshot
+
+- `screenshots/image.png`
