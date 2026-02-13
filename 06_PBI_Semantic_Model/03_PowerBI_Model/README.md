@@ -24,14 +24,14 @@ This folder demonstrates senior BI delivery capability:
 - `PBI_Project/PowerBI_project.pbip`
 - `PBI_Project/PowerBI_project.SemanticModel/definition/*.tmdl`
 - `PBI_Project/PowerBI_project.Report/definition/*`
-- `REPORT_STRUCTURE_AND_NAVIGATION.md`
+- `PowerBI_Report_Structure.md`
 - `image.png` (model/report preview)
 
 ---
 
 ## Report Structure Guide
 
-Use `REPORT_STRUCTURE_AND_NAVIGATION.md` for report page sequencing, interpretation rules, and mandatory slicer behavior.
+Use `PowerBI_Report_Structure.md` for report page sequencing, interpretation rules, and mandatory slicer behavior.
 
 That guide is report-specific. This README remains the folder-level contract.
 
@@ -52,3 +52,4 @@ Semantic model changes should be treated as production contract changes and requ
 
 - `04_KPI_Data_Dictionary/README.md`
 - `05_Validation/README.md`
+
