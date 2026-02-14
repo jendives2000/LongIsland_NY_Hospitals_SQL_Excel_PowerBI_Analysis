@@ -53,3 +53,25 @@ Semantic model changes should be treated as production contract changes and requ
 - [`04_KPI_Data_Dictionary/README.md`](/06_PBI_Semantic_Model/04_KPI_Data_Dictionary/README.md)
 - [`05_Validation/README.md`](/06_PBI_Semantic_Model/05_Validation/README.md)
 
+---
+
+## Visual Snapshot
+
+<details>
+<summary>Show Screenshots</summary>
+
+
+
+
+
+![alt text](/06_PBI_Semantic_Model/03_PowerBI_Model/screenshots/report_exec_overview_page.png)
+
+![alt text](/06_PBI_Semantic_Model/03_PowerBI_Model/screenshots/report_severity_landing_page.png)
+
+![alt text](/06_PBI_Semantic_Model/03_PowerBI_Model/screenshots/report_sev_context_page.png)
+
+![alt text](/06_PBI_Semantic_Model/03_PowerBI_Model/screenshots/report_data_dictionary_page.png)
+
+</details>
+
+---

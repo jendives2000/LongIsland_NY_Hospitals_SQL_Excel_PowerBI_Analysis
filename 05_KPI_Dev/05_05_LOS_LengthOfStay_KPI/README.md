@@ -37,7 +37,7 @@ Dependency gap: this view is not created in [`05_05_Length_of_Stay.sql`](/05_KPI
 
 
 
-_No screenshots retained after curation._
+![Screenshot](/05_KPI_Dev/05_05_LOS_LengthOfStay_KPI/screenshots/los_apr_sev_los_avg_validation.png)
 
 </details>
 

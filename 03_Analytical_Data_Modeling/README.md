@@ -58,14 +58,6 @@ Fact layer:
 
 ---
 
-## Date Modeling Note
-
-Both standard date-dimension and synthetic-date scripts exist for 2015 portfolio usage.
-
-Synthetic dates support modeling behavior where full real timestamp granularity is limited.
-
----
-
 ## Output Contract
 
 Provides the governed structural foundation consumed by:
@@ -112,7 +104,7 @@ Provides the governed structural foundation consumed by:
 |   |-- 3_6c_dim_peergroup.sql
 |   |-- 3_6d_bridge_facility_peergroup.sql
 |   `-- 3_7_Fact_Table_inpatient_stay.sql
-`-- screenshots/   (10 validation images)
+`-- screenshots/   (3 validation images)
 ```
 
 

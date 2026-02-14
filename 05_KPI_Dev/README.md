@@ -1,8 +1,8 @@
-# 05 - KPI Development
+﻿# 05 - KPI Development
 
 ## Purpose
 
-This step defines and validates the KPI layer used by both the semantic model (`06`) and the executive Excel integration (`07`).
+This step defines and validates the KPI layer used by both the semantic model ([`06`](/06_PBI_Semantic_Model/README.md)) and the executive Excel integration ([`07`](/07_Excel_Executive_Analytics/README.md)).
 
 All KPI logic is authored in SQL, validated with encounter-level exports, and then promoted to governed facility-year KPI views where applicable.
 
@@ -113,41 +113,37 @@ Step 07 should consume governed KPI views, not redefine KPI formulas.
 |-- 05_01_Severity_Mix_Index_APR/
 |   |-- 05_Excel/
 |   |-- 05_SQL/
-|   |-- screenshots/   (5 validation images)
+|   |-- screenshots/   (1 validation images)
 |   `-- README.md
 |-- 05_02_Payers_Mix_Reimb_Risk/
 |   |-- 05_02_Excel/
 |   |-- 05_02_SQL/
-|   |-- screenshots/   (5 validation images)
+|   |-- screenshots/   (1 validation images)
 |   `-- README.md
 |-- 05_03_Unplanned_Admission_Rate/
 |   |-- 05_03_Excel/
 |   |-- 05_03_SQL/
-|   |-- screenshots/   (8 validation images)
+|   |-- screenshots/   (1 validation images)
 |   `-- README.md
 |-- 05_04_Disposition_Outcomes/
 |   |-- 05_04_Excel/
 |   |-- 05_04_SQL/
-|   |-- screenshots/   (4 validation images)
+|   |-- screenshots/   (2 validation images)
 |   `-- README.md
 |-- 05_05_LOS_LengthOfStay_KPI/
 |   |-- 05_05_Excel/
 |   |-- 05_05_SQL/
-|   |-- screenshots/   (9 validation images)
+|   |-- screenshots/   (1 validation images)
 |   `-- README.md
 |-- 05_06_Mortality_Rate/
 |   |-- 05_06_Excel/
 |   |-- 05_06_SQL/
-|   |-- screenshots/   (3 validation images)
+|   |-- screenshots/   (1 validation images)
 |   `-- README.md
 |-- 05_07_MCost_and_Margin_Pressure/
 |   |-- 05_07_Excel/
 |   |-- 05_07_SQL/
-|   |-- screenshots/   (4 validation images)
-|   `-- README.md
-|-- 05_0x_folder_template/
-|   |-- 05_0x_Excel/
-|   |-- 05_0x_SQL/
+|   |-- screenshots/   (1 validation images)
 |   `-- README.md
 `-- inputs_and_dependencies.txt
 ```

@@ -42,3 +42,15 @@ Dictionary entries must stay aligned with:
 - Validation controls in [`05_Validation`](/06_PBI_Semantic_Model/05_Validation/README.md)
 
 If model logic changes, dictionary updates are mandatory.
+
+---
+
+## Visual Snapshot
+
+<details>
+<summary>Show Screenshots</summary>
+
+
+![alt text](/06_PBI_Semantic_Model/03_PowerBI_Model/screenshots/report_data_dictionary_page.png)
+
+</details>

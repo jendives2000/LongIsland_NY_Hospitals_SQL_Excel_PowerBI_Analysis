@@ -33,7 +33,7 @@ Encounter-level mortality exports are retained for validation and reconciliation
 
 
 
-_No screenshots retained after curation._
+![Screenshot](/05_KPI_Dev/05_06_Mortality_Rate/screenshots/mort_count_rate_validation.png)
 
 </details>
 

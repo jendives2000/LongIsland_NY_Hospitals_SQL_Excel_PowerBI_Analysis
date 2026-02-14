@@ -36,7 +36,7 @@ Creates LOS summary semantic facts for throughput and capacity signals.
 
 
 
-_No screenshots retained after curation._
+![Screenshot](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_05_Fact_KPI_LOS_Summary/screenshots/fact_kpi_los_summary.png)
 
 </details>
 
@@ -44,6 +44,6 @@ _No screenshots retained after curation._
 
 ## Screenshot
 
-- [`screenshots/fact_kpi_los_summary_preview.png`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_05_Fact_KPI_LOS_Summary/screenshots/fact_kpi_los_summary_preview.png)
+- [`screenshots/fact_kpi_los_summary.png`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_05_Fact_KPI_LOS_Summary/screenshots/fact_kpi_los_summary.png)
 
 

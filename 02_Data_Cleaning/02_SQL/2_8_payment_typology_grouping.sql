@@ -21,8 +21,7 @@
         * Self-Pay
         * Other
         * Unknown
-    - Runs sanity checks so we can validate the distribution and refine
-      mapping rules if needed.
+    - Runs sanity checks so I can validate the distribution and refine mapping rules if needed.
 */
 
 ------------------------------------------------------------

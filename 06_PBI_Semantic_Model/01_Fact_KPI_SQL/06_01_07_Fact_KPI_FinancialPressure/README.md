@@ -38,7 +38,7 @@ Creates financial-pressure semantic facts for cost intensity and margin stress i
 
 
 
-_No screenshots retained after curation._
+![alt text](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_07_Fact_KPI_FinancialPressure/screenshots/fact_kpi_financial_pressure.png)
 
 </details>
 
@@ -46,6 +46,6 @@ _No screenshots retained after curation._
 
 ## Screenshot
 
-- [`screenshots/fact_kpi_financial_pressure_preview.png`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_07_Fact_KPI_FinancialPressure/screenshots/fact_kpi_financial_pressure_preview.png)
+- [`screenshots/fact_kpi_financial_pressure.png`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_07_Fact_KPI_FinancialPressure/screenshots/fact_kpi_financial_pressure.png)
 
 

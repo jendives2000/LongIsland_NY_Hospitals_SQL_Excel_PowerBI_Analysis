@@ -2,7 +2,7 @@
  STEP 02.5 – GROUP Patient_Disposition
  Reason:
  - Raw patient disposition has many detailed categories
- - For reporting, we want broader groups (Home, SNF/Rehab, Death, Other, Unknown)
+ - For reporting, I want broader groups (Home, SNF/Rehab, Death, Other, Unknown)
 */
 
 -- 1️) Add grouped disposition column

@@ -3,7 +3,7 @@
  Reason:
  - Columns imported as NVARCHAR(MAX) (-1 length) are slower to index and scan.
  - In this dataset, these are mostly code descriptions, not true free-text notes,
-   so we can safely shrink them to a realistic length.
+   so I can safely shrink them to a realistic length.
 */
 
 SELECT 

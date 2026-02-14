@@ -125,7 +125,6 @@ INNER JOIN dbo.Dim_Facility AS f
 GO
 
 
-
 -- Check with top 5. rows
 SELECT TOP (50)
     Facility_Name,

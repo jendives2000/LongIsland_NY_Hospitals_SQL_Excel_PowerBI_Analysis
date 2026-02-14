@@ -110,7 +110,7 @@ This step delivers a query-ready base table and naming contract consumed by [`01
 |-- README.md
 |-- 00_SQL/
 |   `-- 00_1.sql
-`-- screenshots/   (3 validation images)
+`-- screenshots/   (2 validation images)
 ```
 
 

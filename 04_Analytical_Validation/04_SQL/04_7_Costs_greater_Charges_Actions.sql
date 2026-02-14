@@ -19,7 +19,6 @@ WHERE Total_Costs > Total_Charges
 GROUP BY Payer_Key;
 
 
-
 /* Negative-margin encounters with payer labels */
 
 SELECT 
@@ -40,9 +39,6 @@ WHERE f.Total_Costs > f.Total_Charges
 ORDER BY Margin_Loss DESC;      -- biggest negative margins first
 
 
-
-
-
 /* Summary: which payer types drive the 1120 negative-margin cases? */
 
 SELECT
@@ -58,4 +54,3 @@ GROUP BY
     p.Payment_Typology_Group
 ORDER BY
     NegativeMargin_Count DESC;
-

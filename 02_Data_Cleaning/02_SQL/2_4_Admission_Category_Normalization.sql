@@ -2,7 +2,7 @@
  STEP 02.4 – STANDARDIZE Type_of_Admission
  Reason:
  - Original labels may mix 'Emergency', 'Urgent', 'Elective', etc.
- - We create a simplified, analysis-friendly bucket field
+ - I create a simplified, analysis-friendly bucket field
 */
 
 -- 1️) Add standardized column

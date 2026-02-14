@@ -87,7 +87,7 @@ This is the structural handoff to [`03_Analytical_Data_Modeling`](/03_Analytical
 |   |-- 2_6_nvarcharMax_trimming.sql
 |   |-- 2_7_add_surrogate_PrimaryKey.sql
 |   `-- 2_8_payment_typology_grouping.sql
-`-- screenshots/   (13 validation images)
+`-- screenshots/   (3 validation images)
 ```
 
 

@@ -10,7 +10,7 @@
 /* WHAT:
       Add Length_of_Stay_Int to Fact_Encounter if missing.
    WHY:
-      We need a numeric LOS field in the fact for outlier analysis.
+      I need a numeric LOS field in the fact for outlier analysis.
 */
 IF COL_LENGTH('dbo.Fact_Encounter', 'Length_of_Stay_Int') IS NULL
 BEGIN
@@ -44,7 +44,6 @@ PRINT '✔ Fact_Encounter.Length_of_Stay_Int populated from LI_SPARCS_2015_25_In
 GO
 
 
-
 /* ==========================================================
    04.7 — Outlier & Anomaly Scan (Length_of_Stay-based)
    Tables:
@@ -55,7 +54,6 @@ GO
      - Value '120+' was already cleaned to '120'.
      - Encounter_ID links source and fact.
    ========================================================== */
-
 
 --------------------------------------------------------------
 -- 1. Z-Score Outlier Scan (±3 SD)
@@ -141,7 +139,6 @@ SELECT
 FROM Z;
 
 
-
 /* Severe charge outliers: |Z_Charges| > 4 */
 
 WITH Stats AS (
@@ -177,7 +174,6 @@ SELECT
     SUM(CASE WHEN (ABS(Z_LOS) > 4 OR ABS(Z_Charges) > 4 OR ABS(Z_Costs) > 4)
         THEN 1 ELSE 0 END) AS Any_Z4_Count
 FROM Z;
-
 
 
 --------------------------------------------------------------
@@ -404,7 +400,6 @@ ORDER BY
     END;
 
 
-
 /* ===============================================================
    SANITY CHECK — NUMERIC VALIDATION (AGGREGATED)
    WHAT:
@@ -454,7 +449,6 @@ SELECT
 FROM dbo.Fact_Encounter;
 
 
-
 /* ===============================================================
    SANITY CHECK — COSTS GREATER THAN CHARGES
    WHAT:
@@ -474,9 +468,3 @@ SELECT
     COUNT(*) AS Costs_GT_Charges_Count   -- What: number of invalid cases
 FROM dbo.Fact_Encounter
 WHERE Total_Costs > Total_Charges;        -- Why: impossible in standard billing model
-
-
-
-
-
-

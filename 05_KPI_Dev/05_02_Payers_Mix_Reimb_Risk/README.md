@@ -34,7 +34,8 @@ Excel-focused pivot safety logic in this SQL file supports validation and execut
 
 
 
-_No screenshots retained after curation._
+![Screenshot](/05_KPI_Dev/05_02_Payers_Mix_Reimb_Risk/screenshots/payer_Mix_Validation.png)
+
 
 </details>
 

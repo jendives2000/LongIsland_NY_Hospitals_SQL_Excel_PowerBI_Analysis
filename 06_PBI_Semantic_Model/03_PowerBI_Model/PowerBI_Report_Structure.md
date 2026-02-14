@@ -50,12 +50,11 @@ Global slicers:
 
 - Facility
 - Peer Group
-- Discharge Month (within available data scope)
 
 Locked filters:
 
 - Inpatient encounters only
-- Year scope as defined by model release
+- Year scope as defined by model release (2015 only)
 
 ---
 

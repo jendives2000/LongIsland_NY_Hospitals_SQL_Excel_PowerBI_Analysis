@@ -46,10 +46,10 @@ GO
 -- 2) Populate Dim_Payer from distinct payer values
 --
 --    WHY:
---    - We let the source inpatient table drive the list of payers
+--    - I let the source inpatient table drive the list of payers
 --      actually present in the data.
---    - We carry both the raw label and the grouped bucket so that
---      we can aggregate at either level later.
+--    - I carry both the raw label and the grouped bucket so that
+--      I can aggregate at either level later.
 ------------------------------------------------------------
 INSERT INTO dbo.Dim_Payer (Payment_Typology_1, Payment_Typology_Group, Is_Unknown)
 SELECT DISTINCT
@@ -70,7 +70,7 @@ GO
 --
 --    WHY:
 --    - This is the foreign-key-style link from the fact table to Dim_Payer.
---    - We keep it NULL initially, then backfill it via an UPDATE JOIN.
+--    - I keep it NULL initially, then backfill it via an UPDATE JOIN.
 ------------------------------------------------------------
 IF COL_LENGTH('dbo.LI_SPARCS_2015_25_Inpatient', 'Payer_Key') IS NULL
 BEGIN

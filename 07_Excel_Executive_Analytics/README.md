@@ -1,4 +1,4 @@
-# 07 - Excel Executive Analytics
+﻿# 07 - Excel Executive Analytics
 
 ## Purpose
 
@@ -85,6 +85,22 @@ These controls keep KPI truth consistent across SQL, Power BI, and Excel.
 - Executive Excel consumption: Step 07
 
 Any KPI-definition change must start upstream in Step 05.
+
+---
+
+## Visual Snapshot
+
+<details>
+<summary>Show Screenshots</summary>
+
+![Screenshot](/07_Excel_Executive_Analytics/Screenshots/excel_exec_analytics.png)
+
+Data tab
+
+![Screenshot](/07_Excel_Executive_Analytics/Screenshots/excel_exec_analitycs_data.png)
+
+</details>
+
 
 ---
 

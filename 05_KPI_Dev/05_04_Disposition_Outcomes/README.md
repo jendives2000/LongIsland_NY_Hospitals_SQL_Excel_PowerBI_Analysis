@@ -30,10 +30,9 @@ Encounter-level exports in the SQL script are validation artifacts, not executiv
 <summary>Show Screenshots</summary>
 
 
+![Screenshot](/05_KPI_Dev/05_04_Disposition_Outcomes/screenshots/disp_outcome_counts_validation.png)
 
-
-
-_No screenshots retained after curation._
+![Screenshot](/05_KPI_Dev/05_04_Disposition_Outcomes/screenshots/disp_outcome_rates_validation.png)
 
 </details>
 

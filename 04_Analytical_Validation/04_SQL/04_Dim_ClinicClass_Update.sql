@@ -35,7 +35,6 @@ SELECT DISTINCT
     APR_MDC_Description
 FROM dbo.LI_SPARCS_2015_25_Inpatient;
 
-
 -- Row count by severity
 SELECT APR_Severity_Description, COUNT(*)
 FROM dbo.Dim_ClinicalClass
@@ -45,4 +44,3 @@ GROUP BY APR_Severity_Description;
 SELECT *
 FROM dbo.Dim_ClinicalClass
 WHERE APR_Severity_Code IS NULL;
-

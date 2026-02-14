@@ -35,9 +35,8 @@ Creates payer-mix semantic facts for reimbursement exposure and financial interp
 
 
 
+![Screenshot](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_02_Fact_KPI_PayerMix/screenshots/fact_kpi_payer_mix.png)
 
-
-![Screenshot](./screenshots/fact_kpi_payer_mix_preview.png)
 
 </details>
 
@@ -45,6 +44,6 @@ Creates payer-mix semantic facts for reimbursement exposure and financial interp
 
 ## Screenshot
 
-- [`screenshots/fact_kpi_payer_mix_preview.png`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_02_Fact_KPI_PayerMix/screenshots/fact_kpi_payer_mix_preview.png)
+- [`screenshots/fact_kpi_payer_mix.png`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_02_Fact_KPI_PayerMix/screenshots/fact_kpi_payer_mix.png)
 
 

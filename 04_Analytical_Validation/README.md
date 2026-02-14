@@ -64,7 +64,7 @@ Evidence artifacts:
 
 ## Output Contract to Step 05
 
-Delivers a validation-certified base for KPI development:
+Delivers a validation-certified base for [KPI development](/05_KPI_Dev/README.md):
 
 - documented QA evidence,
 - corrected transformation logic,
@@ -76,14 +76,16 @@ Delivers a validation-certified base for KPI development:
 ## Visual Snapshot
 
 <details>
-<summary>Show Screenshots</summary>
+<summary>Show Screenshots</summary>  
 
 
 
 
 
-![Screenshot](./screenshots/charges_costs_los_outliers_distance_perc_counts_with_pct_line.png)
-![Screenshot](./screenshots/margin_loss_by_payer_counts_and_amounts.png)
+![Screenshot](./screenshots/charges_costs_los_outliers_distance_perc_counts_with_pct_line.png)  
+
+![Screenshot](./screenshots/margin_loss_by_payer_counts_and_amounts.png)  
+
 ![Screenshot](./screenshots/row_count_bySeverity.png)
 
 </details>
@@ -112,7 +114,7 @@ Delivers a validation-certified base for KPI development:
 |   |-- 04_Dim_ClinicClass_Update.sql
 |   |-- APR_Sev_Vs_LOS_original.sql
 |   `-- ethnicity_std_mapping_fixing.sql
-`-- screenshots/   (13 validation images)
+`-- screenshots/   (3 validation images)
 ```
 
 

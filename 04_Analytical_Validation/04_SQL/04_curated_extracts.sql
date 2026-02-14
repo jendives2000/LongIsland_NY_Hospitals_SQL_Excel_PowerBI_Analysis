@@ -7,7 +7,6 @@
       /04_Analytical_Validation/Excel_Checks/
 ==========================================================*/
 
-
 /*--------------------------------------------------------
   04.1.1 – Monetary Check (Top 100 encounters by charges)
   WHAT:
@@ -37,7 +36,6 @@ ORDER BY f.Total_Charges DESC;
 -- Save as: 04_1_Monetary_Top100.csv
 
 
-
 /*--------------------------------------------------------
   04.1.2 – Category Mapping Check (Random sample)
   WHAT:
@@ -65,7 +63,6 @@ ORDER BY NEWID();   -- random sample
 -- Save as: 04_1_Category_Mapping_Sample.csv
 
 
-
 /*--------------------------------------------------------
   04.1.3 – Birth Weight Cast Check
   WHAT:
@@ -88,7 +85,6 @@ ORDER BY NEWID();
 -- Save as: 04_1_BirthWeight_Sample.csv
 
 
-
 /*--------------------------------------------------------
   04.1.4 – ZIP Categorization Check
   WHAT:
@@ -107,7 +103,6 @@ SELECT TOP (200)
 FROM dbo.LI_SPARCS_2015_25_Inpatient AS s
 ORDER BY NEWID();
 -- Save as: 04_1_Zip3_Category_Sample.csv
-
 
 
 /*--------------------------------------------------------
@@ -139,8 +134,6 @@ JOIN dbo.Dim_AdmissionType    AS a     ON f.AdmissionType_Key   = a.AdmissionTyp
 JOIN dbo.Dim_Disposition      AS disp  ON f.Disposition_Key     = disp.Disposition_Key
 ORDER BY NEWID();
 -- Save as: 04_1_FactDim_Integrity_Sample.csv
-
-
 
 
 /*==========================================================

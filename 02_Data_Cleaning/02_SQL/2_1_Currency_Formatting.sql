@@ -3,7 +3,7 @@
  Reason:
  - Imported as nvarchar with $ signs and thousand separators
  - Cannot aggregate or compute ratios reliably in this state
- - We convert them to DECIMAL(18,2) for financial analysis
+ - I convert them to DECIMAL(18,2) for financial analysis
 */
 
 -- 1) Add new numeric columns

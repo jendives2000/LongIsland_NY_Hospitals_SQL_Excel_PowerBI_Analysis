@@ -2,7 +2,7 @@
  STEP 02.2 – STANDARDIZE ZIP INFORMATION
  Reason:
  - Zip_Code_3_digits includes NULL and 'OOS'
- - For analysis we want clear buckets: In-state, Out-of-state, Unknown
+ - For analysis I want clear buckets: In-state, Out-of-state, Unknown
 */
 
 -- 1) Add a standardized ZIP category column

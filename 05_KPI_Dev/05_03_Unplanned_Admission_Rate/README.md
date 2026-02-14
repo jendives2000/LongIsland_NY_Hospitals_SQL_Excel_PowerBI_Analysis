@@ -35,9 +35,8 @@ This is the executive-facing KPI contract; any encounter-level checks remain val
 
 
 
+![alt text](/05_KPI_Dev/05_03_Unplanned_Admission_Rate/screenshots/unplanned_metric_validation.png)
 
-
-![Screenshot](./screenshots/unplanned_admissions_sql_output.png)
 
 </details>
 

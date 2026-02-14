@@ -7,8 +7,7 @@
       * Track a specific hospital encounter
       * Join reliably to Fact/Dim tables later
       * Detect duplicates
- - We add a surrogate key Encounter_ID (INT IDENTITY) to give every row
-   a stable, unique identifier for modeling and debugging.
+ - I add a surrogate key Encounter_ID (INT IDENTITY) to give every row a stable, unique identifier for modeling and debugging.
 */
 
 ------------------------------------------------------------

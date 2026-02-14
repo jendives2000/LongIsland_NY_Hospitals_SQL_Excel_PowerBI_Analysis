@@ -9,7 +9,7 @@
     Design:
         - Dim_Date has daily grain (one row per calendar date).
         - Monday is treated as the first day of the week.
-        - We introduce Is_Year_Anchor = 1 on a single canonical date
+        - I introduce Is_Year_Anchor = 1 on a single canonical date
           per year (here: 1st January).
         - Fact rows link via Discharge_Year_Key to that anchor date.
 */

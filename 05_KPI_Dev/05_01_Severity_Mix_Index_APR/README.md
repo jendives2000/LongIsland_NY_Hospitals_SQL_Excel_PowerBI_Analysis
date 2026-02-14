@@ -35,10 +35,9 @@ Encounter-level outputs remain validation artifacts and are not the executive in
 <summary>Show Screenshots</summary>
 
 
+![Screenshot](/05_KPI_Dev/05_01_Severity_Mix_Index_APR/screenshots/severity_mix_excel_reconcil.png)
 
 
-
-![Screenshot](./screenshots/severity_mix_excel_reconciliation.png)
 
 </details>
 
