@@ -1,4 +1,4 @@
-﻿# 03 - Facility Peer Grouping Framework
+# 03 - Facility Peer Grouping Framework
 
 ## Purpose
 
@@ -23,9 +23,9 @@ This framework does not calculate KPI values.
 
 ## SQL Artifacts
 
-- `seed_dim_peergroup_and_bridge.sql`
-- `../03_SQL/3_6c_dim_peergroup.sql`
-- `../03_SQL/3_6d_bridge_facility_peergroup.sql`
+- [`seed_dim_peergroup_and_bridge.sql`](/03_Analytical_Data_Modeling/03_Facility_Peer_Grouping_Framework/seed_dim_peergroup_and_bridge.sql)
+- [`../03_SQL/3_6c_dim_peergroup.sql`](/03_Analytical_Data_Modeling/03_SQL/3_6c_dim_peergroup.sql)
+- [`../03_SQL/3_6d_bridge_facility_peergroup.sql`](/03_Analytical_Data_Modeling/03_SQL/3_6d_bridge_facility_peergroup.sql)
 
 ---
 
@@ -64,8 +64,8 @@ Used by semantic and reporting layers for interpretation-safe benchmarking.
 
 See:
 
-- `../README.md`
-- `../../06_PBI_Semantic_Model/README.md`
+- [`../README.md`](/03_Analytical_Data_Modeling/README.md)
+- [`../../06_PBI_Semantic_Model/README.md`](/06_PBI_Semantic_Model/README.md)
 
 ---
 

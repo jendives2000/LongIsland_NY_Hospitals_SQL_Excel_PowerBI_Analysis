@@ -1,4 +1,4 @@
-﻿# 02 - Data Cleaning and Standardization
+# 02 - Data Cleaning and Standardization
 
 ## Purpose
 
@@ -24,18 +24,18 @@ Input table:
 
 SQL artifacts:
 
-- `02_SQL/2_1_Currency_Formatting.sql`
-- `02_SQL/2_2_Standardize_ZIP_data.sql`
-- `02_SQL/2_3_Standardize_Unknown_cat.sql`
-- `02_SQL/2_4_Admission_Category_Normalization.sql`
-- `02_SQL/2_5_PatientDisposition_Cat_Standardiz.sql`
-- `02_SQL/2_6_nvarcharMax_trimming.sql`
-- `02_SQL/2_7_add_surrogate_PrimaryKey.sql`
-- `02_SQL/2_8_payment_typology_grouping.sql`
+- [`02_SQL/2_1_Currency_Formatting.sql`](/02_Data_Cleaning/02_SQL/2_1_Currency_Formatting.sql)
+- [`02_SQL/2_2_Standardize_ZIP_data.sql`](/02_Data_Cleaning/02_SQL/2_2_Standardize_ZIP_data.sql)
+- [`02_SQL/2_3_Standardize_Unknown_cat.sql`](/02_Data_Cleaning/02_SQL/2_3_Standardize_Unknown_cat.sql)
+- [`02_SQL/2_4_Admission_Category_Normalization.sql`](/02_Data_Cleaning/02_SQL/2_4_Admission_Category_Normalization.sql)
+- [`02_SQL/2_5_PatientDisposition_Cat_Standardiz.sql`](/02_Data_Cleaning/02_SQL/2_5_PatientDisposition_Cat_Standardiz.sql)
+- [`02_SQL/2_6_nvarcharMax_trimming.sql`](/02_Data_Cleaning/02_SQL/2_6_nvarcharMax_trimming.sql)
+- [`02_SQL/2_7_add_surrogate_PrimaryKey.sql`](/02_Data_Cleaning/02_SQL/2_7_add_surrogate_PrimaryKey.sql)
+- [`02_SQL/2_8_payment_typology_grouping.sql`](/02_Data_Cleaning/02_SQL/2_8_payment_typology_grouping.sql)
 
 Evidence artifacts:
 
-- `screenshots/image.png` through `screenshots/image-12.png`
+- [`screenshots/image.png`](/02_Data_Cleaning/screenshots/image.png) through [`screenshots/image-12.png`](/02_Data_Cleaning/screenshots/image-12.png)
 
 ---
 
@@ -52,7 +52,7 @@ Evidence artifacts:
 
 Produces a model-ready base with stable keys, normalized categories, and analytically valid numeric fields.
 
-This is the structural handoff to `03_Analytical_Data_Modeling`.
+This is the structural handoff to [`03_Analytical_Data_Modeling`](/03_Analytical_Data_Modeling/README.md).
 
 ---
 

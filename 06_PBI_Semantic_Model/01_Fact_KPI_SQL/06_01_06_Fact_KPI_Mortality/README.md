@@ -1,4 +1,4 @@
-﻿# KPI 06.01.06 - Fact_KPI_Mortality
+# KPI 06.01.06 - Fact_KPI_Mortality
 
 ## Purpose
 
@@ -6,7 +6,7 @@ Creates mortality semantic facts for outcome-risk interpretation.
 
 ## SQL Artifact
 
-- `06_01_06_Fact_KPI_Mortality.sql`
+- [`06_01_06_Fact_KPI_Mortality.sql`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_06_Fact_KPI_Mortality/06_01_06_Fact_KPI_Mortality.sql)
 
 ## Output Table
 
@@ -40,6 +40,6 @@ Creates mortality semantic facts for outcome-risk interpretation.
 
 ## Screenshot
 
-- `screenshots/image.png`
+- [`screenshots/image.png`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_06_Fact_KPI_Mortality/screenshots/image.png)
 
 

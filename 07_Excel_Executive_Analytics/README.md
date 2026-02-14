@@ -1,4 +1,4 @@
-﻿# 07 - Excel Executive Analytics
+# 07 - Excel Executive Analytics
 
 ## Purpose
 
@@ -34,8 +34,8 @@ In Step 07 this means:
 
 Excel appears in two different roles in this repository:
 
-- Step 05 (`05_KPI_Dev`): validation and reconciliation
-- Step 07 (`07_Excel_Executive_Analytics`): executive consumption
+- Step 05 ([`05_KPI_Dev`](/05_KPI_Dev/README.md)): validation and reconciliation
+- Step 07 ([`07_Excel_Executive_Analytics`](/07_Excel_Executive_Analytics/README.md)): executive consumption
 
 Step 07 does not revalidate KPI definitions. It consumes governed outputs.
 
@@ -45,7 +45,7 @@ Step 07 does not revalidate KPI definitions. It consumes governed outputs.
 
 Primary artifact:
 
-- `07_SQL/07_01_vw_Excel_KPI_Executive_FacilityYear.sql`
+- [`07_SQL/07_01_vw_Excel_KPI_Executive_FacilityYear.sql`](/07_Excel_Executive_Analytics/07_SQL/07_01_vw_Excel_KPI_Executive_FacilityYear.sql)
 
 Governed output consumed by workbook:
 
@@ -72,9 +72,9 @@ These controls keep KPI truth consistent across SQL, Power BI, and Excel.
 
 ## Executive Artifacts
 
-- Dashboard workbook: `Dashboards/Executive_KPI_Overview.xlsx`
-- Reusable template: `Templates/Executive_Pivot_Template.xlsx`
-- Executive interpretation guide: `Executive_Guide_How_to_Read_the_Report.md`
+- Dashboard workbook: [`Dashboards/Executive_KPI_Overview.xlsx`](/07_Excel_Executive_Analytics/Dashboards/Executive_KPI_Overview.xlsx)
+- Reusable template: [`Templates/Executive_Pivot_Template.xlsx`](/07_Excel_Executive_Analytics/Templates/Executive_Pivot_Template.xlsx)
+- Executive interpretation guide: [`Executive_Guide_How_to_Read_the_Report.md`](/07_Excel_Executive_Analytics/Executive_Guide_How_to_Read_the_Report.md)
 
 ---
 

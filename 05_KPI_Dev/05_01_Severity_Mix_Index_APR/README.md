@@ -1,4 +1,4 @@
-﻿# KPI 05.01 - Severity Mix Index (APR)
+# KPI 05.01 - Severity Mix Index (APR)
 
 ## Purpose
 
@@ -8,8 +8,8 @@ Severity Mix is a context KPI. It describes case complexity, not care quality.
 
 ## SQL Artifacts
 
-- `05_SQL/05_01_Severity_Mix_Index_APR.sql`
-- `05_SQL/05_01B_Fact_KPI_SeverityMix_BySeverity.sql`
+- [`05_SQL/05_01_Severity_Mix_Index_APR.sql`](/05_KPI_Dev/05_01_Severity_Mix_Index_APR/05_SQL/05_01_Severity_Mix_Index_APR.sql)
+- [`05_SQL/05_01B_Fact_KPI_SeverityMix_BySeverity.sql`](/05_KPI_Dev/05_01_Severity_Mix_Index_APR/05_SQL/05_01B_Fact_KPI_SeverityMix_BySeverity.sql)
 
 ## Governed Views
 
@@ -19,7 +19,7 @@ Severity Mix is a context KPI. It describes case complexity, not care quality.
 
 ## Validation Artifact
 
-- `05_Excel/05_01_Severity_Mix_Index.xlsx`
+- [`05_Excel/05_01_Severity_Mix_Index.xlsx`](/05_KPI_Dev/05_01_Severity_Mix_Index_APR/05_Excel/05_01_Severity_Mix_Index.xlsx)
 
 ## Step-07 Consumption Note
 

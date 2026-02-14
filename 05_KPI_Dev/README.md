@@ -1,4 +1,4 @@
-﻿# 05 - KPI Development
+# 05 - KPI Development
 
 ## Purpose
 
@@ -33,7 +33,7 @@ Primary dependency objects:
 
 Validation dependency:
 
-- Step `04_Analytical_Validation` anomaly and plausibility controls
+- Step [`04_Analytical_Validation`](/04_Analytical_Validation/README.md) anomaly and plausibility controls
 
 ---
 
@@ -59,23 +59,23 @@ These are governed SQL views intended to be consumed by Step 07 integration.
 
 ## KPI Catalog and Contracts
 
-- `05_01_Severity_Mix_Index_APR`
-- `05_02_Payers_Mix_Reimb_Risk`
-- `05_03_Unplanned_Admission_Rate`
-- `05_04_Disposition_Outcomes`
-- `05_05_LOS_LengthOfStay_KPI`
-- `05_06_Mortality_Rate`
-- `05_07_MCost_and_Margin_Pressure`
+- [`05_01_Severity_Mix_Index_APR`](/05_KPI_Dev/05_01_Severity_Mix_Index_APR/README.md)
+- [`05_02_Payers_Mix_Reimb_Risk`](/05_KPI_Dev/05_02_Payers_Mix_Reimb_Risk/README.md)
+- [`05_03_Unplanned_Admission_Rate`](/05_KPI_Dev/05_03_Unplanned_Admission_Rate/README.md)
+- [`05_04_Disposition_Outcomes`](/05_KPI_Dev/05_04_Disposition_Outcomes/README.md)
+- [`05_05_LOS_LengthOfStay_KPI`](/05_KPI_Dev/05_05_LOS_LengthOfStay_KPI/README.md)
+- [`05_06_Mortality_Rate`](/05_KPI_Dev/05_06_Mortality_Rate/README.md)
+- [`05_07_MCost_and_Margin_Pressure`](/05_KPI_Dev/05_07_MCost_and_Margin_Pressure/README.md)
 
 Template:
 
-- `05_0x_folder_template`
+- [`05_0x_folder_template`](/05_KPI_Dev/05_0x_folder_template/README.md)
 
 ---
 
 ## Step-07 Consumption Mapping
 
-Step 07 (`07_SQL/07_01_vw_Excel_KPI_Executive_FacilityYear.sql`) consumes these Step-05 KPI views:
+Step 07 ([`07_SQL/07_01_vw_Excel_KPI_Executive_FacilityYear.sql`](/07_Excel_Executive_Analytics/07_SQL/07_01_vw_Excel_KPI_Executive_FacilityYear.sql)) consumes these Step-05 KPI views:
 
 - `dbo.vw_KPI_05_01_SeverityMix_FacilityYear`
 - `dbo.vw_KPI_PayerMix_FacilityYear`
@@ -87,7 +87,7 @@ Step 07 (`07_SQL/07_01_vw_Excel_KPI_Executive_FacilityYear.sql`) consumes these 
 
 ### Important LOS Dependency Gap
 
-`07_01_vw_Excel_KPI_Executive_FacilityYear.sql` expects `dbo.vw_KPI_LOS_FacilityYear`, but this view is not created in the current Step-05 LOS SQL file (`05_05_SQL/05_05_Length_of_Stay.sql`).
+[`07_01_vw_Excel_KPI_Executive_FacilityYear.sql`](/07_Excel_Executive_Analytics/07_SQL/07_01_vw_Excel_KPI_Executive_FacilityYear.sql) expects `dbo.vw_KPI_LOS_FacilityYear`, but this view is not created in the current Step-05 LOS SQL file ([`05_05_SQL/05_05_Length_of_Stay.sql`](/05_KPI_Dev/05_05_LOS_LengthOfStay_KPI/05_05_SQL/05_05_Length_of_Stay.sql)).
 
 This should be resolved before Step-07 execution by either:
 

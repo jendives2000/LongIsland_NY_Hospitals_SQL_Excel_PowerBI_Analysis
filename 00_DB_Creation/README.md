@@ -1,4 +1,4 @@
-﻿# 00 - Database Creation and Initial Setup
+# 00 - Database Creation and Initial Setup
 
 ## Purpose
 
@@ -26,13 +26,13 @@ This step ensures:
 
 ### SQL Artifact
 
-- `00_SQL/00_1.sql`
+- [`00_SQL/00_1.sql`](/00_DB_Creation/00_SQL/00_1.sql)
 
 ### Evidence Artifacts
 
-- `screenshots/image.png` (row-count validation)
-- `screenshots/image-1.png` (schema inspection)
-- `screenshots/image-2.png` (queryability check)
+- [`screenshots/image.png`](/00_DB_Creation/screenshots/image.png) (row-count validation)
+- [`screenshots/image-1.png`](/00_DB_Creation/screenshots/image-1.png) (schema inspection)
+- [`screenshots/image-2.png`](/00_DB_Creation/screenshots/image-2.png) (queryability check)
 
 ### Data Asset
 
@@ -43,7 +43,7 @@ This step ensures:
 
 ## What Was Executed
 
-`00_SQL/00_1.sql` includes:
+[`00_SQL/00_1.sql`](/00_DB_Creation/00_SQL/00_1.sql) includes:
 
 - Database creation:
   - `CREATE DATABASE LI_NYHealth;`
@@ -67,7 +67,7 @@ These checks establish that the dataset is accessible and operationally ready fo
 
 ## Output Contract to Step 01
 
-This step delivers a query-ready base table and naming contract consumed by `01_Profiling`:
+This step delivers a query-ready base table and naming contract consumed by [`01_Profiling`](/01_Profiling/README.md):
 
 - Database: `LI_NYHealth`
 - Canonical table: `dbo.LI_SPARCS_2015_25_Inpatient`
@@ -77,14 +77,14 @@ This step delivers a query-ready base table and naming contract consumed by `01_
 
 ## Position in End-to-End Lifecycle
 
-- `00_DB_Creation`: database and ingestion readiness (this step)
-- `01_Profiling`: data quality diagnostics
-- `02_Data_Cleaning`: deterministic standardization and fixes
-- `03_Analytical_Data_Modeling`: analytical schema design
-- `04_Analytical_Validation`: reconciliation and QA
-- `05_KPI_Dev`: KPI definition and certification
-- `06_PBI_Semantic_Model`: semantic model and governed measures
-- `07_Excel_Executive_Analytics`: executive consumption in Excel
+- [`00_DB_Creation`](/00_DB_Creation/README.md): database and ingestion readiness (this step)
+- [`01_Profiling`](/01_Profiling/README.md): data quality diagnostics
+- [`02_Data_Cleaning`](/02_Data_Cleaning/README.md): deterministic standardization and fixes
+- [`03_Analytical_Data_Modeling`](/03_Analytical_Data_Modeling/README.md): analytical schema design
+- [`04_Analytical_Validation`](/04_Analytical_Validation/README.md): reconciliation and QA
+- [`05_KPI_Dev`](/05_KPI_Dev/README.md): KPI definition and certification
+- [`06_PBI_Semantic_Model`](/06_PBI_Semantic_Model/README.md): semantic model and governed measures
+- [`07_Excel_Executive_Analytics`](/07_Excel_Executive_Analytics/README.md): executive consumption in Excel
 
 ---
 

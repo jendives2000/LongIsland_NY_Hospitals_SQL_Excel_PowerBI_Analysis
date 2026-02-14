@@ -1,4 +1,4 @@
-﻿# KPI 06.01.02 - Fact_KPI_PayerMix
+# KPI 06.01.02 - Fact_KPI_PayerMix
 
 ## Purpose
 
@@ -6,7 +6,7 @@ Creates payer-mix semantic facts for reimbursement exposure and financial interp
 
 ## SQL Artifact
 
-- `06_01_02_Fact_KPI_PayerMix.sql`
+- [`06_01_02_Fact_KPI_PayerMix.sql`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_02_Fact_KPI_PayerMix/06_01_02_Fact_KPI_PayerMix.sql)
 
 ## Output Table
 
@@ -41,6 +41,6 @@ Creates payer-mix semantic facts for reimbursement exposure and financial interp
 
 ## Screenshot
 
-- `screenshots/image.png`
+- [`screenshots/image.png`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_02_Fact_KPI_PayerMix/screenshots/image.png)
 
 

@@ -1,4 +1,4 @@
-﻿# 06 - Power BI Semantic Model
+# 06 - Power BI Semantic Model
 
 ## Purpose
 
@@ -33,19 +33,19 @@ In Step 06, this is enforced by:
 
 ## Inputs and Dependencies
 
-- Step 05 governed KPI outputs from `05_KPI_Dev`
+- Step 05 governed KPI outputs from [`05_KPI_Dev`](/05_KPI_Dev/README.md)
 - Conformed dimensions (`Dim_Facility`, `Dim_Year`, `Dim_Payer`, `Dim_Disposition`, others as used)
-- PBIP artifacts in `03_PowerBI_Model/PBI_Project`
+- PBIP artifacts in [`03_PowerBI_Model/PBI_Project`](/06_PBI_Semantic_Model/03_PowerBI_Model/PBI_Project/)
 
 ---
 
 ## Folder Contracts
 
-- `01_Fact_KPI_SQL`: SQL scripts that materialize `Fact_KPI_*` tables
-- `02_Dimensions_Reference`: dimension documentation and usage rules
-- `03_PowerBI_Model`: semantic model and report artifacts (includes report structure guide)
-- `04_KPI_Data_Dictionary`: metadata and business-definition contract
-- `05_Validation`: semantic parity and reconciliation controls
+- [`01_Fact_KPI_SQL`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/README.md): SQL scripts that materialize `Fact_KPI_*` tables
+- [`02_Dimensions_Reference`](/06_PBI_Semantic_Model/02_Dimensions_Reference/README.md): dimension documentation and usage rules
+- [`03_PowerBI_Model`](/06_PBI_Semantic_Model/03_PowerBI_Model/README.md): semantic model and report artifacts (includes report structure guide)
+- [`04_KPI_Data_Dictionary`](/06_PBI_Semantic_Model/04_KPI_Data_Dictionary/README.md): metadata and business-definition contract
+- [`05_Validation`](/06_PBI_Semantic_Model/05_Validation/README.md): semantic parity and reconciliation controls
 
 ---
 

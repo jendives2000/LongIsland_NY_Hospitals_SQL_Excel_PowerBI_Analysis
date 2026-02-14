@@ -1,4 +1,4 @@
-﻿# 03 - Analytical Data Modeling
+# 03 - Analytical Data Modeling
 
 ## Purpose
 
@@ -26,21 +26,21 @@ Input table:
 
 SQL artifacts:
 
-- `03_SQL/3_1_dim_facility.sql`
-- `03_SQL/3_2_dim_admissionType.sql`
-- `03_SQL/3_3_dim_disposition.sql`
-- `03_SQL/3_4_dim_payers.sql`
-- `03_SQL/3_5_dim_clinical_class.sql`
-- `03_SQL/3_6_dim_date.sql`
-- `03_SQL/3_6b_2015_synthetic_dates.sql`
-- `03_SQL/3_6c_dim_peergroup.sql`
-- `03_SQL/3_6d_bridge_facility_peergroup.sql`
-- `03_SQL/3_7_Fact_Table_inpatient_stay.sql`
+- [`03_SQL/3_1_dim_facility.sql`](/03_Analytical_Data_Modeling/03_SQL/3_1_dim_facility.sql)
+- [`03_SQL/3_2_dim_admissionType.sql`](/03_Analytical_Data_Modeling/03_SQL/3_2_dim_admissionType.sql)
+- [`03_SQL/3_3_dim_disposition.sql`](/03_Analytical_Data_Modeling/03_SQL/3_3_dim_disposition.sql)
+- [`03_SQL/3_4_dim_payers.sql`](/03_Analytical_Data_Modeling/03_SQL/3_4_dim_payers.sql)
+- [`03_SQL/3_5_dim_clinical_class.sql`](/03_Analytical_Data_Modeling/03_SQL/3_5_dim_clinical_class.sql)
+- [`03_SQL/3_6_dim_date.sql`](/03_Analytical_Data_Modeling/03_SQL/3_6_dim_date.sql)
+- [`03_SQL/3_6b_2015_synthetic_dates.sql`](/03_Analytical_Data_Modeling/03_SQL/3_6b_2015_synthetic_dates.sql)
+- [`03_SQL/3_6c_dim_peergroup.sql`](/03_Analytical_Data_Modeling/03_SQL/3_6c_dim_peergroup.sql)
+- [`03_SQL/3_6d_bridge_facility_peergroup.sql`](/03_Analytical_Data_Modeling/03_SQL/3_6d_bridge_facility_peergroup.sql)
+- [`03_SQL/3_7_Fact_Table_inpatient_stay.sql`](/03_Analytical_Data_Modeling/03_SQL/3_7_Fact_Table_inpatient_stay.sql)
 
 Peer grouping submodule:
 
-- `03_Facility_Peer_Grouping_Framework/README.md`
-- `03_Facility_Peer_Grouping_Framework/seed_dim_peergroup_and_bridge.sql`
+- [`03_Facility_Peer_Grouping_Framework/README.md`](/03_Analytical_Data_Modeling/03_Facility_Peer_Grouping_Framework/README.md)
+- [`03_Facility_Peer_Grouping_Framework/seed_dim_peergroup_and_bridge.sql`](/03_Analytical_Data_Modeling/03_Facility_Peer_Grouping_Framework/seed_dim_peergroup_and_bridge.sql)
 
 ---
 
@@ -70,8 +70,8 @@ Synthetic dates support modeling behavior where full real timestamp granularity 
 
 Provides the governed structural foundation consumed by:
 
-- `04_Analytical_Validation`
-- `05_KPI_Dev`
+- [`04_Analytical_Validation`](/04_Analytical_Validation/README.md)
+- [`05_KPI_Dev`](/05_KPI_Dev/README.md)
 
 ---
 

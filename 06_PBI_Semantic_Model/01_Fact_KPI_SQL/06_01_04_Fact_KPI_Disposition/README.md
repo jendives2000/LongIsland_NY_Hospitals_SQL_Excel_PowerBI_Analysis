@@ -1,4 +1,4 @@
-﻿# KPI 06.01.04 - Fact_KPI_Disposition
+# KPI 06.01.04 - Fact_KPI_Disposition
 
 ## Purpose
 
@@ -6,7 +6,7 @@ Creates discharge-exit semantic facts for flow and downstream utilization analys
 
 ## SQL Artifact
 
-- `06_01_04_Fact_KPI_Disposition.sql`
+- [`06_01_04_Fact_KPI_Disposition.sql`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_04_Fact_KPI_Disposition/06_01_04_Fact_KPI_Disposition.sql)
 
 ## Output Table
 
@@ -41,6 +41,6 @@ Creates discharge-exit semantic facts for flow and downstream utilization analys
 
 ## Screenshot
 
-- `screenshots/image.png`
+- [`screenshots/image.png`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_04_Fact_KPI_Disposition/screenshots/image.png)
 
 

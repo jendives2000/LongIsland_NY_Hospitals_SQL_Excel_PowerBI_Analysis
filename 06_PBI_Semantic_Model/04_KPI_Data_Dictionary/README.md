@@ -1,4 +1,4 @@
-﻿# 06.04 - KPI Data Dictionary
+# 06.04 - KPI Data Dictionary
 
 ## Purpose
 
@@ -39,6 +39,6 @@ Dictionary entries must stay aligned with:
 
 - Step 05 KPI definitions
 - Step 06 semantic model objects
-- Validation controls in `05_Validation`
+- Validation controls in [`05_Validation`](/06_PBI_Semantic_Model/05_Validation/README.md)
 
 If model logic changes, dictionary updates are mandatory.

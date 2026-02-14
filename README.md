@@ -23,7 +23,7 @@ The analysis is deliberately structured to **establish operating context first**
   * Financial stress (Cost & Margin Pressure)
   * Exit flow distribution (Disposition)
 
-This is a **descriptive, explainability-first analysis**, not a causal or predictive model.
+This is an advanced **descriptive, explainability-first analysis**, not a causal or predictive model.
 
 ---
 
@@ -114,7 +114,7 @@ This structure mirrors how enterprise healthcare analytics teams separate **data
   The dataset is sufficient to demonstrate cross-facility structural patterns but is not intended for time-series inference.
 
 * **Analytical Approach**  
-  Explainability-first, non-causal descriptive analysis designed to surface structural signals rather than infer causality.
+  Explainability-first, non-causal advanced descriptive analysis designed to surface structural signals and not to infer causality.
   Each KPI includes a *Diagnostic Preview* highlighting domains where deeper analysis would typically be warranted.  
   
   All narrative and explainability text in this project is grounded in established healthcare explainability, communication, and governance frameworks, adapted into a context-first, non-causal analytical design suitable for executive and system-level decision support.
@@ -126,7 +126,7 @@ This structure mirrors how enterprise healthcare analytics teams separate **data
   * Anonymized data; no patient-identifiable information included
 
 **Key Principle**  
-All KPIs are treated as **contextual signals**, not absolute rankings or performance judgments.
+**Contextual signals** KPIs are treated first, output KPIs second. There is  no absolute rankings or performance judgments.
 
 ---
 
@@ -134,8 +134,8 @@ All KPIs are treated as **contextual signals**, not absolute rankings or perform
 
 | Layer                      | Tooling                       |
 | -------------------------- | ----------------------------- |
-| Data Engineering           | SQL Server (SSMS), TSQL |
-| Validation & QA            | Excel                         |
+| Data Engineering           | SQL Server (SSMS22), TSQL |
+| Validation & QA           | Excel                         |
 | Semantic Model & Reporting | Power BI (PBIP project)       |
 | Version Control            | Git / GitHub, VsCode                 |
 
@@ -152,24 +152,24 @@ cd LongIsland_NY_Hospitals_SQL_Excel_PowerBI_Analysis
 
 ### 2. Database Setup
 
-Execute scripts in `00_DB_Creation/` to establish schemas and base tables.
-Subsequent folders (`01_Profiling` through `03_Analytical_Data_Modeling`) reflect the logical build-up of the analytical model.
+Execute scripts in [`00_DB_Creation/`](/00_DB_Creation/README.md) to establish schemas and base tables.
+Subsequent folders ([`01_Profiling`](/01_Profiling/README.md) through [`03_Analytical_Data_Modeling`](/03_Analytical_Data_Modeling/README.md)) reflect the logical build-up of the analytical model.
 
 ### 3. Review the Analysis
 
 * **Primary analytical narrative**  
   Open the Power BI project in  
-  `06_PBI_Semantic_Model/03_PowerBI_Model/`  
+  [`06_PBI_Semantic_Model/03_PowerBI_Model/`](/06_PBI_Semantic_Model/README.md)  
   This contains the semantic model, report structure, and KPI interpretation.
 
 * **KPI logic and validation**  
-  Review `05_KPI_Dev/` for KPI-specific SQL logic and Excel validation artifacts.
+  Review [`05_KPI_Dev/`](/05_KPI_Dev/README.md) for KPI-specific SQL logic and Excel validation artifacts.
 
 * **Quality assurance**  
-  Refer to `04_Analytical_Validation/` and `06_PBI_Semantic_Model/05_Validation/` for reconciliation and QA outputs.
+  Refer to [`04_Analytical_Validation/`](/04_Analytical_Validation/README.md) and [`06_PBI_Semantic_Model/05_Validation/`](/06_PBI_Semantic_Model/05_Validation/README.md) for reconciliation and QA outputs.
 
 * **Executive Excel outputs**  
-  See `07_Excel_Executive_Analytics/` for Excel-based executive views.
+  See [`07_Excel_Executive_Analytics/`](/07_Excel_Executive_Analytics/README.md) for Excel-based executive views.
 
 ---
 
@@ -185,7 +185,7 @@ Subsequent folders (`01_Profiling` through `03_Analytical_Data_Modeling`) reflec
 6. **Cost & Margin Pressure**
 7. **Disposition (Exit Flow)**
 
-Outcome pages assume prior context unless explicitly stated otherwise.
+Outcome pages assume prior context.
 
 ---
 
@@ -195,7 +195,7 @@ Outcome pages assume prior context unless explicitly stated otherwise.
 * KPI-level SQL logic with validation lineage
 * Data dictionary and business rule documentation with comprehensive metadata integration
   * Clear measure definitions and business rule documentation across all KPI domains to support faster onboarding and reduce interpretation risk
-* Diagnostic previews to guide further investigation
+* Diagnostic previews to initiate further investigations
 * Executive-ready Power BI and Excel artifacts
 
 ---

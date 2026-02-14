@@ -1,4 +1,4 @@
-﻿# KPI 05.03 - Unplanned Admission Rate
+# KPI 05.03 - Unplanned Admission Rate
 
 ## Purpose
 
@@ -6,7 +6,7 @@ Measures unplanned intake burden (Emergency/Urgent standardized to `Unplanned`) 
 
 ## SQL Artifact
 
-- `05_03_SQL/05_03_Unplanned_Admission_Rate.sql`
+- [`05_03_SQL/05_03_Unplanned_Admission_Rate.sql`](/05_KPI_Dev/05_03_Unplanned_Admission_Rate/05_03_SQL/05_03_Unplanned_Admission_Rate.sql)
 
 ## Governed View
 
@@ -14,11 +14,11 @@ Measures unplanned intake burden (Emergency/Urgent standardized to `Unplanned`) 
 
 ## Validation Artifact
 
-- `05_03_Excel/05_03_Unplanned_Admission_Rate.xlsx`
+- [`05_03_Excel/05_03_Unplanned_Admission_Rate.xlsx`](/05_KPI_Dev/05_03_Unplanned_Admission_Rate/05_03_Excel/05_03_Unplanned_Admission_Rate.xlsx)
 
 ## Peer Group Reference
 
-- `03_Analytical_Data_Modeling/03_Facility_Peer_Grouping_Framework/README.md`
+- [`03_Analytical_Data_Modeling/03_Facility_Peer_Grouping_Framework/README.md`](/03_Analytical_Data_Modeling/03_Facility_Peer_Grouping_Framework/README.md)
 
 ## Step-07 Consumption Note
 

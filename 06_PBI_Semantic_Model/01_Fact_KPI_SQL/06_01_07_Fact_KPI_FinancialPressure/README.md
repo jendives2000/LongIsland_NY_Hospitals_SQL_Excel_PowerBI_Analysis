@@ -1,4 +1,4 @@
-﻿# KPI 06.01.07 - Fact_KPI_FinancialPressure
+# KPI 06.01.07 - Fact_KPI_FinancialPressure
 
 ## Purpose
 
@@ -6,7 +6,7 @@ Creates financial-pressure semantic facts for cost intensity and margin stress i
 
 ## SQL Artifact
 
-- `06_01_07_Fact_KPI_FinancialPressure.sql`
+- [`06_01_07_Fact_KPI_FinancialPressure.sql`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_07_Fact_KPI_FinancialPressure/06_01_07_Fact_KPI_FinancialPressure.sql)
 
 ## Output Table
 
@@ -42,6 +42,6 @@ Creates financial-pressure semantic facts for cost intensity and margin stress i
 
 ## Screenshot
 
-- `screenshots/image.png`
+- [`screenshots/image.png`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_07_Fact_KPI_FinancialPressure/screenshots/image.png)
 
 

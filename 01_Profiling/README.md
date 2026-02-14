@@ -1,4 +1,4 @@
-﻿# 01 - Data Profiling
+# 01 - Data Profiling
 
 ## Purpose
 
@@ -24,12 +24,12 @@ Input table:
 
 SQL artifacts:
 
-- `01_SQL/Columns_Profiling.sql`
-- `01_SQL/BirthWeight_correction.sql`
+- [`01_SQL/Columns_Profiling.sql`](/01_Profiling/01_SQL/Columns_Profiling.sql)
+- [`01_SQL/BirthWeight_correction.sql`](/01_Profiling/01_SQL/BirthWeight_correction.sql)
 
 Evidence artifact:
 
-- `screenshots/image.png`
+- [`screenshots/image.png`](/01_Profiling/screenshots/image.png)
 
 ---
 
@@ -47,7 +47,7 @@ Birth weight issue was confirmed as a text-typing artifact (lexical max), then c
 
 ## Output Contract to Step 02
 
-Step 01 produces a deterministic remediation backlog consumed by `02_Data_Cleaning`:
+Step 01 produces a deterministic remediation backlog consumed by [`02_Data_Cleaning`](/02_Data_Cleaning/README.md):
 
 - Numeric conversion for financial fields
 - Category standardization for key operational dimensions

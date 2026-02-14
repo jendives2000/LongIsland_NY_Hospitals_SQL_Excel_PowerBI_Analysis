@@ -1,4 +1,4 @@
-﻿# KPI 06.01.05 - Fact_KPI_LOS_Summary
+# KPI 06.01.05 - Fact_KPI_LOS_Summary
 
 ## Purpose
 
@@ -6,7 +6,7 @@ Creates LOS summary semantic facts for throughput and capacity signals.
 
 ## SQL Artifact
 
-- `06_01_05_Fact_KPI_LOS_Summary.sql`
+- [`06_01_05_Fact_KPI_LOS_Summary.sql`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_05_Fact_KPI_LOS_Summary/06_01_05_Fact_KPI_LOS_Summary.sql)
 
 ## Output Table
 
@@ -40,6 +40,6 @@ Creates LOS summary semantic facts for throughput and capacity signals.
 
 ## Screenshot
 
-- `screenshots/image.png`
+- [`screenshots/image.png`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_05_Fact_KPI_LOS_Summary/screenshots/image.png)
 
 

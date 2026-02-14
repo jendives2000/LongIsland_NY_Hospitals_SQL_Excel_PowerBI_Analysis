@@ -1,4 +1,4 @@
-﻿# KPI 05.07 - Medical Cost per Encounter and Margin Pressure
+# KPI 05.07 - Medical Cost per Encounter and Margin Pressure
 
 ## Purpose
 
@@ -6,7 +6,7 @@ Measures financial intensity and margin pressure at Facility-Year grain using en
 
 ## SQL Artifact
 
-- `05_07_SQL/05_07_MCost_and_Margin_Pressure.sql`
+- [`05_07_SQL/05_07_MCost_and_Margin_Pressure.sql`](/05_KPI_Dev/05_07_MCost_and_Margin_Pressure/05_07_SQL/05_07_MCost_and_Margin_Pressure.sql)
 
 ## Governed View
 
@@ -14,7 +14,7 @@ Measures financial intensity and margin pressure at Facility-Year grain using en
 
 ## Validation Artifact
 
-- `05_07_Excel/05_07_MCost_Margin_Pressure.xlsx`
+- [`05_07_Excel/05_07_MCost_Margin_Pressure.xlsx`](/05_KPI_Dev/05_07_MCost_and_Margin_Pressure/05_07_Excel/05_07_MCost_Margin_Pressure.xlsx)
 
 ## Step-07 Consumption Note
 

@@ -1,4 +1,4 @@
-﻿# KPI 05.02 - Payer Mix and Reimbursement Risk
+# KPI 05.02 - Payer Mix and Reimbursement Risk
 
 ## Purpose
 
@@ -6,7 +6,7 @@ Profiles payer composition, volume share, and financial pressure at Facility-Yea
 
 ## SQL Artifact
 
-- `05_02_SQL/05_02_Payment_Mix_Reimbursement_Risk.sql`
+- [`05_02_SQL/05_02_Payment_Mix_Reimbursement_Risk.sql`](/05_KPI_Dev/05_02_Payers_Mix_Reimb_Risk/05_02_SQL/05_02_Payment_Mix_Reimbursement_Risk.sql)
 
 ## Governed Views
 
@@ -15,7 +15,7 @@ Profiles payer composition, volume share, and financial pressure at Facility-Yea
 
 ## Validation Artifact
 
-- `05_02_Excel/05_02_Payment_Mix_Reimbursement_Risk_Validation.xlsx`
+- [`05_02_Excel/05_02_Payment_Mix_Reimbursement_Risk_Validation.xlsx`](/05_KPI_Dev/05_02_Payers_Mix_Reimb_Risk/05_02_Excel/05_02_Payment_Mix_Reimbursement_Risk_Validation.xlsx)
 
 ## Step-07 Consumption Note
 

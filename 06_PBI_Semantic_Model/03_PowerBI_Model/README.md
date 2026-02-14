@@ -1,4 +1,4 @@
-﻿# 06.03 - Power BI Model
+# 06.03 - Power BI Model
 
 ## Purpose
 
@@ -21,17 +21,17 @@ This folder demonstrates senior BI delivery capability:
 
 ## Core Artifacts
 
-- `PBI_Project/PowerBI_project.pbip`
-- `PBI_Project/PowerBI_project.SemanticModel/definition/*.tmdl`
+- [`PBI_Project/PowerBI_project.pbip`](/06_PBI_Semantic_Model/03_PowerBI_Model/PBI_Project/PowerBI_project.pbip)
+- [`PBI_Project/PowerBI_project.SemanticModel/definition/*.tmdl`](/06_PBI_Semantic_Model/03_PowerBI_Model/PBI_Project/PowerBI_project.SemanticModel/definition/)
 - `PBI_Project/PowerBI_project.Report/definition/*`
-- `PowerBI_Report_Structure.md`
-- `screenshots/image.png` (model/report preview)
+- [`PowerBI_Report_Structure.md`](/06_PBI_Semantic_Model/03_PowerBI_Model/PowerBI_Report_Structure.md)
+- [`screenshots/image.png`](/06_PBI_Semantic_Model/03_PowerBI_Model/screenshots/image.png) (model/report preview)
 
 ---
 
 ## Report Structure Guide
 
-Use `PowerBI_Report_Structure.md` for report page sequencing, interpretation rules, and mandatory slicer behavior.
+Use [`PowerBI_Report_Structure.md`](/06_PBI_Semantic_Model/03_PowerBI_Model/PowerBI_Report_Structure.md) for report page sequencing, interpretation rules, and mandatory slicer behavior.
 
 That guide is report-specific. This README remains the folder-level contract.
 
@@ -50,6 +50,6 @@ That guide is report-specific. This README remains the folder-level contract.
 
 Semantic model changes should be treated as production contract changes and require synchronized documentation updates in:
 
-- `04_KPI_Data_Dictionary/README.md`
-- `05_Validation/README.md`
+- [`04_KPI_Data_Dictionary/README.md`](/06_PBI_Semantic_Model/04_KPI_Data_Dictionary/README.md)
+- [`05_Validation/README.md`](/06_PBI_Semantic_Model/05_Validation/README.md)
 

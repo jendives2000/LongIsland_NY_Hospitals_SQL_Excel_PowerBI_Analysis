@@ -1,4 +1,4 @@
-﻿# KPI 05.04 - Disposition Outcomes
+# KPI 05.04 - Disposition Outcomes
 
 ## Purpose
 
@@ -6,7 +6,7 @@ Measures discharge outcome distribution (home, post-acute, transfer, death, othe
 
 ## SQL Artifact
 
-- `05_04_SQL/05_04_Disposition_Outcomes.sql`
+- [`05_04_SQL/05_04_Disposition_Outcomes.sql`](/05_KPI_Dev/05_04_Disposition_Outcomes/05_04_SQL/05_04_Disposition_Outcomes.sql)
 
 ## Governed View
 
@@ -14,7 +14,7 @@ Measures discharge outcome distribution (home, post-acute, transfer, death, othe
 
 ## Validation Artifact
 
-- `05_04_Excel/05_04_Disposition_Outcomes_Counts_Rates_Validation.xlsx`
+- [`05_04_Excel/05_04_Disposition_Outcomes_Counts_Rates_Validation.xlsx`](/05_KPI_Dev/05_04_Disposition_Outcomes/05_04_Excel/05_04_Disposition_Outcomes_Counts_Rates_Validation.xlsx)
 
 ## Step-07 Consumption Note
 

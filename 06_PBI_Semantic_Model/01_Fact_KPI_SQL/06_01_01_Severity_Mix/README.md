@@ -1,4 +1,4 @@
-﻿# KPI 06.01.01 - Fact_KPI_SeverityMix
+# KPI 06.01.01 - Fact_KPI_SeverityMix
 
 ## Purpose
 
@@ -6,7 +6,7 @@ Creates the severity context fact used to anchor downstream KPI interpretation.
 
 ## SQL Artifact
 
-- `06_01_01_Fact_KPI_SeverityMix.sql`
+- [`06_01_01_Fact_KPI_SeverityMix.sql`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_01_Severity_Mix/06_01_01_Fact_KPI_SeverityMix.sql)
 
 ## Output Table
 
@@ -40,6 +40,6 @@ Creates the severity context fact used to anchor downstream KPI interpretation.
 
 ## Screenshot
 
-- `screenshots/image.png`
+- [`screenshots/image.png`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_01_Severity_Mix/screenshots/image.png)
 
 

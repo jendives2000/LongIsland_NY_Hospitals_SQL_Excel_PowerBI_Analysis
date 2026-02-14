@@ -1,4 +1,4 @@
-﻿# 06.01 - Fact KPI SQL
+# 06.01 - Fact KPI SQL
 
 ## Purpose
 
@@ -23,13 +23,13 @@ Step 06 scripts reshape approved outputs into semantic-model facts without redef
 
 ## Fact Inventory
 
-- `06_01_01_Severity_Mix/06_01_01_Fact_KPI_SeverityMix.sql` -> `dbo.Fact_KPI_SeverityMix`
-- `06_01_02_Fact_KPI_PayerMix/06_01_02_Fact_KPI_PayerMix.sql` -> `dbo.Fact_KPI_PayerMix`
-- `06_01_03_Fact_KPI_Unplanned/06_01_03_Fact_KPI_Unplanned.sql` -> `dbo.Fact_KPI_Unplanned`
-- `06_01_04_Fact_KPI_Disposition/06_01_04_Fact_KPI_Disposition.sql` -> `dbo.Fact_KPI_Disposition`
-- `06_01_05_Fact_KPI_LOS_Summary/06_01_05_Fact_KPI_LOS_Summary.sql` -> `dbo.Fact_KPI_LOS_Summary`
-- `06_01_06_Fact_KPI_Mortality/06_01_06_Fact_KPI_Mortality.sql` -> `dbo.Fact_KPI_Mortality`
-- `06_01_07_Fact_KPI_FinancialPressure/06_01_07_Fact_KPI_FinancialPressure.sql` -> `dbo.Fact_KPI_FinancialPressure`
+- [`06_01_01_Severity_Mix/06_01_01_Fact_KPI_SeverityMix.sql`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_01_Severity_Mix/06_01_01_Fact_KPI_SeverityMix.sql) -> `dbo.Fact_KPI_SeverityMix`
+- [`06_01_02_Fact_KPI_PayerMix/06_01_02_Fact_KPI_PayerMix.sql`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_02_Fact_KPI_PayerMix/06_01_02_Fact_KPI_PayerMix.sql) -> `dbo.Fact_KPI_PayerMix`
+- [`06_01_03_Fact_KPI_Unplanned/06_01_03_Fact_KPI_Unplanned.sql`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_03_Fact_KPI_Unplanned/06_01_03_Fact_KPI_Unplanned.sql) -> `dbo.Fact_KPI_Unplanned`
+- [`06_01_04_Fact_KPI_Disposition/06_01_04_Fact_KPI_Disposition.sql`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_04_Fact_KPI_Disposition/06_01_04_Fact_KPI_Disposition.sql) -> `dbo.Fact_KPI_Disposition`
+- [`06_01_05_Fact_KPI_LOS_Summary/06_01_05_Fact_KPI_LOS_Summary.sql`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_05_Fact_KPI_LOS_Summary/06_01_05_Fact_KPI_LOS_Summary.sql) -> `dbo.Fact_KPI_LOS_Summary`
+- [`06_01_06_Fact_KPI_Mortality/06_01_06_Fact_KPI_Mortality.sql`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_06_Fact_KPI_Mortality/06_01_06_Fact_KPI_Mortality.sql) -> `dbo.Fact_KPI_Mortality`
+- [`06_01_07_Fact_KPI_FinancialPressure/06_01_07_Fact_KPI_FinancialPressure.sql`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_07_Fact_KPI_FinancialPressure/06_01_07_Fact_KPI_FinancialPressure.sql) -> `dbo.Fact_KPI_FinancialPressure`
 
 ---
 

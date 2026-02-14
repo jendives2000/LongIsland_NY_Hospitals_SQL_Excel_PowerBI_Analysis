@@ -1,4 +1,4 @@
-﻿# KPI 06.01.03 - Fact_KPI_Unplanned
+# KPI 06.01.03 - Fact_KPI_Unplanned
 
 ## Purpose
 
@@ -6,7 +6,7 @@ Creates intake-pressure semantic facts from unplanned-admission KPI outputs.
 
 ## SQL Artifact
 
-- `06_01_03_Fact_KPI_Unplanned.sql`
+- [`06_01_03_Fact_KPI_Unplanned.sql`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_03_Fact_KPI_Unplanned/06_01_03_Fact_KPI_Unplanned.sql)
 
 ## Output Table
 
@@ -40,6 +40,6 @@ Creates intake-pressure semantic facts from unplanned-admission KPI outputs.
 
 ## Screenshot
 
-- `screenshots/image.png`
+- [`screenshots/image.png`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_03_Fact_KPI_Unplanned/screenshots/image.png)
 
 

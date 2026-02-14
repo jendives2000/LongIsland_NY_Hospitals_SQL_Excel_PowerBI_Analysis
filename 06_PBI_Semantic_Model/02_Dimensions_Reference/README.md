@@ -1,4 +1,4 @@
-﻿# 06.02 - Dimensions Reference
+# 06.02 - Dimensions Reference
 
 ## Purpose
 
@@ -28,7 +28,7 @@ Dimensions are consumed here, not redefined.
 
 ## Current Dimension Documentation
 
-- `Dim_Year/README.md`
+- [`Dim_Year/README.md`](/06_PBI_Semantic_Model/02_Dimensions_Reference/Dim_Year/README.md)
 
 Additional conformed dimensions are documented in model artifacts and can be expanded here as needed.
 
