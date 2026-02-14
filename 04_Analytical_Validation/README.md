@@ -96,15 +96,29 @@ Delivers a validation-certified base for KPI development:
 
 ---
 
-## Folder Contents
+## Folder Structure
 
 ```text
 04_Analytical_Validation/
 |-- README.md
-|-- screenshots/
-|   `-- image.png ... image-12.png
+|-- 04_Excel/
+|   |-- 04_1_Monetary_Top100.xlsx
+|   |-- 04_2_Category_Mapping_Sample.xlsx
+|   |-- 04_3_BirthWeight_Sample.xlsx
+|   |-- 04_4_Zip3_Category_Sample.xlsx
+|   |-- 04_5_FactDim_Integrity_Sample.xlsx
+|   |-- 04_7_Costs_Greater_Charges_Actions.xlsx
+|   |-- 4_6_Clinical_Index_Validation.xlsx
+|   |-- 4_7_ZScore_Outlier_Scan_Validation.xlsx
+|   `-- 4_8_Distribution_Severity_Bins.xlsx
 |-- 04_SQL/
-`-- 04_Excel/
+|   |-- 04_7_Costs_greater_Charges_Actions.sql
+|   |-- 04_7_Outlier_Anomaly_Scan.sql
+|   |-- 04_curated_extracts.sql
+|   |-- 04_Dim_ClinicClass_Update.sql
+|   |-- APR_Sev_Vs_LOS_original.sql
+|   `-- ethnicity_std_mapping_fixing.sql
+`-- screenshots/   (13 validation images)
 ```
 
 

@@ -59,14 +59,31 @@ Any KPI logic change must return to Step 05.
 
 ---
 
-## Folder Contents
+## Folder Structure
 
 ```text
 06_PBI_Semantic_Model/
 |-- README.md
 |-- 01_Fact_KPI_SQL/
+|   |-- 06_01_01_Severity_Mix/
+|   |-- 06_01_01_xxx/
+|   |-- 06_01_02_Fact_KPI_PayerMix/
+|   |-- 06_01_03_Fact_KPI_Unplanned/
+|   |-- 06_01_04_Fact_KPI_Disposition/
+|   |-- 06_01_05_Fact_KPI_LOS_Summary/
+|   |-- 06_01_06_Fact_KPI_Mortality/
+|   |-- 06_01_07_Fact_KPI_FinancialPressure/
+|   `-- README.md
 |-- 02_Dimensions_Reference/
+|   |-- Dim_Year/
+|   `-- README.md
 |-- 03_PowerBI_Model/
+|   |-- PBI_Project/
+|   |-- screenshots/   (1 validation images)
+|   |-- PowerBI_Report_Structure.md
+|   `-- README.md
 |-- 04_KPI_Data_Dictionary/
+|   `-- README.md
 `-- 05_Validation/
+    `-- README.md
 ```

@@ -88,16 +88,17 @@ Any KPI-definition change must start upstream in Step 05.
 
 ---
 
-## Folder Contents
+## Folder Structure
 
 ```text
 07_Excel_Executive_Analytics/
 |-- README.md
-|-- Executive_Guide_How_to_Read_the_Report.md
 |-- 07_SQL/
 |   `-- 07_01_vw_Excel_KPI_Executive_FacilityYear.sql
 |-- Dashboards/
 |   `-- Executive_KPI_Overview.xlsx
-`-- Templates/
-    `-- Executive_Pivot_Template.xlsx
+|-- Screenshots/
+|-- Templates/
+|   `-- Executive_Pivot_Template.xlsx
+`-- Executive_Guide_How_to_Read_the_Report.md
 ```

@@ -79,22 +79,21 @@ This is the structural handoff to [`03_Analytical_Data_Modeling`](/03_Analytical
 
 ---
 
-## Folder Contents
+## Folder Structure
 
 ```text
 02_Data_Cleaning/
 |-- README.md
-|-- screenshots/
-|   `-- image.png ... image-12.png
-`-- 02_SQL/
-    |-- 2_1_Currency_Formatting.sql
-    |-- 2_2_Standardize_ZIP_data.sql
-    |-- 2_3_Standardize_Unknown_cat.sql
-    |-- 2_4_Admission_Category_Normalization.sql
-    |-- 2_5_PatientDisposition_Cat_Standardiz.sql
-    |-- 2_6_nvarcharMax_trimming.sql
-    |-- 2_7_add_surrogate_PrimaryKey.sql
-    `-- 2_8_payment_typology_grouping.sql
+|-- 02_SQL/
+|   |-- 2_1_Currency_Formatting.sql
+|   |-- 2_2_Standardize_ZIP_data.sql
+|   |-- 2_3_Standardize_Unknown_cat.sql
+|   |-- 2_4_Admission_Category_Normalization.sql
+|   |-- 2_5_PatientDisposition_Cat_Standardiz.sql   (filename appears truncated)
+|   |-- 2_6_nvarcharMax_trimming.sql
+|   |-- 2_7_add_surrogate_PrimaryKey.sql
+|   `-- 2_8_payment_typology_grouping.sql
+`-- screenshots/   (13 validation images)
 ```
 
 

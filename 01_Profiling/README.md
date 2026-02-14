@@ -68,16 +68,15 @@ Step 01 produces a deterministic remediation backlog consumed by [`02_Data_Clean
 
 ---
 
-## Folder Contents
+## Folder Structure
 
 ```text
 01_Profiling/
 |-- README.md
-|-- screenshots/
-|   `-- image.png
-`-- 01_SQL/
-    |-- Columns_Profiling.sql
-    `-- BirthWeight_correction.sql
+|-- 01_SQL/
+|   |-- BirthWeight_correction.sql
+|   `-- Columns_Profiling.sql
+`-- screenshots/   (1 validation images)
 ```
 
 

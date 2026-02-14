@@ -101,17 +101,14 @@ This step delivers a query-ready base table and naming contract consumed by [`01
 
 ---
 
-## Folder Contents
+## Folder Structure
 
 ```text
 00_DB_Creation/
 |-- README.md
-|-- screenshots/
-|   |-- image.png
-|   |-- image-1.png
-|   `-- image-2.png
-`-- 00_SQL/
-    `-- 00_1.sql
+|-- 00_SQL/
+|   `-- 00_1.sql
+`-- screenshots/   (3 validation images)
 ```
 
 

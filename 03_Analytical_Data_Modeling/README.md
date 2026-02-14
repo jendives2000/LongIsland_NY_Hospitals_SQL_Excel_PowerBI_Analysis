@@ -95,15 +95,27 @@ Provides the governed structural foundation consumed by:
 
 ---
 
-## Folder Contents
+## Folder Structure
 
 ```text
 03_Analytical_Data_Modeling/
 |-- README.md
-|-- screenshots/
-|   `-- image.png ... image-9.png
+|-- 03_Facility_Peer_Grouping_Framework/
+|   |-- screenshots/   (2 validation images)
+|   |-- README.md
+|   `-- seed_dim_peergroup_and_bridge.sql
 |-- 03_SQL/
-`-- 03_Facility_Peer_Grouping_Framework/
+|   |-- 3_1_dim_facility.sql
+|   |-- 3_2_dim_admissionType.sql
+|   |-- 3_3_dim_disposition.sql
+|   |-- 3_4_dim_payers.sql
+|   |-- 3_5_dim_clinical_class.sql
+|   |-- 3_6_dim_date.sql
+|   |-- 3_6b_2015_synthetic_dates.sql
+|   |-- 3_6c_dim_peergroup.sql
+|   |-- 3_6d_bridge_facility_peergroup.sql
+|   `-- 3_7_Fact_Table_inpatient_stay.sql
+`-- screenshots/   (10 validation images)
 ```
 
 

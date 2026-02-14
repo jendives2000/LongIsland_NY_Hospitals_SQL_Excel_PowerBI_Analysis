@@ -105,18 +105,49 @@ Step 07 should consume governed KPI views, not redefine KPI formulas.
 
 ---
 
-## Folder Contents
+## Folder Structure
 
 ```text
 05_KPI_Dev/
 |-- README.md
-|-- inputs_and_dependencies.txt
 |-- 05_01_Severity_Mix_Index_APR/
+|   |-- 05_Excel/
+|   |-- 05_SQL/
+|   |-- screenshots/   (5 validation images)
+|   `-- README.md
 |-- 05_02_Payers_Mix_Reimb_Risk/
+|   |-- 05_02_Excel/
+|   |-- 05_02_SQL/
+|   |-- screenshots/   (5 validation images)
+|   `-- README.md
 |-- 05_03_Unplanned_Admission_Rate/
+|   |-- 05_03_Excel/
+|   |-- 05_03_SQL/
+|   |-- screenshots/   (8 validation images)
+|   `-- README.md
 |-- 05_04_Disposition_Outcomes/
+|   |-- 05_04_Excel/
+|   |-- 05_04_SQL/
+|   |-- screenshots/   (4 validation images)
+|   `-- README.md
 |-- 05_05_LOS_LengthOfStay_KPI/
+|   |-- 05_05_Excel/
+|   |-- 05_05_SQL/
+|   |-- screenshots/   (9 validation images)
+|   `-- README.md
 |-- 05_06_Mortality_Rate/
+|   |-- 05_06_Excel/
+|   |-- 05_06_SQL/
+|   |-- screenshots/   (3 validation images)
+|   `-- README.md
 |-- 05_07_MCost_and_Margin_Pressure/
-`-- 05_0x_folder_template/
+|   |-- 05_07_Excel/
+|   |-- 05_07_SQL/
+|   |-- screenshots/   (4 validation images)
+|   `-- README.md
+|-- 05_0x_folder_template/
+|   |-- 05_0x_Excel/
+|   |-- 05_0x_SQL/
+|   `-- README.md
+`-- inputs_and_dependencies.txt
 ```

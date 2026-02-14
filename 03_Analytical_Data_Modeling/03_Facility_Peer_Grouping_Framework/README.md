@@ -81,15 +81,13 @@ See:
 
 ---
 
-## Folder Contents
+## Folder Structure
 
 ```text
-03_Facility_Peer_Grouping_Framework/
+03_Analytical_Data_Modeling/03_Facility_Peer_Grouping_Framework/
 |-- README.md
-|-- seed_dim_peergroup_and_bridge.sql
-|-- screenshots/
-|   |-- image.png
-|   `-- image-1.png
+|-- screenshots/   (2 validation images)
+`-- seed_dim_peergroup_and_bridge.sql
 ```
 
 
