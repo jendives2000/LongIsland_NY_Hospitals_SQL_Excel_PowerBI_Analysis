@@ -47,7 +47,7 @@ Excel validation packs:
 
 Evidence artifacts:
 
-- [`screenshots/image.png`](/04_Analytical_Validation/screenshots/image.png) through [`screenshots/image-12.png`](/04_Analytical_Validation/screenshots/image-12.png)
+- [`screenshots/charges_costs_los_outliers_distance_perc_counts_with_pct_line.png`](/04_Analytical_Validation/screenshots/charges_costs_los_outliers_distance_perc_counts_with_pct_line.png) through [`screenshots/row_count_bySeverity.png`](/04_Analytical_Validation/screenshots/row_count_bySeverity.png)
 
 ---
 
@@ -78,19 +78,13 @@ Delivers a validation-certified base for KPI development:
 <details>
 <summary>Show Screenshots</summary>
 
-![Screenshot](./screenshots/image.png)
-![Screenshot](./screenshots/image-1.png)
-![Screenshot](./screenshots/image-10.png)
-![Screenshot](./screenshots/image-11.png)
-![Screenshot](./screenshots/image-12.png)
-![Screenshot](./screenshots/image-2.png)
-![Screenshot](./screenshots/image-3.png)
-![Screenshot](./screenshots/image-4.png)
-![Screenshot](./screenshots/image-5.png)
-![Screenshot](./screenshots/image-6.png)
-![Screenshot](./screenshots/image-7.png)
-![Screenshot](./screenshots/image-8.png)
-![Screenshot](./screenshots/image-9.png)
+
+
+
+
+![Screenshot](./screenshots/charges_costs_los_outliers_distance_perc_counts_with_pct_line.png)
+![Screenshot](./screenshots/margin_loss_by_payer_counts_and_amounts.png)
+![Screenshot](./screenshots/row_count_bySeverity.png)
 
 </details>
 

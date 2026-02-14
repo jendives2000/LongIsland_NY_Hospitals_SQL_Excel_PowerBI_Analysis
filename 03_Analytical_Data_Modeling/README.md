@@ -80,16 +80,13 @@ Provides the governed structural foundation consumed by:
 <details>
 <summary>Show Screenshots</summary>
 
-![Screenshot](./screenshots/image.png)
-![Screenshot](./screenshots/image-1.png)
-![Screenshot](./screenshots/image-2.png)
-![Screenshot](./screenshots/image-3.png)
-![Screenshot](./screenshots/image-4.png)
-![Screenshot](./screenshots/image-5.png)
-![Screenshot](./screenshots/image-6.png)
-![Screenshot](./screenshots/image-7.png)
-![Screenshot](./screenshots/image-8.png)
-![Screenshot](./screenshots/image-9.png)
+
+
+
+
+![Screenshot](./screenshots/check_date_range_row_count_inDimDate.png)
+![Screenshot](./screenshots/dim_admission_type_load_results.png)
+![Screenshot](./screenshots/quick_star_schema_sanity_performance_check.png)
 
 </details>
 

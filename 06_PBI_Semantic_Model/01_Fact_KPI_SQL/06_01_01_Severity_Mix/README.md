@@ -32,7 +32,11 @@ Creates the severity context fact used to anchor downstream KPI interpretation.
 <details>
 <summary>Show Screenshots</summary>
 
-![Screenshot](./screenshots/image.png)
+
+
+
+
+![Screenshot](./screenshots/fact_kpi_severity_mix_preview.png)
 
 </details>
 
@@ -40,6 +44,6 @@ Creates the severity context fact used to anchor downstream KPI interpretation.
 
 ## Screenshot
 
-- [`screenshots/image.png`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_01_Severity_Mix/screenshots/image.png)
+- [`screenshots/fact_kpi_severity_mix_preview.png`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_01_Severity_Mix/screenshots/fact_kpi_severity_mix_preview.png)
 
 

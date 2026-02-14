@@ -32,7 +32,11 @@ Creates mortality semantic facts for outcome-risk interpretation.
 <details>
 <summary>Show Screenshots</summary>
 
-![Screenshot](./screenshots/image.png)
+
+
+
+
+![Screenshot](./screenshots/fact_kpi_mortality_preview.png)
 
 </details>
 
@@ -40,6 +44,6 @@ Creates mortality semantic facts for outcome-risk interpretation.
 
 ## Screenshot
 
-- [`screenshots/image.png`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_06_Fact_KPI_Mortality/screenshots/image.png)
+- [`screenshots/fact_kpi_mortality_preview.png`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_06_Fact_KPI_Mortality/screenshots/fact_kpi_mortality_preview.png)
 
 

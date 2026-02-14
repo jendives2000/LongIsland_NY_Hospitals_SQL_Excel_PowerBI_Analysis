@@ -33,7 +33,11 @@ Creates discharge-exit semantic facts for flow and downstream utilization analys
 <details>
 <summary>Show Screenshots</summary>
 
-![Screenshot](./screenshots/image.png)
+
+
+
+
+_No screenshots retained after curation._
 
 </details>
 
@@ -41,6 +45,6 @@ Creates discharge-exit semantic facts for flow and downstream utilization analys
 
 ## Screenshot
 
-- [`screenshots/image.png`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_04_Fact_KPI_Disposition/screenshots/image.png)
+- [`screenshots/fact_kpi_disposition_preview.png`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_04_Fact_KPI_Disposition/screenshots/fact_kpi_disposition_preview.png)
 
 

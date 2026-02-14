@@ -32,7 +32,11 @@ Creates intake-pressure semantic facts from unplanned-admission KPI outputs.
 <details>
 <summary>Show Screenshots</summary>
 
-![Screenshot](./screenshots/image.png)
+
+
+
+
+_No screenshots retained after curation._
 
 </details>
 
@@ -40,6 +44,6 @@ Creates intake-pressure semantic facts from unplanned-admission KPI outputs.
 
 ## Screenshot
 
-- [`screenshots/image.png`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_03_Fact_KPI_Unplanned/screenshots/image.png)
+- [`screenshots/fact_kpi_unplanned_preview.png`](/06_PBI_Semantic_Model/01_Fact_KPI_SQL/06_01_03_Fact_KPI_Unplanned/screenshots/fact_kpi_unplanned_preview.png)
 
 

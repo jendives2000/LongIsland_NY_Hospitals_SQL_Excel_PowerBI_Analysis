@@ -30,9 +30,9 @@ This step ensures:
 
 ### Evidence Artifacts
 
-- [`screenshots/image.png`](/00_DB_Creation/screenshots/image.png) (row-count validation)
-- [`screenshots/image-1.png`](/00_DB_Creation/screenshots/image-1.png) (schema inspection)
-- [`screenshots/image-2.png`](/00_DB_Creation/screenshots/image-2.png) (queryability check)
+- [`screenshots/base_table_queryability_check.png`](/00_DB_Creation/screenshots/base_table_queryability_check.png) (row-count validation)
+- [`screenshots/base_table_queryability_check.png`](/00_DB_Creation/screenshots/base_table_queryability_check.png) (schema inspection)
+- [`screenshots/base_table_queryability_check.png`](/00_DB_Creation/screenshots/base_table_queryability_check.png) (queryability check)
 
 ### Data Asset
 
@@ -93,9 +93,12 @@ This step delivers a query-ready base table and naming contract consumed by [`01
 <details>
 <summary>Show Screenshots</summary>
 
-![Screenshot](./screenshots/image.png)
-![Screenshot](./screenshots/image-1.png)
-![Screenshot](./screenshots/image-2.png)
+
+
+
+
+![Screenshot](./screenshots/base_table_queryability_check.png)
+![Screenshot](./screenshots/row_count_validation.png)
 
 </details>
 

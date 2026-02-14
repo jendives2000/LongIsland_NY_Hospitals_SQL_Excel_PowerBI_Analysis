@@ -29,7 +29,7 @@ SQL artifacts:
 
 Evidence artifact:
 
-- [`screenshots/image.png`](/01_Profiling/screenshots/image.png)
+- [`screenshots/columns_profiling_summary.png`](/01_Profiling/screenshots/columns_profiling_summary.png)
 
 ---
 
@@ -62,7 +62,11 @@ Step 01 produces a deterministic remediation backlog consumed by [`02_Data_Clean
 <details>
 <summary>Show Screenshots</summary>
 
-![Screenshot](./screenshots/image.png)
+
+
+
+
+![Screenshot](./screenshots/columns_profiling_summary.png)
 
 </details>
 
@@ -76,7 +80,7 @@ Step 01 produces a deterministic remediation backlog consumed by [`02_Data_Clean
 |-- 01_SQL/
 |   |-- BirthWeight_correction.sql
 |   `-- Columns_Profiling.sql
-`-- screenshots/   (1 validation images)
+`-- screenshots/   (1 validation image)
 ```
 
 

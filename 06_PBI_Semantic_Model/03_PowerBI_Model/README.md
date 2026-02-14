@@ -25,7 +25,7 @@ This folder demonstrates senior BI delivery capability:
 - [`PBI_Project/PowerBI_project.SemanticModel/definition/*.tmdl`](/06_PBI_Semantic_Model/03_PowerBI_Model/PBI_Project/PowerBI_project.SemanticModel/definition/)
 - `PBI_Project/PowerBI_project.Report/definition/*`
 - [`PowerBI_Report_Structure.md`](/06_PBI_Semantic_Model/03_PowerBI_Model/PowerBI_Report_Structure.md)
-- [`screenshots/image.png`](/06_PBI_Semantic_Model/03_PowerBI_Model/screenshots/image.png) (model/report preview)
+- [`screenshots/semantic_model_report_preview.png`](/06_PBI_Semantic_Model/03_PowerBI_Model/screenshots/semantic_model_report_preview.png) (model/report preview)
 
 ---
 

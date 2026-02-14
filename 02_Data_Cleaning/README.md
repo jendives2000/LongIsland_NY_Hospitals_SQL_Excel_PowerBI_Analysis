@@ -35,7 +35,7 @@ SQL artifacts:
 
 Evidence artifacts:
 
-- [`screenshots/image.png`](/02_Data_Cleaning/screenshots/image.png) through [`screenshots/image-12.png`](/02_Data_Cleaning/screenshots/image-12.png)
+- [`screenshots/admission_type_std_distribution.png`](/02_Data_Cleaning/screenshots/admission_type_std_distribution.png) through [`screenshots/encounter_id_uniqueness_check.png`](/02_Data_Cleaning/screenshots/encounter_id_uniqueness_check.png)
 
 ---
 
@@ -61,19 +61,13 @@ This is the structural handoff to [`03_Analytical_Data_Modeling`](/03_Analytical
 <details>
 <summary>Show Screenshots</summary>
 
-![Screenshot](./screenshots/image.png)
-![Screenshot](./screenshots/image-1.png)
-![Screenshot](./screenshots/image-10.png)
-![Screenshot](./screenshots/image-11.png)
-![Screenshot](./screenshots/image-12.png)
-![Screenshot](./screenshots/image-2.png)
-![Screenshot](./screenshots/image-3.png)
-![Screenshot](./screenshots/image-4.png)
-![Screenshot](./screenshots/image-5.png)
-![Screenshot](./screenshots/image-6.png)
-![Screenshot](./screenshots/image-7.png)
-![Screenshot](./screenshots/image-8.png)
-![Screenshot](./screenshots/image-9.png)
+
+
+
+
+![Screenshot](./screenshots/admission_type_std_distribution.png)
+![Screenshot](./screenshots/charges_costs_min_max_sanity_check.png)
+![Screenshot](./screenshots/encounter_id_uniqueness_check.png)
 
 </details>
 

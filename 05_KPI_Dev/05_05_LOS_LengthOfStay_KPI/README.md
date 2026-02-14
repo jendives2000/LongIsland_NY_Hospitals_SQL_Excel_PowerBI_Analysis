@@ -33,15 +33,11 @@ Dependency gap: this view is not created in [`05_05_Length_of_Stay.sql`](/05_KPI
 <details>
 <summary>Show Screenshots</summary>
 
-![Screenshot](./screenshots/image.png)
-![Screenshot](./screenshots/image-1.png)
-![Screenshot](./screenshots/image-2.png)
-![Screenshot](./screenshots/image-3.png)
-![Screenshot](./screenshots/image-4.png)
-![Screenshot](./screenshots/image-5.png)
-![Screenshot](./screenshots/image-6.png)
-![Screenshot](./screenshots/image-7.png)
-![Screenshot](./screenshots/image-8.png)
+
+
+
+
+_No screenshots retained after curation._
 
 </details>
 
