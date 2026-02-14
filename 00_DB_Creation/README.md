@@ -1,4 +1,4 @@
-# 00 - Database Creation and Initial Setup
+﻿# 00 - Database Creation and Initial Setup
 
 ## Purpose
 
@@ -30,8 +30,7 @@ This step ensures:
 
 ### Evidence Artifacts
 
-- [`screenshots/base_table_queryability_check.png`](/00_DB_Creation/screenshots/base_table_queryability_check.png) (row-count validation)
-- [`screenshots/base_table_queryability_check.png`](/00_DB_Creation/screenshots/base_table_queryability_check.png) (schema inspection)
+- [`screenshots/row_count_validation.png`](/00_DB_Creation/screenshots/row_count_validation.png) (row-count validation)
 - [`screenshots/base_table_queryability_check.png`](/00_DB_Creation/screenshots/base_table_queryability_check.png) (queryability check)
 
 ### Data Asset
