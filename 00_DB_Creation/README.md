@@ -37,6 +37,13 @@ This step ensures:
 
 - Source dataset loaded into SQL Server table:
   - `dbo.LI_SPARCS_2015_25_Inpatient`
+  - Original data source:   
+    - go to: [https://health.data.ny.gov/Health/Hospital-Inpatient-Discharges-SPARCS-De-Identified](https://health.data.ny.gov/Health/Hospital-Inpatient-Discharges-SPARCS-De-Identified/82xm-y6g8/about_data)
+    - Press the blue “Actions” button in the top right corner
+    - Select the “Query Data” option.
+    - apply a filter to ‘Health Service Area’ setting it to ‘is “Long Island”
+    - press the “Apply” button beneath and press the “Export” button in the top right
+    - Download the file in the Export Format ‘CSV’:
 
 ---
 
