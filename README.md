@@ -101,7 +101,8 @@ LongIsland_NY_Hospitals_SQL_Excel_PowerBI_Analysis/
 ├── 04_Analytical_Validation/        # SQL and Excel-based reconciliation checks
 ├── 05_KPI_Dev/                      # KPI-specific SQL logic and Excel validation packs
 ├── 06_PBI_Semantic_Model/           # Fact KPI layer, dimensions, Power BI semantic model, data dictionary
-└── 07_Excel_Executive_Analytics/    # Executive Excel dashboards, screenshots, and templates
+├── 07_Excel_Executive_Analytics/    # Executive Excel dashboards, screenshots, and templates
+└── Live_Report                      # Online access to the Report
 ```
 
 This structure mirrors how enterprise healthcare analytics teams separate **data engineering**, **KPI logic**, **validation**, and **semantic modeling**.
