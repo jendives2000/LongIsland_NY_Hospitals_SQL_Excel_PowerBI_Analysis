@@ -1,7 +1,12 @@
 # Long Island, NY Hospitals
 
 ## Healthcare Data Analytics & Business Intelligence
-
+![Tool: Power BI](https://img.shields.io/badge/Tool-Power%20BI-F2C811?style=flat-square&labelColor=2b2f3a&logo=powerbi&logoColor=000000)
+![Tool: SQL Server](https://img.shields.io/badge/Tool-SQL%20Server-CC2927?style=flat-square&labelColor=2b2f3a&logo=microsoftsqlserver&logoColor=ffffff)
+![Tool: Excel](https://img.shields.io/badge/Tool-Excel-217346?style=flat-square&labelColor=2b2f3a&logo=microsoftexcel&logoColor=ffffff)
+![Language: T-SQL](https://img.shields.io/badge/Language-T--SQL-0078D4?style=flat-square&labelColor=2b2f3a)
+![Language: DAX](https://img.shields.io/badge/Language-DAX-0078D4?style=flat-square&labelColor=2b2f3a)
+![Domain: Healthcare](https://img.shields.io/badge/Domain-Healthcare-84BD00?style=flat-square&labelColor=2b2f3a)
 ## Executive Summary
 
 This repository presents an end-to-end healthcare analytics initiative analyzing Long Island hospital performance across clinical, operational, and financial dimensions. The project integrates SQL-based data engineering, Excel-based validation, and a Power BI semantic model to surface **explainable, decision-relevant signals** for healthcare leadership.
@@ -247,3 +252,5 @@ MIT License — see LICENSE file for details
 **Last Updated:** February 2026
 
 ---
+
+⭐ If you found this project insightful, feel free to connect or reach out!
