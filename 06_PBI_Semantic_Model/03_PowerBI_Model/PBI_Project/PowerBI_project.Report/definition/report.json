@@ -40,7 +40,7 @@
           "expanded": {
             "expr": {
               "Literal": {
-                "Value": "true"
+                "Value": "false"
               }
             }
           }
@@ -73,10 +73,15 @@
     }
   ],
   "settings": {
+    "isPersistentUserStateDisabled": true,
     "useStylableVisualContainerHeader": true,
     "defaultDrillFilterOtherVisuals": true,
-    "allowChangeFilterTypes": true,
     "useEnhancedTooltips": true,
-    "useDefaultAggregateDisplayName": true
+    "useScaledTooltips": true,
+    "disableFilterPaneSearch": true,
+    "useDefaultAggregateDisplayName": true,
+    "queryLimitOption": "None",
+    "customMemoryLimit": "1048576",
+    "customTimeoutLimit": "225"
   }
 }

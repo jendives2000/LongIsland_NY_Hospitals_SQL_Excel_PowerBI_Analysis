@@ -35,7 +35,10 @@
           "07d4c0b693a38201b9f9": {
             "singleVisual": {
               "visualType": "textbox",
-              "objects": {}
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
             }
           },
           "0955e73b70832d788d1d": {
@@ -47,10 +50,7 @@
           "0c44f41b690f4abd3e23": {
             "singleVisual": {
               "visualType": "textbox",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
+              "objects": {}
             }
           },
           "0c5c4de6a542023af747": {
@@ -120,7 +120,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "4db37a01dc87466a4bfb",
+                  "name": "7bca0d20ac384d31350a",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -135,7 +135,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "6c89b868dcdbc1ddd7d0",
+                  "name": "22dbff214806d39d2fcc",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -150,7 +150,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "ec7eeb851e7153b69a09",
+                  "name": "b3d5cf1059005504e8ec",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -165,7 +165,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "423757e955a86d586bc9",
+                  "name": "925eb40b6aef5e64c55f",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -180,7 +180,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "09251f2db3c77fef791b",
+                  "name": "a802fcac51b500a3f0e6",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -195,7 +195,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "0ee9534a058d119322a0",
+                  "name": "c2ab4a672e0e9e038feb",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -379,7 +379,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "31a400fdcd98bab03ec0",
+                  "name": "b0570e08e49570815d1a",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -394,7 +394,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "9a51debc1104a4f5e0ad",
+                  "name": "a2d00868434e1475afa6",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -409,7 +409,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "24747c10a889c9142091",
+                  "name": "d01b62809ff2a2286e6d",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -424,7 +424,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "2c2c70e242fec4515c1b",
+                  "name": "f8d3eea0478a64e3e890",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -439,7 +439,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "38f94396cfe371add36f",
+                  "name": "707fe833b17f04bd9db4",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -454,7 +454,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "1ed7b79cb3e99a61e5d8",
+                  "name": "c5f2539a567e801e9c84",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -513,12 +513,6 @@
               "objects": {}
             }
           },
-          "7a328e838539afc67d4b": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
           "7a9d211d6a9e23856ca7": {
             "singleVisual": {
               "visualType": "textbox",
@@ -538,7 +532,22 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "57b18c78f4e9c4bf4b9f",
+                  "name": "d23c6c410d936f6d46bf",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Facility"
+                        }
+                      },
+                      "Property": "PeerGroup_Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0562357934aa01b3beac",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -553,7 +562,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "b39896709e23e69cb32b",
+                  "name": "a876f0adcebea2c70271",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -568,7 +577,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "dfe041f11e27fca954c9",
+                  "name": "32ca39a340e5306ef5a2",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -583,7 +592,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "67312eaba07c386ebaa9",
+                  "name": "64db61ad7cd4c522c708",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -598,7 +607,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "0afedc507108fdb4f5f7",
+                  "name": "56f3f75e2ef84dd6d9df",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -613,7 +622,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "af4fa4376b83a33203dc",
+                  "name": "75c6bf4fefdd9a453d63",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -628,7 +637,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "ada0a51e00dd42c13725",
+                  "name": "f926ec3b1a1901d13981",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -643,7 +652,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "f4c70a739e084c3f2fad",
+                  "name": "ff7e717a3c13ae350b02",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -653,21 +662,6 @@
                         }
                       },
                       "Property": "Payer Share %"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "6d006715a149aec49b32",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Dim_Facility"
-                        }
-                      },
-                      "Property": "PeerGroup_Name"
                     }
                   },
                   "howCreated": 0
@@ -708,6 +702,15 @@
               }
             }
           },
+          "88482907f1858c264c93": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
           "8d44c7d4a5f87e14a44a": {
             "singleVisual": {
               "visualType": "actionButton",
@@ -733,7 +736,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "fd372bc0985159d3bd08",
+                  "name": "881e8a43bebc260d16e2",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -748,7 +751,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "21ce913b2c617dde720e",
+                  "name": "ec398426cba824a7961a",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -763,7 +766,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "9ce282a651561c450373",
+                  "name": "3b757f6fe320cf07690a",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -778,7 +781,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "a725f3091c0f4ec0ef72",
+                  "name": "772e7205085fd9b4594a",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -793,7 +796,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "4b98d1567fb0c84b56e5",
+                  "name": "85a7f9c6107b5880bdb6",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -808,7 +811,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "7f1f7f38ef3be23ccbd1",
+                  "name": "c6862bc419db40b52894",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -848,7 +851,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "552997ea8083c9162c6b",
+                  "name": "1e1beeea8ac88207c0b7",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1092,7 +1095,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "e642c247b97e7b974c17",
+                  "name": "9a6c38e343f8dd61410b",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1107,7 +1110,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "240814beab8e668b2e83",
+                  "name": "5185dbedccebacd3ba39",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1122,7 +1125,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "91838c265fca933ba298",
+                  "name": "9bb0d00a8fe7528ff2d8",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1131,13 +1134,13 @@
                           "Entity": "_PayerMix"
                         }
                       },
-                      "Property": "Total Payer Encounters"
+                      "Property": "Risk Payer Encounters"
                     }
                   },
                   "howCreated": 0
                 },
                 {
-                  "name": "dcad711491cdf4632f0b",
+                  "name": "5c4463be89f3b69d3594",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1152,7 +1155,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "213ed1477593c08dd319",
+                  "name": "8836c1e2099feb3c245e",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1167,7 +1170,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "4686ea3addf485a445c5",
+                  "name": "79f6d10429b686167d09",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1182,7 +1185,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "7b68d1d958577b3679a3",
+                  "name": "a23bd8a84d7e5640af59",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1191,7 +1194,7 @@
                           "Entity": "_PayerMix"
                         }
                       },
-                      "Property": "Risk Payer Encounters"
+                      "Property": "Total Payer Encounters"
                     }
                   },
                   "howCreated": 0
@@ -1284,15 +1287,6 @@
           "f60ab10e6403a46369da": {
             "singleVisual": {
               "visualType": "actionButton",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "88482907f1858c264c93": {
-            "singleVisual": {
-              "visualType": "textbox",
               "objects": {},
               "display": {
                 "mode": "hidden"

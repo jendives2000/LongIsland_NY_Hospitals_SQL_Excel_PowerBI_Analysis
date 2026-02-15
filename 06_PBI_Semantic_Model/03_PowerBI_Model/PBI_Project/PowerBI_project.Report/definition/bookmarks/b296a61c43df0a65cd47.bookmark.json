@@ -21,7 +21,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "39cb0ede80288c482c3c",
+                  "name": "c3369a17a8274d1059ca",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -82,7 +82,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "9d25f380b86f73e02915",
+                  "name": "949c5ee9b8c0c563e378",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -97,7 +97,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "f1dbec0386ca49e4f12a",
+                  "name": "310690222e757d89f51d",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -112,7 +112,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "a9f46fdb283bdffbf574",
+                  "name": "58019869dae49e9f40ff",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -127,7 +127,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "5e62c18fce673544e168",
+                  "name": "99e773eb312c355ba733",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -142,7 +142,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "978a252ebd9831e770e9",
+                  "name": "d8527b2c489ae9d318f6",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -242,7 +242,7 @@
                       "Property": "PeerGroup Severity Median"
                     }
                   },
-                  "howCreated": 0
+                  "howCreated": 1
                 },
                 {
                   "name": "b64acc8a05ac972ded80",
@@ -284,6 +284,21 @@
                         }
                       },
                       "Property": "Severity Mix Index"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "66532e2e340dab21cd78",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Severity"
+                        }
+                      },
+                      "Property": "PeerGroup Severity Median"
                     }
                   },
                   "howCreated": 0
@@ -408,7 +423,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "b05eca5758873fb6c8ea",
+                  "name": "5e4e12de22cee020b501",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -423,7 +438,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "adcc9dc98a3553331dbc",
+                  "name": "5d575300966a677d4cb4",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -438,7 +453,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "11658aa9cbd69cda16e2",
+                  "name": "d54dbb728c79f26c548e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -453,7 +468,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "d696a7f8a2dfb82045f4",
+                  "name": "6257ae907427634ab055",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -612,6 +627,21 @@
                       "Property": "PeerGroup Severity Median (FacilitySafe)"
                     }
                   },
+                  "howCreated": 1
+                },
+                {
+                  "name": "82c0bbbb42b1190bda13",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Severity"
+                        }
+                      },
+                      "Property": "PeerGroup Severity Median (FacilitySafe)"
+                    }
+                  },
                   "howCreated": 0
                 }
               ]
@@ -665,6 +695,12 @@
               }
             }
           },
+          "5c1a0dace1eb37914518": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
           "5cce6f5150018d481349": {
             "singleVisual": {
               "visualType": "actionButton",
@@ -698,6 +734,12 @@
               }
             }
           },
+          "737f05ccab496872a8fa": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
           "7b516787f78e8337c75c": {
             "singleVisual": {
               "visualType": "textbox",
@@ -711,7 +753,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "24287848ab3f75bfc264",
+                  "name": "aade6085c29b7b843d34",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -726,16 +768,16 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "586c665bb4ca736b3c4d",
+                  "name": "ff7187b4dc47069f3575",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Dim_ClinicalClass"
+                          "Entity": "_Severity"
                         }
                       },
-                      "Property": "PeerGroup Severity Median (PeerGroup safe)"
+                      "Property": "PeerGroup Severity Median"
                     }
                   },
                   "howCreated": 0
@@ -765,6 +807,12 @@
           "7e4c37e39d7340a3e022": {
             "singleVisual": {
               "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "86194b6af709ef546169": {
+            "singleVisual": {
+              "visualType": "shape",
               "objects": {}
             }
           },
@@ -892,6 +940,7 @@
                 },
                 {
                   "name": "622454b6053b5ce40290",
+                  "type": "Categorical",
                   "expression": {
                     "Column": {
                       "Expression": {
@@ -917,10 +966,11 @@
                       "Property": "PeerGroup Severity Median"
                     }
                   },
-                  "howCreated": 0
+                  "howCreated": 1
                 },
                 {
                   "name": "b64acc8a05ac972ded80",
+                  "type": "Categorical",
                   "expression": {
                     "Column": {
                       "Expression": {
@@ -959,6 +1009,21 @@
                         }
                       },
                       "Property": "Severity Mix Index"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "19addabfab851d5801d2",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Severity"
+                        }
+                      },
+                      "Property": "PeerGroup Severity Median"
                     }
                   },
                   "howCreated": 0
@@ -1034,7 +1099,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "0a6a9409071d6c7fff89",
+                  "name": "0e9c9612607e384e6c39",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1049,7 +1114,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "b068154723999076d502",
+                  "name": "43f0da518110b5c24921",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1064,7 +1129,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "67dcec528604ba884e8f",
+                  "name": "ce820122056568bc6227",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1105,6 +1170,12 @@
               "objects": {}
             }
           },
+          "b15eca96a8b5f9a0edc2": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
           "b44c62559edb6bea5002": {
             "singleVisual": {
               "visualType": "textbox",
@@ -1130,7 +1201,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "0012c13553fb9c072414",
+                  "name": "a1a8a4c1ca2f834bc709",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1145,7 +1216,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "4f425bf1c9c8a7dafd8d",
+                  "name": "7d198f1ab33dde3ab495",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1165,7 +1236,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "c36392d929e544181874",
+                  "name": "b118fa8a8415b36a768d",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1185,7 +1256,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "54d819fd6d29c67dc430",
+                  "name": "306fc434a85eeb84a20e",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1200,7 +1271,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "64c997aa0c7c8da52c7b",
+                  "name": "c9dcec3f4997a51c03f1",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1215,7 +1286,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "cf5cf277035f52d58965",
+                  "name": "f006800eee18f5ce9094",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1230,7 +1301,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "0d45bb4bf139efd0f298",
+                  "name": "55e4df3003d927d1f5e7",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1248,6 +1319,12 @@
             },
             "singleVisual": {
               "visualType": "cardVisual",
+              "objects": {}
+            }
+          },
+          "cdc6a5d9123bbee6a835": {
+            "singleVisual": {
+              "visualType": "actionButton",
               "objects": {}
             }
           },
@@ -1347,6 +1424,12 @@
               "objects": {}
             }
           },
+          "ec662164f6f69b23db9f": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
           "f6365a003bd3a3b30a26": {
             "singleVisual": {
               "visualType": "actionButton",
@@ -1366,7 +1449,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "a2d3135fbe9ae6540080",
+                  "name": "5828a653e0ce268ecd77",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1428,24 +1511,6 @@
               "visualType": "textbox",
               "objects": {}
             }
-          },
-          "737f05ccab496872a8fa": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "5c1a0dace1eb37914518": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "86194b6af709ef546169": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
           }
         },
         "visualContainerGroups": {
@@ -1457,13 +1522,11 @@
               }
             }
           },
+          "794b246562c1bd282392": {
+            "isHidden": false
+          },
           "89c9b513a9ae920b0617": {
-            "isHidden": false,
-            "children": {
-              "794b246562c1bd282392": {
-                "isHidden": false
-              }
-            }
+            "isHidden": false
           },
           "c617da6327cc700fbd92": {
             "isHidden": true,

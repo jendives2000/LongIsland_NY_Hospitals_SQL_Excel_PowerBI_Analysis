@@ -42,6 +42,7 @@ This is an advanced **descriptive, explainability-first analysis**, not a causal
   - [Getting Started](#getting-started)
     - [1. Clone the Repository](#1-clone-the-repository)
     - [2. Database Setup](#2-database-setup)
+      - [**Note \& Attribution about the Data:**](#note--attribution-about-the-data)
     - [3. Review the Analysis](#3-review-the-analysis)
   - [Power BI Report Navigation](#power-bi-report-navigation)
   - [Key Deliverables](#key-deliverables)
@@ -152,8 +153,13 @@ cd LongIsland_NY_Hospitals_SQL_Excel_PowerBI_Analysis
 
 ### 2. Database Setup
 
-Execute scripts in [`00_DB_Creation/`](/00_DB_Creation/README.md) to establish schemas and base tables.
+Download the original dataset and execute scripts in [`00_DB_Creation/`](/00_DB_Creation/README.md) to establish schemas and base tables.
 Subsequent folders ([`01_Profiling`](/01_Profiling/README.md) through [`03_Analytical_Data_Modeling`](/03_Analytical_Data_Modeling/README.md)) reflect the logical build-up of the analytical model.
+
+#### **Note & Attribution about the Data:**  
+* [Data Access page](https://health.data.ny.gov/Health/Hospital-Inpatient-Discharges-SPARCS-De-Identified/82xm-y6g8/about_data)  
+* First published on July 11, 2017  
+The New York State Department of Health, which is the source provider of the data used in this work, makes no representation, warranty or guarantee relating to the data or analyses derived from these data.
 
 ### 3. Review the Analysis
 

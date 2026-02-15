@@ -45,6 +45,11 @@ This step ensures:
     - press the “Apply” button beneath and press the “Export” button in the top right
     - Download the file in the Export Format ‘CSV’:
 
+#### **Note & Attribution about the Data:**  
+* [Data Access page](https://health.data.ny.gov/Health/Hospital-Inpatient-Discharges-SPARCS-De-Identified/82xm-y6g8/about_data)  
+* First published on July 11, 2017  
+The New York State Department of Health, which is the source provider of the data used in this work, makes no representation, warranty or guarantee relating to the data or analyses derived from these data.
+
 ---
 
 ## What Was Executed

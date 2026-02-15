@@ -164,10 +164,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "_PayerMix"
+                    "Entity": "_KPI_Measures"
                   }
                 },
-                "Property": "Top Payer Share % (PeerGroup)"
+                "Property": "Unplanned Admission Rate"
               }
             },
             "direction": "Descending"
@@ -912,6 +912,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "409ae89dcff4e930ba8e",
-  "isHidden": true
+  "parentGroupName": "409ae89dcff4e930ba8e"
 }
