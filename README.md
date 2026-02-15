@@ -168,6 +168,10 @@ The New York State Department of Health, which is the source provider of the dat
   [`06_PBI_Semantic_Model/03_PowerBI_Model/`](/06_PBI_Semantic_Model/README.md)  
   This contains the semantic model, report structure, and KPI interpretation.
 
+  The report is also available for consumption.  
+  Access the live report by clicking [here](https://jendives2000.github.io/LongIsland_NY_Hospitals_SQL_Excel_PowerBI_Analysis/Live_Report/).  
+  The live report was made available for consumption via the Github page feature and an index .html file, both were set up in this repo. Access the folder [here](/Live_Report/README.md).
+
 * **KPI logic and validation**  
   Review [`05_KPI_Dev/`](/05_KPI_Dev/README.md) for KPI-specific SQL logic and Excel validation artifacts.
 
